@@ -84,6 +84,21 @@ for (const id of ['01', '02']) {
     });
   });
 
+  test(`chapter ${id} key points are short bullets in all three languages`, () => {
+    chapter.sections.forEach((s, i) => {
+      assertTrilingual(s.key, `section ${i} key`);
+      const counts = LANGS.map((l) => s.key[l].trim().split('\n').length);
+      assert.equal(new Set(counts).size, 1, `section ${i} bullet counts differ: ${counts}`);
+      assert.ok(counts[0] <= 6, `section ${i} has too many bullets`);
+      for (const lang of LANGS) {
+        for (const line of s.key[lang].trim().split('\n')) {
+          assert.ok(line.startsWith('- '), `section ${i} ${lang}: not a bullet`);
+          assert.ok(line.length <= 120, `section ${i} ${lang}: too long: ${line}`);
+        }
+      }
+    });
+  });
+
   test(`chapter ${id} lessons have the same paragraph count in each language`, () => {
     chapter.sections.forEach((s, i) => {
       const counts = LANGS.map((l) => s.body[l].trim().split(/\n\s*\n/).length);

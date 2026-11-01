@@ -68,7 +68,8 @@ To read the books as text, run `pdftotext -layout` on the two PDFs into a tempor
 12. **Device support:** Must work well on both desktop/laptop and mobile (responsive layout).
 13. **Navigation:** Freely browsable — no locking chapters behind completing previous ones. The chapter order is a suggested path, not enforced.
 14. **Real-life examples:** One running fictional business, followed across all chapters, so the same company's accounting evolves topic by topic (not a fresh unrelated example every chapter). Exact business (name/type) is Claude's call — plan: a small sole-trader trading/retail business that later grows (useful later for the capital structure, and eventually group accounts, chapters).
-15. **Lesson depth:** Comprehensive — must cover everything needed to actually pass the ACCA FA/F3 exam, reworded from Kaplan + expanded with the running-business examples. Not a stripped-down summary.
+15. **Lesson depth:** Must cover everything needed to pass the ACCA FA/F3 exam, but the user does not want walls of text. Each section shows at most 6 short key points plus the Madina's Mart example. The full explanation stays one tap away under "Explain more". Follow this pattern for every new chapter.
+16. **Look:** Bold Naruto style (user rejected the first, subtler version): orange and black, forehead-protector headband, spirals, 忍, shuriken bullets, chapters called missions, training ground, ranks by score (Academy student under 50%, Genin 50%, Chunin 70%, Jonin 85%). Site name: FA Dojo. Uses a plain spiral rather than the Konoha symbol, and no characters or show artwork. Before going public, get a trademark check on the Naruto references, because they are closer to the franchise than before.
 
 ## Next steps (in order)
 

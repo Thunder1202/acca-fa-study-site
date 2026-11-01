@@ -25,6 +25,8 @@
     const nextUp = open.find((chapter) => !progress[chapter.id]);
     container.replaceChildren(el('div', { class: 'page home' },
       el('section', { class: 'hero' },
+        el('span', { class: 'hero-kanji', lang: 'ja', 'aria-hidden': 'true' }, '忍'),
+        el('div', { class: 'headband', 'aria-hidden': 'true' }, el('div', { class: 'plate' })),
         el('p', { class: 'eyebrow' }, label('heroEyebrow', lang)),
         el('h1', {}, label('heroTitle', lang)),
         el('p', { class: 'hero-text' }, label('heroText', lang)),

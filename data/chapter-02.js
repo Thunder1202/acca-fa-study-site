@@ -15,6 +15,17 @@ const chapter02 = {
   ],
   sections: [
     {
+      key: {
+        en: `- Gives users a basic minimum of comparable, consistent information.
+- Builds confidence and controls how directors treat investors.
+- Standards alone are not enough: law and market rules are needed too.`,
+        ru: `- Даёт пользователям минимум сопоставимой и последовательной информации.
+- Укрепляет доверие и регулирует поведение директоров с инвесторами.
+- Одних стандартов мало: нужны также законы и рыночные правила.`,
+        uz: `- Foydalanuvchilarga taqqoslanadigan va izchil axborot minimumini beradi.
+- Ishonchni oshiradi va direktorlarning investorlarga munosabatini tartibga soladi.
+- Faqat standartlar yetmaydi: qonun va bozor qoidalari ham kerak.`,
+      },
       heading: {
         en: 'Why a regulatory framework is needed',
         ru: 'Зачем нужна нормативная база',
@@ -59,6 +70,20 @@ Odatiy milliy tizimga milliy hisobot standartlari, milliy qonunlar, bozor qoidal
       },
     },
     {
+      key: {
+        en: `- Harmonisation: shared rules so readers worldwide can compare companies.
+- Not automatic: a country must adopt IFRS for it to apply.
+- IFRS do not cover every possible transaction.
+- Convergence: updating national standards towards IFRS over time.`,
+        ru: `- Гармонизация: общие правила, чтобы читатели в мире могли сравнивать компании.
+- Не автоматически: IFRS действуют, только если страна их приняла.
+- IFRS охватывают не все возможные операции.
+- Сближение: постепенное приведение национальных стандартов к IFRS.`,
+        uz: `- Uyg'unlashtirish: dunyo o'quvchilari kompaniyalarni solishtirishi uchun umumiy qoidalar.
+- Avtomatik emas: IFRS faqat mamlakat qabul qilsa amal qiladi.
+- IFRS barcha operatsiyalarni qamrab olmaydi.
+- Yaqinlashish: milliy standartlarni asta-sekin IFRS ga moslashtirish.`,
+      },
       heading: {
         en: 'IFRS Accounting Standards and harmonisation',
         ru: 'Стандарты IFRS и гармонизация',
@@ -88,6 +113,23 @@ Yevropa Ittifoqi ularni 2005-yilda barcha listingdagi kompaniyalar uchun qabul q
       },
     },
     {
+      key: {
+        en: `- IFRS Foundation: supervises and funds.
+- IASB (the Board): sets the standards.
+- IFRS Interpretations Committee (IFRIC): explains how to apply them.
+- IFRS Advisory Council: gives advice to the Board and Foundation.
+- ISSB: sets sustainability disclosure standards.`,
+        ru: `- Фонд IFRS: надзирает и финансирует.
+- IASB (Совет): выпускает стандарты.
+- Комитет по интерпретациям (IFRIC): разъясняет применение.
+- Консультативный совет IFRS: даёт советы Совету и Фонду.
+- ISSB: выпускает стандарты раскрытия об устойчивом развитии.`,
+        uz: `- IFRS Fondi: nazorat qiladi va moliyalashtiradi.
+- IASB (Kengash): standartlarni chiqaradi.
+- Talqinlar qo'mitasi (IFRIC): qo'llashni tushuntiradi.
+- IFRS Maslahat kengashi: Kengash va Fondga maslahat beradi.
+- ISSB: barqarorlik bo'yicha standartlarni chiqaradi.`,
+      },
       heading: {
         en: 'The international regulatory bodies',
         ru: 'Международные регулирующие органы',
@@ -129,6 +171,17 @@ Imtihon maslahati: Fond nazorat qiladi, Kengash standart chiqaradi, IFRIC talqin
       },
     },
     {
+      key: {
+        en: `- Order: subject chosen, exposure draft, public comments, final standard.
+- A discussion paper can be issued at any stage.
+- The Study Text says publishing needs at least 8 of the 15 Board votes.`,
+        ru: `- Порядок: выбор темы, проект стандарта, комментарии, окончательный стандарт.
+- Дискуссионный документ можно выпустить на любом этапе.
+- В учебнике: для публикации нужно не менее 8 голосов из 15 членов Совета.`,
+        uz: `- Tartib: mavzu tanlash, standart loyihasi, fikrlar, yakuniy standart.
+- Muhokama hujjati istalgan bosqichda chiqarilishi mumkin.
+- Darslikda: e'lon qilish uchun 15 Kengash a'zosidan kamida 8 ovoz kerak.`,
+      },
       heading: {
         en: 'How an IFRS Accounting Standard is developed',
         ru: 'Как разрабатывается стандарт IFRS',
@@ -176,6 +229,20 @@ Milliy standart belgilovchi organlar ham ishtirok etadi. Ularning ko'pchiligi va
       },
     },
     {
+      key: {
+        en: `- Shareholders own the company, directors run it: separation of ownership and control.
+- Interests can clash, and profit-linked bonuses create a risk of biased statements.
+- The fix: good corporate governance plus an independent audit.
+- The auditor gives an opinion (true and fair). It is not a guarantee of no errors.`,
+        ru: `- Акционеры владеют, директора управляют: разделение собственности и контроля.
+- Интересы могут расходиться, а премии от прибыли создают риск предвзятой отчётности.
+- Решение: хорошее корпоративное управление и независимый аудит.
+- Аудитор даёт мнение (true and fair). Это не гарантия отсутствия ошибок.`,
+        uz: `- Aksiyadorlar egalik qiladi, direktorlar boshqaradi: egalik va nazoratning ajralishi.
+- Manfaatlar to'qnashishi mumkin, foydaga bog'liq mukofot hisobotni buzish xavfini tug'diradi.
+- Yechim: yaxshi korporativ boshqaruv va mustaqil audit.
+- Auditor fikr beradi (true and fair). Bu xato yo'qligiga kafolat emas.`,
+      },
       heading: {
         en: 'Ownership, control and the external audit',
         ru: 'Собственность, контроль и внешний аудит',
@@ -217,6 +284,23 @@ Enron, Lehman Brothers, WorldCom, Parmalat va Wells Fargo mojarolari buzilgan hi
       },
     },
     {
+      key: {
+        en: `- Definition: the system by which companies are directed and controlled.
+- Purpose: monitor the people who control the owners' resources.
+- Aim: better performance and accountability, creating long-term shareholder value.
+- Elements: non-executive oversight, internal control, fair pay, fair reporting.
+- The annual report is the main route to public oversight.`,
+        ru: `- Определение: система, с помощью которой компании направляются и контролируются.
+- Цель: наблюдать за теми, кто контролирует ресурсы владельцев.
+- Задача: лучшие результаты и подотчётность, долгосрочная стоимость для акционеров.
+- Элементы: неисполнительные директора, внутренний контроль, честные оплата и отчётность.
+- Годовой отчёт — главный путь общественного контроля.`,
+        uz: `- Ta'rif: kompaniyalar yo'naltiriladigan va nazorat qilinadigan tizim.
+- Maqsad: egalar resurslarini nazorat qiluvchilarni kuzatish.
+- Vazifa: yaxshi natija va hisobdorlik, uzoq muddatli aksiyador qiymati.
+- Elementlar: noijrochi direktorlar, ichki nazorat, adolatli maosh va hisobot.
+- Yillik hisobot jamoatchilik nazoratining asosiy yo'li.`,
+      },
       heading: {
         en: 'What corporate governance is',
         ru: 'Что такое корпоративное управление',
@@ -282,6 +366,20 @@ Ko'rsatmalar hozirgi biznes amaliyotiga mos bo'lishi uchun muntazam qayta ko'rib
       },
     },
     {
+      key: {
+        en: `- Act in good faith, and disclose any conflict of interest.
+- The whole board is responsible for controls, records and the statements.
+- Directors prepare the statements. Auditors only give an opinion.
+- UK: comply or explain (principles). US: Sarbanes-Oxley (law, compulsory).`,
+        ru: `- Действовать добросовестно и раскрывать любой конфликт интересов.
+- Весь совет отвечает за контроль, учётные записи и отчётность.
+- Отчётность готовят директора. Аудиторы только высказывают мнение.
+- Великобритания: соблюдай или объясняй (принципы). США: Сарбейнс-Оксли (закон).`,
+        uz: `- Vijdonan harakat qilish va har qanday manfaat to'qnashuvini oshkor qilish.
+- Nazorat, yozuvlar va hisobot uchun butun kengash javob beradi.
+- Hisobotni direktorlar tayyorlaydi. Auditorlar faqat fikr beradi.
+- Buyuk Britaniya: bajar yoki tushuntir (tamoyil). AQSh: Sarbanes-Oxley (qonun).`,
+      },
       heading: {
         en: 'Duties and responsibilities of directors',
         ru: 'Обязанности и ответственность директоров',

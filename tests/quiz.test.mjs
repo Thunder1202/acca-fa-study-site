@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { startSession, answer, isCorrect, score, isComplete, scoreByTopic } from '../js/quiz.js';
+import { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor } from '../js/quiz.js';
 
 const QUESTIONS = [
   { id: 'q1', correctIndex: 0 },
@@ -83,6 +83,17 @@ test('scoreByTopic splits a mixed review session by topic', () => {
     'chapter-01': { attempted: 2, correct: 1 },
     'chapter-02': { attempted: 1, correct: 1 },
   });
+});
+
+test('rankFor follows the 50% exam pass mark and rises with the score', () => {
+  assert.equal(rankFor(0), 'rankAcademy');
+  assert.equal(rankFor(49), 'rankAcademy');
+  assert.equal(rankFor(50), 'rankGenin');
+  assert.equal(rankFor(69), 'rankGenin');
+  assert.equal(rankFor(70), 'rankChunin');
+  assert.equal(rankFor(84), 'rankChunin');
+  assert.equal(rankFor(85), 'rankJonin');
+  assert.equal(rankFor(100), 'rankJonin');
 });
 
 test('answer leaves the earlier session unchanged', () => {

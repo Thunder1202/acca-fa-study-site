@@ -50,5 +50,12 @@ function scoreByTopic(session) {
   return totals;
 }
 
-if (typeof module !== 'undefined') module.exports = { startSession, answer, isCorrect, score, isComplete, scoreByTopic };
-else (globalThis.ACCA ??= {}).quiz = { startSession, answer, isCorrect, score, isComplete, scoreByTopic };
+function rankFor(percent) {
+  if (percent >= 85) return 'rankJonin';
+  if (percent >= 70) return 'rankChunin';
+  if (percent >= 50) return 'rankGenin';
+  return 'rankAcademy';
+}
+
+if (typeof module !== 'undefined') module.exports = { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor };
+else (globalThis.ACCA ??= {}).quiz = { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor };

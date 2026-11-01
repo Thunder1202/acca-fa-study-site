@@ -17,6 +17,20 @@ const chapter01 = {
   ],
   sections: [
     {
+      key: {
+        en: `- Financial accounting: annual statements for outside users such as lenders and investors.
+- Management accounting: detailed, frequent reports for the people running the business.
+- Stewardship: how well directors looked after shareholders' money.
+- Published statements are public but do not show profit per product.`,
+        ru: `- Финансовый учёт: годовая отчётность для внешних пользователей, например кредиторов и инвесторов.
+- Управленческий учёт: подробные и частые отчёты для тех, кто руководит бизнесом.
+- Stewardship: насколько хорошо директора распорядились деньгами акционеров.
+- Опубликованная отчётность открыта, но не показывает прибыль по товарам.`,
+        uz: `- Moliyaviy hisob: kreditor va investorlar kabi tashqi foydalanuvchilar uchun yillik hisobot.
+- Boshqaruv hisobi: biznesni boshqaruvchilar uchun batafsil va tez-tez hisobotlar.
+- Stewardship: direktorlar aksiyadorlar pulini qanchalik yaxshi boshqargani.
+- E'lon qilingan hisobot ochiq, lekin mahsulot bo'yicha foydani ko'rsatmaydi.`,
+      },
       heading: {
         en: 'Financial accounting and management accounting',
         ru: 'Финансовый и управленческий учёт',
@@ -52,6 +66,26 @@ Imtihon uchun muhim: mas'uliyati cheklangan kompaniyaning e'lon qilingan hisobot
       },
     },
     {
+      key: {
+        en: `- Investors: profit, returns and security of investment.
+- Lenders: repayment and solvency.
+- Employees: job security and pay.
+- Suppliers: will they be paid? Customers: will supply continue?
+- Government: tax and the economy. Public: effect on the community.
+- Management needs the most detail of all.`,
+        ru: `- Инвесторы: прибыль, доходность и надёжность вложений.
+- Кредиторы: возврат займа и платёжеспособность.
+- Работники: надёжность занятости и зарплата.
+- Поставщики: заплатят ли им? Покупатели: продолжатся ли поставки?
+- Государство: налоги и экономика. Общество: влияние на сообщество.
+- Руководству нужно больше всего деталей.`,
+        uz: `- Investorlar: foyda, daromadlilik va sarmoya xavfsizligi.
+- Kreditorlar: qarz qaytishi va to'lov qobiliyati.
+- Xodimlar: ish joyi barqarorligi va maosh.
+- Yetkazib beruvchilar: to'lanadimi? Xaridorlar: yetkazib berish davom etadimi?
+- Davlat: soliq va iqtisodiyot. Jamoatchilik: jamiyatga ta'sir.
+- Rahbariyatga eng ko'p tafsilot kerak.`,
+      },
       heading: {
         en: 'Users of financial statements',
         ru: 'Пользователи финансовой отчётности',
@@ -105,6 +139,23 @@ Barcha foydalanuvchilarga rahbariyat resurslarni qanday boshqarganini baholash v
       },
     },
     {
+      key: {
+        en: `- Sole trader: one owner, unlimited liability, capital account and drawings.
+- Partnership: two or more owners, jointly and severally liable, capital and current accounts.
+- Company: separate legal entity, limited liability, shares and dividends.
+- Partners may all manage. Shareholders manage only if they are directors.
+- Company downsides: registration costs, filing, audit, public accounts, strict capital rules.`,
+        ru: `- Предприниматель: один владелец, неограниченная ответственность, счёт капитала и изъятия.
+- Партнёрство: от двух владельцев, солидарная ответственность, счета капитала и текущие счета.
+- Компания: отдельное юрлицо, ограниченная ответственность, акции и дивиденды.
+- Управлять могут все партнёры. Акционеры — только если они директора.
+- Минусы компании: расходы на регистрацию, подача отчётности, аудит, открытость, строгие правила капитала.`,
+        uz: `- Yakka tadbirkor: bitta ega, cheklanmagan javobgarlik, kapital hisobi va olib qo'yishlar.
+- Sheriklik: ikki va undan ko'p ega, birgalikda va alohida javobgarlik, kapital va joriy hisoblar.
+- Kompaniya: alohida yuridik shaxs, cheklangan javobgarlik, aksiya va dividendlar.
+- Barcha sheriklar boshqara oladi. Aksiyadorlar faqat direktor bo'lsa.
+- Kompaniya kamchiliklari: ro'yxat xarajati, hisobot topshirish, audit, ochiqlik, qat'iy kapital qoidalari.`,
+      },
       heading: {
         en: 'Types of business entity',
         ru: 'Виды предприятий',
@@ -146,6 +197,20 @@ Kompaniya tuzishning kamchiliklari: ro'yxatdan o'tish va yuridik xarajatlar; yil
       },
     },
     {
+      key: {
+        en: `- Written by the IASB. It is not itself a standard.
+- It helps develop standards, and helps choose policies when no standard applies.
+- Objective of reporting: useful information for decisions about providing resources.
+- Prudence: caution under uncertainty, without deliberate bias.`,
+        ru: `- Написаны IASB. Сами по себе это не стандарт.
+- Помогают разрабатывать стандарты и выбирать политику, если стандарта нет.
+- Цель отчётности: полезная информация для решений о предоставлении ресурсов.
+- Осмотрительность: осторожность при неопределённости, без намеренной предвзятости.`,
+        uz: `- IASB tomonidan yozilgan. O'zi standart emas.
+- Standartlar ishlab chiqishga va standart bo'lmaganda siyosat tanlashga yordam beradi.
+- Hisobot maqsadi: resurs berish qarorlari uchun foydali axborot.
+- Ehtiyotkorlik: noaniqlikda ehtiyot bo'lish, ataylab xolislikni buzmasdan.`,
+      },
       heading: {
         en: 'The Conceptual Framework',
         ru: 'Концептуальные основы',
@@ -187,6 +252,23 @@ Ehtiyotkorlik (prudence) noaniqlik sharoitida mulohaza yuritganda ehtiyot bo'lis
       },
     },
     {
+      key: {
+        en: `- There are two: relevance and faithful representation.
+- Relevant: can influence decisions, with predictive or confirmatory value.
+- Material: leaving it out or misstating it could influence primary users.
+- Faithful: complete, neutral and free from material error.
+- Substance over form: show economic reality, not just legal form.`,
+        ru: `- Их две: уместность и правдивое представление.
+- Уместная: может повлиять на решения, имеет прогнозную или подтверждающую ценность.
+- Существенная: пропуск или искажение может повлиять на основных пользователей.
+- Правдивая: полная, нейтральная, без существенных ошибок.
+- Приоритет содержания: показывать экономическую суть, а не только юридическую форму.`,
+        uz: `- Ular ikkita: tegishlilik va haqqoniy aks ettirish.
+- Tegishli: qarorlarga ta'sir qila oladi, bashorat yoki tasdiqlash qiymatiga ega.
+- Muhim: tushirib qoldirish yoki buzish asosiy foydalanuvchilarga ta'sir qilishi mumkin.
+- Haqqoniy: to'liq, betaraf va muhim xatosiz.
+- Mazmun ustunligi: faqat yuridik shaklni emas, iqtisodiy haqiqatni ko'rsatish.`,
+      },
       heading: {
         en: 'Fundamental qualitative characteristics',
         ru: 'Фундаментальные качественные характеристики',
@@ -234,6 +316,23 @@ Haqqoniy aks ettirish (faithful representation) operatsiyalar faqat yuridik shak
       },
     },
     {
+      key: {
+        en: `- There are four: comparability, verifiability, timeliness, understandability.
+- Comparability needs consistency and disclosure of accounting policies.
+- Verifiability: direct (count the cash) or indirect (recalculate).
+- Understandability assumes a reader with reasonable business knowledge.
+- Exam trap: reliability is not on either list.`,
+        ru: `- Их четыре: сопоставимость, проверяемость, своевременность, понятность.
+- Для сопоставимости нужны последовательность и раскрытие учётной политики.
+- Проверяемость: прямая (пересчитать деньги) или косвенная (пересчитать расчёт).
+- Понятность предполагает читателя с разумными знаниями о бизнесе.
+- Ловушка на экзамене: надёжности (reliability) нет ни в одном списке.`,
+        uz: `- Ular to'rtta: taqqoslanuvchanlik, tekshiriluvchanlik, o'z vaqtidalik, tushunarlilik.
+- Taqqoslanuvchanlik izchillik va hisob siyosatini ochib berishni talab qiladi.
+- Tekshiriluvchanlik: to'g'ridan-to'g'ri (pulni sanash) yoki bilvosita (qayta hisoblash).
+- Tushunarlilik biznesni yetarlicha biladigan o'quvchini faraz qiladi.
+- Imtihon tuzog'i: ishonchlilik (reliability) hech bir ro'yxatda yo'q.`,
+      },
       heading: {
         en: 'Enhancing qualitative characteristics',
         ru: 'Дополнительные качественные характеристики',
@@ -272,6 +371,23 @@ Eslab qolish uchun: ikkita asosiy xususiyat axborotni foydali qiladi, to'rtta ku
       },
     },
     {
+      key: {
+        en: `- Asset: present economic resource controlled as a result of past events.
+- Liability: present obligation to transfer an economic resource from past events.
+- Equity: assets minus liabilities.
+- Income raises equity, expenses lower it. Dealings with owners do not count.
+- Current: within 12 months of the reporting date. Non-current: longer.`,
+        ru: `- Актив: существующий экономический ресурс, контролируемый в результате прошлых событий.
+- Обязательство: существующая обязанность передать экономический ресурс из-за прошлых событий.
+- Капитал: активы минус обязательства.
+- Доходы увеличивают капитал, расходы уменьшают. Операции с владельцами не считаются.
+- Оборотные и краткосрочные: до 12 месяцев с отчётной даты. Иначе — долгосрочные.`,
+        uz: `- Aktiv: o'tgan voqealar natijasida nazorat qilinadigan mavjud iqtisodiy resurs.
+- Majburiyat: o'tgan voqealar natijasida iqtisodiy resursni berish bo'yicha mavjud burch.
+- Kapital: aktivlar minus majburiyatlar.
+- Daromad kapitalni oshiradi, xarajat kamaytiradi. Egalar bilan operatsiyalar hisobga kirmaydi.
+- Joriy: hisobot sanasidan 12 oy ichida. Uzoq muddatli: undan keyin.`,
+      },
       heading: {
         en: 'The elements of the financial statements',
         ru: 'Элементы финансовой отчётности',
@@ -349,6 +465,23 @@ Tekshirish: aktivlar $12,000 = kapital $8,000 + majburiyatlar $4,000.`,
       },
     },
     {
+      key: {
+        en: `- Five parts: financial position, profit or loss, changes in equity, cash flows, notes.
+- Financial position is one date. Profit or loss covers a period.
+- Changes in equity applies only to companies. Cash flows is normally companies too.
+- Other comprehensive income: unrealised gains, such as a revaluation surplus.
+- IFRS 18 subtotals: operating profit, profit before financing and taxes, profit for the year.`,
+        ru: `- Пять частей: финансовое положение, прибыль или убыток, изменения капитала, движение денег, примечания.
+- Финансовое положение — на одну дату. Прибыль или убыток — за период.
+- Изменения капитала — только компании. Движение денег обычно тоже.
+- Прочий совокупный доход: нереализованные прибыли, например резерв переоценки.
+- Итоги IFRS 18: операционная прибыль, прибыль до финансирования и налогов, прибыль за год.`,
+        uz: `- Besh qism: moliyaviy holat, foyda yoki zarar, kapital o'zgarishi, pul oqimlari, izohlar.
+- Moliyaviy holat bir sana uchun. Foyda yoki zarar butun davr uchun.
+- Kapital o'zgarishi faqat kompaniyalarda. Pul oqimlari ham odatda shunday.
+- Boshqa umumlashgan daromad: amalga oshmagan foyda, masalan qayta baholash zaxirasi.
+- IFRS 18 yakunlari: operatsion foyda, moliyalashtirish va soliqqacha foyda, yillik foyda.`,
+      },
       heading: {
         en: 'The components of a set of financial statements',
         ru: 'Состав финансовой отчётности',
@@ -402,6 +535,26 @@ Boshqa umumlashgan daromad amalga oshmagan foyda va zararlarni o'z ichiga oladi.
       },
     },
     {
+      key: {
+        en: `- Going concern: expected to keep operating. Expected, never guaranteed.
+- Accruals: record when earned or incurred, not when cash moves.
+- Business entity: keep the owner's private affairs out of the accounts.
+- Consistency: same treatment within a period and between periods.
+- Offsetting is not allowed. Duality: every transaction has two effects.
+- Historical cost: the original amount. Rising prices understate assets and overstate profit.`,
+        ru: `- Непрерывность: ожидается, что бизнес продолжит работу. Ожидается, но не гарантируется.
+- Начисление: отражать при получении дохода или возникновении расхода, а не при движении денег.
+- Обособленность: личные дела владельца не входят в учёт.
+- Последовательность: одинаковый учёт внутри периода и между периодами.
+- Взаимозачёт запрещён. Двойственность: у каждой операции два эффекта.
+- Первоначальная стоимость: исходная сумма. Рост цен занижает активы и завышает прибыль.`,
+        uz: `- Uzluksizlik: biznes davom etishi kutiladi. Kutiladi, lekin kafolatlanmaydi.
+- Hisoblash: pul harakatlanganda emas, daromad topilganda yoki xarajat qilinganda qayd etish.
+- Alohidalik: egasining shaxsiy ishlari hisobga kirmaydi.
+- Izchillik: davr ichida va davrlar orasida bir xil yuritish.
+- O'zaro hisobga olish taqiqlangan. Ikki yoqlamalik: har operatsiyada ikki ta'sir bor.
+- Tarixiy qiymat: dastlabki summa. Narx oshishi aktivni kamaytirib, foydani oshirib ko'rsatadi.`,
+      },
       heading: {
         en: 'Important accounting principles and concepts',
         ru: 'Важные принципы бухгалтерского учёта',

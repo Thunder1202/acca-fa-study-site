@@ -3,7 +3,7 @@
 (function () {
   const { el, richText } = ACCA.dom;
   const { translate: t, label, LANGS } = ACCA.i18n;
-  const { startSession, answer, isCorrect, score, isComplete, scoreByTopic } = ACCA.quiz;
+  const { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor } = ACCA.quiz;
   const { recordSession } = ACCA.progress;
   const MODE_KEY = 'acca-fa-quiz-mode';
 
@@ -116,8 +116,10 @@
     const { correct, attempted } = score(state.session);
     const percent = attempted === 0 ? 0 : Math.round((correct / attempted) * 100);
     return el('section', { class: 'result' },
+      el('span', { class: 'result-stamp', lang: 'ja', 'aria-hidden': 'true' }, percent >= 50 ? '合格' : '修行'),
       el('p', { class: 'eyebrow' }, label('resultTitle', lang)),
       el('p', { class: 'result-score' }, `${percent}%`),
+      el('p', { class: 'result-rank' }, label(rankFor(percent), lang)),
       el('p', {}, `${correct} / ${attempted}`),
       el('p', { class: 'hint' }, label('passNote', lang)),
       el('div', { class: 'actions' },
@@ -153,7 +155,7 @@
     };
     return el('div', {},
       el('div', { class: 'progress', role: 'progressbar', 'aria-valuemin': '0', 'aria-valuemax': String(questions.length), 'aria-valuenow': String(state.index + 1) },
-        el('span', { style: `width:${((state.index + 1) / questions.length) * 100}%` })),
+        el('span', { style: `width:${((state.index + 1) / questions.length) * 100}%;--turn:${state.index * 45}deg` })),
       questionCard(q, state.index + 1, questions.length, lang, state.checked, onPick),
       el('div', { class: 'actions' }, state.checked ? proceed : check));
   }
