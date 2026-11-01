@@ -1,7 +1,9 @@
 # ACCA FA Learning Website — Project Notes
 
-Status: **Planning / brainstorming stage. No code written yet.**
+Status: **Group 1 pilot built (chapters 1-2).** Open `index.html` in a browser, nothing to install. Waiting for the user's review of the pilot before starting chapter 3.
 This file exists so a future chat in this folder can pick up exactly where we left off.
+
+To run the tests: `node --test "tests/*.test.mjs"`
 
 ## What this is
 
@@ -70,9 +72,7 @@ To read the books as text, run `pdftotext -layout` on the two PDFs into a tempor
 
 ## Next steps (in order)
 
-1. ~~Confirm the build approach~~ — done, see #8 above.
-2. Write the short design doc for the Group 1 pilot (see `GROUP1_PILOT_DESIGN.md` in this folder) — in progress.
-3. Get it approved.
-4. Build the Group 1 pilot (Chapters 1–2 lessons in EN/RU/UZ + their Exam Kit questions + both quiz modes + progress tracking + weak-area mode).
-5. Review the pilot with the user, adjust the pattern if needed.
-6. Repeat for the remaining chapters (3-20, in book order) using the confirmed pattern.
+1. User reviews the pilot, adjusts the pattern if needed. Russian and Uzbek text should be read by a fluent speaker.
+2. Repeat for the remaining chapters (3-20, in book order) using the confirmed pattern. A new chapter needs `data/chapter-NN.js`, `data/questions-chNN.js`, two script tags in `index.html`, and an entry in the lists in `tests/content.test.mjs`.
+
+Study groups on the site follow the book's order: 1 Foundations (ch 1-2), 2 Double-entry (ch 3), 3 Recording transactions (ch 4-12), 4 Reconciliations (ch 13), 5 Trial balance (ch 14), 6 Financial statements (ch 15-17), 7 Interpretation (ch 18), 8 Consolidation (ch 19-20).

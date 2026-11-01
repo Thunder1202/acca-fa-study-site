@@ -72,6 +72,11 @@
     document.documentElement.lang = lang;
     switcher.value = lang;
     for (const node of document.querySelectorAll('[data-label]')) node.textContent = label(node.dataset.label, lang);
+    const current = window.location.hash || '#/';
+    for (const link of document.querySelectorAll('.site-nav a')) {
+      if (link.getAttribute('href') === current) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    }
   }
 
   function render() {
