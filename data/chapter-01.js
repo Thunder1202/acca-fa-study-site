@@ -417,7 +417,7 @@ Eslab qolish uchun: ikkita asosiy xususiyat axborotni foydali qiladi, to'rtta ku
 - Обязательство: существующая обязанность передать экономический ресурс из-за прошлых событий.
 - Капитал: активы минус обязательства.
 - Доходы увеличивают капитал, расходы уменьшают. Операции с владельцами не считаются.
-- Оборотные и краткосрочные: до 12 месяцев с отчётной даты. Иначе — долгосрочные.`,
+- Оборотные и краткосрочные: до 12 месяцев с отчётной даты. Иначе — внеоборотные и долгосрочные.`,
         uz: `- Aktiv: o'tgan voqealar natijasida nazorat qilinadigan mavjud iqtisodiy resurs.
 - Majburiyat: o'tgan voqealar natijasida iqtisodiy resursni berish bo'yicha mavjud burch.
 - Kapital: aktivlar minus majburiyatlar.
@@ -505,17 +505,17 @@ Tekshirish: aktivlar $12,000 = kapital $8,000 + majburiyatlar $4,000.`,
         en: `- Five parts: financial position, profit or loss, changes in equity, cash flows, notes.
 - Financial position is one date. Profit or loss covers a period.
 - Changes in equity applies only to companies. Cash flows is normally companies too.
-- Other comprehensive income: unrealised gains, such as a revaluation surplus.
+- Other comprehensive income: unrealised gains and losses, such as a revaluation surplus.
 - IFRS 18 subtotals: operating profit, profit before financing and taxes, profit for the year.`,
         ru: `- Пять частей: финансовое положение, прибыль или убыток, изменения капитала, движение денег, примечания.
 - Финансовое положение — на одну дату. Прибыль или убыток — за период.
 - Изменения капитала — только компании. Движение денег обычно тоже.
-- Прочий совокупный доход: нереализованные прибыли, например резерв переоценки.
+- Прочий совокупный доход: нереализованные прибыли и убытки, например резерв переоценки.
 - Итоги IFRS 18: операционная прибыль, прибыль до финансирования и налогов, прибыль за год.`,
         uz: `- Besh qism: moliyaviy holat, foyda yoki zarar, kapital o'zgarishi, pul oqimlari, izohlar.
 - Moliyaviy holat bir sana uchun. Foyda yoki zarar butun davr uchun.
 - Kapital o'zgarishi faqat kompaniyalarda. Pul oqimlari ham odatda shunday.
-- Boshqa umumlashgan daromad: amalga oshmagan foyda, masalan qayta baholash zaxirasi.
+- Boshqa umumlashgan daromad: amalga oshmagan foyda va zararlar, masalan qayta baholash zaxirasi.
 - IFRS 18 yakunlari: operatsion foyda, moliyalashtirish va soliqqacha foyda, yillik foyda.`,
       },
       heading: {
@@ -575,28 +575,28 @@ Boshqa umumlashgan daromad amalga oshmagan foyda va zararlarni o'z ichiga oladi.
         en: `- Consistency covers how items are presented and classified, including in the notes.
 - Going concern is why non-current assets stay at cost less depreciation, not forced sale value.`,
         ru: `- Последовательность касается представления и классификации статей, включая примечания.
-- Благодаря непрерывности внеоборотные активы учитываются по стоимости за вычетом амортизации, а не по цене вынужденной продажи.`,
+- Благодаря непрерывности внеоборотные активы учитываются по первоначальной стоимости за вычетом амортизации, а не по цене вынужденной продажи.`,
         uz: `- Izchillik moddalarning taqdim etilishi va tasniflanishiga, jumladan izohlarga ham tegishli.
-- Uzluksizlik sababli uzoq muddatli aktivlar majburiy sotuv narxida emas, qiymat minus amortizatsiyada ko'rsatiladi.`,
+- Uzluksizlik sababli uzoq muddatli aktivlar majburiy sotuv narxida emas, tarixiy qiymat minus amortizatsiyada ko'rsatiladi.`,
       },
       key: {
         en: `- Going concern: expected to keep operating. Expected, never guaranteed.
 - Accruals: record when earned or incurred, not when cash moves.
 - Business entity: keep the owner's private affairs out of the accounts.
 - Consistency: same treatment within a period and between periods.
-- Offsetting is not allowed. Duality: every transaction has two effects.
+- Offsetting is generally not allowed. Duality: every transaction has two effects.
 - Historical cost: the original amount. Rising prices understate assets and overstate profit.`,
         ru: `- Непрерывность: ожидается, что бизнес продолжит работу. Ожидается, но не гарантируется.
-- Начисление: отражать при получении дохода или возникновении расхода, а не при движении денег.
+- Начисление: отражать, когда доход заработан, а расход понесён, а не при движении денег.
 - Обособленность: личные дела владельца не входят в учёт.
 - Последовательность: одинаковый учёт внутри периода и между периодами.
-- Взаимозачёт запрещён. Двойственность: у каждой операции два эффекта.
+- Взаимозачёт, как правило, запрещён. Двойственность: у каждой операции два эффекта.
 - Первоначальная стоимость: исходная сумма. Рост цен занижает активы и завышает прибыль.`,
         uz: `- Uzluksizlik: biznes davom etishi kutiladi. Kutiladi, lekin kafolatlanmaydi.
 - Hisoblash: pul harakatlanganda emas, daromad topilganda yoki xarajat qilinganda qayd etish.
 - Alohidalik: egasining shaxsiy ishlari hisobga kirmaydi.
 - Izchillik: davr ichida va davrlar orasida bir xil yuritish.
-- O'zaro hisobga olish taqiqlangan. Ikki yoqlamalik: har operatsiyada ikki ta'sir bor.
+- O'zaro hisobga olish odatda taqiqlangan. Ikki yoqlamalik: har operatsiyada ikki ta'sir bor.
 - Tarixiy qiymat: dastlabki summa. Narx oshishi aktivni kamaytirib, foydani oshirib ko'rsatadi.`,
       },
       heading: {
