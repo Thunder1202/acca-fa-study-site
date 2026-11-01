@@ -10,9 +10,17 @@ function answer(session, questionId, selectedIndex) {
   return { ...session, answers };
 }
 
+function answerKey(question) {
+  if (question.type === 'multi') return [...question.correctIndices].sort();
+  if (question.type === 'matrix') return question.rows.map((row) => row.correctIndex);
+  return question.correctIndex;
+}
+
 function isCorrect(session, questionId) {
   const question = session.questions.find((q) => q.id === questionId);
-  return session.answers.get(questionId) === question.correctIndex;
+  const given = session.answers.get(questionId);
+  const normalised = question.type === 'multi' && Array.isArray(given) ? [...given].sort() : given;
+  return JSON.stringify(normalised) === JSON.stringify(answerKey(question));
 }
 
 function score(session) {

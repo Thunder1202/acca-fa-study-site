@@ -12,6 +12,47 @@ function assertTrilingual(field, where) {
   }
 }
 
+const QUESTION_SETS = [
+  { file: 'questions-ch01', topicId: 'chapter-01', first: 1, last: 46 },
+  { file: 'questions-ch02', topicId: 'chapter-02', first: 47, last: 58 },
+];
+
+for (const { file, topicId, first, last } of QUESTION_SETS) {
+  const questions = require(`../data/${file}.js`);
+
+  test(`${file} has exactly one question per Kit number ${first}-${last}`, () => {
+    const expected = Array.from({ length: last - first + 1 }, (_, i) => first + i);
+    assert.deepEqual(questions.map((q) => q.kitRef), expected);
+  });
+
+  test(`${file} ids are unique and every question has its topic`, () => {
+    assert.equal(new Set(questions.map((q) => q.id)).size, questions.length);
+    for (const q of questions) assert.equal(q.topicId, topicId);
+  });
+
+  test(`${file} answer keys are valid for each question type`, () => {
+    for (const q of questions) {
+      assert.ok(q.text.trim().length > 0, `Q${q.kitRef} text`);
+      if (q.type === 'single') {
+        assert.equal(q.options.length, 4, `Q${q.kitRef} options`);
+        assert.ok(q.correctIndex >= 0 && q.correctIndex < 4, `Q${q.kitRef} key`);
+      } else if (q.type === 'multi') {
+        assert.equal(q.correctIndices.length, 2, `Q${q.kitRef} key`);
+        for (const i of q.correctIndices) assert.ok(i >= 0 && i < q.options.length, `Q${q.kitRef} key`);
+      } else if (q.type === 'matrix') {
+        assert.ok(q.columns.length >= 2, `Q${q.kitRef} columns`);
+        for (const r of q.rows) assert.ok(r.correctIndex >= 0 && r.correctIndex < q.columns.length, `Q${q.kitRef} key`);
+      } else {
+        assert.fail(`Q${q.kitRef} unknown type ${q.type}`);
+      }
+    }
+  });
+
+  test(`${file} explanations exist in all three languages`, () => {
+    for (const q of questions) assertTrilingual(q.explanation, `Q${q.kitRef} explanation`);
+  });
+}
+
 for (const id of ['01', '02']) {
   const chapter = require(`../data/chapter-${id}.js`);
 

@@ -34,6 +34,25 @@ test('scoring the last question in the set counts correctly', () => {
   assert.deepEqual(score(s), { attempted: 3, correct: 3 });
 });
 
+const MULTI = { id: 'm1', type: 'multi', correctIndices: [1, 3] };
+const MATRIX = { id: 'x1', type: 'matrix', rows: [{ correctIndex: 0 }, { correctIndex: 1 }] };
+
+test('multi-response is correct regardless of selection order', () => {
+  const s = answer(startSession([MULTI]), 'm1', [3, 1]);
+  assert.equal(isCorrect(s, 'm1'), true);
+});
+
+test('multi-response with one of two right is wrong', () => {
+  const s = answer(startSession([MULTI]), 'm1', [1, 2]);
+  assert.equal(isCorrect(s, 'm1'), false);
+});
+
+test('matrix is correct only when every row is right', () => {
+  const session = startSession([MATRIX]);
+  assert.equal(isCorrect(answer(session, 'x1', [0, 1]), 'x1'), true);
+  assert.equal(isCorrect(answer(session, 'x1', [0, 0]), 'x1'), false);
+});
+
 test('answer leaves the earlier session unchanged', () => {
   const before = startSession(QUESTIONS);
   answer(before, 'q1', 0);
