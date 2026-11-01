@@ -99,6 +99,15 @@ for (const id of ['01', '02']) {
     });
   });
 
+  test(`chapter ${id} exam notes, where present, match in all three languages`, () => {
+    for (const [i, s] of chapter.sections.entries()) {
+      if (!s.exam) continue;
+      assertTrilingual(s.exam, `section ${i} exam`);
+      const counts = LANGS.map((l) => s.exam[l].trim().split('\n').length);
+      assert.equal(new Set(counts).size, 1, `section ${i} exam note counts differ: ${counts}`);
+    }
+  });
+
   test(`chapter ${id} lessons have the same paragraph count in each language`, () => {
     chapter.sections.forEach((s, i) => {
       const counts = LANGS.map((l) => s.body[l].trim().split(/\n\s*\n/).length);

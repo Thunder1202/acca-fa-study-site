@@ -17,6 +17,11 @@ const chapter01 = {
   ],
   sections: [
     {
+      exam: {
+        en: `- Management accounts are normally not audited, but should be just as accurate as financial statements.`,
+        ru: `- Управленческая отчётность обычно не проходит аудит, но должна быть такой же точной, как финансовая.`,
+        uz: `- Boshqaruv hisobotlari odatda auditdan o'tmaydi, lekin moliyaviy hisobot kabi aniq bo'lishi kerak.`,
+      },
       key: {
         en: `- Financial accounting: annual statements for outside users such as lenders and investors.
 - Management accounting: detailed, frequent reports for the people running the business.
@@ -104,7 +109,7 @@ Imtihon uchun muhim: mas'uliyati cheklangan kompaniyaning e'lon qilingan hisobot
 
 Management and competitors also use the statements. Management relies mainly on management accounting information, so it needs the most detailed information of all.
 
-All users want information that is relevant and reliable, so they can assess how well management has looked after resources and decide whether to invest or provide more.`,
+All users want information that is relevant and faithfully represented, so they can assess how well management has looked after resources and decide whether to invest or provide more.`,
         ru: `Каждая группа пользователей (заинтересованных сторон) читает отчётность по своей причине:
 
 - Инвесторы и потенциальные инвесторы: прибыль, доходность и надёжность вложений. Крупнейшая группа — институциональные инвесторы, например пенсионные фонды.
@@ -117,7 +122,7 @@ All users want information that is relevant and reliable, so they can assess how
 
 Руководство и конкуренты также используют отчётность. Руководство опирается в основном на данные управленческого учёта, поэтому ему нужна самая подробная информация.
 
-Всем пользователям нужна уместная и надёжная информация, чтобы оценить, как руководство распорядилось ресурсами, и решить, стоит ли вкладывать или предоставлять новые средства.`,
+Всем пользователям нужна уместная и правдиво представленная информация, чтобы оценить, как руководство распорядилось ресурсами, и решить, стоит ли вкладывать или предоставлять новые средства.`,
         uz: `Har bir foydalanuvchi guruhi (manfaatdor tomonlar) hisobotni o'z sababi bilan o'qiydi:
 
 - Investorlar va potensial investorlar: foyda, daromadlilik va sarmoya xavfsizligi. Eng yirik guruh — pensiya jamg'armalari kabi institutsional investorlar.
@@ -130,15 +135,41 @@ All users want information that is relevant and reliable, so they can assess how
 
 Rahbariyat va raqobatchilar ham hisobotdan foydalanadi. Rahbariyat asosan boshqaruv hisobi ma'lumotlariga tayanadi, shuning uchun unga eng batafsil axborot kerak.
 
-Barcha foydalanuvchilarga rahbariyat resurslarni qanday boshqarganini baholash va sarmoya kiritish yoki yangi mablag' berish haqida qaror qilish uchun tegishli va ishonchli axborot kerak.`,
+Barcha foydalanuvchilarga rahbariyat resurslarni qanday boshqarganini baholash va sarmoya kiritish yoki yangi mablag' berish haqida qaror qilish uchun tegishli va haqqoniy axborot kerak.`,
       },
       example: {
         en: `Madina's bank wants to know the shop can repay its loan. Her main supplier checks she can pay on credit. Her shop assistant wonders whether the job is secure. The tax office wants to assess tax on her profit. One set of numbers, four very different questions.`,
-        ru: `Банк Мадины хочет знать, сможет ли магазин вернуть кредит. Главный поставщик проверяет, сможет ли она платить в рассрочку. Продавец думает, надёжно ли его рабочее место. Налоговая хочет рассчитать налог с её прибыли. Одни и те же цифры, но четыре совершенно разных вопроса.`,
+        ru: `Банк Мадины хочет знать, сможет ли магазин вернуть кредит. Главный поставщик проверяет, сможет ли она платить с отсрочкой. Продавец думает, надёжно ли его рабочее место. Налоговая хочет рассчитать налог с её прибыли. Одни и те же цифры, но четыре совершенно разных вопроса.`,
         uz: `Madinaning banki do'kon kreditni qaytara olishini bilmoqchi. Asosiy yetkazib beruvchi u nasiyaga to'lay olishini tekshiradi. Sotuvchi ish joyi barqarormi, deb o'ylaydi. Soliq idorasi uning foydasidan soliqni hisoblamoqchi. Raqamlar bitta, lekin savollar to'rt xil.`,
       },
     },
     {
+      exam: {
+        en: `- A partnership is not a separate legal entity: its property belongs to the partners.
+- All partners may share in management unless their agreement says otherwise.
+- A partner is an owner, not an employee. A written partnership agreement is useful but not compulsory.
+- A sole trader can move capital at any time. Partners need all partners to agree.
+- Sole traders and partnerships normally have no filing, audit or public inspection rules.
+- Floating charges are generally not available to partnerships or individuals.
+- A profit appropriation account shows how a partnership's profit is shared.
+- A sole trader's revaluation surplus goes into the capital account.`,
+        ru: `- Партнёрство не является отдельным юрлицом: его имущество принадлежит партнёрам.
+- Все партнёры могут участвовать в управлении, если их договор не говорит иное.
+- Партнёр — владелец, а не работник. Письменный договор полезен, но не обязателен.
+- Предприниматель может двигать капитал в любое время. Партнёрам нужно согласие всех партнёров.
+- У предпринимателей и партнёрств обычно нет требований о подаче отчётности, аудите и открытости.
+- Плавающий залог обычно недоступен партнёрствам и физическим лицам.
+- Счёт распределения прибыли показывает, как делится прибыль партнёрства.
+- Резерв переоценки предпринимателя входит в счёт капитала.`,
+        uz: `- Sheriklik alohida yuridik shaxs emas: uning mol-mulki sheriklarga tegishli.
+- Barcha sheriklar boshqaruvda qatnasha oladi, agar shartnomada boshqacha yozilmagan bo'lsa.
+- Sherik xodim emas, egadir. Yozma shartnoma foydali, ammo majburiy emas.
+- Yakka tadbirkor kapitalni istalgan vaqtda harakatlantira oladi. Sheriklarga hammaning roziligi kerak.
+- Yakka tadbirkor va sherikliklarda odatda hisobot topshirish, audit va ochiqlik talablari yo'q.
+- Suzuvchi garov odatda sheriklik va jismoniy shaxslarga berilmaydi.
+- Foydani taqsimlash hisobi sheriklik foydasi qanday bo'linishini ko'rsatadi.
+- Yakka tadbirkorning qayta baholash zaxirasi kapital hisobiga kiradi.`,
+      },
       key: {
         en: `- Sole trader: one owner, unlimited liability, capital account and drawings.
 - Partnership: two or more owners, jointly and severally liable, capital and current accounts.
@@ -173,7 +204,7 @@ Because a company is a separate legal person: it owns its own property; shares c
 Disadvantages of incorporation: registration and legal costs; annual financial statements must be filed and usually audited, which can be expensive; accounts are open to public inspection; strict rules apply to introducing and withdrawing capital and profits; and members cannot join in management unless they are also directors.`,
         ru: `Индивидуальный предприниматель (sole trader) — владелец, который сам ведёт бизнес и может нанимать сколько угодно работников. По закону владелец и бизнес — одно лицо, поэтому он получает всю прибыль, но несёт неограниченную ответственность (unlimited liability) за убытки и долги, даже личным имуществом, например домом. Счёт капитала растёт за счёт новых вложений и прибыли и уменьшается из-за изъятий (drawings) и убытков. Преимущества — гибкость и независимость. Такие предприятия обычно небольшие, так как зависят от ресурсов владельца.
 
-Партнёрство (partnership) имеет минимум двух владельцев, которые делят всю прибыль и несут неограниченную ответственность. Партнёры отвечают солидарно (jointly and severally), то есть каждый полностью отвечает за все долги бизнеса. У каждого партнёра есть счёт капитала — обычно фиксированная сумма, меняющаяся только при входе или выходе партнёра, и текущий счёт (current account), где отражаются его доля прибыли за вычетом изъятий. Преимущества — больше капитала, навыков и идей, более низкие административные расходы за счёт экономии от масштаба и возможность подменять друг друга.
+Партнёрство (partnership) имеет минимум двух владельцев, которые делят всю прибыль и несут неограниченную ответственность. Партнёры отвечают солидарно (jointly and severally), то есть каждый полностью отвечает за все долги бизнеса. У каждого партнёра есть счёт капитала — обычно фиксированная сумма, меняющаяся только при входе или выходе партнёра, и текущий счёт (current account), где отражается его доля прибыли за вычетом изъятий. Преимущества — больше капитала, навыков и идей, более низкие административные расходы за счёт экономии от масштаба и возможность подменять друг друга.
 
 Компания с ограниченной ответственностью (limited liability company) — отдельное от владельцев юридическое лицо, созданное путём регистрации (incorporation). Акционеры вкладывают средства в обмен на долю в остаточных активах. Они могут потерять вложения, но лично не отвечают по долгам компании, а смерть или банкротство акционера не влияет на компанию. Управляют ею директора, избранные акционерами. Акционеры не могут делать изъятия. Они получают дивиденды из накопленной прибыли.
 
@@ -252,6 +283,11 @@ Ehtiyotkorlik (prudence) noaniqlik sharoitida mulohaza yuritganda ehtiyot bo'lis
       },
     },
     {
+      exam: {
+        en: `- Materiality is an entity-specific aspect of relevance, based on the nature or size of an item.`,
+        ru: `- Существенность — аспект уместности, зависящий от предприятия: от характера или размера статьи.`,
+        uz: `- Muhimlik tegishlilikning korxonaga xos jihati bo'lib, moddaning tabiati yoki hajmiga bog'liq.`,
+      },
       key: {
         en: `- There are two: relevance and faithful representation.
 - Relevant: can influence decisions, with predictive or confirmatory value.
@@ -310,9 +346,9 @@ Haqqoniy aks ettirish (faithful representation) operatsiyalar faqat yuridik shak
 - Xatosizlik: muhimlik doirasida. Bu mutlaq aniqlikni anglatmaydi, taxmin esa aniq taxmin sifatida ko'rsatilishi kerak.`,
       },
       example: {
-        en: `A $2 mistake in Madina's stationery costs changes nobody's decision, so it is not material. Failing to mention a $6,000 bank loan would change her supplier's decision, so that is material. She also rents her fridge unit on a long agreement that gives her full use of it. Substance over form asks what the deal really is in economic terms, not just what the paper calls it.`,
-        ru: `Ошибка в $2 в расходах Мадины на канцелярию ничьего решения не изменит, поэтому она несущественна. А если не указать банковский кредит в $6,000, решение поставщика изменится, значит, это существенно. Мадина также арендует холодильное оборудование по длительному договору с полным правом пользования. Приоритет содержания спрашивает, чем эта сделка является экономически, а не только как она названа в документе.`,
-        uz: `Madinaning kantselyariya xarajatidagi $2 xato hech kimning qarorini o'zgartirmaydi, shuning uchun u muhim emas. $6,000 bank kreditini ko'rsatmaslik esa yetkazib beruvchi qarorini o'zgartiradi, demak bu muhim. Madina muzlatkich uskunasini ham undan to'liq foydalanish huquqi bilan uzoq muddatli shartnoma asosida ijaraga olgan. Mazmun ustunligi hujjatda nima deb yozilganini emas, bitim iqtisodiy jihatdan nima ekanini so'raydi.`,
+        en: `A $2 mistake in Madina's stationery costs changes nobody's decision, so it is not material. Failing to mention a $3,000 bank loan would change her supplier's decision, so that is material. She also rents her fridge unit on a long agreement that gives her full use of it. Substance over form asks what the deal really is in economic terms, not just what the paper calls it.`,
+        ru: `Ошибка в $2 в расходах Мадины на канцелярию ничьего решения не изменит, поэтому она несущественна. А если не указать банковский кредит в $3,000, решение поставщика изменится, значит, это существенно. Мадина также арендует холодильное оборудование по длительному договору с полным правом пользования. Приоритет содержания спрашивает, чем эта сделка является экономически, а не только как она названа в документе.`,
+        uz: `Madinaning kantselyariya xarajatidagi $2 xato hech kimning qarorini o'zgartirmaydi, shuning uchun u muhim emas. $3,000 bank kreditini ko'rsatmaslik esa yetkazib beruvchi qarorini o'zgartiradi, demak bu muhim. Madina muzlatkich uskunasini ham undan to'liq foydalanish huquqi bilan uzoq muddatli shartnoma asosida ijaraga olgan. Mazmun ustunligi hujjatda nima deb yozilganini emas, bitim iqtisodiy jihatdan nima ekanini so'raydi.`,
       },
     },
     {
@@ -365,7 +401,7 @@ Memory aid: the two fundamental characteristics make information useful, and the
 Eslab qolish uchun: ikkita asosiy xususiyat axborotni foydali qiladi, to'rtta kuchaytiruvchi esa yanada foydali qiladi. Imtihondagi keng tarqalgan tuzoq — kuchaytiruvchi xususiyatni asosiy deb ko'rsatish.`,
       },
       example: {
-        en: `Madina can count her cash drawer, which is direct verification. She can recalculate her year-end stock value from the supplier prices, which is indirect verification. If her bank asks for results and she delivers them nine months late, the figures may be accurate but they have lost their timeliness.`,
+        en: `Madina can count her cash drawer, which is direct verification. She can recalculate her year-end inventory value from the supplier prices, which is indirect verification. If her bank asks for results and she delivers them nine months late, the figures may be accurate but they have lost their timeliness.`,
         ru: `Мадина может пересчитать деньги в кассе — это прямая проверка. Она может заново рассчитать стоимость запасов на конец года по ценам поставщиков — это косвенная проверка. Если банк запросит результаты, а она предоставит их на девять месяцев позже, цифры могут быть точными, но своевременность потеряна.`,
         uz: `Madina kassadagi pulni sanashi mumkin, bu to'g'ridan-to'g'ri tekshirish. U yil oxiridagi tovar zaxirasi qiymatini yetkazib beruvchi narxlari bo'yicha qayta hisoblashi mumkin, bu bilvosita tekshirish. Agar bank natijalarni so'rasa-yu, u ularni to'qqiz oy kechikib bersa, raqamlar aniq bo'lsa ham, o'z vaqtidalik yo'qolgan bo'ladi.`,
       },
@@ -435,9 +471,9 @@ Aktiv va majburiyatlar muddat bo'yicha ham bo'linadi. Joriy aktivlar (current as
 Joriy majburiyatlar (current liabilities) hisobot sanasidan o'n ikki oy ichida to'lanadi, masalan yetkazib beruvchilarga qarz. Uzoq muddatli majburiyatlar (non-current liabilities) o'n ikki oydan keyin to'lanadi, masalan ikki yildan keyin qaytariladigan kredit.`,
       },
       example: {
-        en: `On day one Madina invests $8,000 of her own money and borrows $3,000 from the bank, repayable in two years. She buys shelves for $3,000, and $5,500 of stock with $1,000 of that on credit.
+        en: `On day one Madina invests $8,000 of her own money and borrows $3,000 from the bank, repayable in two years. She buys shelves for $3,000, and $5,500 of inventory with $1,000 of that on credit.
 
-Assets: shelves $3,000 (non-current), stock $5,500 and cash $3,500 (current), total $12,000.
+Assets: shelves $3,000 (non-current), inventory $5,500 and cash $3,500 (current), total $12,000.
 
 Liabilities: bank loan $3,000 (non-current), supplier $1,000 (current).
 
@@ -535,6 +571,14 @@ Boshqa umumlashgan daromad amalga oshmagan foyda va zararlarni o'z ichiga oladi.
       },
     },
     {
+      exam: {
+        en: `- Consistency covers how items are presented and classified, including in the notes.
+- Going concern is why non-current assets stay at cost less depreciation, not forced sale value.`,
+        ru: `- Последовательность касается представления и классификации статей, включая примечания.
+- Благодаря непрерывности внеоборотные активы учитываются по стоимости за вычетом амортизации, а не по цене вынужденной продажи.`,
+        uz: `- Izchillik moddalarning taqdim etilishi va tasniflanishiga, jumladan izohlarga ham tegishli.
+- Uzluksizlik sababli uzoq muddatli aktivlar majburiy sotuv narxida emas, qiymat minus amortizatsiyada ko'rsatiladi.`,
+      },
       key: {
         en: `- Going concern: expected to keep operating. Expected, never guaranteed.
 - Accruals: record when earned or incurred, not when cash moves.
@@ -603,27 +647,27 @@ Boshqa umumlashgan daromad amalga oshmagan foyda va zararlarni o'z ichiga oladi.
 
 Accruals: she sells goods to a local cafe in June and is paid in July, so the sale belongs in June.
 
-Offsetting: the cafe also supplies her lunches and she owes it $40, while it owes her $200. She shows both, not a net $160.
+Offsetting: the cafe also sells the shop paper bags and she owes it $40, while it owes her $200. She shows both, not a net $160.
 
-Duality: she buys a laptop by debit card, so she gains an asset and her bank balance falls.
+Duality: she buys a laptop for the shop by debit card, so the shop gains an asset and her bank balance falls.
 
 Historical cost: the shelves stay at the $3,000 she paid, even if similar shelves now cost more.`,
         ru: `Обособленность: Мадина оплачивает домашнее электричество из кассы магазина. Это изъятие, а не расход магазина.
 
 Начисление: она продаёт товар местному кафе в июне, а деньги получает в июле, поэтому продажа относится к июню.
 
-Взаимозачёт: кафе также поставляет ей обеды, и она должна ему $40, а оно ей $200. Она показывает обе суммы, а не чистые $160.
+Взаимозачёт: кафе также продаёт магазину бумажные пакеты, и она должна ему $40, а оно ей $200. Она показывает обе суммы, а не чистые $160.
 
-Двойственность: она покупает ноутбук по дебетовой карте, поэтому появляется актив и уменьшается остаток в банке.
+Двойственность: она покупает ноутбук для магазина по дебетовой карте, поэтому появляется актив и уменьшается остаток в банке.
 
 Первоначальная стоимость: полки остаются по уплаченным $3,000, даже если сейчас такие стоят дороже.`,
         uz: `Alohidalik: Madina uyining elektr to'lovini do'kon kassasidan to'laydi. Bu do'kon xarajati emas, olib qo'yish.
 
 Hisoblash: u mahalliy kafega iyunda tovar sotadi, pulni iyulda oladi, demak sotuv iyunga tegishli.
 
-O'zaro hisobga olish: kafe unga tushlik ham yetkazib beradi va u kafega $40 qarzdor, kafe esa unga $200 qarzdor. U sof $160 emas, ikkala summani ko'rsatadi.
+O'zaro hisobga olish: kafe do'konga qog'oz paketlar ham sotadi va u kafega $40 qarzdor, kafe esa unga $200 qarzdor. U sof $160 emas, ikkala summani ko'rsatadi.
 
-Ikki yoqlamalik: u debet karta bilan noutbuk sotib oladi, shunda aktiv paydo bo'ladi va bankdagi qoldiq kamayadi.
+Ikki yoqlamalik: u do'kon uchun debet karta bilan noutbuk sotib oladi, shunda aktiv paydo bo'ladi va bankdagi qoldiq kamayadi.
 
 Tarixiy qiymat: javonlar u to'lagan $3,000 da qoladi, hatto hozir shunaqasi qimmatroq bo'lsa ham.`,
       },
@@ -638,7 +682,7 @@ Tarixiy qiymat: javonlar u to'lagan $3,000 da qoladi, hatto hozir shunaqasi qimm
     { term: { en: 'Materiality', ru: 'Существенность', uz: 'Muhimlik' }, definition: { en: 'Information that could reasonably influence primary users\' decisions if omitted, misstated or obscured.', ru: 'Информация, пропуск, искажение или сокрытие которой может обоснованно повлиять на решения основных пользователей.', uz: 'Tushirib qoldirilsa, noto\'g\'ri ko\'rsatilsa yoki yashirilsa, asosiy foydalanuvchilar qaroriga asosli ta\'sir qilishi mumkin bo\'lgan axborot.' } },
     { term: { en: 'Substance over form', ru: 'Приоритет содержания над формой', uz: 'Shakldan mazmunning ustunligi' }, definition: { en: 'Recording the economic reality of a transaction, not only its legal form.', ru: 'Отражение экономической реальности операции, а не только её юридической формы.', uz: 'Operatsiyaning faqat yuridik shaklini emas, iqtisodiy haqiqatini qayd etish.' } },
     { term: { en: 'Going concern', ru: 'Непрерывность деятельности', uz: 'Uzluksizlik' }, definition: { en: 'The assumption that the entity will keep operating for the foreseeable future.', ru: 'Допущение, что предприятие будет работать в обозримом будущем.', uz: 'Korxona yaqin kelajakda ishlashda davom etadi degan faraz.' } },
-    { term: { en: 'Accrual accounting', ru: 'Метод начисления', uz: 'Hisoblash usuli' }, definition: { en: 'Recording revenue when earned and expenses when incurred, not when cash moves.', ru: 'Отражение выручки при её получении и расходов при их возникновении, а не при движении денег.', uz: 'Daromadni topilganda, xarajatni qilinganda qayd etish, pul harakatlanganda emas.' } },
+    { term: { en: 'Accrual accounting', ru: 'Метод начисления', uz: 'Hisoblash usuli' }, definition: { en: 'Recording revenue when earned and expenses when incurred, not when cash moves.', ru: 'Отражение выручки, когда она заработана, а расходов, когда они понесены, а не при движении денег.', uz: 'Daromadni topilganda, xarajatni qilinganda qayd etish, pul harakatlanganda emas.' } },
     { term: { en: 'Other comprehensive income', ru: 'Прочий совокупный доход', uz: 'Boshqa umumlashgan daromad' }, definition: { en: 'Unrealised gains and losses, such as a revaluation surplus.', ru: 'Нереализованные прибыли и убытки, например резерв переоценки.', uz: 'Amalga oshmagan foyda va zararlar, masalan qayta baholash zaxirasi.' } },
   ],
 };

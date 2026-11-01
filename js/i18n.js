@@ -8,8 +8,8 @@ const LABELS = {
   practice: { en: 'Training', ru: 'Тренировка', uz: 'Mashg\'ulot' },
   weakAreas: { en: 'Weak points', ru: 'Слабые места', uz: 'Zaif joylar' },
   heroEyebrow: { en: 'ACCA Financial Accounting (FA / F3)', ru: 'ACCA Финансовый учёт (FA / F3)', uz: 'ACCA Moliyaviy hisob (FA / F3)' },
-  heroTitle: { en: 'Pass the exam, one mission at a time.', ru: 'Сдай экзамен, миссия за миссией.', uz: 'Imtihondan o\'t, missiya ketidan missiya.' },
-  heroText: { en: 'Learn a topic. Train on it. Rank up.', ru: 'Изучи тему. Потренируйся. Повысь ранг.', uz: 'Mavzuni o\'rgan. Mashq qil. Darajangni oshir.' },
+  heroTitle: { en: 'Pass ACCA FA', ru: 'Сдай ACCA FA', uz: 'ACCA FA dan o\'t' },
+  heroText: { en: 'Train for the Financial Accounting (F3) exam, one mission at a time.', ru: 'Готовься к экзамену Financial Accounting (F3), миссия за миссией.', uz: 'Financial Accounting (F3) imtihoniga missiya ketidan missiya tayyorlan.' },
   startHere: { en: 'Start mission 1', ru: 'Начать миссию 1', uz: '1-missiyani boshlash' },
   continueWith: { en: 'Continue', ru: 'Продолжить', uz: 'Davom etish' },
   group: { en: 'Group', ru: 'Группа', uz: 'Guruh' },
@@ -60,7 +60,8 @@ const LABELS = {
   start: { en: 'Start', ru: 'Начать', uz: 'Boshlash' },
   notFound: { en: 'That page does not exist yet.', ru: 'Такой страницы пока нет.', uz: 'Bunday sahifa hali yo\'q.' },
   goHome: { en: 'Go to the home page', ru: 'На главную', uz: 'Bosh sahifaga' },
-  footerNote: { en: 'Independent study aid. Not affiliated with ACCA, Kaplan or Naruto.', ru: 'Независимое учебное пособие. Не связано с ACCA, Kaplan или Naruto.', uz: 'Mustaqil o\'quv qo\'llanma. ACCA, Kaplan yoki Naruto bilan bog\'liq emas.' },
+  footerNote: { en: 'Independent study aid. Not affiliated with ACCA or Naruto.', ru: 'Независимое учебное пособие. Не связано с ACCA или Naruto.', uz: 'Mustaqil o\'quv qo\'llanma. ACCA yoki Naruto bilan bog\'liq emas.' },
+  examNotes: { en: 'Also tested in the exam', ru: 'Также бывает на экзамене', uz: 'Imtihonda bu ham so\'raladi' },
 };
 
 function getLang(storage) {

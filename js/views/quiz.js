@@ -3,31 +3,66 @@
 (function () {
   const { el, richText } = ACCA.dom;
   const { translate: t, label, LANGS } = ACCA.i18n;
-  const { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor } = ACCA.quiz;
+  const { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor, packAnswers, restoreSession } = ACCA.quiz;
   const { recordSession } = ACCA.progress;
   const MODE_KEY = 'acca-fa-quiz-mode';
+  const SAVE_PREFIX = 'acca-fa-quiz-';
 
   // Kept outside the page render so changing language mid-quiz does not lose answers.
   let state = null;
+  let currentMode = null;
 
-  function loadMode(storage) {
+  function modeFor(storage) {
+    if (currentMode) return currentMode;
     try {
-      return storage.getItem(MODE_KEY) === 'all' ? 'all' : 'one';
+      currentMode = storage.getItem(MODE_KEY) === 'all' ? 'all' : 'one';
     } catch {
-      return 'one';
+      currentMode = 'one';
     }
+    return currentMode;
   }
 
   function saveMode(storage, mode) {
+    currentMode = mode;
     try {
       storage.setItem(MODE_KEY, mode);
     } catch {
-      // Falls back to the default mode next visit.
+      // The choice still holds until the page is closed.
     }
   }
 
   function newState(config) {
-    return { key: config.key, mode: loadMode(config.storage), session: startSession(config.questions), index: 0, checked: false, finished: false };
+    return { key: config.key, mode: modeFor(config.storage), session: startSession(config.questions), index: 0, checked: false, finished: false };
+  }
+
+  function clearSaved(key) {
+    try {
+      window.sessionStorage.removeItem(SAVE_PREFIX + key);
+    } catch {
+      // Nothing was saved if storage is blocked.
+    }
+  }
+
+  // A set can take many minutes, so Back, Forward or a reload must not lose the answers.
+  function saveProgress() {
+    try {
+      if (state.finished) clearSaved(state.key);
+      else window.sessionStorage.setItem(SAVE_PREFIX + state.key, JSON.stringify({ index: state.index, checked: state.checked, answers: packAnswers(state.session) }));
+    } catch {
+      // Without storage the quiz still works; it just cannot be resumed.
+    }
+  }
+
+  function resumeState(config) {
+    try {
+      const saved = JSON.parse(window.sessionStorage.getItem(SAVE_PREFIX + config.key));
+      if (!saved) return null;
+      const session = restoreSession(config.questions, saved.answers);
+      const index = Math.min(saved.index, config.questions.length - 1);
+      return { ...newState(config), session, index, checked: Boolean(saved.checked) };
+    } catch {
+      return null;
+    }
   }
 
   function record(config) {
@@ -103,6 +138,7 @@
       onclick: () => {
         if (state.mode === mode) return;
         saveMode(config.storage, mode);
+        clearSaved(config.key);
         state = newState(config);
         redraw();
       },
@@ -117,18 +153,17 @@
     const percent = attempted === 0 ? 0 : Math.round((correct / attempted) * 100);
     return el('section', { class: 'result' },
       el('span', { class: 'result-stamp', lang: 'ja', 'aria-hidden': 'true' }, percent >= 50 ? '合格' : '修行'),
-      el('p', { class: 'eyebrow' }, label('resultTitle', lang)),
-      el('p', { class: 'result-score' }, `${percent}%`),
+      el('h2', {}, label('resultTitle', lang)),
       el('p', { class: 'result-rank' }, label(rankFor(percent), lang)),
-      el('p', {}, `${correct} / ${attempted}`),
-      el('p', { class: 'hint' }, label('passNote', lang)),
+      el('p', { class: 'result-score' }, `${percent}% · ${correct} / ${attempted}`),
+      el('p', { class: 'result-note' }, label('passNote', lang)),
       el('div', { class: 'actions' },
-        el('button', { type: 'button', class: 'button primary', onclick: () => { state = newState(config); redraw(); } }, label('practiseAgain', lang)),
+        el('button', { type: 'button', class: 'button primary', onclick: () => { clearSaved(config.key); state = newState(config); redraw(); } }, label('practiseAgain', lang)),
         el('a', { class: 'button', href: config.backHref }, label(config.backLabel, lang))));
   }
 
   function oneAtATime(config, redraw, lang) {
-    const { questions } = config;
+    const { questions } = state.session;
     if (state.finished) return resultPanel(config, redraw, lang);
     const q = questions[state.index];
     const last = state.index === questions.length - 1;
@@ -151,6 +186,7 @@
     }, label(last ? 'finish' : 'next', lang));
     const onPick = (value) => {
       state.session = answer(state.session, q.id, value);
+      saveProgress();
       check.disabled = !isComplete(q, value);
     };
     return el('div', {},
@@ -161,7 +197,7 @@
   }
 
   function allAtOnce(config, redraw, lang) {
-    const { questions } = config;
+    const { questions } = state.session;
     const remaining = () => questions.filter((q) => !isComplete(q, state.session.answers.get(q.id))).length;
     const counter = el('p', { class: 'hint' });
     const submit = el('button', {
@@ -175,6 +211,7 @@
     };
     const cards = questions.map((q, i) => questionCard(q, i + 1, questions.length, lang, state.finished, (value) => {
       state.session = answer(state.session, q.id, value);
+      saveProgress();
       refresh();
     }));
     refresh();
@@ -185,13 +222,15 @@
   }
 
   function renderQuiz(container, config, lang) {
-    if (!state || state.key !== config.key) state = newState(config);
+    if (!state || state.key !== config.key) state = resumeState(config) ?? newState(config);
+    saveProgress();
     const redraw = () => renderQuiz(container, config, lang);
     container.replaceChildren(el('div', { class: 'quiz' },
       el('header', { class: 'quiz-head' },
         el('h1', {}, config.title),
         modeSwitch(config, redraw, lang)),
       state.mode === 'all' ? allAtOnce(config, redraw, lang) : oneAtATime(config, redraw, lang)));
+    if (state.mode === 'one') window.scrollTo(0, 0);
   }
 
   function resetQuiz() {

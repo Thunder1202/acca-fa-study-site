@@ -28,6 +28,7 @@
   }
 
   const storage = openStorage();
+  let lang = getLang(storage);
   const allChapters = course.flatMap((group) => group.chapters);
   const openChapters = allChapters.filter((chapter) => chapters[chapter.id]);
   const topics = openChapters.map((chapter) => ({ ...chapter, questionCount: questions[chapter.id].length }));
@@ -80,7 +81,6 @@
   }
 
   function render() {
-    const lang = getLang(storage);
     const { view, params } = parseRoute(window.location.hash);
     renderChrome(lang);
     if (view === 'chapter') showChapter(params.id, lang);
@@ -91,7 +91,8 @@
   }
 
   switcher.addEventListener('change', () => {
-    setLang(storage, switcher.value);
+    lang = switcher.value;
+    setLang(storage, lang);
     render();
   });
 

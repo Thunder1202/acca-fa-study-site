@@ -2,10 +2,15 @@
 
 const PROGRESS_KEY = 'acca-fa-progress';
 
+function isValidEntry(entry) {
+  return Boolean(entry) && [entry.attempted, entry.correct, entry.lastScore].every(Number.isFinite);
+}
+
 function loadProgress(storage) {
   try {
     const saved = JSON.parse(storage.getItem(PROGRESS_KEY));
-    return saved && typeof saved === 'object' ? saved : {};
+    if (!saved || typeof saved !== 'object' || Array.isArray(saved)) return {};
+    return Object.fromEntries(Object.entries(saved).filter(([, entry]) => isValidEntry(entry)));
   } catch {
     return {};
   }

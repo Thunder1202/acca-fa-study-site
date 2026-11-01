@@ -57,5 +57,14 @@ function rankFor(percent) {
   return 'rankAcademy';
 }
 
-if (typeof module !== 'undefined') module.exports = { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor };
-else (globalThis.ACCA ??= {}).quiz = { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor };
+function packAnswers(session) {
+  return [...session.answers.entries()];
+}
+
+function restoreSession(questions, packed) {
+  const known = new Set(questions.map((q) => q.id));
+  return { questions, answers: new Map(packed.filter(([id]) => known.has(id))) };
+}
+
+if (typeof module !== 'undefined') module.exports = { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor, packAnswers, restoreSession };
+else (globalThis.ACCA ??= {}).quiz = { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor, packAnswers, restoreSession };

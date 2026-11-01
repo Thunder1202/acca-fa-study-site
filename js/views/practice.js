@@ -22,17 +22,17 @@
     const studied = topics.filter((topic) => progress[topic.id]);
     container.replaceChildren(el('div', { class: 'page' },
       el('h1', {}, label('practiceTitle', lang)),
-      el('section', { class: 'panel' },
-        el('h2', {}, label('studiedTitle', lang)),
-        el('p', {}, label(studied.length ? 'studiedText' : 'studiedEmpty', lang)),
-        studied.length > 0 && el('a', { class: 'button primary', href: '#/quiz/review' }, label('start', lang))),
-      el('section', { class: 'panel' },
-        el('h2', {}, label('weakTitle', lang)),
-        el('p', {}, label('weakText', lang)),
-        el('a', { class: 'button', href: '#/weak-areas' }, label('weakAreas', lang))),
+      el('div', { class: 'training-top' },
+        el('section', { class: 'panel field hot' },
+          el('h2', {}, label('weakTitle', lang)),
+          el('p', {}, label('weakText', lang)),
+          el('a', { class: 'button', href: '#/weak-areas' }, label('weakAreas', lang))),
+        el('section', { class: 'panel field' },
+          el('h2', {}, label('studiedTitle', lang)),
+          el('p', {}, label(studied.length ? 'studiedText' : 'studiedEmpty', lang)),
+          studied.length > 0 && el('a', { class: 'button primary', href: '#/quiz/review' }, label('start', lang)))),
       el('section', { class: 'panel' },
         el('h2', {}, label('chooseTitle', lang)),
-        el('p', {}, label('chooseText', lang)),
         el('ul', { class: 'topic-list' }, topics.map((topic) => topicRow(topic, progress[topic.id], lang))))));
   }
 

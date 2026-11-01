@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor } from '../js/quiz.js';
+import { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor, packAnswers, restoreSession } from '../js/quiz.js';
 
 const QUESTIONS = [
   { id: 'q1', correctIndex: 0 },
@@ -83,6 +83,17 @@ test('scoreByTopic splits a mixed review session by topic', () => {
     'chapter-01': { attempted: 2, correct: 1 },
     'chapter-02': { attempted: 1, correct: 1 },
   });
+});
+
+test('answers survive being packed for storage and restored', () => {
+  const session = answer(answer(startSession(QUESTIONS), 'q1', 0), 'q2', 2);
+  const packed = JSON.parse(JSON.stringify(packAnswers(session)));
+  assert.deepEqual(score(restoreSession(QUESTIONS, packed)), { attempted: 2, correct: 1 });
+});
+
+test('restoring drops answers to questions no longer in the set', () => {
+  const restored = restoreSession(QUESTIONS, [['q1', 0], ['gone', 1]]);
+  assert.deepEqual(score(restored), { attempted: 1, correct: 1 });
 });
 
 test('rankFor follows the 50% exam pass mark and rises with the score', () => {

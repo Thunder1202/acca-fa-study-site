@@ -57,6 +57,24 @@ test('loadProgress returns {} for corrupted saved data', () => {
   assert.deepEqual(loadProgress(s), {});
 });
 
+test('an array saved as progress counts as empty, so sessions still save', () => {
+  const s = fakeStorage();
+  s.setItem('acca-fa-progress', '[]');
+  recordSession(s, 'chapter-01', 1, 2);
+  assert.deepEqual(loadProgress(s), { 'chapter-01': { attempted: 2, correct: 1, lastScore: 0.5 } });
+});
+
+test('entries with missing or non-numeric fields are dropped', () => {
+  const s = fakeStorage();
+  s.setItem('acca-fa-progress', JSON.stringify({
+    good: { attempted: 2, correct: 1, lastScore: 0.5 },
+    noScore: { attempted: 2, correct: 1 },
+    text: { attempted: '10', correct: 1, lastScore: 0.5 },
+    empty: null,
+  }));
+  assert.deepEqual(loadProgress(s), { good: { attempted: 2, correct: 1, lastScore: 0.5 } });
+});
+
 test('recordSession ignores a session with nothing attempted', () => {
   const s = fakeStorage();
   recordSession(s, 'chapter-01', 0, 0);

@@ -64,7 +64,7 @@ Buni faqat buxgalteriya standartlari bilan amalga oshirib bo'lmaydi. Huquqiy va 
 Odatiy milliy tizimga milliy hisobot standartlari, milliy qonunlar, bozor qoidalari va fond birjasi qoidalari kiradi. Masalan, Buyuk Britaniyada standartlarni Moliyaviy hisobot kengashi (Financial Reporting Council) chiqaradi, asosiy qonun Companies Act 2006, bozor regulyatori Financial Conduct Authority, London fond birjasi esa kotirovka qilinadigan kompaniyalar uchun qoidalar belgilaydi.`,
       },
       example: {
-        en: `Imagine Madina's Mart asks a new investor for money. Without rules, Madina could count unsold stock as a sale and look far more profitable than a rival shop that counts only real sales. The investor could not trust or compare the two sets of numbers. Regulation gives everyone the same rulebook.`,
+        en: `Imagine Madina's Mart asks a new investor for money. Without rules, Madina could count unsold inventory as a sale and look far more profitable than a rival shop that counts only real sales. The investor could not trust or compare the two sets of numbers. Regulation gives everyone the same rulebook.`,
         ru: `Представьте, что Madina's Mart просит денег у нового инвестора. Без правил Мадина могла бы считать непроданный товар продажей и выглядеть намного прибыльнее конкурента, который учитывает только реальные продажи. Инвестор не смог бы ни доверять этим цифрам, ни сравнивать их. Регулирование даёт всем одни правила.`,
         uz: `Tasavvur qiling, Madina's Mart yangi investordan pul so'rayapti. Qoidalar bo'lmasa, Madina sotilmagan tovarni sotuv deb hisoblab, faqat haqiqiy sotuvlarni sanaydigan raqib do'kondan ancha foydali ko'rinishi mumkin edi. Investor bu raqamlarga ishona ham, solishtira ham olmasdi. Tartibga solish hammaga bir xil qoida beradi.`,
       },
@@ -174,13 +174,13 @@ Imtihon maslahati: Fond nazorat qiladi, Kengash standart chiqaradi, IFRIC talqin
       key: {
         en: `- Order: subject chosen, exposure draft, public comments, final standard.
 - A discussion paper can be issued at any stage.
-- The Study Text says publishing needs at least 8 of the 15 Board votes.`,
+- Publishing needs a Board vote. The book says 8 of 15; recent IFRS Foundation rules say 9 of 14.`,
         ru: `- Порядок: выбор темы, проект стандарта, комментарии, окончательный стандарт.
 - Дискуссионный документ можно выпустить на любом этапе.
-- В учебнике: для публикации нужно не менее 8 голосов из 15 членов Совета.`,
+- Для публикации нужно голосование Совета. В книге 8 из 15, в недавних правилах Фонда IFRS 9 из 14.`,
         uz: `- Tartib: mavzu tanlash, standart loyihasi, fikrlar, yakuniy standart.
 - Muhokama hujjati istalgan bosqichda chiqarilishi mumkin.
-- Darslikda: e'lon qilish uchun 15 Kengash a'zosidan kamida 8 ovoz kerak.`,
+- E'lon qilish uchun Kengash ovozi kerak. Kitobda 15 dan 8, IFRS Fondi qoidalarida 14 dan 9.`,
       },
       heading: {
         en: 'How an IFRS Accounting Standard is developed',
@@ -196,7 +196,7 @@ Imtihon maslahati: Fond nazorat qiladi, Kengash standart chiqaradi, IFRIC talqin
 
 At any stage the Board may also issue a discussion paper to encourage comment.
 
-The Study Text states that publishing a standard, exposure draft or IFRIC interpretation requires at least eight votes from the 15 Board members.
+The Study Text states that publishing a standard, exposure draft or IFRIC interpretation requires at least eight votes from the 15 Board members. Recent IFRS Foundation constitutions instead say nine votes from 14 members, so do not rely on the exact number.
 
 National standard setters take part. Many are represented, they can circulate discussion papers and exposure drafts for comment in their own countries, and a major national standard setter normally leads each project.`,
         ru: `Процесс идёт в таком порядке:
@@ -207,7 +207,7 @@ National standard setters take part. Many are represented, they can circulate di
 
 На любом этапе Совет может также выпустить дискуссионный документ (discussion paper), чтобы получить комментарии.
 
-В учебнике указано, что для публикации стандарта, проекта стандарта или интерпретации IFRIC нужно не менее восьми голосов из 15 членов Совета.
+В учебнике указано, что для публикации стандарта, проекта стандарта или интерпретации IFRIC нужно не менее восьми голосов из 15 членов Совета. В недавних редакциях устава Фонда IFRS указано девять голосов из 14, поэтому не полагайтесь на точное число.
 
 Национальные органы по стандартам участвуют в процессе. Многие из них представлены, они могут распространять дискуссионные документы и проекты для обсуждения в своих странах, а крупный национальный орган обычно ведёт каждый проект.`,
         uz: `Jarayon quyidagi tartibda boradi:
@@ -218,7 +218,7 @@ National standard setters take part. Many are represented, they can circulate di
 
 Istalgan bosqichda Kengash fikr bildirishga undash uchun muhokama hujjatini (discussion paper) ham chiqarishi mumkin.
 
-Darslikda aytilishicha, standart, standart loyihasi yoki IFRIC talqinini e'lon qilish uchun 15 nafar Kengash a'zosidan kamida sakkiz nafarining ovozi kerak.
+Darslikda aytilishicha, standart, standart loyihasi yoki IFRIC talqinini e'lon qilish uchun 15 nafar Kengash a'zosidan kamida sakkiz nafarining ovozi kerak. IFRS Fondi nizomining yaqindagi tahrirlarida esa 14 a'zodan to'qqiz ovoz deyilgan, shuning uchun aniq raqamga tayanmang.
 
 Milliy standart belgilovchi organlar ham ishtirok etadi. Ularning ko'pchiligi vakillik qiladi, muhokama hujjatlari va loyihalarni o'z mamlakatlarida fikr uchun tarqatishi mumkin, yirik milliy organ esa odatda har bir loyihani boshqaradi.`,
       },
@@ -366,6 +366,17 @@ Ko'rsatmalar hozirgi biznes amaliyotiga mos bo'lishi uchun muntazam qayta ko'rib
       },
     },
     {
+      exam: {
+        en: `- Responsibility sits with the board together, not one director, and stays there if tasks are delegated.
+- No law requires directors to hold an accounting or business qualification.
+- Directors are personally liable for losses from fraud or error only if they failed in their duties.`,
+        ru: `- Ответственность лежит на всём совете, а не на одном директоре, и остаётся на нём при передаче задач.
+- Закон не требует от директоров бухгалтерской или бизнес-квалификации.
+- Директора лично отвечают за убытки от мошенничества или ошибок, только если не исполнили обязанности.`,
+        uz: `- Javobgarlik bitta direktorda emas, butun kengashda va vazifa topshirilsa ham unda qoladi.
+- Qonun direktorlardan buxgalteriya yoki biznes malakasini talab qilmaydi.
+- Direktorlar firibgarlik yoki xato zarari uchun faqat burchini bajarmagan bo'lsa shaxsan javob beradi.`,
+      },
       key: {
         en: `- Act in good faith, and disclose any conflict of interest.
 - The whole board is responsible for controls, records and the statements.
