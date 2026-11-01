@@ -10,6 +10,13 @@
 
 **Spec:** `GROUP1_PILOT_DESIGN.md` (and `PROJECT_NOTES.md` for the overall project context this pilot establishes the pattern for).
 
+## Corrections made during execution (these override the tasks below)
+
+- All `.mjs` files in `js/` and `data/` are plain `.js` scripts instead. Each ends with `if (typeof module !== 'undefined') module.exports = { ... }; else (globalThis.ACCA ??= {}).<name> = { ... };`. Tests stay `.mjs` and import the `.js` files. Browsers do not run ES modules from `file://` (tested). No dynamic `import()`: `index.html` loads every script with a `<script>` tag.
+- Task 6 writes one rewritten question per Kit question (58 total: Kit Q1-46 for chapter 1, Kit Q47-58 for chapter 2), not 10-15 per chapter. Each question gains `kitRef: number`.
+- Never `git add -A` without checking; `*.pdf` is git-ignored so the Kaplan books stay out of the repo.
+- Syllabus has 9 sections (A-I), and the chapter 20 title is "Consolidated statement of profit or loss and associates".
+
 ## Global Constraints
 
 - No frameworks, no bundler, no build step, no `npm install` — must run by opening `index.html` directly (or via any static file server).

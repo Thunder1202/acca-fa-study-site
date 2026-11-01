@@ -11,7 +11,7 @@ Prove out the whole pattern — trilingual lesson content, a running example bus
 - A working local website (open `index.html`, no install) covering Ch.1–2.
 - Lesson content in EN/RU/UZ, rewritten from Kaplan's own wording + expanded with original explanations and examples.
 - One running fictional business, introduced in Ch.1, whose situations illustrate every concept as it's introduced.
-- Every Exam Kit OTQ tagged to "Introduction to financial reporting" or "The regulatory framework" available as practice, in both quiz modes (one-at-a-time / all-at-once).
+- A rewritten practice question for every Exam Kit OTQ under "Introduction to financial reporting" (Kit Q1-46) and "The regulatory framework" (Kit Q47-58), 58 in total, each labelled with its Kit number, in both quiz modes (one-at-a-time / all-at-once).
 - Feedback after each question explains what the question was asking and why the answer is right/wrong, in EN/RU/UZ.
 - Progress (score per topic) persisted in the browser (localStorage), feeding a "weak areas" practice mode.
 - Fully responsive (phone + desktop).
@@ -27,7 +27,7 @@ Prove out the whole pattern — trilingual lesson content, a running example bus
 ## Anti-goals
 
 - Don't let trilingual content become literal Google-Translate-style text — explanations should read naturally in each language.
-- Don't copy Kaplan's exact sentences at length — paraphrase + expand, per the copyright note in `PROJECT_NOTES.md`.
+- Don't copy Kaplan's text or questions: use standard terms, write everything else in original wording (see decision 5 in `PROJECT_NOTES.md`).
 - Don't make the running example feel bolted-on — it should actually clarify each concept, not just decorate the page.
 
 ## The running example business
@@ -50,10 +50,9 @@ Each of the 2 chapters becomes one "topic" with:
 
 ```
 /data/
-  groups.js            // list of the 8 syllabus groups + their chapters (metadata only)
   chapter-01.js         // { id, titles: {en,ru,uz}, objectives: {...}, sections: [...], glossary: [...] }
   chapter-02.js
-  questions-ch01.js      // [{ id, topicId, textEn, options: [...], correctIndex, explanation: {en,ru,uz} }, ...]
+  questions-ch01.js      // [{ id, kitRef, topicId, text, options: [...], correctIndex, explanation: {en,ru,uz} }, ...]
   questions-ch02.js
 ```
 
@@ -90,7 +89,7 @@ Key: `acca-fa-progress` → JSON:
 
 - Exact wording of all lesson content and the Madina's Mart examples, in all 3 languages.
 - Exact visual styling within the above direction (specific hex colors/typography choices).
-- Picking/tagging which specific Exam Kit OTQs (by their question numbers in the book, e.g. Q1–Q11 for "the use of double-entry..." per the index) map to Chapter 1 vs Chapter 2, rewritten in original wording per the copyright note.
+- Rewriting Kit Q1-58 in original wording, keeping each question's concept and answer logic.
 - Exact glossary term list per chapter.
 
 ## Done when
