@@ -1,6 +1,6 @@
 # ACCA FA Learning Website — Project Notes
 
-Status: **Group 1 pilot built (chapters 1-2).** Open `index.html` in a browser, nothing to install. Waiting for the user's review of the pilot before starting chapter 3.
+Status: **Chapters 1, 2 and 5-10 are built** (chapters 3 and 4 were skipped on request and are still to do; 11-20 are still to do). Open `index.html` in a browser, nothing to install.
 This file exists so a future chat in this folder can pick up exactly where we left off.
 
 To run the tests: `node --test "tests/*.test.mjs"`
@@ -70,6 +70,9 @@ To read the books as text, run `pdftotext -layout` on the two PDFs into a tempor
 14. **Real-life examples:** One running fictional business, followed across all chapters, so the same company's accounting evolves topic by topic (not a fresh unrelated example every chapter). Exact business (name/type) is Claude's call — plan: a small sole-trader trading/retail business that later grows (useful later for the capital structure, and eventually group accounts, chapters).
 15. **Lesson depth:** Must cover everything needed to pass the ACCA FA/F3 exam, but the user does not want walls of text. Each section shows at most 6 short key points plus the Madina's Mart example. The full explanation stays one tap away under "Explain more". Follow this pattern for every new chapter.
 16. **Look:** Poster style, third version after the user rejected two. Dark ground, flat orange fields, tall Oswald headings, an original drawn dusk village scene with a spiky-haired ninja on a roof (`assets/hero-scene.svg`), paper scrolls for examples and feedback, a red 忍 hanko seal as the logo, chapters called missions, a training ground, ranks by score (Academy student under 50%, Genin 50%, Chunin 70%, Jonin 85%). Site name: FA Dojo. Do not bring back radial stripes (they read as the Rising Sun flag), clip-art spirals, kanji watermarks or outlined boxes. No Konoha symbol or show artwork. Before going public, get a trademark check on the Naruto references, especially the ninja's look and the rank names.
+19. **Question formats:** single choice, pick two, true/false or category grid, and number entry (`type: 'number'`, with `correctValue` and `answerText`, any `$` or commas accepted). A question may carry a `table` (head and rows) for the data the Kit gives as a table. Kit questions that ask for two numbers are rewritten as single-choice pairs.
+20. **Kit question mapping:** Chapters 6 and 7 split the Kit's 34 non-current-asset questions (171-204) by topic: acquisition and depreciation questions in 6, disposal and revaluation in 7. A test checks all 34 are covered once. Every number in a rewritten question is changed from the Kit's and recomputed with a script before the answer key is written.
+21. **Tick-mark keys derived by reasoning (must be confirmed against the PDF):** chapter 5 Q152, chapter 8 Q208, Q210, Q212, Q217, Q221. Text extraction loses tick marks.
 17. **Exam notes:** Points the exam tests that do not fit in the key points go in a section's `exam` field, shown first under "Explain more". Every new chapter must be checked against its Kit questions so nothing is only taught in quiz feedback.
 18. **Books are out of date:** both books are valid only to 31 August 2026, and ACCA has a newer list of examinable documents for September 2026 to June 2027. Confirm the user's exam sitting and the current syllabus before building chapter 3.
 
