@@ -31,5 +31,24 @@ function score(session) {
   };
 }
 
-if (typeof module !== 'undefined') module.exports = { startSession, answer, isCorrect, score };
-else (globalThis.ACCA ??= {}).quiz = { startSession, answer, isCorrect, score };
+function isComplete(question, given) {
+  if (question.type === 'multi') return Array.isArray(given) && given.length === question.correctIndices.length;
+  if (question.type === 'matrix') {
+    return Array.isArray(given) && question.rows.every((_, i) => given[i] !== undefined && given[i] !== null);
+  }
+  return given !== undefined && given !== null;
+}
+
+function scoreByTopic(session) {
+  const totals = {};
+  for (const id of session.answers.keys()) {
+    const { topicId } = session.questions.find((q) => q.id === id);
+    totals[topicId] ??= { attempted: 0, correct: 0 };
+    totals[topicId].attempted += 1;
+    if (isCorrect(session, id)) totals[topicId].correct += 1;
+  }
+  return totals;
+}
+
+if (typeof module !== 'undefined') module.exports = { startSession, answer, isCorrect, score, isComplete, scoreByTopic };
+else (globalThis.ACCA ??= {}).quiz = { startSession, answer, isCorrect, score, isComplete, scoreByTopic };

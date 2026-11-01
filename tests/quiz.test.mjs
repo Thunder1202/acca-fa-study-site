@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { startSession, answer, isCorrect, score } from '../js/quiz.js';
+import { startSession, answer, isCorrect, score, isComplete, scoreByTopic } from '../js/quiz.js';
 
 const QUESTIONS = [
   { id: 'q1', correctIndex: 0 },
@@ -51,6 +51,38 @@ test('matrix is correct only when every row is right', () => {
   const session = startSession([MATRIX]);
   assert.equal(isCorrect(answer(session, 'x1', [0, 1]), 'x1'), true);
   assert.equal(isCorrect(answer(session, 'x1', [0, 0]), 'x1'), false);
+});
+
+test('isComplete requires a choice for a single-answer question', () => {
+  assert.equal(isComplete({ type: 'single', correctIndex: 0 }, undefined), false);
+  assert.equal(isComplete({ type: 'single', correctIndex: 0 }, 0), true);
+});
+
+test('isComplete requires the exact number of picks for multi-response', () => {
+  assert.equal(isComplete(MULTI, [1]), false);
+  assert.equal(isComplete(MULTI, [1, 2]), true);
+});
+
+test('isComplete requires every matrix row to be answered', () => {
+  assert.equal(isComplete(MATRIX, [0]), false);
+  assert.equal(isComplete(MATRIX, [0, undefined]), false);
+  assert.equal(isComplete(MATRIX, [0, 1]), true);
+});
+
+test('scoreByTopic splits a mixed review session by topic', () => {
+  const mixed = [
+    { id: 'a', topicId: 'chapter-01', correctIndex: 0 },
+    { id: 'b', topicId: 'chapter-01', correctIndex: 1 },
+    { id: 'c', topicId: 'chapter-02', correctIndex: 2 },
+  ];
+  let s = startSession(mixed);
+  s = answer(s, 'a', 0);
+  s = answer(s, 'b', 0);
+  s = answer(s, 'c', 2);
+  assert.deepEqual(scoreByTopic(s), {
+    'chapter-01': { attempted: 2, correct: 1 },
+    'chapter-02': { attempted: 1, correct: 1 },
+  });
 });
 
 test('answer leaves the earlier session unchanged', () => {

@@ -18,6 +18,10 @@ test('weak-areas route has no params', () => {
   assert.deepEqual(parseRoute('#/weak-areas'), { view: 'weak-areas', params: {} });
 });
 
+test('practice route has no params', () => {
+  assert.deepEqual(parseRoute('#/practice'), { view: 'practice', params: {} });
+});
+
 test('unknown route falls back to home', () => {
   assert.deepEqual(parseRoute('#/nonsense'), { view: 'home', params: {} });
 });

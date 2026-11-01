@@ -12,6 +12,16 @@ function assertTrilingual(field, where) {
   }
 }
 
+test('the course map lists chapters 1-20 once each, in book order, in three languages', () => {
+  const course = require('../data/course.js');
+  const numbers = course.flatMap((g) => g.chapters.map((c) => c.number));
+  assert.deepEqual(numbers, Array.from({ length: 20 }, (_, i) => i + 1));
+  for (const group of course) {
+    assertTrilingual(group.title, 'group title');
+    for (const c of group.chapters) assertTrilingual(c.title, `chapter ${c.number} title`);
+  }
+});
+
 const QUESTION_SETS = [
   { file: 'questions-ch01', topicId: 'chapter-01', first: 1, last: 46 },
   { file: 'questions-ch02', topicId: 'chapter-02', first: 47, last: 58 },

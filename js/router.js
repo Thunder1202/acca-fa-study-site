@@ -4,7 +4,7 @@ function parseRoute(hash) {
   const [view, param] = hash.replace(/^#\/?/, '').split('/');
   if (view === 'chapter' && param) return { view, params: { id: param } };
   if (view === 'quiz' && param) return { view, params: { topicId: param } };
-  if (view === 'weak-areas') return { view, params: {} };
+  if (view === 'weak-areas' || view === 'practice') return { view, params: {} };
   return { view: 'home', params: {} };
 }
 
