@@ -329,6 +329,20 @@ a.chapter-row:hover .chapter-number, a.chapter-row:hover .chapter-status { color
 .matrix-row legend { padding: 0; margin-bottom: 8px; font-weight: 600; }
 .matrix-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 8px; }
 
+.q-table-wrap { margin-bottom: 16px; overflow-x: auto; }
+.q-table { width: 100%; border-collapse: collapse; background: var(--raise); font-size: 1rem; }
+.q-table th, .q-table td { padding: 8px 12px; text-align: left; white-space: nowrap; }
+.q-table th { color: var(--orange); font-weight: 700; }
+.q-table tbody tr:nth-child(odd) td { background: var(--raise-2); }
+
+.number-entry { display: flex; align-items: center; gap: 10px; max-width: 320px; padding: 8px 14px; background: var(--raise); border-radius: 3px; font-family: var(--display); font-size: 1.5rem; }
+.number-entry input { width: 100%; min-width: 0; padding: 6px 0; color: var(--text); background: transparent; border: 0; outline: 0; font: inherit; }
+.number-entry:focus-within { box-shadow: 0 0 0 3px var(--orange); }
+.number-entry.is-right { color: var(--right-text); background: var(--right); }
+.number-entry.is-wrong { color: var(--wrong-text); background: var(--wrong); }
+.number-entry input:disabled { color: inherit; -webkit-text-fill-color: currentColor; opacity: 1; }
+.feedback-answer { font-family: var(--display); font-size: 1.25rem; font-weight: 500; }
+
 .feedback { position: relative; margin: 20px 10px 0; padding: 26px 22px; color: var(--paper-ink); background: var(--paper); }
 .feedback::before, .feedback::after { content: ""; position: absolute; left: -10px; right: -10px; height: 14px; background: var(--rod); border-radius: 7px; }
 .feedback::before { top: -7px; }

@@ -61,6 +61,7 @@ const LABELS = {
   notFound: { en: 'That page does not exist yet.', ru: 'Такой страницы пока нет.', uz: 'Bunday sahifa hali yo\'q.' },
   goHome: { en: 'Go to the home page', ru: 'На главную', uz: 'Bosh sahifaga' },
   footerNote: { en: 'Independent study aid. Not affiliated with ACCA or Naruto.', ru: 'Независимое учебное пособие. Не связано с ACCA или Naruto.', uz: 'Mustaqil o\'quv qo\'llanma. ACCA yoki Naruto bilan bog\'liq emas.' },
+  correctAnswer: { en: 'Correct answer', ru: 'Правильный ответ', uz: 'To\'g\'ri javob' },
   examNotes: { en: 'Also tested in the exam', ru: 'Также бывает на экзамене', uz: 'Imtihonda bu ham so\'raladi' },
 };
 

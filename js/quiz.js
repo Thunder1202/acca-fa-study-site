@@ -19,6 +19,7 @@ function answerKey(question) {
 function isCorrect(session, questionId) {
   const question = session.questions.find((q) => q.id === questionId);
   const given = session.answers.get(questionId);
+  if (question.type === 'number') return Math.abs(given - question.correctValue) < 0.005;
   const normalised = question.type === 'multi' && Array.isArray(given) ? [...given].sort() : given;
   return JSON.stringify(normalised) === JSON.stringify(answerKey(question));
 }
@@ -31,7 +32,15 @@ function score(session) {
   };
 }
 
+function parseAmount(text) {
+  const cleaned = text.replace(/[$,\s]/g, '');
+  if (cleaned === '') return undefined;
+  const value = Number(cleaned);
+  return Number.isFinite(value) ? value : undefined;
+}
+
 function isComplete(question, given) {
+  if (question.type === 'number') return Number.isFinite(given);
   if (question.type === 'multi') return Array.isArray(given) && given.length === question.correctIndices.length;
   if (question.type === 'matrix') {
     return Array.isArray(given) && question.rows.every((_, i) => given[i] !== undefined && given[i] !== null);
@@ -66,5 +75,5 @@ function restoreSession(questions, packed) {
   return { questions, answers: new Map(packed.filter(([id]) => known.has(id))) };
 }
 
-if (typeof module !== 'undefined') module.exports = { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor, packAnswers, restoreSession };
-else (globalThis.ACCA ??= {}).quiz = { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor, packAnswers, restoreSession };
+if (typeof module !== 'undefined') module.exports = { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor, packAnswers, restoreSession, parseAmount };
+else (globalThis.ACCA ??= {}).quiz = { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor, packAnswers, restoreSession, parseAmount };

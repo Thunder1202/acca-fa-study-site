@@ -25,6 +25,7 @@ test('the course map lists chapters 1-20 once each, in book order, in three lang
 const QUESTION_SETS = [
   { file: 'questions-ch01', topicId: 'chapter-01', first: 1, last: 46 },
   { file: 'questions-ch02', topicId: 'chapter-02', first: 47, last: 58 },
+  { file: 'questions-ch05', topicId: 'chapter-05', first: 148, last: 170 },
 ];
 
 for (const { file, topicId, first, last } of QUESTION_SETS) {
@@ -52,6 +53,9 @@ for (const { file, topicId, first, last } of QUESTION_SETS) {
       } else if (q.type === 'matrix') {
         assert.ok(q.columns.length >= 2, `Q${q.kitRef} columns`);
         for (const r of q.rows) assert.ok(r.correctIndex >= 0 && r.correctIndex < q.columns.length, `Q${q.kitRef} key`);
+      } else if (q.type === 'number') {
+        assert.ok(Number.isFinite(q.correctValue), `Q${q.kitRef} key`);
+        assert.ok(q.answerText.trim().length > 0, `Q${q.kitRef} answer text`);
       } else {
         assert.fail(`Q${q.kitRef} unknown type ${q.type}`);
       }
@@ -63,7 +67,7 @@ for (const { file, topicId, first, last } of QUESTION_SETS) {
   });
 }
 
-for (const id of ['01', '02']) {
+for (const id of ['01', '02', '05']) {
   const chapter = require(`../data/chapter-${id}.js`);
 
   test(`chapter ${id} has every lesson field in all three languages`, () => {

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor, packAnswers, restoreSession } from '../js/quiz.js';
+import { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor, packAnswers, restoreSession, parseAmount } from '../js/quiz.js';
 
 const QUESTIONS = [
   { id: 'q1', correctIndex: 0 },
@@ -83,6 +83,33 @@ test('scoreByTopic splits a mixed review session by topic', () => {
     'chapter-01': { attempted: 2, correct: 1 },
     'chapter-02': { attempted: 1, correct: 1 },
   });
+});
+
+const NUMBER = { id: 'n1', type: 'number', correctValue: 176.4 };
+
+test('number entry accepts the exact amount', () => {
+  assert.equal(isCorrect(answer(startSession([NUMBER]), 'n1', 176.4), 'n1'), true);
+});
+
+test('number entry rejects a different amount', () => {
+  assert.equal(isCorrect(answer(startSession([NUMBER]), 'n1', 176.41), 'n1'), false);
+});
+
+test('number entry is complete only with a real number', () => {
+  assert.equal(isComplete(NUMBER, undefined), false);
+  assert.equal(isComplete(NUMBER, 0), true);
+});
+
+test('parseAmount accepts how people type money', () => {
+  assert.equal(parseAmount('1,250'), 1250);
+  assert.equal(parseAmount(' $1,250.50 '), 1250.5);
+  assert.equal(parseAmount('85'), 85);
+});
+
+test('parseAmount treats blank or non-numeric text as no answer', () => {
+  assert.equal(parseAmount(''), undefined);
+  assert.equal(parseAmount('abc'), undefined);
+  assert.equal(parseAmount('$'), undefined);
 });
 
 test('answers survive being packed for storage and restored', () => {

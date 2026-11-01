@@ -3,7 +3,7 @@
 (function () {
   const { el, richText } = ACCA.dom;
   const { translate: t, label, LANGS } = ACCA.i18n;
-  const { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor, packAnswers, restoreSession } = ACCA.quiz;
+  const { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor, packAnswers, restoreSession, parseAmount } = ACCA.quiz;
   const { recordSession } = ACCA.progress;
   const MODE_KEY = 'acca-fa-quiz-mode';
   const SAVE_PREFIX = 'acca-fa-quiz-';
@@ -110,14 +110,37 @@
       })))));
   }
 
+  function numberEntry(q, given, locked, onPick) {
+    const status = !locked ? '' : isCorrect(state.session, q.id) ? ' is-right' : ' is-wrong';
+    return el('label', { class: `number-entry${status}` },
+      el('span', { 'aria-hidden': 'true' }, '$'),
+      el('input', {
+        type: 'text', inputmode: 'decimal', autocomplete: 'off', value: given ?? '', disabled: locked, 'aria-label': q.text,
+        oninput: (event) => onPick(parseAmount(event.target.value)),
+      }));
+  }
+
+  function dataTable(table) {
+    return el('div', { class: 'q-table-wrap' }, el('table', { class: 'q-table' },
+      table.head && el('thead', {}, el('tr', {}, table.head.map((cell) => el('th', { scope: 'col' }, cell)))),
+      el('tbody', {}, table.rows.map((row) => el('tr', {}, row.map((cell) => el('td', {}, cell)))))));
+  }
+
   function feedback(q, lang) {
     const right = isCorrect(state.session, q.id);
     return el('div', { class: `feedback ${right ? 'good' : 'bad'}`, role: 'status' },
       el('p', { class: 'feedback-title' }, label(right ? 'correct' : 'incorrect', lang)),
+      q.type === 'number' && !right && el('p', { class: 'feedback-answer' }, `${label('correctAnswer', lang)}: ${q.answerText}`),
       richText(t(q.explanation, lang)),
       el('details', {},
         el('summary', {}, label('otherLanguages', lang)),
         LANGS.filter((l) => l !== lang).map((l) => el('div', { class: 'other-lang', lang: l }, richText(t(q.explanation, l))))));
+  }
+
+  function answerArea(q, given, locked, onPick) {
+    if (q.type === 'matrix') return matrix(q, given, locked, onPick);
+    if (q.type === 'number') return numberEntry(q, given, locked, onPick);
+    return choiceList(q, given, locked, onPick);
   }
 
   function questionCard(q, number, total, lang, locked, onPick) {
@@ -127,8 +150,9 @@
         el('span', {}, `${label('question', lang)} ${number} ${label('of', lang)} ${total}`),
         el('span', { class: 'kit-ref' }, `${label('basedOnKit', lang)}${q.kitRef}`)),
       el('h2', { lang: 'en' }, q.text),
+      q.table && dataTable(q.table),
       q.type === 'multi' && el('p', { class: 'hint' }, label('selectTwo', lang)),
-      el('div', { lang: 'en' }, q.type === 'matrix' ? matrix(q, given, locked, onPick) : choiceList(q, given, locked, onPick)),
+      el('div', { lang: 'en' }, answerArea(q, given, locked, onPick)),
       locked && feedback(q, lang));
   }
 
