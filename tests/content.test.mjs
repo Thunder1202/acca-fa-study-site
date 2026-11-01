@@ -26,13 +26,20 @@ const QUESTION_SETS = [
   { file: 'questions-ch01', topicId: 'chapter-01', first: 1, last: 46 },
   { file: 'questions-ch02', topicId: 'chapter-02', first: 47, last: 58 },
   { file: 'questions-ch05', topicId: 'chapter-05', first: 148, last: 170 },
+  { file: 'questions-ch06', topicId: 'chapter-06', refs: [171, 173, 174, 175, 178, 181, 184, 186, 189, 201, 202, 203] },
+  { file: 'questions-ch07', topicId: 'chapter-07', refs: [172, 176, 177, 179, 180, 182, 183, 185, 187, 188, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 204] },
 ];
 
-for (const { file, topicId, first, last } of QUESTION_SETS) {
+test('chapters 6 and 7 together cover Kit Q171-204 exactly once', () => {
+  const ids = [...require('../data/questions-ch06.js'), ...require('../data/questions-ch07.js')].map((q) => q.kitRef).sort((a, b) => a - b);
+  assert.deepEqual(ids, Array.from({ length: 34 }, (_, i) => 171 + i));
+});
+
+for (const { file, topicId, first, last, refs } of QUESTION_SETS) {
   const questions = require(`../data/${file}.js`);
 
-  test(`${file} has exactly one question per Kit number ${first}-${last}`, () => {
-    const expected = Array.from({ length: last - first + 1 }, (_, i) => first + i);
+  test(`${file} has exactly one question per expected Kit number`, () => {
+    const expected = refs ?? Array.from({ length: last - first + 1 }, (_, i) => first + i);
     assert.deepEqual(questions.map((q) => q.kitRef), expected);
   });
 
@@ -67,7 +74,7 @@ for (const { file, topicId, first, last } of QUESTION_SETS) {
   });
 }
 
-for (const id of ['01', '02', '05']) {
+for (const id of ['01', '02', '05', '06', '07']) {
   const chapter = require(`../data/chapter-${id}.js`);
 
   test(`chapter ${id} has every lesson field in all three languages`, () => {
