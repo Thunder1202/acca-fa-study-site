@@ -12,7 +12,7 @@ function assertTrilingual(field, where) {
   }
 }
 
-for (const id of ['01']) {
+for (const id of ['01', '02']) {
   const chapter = require(`../data/chapter-${id}.js`);
 
   test(`chapter ${id} has every lesson field in all three languages`, () => {
