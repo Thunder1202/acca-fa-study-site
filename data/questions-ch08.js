@@ -1,0 +1,100 @@
+'use strict';
+
+(function () {
+  const TOPIC = 'chapter-08';
+  const PREFIX = 'ch08';
+  const TRUE_FALSE = ['True', 'False'];
+  const CAP = ['Capitalised', 'Not capitalised'];
+
+  const base = (kitRef, type, text, en, ru, uz) => ({ id: `${PREFIX}-q${kitRef}`, kitRef, topicId: TOPIC, type, text, explanation: { en, ru, uz } });
+  const single = (kitRef, text, options, correctIndex, en, ru, uz, extra = {}) => ({ ...base(kitRef, 'single', text, en, ru, uz), options, correctIndex, ...extra });
+  const number = (kitRef, text, correctValue, answerText, en, ru, uz, extra = {}) => ({ ...base(kitRef, 'number', text, en, ru, uz), correctValue, answerText, ...extra });
+  const matrix = (kitRef, text, columns, rows, en, ru, uz) => ({ ...base(kitRef, 'matrix', text, en, ru, uz), columns, rows });
+
+  const questions = [
+    single(205, 'Which statement about development costs is correct?',
+      ['Capitalised development costs appear in the statement of financial position as non-current assets', 'Directors may choose whether to capitalise development costs even if every IAS 38 condition is met', 'Amortisation of development costs is shown in the statement of changes in equity', 'Development costs must be amortised over no more than five years'], 0,
+      `Capitalised development costs are an intangible non-current asset. If every condition is met, capitalising is required, not optional. Amortisation is an expense in profit or loss, and there is no five-year limit: the period is the one over which benefits are expected.`,
+      `Капитализированные затраты на разработку — нематериальный внеоборотный актив. Если выполнены все условия, капитализация обязательна, а не по выбору. Амортизация — расход в прибыли или убытке, а лимита в пять лет нет: период определяется ожидаемыми выгодами.`,
+      `Kapitallashtirilgan ishlanma xarajatlari — nomoddiy uzoq muddatli aktiv. Barcha shartlar bajarilsa, kapitallashtirish majburiy, ixtiyoriy emas. Amortizatsiya foyda yoki zarardagi xarajat, besh yillik chegara yo'q: davr foyda kutilgan muddatga teng.`),
+    single(206, 'For an intangible asset accounted for under the revaluation model, where are movements in the carrying amount reported?',
+      ['In profit or loss only', 'In other comprehensive income and other components of equity', 'In other comprehensive income only', 'In other components of equity only'], 1,
+      `As with property, plant and equipment, an upward revaluation is recognised in other comprehensive income and accumulated in a revaluation surplus within equity. So movements involve both other comprehensive income and equity.`,
+      `Как и для основных средств, прирост от переоценки признаётся в прочем совокупном доходе и накапливается в резерве переоценки внутри капитала. Поэтому изменения затрагивают и прочий совокупный доход, и капитал.`,
+      `Asosiy vositalardagi kabi, qayta baholash o'sishi boshqa umumlashgan daromadda tan olinadi va kapital ichidagi qayta baholash zaxirasida to'planadi. Shuning uchun o'zgarishlar ham boshqa umumlashgan daromadga, ham kapitalga tegadi.`),
+    single(207, 'How should an intangible asset with an indefinite useful life be accounted for?',
+      ['At cost, held unchanged for as long as the entity owns it', 'At cost, with an annual impairment review', 'At cost, amortised over an estimated life', 'It cannot be recognised, because it cannot be amortised'], 1,
+      `An indefinite life means there is no foreseeable limit to the period of benefits, so it is not amortised. It stays at cost but is reviewed for impairment every year, so the first option is not precise enough.`,
+      `Неопределённый срок означает отсутствие предвидимого предела периода выгод, поэтому актив не амортизируется. Он остаётся по стоимости, но ежегодно проверяется на обесценение, так что первый вариант недостаточно точен.`,
+      `Noaniq muddat foyda davrining ko'zga ko'rinadigan chegarasi yo'qligini bildiradi, shuning uchun aktiv amortizatsiyalanmaydi. U qiymatda qoladi, lekin har yili qadrsizlanishga tekshiriladi, shuning uchun birinchi variant yetarli aniq emas.`),
+    matrix(208, 'Decide whether each item should be capitalised as an intangible asset.', CAP,
+      [{ text: 'Salaries of staff carrying out research', correctIndex: 1 }, { text: 'The cost of building a working model of a new product', correctIndex: 0 }, { text: 'Materials used in scientific experiments', correctIndex: 1 }, { text: 'A licence bought to allow production and sale of a product for ten years', correctIndex: 0 }],
+      `Research costs, whether staff or materials, are always expensed. Building a working model is development, which is capitalised once the criteria are met. A purchased licence is an intangible asset recognised at cost.`,
+      `Затраты на исследования, будь то персонал или материалы, всегда списываются. Создание рабочей модели — разработка, которая капитализируется при выполнении критериев. Купленная лицензия — нематериальный актив по стоимости.`,
+      `Tadqiqot xarajatlari, xodimlar yoki materiallar bo'lsin, doim xarajatga yoziladi. Ishchi model yaratish — ishlanma, mezonlar bajarilganda kapitallashtiriladi. Sotib olingan litsenziya qiymatda tan olinadigan nomoddiy aktiv.`),
+    single(209, 'For an intangible asset accounted for under the cost model, where are annual impairment charges reported?',
+      ['In other comprehensive income and other components of equity', 'In profit or loss only', 'In other comprehensive income only', 'In other components of equity only'], 1,
+      `Under the cost model an impairment is simply an expense. It is charged to profit or loss.`,
+      `По модели стоимости обесценение — это просто расход. Оно относится на прибыль или убыток.`,
+      `Qiymat modelida qadrsizlanish oddiy xarajat. U foyda yoki zararga yoziladi.`),
+    matrix(210, 'Classify each cost as written off as an expense or capitalised as an intangible asset.', ['Written off as an expense', 'Capitalised as an intangible asset'],
+      [{ text: 'Market research costs', correctIndex: 0 }, { text: 'Costs of a patented product design', correctIndex: 1 }, { text: 'Advertising a product', correctIndex: 0 }, { text: 'Training employees', correctIndex: 0 }],
+      `Market research is research and is expensed. A patented design is an identifiable intangible asset. Advertising and training are specifically excluded from capitalisation, so they are expensed.`,
+      `Исследование рынка — это исследования, они списываются в расход. Запатентованный проект — идентифицируемый нематериальный актив. Реклама и обучение прямо исключены из капитализации, поэтому идут в расход.`,
+      `Bozor tadqiqoti tadqiqot hisoblanadi va xarajatga yoziladi. Patentlangan dizayn — aniqlanadigan nomoddiy aktiv. Reklama va o'qitish kapitallashtirishdan alohida istisno qilingan, shuning uchun xarajatga yoziladi.`),
+    single(211, 'Which statement best defines an intangible asset?',
+      ['An asset that is always generated internally by the business', 'A purchased asset that has no physical substance', 'An identifiable non-monetary asset without physical substance', 'An asset that cannot be sold'], 2,
+      `An intangible asset lacks physical form and may be bought (a licence) or built internally (development costs), so neither of the first two options is right. Intangible assets can normally be sold.`,
+      `У нематериального актива нет физической формы, и он может быть куплен (лицензия) или создан внутри (затраты на разработку), поэтому ни один из первых двух вариантов не верен. Нематериальные активы обычно можно продать.`,
+      `Nomoddiy aktivning jismoniy shakli yo'q va u sotib olingan (litsenziya) yoki ichkarida yaratilgan (ishlanma xarajatlari) bo'lishi mumkin, shuning uchun dastlabki ikki variant noto'g'ri. Nomoddiy aktivlarni odatda sotish mumkin.`),
+    matrix(212, 'Decide how each project\'s costs should be accounted for.', ['Written off as an expense', 'Capitalised as an asset'],
+      [{ text: 'Project 1 applies new technology to make heat-resistant fabric for emergency-service uniforms. The company has the resources and the intention to complete it.', correctIndex: 1 }, { text: 'Project 2 is testing whether a substance can work as an appetite suppressant that would then be sold in pharmacies.', correctIndex: 0 }, { text: 'Project 3 is developing a self-cleaning kitchen surface, but a rival is building a similar one and the company is unsure it will finish.', correctIndex: 0 }],
+      `Project 1 is development with the resources and intention to finish, so it is capitalised. Project 2 is still testing whether the substance works, so it is research and is expensed. Project 3 may not be completed, so it does not meet all the criteria and is expensed.`,
+      `Проект 1 — разработка с ресурсами и намерением завершить, поэтому капитализируется. Проект 2 ещё проверяет, работает ли вещество, значит, это исследования, и он списывается. Проект 3 может не быть завершён, поэтому не отвечает всем критериям и списывается.`,
+      `1-loyiha — tugatish uchun resurs va niyat bor ishlanma, shuning uchun kapitallashtiriladi. 2-loyiha moddaning ishlashini hali sinamoqda, demak tadqiqot va xarajatga yoziladi. 3-loyiha tugamasligi mumkin, shuning uchun barcha mezonlarga mos emas va xarajatga yoziladi.`),
+    number(213, 'A company is investigating the properties of a chemical compound. Costs incurred on the project during the year were $41,000. What amount is expensed to profit or loss for this project?', 41000, '$41,000',
+      `This is research, not development. All research costs are expensed as incurred, so the whole $41,000 goes to profit or loss.`,
+      `Это исследования, а не разработка. Все затраты на исследования списываются по мере возникновения, поэтому все $41,000 идут в прибыль или убыток.`,
+      `Bu tadqiqot, ishlanma emas. Barcha tadqiqot xarajatlari yuzaga kelganda xarajatga yoziladi, shuning uchun butun $41,000 foyda yoki zararga o'tadi.`),
+    single(214, 'A company amortises a brand straight line over 10 years from purchase with no residual value. At 1 May 20X5 the brand\'s carrying amount was $48,000 and accumulated amortisation was $32,000. What are the amortisation charge for the year to 30 April 20X6 and the accumulated amortisation at that date?',
+      ['Charge $4,800, accumulated $36,800', 'Charge $8,000, accumulated $48,000', 'Charge $8,000, accumulated $40,000', 'Charge $4,800, accumulated $40,000'], 2,
+      `Original cost is carrying amount plus accumulated amortisation: $48,000 + $32,000 = $80,000. The annual charge is $80,000 / 10 = $8,000. Accumulated amortisation is $32,000 + $8,000 = $40,000. Dividing the carrying amount by 10 would wrongly give $4,800.`,
+      `Первоначальная стоимость — балансовая стоимость плюс накопленная амортизация: $48,000 + $32,000 = $80,000. Годовое начисление $80,000 / 10 = $8,000. Накопленная амортизация $32,000 + $8,000 = $40,000. Деление балансовой стоимости на 10 ошибочно дало бы $4,800.`,
+      `Dastlabki qiymat — balans qiymati plus to'plangan amortizatsiya: $48,000 + $32,000 = $80,000. Yillik summa $80,000 / 10 = $8,000. To'plangan amortizatsiya $32,000 + $8,000 = $40,000. Balans qiymatini 10 ga bo'lish xato ravishda $4,800 berardi.`),
+    number(215, 'A company bought a licence for $2,400,000 to sell a product for a four-year term starting 1 October 20X3. After that the licence expires and cannot be renewed. Its policy is to write off the cost over the term from the date of purchase. What is the amortisation charge for the year ended 31 March 20X4?', 300000, '$300,000',
+      `Annual amortisation is $2,400,000 / 4 = $600,000. The year to 31 March includes only six months of ownership, so the charge is $600,000 x 6/12 = $300,000.`,
+      `Годовая амортизация $2,400,000 / 4 = $600,000. За год по 31 марта прошло только шесть месяцев владения, поэтому начисление $600,000 x 6/12 = $300,000.`,
+      `Yillik amortizatsiya $2,400,000 / 4 = $600,000. 31 martgacha yilda faqat olti oy egalik qilingan, shuning uchun summa $600,000 x 6/12 = $300,000.`),
+    single(216, 'A company amortises a licence straight line over five years from purchase with no residual value. At 1 January 20X6 the licence\'s carrying amount was $20,000 and accumulated amortisation was $15,000. What are the amortisation charge for the year ended 31 December 20X6 and the accumulated amortisation at that date?',
+      ['Charge $4,000, accumulated $19,000', 'Charge $4,000, accumulated $22,000', 'Charge $7,000, accumulated $19,000', 'Charge $7,000, accumulated $22,000'], 3,
+      `Original cost is $20,000 + $15,000 = $35,000. The annual charge is $35,000 / 5 = $7,000. Accumulated amortisation is $15,000 + $7,000 = $22,000. Dividing the carrying amount by 5 would wrongly give $4,000.`,
+      `Первоначальная стоимость $20,000 + $15,000 = $35,000. Годовое начисление $35,000 / 5 = $7,000. Накопленная амортизация $15,000 + $7,000 = $22,000. Деление балансовой стоимости на 5 ошибочно дало бы $4,000.`,
+      `Dastlabki qiymat $20,000 + $15,000 = $35,000. Yillik summa $35,000 / 5 = $7,000. To'plangan amortizatsiya $15,000 + $7,000 = $22,000. Balans qiymatini 5 ga bo'lish xato ravishda $4,000 berardi.`),
+    matrix(217, 'Mark each statement about IAS 38 Intangible Assets as true or false.', TRUE_FALSE,
+      [{ text: 'Research costs are expensed to profit or loss', correctIndex: 0 }, { text: 'Every kind of goodwill can be capitalised', correctIndex: 1 }, { text: 'Capitalised development costs that stop meeting the criteria are written off to profit or loss', correctIndex: 0 }, { text: 'Capitalised development costs are amortised from the date the asset is available to use or sell', correctIndex: 0 }, { text: 'Research costs already written off can be capitalised again once the product looks feasible', correctIndex: 1 }, { text: 'Only purchased intangibles can be capitalised', correctIndex: 1 }],
+      `Three are true: research is expensed, a project that stops meeting the criteria is written off, and amortisation starts when the asset is available. Internally generated goodwill cannot be capitalised, expensed research is never reinstated, and development costs, an internally generated asset, can be capitalised too.`,
+      `Три верных: исследования списываются, проект, переставший соответствовать критериям, списывается, и амортизация начинается, когда актив доступен. Внутренне созданный гудвил капитализировать нельзя, списанные исследования не восстанавливаются, а затраты на разработку, внутренне созданный актив, капитализировать можно.`,
+      `Uchtasi to'g'ri: tadqiqot xarajatga yoziladi, mezonlarga mos kelmay qolgan loyiha yozib yuboriladi va amortizatsiya aktiv tayyor bo'lganda boshlanadi. Ichki yaratilgan gudvilni kapitallashtirib bo'lmaydi, xarajatga yozilgan tadqiqot qaytarilmaydi, ichki yaratilgan aktiv bo'lgan ishlanma xarajatlari esa kapitallashtirilishi mumkin.`),
+    number(218, 'A company is developing a new process to save production time. The project started on 1 January 20X5 and met the capitalisation criteria on 31 August 20X5. Costs were $92,400 to 31 August and $31,600 from 1 September. What amount is expensed to profit or loss for this project in the year ended 31 December 20X5?', 92400, '$92,400',
+      `Costs from 1 September can be capitalised because the criteria were met. Costs before the criteria were met must stay as an expense and cannot be reinstated as an asset: $92,400.`,
+      `Затраты с 1 сентября можно капитализировать, так как критерии выполнены. Затраты до выполнения критериев остаются расходом и не восстанавливаются как актив: $92,400.`,
+      `1 sentabrdan keyingi xarajatlarni kapitallashtirish mumkin, chunki mezonlar bajarilgan. Mezonlar bajarilgunga qadar bo'lgan xarajatlar xarajat bo'lib qoladi va aktiv sifatida qaytarilmaydi: $92,400.`),
+    number(219, 'A development project was completed on 30 June 20X5. Costs were $420,000 up to 31 December 20X4 and a further $30,000 between January and June 20X5. Production and sales began on 1 September 20X5 and are expected to last 30 months. What amount is expensed to profit or loss for the year ended 31 December 20X5?', 60000, '$60,000',
+      `The $450,000 of costs are capitalised, then amortised over the 30 months of sales. Amortisation for the year covers 1 September to 31 December, 4 months: $450,000 x 4/30 = $60,000.`,
+      `$450,000 затрат капитализируются и амортизируются на 30 месяцев продаж. Амортизация за год охватывает с 1 сентября по 31 декабря, 4 месяца: $450,000 x 4/30 = $60,000.`,
+      `$450,000 xarajat kapitallashtiriladi va 30 oylik sotuv davriga amortizatsiyalanadi. Yil amortizatsiyasi 1 sentabrdan 31 dekabrgacha, 4 oyni qamraydi: $450,000 x 4/30 = $60,000.`),
+    single(220, 'Which statement best describes amortisation?',
+      ['It measures the fall in the market value of an intangible asset', 'It spreads the payment for an intangible asset over several years', 'It spreads the cost of an intangible asset over its estimated useful life', 'It estimates the money needed to replace the intangible asset'], 2,
+      `Amortisation allocates the cost of an intangible asset over its useful life. It is not about market value, payment timing or a replacement fund.`,
+      `Амортизация распределяет стоимость нематериального актива на срок его использования. Она не связана с рыночной стоимостью, сроками оплаты или фондом на замену.`,
+      `Amortizatsiya nomoddiy aktiv qiymatini foydali muddatga taqsimlaydi. U bozor qiymati, to'lov muddati yoki almashtirish jamg'armasi bilan bog'liq emas.`),
+    matrix(221, 'Decide whether each cost should be capitalised as an intangible asset.', ['Capitalised as an intangible asset', 'Not capitalised as an intangible asset'],
+      [{ text: '$48,000 of staff costs developing a new product that is expected to bring future benefits', correctIndex: 0 }, { text: '$35,000 advertising a newly developed product', correctIndex: 1 }, { text: '$180,000 of laboratory equipment used to build prototypes', correctIndex: 1 }, { text: '$22,000 testing whether a separately bought intangible asset works properly', correctIndex: 0 }],
+      `Staff costs of development that will bring benefits are capitalised. Advertising is never capitalised. Laboratory equipment is property, plant and equipment, not an intangible asset. Testing a purchased intangible so that it works is a directly attributable cost of preparing it for use, so it is capitalised.`,
+      `Затраты на персонал по разработке, которая принесёт выгоды, капитализируются. Реклама не капитализируется никогда. Лабораторное оборудование — основные средства, а не нематериальный актив. Испытание купленного нематериального актива, чтобы он работал, — прямо относимая затрата на подготовку к использованию, поэтому капитализируется.`,
+      `Foyda keltiradigan ishlanma bo'yicha xodimlar xarajatlari kapitallashtiriladi. Reklama hech qachon kapitallashtirilmaydi. Laboratoriya uskunasi asosiy vosita, nomoddiy aktiv emas. Sotib olingan nomoddiy aktivning ishlashi uchun sinov uni foydalanishga tayyorlashga bevosita tegishli xarajat, shuning uchun kapitallashtiriladi.`),
+  ];
+
+  if (typeof module !== 'undefined') module.exports = questions;
+  else ((globalThis.ACCA ??= {}).questions ??= {})[TOPIC] = questions;
+})();
