@@ -25,6 +25,8 @@ test('the course map lists chapters 1-20 once each, in book order, in three lang
 const QUESTION_SETS = [
   { file: 'questions-ch01', topicId: 'chapter-01', first: 1, last: 46 },
   { file: 'questions-ch02', topicId: 'chapter-02', first: 47, last: 58 },
+  { file: 'questions-ch03', topicId: 'chapter-03', first: 59, last: 100 },
+  { file: 'questions-ch04', topicId: 'chapter-04', first: 101, last: 147 },
   { file: 'questions-ch05', topicId: 'chapter-05', first: 148, last: 170 },
   { file: 'questions-ch08', topicId: 'chapter-08', first: 205, last: 221 },
   { file: 'questions-ch09', topicId: 'chapter-09', first: 222, last: 233 },
@@ -77,7 +79,7 @@ for (const { file, topicId, first, last, refs } of QUESTION_SETS) {
   });
 }
 
-for (const id of ['01', '02', '05', '06', '07', '08', '09', '10']) {
+for (const id of ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10']) {
   const chapter = require(`../data/chapter-${id}.js`);
 
   test(`chapter ${id} has every lesson field in all three languages`, () => {
