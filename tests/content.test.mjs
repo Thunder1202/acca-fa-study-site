@@ -23,6 +23,8 @@ test('the course map lists chapters 1-20 once each, in book order, in three lang
 });
 
 const QUESTION_SETS = [
+  { file: 'questions-ch19', topicId: 'chapter-19', refs: [470, 471, 472, 473, 474, 475, 476, 477, 481, 482, 484, 486, 487, 489, 490, 495, 496, 497, 498, 499, 501, 504] },
+  { file: 'questions-ch20', topicId: 'chapter-20', refs: [478, 479, 480, 483, 485, 488, 491, 492, 493, 494, 500, 502, 503, 505, 506, 507] },
   { file: 'questions-ch18', topicId: 'chapter-18', first: 508, last: 550 },
   { file: 'questions-ch17', topicId: 'chapter-17', first: 436, last: 457 },
   { file: 'questions-ch16', topicId: 'chapter-16', first: 458, last: 469 },
@@ -46,6 +48,16 @@ const QUESTION_SETS = [
 test('chapters 6 and 7 together cover Kit Q171-204 exactly once', () => {
   const ids = [...require('../data/questions-ch06.js'), ...require('../data/questions-ch07.js')].map((q) => q.kitRef).sort((a, b) => a - b);
   assert.deepEqual(ids, Array.from({ length: 34 }, (_, i) => 171 + i));
+});
+
+test('chapters 19 and 20 together cover Kit Q470-507 exactly once', () => {
+  const ids = [...require('../data/questions-ch19.js'), ...require('../data/questions-ch20.js')].map((q) => q.kitRef).sort((a, b) => a - b);
+  assert.deepEqual(ids, Array.from({ length: 38 }, (_, i) => 470 + i));
+});
+
+test('every Kit question from 1 to 550 is covered exactly once', () => {
+  const ids = QUESTION_SETS.flatMap(({ file }) => require(`../data/${file}.js`).map((q) => q.kitRef)).sort((a, b) => a - b);
+  assert.deepEqual(ids, Array.from({ length: 550 }, (_, i) => i + 1));
 });
 
 for (const { file, topicId, first, last, refs } of QUESTION_SETS) {
@@ -88,7 +100,7 @@ for (const { file, topicId, first, last, refs } of QUESTION_SETS) {
   });
 }
 
-for (const id of ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18']) {
+for (const id of ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']) {
   const chapter = require(`../data/chapter-${id}.js`);
 
   test(`chapter ${id} has every lesson field in all three languages`, () => {
