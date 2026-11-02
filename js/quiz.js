@@ -33,7 +33,8 @@ function score(session) {
 }
 
 function parseAmount(text) {
-  const cleaned = text.replace(/[$,\s]/g, '');
+  const compact = text.replace(/[$\s ]/g, '');
+  const cleaned = /^[^,]*,\d{1,2}$/.test(compact) ? compact.replace(',', '.') : compact.replace(/,/g, '');
   if (cleaned === '') return undefined;
   const value = Number(cleaned);
   return Number.isFinite(value) ? value : undefined;

@@ -124,30 +124,30 @@ Ishlanma xarajatlari ta'rif va tan olish mezonlariga mos kelsa, nomoddiy aktiv s
     {
       key: {
         en: `- Amortise intangibles with a finite life, as depreciation is done for tangible assets.
-- Development costs start to be amortised when commercial production begins.
+- Development costs start to be amortised when commercial production or sales begin.
 - Spread the cost over the period of benefits. Use straight line if the pattern is unclear.
 - An indefinite life asset is not amortised. It has an annual impairment review.
 - Under the cost model, impairment is a charge in profit or loss.`,
         ru: `- Нематериальные активы с конечным сроком амортизируют, как амортизируют материальные активы.
-- Амортизация затрат на разработку начинается с началом коммерческого производства.
+- Амортизация затрат на разработку начинается с началом коммерческого производства или продаж.
 - Распределяйте стоимость на период выгод. Если схема неясна, применяйте прямолинейный метод.
 - Актив с неопределённым сроком не амортизируется. Его ежегодно проверяют на обесценение.
 - При модели стоимости обесценение — расход в прибыли или убытке.`,
         uz: `- Cheklangan muddatli nomoddiy aktivlar moddiy aktivlar kabi amortizatsiyalanadi.
-- Ishlanma xarajatlari amortizatsiyasi tijorat ishlab chiqarish boshlanganda boshlanadi.
+- Ishlanma xarajatlari amortizatsiyasi tijorat ishlab chiqarish yoki sotuv boshlanganda boshlanadi.
 - Qiymatni foyda davriga taqsimlang. Naqsh noaniq bo'lsa, to'g'ri chiziqli usulni qo'llang.
 - Muddati noaniq aktiv amortizatsiyalanmaydi. Har yili qadrsizlanishga tekshiriladi.
 - Qiymat modelida qadrsizlanish foyda yoki zarardagi xarajat.`,
       },
       exam: {
         en: `- To find the original cost, add the accumulated amortisation to the carrying amount, then divide by the useful life for the annual charge.
-- A licence or development asset is amortised from the date it is available to use or sell, pro rata for part of a year.
+- A licence is amortised from the date it is available for use, and development costs from the start of production or sales. Apply pro rata for part of a year.
 - Amortisation spreads cost over the useful life. It is not a way to spread the payment, estimate replacement money, or show market value.`,
         ru: `- Чтобы найти первоначальную стоимость, прибавьте накопленную амортизацию к балансовой стоимости, затем разделите на срок использования.
-- Лицензия или актив разработки амортизируется с даты, когда доступен для использования или продажи, пропорционально для части года.
+- Лицензия амортизируется с даты, когда доступна для использования, а затраты на разработку — с начала производства или продаж. За часть года начисляйте пропорционально.
 - Амортизация распределяет стоимость на срок использования. Это не способ растянуть оплату, оценить деньги на замену или показать рыночную стоимость.`,
         uz: `- Dastlabki qiymatni topish uchun balans qiymatiga to'plangan amortizatsiyani qo'shing, so'ng foydali muddatga bo'ling.
-- Litsenziya yoki ishlanma aktivi foydalanish yoki sotish uchun tayyor bo'lgan sanadan, yilning bir qismi uchun nisbatan amortizatsiyalanadi.
+- Litsenziya foydalanishga tayyor bo'lgan sanadan, ishlanma xarajatlari esa ishlab chiqarish yoki sotuv boshlanishidan amortizatsiyalanadi. Yilning bir qismi uchun nisbatan hisoblang.
 - Amortizatsiya qiymatni foydali muddatga taqsimlaydi. U to'lovni taqsimlash, almashtirish pulini baholash yoki bozor qiymatini ko'rsatish usuli emas.`,
       },
       heading: {
@@ -158,21 +158,21 @@ Ishlanma xarajatlari ta'rif va tan olish mezonlariga mos kelsa, nomoddiy aktiv s
       body: {
         en: `Amortisation is to intangible assets what depreciation is to tangible ones. It spreads the cost of an asset with a finite life over the period during which it is expected to produce benefits, so that cost is matched to the revenue it helps earn.
 
-For capitalised development costs, amortisation begins when commercial production starts. The method should reflect how the benefits are used up. If that pattern cannot be determined reliably, straight line is used.
+For capitalised development costs, amortisation begins when commercial production or sales start. The method should reflect how the benefits are used up. If that pattern cannot be determined reliably, straight line is used.
 
 An intangible asset with an indefinite useful life is not amortised. There is no foreseeable limit to the period it will generate cash inflows, so instead it is subject to an annual impairment review.
 
 The accounting is the same as for depreciation: Dr Amortisation charge (profit or loss), Cr Accumulated amortisation (statement of financial position).`,
         ru: `Амортизация для нематериальных активов — то же, что износ для материальных. Она распределяет стоимость актива с конечным сроком на период, в течение которого он должен приносить выгоды, чтобы затраты сопоставлялись с выручкой, которую он помогает получить.
 
-Для капитализированных затрат на разработку амортизация начинается с началом коммерческого производства. Метод должен отражать, как расходуются выгоды. Если схему нельзя надёжно определить, применяется прямолинейный метод.
+Для капитализированных затрат на разработку амортизация начинается с началом коммерческого производства или продаж. Метод должен отражать, как расходуются выгоды. Если схему нельзя надёжно определить, применяется прямолинейный метод.
 
 Нематериальный актив с неопределённым сроком полезного использования не амортизируется. Нет предвидимого предела периоду, в течение которого он будет приносить денежные потоки, поэтому вместо этого он ежегодно проверяется на обесценение.
 
 Учёт такой же, как для амортизации основных средств: Дт Расход по амортизации (прибыль или убыток), Кт Накопленная амортизация (отчёт о финансовом положении).`,
         uz: `Amortizatsiya nomoddiy aktivlar uchun moddiy aktivlardagi eskirish kabi. U cheklangan muddatli aktiv qiymatini u foyda keltirishi kutilgan davrga taqsimlaydi, shunda xarajat u topishga yordam bergan tushumga moslashadi.
 
-Kapitallashtirilgan ishlanma xarajatlari uchun amortizatsiya tijorat ishlab chiqarish boshlanganda boshlanadi. Usul foyda qanday sarflanishini aks ettirishi kerak. Naqsh ishonchli aniqlanmasa, to'g'ri chiziqli usul qo'llanadi.
+Kapitallashtirilgan ishlanma xarajatlari uchun amortizatsiya tijorat ishlab chiqarish yoki sotuv boshlanganda boshlanadi. Usul foyda qanday sarflanishini aks ettirishi kerak. Naqsh ishonchli aniqlanmasa, to'g'ri chiziqli usul qo'llanadi.
 
 Foydali muddati noaniq nomoddiy aktiv amortizatsiyalanmaydi. U pul kirimini keltiradigan davrning ko'zga ko'rinadigan chegarasi yo'q, shuning uchun uning o'rniga har yili qadrsizlanishga tekshiriladi.
 
@@ -198,7 +198,7 @@ Hisob moddiy aktivlardagi bilan bir xil: Dt Amortizatsiya xarajati (foyda yoki z
 - Раскрывайте также общую сумму исследований и разработок, списанных на расходы за год.`,
         uz: `- Deyarli doim qiymat modeli qo'llanadi: qiymat minus amortizatsiya minus qadrsizlanish.
 - Qayta baholash modeli faol bozorni talab qiladi. Bu juda kam, ishlanma xarajatlari uchun emas.
-- Baholash foydasi boshqa umumlashgan daromadga va qayta baholash zaxirasiga o'tadi.
+- Baholash foydasi boshqa umumlashgan daromadga va qayta baholash rezerviga o'tadi.
 - Usullar, muddatlar, amortizatsiya xarajati va balans qiymati solishtirishini ko'rsating.
 - Shuningdek, yilda xarajatga yozilgan tadqiqot va ishlanmaning jami summasini ko'rsating.`,
       },
@@ -231,7 +231,7 @@ IAS 38 requires disclosure of the amortisation methods and expected periods, a r
 IAS 38 требует раскрывать методы амортизации и ожидаемые сроки, сверку балансовой стоимости на начало и конец периода (новые затраты, амортизация и суммы, списанные из-за потери права на признание проекта) и расход по амортизации. Также раскрывается общая сумма исследований и разработок, списанных на расходы за период.`,
         uz: `IAS 38: nomoddiy aktiv dastlab qiymatda o'lchanadi. Keyin qiymat modeli yoki qayta baholash modeli qo'llanishi mumkin. Qiymat modelida u qiymat minus to'plangan amortizatsiya va to'plangan qadrsizlanish zararlari bilan yuritiladi.
 
-Qayta baholash modeli faol bozorga asoslangan haqiqiy qiymatni talab qiladi, bu aktivlar bir jinsli bo'lishi kerakligini anglatadi. Bu juda kam uchraydi, shuning uchun amalda nomoddiy aktivlar qiymatda yuritiladi, ishlanma xarajatlari esa doim qiymat modelida. Qayta baholash modeli qo'llanadigan kam holatda o'sish IAS 16 dagi kabi boshqa umumlashgan daromadga va kapitaldagi alohida qayta baholash zaxirasiga o'tadi.
+Qayta baholash modeli faol bozorga asoslangan haqiqiy qiymatni talab qiladi, bu aktivlar bir jinsli bo'lishi kerakligini anglatadi. Bu juda kam uchraydi, shuning uchun amalda nomoddiy aktivlar qiymatda yuritiladi, ishlanma xarajatlari esa doim qiymat modelida. Qayta baholash modeli qo'llanadigan kam holatda o'sish IAS 16 dagi kabi boshqa umumlashgan daromadga va kapitaldagi alohida qayta baholash rezerviga o'tadi.
 
 IAS 38 amortizatsiya usullari va kutilayotgan muddatlarni, davr boshi va oxiridagi balans qiymati solishtirishini (yangi xarajat, amortizatsiya va loyiha tan olinish huquqini yo'qotgani uchun yozilgan summalar) hamda amortizatsiya xarajatini ochib berishni talab qiladi. Davrda xarajatga yozilgan tadqiqot va ishlanmaning jami summasi ham ochib beriladi.`,
       },
@@ -248,7 +248,7 @@ IAS 38 amortizatsiya usullari va kutilayotgan muddatlarni, davr boshi va oxirida
     { term: { en: 'Development', ru: 'Разработка', uz: 'Ishlanma' }, definition: { en: 'Applying research to a plan or design before commercial production. Capitalised if criteria are met.', ru: 'Применение исследований к плану или проекту до коммерческого производства. Капитализируется при выполнении критериев.', uz: 'Tadqiqotni tijorat ishlab chiqarishdan oldin rejaga qo\'llash. Mezonlar bajarilsa kapitallashtiriladi.' } },
     { term: { en: 'Amortisation', ru: 'Амортизация нематериальных активов', uz: 'Nomoddiy aktivlar amortizatsiyasi' }, definition: { en: 'Spreading the cost of an intangible asset over its useful life.', ru: 'Распределение стоимости нематериального актива на срок его использования.', uz: 'Nomoddiy aktiv qiymatini foydali muddatga taqsimlash.' } },
     { term: { en: 'Indefinite useful life', ru: 'Неопределённый срок использования', uz: 'Noaniq foydali muddat' }, definition: { en: 'No foreseeable limit to the period of benefits. Not amortised, but reviewed annually for impairment.', ru: 'Нет предвидимого предела периода выгод. Не амортизируется, но ежегодно проверяется на обесценение.', uz: 'Foyda davrining ko\'zga ko\'rinadigan chegarasi yo\'q. Amortizatsiyalanmaydi, lekin har yili qadrsizlanishga tekshiriladi.' } },
-    { term: { en: 'Impairment', ru: 'Обесценение', uz: 'Qadrsizlanish' }, definition: { en: 'A fall in an asset\'s recoverable value below its carrying amount, charged to profit or loss.', ru: 'Снижение возмещаемой стоимости актива ниже балансовой, относится на прибыль или убыток.', uz: 'Aktivning qoplanadigan qiymatining balans qiymatidan pasayishi, foyda yoki zararga yoziladi.' } },
+    { term: { en: 'Impairment', ru: 'Обесценение', uz: 'Qadrsizlanish' }, definition: { en: 'A fall in an asset\'s recoverable amount below its carrying amount, charged to profit or loss.', ru: 'Снижение возмещаемой стоимости актива ниже балансовой, относится на прибыль или убыток.', uz: 'Aktivning qoplanadigan qiymatining balans qiymatidan pasayishi, foyda yoki zararga yoziladi.' } },
   ],
 };
 

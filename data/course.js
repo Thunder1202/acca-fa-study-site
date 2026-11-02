@@ -24,7 +24,7 @@ const course = [
       { number: 8, id: 'chapter-08', title: { en: 'Intangible assets', ru: 'Нематериальные активы', uz: 'Nomoddiy aktivlar' } },
       { number: 9, id: 'chapter-09', title: { en: 'Accruals and prepayments', ru: 'Начисления и предоплаты', uz: 'Hisoblangan va oldindan to\'langan xarajatlar' } },
       { number: 10, id: 'chapter-10', title: { en: 'Receivables', ru: 'Дебиторская задолженность', uz: 'Debitorlik qarzi' } },
-      { number: 11, id: 'chapter-11', title: { en: 'Payables, provisions and contingent liabilities', ru: 'Кредиторская задолженность, резервы и условные обязательства', uz: 'Kreditorlik qarzi, zaxiralar va shartli majburiyatlar' } },
+      { number: 11, id: 'chapter-11', title: { en: 'Payables, provisions and contingent liabilities', ru: 'Кредиторская задолженность, резервы и условные обязательства', uz: 'Kreditorlik qarzi, rezervlar va shartli majburiyatlar' } },
       { number: 12, id: 'chapter-12', title: { en: 'Capital structure and finance costs', ru: 'Структура капитала и финансовые расходы', uz: 'Kapital tuzilmasi va moliyaviy xarajatlar' } },
     ],
   },

@@ -68,30 +68,30 @@ Shu sababli xarajatlar ikki turga bo'linadi. Aktivga kiritiladigan (kapital) xar
         en: `- Asset register: a record of each asset, kept as part of internal control.
 - It holds cost, date, description, reference, location, depreciation method, life and carrying amount.
 - Reconcile the register to the ledger regularly.
-- Cost includes the price, delivery, legal fees and testing to make it work.
+- Cost includes price, delivery, installation, site preparation, testing, legal and professional fees.
 - Cost excludes repairs, training, running costs and administration.`,
         ru: `- Реестр активов: запись по каждому активу, часть внутреннего контроля.
 - В нём стоимость, дата, описание, номер, место, метод амортизации, срок и балансовая стоимость.
 - Регулярно сверяйте реестр с главной книгой.
-- В стоимость входят цена, доставка, юридические расходы и тестирование.
+- В стоимость входят цена, доставка, установка, подготовка места, испытания, юридические и проф. услуги.
 - Не входят ремонт, обучение, текущие расходы и администрирование.`,
         uz: `- Aktivlar reyestri: har bir aktiv bo'yicha yozuv, ichki nazoratning bir qismi.
 - Unda qiymat, sana, tavsif, raqam, joy, amortizatsiya usuli, muddat va balans qiymati bor.
 - Reyestrni bosh kitob bilan muntazam solishtiring.
-- Qiymatga narx, yetkazish, yuridik xizmat va sinov kiradi.
+- Qiymatga narx, yetkazish, o'rnatish, joyni tayyorlash, sinov, yuridik va professional xizmatlar kiradi.
 - Ta'mir, o'qitish, joriy va ma'muriy xarajatlar kirmaydi.`,
       },
       exam: {
         en: `- If the register and the ledger show different carrying amounts, look for a missed disposal, a missed addition or a missed depreciation charge in either one.
-- Staff training is never capitalised. A one-year warranty, insurance and vehicle tax are expenses.
+- Staff training is never capitalised. A breakdown warranty of any length, insurance and vehicle tax are expenses.
 - Testing to check the asset works is part of cost. A maintenance contract is not.
 - Subsequent spending is capitalised only if it increases the benefits the asset can bring.`,
         ru: `- Если в реестре и в книге разная балансовая стоимость, ищите пропущенное выбытие, поступление или амортизацию в одном из них.
-- Обучение персонала никогда не капитализируется. Годовая гарантия, страховка и транспортный налог — расходы.
+- Обучение персонала никогда не капитализируется. Гарантия на поломки любой длительности, страховка и транспортный налог — расходы.
 - Испытание для проверки работы актива входит в стоимость. Договор обслуживания — нет.
 - Последующие затраты капитализируются, только если увеличивают выгоды от актива.`,
         uz: `- Reyestr va kitobda balans qiymati har xil bo'lsa, birortasida tushib qolgan chiqish, kirim yoki amortizatsiyani qidiring.
-- Xodimlarni o'qitish hech qachon kapitallashtirilmaydi. Bir yillik kafolat, sug'urta va transport solig'i xarajat.
+- Xodimlarni o'qitish hech qachon kapitallashtirilmaydi. Har qanday muddatli buzilish kafolati, sug'urta va transport solig'i xarajat.
 - Aktivning ishlashini tekshirish sinovi qiymatga kiradi. Xizmat shartnomasi kirmaydi.
 - Keyingi xarajat faqat aktiv beradigan foydani oshirsa kapitallashtiriladi.`,
       },
@@ -103,17 +103,17 @@ Shu sababli xarajatlar ikki turga bo'linadi. Aktivga kiritiladigan (kapital) xar
       body: {
         en: `A non-current asset register is a detailed record of the assets held. It forms part of internal control, tracks what is owned and where it is, and should be reconciled regularly to the asset accounts in the general ledger. A separate cost account is kept for each category, such as motor vehicles or fixtures and fittings.
 
-Under IAS 16, cost is any amount spent to buy the asset and bring it into working condition. It includes the purchase price, delivery, legal fees, the cost of testing, and later spending that enhances the asset. It excludes repairs and renewals, redecorating, administration, general overheads, training and wastage.
+Under IAS 16, cost is any amount spent to buy the asset and bring it into working condition. It includes the purchase price, delivery, installation, site preparation or alterations needed to install it, legal fees, professional fees such as architects' fees, the cost of testing, and later spending that enhances the asset. It excludes repairs and renewals, redecorating, administration, general overheads, training and wastage.
 
 The entry is Dr Non-current asset, Cr Bank or Payables. Spending after the purchase is added to the asset only if it increases the revenue the asset can generate, for example an extension giving more selling space. Repairs are always expenses.`,
         ru: `Реестр внеоборотных активов — подробная запись об имеющихся активах. Он входит во внутренний контроль, показывает, что принадлежит компании и где находится, и должен регулярно сверяться со счетами активов в главной книге. Для каждой категории, например транспорта или оборудования, ведётся отдельный счёт стоимости.
 
-По IAS 16 стоимость — это любые затраты на покупку актива и приведение его в рабочее состояние. В неё входят цена покупки, доставка, юридические расходы, испытания и последующие затраты, улучшающие актив. Не входят ремонт и обновление, косметический ремонт, администрирование, общие накладные расходы, обучение и потери.
+По IAS 16 стоимость — это любые затраты на покупку актива и приведение его в рабочее состояние. В неё входят цена покупки, доставка, установка, подготовка места или переделки, нужные для установки, юридические расходы, профессиональные услуги, например архитекторов, испытания и последующие затраты, улучшающие актив. Не входят ремонт и обновление, косметический ремонт, администрирование, общие накладные расходы, обучение и потери.
 
 Проводка: Дт Внеоборотный актив, Кт Банк или Кредиторы. Последующие затраты добавляются к активу, только если увеличивают доход, который он может приносить, например пристройка с дополнительной торговой площадью. Ремонт — всегда расход.`,
         uz: `Uzoq muddatli aktivlar reyestri mavjud aktivlar haqida batafsil yozuv. U ichki nazoratning bir qismi, nima egalikda ekanini va qayerdaligini kuzatadi va bosh kitobdagi aktiv hisoblari bilan muntazam solishtirilishi kerak. Har bir toifa uchun, masalan transport yoki jihozlar, alohida qiymat hisobi yuritiladi.
 
-IAS 16 ga ko'ra qiymat — aktivni sotib olish va ishchi holatga keltirish uchun sarflangan har qanday summa. Unga xarid narxi, yetkazish, yuridik xizmat, sinov va aktivni yaxshilaydigan keyingi xarajatlar kiradi. Ta'mir va yangilash, qayta bezash, boshqaruv, umumiy ustamalar, o'qitish va yo'qotishlar kirmaydi.
+IAS 16 ga ko'ra qiymat — aktivni sotib olish va ishchi holatga keltirish uchun sarflangan har qanday summa. Unga xarid narxi, yetkazish, o'rnatish, o'rnatish uchun zarur joyni tayyorlash yoki o'zgartirish, yuridik xizmat, arxitektorlar kabi professional xizmatlar, sinov va aktivni yaxshilaydigan keyingi xarajatlar kiradi. Ta'mir va yangilash, qayta bezash, boshqaruv, umumiy ustamalar, o'qitish va yo'qotishlar kirmaydi.
 
 Yozuv: Dt Uzoq muddatli aktiv, Kt Bank yoki Kreditorlar. Xariddan keyingi xarajat aktivga faqat u keltiradigan daromadni oshirsa qo'shiladi, masalan savdo maydonini kengaytiradigan qurilish. Ta'mir doim xarajat.`,
       },
@@ -183,11 +183,11 @@ Amortizatsiya foydalanish, eskirish, vaqt o'tishi (masalan o'n yillik ijara), te
 - Reducing balance: a % of the carrying amount, so the charge falls each year.
 - Straight-line suits steady use, such as buildings. Reducing balance suits vehicles.
 - Part-year: either a full year in the year of purchase and none in the year of sale, or monthly.`,
-        ru: `- Прямолинейный: (стоимость - остаточная) / срок использования. Одинаково каждый год.
+        ru: `- Прямолинейный: (стоимость - ликвидационная) / срок использования. Одинаково каждый год.
 - Уменьшаемого остатка: процент от балансовой стоимости, поэтому начисление падает.
 - Прямолинейный подходит для равномерного использования, например зданий. Уменьшаемого остатка — транспорту.
 - Неполный год: полный год при покупке и ноль при продаже, либо помесячно.`,
-        uz: `- To'g'ri chiziqli: (qiymat - qoldiq qiymat) / foydali muddat. Har yili bir xil.
+        uz: `- To'g'ri chiziqli: (qiymat - tugatish qiymati) / foydali muddat. Har yili bir xil.
 - Kamayuvchi qoldiq: balans qiymatining foizi, shuning uchun hisoblash kamayadi.
 - To'g'ri chiziqli bir tekis foydalanishga, masalan binolarga mos. Kamayuvchi qoldiq transportga mos.
 - Qisman yil: sotib olingan yili to'liq va sotilgan yili nol, yoki oylar bo'yicha.`,
@@ -198,11 +198,11 @@ Amortizatsiya foydalanish, eskirish, vaqt o'tishi (masalan o'n yillik ijara), te
 - Monthly or pro-rata depreciation counts the exact number of months owned in the year.
 - If a policy says full year in the year of purchase and none in the year of sale, apply it exactly.`,
         ru: `- Метод уменьшаемого остатка подходит активам, дающим больше пользы в начале, например транспорту.
-- Остаточная стоимость — оценка выручки от выбытия в конце срока. При методе уменьшаемого остатка в расчёте она не участвует.
+- Ликвидационная стоимость — оценка выручки от выбытия в конце срока. При методе уменьшаемого остатка в расчёте она не участвует.
 - Помесячная амортизация считает точное число месяцев владения в году.
 - Если политика предусматривает полный год при покупке и ноль при продаже, применяйте её точно.`,
         uz: `- Kamayuvchi qoldiq dastlab ko'proq naf beradigan aktivlarga, masalan transportga mos.
-- Qoldiq qiymat — muddat oxiridagi taxminiy sotuv qiymati. Kamayuvchi qoldiqda hisobda ishlatilmaydi.
+- Tugatish qiymati — muddat oxiridagi taxminiy sotuv qiymati. Kamayuvchi qoldiqda hisobda ishlatilmaydi.
 - Oylik yoki nisbiy amortizatsiya yilda egalik qilingan aniq oylar sonini hisoblaydi.
 - Siyosatda xarid yilida to'liq, sotuv yilida nol deyilsa, uni aniq qo'llang.`,
       },
@@ -223,27 +223,27 @@ Useful life is the number of years the business expects to use the asset, which 
 For assets bought or sold part-way through the year there are two approaches: charge a full year in the year of purchase and none in the year of disposal, or charge monthly based on the exact months of ownership. The question always states which one to use.`,
         ru: `IAS 16 говорит, что метод должен отражать схему, по которой используются будущие выгоды актива.
 
-Прямолинейный метод даёт одинаковое начисление каждый год: (стоимость - остаточная стоимость) / срок использования, либо процент от стоимости. Он подходит для активов с равномерным использованием, например зданий.
+Прямолинейный метод даёт одинаковое начисление каждый год: (стоимость - ликвидационная стоимость) / срок использования, либо процент от стоимости. Он подходит для активов с равномерным использованием, например зданий.
 
 Метод уменьшаемого остатка начисляет процент от балансовой стоимости, то есть стоимости за вычетом накопленной амортизации. Начисление уменьшается каждый год, что подходит активам, дающим меньше отдачи с возрастом, например транспорту.
 
-Срок использования — число лет, в течение которых бизнес планирует использовать актив, и он не всегда равен физическому сроку. Остаточная стоимость — оценка выручки от выбытия в конце этого срока.
+Срок использования — число лет, в течение которых бизнес планирует использовать актив, и он не всегда равен физическому сроку. Ликвидационная стоимость — оценка выручки от выбытия в конце этого срока.
 
 Для активов, купленных или проданных в середине года, есть два подхода: полный год в год покупки и ноль в год выбытия либо помесячное начисление по точному числу месяцев владения. В задаче всегда указано, какой применять.`,
         uz: `IAS 16 usul aktivning kelajakdagi foydalari qanday sarflanishini aks ettirishi kerak, deydi.
 
-To'g'ri chiziqli usul har yili bir xil summa beradi: (qiymat - qoldiq qiymat) / foydali muddat yoki qiymatning foizi. U bir tekis ishlatiladigan aktivlarga, masalan binolarga mos.
+To'g'ri chiziqli usul har yili bir xil summa beradi: (qiymat - tugatish qiymati) / foydali muddat yoki qiymatning foizi. U bir tekis ishlatiladigan aktivlarga, masalan binolarga mos.
 
 Kamayuvchi qoldiq usuli balans qiymatining, ya'ni qiymat minus hozirgacha to'plangan amortizatsiyaning foizini hisoblaydi. Hisoblanadigan summa har yili kamayadi, bu yosh o'tgan sari kamroq xizmat beradigan aktivlarga, masalan transportga mos.
 
-Foydali muddat — biznes aktivdan foydalanishni kutayotgan yillar soni, u doim jismoniy muddatga teng emas. Qoldiq qiymat — shu muddat oxiridagi taxminiy sotuv qiymati.
+Foydali muddat — biznes aktivdan foydalanishni kutayotgan yillar soni, u doim jismoniy muddatga teng emas. Tugatish qiymati — shu muddat oxiridagi taxminiy sotuv qiymati.
 
 Yil o'rtasida sotib olingan yoki sotilgan aktivlar uchun ikki yondashuv bor: xarid yilida to'liq yil va sotuv yilida nol hisoblash, yoki egalik qilingan aniq oylar bo'yicha oylik hisoblash. Masalada doim qaysi biri ekani aytiladi.`,
       },
       example: {
-        en: `The $3,000 shelves have no residual value and a ten-year life: straight-line gives $300 a year. The van, at 25% reducing balance, is charged $2,525 in year one (25% of $10,100). Its carrying amount falls to $7,575, so year two is $1,893.75 (25% of $7,575). If Madina bought the van on 1 April and her year ends on 31 December, year one is charged monthly for 9 months: $2,525 x 9/12 = $1,893.75.`,
-        ru: `Стеллажи за $3,000 без остаточной стоимости и со сроком 10 лет: прямолинейный метод даёт $300 в год. Фургон при 25% уменьшаемого остатка получает $2,525 в первый год (25% от $10,100). Его балансовая стоимость падает до $7,575, поэтому второй год: $1,893.75 (25% от $7,575). Если Мадина купила фургон 1 апреля, а год заканчивается 31 декабря, первый год начисляется помесячно за 9 месяцев: $2,525 x 9/12 = $1,893.75.`,
-        uz: `$3,000 lik javonlar qoldiq qiymatsiz va 10 yillik muddatli: to'g'ri chiziqli usul yiliga $300 beradi. Furgon 25% kamayuvchi qoldiqda birinchi yili $2,525 hisoblanadi ($10,100 ning 25%). Uning balans qiymati $7,575 ga tushadi, shuning uchun ikkinchi yil $1,893.75 ($7,575 ning 25%). Agar Madina furgonni 1 aprelda sotib olgan bo'lsa va yili 31 dekabrda tugasa, birinchi yil 9 oy uchun oylik hisoblanadi: $2,525 x 9/12 = $1,893.75.`,
+        en: `The $3,000 shelves have no residual value and a ten-year life: straight-line gives $300 a year. The van, at 25% reducing balance, is charged $2,525 in year one (25% of $10,100). Its carrying amount falls to $7,575, so year two is $1,893.75 (25% of $7,575). If Madina bought the van on 1 July and her year ends on 31 December, year one is charged monthly for 6 months: $2,525 x 6/12 = $1,262.50.`,
+        ru: `Стеллажи за $3,000 без ликвидационной стоимости и со сроком 10 лет: прямолинейный метод даёт $300 в год. Фургон при 25% уменьшаемого остатка получает $2,525 в первый год (25% от $10,100). Его балансовая стоимость падает до $7,575, поэтому второй год: $1,893.75 (25% от $7,575). Если Мадина купила фургон 1 июля, а год заканчивается 31 декабря, первый год начисляется помесячно за 6 месяцев: $2,525 x 6/12 = $1,262.50.`,
+        uz: `$3,000 lik javonlar tugatish qiymatisiz va 10 yillik muddatli: to'g'ri chiziqli usul yiliga $300 beradi. Furgon 25% kamayuvchi qoldiqda birinchi yili $2,525 hisoblanadi ($10,100 ning 25%). Uning balans qiymati $7,575 ga tushadi, shuning uchun ikkinchi yil $1,893.75 ($7,575 ning 25%). Agar Madina furgonni 1 iyulda sotib olgan bo'lsa va yili 31 dekabrda tugasa, birinchi yil 6 oy uchun oylik hisoblanadi: $2,525 x 6/12 = $1,262.50.`,
       },
     },
     {
@@ -292,9 +292,9 @@ Amortizatsiya xarajati hisobi xarajat hisobi, shuning uchun har yili foyda yoki 
 Moliyaviy holat hisobotida u qiymatdan ayirma sifatida ko'rsatiladi: qiymat minus to'plangan amortizatsiya balans qiymatiga teng.`,
       },
       example: {
-        en: `For the year to 31 December, Madina's year-end entries are: Dr Depreciation charge $1,893.75, Cr Accumulated depreciation - van $1,893.75 for the van, and Dr Depreciation charge $300, Cr Accumulated depreciation - shelves $300. The statement of financial position shows the van at cost $10,100, less $1,893.75, giving a carrying amount of $8,206.25. The total $2,193.75 is also in her profit or loss.`,
-        ru: `За год по 31 декабря проводки Мадины на конец года: Дт Расход по амортизации $1,893.75, Кт Накопленная амортизация - фургон $1,893.75 по фургону и Дт Расход по амортизации $300, Кт Накопленная амортизация - стеллажи $300. В отчёте о финансовом положении фургон показан по стоимости $10,100 минус $1,893.75, балансовая стоимость $8,206.25. Общая сумма $2,193.75 отражена и в её прибыли или убытке.`,
-        uz: `31 dekabrgacha bo'lgan yil uchun Madinaning yil oxiri yozuvlari: furgon uchun Dt Amortizatsiya xarajati $1,893.75, Kt To'plangan amortizatsiya - furgon $1,893.75 va Dt Amortizatsiya xarajati $300, Kt To'plangan amortizatsiya - javonlar $300. Moliyaviy holat hisobotida furgon $10,100 qiymatda minus $1,893.75, balans qiymati $8,206.25. Umumiy $2,193.75 uning foyda yoki zararida ham bor.`,
+        en: `For the year to 31 December, Madina's year-end entries are: Dr Depreciation charge $1,262.50, Cr Accumulated depreciation - van $1,262.50 for the van, and Dr Depreciation charge $300, Cr Accumulated depreciation - shelves $300. The statement of financial position shows the van at cost $10,100, less $1,262.50, giving a carrying amount of $8,837.50. The total $1,562.50 is also in her profit or loss.`,
+        ru: `За год по 31 декабря проводки Мадины на конец года: Дт Расход по амортизации $1,262.50, Кт Накопленная амортизация - фургон $1,262.50 по фургону и Дт Расход по амортизации $300, Кт Накопленная амортизация - стеллажи $300. В отчёте о финансовом положении фургон показан по стоимости $10,100 минус $1,262.50, балансовая стоимость $8,837.50. Общая сумма $1,562.50 отражена и в её прибыли или убытке.`,
+        uz: `31 dekabrgacha bo'lgan yil uchun Madinaning yil oxiri yozuvlari: furgon uchun Dt Amortizatsiya xarajati $1,262.50, Kt To'plangan amortizatsiya - furgon $1,262.50 va Dt Amortizatsiya xarajati $300, Kt To'plangan amortizatsiya - javonlar $300. Moliyaviy holat hisobotida furgon $10,100 qiymatda minus $1,262.50, balans qiymati $8,837.50. Umumiy $1,562.50 uning foyda yoki zararida ham bor.`,
       },
     },
     {
@@ -303,13 +303,13 @@ Moliyaviy holat hisobotida u qiymatdan ayirma sifatida ko'rsatiladi: qiymat minu
 - Do not restate the past. Work out the new charge from now on.
 - New charge = (carrying amount now - new residual value) / remaining useful life.
 - Use the same rates and methods consistently otherwise.`,
-        ru: `- Срок использования или остаточную стоимость можно изменить, если прежняя оценка уже неверна.
+        ru: `- Срок использования или ликвидационную стоимость можно изменить, если прежняя оценка уже неверна.
 - Прошлое не пересчитывается. Новое начисление считается с этого момента.
-- Новое начисление = (балансовая стоимость сейчас - новая остаточная) / оставшийся срок.
+- Новое начисление = (балансовая стоимость сейчас - новая ликвидационная) / оставшийся срок.
 - В остальном применяйте одни и те же ставки и методы последовательно.`,
-        uz: `- Eski baho noto'g'ri bo'lsa, foydali muddat yoki qoldiq qiymatni o'zgartirish mumkin.
+        uz: `- Eski baho noto'g'ri bo'lsa, foydali muddat yoki tugatish qiymatini o'zgartirish mumkin.
 - O'tmishni qayta hisoblamang. Yangi summani hozirdan boshlab hisoblang.
-- Yangi summa = (hozirgi balans qiymati - yangi qoldiq qiymat) / qolgan foydali muddat.
+- Yangi summa = (hozirgi balans qiymati - yangi tugatish qiymati) / qolgan foydali muddat.
 - Boshqa hollarda bir xil stavka va usullarni izchil qo'llang.`,
       },
       exam: {
@@ -318,10 +318,10 @@ Moliyaviy holat hisobotida u qiymatdan ayirma sifatida ko'rsatiladi: qiymat minu
 - Accumulated depreciation to date and the old residual value drop out of the new calculation. Only the carrying amount matters.`,
         ru: `- Сначала посчитайте уже использованные годы. Оставшийся срок — это новый общий срок минус годы, за которые уже начислено.
 - Изменение оценки действует в периоде, когда оно сделано, до начисления амортизации за этот период.
-- Накопленная амортизация и прежняя остаточная стоимость в новом расчёте не участвуют. Важна только балансовая стоимость.`,
+- Накопленная амортизация и прежняя ликвидационная стоимость в новом расчёте не участвуют. Важна только балансовая стоимость.`,
         uz: `- Avval ishlatilgan yillarni sanang. Qolgan muddat — yangi umumiy muddat minus allaqachon hisoblangan yillar.
 - Bahoning o'zgarishi u kiritilgan davrda, shu davr amortizatsiyasi hisoblanishidan oldin kuchga kiradi.
-- To'plangan amortizatsiya va eski qoldiq qiymat yangi hisobda qatnashmaydi. Faqat balans qiymati muhim.`,
+- To'plangan amortizatsiya va eski tugatish qiymati yangi hisobda qatnashmaydi. Faqat balans qiymati muhim.`,
       },
       heading: {
         en: 'Changing estimates',
@@ -332,17 +332,17 @@ Moliyaviy holat hisobotida u qiymatdan ayirma sifatida ko'rsatiladi: qiymat minu
         en: `A business should apply the same rates and methods consistently, but it may change its estimate of useful life or residual value if the old one is no longer appropriate. No past figures are restated. You simply work out the new annual charge from that point on.
 
 Take the carrying amount at the date of the change, deduct any new residual value, and divide by the new remaining useful life.`,
-        ru: `Бизнес должен последовательно применять одни и те же ставки и методы, но может изменить оценку срока использования или остаточной стоимости, если прежняя уже не подходит. Прошлые данные не пересчитываются. Вы просто считаете новое годовое начисление с этого момента.
+        ru: `Бизнес должен последовательно применять одни и те же ставки и методы, но может изменить оценку срока использования или ликвидационной стоимости, если прежняя уже не подходит. Прошлые данные не пересчитываются. Вы просто считаете новое годовое начисление с этого момента.
 
-Возьмите балансовую стоимость на дату изменения, вычтите новую остаточную стоимость и разделите на новый оставшийся срок использования.`,
-        uz: `Biznes bir xil stavka va usullarni izchil qo'llashi kerak, lekin eski baho endi mos kelmasa, foydali muddat yoki qoldiq qiymat bahosini o'zgartirishi mumkin. O'tgan raqamlar qayta hisoblanmaydi. Siz shunchaki shu paytdan boshlab yangi yillik summani hisoblaysiz.
+Возьмите балансовую стоимость на дату изменения, вычтите новую ликвидационную стоимость и разделите на новый оставшийся срок использования.`,
+        uz: `Biznes bir xil stavka va usullarni izchil qo'llashi kerak, lekin eski baho endi mos kelmasa, foydali muddat yoki tugatish qiymati bahosini o'zgartirishi mumkin. O'tgan raqamlar qayta hisoblanmaydi. Siz shunchaki shu paytdan boshlab yangi yillik summani hisoblaysiz.
 
-O'zgarish sanasidagi balans qiymatini oling, yangi qoldiq qiymatni ayiring va yangi qolgan foydali muddatga bo'ling.`,
+O'zgarish sanasidagi balans qiymatini oling, yangi tugatish qiymatini ayiring va yangi qolgan foydali muddatga bo'ling.`,
       },
       example: {
         en: `After two years Madina's shelves ($3,000, ten-year life, no residual value) have a carrying amount of $3,000 - 2 x $300 = $2,400. A supplier tells her they will wear out sooner, and she now expects only six more years of use. The new charge is $2,400 / 6 = $400 a year from now on. The $600 already charged is left alone.`,
-        ru: `Через два года стеллажи Мадины ($3,000, срок 10 лет, без остаточной стоимости) имеют балансовую стоимость $3,000 - 2 x $300 = $2,400. Поставщик говорит, что они износятся быстрее, и теперь она ожидает ещё лишь шесть лет использования. Новое начисление: $2,400 / 6 = $400 в год с этого момента. Уже начисленные $600 не меняются.`,
-        uz: `Ikki yildan keyin Madinaning javonlari ($3,000, 10 yillik muddat, qoldiq qiymatsiz) balans qiymati $3,000 - 2 x $300 = $2,400. Yetkazib beruvchi ular tezroq eskirishini aytadi va u endi yana faqat olti yil foydalanishni kutadi. Yangi summa: hozirdan boshlab yiliga $2,400 / 6 = $400. Allaqachon hisoblangan $600 o'zgarmaydi.`,
+        ru: `Через два года стеллажи Мадины ($3,000, срок 10 лет, без ликвидационной стоимости) имеют балансовую стоимость $3,000 - 2 x $300 = $2,400. Поставщик говорит, что они износятся быстрее, и теперь она ожидает ещё лишь шесть лет использования. Новое начисление: $2,400 / 6 = $400 в год с этого момента. Уже начисленные $600 не меняются.`,
+        uz: `Ikki yildan keyin Madinaning javonlari ($3,000, 10 yillik muddat, tugatish qiymatisiz) balans qiymati $3,000 - 2 x $300 = $2,400. Yetkazib beruvchi ular tezroq eskirishini aytadi va u endi yana faqat olti yil foydalanishni kutadi. Yangi summa: hozirdan boshlab yiliga $2,400 / 6 = $400. Allaqachon hisoblangan $600 o'zgarmaydi.`,
       },
     },
   ],
@@ -352,7 +352,7 @@ O'zgarish sanasidagi balans qiymatini oling, yangi qoldiq qiymatni ayiring va ya
     { term: { en: 'Asset register', ru: 'Реестр активов', uz: 'Aktivlar reyestri' }, definition: { en: 'A detailed record of each non-current asset, reconciled to the ledger.', ru: 'Подробная запись по каждому внеоборотному активу, сверяемая с книгой.', uz: 'Har bir uzoq muddatli aktiv bo\'yicha batafsil yozuv, kitob bilan solishtiriladi.' } },
     { term: { en: 'Depreciation', ru: 'Амортизация', uz: 'Amortizatsiya' }, definition: { en: 'The systematic allocation of an asset\'s depreciable amount over its useful life.', ru: 'Систематическое распределение амортизируемой суммы актива на срок его использования.', uz: 'Aktivning amortizatsiya qilinadigan summasini foydali muddatga tizimli taqsimlash.' } },
     { term: { en: 'Useful life', ru: 'Срок полезного использования', uz: 'Foydali muddat' }, definition: { en: 'The number of years the business expects to use the asset.', ru: 'Число лет, в течение которых бизнес планирует использовать актив.', uz: 'Biznes aktivdan foydalanishni kutayotgan yillar soni.' } },
-    { term: { en: 'Residual value', ru: 'Остаточная стоимость', uz: 'Qoldiq qiymat' }, definition: { en: 'The estimated disposal value of the asset at the end of its useful life.', ru: 'Оценка выручки от выбытия актива в конце срока использования.', uz: 'Aktivning foydali muddat oxiridagi taxminiy sotuv qiymati.' } },
+    { term: { en: 'Residual value', ru: 'Ликвидационная стоимость', uz: 'Tugatish qiymati' }, definition: { en: 'The estimated disposal value of the asset at the end of its useful life.', ru: 'Оценка выручки от выбытия актива в конце срока использования.', uz: 'Aktivning foydali muddat oxiridagi taxminiy sotuv qiymati.' } },
     { term: { en: 'Carrying amount', ru: 'Балансовая стоимость', uz: 'Balans qiymati' }, definition: { en: 'Cost less accumulated depreciation.', ru: 'Стоимость минус накопленная амортизация.', uz: 'Qiymat minus to\'plangan amortizatsiya.' } },
     { term: { en: 'Reducing balance', ru: 'Уменьшаемый остаток', uz: 'Kamayuvchi qoldiq' }, definition: { en: 'A method charging a fixed percentage of the carrying amount each year.', ru: 'Метод, при котором каждый год начисляется фиксированный процент от балансовой стоимости.', uz: 'Har yili balans qiymatining qat\'iy foizi hisoblanadigan usul.' } },
   ],

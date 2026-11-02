@@ -1,5 +1,7 @@
 # ACCA FA Learning Website — Project Notes
 
+**Start with `NEXT_CHAT.md`.** It holds the latest instruction, the work left and the unapplied review fixes, and it replaces decision 16 (Look) below, which the user has rejected.
+
 Status: **Chapters 1, 2 and 5-10 are built** (chapters 3 and 4 were skipped on request and are still to do; 11-20 are still to do). Open `index.html` in a browser, nothing to install.
 This file exists so a future chat in this folder can pick up exactly where we left off.
 

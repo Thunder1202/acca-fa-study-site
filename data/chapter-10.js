@@ -7,7 +7,7 @@ const chapter10 = {
     { en: 'Explain and identify examples of receivables', ru: 'Объяснять и приводить примеры дебиторской задолженности', uz: 'Debitorlik qarzini tushuntirish va misollar keltirish' },
     { en: 'Understand the purpose of an aged receivables analysis', ru: 'Понимать назначение анализа дебиторской задолженности по срокам', uz: 'Debitorlik qarzini muddatlar bo\'yicha tahlil qilish maqsadini tushunish' },
     { en: 'Record irrecoverable debts and debts later recovered', ru: 'Отражать безнадёжные долги и позднее возвращённые долги', uz: 'Undirib bo\'lmaydigan qarzlarni va keyin qaytarilgan qarzlarni qayd etish' },
-    { en: 'Record adjustments to the allowance for receivables', ru: 'Отражать корректировки резерва по дебиторской задолженности', uz: 'Debitorlik qarzi zaxirasi tuzatishlarini qayd etish' },
+    { en: 'Record adjustments to the allowance for receivables', ru: 'Отражать корректировки резерва по дебиторской задолженности', uz: 'Debitorlik qarzi rezervi tuzatishlarini qayd etish' },
     { en: 'Identify the effect on profit and net assets', ru: 'Определять влияние на прибыль и чистые активы', uz: 'Foyda va sof aktivlarga ta\'sirini aniqlash' },
   ],
   sections: [
@@ -38,7 +38,7 @@ const chapter10 = {
 - Взаимозачёт уменьшает дебиторов: Дт Кредиторы, Кт Дебиторы.
 - Предоставленная скидка, которую не ожидали при выставлении счёта, вычитается из долга. Если ожидали, долг уже записан за вычетом неё.
 - Чтобы найти деньги, полученные от покупателей в кредит, считайте от сальдо на начало, продаж в кредит, списаний, взаимозачётов и сальдо на конец.`,
-        uz: `- Naqd sotuvlar hech qachon debitorlar hisobidan o'tmaydi. Olingan chegirmalar va debitorlik zaxirasi ham u yerga tegishli emas.
+        uz: `- Naqd sotuvlar hech qachon debitorlar hisobidan o'tmaydi. Olingan chegirmalar va debitorlik rezervi ham u yerga tegishli emas.
 - O'zaro hisob-kitob debitorlarni kamaytiradi: Dt Kreditorlar, Kt Debitorlar.
 - Hisob-faktura berilganda kutilmagan berilgan chegirma qarzdan ayiriladi. Kutilgan bo'lsa, qarz allaqachon undan keyin yozilgan.
 - Nasiya mijozlardan olingan pulni topish uchun boshlang'ich qoldiq, nasiya sotuv, yozib yuborishlar, o'zaro hisob-kitob va yakuniy qoldiqdan orqaga hisoblang.`,
@@ -53,17 +53,17 @@ const chapter10 = {
 
 The trade receivables account in the general ledger shows, on the debit side, the opening balance, credit sales, dishonoured cheques (the payment has not in fact been received), refunds of customers' credit balances, and any interest charged on overdue amounts. On the credit side it shows sales returns, cash received, irrecoverable debts, and contras with payables (where the business both sells to and buys from the same customer, so an agreed amount is offset: Dr Payables, Cr Receivables). The closing balance goes into the statement of financial position.
 
-The individual customer accounts are memorandum-only and are updated with the same information, so the total of the customer accounts always equals the ledger account.`,
+The individual customer accounts are memorandum-only and are updated with the same information, so the total of the customer accounts should equal the ledger account. Any difference is found by a reconciliation.`,
         ru: `Примеры дебиторской задолженности: суммы по продажам в кредит (торговая дебиторская задолженность), возврат налога с продаж или налога на прибыль и согласованные, но ещё не выплаченные страховые требования.
 
 Счёт торговой дебиторской задолженности в главной книге показывает по дебету сальдо на начало, продажи в кредит, возвращённые чеки (платёж по факту не получен), возвраты кредитовых сальдо покупателей и проценты за просрочку. По кредиту — возвраты проданного, полученные деньги, безнадёжные долги и взаимозачёты с кредиторами (когда бизнес и продаёт, и покупает у одного клиента, поэтому согласованная сумма зачитывается: Дт Кредиторы, Кт Дебиторы). Остаток на конец идёт в отчёт о финансовом положении.
 
-Счета отдельных покупателей — вспомогательные, они обновляются теми же данными, поэтому сумма счетов покупателей всегда равна счёту в книге.`,
+Счета отдельных покупателей — вспомогательные, они обновляются теми же данными, поэтому сумма счетов покупателей должна равняться счёту в книге. Расхождение находят сверкой.`,
         uz: `Debitorlik qarzi misollari: nasiya sotuvdan summalar (savdo debitorligi), sotuv solig'i yoki foyda solig'ining qaytarilishi va kelishilgan, lekin hali to'lanmagan sug'urta da'volari.
 
 Bosh kitobdagi savdo debitorligi hisobi debet tomonda boshlang'ich qoldiqni, nasiya sotuvni, qaytgan cheklarni (to'lov aslida olinmagan), mijozlar kredit qoldiqlarini qaytarishni va kechikkan summalarga hisoblangan foizni ko'rsatadi. Kredit tomonda sotuv qaytarishlarini, olingan pulni, undirib bo'lmaydigan qarzlarni va kreditorlar bilan o'zaro hisob-kitobni (biznes bir mijozga ham sotsa, ham undan xarid qilsa, kelishilgan summa o'zaro hisobga olinadi: Dt Kreditorlar, Kt Debitorlar). Yakuniy qoldiq moliyaviy holat hisobotiga kiradi.
 
-Alohida mijoz hisoblari yordamchi bo'lib, xuddi shu ma'lumot bilan yangilanadi, shuning uchun mijoz hisoblari yig'indisi doim kitobdagi hisobga teng.`,
+Alohida mijoz hisoblari yordamchi bo'lib, xuddi shu ma'lumot bilan yangilanadi, shuning uchun mijoz hisoblari yig'indisi kitobdagi hisobga teng bo'lishi kerak. Farq solishtirish orqali topiladi.`,
       },
       example: {
         en: `Madina's Mart sells to cafes on credit. Cafe Zamin owes $2,000 at the start of the year. During the year Madina sells it $9,000 more on credit, and one of its cheques for $500 is returned unpaid by its bank. Cafe Zamin also supplies her with paper bags worth $300, so they agree a contra. Each of these shows on Cafe Zamin's account and in the total receivables account.`,
@@ -97,7 +97,7 @@ Alohida mijoz hisoblari yordamchi bo'lib, xuddi shu ma'lumot bilan yangilanadi, 
 - Анализ по срокам помогает кредитному контролю и расчёту резерва на конец года. Одобрения и лимиты кредита хранятся отдельно.
 - Кредитный лимит управляет риском убытка от клиентов, не способных заплатить. Он не связан с клиентами за наличные или запасами.`,
         uz: `- Nasiyaga sotish pul oqimini yaxshilamaydi. U uni yomonlashtirishi mumkin, chunki mijozlar kech to'laydi, ba'zilari umuman to'lamaydi.
-- Muddatlar bo'yicha tahlil kredit nazoratiga va yil oxiridagi zaxirani hisoblashga yordam beradi. Kredit ruxsatlari va limitlari alohida yuritiladi.
+- Muddatlar bo'yicha tahlil kredit nazoratiga va yil oxiridagi rezervni hisoblashga yordam beradi. Kredit ruxsatlari va limitlari alohida yuritiladi.
 - Kredit limiti to'lay olmaydigan nasiya mijozlaridan zarar xavfini boshqaradi. U naqd mijozlar yoki zaxiralarga aloqador emas.`,
       },
       heading: {
@@ -150,7 +150,7 @@ Mijoz hisoblaridan tuzilgan debitorlarni muddatlar bo'yicha tahlil qilish har bi
         ru: `- Долг, уже покрытый резервом, всё равно списывается проводкой Дт Расход по безнадёжным долгам, Кт Дебиторы. Резерв пересматривается отдельно в конце года.
 - Когда долг возвращается после списания, кредит нельзя отнести на дебиторов, так как долга там уже нет.
 - Некоторые компании ведут отдельный счёт возвращённых безнадёжных долгов.`,
-        uz: `- Zaxira bilan allaqachon qoplangan qarz baribir Dt Undirib bo'lmaydigan qarzlar xarajati, Kt Debitorlar bilan yozib yuboriladi. Zaxira yil oxirida alohida ko'rib chiqiladi.
+        uz: `- Rezerv bilan allaqachon qoplangan qarz baribir Dt Undirib bo'lmaydigan qarzlar xarajati, Kt Debitorlar bilan yozib yuboriladi. Rezerv yil oxirida alohida ko'rib chiqiladi.
 - Qarz yozib yuborilgandan keyin qaytsa, kreditni debitorlarga yozib bo'lmaydi, chunki qarz u yerda endi yo'q.
 - Ba'zi bizneslar qaytgan undirib bo'lmaydigan qarzlar uchun alohida hisob yuritadi.`,
       },
@@ -194,11 +194,11 @@ Yozib yuborilgan qarz keyin to'liq yoki qisman to'lansa, odatdagi Dt Bank, Kt De
 - Создаётся: Дт Расход по безнадёжным долгам, Кт Резерв по дебиторской задолженности.
 - В прибыль или убыток идёт только изменение: резерв на конец - резерв на начало.
 - Отчёт о финансовом положении: дебиторы минус резерв.`,
-        uz: `- Zaxira: to'lanmasligi mumkin, lekin hali yozib yuborilmagan qarzlar uchun.
+        uz: `- Rezerv: to'lanmasligi mumkin, lekin hali yozib yuborilmagan qarzlar uchun.
 - Faqat aniq qarzlar uchun, ob'ektiv dalil bilan: kechikkan, bahsli yoki mijoz qiyinchilikda.
-- Yaratish: Dt Undirib bo'lmaydigan qarzlar xarajati, Kt Debitorlik zaxirasi.
-- Foyda yoki zararga faqat o'zgarish o'tadi: yakuniy zaxira - boshlang'ich zaxira.
-- Moliyaviy holat hisoboti: debitorlar minus zaxira.`,
+- Yaratish: Dt Undirib bo'lmaydigan qarzlar xarajati, Kt Debitorlik rezervi.
+- Foyda yoki zararga faqat o'zgarish o'tadi: yakuniy rezerv - boshlang'ich rezerv.
+- Moliyaviy holat hisoboti: debitorlar minus rezerv.`,
       },
       exam: {
         en: `- Steps: write off irrecoverable debts; take the receivables balance after the write-offs; set the allowance required; compare with the opening allowance; charge or credit the difference; deduct the closing allowance in the statement of financial position.
@@ -209,15 +209,15 @@ Yozib yuborilgan qarz keyin to'liq yoki qisman to'lansa, odatdagi Dt Bank, Kt De
 - Для списаний, возвратов и изменения резерва нужен только один счёт расхода по безнадёжным долгам.
 - Уменьшение резерва — кредит на счёт расхода, поэтому прибыль растёт. Увеличение резерва уменьшает прибыль и чистые оборотные активы.
 - Резерв не меняет остаток счёта дебиторов в книге.`,
-        uz: `- Qadamlar: undirib bo'lmaydigan qarzlarni yozib yuboring; yozib yuborishdan keyingi debitorlar qoldig'ini oling; kerakli zaxirani belgilang; boshlang'ich zaxira bilan solishtiring; farqni xarajat yoki daromadga yozing; moliyaviy holat hisobotida yakuniy zaxirani ayiring.
-- Yozib yuborish, qaytarish va zaxira o'zgarishi uchun faqat bitta undirib bo'lmaydigan qarzlar xarajati hisobi kerak.
-- Zaxiraning kamayishi xarajat hisobiga kredit, shuning uchun foyda oshadi. Zaxiraning oshishi foyda va sof joriy aktivlarni kamaytiradi.
-- Zaxira debitorlar kitob qoldig'ini o'zgartirmaydi.`,
+        uz: `- Qadamlar: undirib bo'lmaydigan qarzlarni yozib yuboring; yozib yuborishdan keyingi debitorlar qoldig'ini oling; kerakli rezervni belgilang; boshlang'ich rezerv bilan solishtiring; farqni xarajat yoki daromadga yozing; moliyaviy holat hisobotida yakuniy rezervni ayiring.
+- Yozib yuborish, qaytarish va rezerv o'zgarishi uchun faqat bitta undirib bo'lmaydigan qarzlar xarajati hisobi kerak.
+- Rezervning kamayishi xarajat hisobiga kredit, shuning uchun foyda oshadi. Rezervning oshishi foyda va sof joriy aktivlarni kamaytiradi.
+- Rezerv debitorlar kitob qoldig'ini o'zgartirmaydi.`,
       },
       heading: {
         en: 'The allowance for receivables',
         ru: 'Резерв по дебиторской задолженности',
-        uz: 'Debitorlik qarzi zaxirasi',
+        uz: 'Debitorlik qarzi rezervi',
       },
       body: {
         en: `Some debts cause concern but are not yet regarded as irrecoverable. Prudence says to recognise the possible loss in profit or loss, but the receivable must stay in the accounts in case the customer pays. So an allowance is created. It is a credit balance that is netted against trade receivables in the statement of financial position, giving a net figure for receivables that are probably recoverable.
@@ -234,18 +234,18 @@ The working order is: write off irrecoverable debts; calculate the receivables b
 Проводка для создания: Дт Расход по безнадёжным долгам, Кт Резерв по дебиторской задолженности. Если резерв уже есть, начисляется только изменение: резерв на конец минус резерв на начало. Увеличение — расход, а уменьшение — кредит на счёт расхода по безнадёжным долгам.
 
 Порядок расчёта: списать безнадёжные долги; рассчитать сальдо дебиторов после списаний; найти нужный резерв; сравнить с резервом на начало; отразить разницу; вычесть резерв на конец из дебиторов в отчёте о финансовом положении.`,
-        uz: `Ba'zi qarzlar xavotir tug'diradi, lekin hali undirib bo'lmaydigan hisoblanmaydi. Ehtiyotkorlik mumkin bo'lgan zararni foyda yoki zararda tan olishni aytadi, lekin mijoz to'lasa, debitorlik qarzi hisobda qolishi kerak. Shuning uchun zaxira yaratiladi. Bu kredit qoldiq bo'lib, moliyaviy holat hisobotida savdo debitorligidan ayiriladi va ehtimol undiriladigan debitorlarning sof summasini beradi.
+        uz: `Ba'zi qarzlar xavotir tug'diradi, lekin hali undirib bo'lmaydigan hisoblanmaydi. Ehtiyotkorlik mumkin bo'lgan zararni foyda yoki zararda tan olishni aytadi, lekin mijoz to'lasa, debitorlik qarzi hisobda qolishi kerak. Shuning uchun rezerv yaratiladi. Bu kredit qoldiq bo'lib, moliyaviy holat hisobotida savdo debitorligidan ayiriladi va ehtimol undiriladigan debitorlarning sof summasini beradi.
 
-Zaxira faqat aniq summalarni qoplashi kerak, bunda ma'lum qarz to'liq yoki qisman undirilmasligi mumkinligiga ob'ektiv dalil bo'lishi kerak: mijoz moliyaviy qiyinchilikda, hisob-fakturani bahslashmoqda yoki to'lov allaqachon kechikkan.
+Rezerv faqat aniq summalarni qoplashi kerak, bunda ma'lum qarz to'liq yoki qisman undirilmasligi mumkinligiga ob'ektiv dalil bo'lishi kerak: mijoz moliyaviy qiyinchilikda, hisob-fakturani bahslashmoqda yoki to'lov allaqachon kechikkan.
 
-Yaratish yozuvi: Dt Undirib bo'lmaydigan qarzlar xarajati, Kt Debitorlik zaxirasi. Zaxira allaqachon mavjud bo'lsa, faqat o'zgarish yoziladi: yakuniy zaxira minus boshlang'ich zaxira. Oshish xarajat, kamayish esa undirib bo'lmaydigan qarzlar xarajati hisobiga kredit.
+Yaratish yozuvi: Dt Undirib bo'lmaydigan qarzlar xarajati, Kt Debitorlik rezervi. Rezerv allaqachon mavjud bo'lsa, faqat o'zgarish yoziladi: yakuniy rezerv minus boshlang'ich rezerv. Oshish xarajat, kamayish esa undirib bo'lmaydigan qarzlar xarajati hisobiga kredit.
 
-Ish tartibi: undirib bo'lmaydigan qarzlarni yozib yuboring; yozib yuborishdan keyingi debitorlar qoldig'ini hisoblang; endi kerakli zaxirani toping; boshlang'ich zaxira bilan solishtiring; farqni hisobga oling; moliyaviy holat hisobotida yakuniy zaxirani debitorlardan ayiring.`,
+Ish tartibi: undirib bo'lmaydigan qarzlarni yozib yuboring; yozib yuborishdan keyingi debitorlar qoldig'ini hisoblang; endi kerakli rezervni toping; boshlang'ich rezerv bilan solishtiring; farqni hisobga oling; moliyaviy holat hisobotida yakuniy rezervni debitorlardan ayiring.`,
       },
       example: {
         en: `At year end Madina's receivables are $15,000 before adjustments. Cafe Aziz's $800 is written off, leaving $14,200. A cafe disputes a $500 invoice, so she sets the allowance at $500. The old allowance was $200, so the movement is $300. The irrecoverable debts expense is $800 + $300 = $1,100. The statement of financial position shows receivables $14,200 less allowance $500 = $13,700.`,
         ru: `На конец года дебиторы Мадины составляют $15,000 до корректировок. Долг кафе Aziz на $800 списывается, остаётся $14,200. Одно кафе оспаривает счёт на $500, поэтому она устанавливает резерв $500. Прежний резерв был $200, значит, изменение $300. Расход по безнадёжным долгам $800 + $300 = $1,100. В отчёте о финансовом положении дебиторы $14,200 минус резерв $500 = $13,700.`,
-        uz: `Yil oxirida Madinaning debitorlari tuzatishlardan oldin $15,000. Aziz kafesining $800 yozib yuboriladi, $14,200 qoladi. Bir kafe $500 lik hisob-fakturani bahslashmoqda, shuning uchun u zaxirani $500 qiladi. Eski zaxira $200 edi, demak o'zgarish $300. Undirib bo'lmaydigan qarzlar xarajati $800 + $300 = $1,100. Moliyaviy holat hisobotida debitorlar $14,200 minus zaxira $500 = $13,700.`,
+        uz: `Yil oxirida Madinaning debitorlari tuzatishlardan oldin $15,000. Aziz kafesining $800 yozib yuboriladi, $14,200 qoladi. Bir kafe $500 lik hisob-fakturani bahslashmoqda, shuning uchun u rezervni $500 qiladi. Eski rezerv $200 edi, demak o'zgarish $300. Undirib bo'lmaydigan qarzlar xarajati $800 + $300 = $1,100. Moliyaviy holat hisobotida debitorlar $14,200 minus rezerv $500 = $13,700.`,
       },
     },
   ],
@@ -255,7 +255,7 @@ Ish tartibi: undirib bo'lmaydigan qarzlarni yozib yuboring; yozib yuborishdan ke
     { term: { en: 'Aged receivables analysis', ru: 'Анализ дебиторов по срокам', uz: 'Debitorlarni muddatlar bo\'yicha tahlil' }, definition: { en: 'A list of what each customer owes and how long it has been outstanding.', ru: 'Список того, сколько должен каждый клиент и как давно.', uz: 'Har bir mijoz qancha qarzdor va qancha vaqtdan beri ekanini ko\'rsatuvchi ro\'yxat.' } },
     { term: { en: 'Credit limit', ru: 'Кредитный лимит', uz: 'Kredit limiti' }, definition: { en: 'The maximum credit a business will give to a customer.', ru: 'Наибольший кредит, который бизнес предоставит клиенту.', uz: 'Biznes mijozga beradigan eng ko\'p kredit.' } },
     { term: { en: 'Irrecoverable debt', ru: 'Безнадёжный долг', uz: 'Undirib bo\'lmaydigan qarz' }, definition: { en: 'A debt that is, or is considered to be, uncollectable. It is written off.', ru: 'Долг, который не будет или считается невозможным получить. Списывается.', uz: 'Undirib bo\'lmaydigan yoki shunday deb hisoblanadigan qarz. Yozib yuboriladi.' } },
-    { term: { en: 'Allowance for receivables', ru: 'Резерв по дебиторской задолженности', uz: 'Debitorlik zaxirasi' }, definition: { en: 'A credit balance for specific debts that may not be paid, netted off receivables.', ru: 'Кредитовое сальдо по конкретным долгам, которые могут быть не оплачены, вычитается из дебиторов.', uz: 'To\'lanmasligi mumkin aniq qarzlar uchun kredit qoldiq, debitorlardan ayiriladi.' } },
+    { term: { en: 'Allowance for receivables', ru: 'Резерв по дебиторской задолженности', uz: 'Debitorlik rezervi' }, definition: { en: 'A credit balance for specific debts that may not be paid, netted off receivables.', ru: 'Кредитовое сальдо по конкретным долгам, которые могут быть не оплачены, вычитается из дебиторов.', uz: 'To\'lanmasligi mumkin aniq qarzlar uchun kredit qoldiq, debitorlardan ayiriladi.' } },
   ],
 };
 

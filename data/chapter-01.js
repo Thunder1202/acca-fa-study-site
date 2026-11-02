@@ -168,7 +168,7 @@ Barcha foydalanuvchilarga rahbariyat resurslarni qanday boshqarganini baholash v
 - Yakka tadbirkor va sherikliklarda odatda hisobot topshirish, audit va ochiqlik talablari yo'q.
 - Suzuvchi garov odatda sheriklik va jismoniy shaxslarga berilmaydi.
 - Foydani taqsimlash hisobi sheriklik foydasi qanday bo'linishini ko'rsatadi.
-- Yakka tadbirkorning qayta baholash zaxirasi kapital hisobiga kiradi.`,
+- Yakka tadbirkorning qayta baholash rezervi kapital hisobiga kiradi.`,
       },
       key: {
         en: `- Sole trader: one owner, unlimited liability, capital account and drawings.
@@ -515,7 +515,7 @@ Tekshirish: aktivlar $12,000 = kapital $8,000 + majburiyatlar $4,000.`,
         uz: `- Besh qism: moliyaviy holat, foyda yoki zarar, kapital o'zgarishi, pul oqimlari, izohlar.
 - Moliyaviy holat bir sana uchun. Foyda yoki zarar butun davr uchun.
 - Kapital o'zgarishi faqat kompaniyalarda. Pul oqimlari ham odatda shunday.
-- Boshqa umumlashgan daromad: amalga oshmagan foyda va zararlar, masalan qayta baholash zaxirasi.
+- Boshqa umumlashgan daromad: amalga oshmagan foyda va zararlar, masalan qayta baholash rezervi.
 - IFRS 18 yakunlari: operatsion foyda, moliyalashtirish va soliqqacha foyda, yillik foyda.`,
       },
       heading: {
@@ -554,7 +554,7 @@ IFRS 18 требует трёх промежуточных итогов: опе�
 
 - Moliyaviy holat to'g'risidagi hisobot (statement of financial position): hisobot davri oxiridagi aktivlar, majburiyatlar va kapital. Aktiv va majburiyatlar joriy va uzoq muddatliga bo'linadi. Yakka tartibdagi tadbirkorda kapital bo'limi o'rniga oddiy kapital hisobi bo'ladi.
 - Foyda yoki zarar va boshqa umumlashgan daromad to'g'risidagi hisobot: davr davomidagi tushum va xarajatlar. Yillik foydaga kiritilgan moddalar amalga oshgan hisoblanadi.
-- Kapitaldagi o'zgarishlar to'g'risidagi hisobot (statement of changes in equity): aksiya kapitali, emissiya daromadi, qayta baholash zaxirasi va taqsimlanmagan foyda harakati. Faqat mas'uliyati cheklangan kompaniyalarga tegishli.
+- Kapitaldagi o'zgarishlar to'g'risidagi hisobot (statement of changes in equity): aksiya kapitali, emissiya daromadi, qayta baholash rezervi va taqsimlanmagan foyda harakati. Faqat mas'uliyati cheklangan kompaniyalarga tegishli.
 - Pul oqimlari to'g'risidagi hisobot (statement of cash flows): davrda to'langan va olingan pul, odatda faqat mas'uliyati cheklangan kompaniyalar uchun.
 - Izohlar (notes): hisob siyosati va foydalanuvchilarga asosli xulosa chiqarishga yordam beradigan boshqa ma'lumotlar.
 
@@ -562,7 +562,7 @@ Xarajatlar funksiyasi (sotilgan tovar tannarxi, tarqatish xarajatlari, ma'muriy 
 
 IFRS 18 uchta oraliq yakunni talab qiladi: operatsion foyda, moliyalashtirish va foyda solig'igacha bo'lgan foyda, yillik foyda.
 
-Boshqa umumlashgan daromad amalga oshmagan foyda va zararlarni o'z ichiga oladi. FA dagi asosiy misol — yer va binolarni qayta baholash zaxirasi. Foyda va boshqa umumlashgan daromad birgalikda jami umumlashgan daromadni beradi. Ikkalasi ham moliyaviy holat hisobotiga va kapitaldagi o'zgarishlar hisobotiga o'tadi.`,
+Boshqa umumlashgan daromad amalga oshmagan foyda va zararlarni o'z ichiga oladi. FA dagi asosiy misol — yer va binolarni qayta baholash rezervi. Foyda va boshqa umumlashgan daromad birgalikda jami umumlashgan daromadni beradi. Ikkalasi ham moliyaviy holat hisobotiga va kapitaldagi o'zgarishlar hisobotiga o'tadi.`,
       },
       example: {
         en: `In its first year Madina's Mart sells goods for $40,000 that cost $26,000, and pays $9,000 of expenses. Gross profit is $14,000 and profit for the year is $5,000. As a sole trader she adds that $5,000 to her capital account. She has no statement of changes in equity, because that statement is only for limited companies.`,
@@ -683,7 +683,7 @@ Tarixiy qiymat: javonlar u to'lagan $3,000 da qoladi, hatto hozir shunaqasi qimm
     { term: { en: 'Substance over form', ru: 'Приоритет содержания над формой', uz: 'Shakldan mazmunning ustunligi' }, definition: { en: 'Recording the economic reality of a transaction, not only its legal form.', ru: 'Отражение экономической реальности операции, а не только её юридической формы.', uz: 'Operatsiyaning faqat yuridik shaklini emas, iqtisodiy haqiqatini qayd etish.' } },
     { term: { en: 'Going concern', ru: 'Непрерывность деятельности', uz: 'Uzluksizlik' }, definition: { en: 'The assumption that the entity will keep operating for the foreseeable future.', ru: 'Допущение, что предприятие будет работать в обозримом будущем.', uz: 'Korxona yaqin kelajakda ishlashda davom etadi degan faraz.' } },
     { term: { en: 'Accrual accounting', ru: 'Метод начисления', uz: 'Hisoblash usuli' }, definition: { en: 'Recording revenue when earned and expenses when incurred, not when cash moves.', ru: 'Отражение выручки, когда она заработана, а расходов, когда они понесены, а не при движении денег.', uz: 'Daromadni topilganda, xarajatni qilinganda qayd etish, pul harakatlanganda emas.' } },
-    { term: { en: 'Other comprehensive income', ru: 'Прочий совокупный доход', uz: 'Boshqa umumlashgan daromad' }, definition: { en: 'Unrealised gains and losses, such as a revaluation surplus.', ru: 'Нереализованные прибыли и убытки, например резерв переоценки.', uz: 'Amalga oshmagan foyda va zararlar, masalan qayta baholash zaxirasi.' } },
+    { term: { en: 'Other comprehensive income', ru: 'Прочий совокупный доход', uz: 'Boshqa umumlashgan daromad' }, definition: { en: 'Unrealised gains and losses, such as a revaluation surplus.', ru: 'Нереализованные прибыли и убытки, например резерв переоценки.', uz: 'Amalga oshmagan foyda va zararlar, masalan qayta baholash rezervi.' } },
   ],
 };
 

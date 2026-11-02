@@ -90,13 +90,13 @@ Chiqib ketish hisobidagi qoldiq foyda yoki zarar. Uni tushum minus chiqib ketish
       exam: {
         en: `- A trade-in is a part exchange, so the allowance is the sale proceeds of the old asset.
 - Keep depreciation policy rules in mind: if there is no depreciation in the year of sale, do not charge any on the old asset in that year.
-- If there is a cost to add to the new asset, only the allowance and the cash count towards its price.`,
+- The new asset's cost is the allowance plus the cash paid, not the old asset's carrying amount.`,
         ru: `- Trade-in — это обмен с доплатой, поэтому зачёт — выручка от продажи старого актива.
 - Помните правила политики амортизации: если в год продажи амортизация не начисляется, не начисляйте её на старый актив в этом году.
-- Стоимость нового актива составляют только зачёт и деньги.`,
+- Стоимость нового актива — это зачёт плюс уплаченные деньги, а не балансовая стоимость старого.`,
         uz: `- Trade-in ayirboshlash, shuning uchun hisobga olingan summa eski aktivning sotuv tushumi.
 - Amortizatsiya siyosatini eslang: sotuv yilida amortizatsiya hisoblanmasa, eski aktivga shu yili hisoblamang.
-- Yangi aktiv narxini faqat hisobga olingan summa va naqd pul tashkil qiladi.`,
+- Yangi aktiv qiymati — hisobga olingan summa plus to'langan pul, eski aktivning balans qiymati emas.`,
       },
       heading: {
         en: 'Disposal by part exchange',
@@ -137,9 +137,9 @@ Chiqib ketish hisobidagi qoldiq yana chiqib ketishdan foyda yoki zarar.`,
 - Прирост нереализованный: он идёт в прочий совокупный доход, затем в резерв переоценки в капитале.
 - Дт Актив, Дт Накопленная амортизация, Кт Резерв переоценки.`,
         uz: `- Qayta baholash modeli (IAS 16): kompaniya aktivlarni dastlabki qiymatda emas, joriy qiymatda yuritishi mumkin.
-- Qayta baholash zaxirasi = qayta baholangan summa - balans qiymati.
-- Foyda amalga oshmagan: u boshqa umumlashgan daromadga, so'ng kapitaldagi qayta baholash zaxirasiga o'tadi.
-- Dt Aktiv, Dt To'plangan amortizatsiya, Kt Qayta baholash zaxirasi.`,
+- Qayta baholash rezervi = qayta baholangan summa - balans qiymati.
+- Foyda amalga oshmagan: u boshqa umumlashgan daromadga, so'ng kapitaldagi qayta baholash rezerviga o'tadi.
+- Dt Aktiv, Dt To'plangan amortizatsiya, Kt Qayta baholash rezervi.`,
       },
       exam: {
         en: `- If one asset is revalued, the whole class it belongs to must be revalued. Other classes may stay at cost.
@@ -177,34 +177,34 @@ The gain for the year is shown in other comprehensive income. It is added to ear
 Прирост за год показывается в прочем совокупном доходе. Он добавляется к прежним резервам и даёт накопленный резерв переоценки в капитале.`,
         uz: `IAS 16 asosiy vositalarni qayta baholash modelida o'lchashga ruxsat beradi. Yer va binolar vaqt o'tishi bilan ko'pincha qimmatlashadi va kompaniya buni moliyaviy holat hisobotida ko'rsatishni tanlashi mumkin.
 
-O'sish boshqa umumlashgan daromadda tan olinadi va kapitalda qayta baholash zaxirasi nomi ostida to'planadi. U foyda yoki zararda yozilmaydi, chunki amalga oshmagan, xuddi narxi oshgan, lekin sotilmagan uy kabi.
+O'sish boshqa umumlashgan daromadda tan olinadi va kapitalda qayta baholash rezervi nomi ostida to'planadi. U foyda yoki zararda yozilmaydi, chunki amalga oshmagan, xuddi narxi oshgan, lekin sotilmagan uy kabi.
 
-Amortizatsiyalanmaydigan aktiv uchun: Dt Uzoq muddatli aktiv, Kt Qayta baholash zaxirasi. Amortizatsiyalanadigan aktivda to'plangan amortizatsiya nolga tushiriladi: Dt To'plangan amortizatsiya, Dt Uzoq muddatli aktiv qiymati (balanslovchi summa), Kt Qayta baholash zaxirasi. Zaxira qayta baholangan summa minus balans qiymatiga teng.
+Amortizatsiyalanmaydigan aktiv uchun: Dt Uzoq muddatli aktiv, Kt Qayta baholash rezervi. Amortizatsiyalanadigan aktivda to'plangan amortizatsiya nolga tushiriladi: Dt To'plangan amortizatsiya, Dt Uzoq muddatli aktiv qiymati (balanslovchi summa), Kt Qayta baholash rezervi. Rezerv qayta baholangan summa minus balans qiymatiga teng.
 
-Yil uchun foyda boshqa umumlashgan daromadda ko'rsatiladi. U oldingi zaxiralarga qo'shilib, kapitaldagi jamlangan qayta baholash zaxirasini beradi.`,
+Yil uchun foyda boshqa umumlashgan daromadda ko'rsatiladi. U oldingi rezervlarga qo'shilib, kapitaldagi jamlangan qayta baholash rezervini beradi.`,
       },
       example: {
         en: `Once Madina's Mart is a company it owns its shop building, bought for $100,000 and depreciated at 2% a year. After ten years the accumulated depreciation is $20,000, so the carrying amount is $80,000. A valuer says the building is now worth $150,000. The surplus is $150,000 - $80,000 = $70,000. Dr Building $50,000, Dr Accumulated depreciation $20,000, Cr Revaluation surplus $70,000. The building now stands at $150,000.`,
         ru: `Когда Madina's Mart становится компанией, ей принадлежит здание магазина, купленное за $100,000 с амортизацией 2% в год. Через десять лет накопленная амортизация $20,000, значит, балансовая стоимость $80,000. Оценщик говорит, что здание теперь стоит $150,000. Резерв: $150,000 - $80,000 = $70,000. Дт Здание $50,000, Дт Накопленная амортизация $20,000, Кт Резерв переоценки $70,000. Теперь здание числится по $150,000.`,
-        uz: `Madina's Mart kompaniyaga aylangach, $100,000 ga sotib olingan va yiliga 2% amortizatsiyalanadigan do'kon binosiga egalik qiladi. O'n yildan keyin to'plangan amortizatsiya $20,000, demak balans qiymati $80,000. Baholovchi bino endi $150,000 turishini aytadi. Zaxira: $150,000 - $80,000 = $70,000. Dt Bino $50,000, Dt To'plangan amortizatsiya $20,000, Kt Qayta baholash zaxirasi $70,000. Bino endi $150,000 da turibdi.`,
+        uz: `Madina's Mart kompaniyaga aylangach, $100,000 ga sotib olingan va yiliga 2% amortizatsiyalanadigan do'kon binosiga egalik qiladi. O'n yildan keyin to'plangan amortizatsiya $20,000, demak balans qiymati $80,000. Baholovchi bino endi $150,000 turishini aytadi. Rezerv: $150,000 - $80,000 = $70,000. Dt Bino $50,000, Dt To'plangan amortizatsiya $20,000, Kt Qayta baholash rezervi $70,000. Bino endi $150,000 da turibdi.`,
       },
     },
     {
       key: {
-        en: `- After revaluation, depreciate the revalued amount over the remaining useful life.
+        en: `- After revaluation, depreciate (revalued amount - residual value) over the remaining useful life.
 - This charge is higher than before and goes to profit or loss as normal.
 - Excess depreciation = new charge - old charge (based on original cost).
 - Optional policy: each year Dr Revaluation surplus, Cr Retained earnings for the excess.
 - If chosen, the transfer must be made every year.`,
-        ru: `- После переоценки амортизируйте переоценённую сумму на оставшийся срок использования.
+        ru: `- После переоценки амортизируйте (переоценённая сумма - ликвидационная стоимость) на оставшийся срок.
 - Это начисление выше прежнего и идёт в прибыль или убыток как обычно.
 - Избыточная амортизация = новое начисление - прежнее (от первоначальной стоимости).
 - Необязательная политика: ежегодно Дт Резерв переоценки, Кт Нераспределённая прибыль на эту разницу.
 - Если выбрана, перенос нужно делать каждый год.`,
-        uz: `- Qayta baholashdan keyin qayta baholangan summani qolgan foydali muddatga amortizatsiyalang.
+        uz: `- Qayta baholashdan keyin (qayta baholangan summa - tugatish qiymati) ni qolgan muddatga amortizatsiyalang.
 - Bu summa avvalgisidan yuqori va odatdagidek foyda yoki zararga o'tadi.
 - Ortiqcha amortizatsiya = yangi summa - eski summa (dastlabki qiymatdan).
-- Ixtiyoriy siyosat: har yili ortiqcha uchun Dt Qayta baholash zaxirasi, Kt Taqsimlanmagan foyda.
+- Ixtiyoriy siyosat: har yili ortiqcha uchun Dt Qayta baholash rezervi, Kt Taqsimlanmagan foyda.
 - Tanlansa, o'tkazma har yili qilinishi kerak.`,
       },
       exam: {
@@ -227,26 +227,26 @@ Yil uchun foyda boshqa umumlashgan daromadda ko'rsatiladi. U oldingi zaxiralarga
         uz: 'Qayta baholangan aktivni amortizatsiyalash',
       },
       body: {
-        en: `Once an asset is revalued, depreciation is based on the revalued amount and the remaining useful life at that date. The charge is higher than before and is charged to profit or loss in the normal way.
+        en: `Once an asset is revalued, depreciation is based on the revalued amount, less any residual value, and the remaining useful life at that date. The charge is higher than before and is charged to profit or loss in the normal way.
 
 IAS 16 says that if one item is revalued, the whole class of property, plant and equipment it belongs to must be revalued. A class may be revalued on a rolling basis if valuations are kept up to date and done within a short period.
 
 The excess of the new depreciation charge over the old one (based on original cost) may be transferred each year from revaluation surplus to retained earnings within equity: Dr Revaluation surplus, Cr Retained earnings. This is an optional policy, but once an entity adopts it, it must make the transfer every year, not in some years and not in others.`,
-        ru: `После переоценки актива амортизация считается от переоценённой суммы и оставшегося срока использования на эту дату. Начисление выше прежнего и относится на прибыль или убыток обычным образом.
+        ru: `После переоценки актива амортизация считается от переоценённой суммы за вычетом ликвидационной стоимости и оставшегося срока использования на эту дату. Начисление выше прежнего и относится на прибыль или убыток обычным образом.
 
 IAS 16: если переоценивается один объект, переоценивать нужно весь класс основных средств, к которому он относится. Класс можно переоценивать поэтапно, если оценки актуальны и проводятся в короткий срок.
 
 Превышение нового начисления амортизации над прежним (рассчитанным от первоначальной стоимости) можно ежегодно переносить из резерва переоценки в нераспределённую прибыль внутри капитала: Дт Резерв переоценки, Кт Нераспределённая прибыль. Это необязательная политика, но, приняв её, организация должна делать перенос каждый год, а не в одни годы да, в другие нет.`,
-        uz: `Aktiv qayta baholangach, amortizatsiya qayta baholangan summaga va shu sanadagi qolgan foydali muddatga asoslanadi. Summa avvalgisidan yuqori va odatdagidek foyda yoki zararga o'tadi.
+        uz: `Aktiv qayta baholangach, amortizatsiya qayta baholangan summa minus tugatish qiymatiga va shu sanadagi qolgan foydali muddatga asoslanadi. Summa avvalgisidan yuqori va odatdagidek foyda yoki zararga o'tadi.
 
 IAS 16: agar bitta obyekt qayta baholansa, u tegishli asosiy vositalar toifasi butunlay qayta baholanishi kerak. Baholashlar dolzarb bo'lsa va qisqa muddatda o'tkazilsa, toifa navbatma-navbat baholanishi mumkin.
 
-Yangi amortizatsiya summasining eskisidan (dastlabki qiymatdan) ortig'i har yili qayta baholash zaxirasidan kapital ichidagi taqsimlanmagan foydaga o'tkazilishi mumkin: Dt Qayta baholash zaxirasi, Kt Taqsimlanmagan foyda. Bu ixtiyoriy siyosat, ammo qabul qilingach, o'tkazma har yili qilinishi kerak, ba'zi yillari qilinib, ba'zilarida qilinmasligi mumkin emas.`,
+Yangi amortizatsiya summasining eskisidan (dastlabki qiymatdan) ortig'i har yili qayta baholash rezervidan kapital ichidagi taqsimlanmagan foydaga o'tkazilishi mumkin: Dt Qayta baholash rezervi, Kt Taqsimlanmagan foyda. Bu ixtiyoriy siyosat, ammo qabul qilingach, o'tkazma har yili qilinishi kerak, ba'zi yillari qilinib, ba'zilarida qilinmasligi mumkin emas.`,
       },
       example: {
         en: `The revalued building is $150,000 with 40 years of life remaining. New depreciation is $150,000 / 40 = $3,750 a year, against $2,000 before. The excess is $1,750. Under Madina's Mart's policy it makes the transfer every year: Dr Revaluation surplus $1,750, Cr Retained earnings $1,750. After the first year the surplus is $70,000 - $1,750 = $68,250.`,
         ru: `Переоценённое здание стоит $150,000, оставшийся срок 40 лет. Новая амортизация: $150,000 / 40 = $3,750 в год против $2,000 раньше. Превышение $1,750. По политике Madina's Mart она делает перенос каждый год: Дт Резерв переоценки $1,750, Кт Нераспределённая прибыль $1,750. После первого года резерв: $70,000 - $1,750 = $68,250.`,
-        uz: `Qayta baholangan bino $150,000, 40 yil qolgan. Yangi amortizatsiya: $150,000 / 40 = yiliga $3,750, avval $2,000 edi. Ortiqcha $1,750. Madina's Mart siyosatiga ko'ra u o'tkazmani har yili qiladi: Dt Qayta baholash zaxirasi $1,750, Kt Taqsimlanmagan foyda $1,750. Birinchi yildan keyin zaxira: $70,000 - $1,750 = $68,250.`,
+        uz: `Qayta baholangan bino $150,000, 40 yil qolgan. Yangi amortizatsiya: $150,000 / 40 = yiliga $3,750, avval $2,000 edi. Ortiqcha $1,750. Madina's Mart siyosatiga ko'ra u o'tkazmani har yili qiladi: Dt Qayta baholash rezervi $1,750, Kt Taqsimlanmagan foyda $1,750. Birinchi yildan keyin rezerv: $70,000 - $1,750 = $68,250.`,
       },
     },
     {
@@ -259,8 +259,8 @@ Yangi amortizatsiya summasining eskisidan (dastlabki qiymatdan) ortig'i har yili
 - При выбытии перенесите резерв: Дт Резерв переоценки, Кт Нераспределённая прибыль.
 - Теперь прирост реализован, поэтому его место — в нераспределённой прибыли.
 - Показывайте перенос в отчёте об изменениях капитала.`,
-        uz: `- Chiqib ketishdan foyda yoki zarar = tushum - balans qiymati. Qayta baholash zaxirasi bu hisobga kirmaydi.
-- Chiqib ketganda zaxirani o'tkazing: Dt Qayta baholash zaxirasi, Kt Taqsimlanmagan foyda.
+        uz: `- Chiqib ketishdan foyda yoki zarar = tushum - balans qiymati. Qayta baholash rezervi bu hisobga kirmaydi.
+- Chiqib ketganda rezervni o'tkazing: Dt Qayta baholash rezervi, Kt Taqsimlanmagan foyda.
 - Endi foyda amalga oshgan, shuning uchun taqsimlanmagan foydaga tegishli.
 - O'tkazmani kapitaldagi o'zgarishlar hisobotida ko'rsating.`,
       },
@@ -271,9 +271,9 @@ Yangi amortizatsiya summasining eskisidan (dastlabki qiymatdan) ortig'i har yili
         ru: `- Резерв переоценки при выбытии никогда не проходит через прибыль или убыток и не прибавляется к прибыли от выбытия и не вычитается из неё.
 - Используйте балансовую стоимость на дату выбытия, которая уже учитывает переоценку.
 - Переносится остаток резерва по этому активу, после уже сделанных ежегодных переносов.`,
-        uz: `- Qayta baholash zaxirasi chiqib ketishda hech qachon foyda yoki zarar orqali o'tmaydi va chiqib ketishdan foydaga qo'shilmaydi yoki undan ayirilmaydi.
+        uz: `- Qayta baholash rezervi chiqib ketishda hech qachon foyda yoki zarar orqali o'tmaydi va chiqib ketishdan foydaga qo'shilmaydi yoki undan ayirilmaydi.
 - Chiqib ketish sanasidagi balans qiymatidan foydalaning, u qayta baholashni allaqachon o'z ichiga oladi.
-- O'tkaziladigan summa — shu aktiv bo'yicha qolgan zaxira, allaqachon qilingan yillik o'tkazmalardan keyin.`,
+- O'tkaziladigan summa — shu aktiv bo'yicha qolgan rezerv, allaqachon qilingan yillik o'tkazmalardan keyin.`,
       },
       heading: {
         en: 'Disposing of a revalued asset',
@@ -283,18 +283,18 @@ Yangi amortizatsiya summasining eskisidan (dastlabki qiymatdan) ortig'i har yili
       body: {
         en: `IAS 16 says the gain or loss on derecognition is the difference between the net disposal proceeds and the carrying amount. The carrying amount here is the revalued figure, so the revaluation surplus does not form part of the profit or loss calculation.
 
-IAS 16 also allows the revaluation surplus for the asset to be transferred directly to retained earnings when it is derecognised. If the entity no longer owns the asset, it is inappropriate to keep a surplus for it, and the gain has now been realised. The entry is within equity: Dr Revaluation surplus, Cr Retained earnings. Retained earnings holds only realised gains and losses, and the movement is shown in the statement of changes in equity.`,
+Once the asset has gone, the surplus held for it has nothing left to relate to, and the gain is now real. IAS 16 therefore lets it move straight to retained earnings, the part of equity for realised gains and losses. This stays inside equity: Dr Revaluation surplus, Cr Retained earnings. You will see it in the statement of changes in equity, not in profit or loss.`,
         ru: `IAS 16: прибыль или убыток при списании — это разница между чистой выручкой от выбытия и балансовой стоимостью. Балансовая стоимость здесь — переоценённая, поэтому резерв переоценки в расчёт прибыли или убытка не входит.
 
-IAS 16 также позволяет перенести резерв переоценки по активу напрямую в нераспределённую прибыль при списании. Если организация больше не владеет активом, держать для него резерв неуместно, а прирост теперь реализован. Проводка внутри капитала: Дт Резерв переоценки, Кт Нераспределённая прибыль. В нераспределённой прибыли только реализованные прибыли и убытки, а движение показывается в отчёте об изменениях капитала.`,
-        uz: `IAS 16: hisobdan chiqarishdagi foyda yoki zarar sof chiqib ketish tushumi va balans qiymati o'rtasidagi farq. Bu yerda balans qiymati qayta baholangan summa, shuning uchun qayta baholash zaxirasi foyda yoki zarar hisobiga kirmaydi.
+Когда актива больше нет, резерву по нему не к чему относиться, а прирост стал реальным. Поэтому IAS 16 разрешает перенести его прямо в нераспределённую прибыль, часть капитала для реализованных прибылей и убытков. Это остаётся внутри капитала: Дт Резерв переоценки, Кт Нераспределённая прибыль. Вы увидите это в отчёте об изменениях капитала, а не в прибыли или убытке.`,
+        uz: `IAS 16: hisobdan chiqarishdagi foyda yoki zarar sof chiqib ketish tushumi va balans qiymati o'rtasidagi farq. Bu yerda balans qiymati qayta baholangan summa, shuning uchun qayta baholash rezervi foyda yoki zarar hisobiga kirmaydi.
 
-IAS 16 yana aktiv hisobdan chiqarilganda qayta baholash zaxirasini to'g'ridan-to'g'ri taqsimlanmagan foydaga o'tkazishga ruxsat beradi. Korxona aktivga endi egalik qilmasa, u uchun zaxirani saqlash o'rinsiz, foyda esa endi amalga oshgan. Yozuv kapital ichida: Dt Qayta baholash zaxirasi, Kt Taqsimlanmagan foyda. Taqsimlanmagan foydada faqat amalga oshgan foyda va zararlar bor, harakat kapitaldagi o'zgarishlar hisobotida ko'rsatiladi.`,
+Aktiv ketgach, u bo'yicha rezerv hech narsaga tegishli bo'lmay qoladi, foyda esa haqiqiy bo'ladi. Shuning uchun IAS 16 uni to'g'ridan-to'g'ri taqsimlanmagan foydaga, ya'ni kapitalning amalga oshgan foyda va zararlar uchun qismiga o'tkazishga ruxsat beradi. Bu kapital ichida qoladi: Dt Qayta baholash rezervi, Kt Taqsimlanmagan foyda. Buni foyda yoki zararda emas, kapitaldagi o'zgarishlar hisobotida ko'rasiz.`,
       },
       example: {
         en: `A year later Madina's Mart sells the building for $160,000. After the first year its carrying amount is $150,000 - $3,750 = $146,250, and the surplus is $68,250. Profit on disposal is $160,000 - $146,250 = $13,750, which goes to profit or loss. Separately, Dr Revaluation surplus $68,250, Cr Retained earnings $68,250 within equity.`,
         ru: `Через год Madina's Mart продаёт здание за $160,000. После первого года его балансовая стоимость $150,000 - $3,750 = $146,250, резерв $68,250. Прибыль от выбытия: $160,000 - $146,250 = $13,750, она идёт в прибыль или убыток. Отдельно внутри капитала: Дт Резерв переоценки $68,250, Кт Нераспределённая прибыль $68,250.`,
-        uz: `Bir yildan keyin Madina's Mart binoni $160,000 ga sotadi. Birinchi yildan keyin uning balans qiymati $150,000 - $3,750 = $146,250, zaxira $68,250. Chiqib ketishdan foyda: $160,000 - $146,250 = $13,750, u foyda yoki zararga o'tadi. Alohida, kapital ichida: Dt Qayta baholash zaxirasi $68,250, Kt Taqsimlanmagan foyda $68,250.`,
+        uz: `Bir yildan keyin Madina's Mart binoni $160,000 ga sotadi. Birinchi yildan keyin uning balans qiymati $150,000 - $3,750 = $146,250, rezerv $68,250. Chiqib ketishdan foyda: $160,000 - $146,250 = $13,750, u foyda yoki zararga o'tadi. Alohida, kapital ichida: Dt Qayta baholash rezervi $68,250, Kt Taqsimlanmagan foyda $68,250.`,
       },
     },
     {
@@ -312,7 +312,7 @@ IAS 16 yana aktiv hisobdan chiqarilganda qayta baholash zaxirasini to'g'ridan-to
         uz: `- IAS 16 izohlari o'lchash asosi, amortizatsiya usullari va foydali muddatlarni ko'rsatadi.
 - Yil boshi va oxiridagi umumiy qiymat va to'plangan amortizatsiyani ko'rsating.
 - Balans qiymati solishtirishini ko'rsating: kirimlar, chiqishlar, qayta baholash, amortizatsiya.
-- Qayta baholangan bo'lsa: sana, kim baholagan, usullar, dastlabki qiymat asosidagi summa va zaxira.
+- Qayta baholangan bo'lsa: sana, kim baholagan, usullar, dastlabki qiymat asosidagi summa va rezerv.
 - Ko'proq aktiv sotib olish majburiyatlarini ko'rsating.`,
       },
       exam: {
@@ -359,7 +359,7 @@ The reconciliation is often presented as a grid with a column for each class of 
 - har bir toifa bo'yicha davr boshi va oxiridagi umumiy qiymat va to'plangan amortizatsiya;
 - davr boshi va oxiridagi balans qiymati solishtirishi: kirimlar, sotishga mo'ljallangan aktivlar, chiqishlar, qayta baholash va amortizatsiya;
 - asosiy vositalarni sotib olish majburiyatlari;
-- qayta baholangan aktivlar uchun: kuchga kirgan sana, mustaqil baholovchi jalb qilinganmi, usullar va faraz, aktivlar qiymatda yuritilganda balans qiymati hamda qayta baholash zaxirasi va uning harakati.
+- qayta baholangan aktivlar uchun: kuchga kirgan sana, mustaqil baholovchi jalb qilinganmi, usullar va faraz, aktivlar qiymatda yuritilganda balans qiymati hamda qayta baholash rezervi va uning harakati.
 
 Solishtirish ko'pincha har bir aktiv toifasi, masalan yer va binolar, uskuna va transport uchun ustun bilan jadval ko'rinishida beriladi.`,
       },
@@ -374,10 +374,10 @@ Solishtirish ko'pincha har bir aktiv toifasi, masalan yer va binolar, uskuna va 
     { term: { en: 'Derecognition', ru: 'Списание с учёта', uz: 'Hisobdan chiqarish' }, definition: { en: 'Removing an asset from the accounts when it is disposed of.', ru: 'Удаление актива из учёта при его выбытии.', uz: 'Aktiv chiqib ketganda uni hisobdan olib tashlash.' } },
     { term: { en: 'Profit or loss on disposal', ru: 'Прибыль или убыток от выбытия', uz: 'Chiqib ketishdan foyda yoki zarar' }, definition: { en: 'Proceeds less the carrying amount at the disposal date.', ru: 'Выручка минус балансовая стоимость на дату выбытия.', uz: 'Tushum minus chiqib ketish sanasidagi balans qiymati.' } },
     { term: { en: 'Part exchange', ru: 'Обмен с доплатой', uz: 'Ayirboshlash' }, definition: { en: 'Giving an old asset in part payment for a new one.', ru: 'Передача старого актива в счёт оплаты нового.', uz: 'Eski aktivni yangisi uchun to\'lovning bir qismi sifatida berish.' } },
-    { term: { en: 'Revaluation surplus', ru: 'Резерв переоценки', uz: 'Qayta baholash zaxirasi' }, definition: { en: 'Unrealised gain from revaluing an asset, held in equity.', ru: 'Нереализованный прирост от переоценки актива, хранится в капитале.', uz: 'Aktivni qayta baholashdan amalga oshmagan foyda, kapitalda saqlanadi.' } },
+    { term: { en: 'Revaluation surplus', ru: 'Резерв переоценки', uz: 'Qayta baholash rezervi' }, definition: { en: 'Unrealised gain from revaluing an asset, held in equity.', ru: 'Нереализованный прирост от переоценки актива, хранится в капитале.', uz: 'Aktivni qayta baholashdan amalga oshmagan foyda, kapitalda saqlanadi.' } },
     { term: { en: 'Excess depreciation', ru: 'Избыточная амортизация', uz: 'Ortiqcha amortizatsiya' }, definition: { en: 'The extra depreciation caused by a revaluation, compared with depreciation on original cost.', ru: 'Дополнительная амортизация из-за переоценки по сравнению с амортизацией от первоначальной стоимости.', uz: 'Qayta baholash tufayli dastlabki qiymatdagi amortizatsiyadan ko\'p bo\'lgan qo\'shimcha amortizatsiya.' } },
-    { term: { en: 'Retained earnings', ru: 'Нераспределённая прибыль', uz: 'Taqsimlanmagan foyda' }, definition: { en: 'The sum of all profits and losses earned to date, held in equity.', ru: 'Сумма всех полученных на сегодня прибылей и убытков, хранится в капитале.', uz: 'Hozirgacha olingan barcha foyda va zararlar yig\'indisi, kapitalda saqlanadi.' } },
-    { term: { en: 'Other comprehensive income', ru: 'Прочий совокупный доход', uz: 'Boshqa umumlashgan daromad' }, definition: { en: 'Unrealised gains and losses, such as a revaluation surplus.', ru: 'Нереализованные прибыли и убытки, например резерв переоценки.', uz: 'Amalga oshmagan foyda va zararlar, masalan qayta baholash zaxirasi.' } },
+    { term: { en: 'Retained earnings', ru: 'Нераспределённая прибыль', uz: 'Taqsimlanmagan foyda' }, definition: { en: 'The part of equity that builds up the profits and losses a business has made and kept.', ru: 'Часть капитала, в которой копятся прибыли и убытки, заработанные и оставленные в бизнесе.', uz: 'Biznes topgan va o\'zida qoldirgan foyda va zararlar yig\'iladigan kapital qismi.' } },
+    { term: { en: 'Other comprehensive income', ru: 'Прочий совокупный доход', uz: 'Boshqa umumlashgan daromad' }, definition: { en: 'Gains not recognised in profit or loss, such as the revaluation gain for the year.', ru: 'Доходы, не отражаемые в прибыли или убытке, например прирост от переоценки за год.', uz: 'Foyda yoki zararda tan olinmaydigan daromadlar, masalan yil uchun qayta baholash foydasi.' } },
   ],
 };
 

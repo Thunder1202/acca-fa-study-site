@@ -63,6 +63,7 @@ const LABELS = {
   footerNote: { en: 'Independent study aid. Not affiliated with ACCA or Naruto.', ru: 'Независимое учебное пособие. Не связано с ACCA или Naruto.', uz: 'Mustaqil o\'quv qo\'llanma. ACCA yoki Naruto bilan bog\'liq emas.' },
   correctAnswer: { en: 'Correct answer', ru: 'Правильный ответ', uz: 'To\'g\'ri javob' },
   examNotes: { en: 'Also tested in the exam', ru: 'Также бывает на экзамене', uz: 'Imtihonda bu ham so\'raladi' },
+  numberOnly: { en: 'Enter a number, such as 1,250 or 4.58', ru: 'Введите число, например 1,250 или 4.58', uz: 'Raqam kiriting, masalan 1,250 yoki 4.58' },
 };
 
 function getLang(storage) {

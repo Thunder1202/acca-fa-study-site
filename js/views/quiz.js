@@ -110,14 +110,26 @@
       })))));
   }
 
-  function numberEntry(q, given, locked, onPick) {
+  function numberEntry(q, given, locked, onPick, onEnter, lang) {
     const status = !locked ? '' : isCorrect(state.session, q.id) ? ' is-right' : ' is-wrong';
-    return el('label', { class: `number-entry${status}` },
-      el('span', { 'aria-hidden': 'true' }, '$'),
-      el('input', {
-        type: 'text', inputmode: 'decimal', autocomplete: 'off', value: given ?? '', disabled: locked, 'aria-label': q.text,
-        oninput: (event) => onPick(parseAmount(event.target.value)),
-      }));
+    const warning = el('p', { class: 'hint entry-warning', role: 'status', hidden: true }, label('numberOnly', lang));
+    return el('div', {},
+      el('label', { class: `number-entry${status}` },
+        el('span', { 'aria-hidden': 'true' }, '$'),
+        el('input', {
+          type: 'text', inputmode: 'decimal', autocomplete: 'off', value: given ?? '', disabled: locked, 'aria-label': q.text,
+          oninput: (event) => {
+            const value = parseAmount(event.target.value);
+            warning.hidden = value !== undefined || event.target.value.trim() === '';
+            onPick(value);
+          },
+          onkeydown: (event) => {
+            if (event.key !== 'Enter' || !onEnter) return;
+            event.preventDefault();
+            onEnter();
+          },
+        })),
+      warning);
   }
 
   function dataTable(table) {
@@ -128,7 +140,7 @@
 
   function feedback(q, lang) {
     const right = isCorrect(state.session, q.id);
-    return el('div', { class: `feedback ${right ? 'good' : 'bad'}`, role: 'status' },
+    return el('div', { class: `feedback ${right ? 'good' : 'bad'}`, role: 'status', tabindex: '-1' },
       el('p', { class: 'feedback-title' }, label(right ? 'correct' : 'incorrect', lang)),
       q.type === 'number' && !right && el('p', { class: 'feedback-answer' }, `${label('correctAnswer', lang)}: ${q.answerText}`),
       richText(t(q.explanation, lang)),
@@ -137,13 +149,13 @@
         LANGS.filter((l) => l !== lang).map((l) => el('div', { class: 'other-lang', lang: l }, richText(t(q.explanation, l))))));
   }
 
-  function answerArea(q, given, locked, onPick) {
+  function answerArea(q, given, locked, onPick, onEnter, lang) {
     if (q.type === 'matrix') return matrix(q, given, locked, onPick);
-    if (q.type === 'number') return numberEntry(q, given, locked, onPick);
+    if (q.type === 'number') return numberEntry(q, given, locked, onPick, onEnter, lang);
     return choiceList(q, given, locked, onPick);
   }
 
-  function questionCard(q, number, total, lang, locked, onPick) {
+  function questionCard(q, number, total, lang, locked, onPick, onEnter) {
     const given = state.session.answers.get(q.id);
     return el('section', { class: 'question' },
       el('p', { class: 'question-meta' },
@@ -152,7 +164,7 @@
       el('h2', { lang: 'en' }, q.text),
       q.table && dataTable(q.table),
       q.type === 'multi' && el('p', { class: 'hint' }, label('selectTwo', lang)),
-      el('div', { lang: 'en' }, answerArea(q, given, locked, onPick)),
+      el('div', { lang: 'en' }, answerArea(q, given, locked, onPick, onEnter, lang)),
       locked && feedback(q, lang));
   }
 
@@ -193,7 +205,7 @@
     const last = state.index === questions.length - 1;
     const check = el('button', {
       type: 'button', class: 'button primary', disabled: !isComplete(q, state.session.answers.get(q.id)),
-      onclick: () => { state.checked = true; redraw(); },
+      onclick: () => { state.checked = true; state.showFeedback = true; redraw(); },
     }, label('checkAnswer', lang));
     const proceed = el('button', {
       type: 'button', class: 'button primary',
@@ -216,7 +228,7 @@
     return el('div', {},
       el('div', { class: 'progress', role: 'progressbar', 'aria-valuemin': '0', 'aria-valuemax': String(questions.length), 'aria-valuenow': String(state.index + 1) },
         el('span', { style: `width:${((state.index + 1) / questions.length) * 100}%;--turn:${state.index * 45}deg` })),
-      questionCard(q, state.index + 1, questions.length, lang, state.checked, onPick),
+      questionCard(q, state.index + 1, questions.length, lang, state.checked, onPick, () => check.click()),
       el('div', { class: 'actions' }, state.checked ? proceed : check));
   }
 
@@ -254,7 +266,11 @@
         el('h1', {}, config.title),
         modeSwitch(config, redraw, lang)),
       state.mode === 'all' ? allAtOnce(config, redraw, lang) : oneAtATime(config, redraw, lang)));
-    if (state.mode === 'one') window.scrollTo(0, 0);
+    if (state.mode !== 'one') return;
+    const shown = state.showFeedback && container.querySelector('.feedback');
+    state.showFeedback = false;
+    if (shown) shown.focus();
+    else window.scrollTo(0, 0);
   }
 
   function resetQuiz() {

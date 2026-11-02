@@ -106,6 +106,20 @@ test('parseAmount accepts how people type money', () => {
   assert.equal(parseAmount('85'), 85);
 });
 
+test('parseAmount reads a comma before one or two final digits as a decimal point', () => {
+  assert.equal(parseAmount('4,58'), 4.58);
+  assert.equal(parseAmount('176,40'), 176.4);
+  assert.equal(parseAmount('176,4'), 176.4);
+  assert.equal(parseAmount('1 250,50'), 1250.5);
+  assert.equal(parseAmount('$1 250,50'), 1250.5);
+});
+
+test('parseAmount keeps commas as thousands separators otherwise', () => {
+  assert.equal(parseAmount('1,250'), 1250);
+  assert.equal(parseAmount('1,250,000'), 1250000);
+  assert.equal(parseAmount('1,250,50'), 125050);
+});
+
 test('parseAmount treats blank or non-numeric text as no answer', () => {
   assert.equal(parseAmount(''), undefined);
   assert.equal(parseAmount('abc'), undefined);

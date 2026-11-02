@@ -132,19 +132,19 @@ Shundan so'ng tannarx hisobida xaridlar, boshlang'ich va yakuniy zaxira bo'ladi,
       key: {
         en: `- IAS 2: inventory is valued at the lower of cost and net realisable value (NRV).
 - Cost: purchase cost plus conversion cost, to bring goods to their location and condition.
-- Include: materials, import duty, freight in, direct labour, production overheads.
+- Include: materials, import duty, freight in, direct labour, fixed and variable production overheads.
 - Exclude: selling costs, general storage, abnormal waste, administration.
 - NRV: selling price less further costs needed to sell.
 - Compare item by item, never on the total.`,
         ru: `- IAS 2: запасы оцениваются по меньшей из себестоимости и чистой стоимости реализации (ЧСР).
 - Себестоимость: закупка и переработка, чтобы довести товар до места и состояния.
-- Включаются: материалы, пошлина, доставка к вам, прямой труд, производственные накладные расходы.
+- Включаются: материалы, пошлина, доставка, прямой труд, постоянные и переменные производственные накладные.
 - Не включаются: продажа, обычное хранение, сверхнормативные потери, администрация.
 - ЧСР: цена продажи минус дальнейшие затраты на продажу.
 - Сравнивать по каждой позиции, а не по итогу.`,
         uz: `- IAS 2: zaxira tannarx va sof sotish qiymatining (SSQ) kichigida baholanadi.
 - Tannarx: tovarni joyi va holatiga keltirish uchun xarid va qayta ishlash xarajati.
-- Kiradi: materiallar, boj, kelish tashuvi, to'g'ridan-to'g'ri mehnat, ishlab chiqarish ustamalari.
+- Kiradi: materiallar, boj, tashuv, to'g'ridan-to'g'ri mehnat, doimiy va o'zgaruvchan ishlab chiqarish ustamalari.
 - Kirmaydi: sotish, oddiy saqlash, g'ayritabiiy yo'qotish, ma'muriy xarajat.
 - SSQ: sotish narxi minus sotish uchun qo'shimcha xarajatlar.
 - Har bir tovar bo'yicha solishtiring, jami bo'yicha emas.`,
