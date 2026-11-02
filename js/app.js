@@ -7,9 +7,12 @@
   const { renderChapter } = ACCA.chapterView;
   const { renderQuiz, resetQuiz } = ACCA.quizView;
   const { renderPractice, renderWeakAreas } = ACCA.practiceView;
+  const { renderExamStart, renderExamPaper } = ACCA.examView;
+  const { caseQuestions } = ACCA.exam;
+  const { getTheme, setTheme } = ACCA.theme;
   const { el } = ACCA.dom;
   const { loadProgress } = ACCA.progress;
-  const { course, chapters, questions } = ACCA;
+  const { course, chapters, questions, sectionB } = ACCA;
 
   const app = document.getElementById('app');
   const switcher = document.getElementById('lang-switcher');
@@ -29,6 +32,7 @@
 
   const storage = openStorage();
   let lang = getLang(storage);
+  let theme = getTheme(storage);
   const allChapters = course.flatMap((group) => group.chapters);
   const openChapters = allChapters.filter((chapter) => chapters[chapter.id]);
   const topics = openChapters.map((chapter) => ({ ...chapter, questionCount: questions[chapter.id].length }));
@@ -51,7 +55,16 @@
     }, lang);
   }
 
+  function showCase(item, lang) {
+    return renderQuiz(app, {
+      key: item.id, questions: caseQuestions(item), storage,
+      title: `${label('casesTitle', lang)}: ${item.title}`, backHref: '#/practice', backLabel: 'backToPractice',
+    }, lang);
+  }
+
   function showQuiz(topicId, lang) {
+    const item = sectionB.find((c) => c.id === topicId);
+    if (item) return showCase(item, lang);
     if (topicId === 'review') {
       const progress = loadProgress(storage);
       const studied = topics.filter((topic) => progress[topic.id]);
@@ -69,11 +82,19 @@
     }, lang);
   }
 
+  function applyTheme() {
+    document.documentElement.dataset.theme = theme;
+    for (const button of document.querySelectorAll('[data-theme-choice]')) {
+      button.setAttribute('aria-pressed', String(button.dataset.themeChoice === theme));
+    }
+  }
+
   function renderChrome(lang) {
+    applyTheme();
     document.documentElement.lang = lang;
     switcher.value = lang;
     for (const node of document.querySelectorAll('[data-label]')) node.textContent = label(node.dataset.label, lang);
-    const current = window.location.hash || '#/';
+    const current = (window.location.hash || '#/').replace(/^(#\/exam).*/, '$1');
     for (const link of document.querySelectorAll('.site-nav a')) {
       if (link.getAttribute('href') === current) link.setAttribute('aria-current', 'page');
       else link.removeAttribute('aria-current');
@@ -85,9 +106,18 @@
     renderChrome(lang);
     if (view === 'chapter') showChapter(params.id, lang);
     else if (view === 'quiz') showQuiz(params.topicId, lang);
-    else if (view === 'practice') renderPractice(app, topics, storage, lang);
+    else if (view === 'practice') renderPractice(app, topics, storage, lang, sectionB);
+    else if (view === 'exam') (params.step === 'paper' ? renderExamPaper : renderExamStart)(app, { storage, topics }, lang);
     else if (view === 'weak-areas') renderWeakAreas(app, topics, storage, lang);
     else renderHome(app, course, chapters, storage, lang);
+  }
+
+  for (const button of document.querySelectorAll('[data-theme-choice]')) {
+    button.addEventListener('click', () => {
+      theme = button.dataset.themeChoice;
+      setTheme(storage, theme);
+      applyTheme();
+    });
   }
 
   switcher.addEventListener('change', () => {

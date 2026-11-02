@@ -4,33 +4,57 @@
   const { el } = ACCA.dom;
   const { translate: t, label } = ACCA.i18n;
   const { loadProgress, getWeakestFirst } = ACCA.progress;
+  const AREA_LABEL = { statements: 'areaStatements', cashflows: 'areaCashflows', groups: 'areaGroups' };
 
-  function scoreText(entry, lang) {
-    return entry ? `${label('lastScore', lang)}: ${Math.round(entry.lastScore * 100)}%` : label('notStarted', lang);
+  function scoreMeter(entry, lang) {
+    if (!entry) return el('span', { class: 'status-text' }, label('notStarted', lang));
+    const percent = Math.round(entry.lastScore * 100);
+    return el('span', { class: `status-text${percent >= 50 ? ' is-pass' : ' is-below'}` },
+      el('span', { class: 'meter', style: `--pct:${percent}%`, 'aria-hidden': 'true' }),
+      `${label('lastScore', lang)}: ${percent}%`);
   }
 
   function topicRow(topic, entry, lang) {
-    return el('li', { class: 'topic-row' },
-      el('div', {},
-        el('p', { class: 'topic-title' }, `${topic.number}. ${t(topic.title, lang)}`),
-        el('p', { class: 'hint' }, `${scoreText(entry, lang)} · ${topic.questionCount} ${label('questionsCount', lang)}`)),
-      el('a', { class: 'button', href: `#/quiz/${topic.id}` }, label('start', lang)));
+    return el('li', {},
+      el('a', { class: 'topic-row', href: `#/quiz/${topic.id}` },
+        el('span', { class: 'topic-number' }, String(topic.number)),
+        el('span', { class: 'topic-main' },
+          el('span', { class: 'topic-title' }, t(topic.title, lang)),
+          el('span', { class: 'hint' }, `${topic.questionCount} ${label('questionsCount', lang)}`)),
+        scoreMeter(entry, lang)));
   }
 
-  function renderPractice(container, topics, storage, lang) {
+  function caseRow(item, entry, lang) {
+    return el('li', {},
+      el('a', { class: 'case-row', href: `#/quiz/${item.id}` },
+        el('span', { class: 'case-area' }, label(AREA_LABEL[item.area], lang)),
+        el('span', { class: 'case-title' }, item.title),
+        el('span', { class: 'hint' }, `${item.tasks.length} ${label('tasksCount', lang)} · 15 ${label('marks', lang)}`)));
+  }
+
+  function renderPractice(container, topics, storage, lang, cases) {
     const progress = loadProgress(storage);
     const studied = topics.filter((topic) => progress[topic.id]);
-    container.replaceChildren(el('div', { class: 'page' },
+    container.replaceChildren(el('div', { class: 'page practice' },
       el('h1', {}, label('practiceTitle', lang)),
-      el('div', { class: 'training-top' },
-        el('section', { class: 'panel field hot' },
-          el('h2', {}, label('weakTitle', lang)),
-          el('p', {}, label('weakText', lang)),
-          el('a', { class: 'button', href: '#/weak-areas' }, label('weakAreas', lang))),
-        el('section', { class: 'panel field' },
-          el('h2', {}, label('studiedTitle', lang)),
-          el('p', {}, label(studied.length ? 'studiedText' : 'studiedEmpty', lang)),
-          studied.length > 0 && el('a', { class: 'button primary', href: '#/quiz/review' }, label('start', lang)))),
+      el('div', { class: 'tiles' },
+        el('a', { class: 'tile tile-exam', href: '#/exam' },
+          el('span', { class: 'tile-title' }, label('mockExam', lang)),
+          el('span', { class: 'tile-text' }, '35 + 2 · 100 ' + label('marks', lang) + ' · 2:00')),
+        el('a', { class: 'tile', href: '#/weak-areas' },
+          el('span', { class: 'tile-title' }, label('weakTitle', lang)),
+          el('span', { class: 'tile-text' }, label('weakText', lang))),
+        studied.length > 0
+          ? el('a', { class: 'tile', href: '#/quiz/review' },
+            el('span', { class: 'tile-title' }, label('studiedTitle', lang)),
+            el('span', { class: 'tile-text' }, label('studiedText', lang)))
+          : el('div', { class: 'tile is-empty' },
+            el('span', { class: 'tile-title' }, label('studiedTitle', lang)),
+            el('span', { class: 'tile-text' }, label('studiedEmpty', lang)))),
+      el('section', { class: 'panel' },
+        el('h2', {}, label('casesTitle', lang)),
+        el('p', { class: 'hint' }, label('casesText', lang)),
+        el('ul', { class: 'case-list' }, cases.map((item) => caseRow(item, progress[item.id], lang)))),
       el('section', { class: 'panel' },
         el('h2', {}, label('chooseTitle', lang)),
         el('ul', { class: 'topic-list' }, topics.map((topic) => topicRow(topic, progress[topic.id], lang))))));
@@ -41,7 +65,7 @@
     const order = getWeakestFirst(storage, topics.map((topic) => topic.id));
     container.replaceChildren(el('div', { class: 'page' },
       el('h1', {}, label('weakTitle', lang)),
-      el('p', {}, label('weakText', lang)),
+      el('p', { class: 'lead' }, label('weakText', lang)),
       el('ul', { class: 'topic-list' }, order.map((id) => topicRow(topics.find((topic) => topic.id === id), progress[id], lang)))));
   }
 

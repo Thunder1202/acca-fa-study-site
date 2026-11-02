@@ -60,11 +60,11 @@ function scoreByTopic(session) {
   return totals;
 }
 
-function rankFor(percent) {
-  if (percent >= 85) return 'rankJonin';
-  if (percent >= 70) return 'rankChunin';
-  if (percent >= 50) return 'rankGenin';
-  return 'rankAcademy';
+function bandFor(percent) {
+  if (percent >= 85) return 'bandStrong';
+  if (percent >= 70) return 'bandGood';
+  if (percent >= 50) return 'bandPass';
+  return 'bandBelow';
 }
 
 function packAnswers(session) {
@@ -76,5 +76,5 @@ function restoreSession(questions, packed) {
   return { questions, answers: new Map(packed.filter(([id]) => known.has(id))) };
 }
 
-if (typeof module !== 'undefined') module.exports = { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor, packAnswers, restoreSession, parseAmount };
-else (globalThis.ACCA ??= {}).quiz = { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor, packAnswers, restoreSession, parseAmount };
+if (typeof module !== 'undefined') module.exports = { startSession, answer, isCorrect, score, isComplete, scoreByTopic, bandFor, packAnswers, restoreSession, parseAmount };
+else (globalThis.ACCA ??= {}).quiz = { startSession, answer, isCorrect, score, isComplete, scoreByTopic, bandFor, packAnswers, restoreSession, parseAmount };

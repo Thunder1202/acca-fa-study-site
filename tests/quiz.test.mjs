@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { startSession, answer, isCorrect, score, isComplete, scoreByTopic, rankFor, packAnswers, restoreSession, parseAmount } from '../js/quiz.js';
+import { startSession, answer, isCorrect, score, isComplete, scoreByTopic, bandFor, packAnswers, restoreSession, parseAmount } from '../js/quiz.js';
 
 const QUESTIONS = [
   { id: 'q1', correctIndex: 0 },
@@ -146,15 +146,15 @@ test('restoring drops answers to questions no longer in the set', () => {
   assert.deepEqual(score(restored), { attempted: 1, correct: 1 });
 });
 
-test('rankFor follows the 50% exam pass mark and rises with the score', () => {
-  assert.equal(rankFor(0), 'rankAcademy');
-  assert.equal(rankFor(49), 'rankAcademy');
-  assert.equal(rankFor(50), 'rankGenin');
-  assert.equal(rankFor(69), 'rankGenin');
-  assert.equal(rankFor(70), 'rankChunin');
-  assert.equal(rankFor(84), 'rankChunin');
-  assert.equal(rankFor(85), 'rankJonin');
-  assert.equal(rankFor(100), 'rankJonin');
+test('bandFor follows the 50% exam pass mark and rises with the score', () => {
+  assert.equal(bandFor(0), 'bandBelow');
+  assert.equal(bandFor(49), 'bandBelow');
+  assert.equal(bandFor(50), 'bandPass');
+  assert.equal(bandFor(69), 'bandPass');
+  assert.equal(bandFor(70), 'bandGood');
+  assert.equal(bandFor(84), 'bandGood');
+  assert.equal(bandFor(85), 'bandStrong');
+  assert.equal(bandFor(100), 'bandStrong');
 });
 
 test('answer leaves the earlier session unchanged', () => {
