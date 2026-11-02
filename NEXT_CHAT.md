@@ -11,8 +11,8 @@ The user is studying for ACCA FA (F3). This folder is their study website, built
 - All 20 chapters are built. Every Exam Kit question 1-550 is rewritten exactly once (a test checks this).
 - 16 Section B case questions (Kit MTQ 1-16) are in `data/section-b.js`: 15 marks each, tasks tagged by chapter.
 - Mock exam at `#/exam`: 35 two-mark questions spread across chapters by size, plus one single-company or cash-flow case and one group case. 2-hour timer, marks-based result with a chapter breakdown, kept in localStorage (`acca-fa-exam`) so it survives reloads.
-- Design: name "Balanced". One theme, "clean", with light and dark modes behind a single sun/moon toggle (). The dark mode is the orange/navy look; the user asked to keep it exactly. Mode is saved in , the theme family in ; with nothing saved it follows the device. HTML carries  and .
-- The user plans to add their own Naruto theme later as a second theme. To add it: list it in  in , style it under  in , and add a way to pick it. Do not restyle the existing modes without being asked.
+- Design: name "Balanced". One theme, "clean", with light and dark modes behind a single sun/moon toggle (`#mode-toggle`). The dark mode is the orange/navy look; the user asked to keep it exactly. Mode is saved in `acca-fa-mode`, the theme family in `acca-fa-theme`; with nothing saved it follows the device. HTML carries `data-theme="clean"` and `data-mode`.
+- The user plans to add their own Naruto theme later as a second theme. To add it: list it in `THEMES` in `js/theme.js`, style it under `[data-theme="naruto"]` in `style.css`, and add a way to pick it. Do not restyle the existing modes without being asked.
 - Number answers can carry `unit` (`%`, `:1`, `days`, `times`); the parser accepts those typed.
 - `node --test "tests/*.test.mjs"`: 246 pass. Never run `node --test tests/`.
 - Checked in the browser at desktop and phone width, both themes; no console errors, no sideways scroll. The preview runs from `.claude/launch.json` (`acca-site`), whose server script lives in the old scratchpad; rewrite it if that folder is gone.
