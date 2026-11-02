@@ -29,3 +29,8 @@ test('unknown route falls back to home', () => {
 test('chapter route with no id falls back to home', () => {
   assert.deepEqual(parseRoute('#/chapter'), { view: 'home', params: {} });
 });
+
+test('exam route has a start page and a paper page', () => {
+  assert.deepEqual(parseRoute('#/exam'), { view: 'exam', params: { step: 'start' } });
+  assert.deepEqual(parseRoute('#/exam/paper'), { view: 'exam', params: { step: 'paper' } });
+});
