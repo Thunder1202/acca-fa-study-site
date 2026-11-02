@@ -9,7 +9,7 @@
   const { renderPractice, renderWeakAreas } = ACCA.practiceView;
   const { renderExamStart, renderExamPaper } = ACCA.examView;
   const { caseQuestions } = ACCA.exam;
-  const { getTheme, setTheme } = ACCA.theme;
+  const { getTheme, getMode, setMode, nextMode } = ACCA.theme;
   const { el } = ACCA.dom;
   const { loadProgress } = ACCA.progress;
   const { course, chapters, questions, sectionB } = ACCA;
@@ -32,7 +32,9 @@
 
   const storage = openStorage();
   let lang = getLang(storage);
-  let theme = getTheme(storage, window.matchMedia('(prefers-color-scheme: dark)').matches);
+  const theme = getTheme(storage);
+  let mode = getMode(storage, window.matchMedia('(prefers-color-scheme: dark)').matches);
+  const modeToggle = document.getElementById('mode-toggle');
   const allChapters = course.flatMap((group) => group.chapters);
   const openChapters = allChapters.filter((chapter) => chapters[chapter.id]);
   const topics = openChapters.map((chapter) => ({ ...chapter, questionCount: questions[chapter.id].length }));
@@ -84,9 +86,10 @@
 
   function applyTheme() {
     document.documentElement.dataset.theme = theme;
-    for (const button of document.querySelectorAll('[data-theme-choice]')) {
-      button.setAttribute('aria-pressed', String(button.dataset.themeChoice === theme));
-    }
+    document.documentElement.dataset.mode = mode;
+    const text = label(mode === 'dark' ? 'switchToLight' : 'switchToDark', lang);
+    modeToggle.setAttribute('aria-label', text);
+    modeToggle.title = text;
   }
 
   function renderChrome(lang) {
@@ -112,13 +115,11 @@
     else renderHome(app, course, chapters, storage, lang);
   }
 
-  for (const button of document.querySelectorAll('[data-theme-choice]')) {
-    button.addEventListener('click', () => {
-      theme = button.dataset.themeChoice;
-      setTheme(storage, theme);
-      applyTheme();
-    });
-  }
+  modeToggle.addEventListener('click', () => {
+    mode = nextMode(mode);
+    setMode(storage, mode);
+    applyTheme();
+  });
 
   switcher.addEventListener('change', () => {
     lang = switcher.value;

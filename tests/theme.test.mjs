@@ -3,36 +3,44 @@ import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 
 const require = createRequire(import.meta.url);
-const { getTheme, setTheme, THEMES } = require('../js/theme.js');
+const { getMode, setMode, nextMode, getTheme, MODES, THEMES } = require('../js/theme.js');
 
 function memory(initial = {}) {
   const data = { ...initial };
   return { getItem: (k) => data[k] ?? null, setItem: (k, v) => { data[k] = v; }, data };
 }
 
-test('with nothing saved, the theme follows the device', () => {
-  assert.deepEqual(THEMES, ['light', 'dark']);
-  assert.equal(getTheme(memory(), false), 'light');
-  assert.equal(getTheme(memory(), true), 'dark');
+test('Clean is the only theme for now, with light and dark modes', () => {
+  assert.deepEqual(THEMES, ['clean']);
+  assert.deepEqual(MODES, ['light', 'dark']);
+  assert.equal(getTheme(memory()), 'clean');
 });
 
-test('a saved theme wins over the device setting', () => {
+test('with nothing saved, the mode follows the device', () => {
+  assert.equal(getMode(memory(), false), 'light');
+  assert.equal(getMode(memory(), true), 'dark');
+});
+
+test('a saved mode wins over the device setting', () => {
   const storage = memory();
-  setTheme(storage, 'dark');
-  assert.equal(getTheme(storage, false), 'dark');
+  setMode(storage, 'dark');
+  assert.equal(getMode(storage, false), 'dark');
+});
+
+test('one tap flips between light and dark', () => {
+  assert.equal(nextMode('light'), 'dark');
+  assert.equal(nextMode('dark'), 'light');
 });
 
 test('choices saved under the old theme names still work', () => {
-  assert.equal(getTheme(memory({ 'acca-fa-theme': 'clean' }), true), 'light');
-  assert.equal(getTheme(memory({ 'acca-fa-theme': 'naruto' }), false), 'dark');
+  assert.equal(getMode(memory({ 'acca-fa-theme': 'clean' }), true), 'light');
+  assert.equal(getMode(memory({ 'acca-fa-theme': 'naruto' }), false), 'dark');
+  assert.equal(getMode(memory({ 'acca-fa-theme': 'dark' }), false), 'dark');
+  assert.equal(getTheme(memory({ 'acca-fa-theme': 'naruto' })), 'clean');
 });
 
-test('an unknown saved value falls back to the device setting', () => {
-  assert.equal(getTheme(memory({ 'acca-fa-theme': 'neon' }), true), 'dark');
-});
-
-test('blocked storage does not break theme choice', () => {
+test('blocked storage does not break the mode', () => {
   const blocked = { getItem: () => { throw new Error('blocked'); }, setItem: () => { throw new Error('blocked'); } };
-  assert.equal(getTheme(blocked, false), 'light');
-  assert.doesNotThrow(() => setTheme(blocked, 'dark'));
+  assert.equal(getMode(blocked, true), 'dark');
+  assert.doesNotThrow(() => setMode(blocked, 'light'));
 });

@@ -1,30 +1,46 @@
 'use strict';
 
+// A theme is a visual family; a mode is light or dark within it.
+// To add a theme, list it in THEMES and style it under [data-theme="<name>"].
 (function () {
   const THEME_KEY = 'acca-fa-theme';
-  const THEMES = ['light', 'dark'];
-  const OLD_NAMES = { clean: 'light', naruto: 'dark' };
+  const MODE_KEY = 'acca-fa-mode';
+  const THEMES = ['clean'];
+  const MODES = ['light', 'dark'];
+  // Earlier versions stored the mode in the theme key.
+  const OLD_MODES = { clean: 'light', light: 'light', naruto: 'dark', dark: 'dark' };
 
-  function getTheme(storage, prefersDark = false) {
-    const fallback = prefersDark ? 'dark' : 'light';
+  function read(storage, key) {
     try {
-      const saved = storage.getItem(THEME_KEY);
-      const name = OLD_NAMES[saved] ?? saved;
-      return THEMES.includes(name) ? name : fallback;
+      return storage.getItem(key);
     } catch {
-      return fallback;
+      return null;
     }
   }
 
-  function setTheme(storage, theme) {
+  function write(storage, key, value) {
     try {
-      storage.setItem(THEME_KEY, theme);
+      storage.setItem(key, value);
     } catch {
       // The choice still applies until the page is closed.
     }
   }
 
-  const api = { getTheme, setTheme, THEMES };
+  function getTheme(storage) {
+    const saved = read(storage, THEME_KEY);
+    return THEMES.includes(saved) ? saved : THEMES[0];
+  }
+
+  function getMode(storage, prefersDark = false) {
+    const saved = read(storage, MODE_KEY) ?? OLD_MODES[read(storage, THEME_KEY)];
+    if (MODES.includes(saved)) return saved;
+    return prefersDark ? 'dark' : 'light';
+  }
+
+  const setMode = (storage, mode) => write(storage, MODE_KEY, mode);
+  const nextMode = (mode) => (mode === 'dark' ? 'light' : 'dark');
+
+  const api = { getTheme, getMode, setMode, nextMode, THEMES, MODES };
   if (typeof module !== 'undefined') module.exports = api;
   else (globalThis.ACCA ??= {}).theme = api;
 })();
