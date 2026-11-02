@@ -32,7 +32,7 @@
 
   const storage = openStorage();
   let lang = getLang(storage);
-  let theme = getTheme(storage);
+  let theme = getTheme(storage, window.matchMedia('(prefers-color-scheme: dark)').matches);
   const allChapters = course.flatMap((group) => group.chapters);
   const openChapters = allChapters.filter((chapter) => chapters[chapter.id]);
   const topics = openChapters.map((chapter) => ({ ...chapter, questionCount: questions[chapter.id].length }));

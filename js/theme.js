@@ -2,14 +2,17 @@
 
 (function () {
   const THEME_KEY = 'acca-fa-theme';
-  const THEMES = ['naruto', 'clean'];
+  const THEMES = ['light', 'dark'];
+  const OLD_NAMES = { clean: 'light', naruto: 'dark' };
 
-  function getTheme(storage) {
+  function getTheme(storage, prefersDark = false) {
+    const fallback = prefersDark ? 'dark' : 'light';
     try {
       const saved = storage.getItem(THEME_KEY);
-      return THEMES.includes(saved) ? saved : THEMES[0];
+      const name = OLD_NAMES[saved] ?? saved;
+      return THEMES.includes(name) ? name : fallback;
     } catch {
-      return THEMES[0];
+      return fallback;
     }
   }
 

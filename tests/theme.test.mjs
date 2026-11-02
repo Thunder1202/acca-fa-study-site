@@ -10,23 +10,29 @@ function memory(initial = {}) {
   return { getItem: (k) => data[k] ?? null, setItem: (k, v) => { data[k] = v; }, data };
 }
 
-test('the Naruto theme is the default', () => {
-  assert.equal(getTheme(memory()), 'naruto');
-  assert.deepEqual(THEMES, ['naruto', 'clean']);
+test('with nothing saved, the theme follows the device', () => {
+  assert.deepEqual(THEMES, ['light', 'dark']);
+  assert.equal(getTheme(memory(), false), 'light');
+  assert.equal(getTheme(memory(), true), 'dark');
 });
 
-test('a saved theme is remembered', () => {
+test('a saved theme wins over the device setting', () => {
   const storage = memory();
-  setTheme(storage, 'clean');
-  assert.equal(getTheme(storage), 'clean');
+  setTheme(storage, 'dark');
+  assert.equal(getTheme(storage, false), 'dark');
 });
 
-test('an unknown saved value falls back to the default', () => {
-  assert.equal(getTheme(memory({ 'acca-fa-theme': 'neon' })), 'naruto');
+test('choices saved under the old theme names still work', () => {
+  assert.equal(getTheme(memory({ 'acca-fa-theme': 'clean' }), true), 'light');
+  assert.equal(getTheme(memory({ 'acca-fa-theme': 'naruto' }), false), 'dark');
+});
+
+test('an unknown saved value falls back to the device setting', () => {
+  assert.equal(getTheme(memory({ 'acca-fa-theme': 'neon' }), true), 'dark');
 });
 
 test('blocked storage does not break theme choice', () => {
   const blocked = { getItem: () => { throw new Error('blocked'); }, setItem: () => { throw new Error('blocked'); } };
-  assert.equal(getTheme(blocked), 'naruto');
-  assert.doesNotThrow(() => setTheme(blocked, 'clean'));
+  assert.equal(getTheme(blocked, false), 'light');
+  assert.doesNotThrow(() => setTheme(blocked, 'dark'));
 });
