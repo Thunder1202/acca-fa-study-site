@@ -92,6 +92,7 @@ button { font: inherit; color: inherit; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 [data-mode="dark"] :focus-visible { box-shadow: 0 0 0 6px var(--accent-soft); }
 main { flex: 1; width: 100%; outline: none; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; z-index: 30; height: env(safe-area-inset-top, 0px); background: var(--bar); }
 
 .skip-link { position: absolute; left: 8px; top: -60px; z-index: 50; padding: 10px 14px; color: var(--accent-ink); background: var(--accent); border-radius: var(--radius-sm); }
 .skip-link:focus { top: 8px; }
@@ -104,7 +105,7 @@ main { flex: 1; width: 100%; outline: none; }
 /* ============ Header ============ */
 .site-header {
   position: sticky;
-  top: 0;
+  top: env(safe-area-inset-top, 0px);
   z-index: 20;
   display: grid;
   grid-template-columns: 1fr auto;
@@ -423,7 +424,7 @@ a.chapter-row:hover, .topic-row:hover, .case-row:hover { border-color: var(--acc
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 .actions .hint { margin: 0; }
 .actions .button { flex: 1 1 200px; }
-.actions.sticky { position: sticky; bottom: 0; z-index: 5; margin: 0 calc(var(--edge) * -1); padding: 12px var(--edge); background: var(--bg); border-top: 1px solid var(--line); }
+.actions.sticky { position: sticky; bottom: env(safe-area-inset-bottom, 0px); z-index: 5; margin: 0 calc(var(--edge) * -1); padding: 12px var(--edge); background: var(--bg); border-top: 1px solid var(--line); }
 
 .timer { position: sticky; top: 92px; z-index: 6; display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 24px; padding: 10px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 8px 24px -16px rgba(0, 0, 0, 0.6); }
 .timer-label { color: var(--muted); font-size: 0.875rem; font-weight: 600; }
