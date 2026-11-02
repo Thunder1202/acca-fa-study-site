@@ -115,7 +115,7 @@
     const warning = el('p', { class: 'hint entry-warning', role: 'status', hidden: true }, label('numberOnly', lang));
     return el('div', {},
       el('label', { class: `number-entry${status}` },
-        el('span', { 'aria-hidden': 'true' }, '$'),
+        !q.unit && el('span', { 'aria-hidden': 'true' }, '$'),
         el('input', {
           type: 'text', inputmode: 'decimal', autocomplete: 'off', value: given ?? '', disabled: locked, 'aria-label': q.text,
           oninput: (event) => {
@@ -128,7 +128,8 @@
             event.preventDefault();
             onEnter();
           },
-        })),
+        }),
+        q.unit && el('span', { class: 'unit', 'aria-hidden': 'true' }, q.unit)),
       warning);
   }
 

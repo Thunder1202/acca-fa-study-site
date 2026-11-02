@@ -120,6 +120,15 @@ test('parseAmount keeps commas as thousands separators otherwise', () => {
   assert.equal(parseAmount('1,250,50'), 125050);
 });
 
+test('parseAmount accepts ratio answers typed with their unit', () => {
+  assert.equal(parseAmount('23.58%'), 23.58);
+  assert.equal(parseAmount('23,58 %'), 23.58);
+  assert.equal(parseAmount('1.35:1'), 1.35);
+  assert.equal(parseAmount('90 days'), 90);
+  assert.equal(parseAmount('15.82 times'), 15.82);
+  assert.equal(parseAmount('15.82x'), 15.82);
+});
+
 test('parseAmount treats blank or non-numeric text as no answer', () => {
   assert.equal(parseAmount(''), undefined);
   assert.equal(parseAmount('abc'), undefined);

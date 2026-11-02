@@ -33,7 +33,7 @@ function score(session) {
 }
 
 function parseAmount(text) {
-  const compact = text.replace(/[$\s ]/g, '');
+  const compact = text.replace(/[$\s ]/g, '').replace(/(%|:1|days?|times|x|дней|дня|день|раза?|kun|marta)$/i, '');
   const cleaned = /^[^,]*,\d{1,2}$/.test(compact) ? compact.replace(',', '.') : compact.replace(/,/g, '');
   if (cleaned === '') return undefined;
   const value = Number(cleaned);

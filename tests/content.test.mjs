@@ -23,6 +23,7 @@ test('the course map lists chapters 1-20 once each, in book order, in three lang
 });
 
 const QUESTION_SETS = [
+  { file: 'questions-ch18', topicId: 'chapter-18', first: 508, last: 550 },
   { file: 'questions-ch17', topicId: 'chapter-17', first: 436, last: 457 },
   { file: 'questions-ch16', topicId: 'chapter-16', first: 458, last: 469 },
   { file: 'questions-ch15', topicId: 'chapter-15', first: 368, last: 435 },
@@ -75,6 +76,7 @@ for (const { file, topicId, first, last, refs } of QUESTION_SETS) {
       } else if (q.type === 'number') {
         assert.ok(Number.isFinite(q.correctValue), `Q${q.kitRef} key`);
         assert.ok(q.answerText.trim().length > 0, `Q${q.kitRef} answer text`);
+        if (q.unit !== undefined) assert.ok(['%', ':1', 'days', 'times'].includes(q.unit), `Q${q.kitRef} unit`);
       } else {
         assert.fail(`Q${q.kitRef} unknown type ${q.type}`);
       }
@@ -86,7 +88,7 @@ for (const { file, topicId, first, last, refs } of QUESTION_SETS) {
   });
 }
 
-for (const id of ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17']) {
+for (const id of ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18']) {
   const chapter = require(`../data/chapter-${id}.js`);
 
   test(`chapter ${id} has every lesson field in all three languages`, () => {
