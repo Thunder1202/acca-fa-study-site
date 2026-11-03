@@ -5,6 +5,7 @@ function parseRoute(hash) {
   if (view === 'chapter' && param) return { view, params: { id: param } };
   if (view === 'quiz' && param) return { view, params: { topicId: param } };
   if (view === 'exam') return { view, params: { step: param === 'paper' ? 'paper' : 'start' } };
+  if (view === 'terms') return { view, params: {} };
   if (view === 'weak-areas' || view === 'practice') return { view, params: {} };
   return { view: 'home', params: {} };
 }

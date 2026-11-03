@@ -246,12 +246,12 @@
       id: 'b06', kitRef: 6, area: 'cashflows', title: 'Falcon Co',
       intro: `Prepare the statement of cash flows of Falcon Co for the year ended 30 June 20X5 by the indirect method, showing interest paid under financing activities. In the year Falcon Co sold plant for $6,000,000 at a loss of $1,500,000, included in cost of sales. Depreciation was $14,000,000. Tax on the year's profit is estimated at $7,000,000. Figures are in $000.`,
       table: { head: ['Falcon Co ($000)', '20X5', '20X4'], rows: [
-        ['Revenue', '120,000', ''], ['Cost of sales', '(82,000)', ''], ['Gross profit', '38,000', ''], ['Selling expenses', '(4,000)', ''], ['Administrative expenses', '(2,000)', ''], ['Operating profit', '32,000', ''], ['Interest expense', '(900)', ''], ['Profit before tax', '31,100', ''], ['Income tax', '(7,000)', ''], ['Profit for the year', '24,100', ''], ['Revaluation gain (other comprehensive income)', '3,000', ''],
+        ['Revenue', '120,000', ''], ['Cost of sales', '(82,000)', ''], ['Gross profit', '38,000', ''], ['Selling expenses', '(4,000)', ''], ['Administrative expenses', '(2,000)', ''], ['Operating profit', '32,000', ''], ['Interest expense', '(900)', ''], ['Profit before income taxes', '31,100', ''], ['Income tax expense', '(7,000)', ''], ['Profit for the year', '24,100', ''], ['Revaluation gain (other comprehensive income)', '3,000', ''],
         ['Property, plant and equipment', '120,000', '100,000'], ['Inventories', '30,000', '26,000'], ['Trade receivables', '35,000', '31,000'], ['Cash', '-', '8,000'], ['Total assets', '185,000', '165,000'],
         ['Equity shares', '25,000', '20,000'], ['Share premium', '9,000', '4,000'], ['Revaluation surplus', '9,000', '6,000'], ['Retained earnings', '94,000', '81,000'], ['Bank loan', '10,000', '20,000'], ['Trade payables', '28,000', '25,000'], ['Income tax payable', '7,000', '9,000'], ['Bank overdraft', '3,000', '-'], ['Total equity and liabilities', '185,000', '165,000']] },
       tasks: [
-        task(17, 1, 'single', `Task 1: With interest paid shown under financing, which figure starts the operating activities section?`, pick(['Operating profit of $32,000,000', 'Profit before tax of $31,100,000', 'Profit for the year of $24,100,000'], 0),
-          `Because interest is shown under financing, start from operating profit, before interest. Starting from profit before tax would need the interest added back first.`,
+        task(17, 1, 'single', `Task 1: With interest paid shown under financing, which figure starts the operating activities section?`, pick(['Operating profit of $32,000,000', 'Profit before income taxes of $31,100,000', 'Profit for the year of $24,100,000'], 0),
+          `Because interest is shown under financing, start from operating profit, before interest. Starting from profit before income taxes would need the interest added back first.`,
           `Так как проценты показаны в финансовой деятельности, начинаем с операционной прибыли до процентов. С прибыли до налога пришлось бы сначала прибавить проценты.`,
           `Foiz moliyaviy bo'limda bo'lgani uchun operatsion foydadan, foizdan oldin boshlaymiz. Soliqdan oldingi foydadan boshlansa, avval foizni qo'shish kerak edi.`),
         task(17, 3, 'matrix', `Task 2: Is each adjustment added to or subtracted from operating profit?`, grid(AS, [['Depreciation', 0], ['Loss on sale of plant', 0], ['Increase in inventories', 1], ['Increase in trade receivables', 1], ['Increase in trade payables', 0]]),
@@ -288,7 +288,7 @@
       id: 'b07', kitRef: 7, area: 'cashflows', title: 'Gannet Co',
       intro: `Prepare the statement of cash flows of Gannet Co for the year ended 31 March 20X1 by the indirect method. Plant with a carrying amount of $900,000 was sold at a profit. Depreciation was $3,500,000. Tax on the year's profit is estimated at $3,000,000. There were no dividends. Figures are in $000.`,
       table: { head: ['Gannet Co ($000)', '20X1', '20X0'], rows: [
-        ['Revenue', '96,000', ''], ['Cost of sales', '(80,000)', ''], ['Gross profit', '16,000', ''], ['Selling expenses', '(1,400)', ''], ['Administrative expenses', '(800)', ''], ['Profit on disposal of plant', '400', ''], ['Operating profit', '14,200', ''], ['Interest income', '300', ''], ['Profit before financing and income taxes', '14,500', ''], ['Interest expense', '(2,000)', ''], ['Profit before tax', '12,500', ''], ['Income tax', '(3,000)', ''], ['Profit for the year', '9,500', ''],
+        ['Revenue', '96,000', ''], ['Cost of sales', '(80,000)', ''], ['Gross profit', '16,000', ''], ['Selling expenses', '(1,400)', ''], ['Administrative expenses', '(800)', ''], ['Profit on disposal of plant', '400', ''], ['Operating profit', '14,200', ''], ['Interest income', '300', ''], ['Profit before financing and income taxes', '14,500', ''], ['Interest expense', '(2,000)', ''], ['Profit before income taxes', '12,500', ''], ['Income tax expense', '(3,000)', ''], ['Profit for the year', '9,500', ''],
         ['Property, plant and equipment', '76,000', '75,200'], ['Inventories', '29,000', '27,000'], ['Trade receivables', '38,000', '35,000'], ['Cash', '5,000', '1,000'], ['Total assets', '148,000', '138,200'],
         ['Equity shares', '12,000', '11,000'], ['Share premium', '800', '-'], ['Retained earnings', '82,200', '72,700'], ['10% debentures', '20,000', '20,000'], ['Trade payables', '30,000', '32,000'], ['Income tax payable', '3,000', '2,500'], ['Total equity and liabilities', '148,000', '138,200']] },
       tasks: [
@@ -330,7 +330,7 @@
       id: 'b08', kitRef: 8, area: 'cashflows', title: 'Heron Co',
       intro: `Prepare the statement of cash flows of Heron Co for the year ended 30 September 20X9 by the indirect method. Plant with a carrying amount of $1,500,000 was sold for $2,100,000. Property, plant and equipment of $40,000,000 was bought, and land was revalued. Tax on the year's profit is estimated at $3,200,000. Figures are in $000.`,
       table: { head: ['Heron Co ($000)', '20X9', '20X8'], rows: [
-        ['Revenue', '80,000', ''], ['Cost of sales', '(60,000)', ''], ['Gross profit', '20,000', ''], ['Selling expenses', '(2,000)', ''], ['Administrative expenses', '(1,200)', ''], ['Profit on disposal of plant', '600', ''], ['Operating profit', '17,400', ''], ['Interest expense', '(2,400)', ''], ['Profit before tax', '15,000', ''], ['Income tax', '(3,200)', ''], ['Profit for the year', '11,800', ''], ['Revaluation gain (other comprehensive income)', '4,000', ''],
+        ['Revenue', '80,000', ''], ['Cost of sales', '(60,000)', ''], ['Gross profit', '20,000', ''], ['Selling expenses', '(2,000)', ''], ['Administrative expenses', '(1,200)', ''], ['Profit on disposal of plant', '600', ''], ['Operating profit', '17,400', ''], ['Interest expense', '(2,400)', ''], ['Profit before income taxes', '15,000', ''], ['Income tax expense', '(3,200)', ''], ['Profit for the year', '11,800', ''], ['Revaluation gain (other comprehensive income)', '4,000', ''],
         ['Property, plant and equipment', '90,000', '55,000'], ['Inventories', '26,000', '30,000'], ['Trade receivables', '34,000', '38,000'], ['Cash', '2,500', '-'], ['Total assets', '152,500', '123,000'],
         ['Equity shares', '28,000', '25,000'], ['Share premium', '6,000', '5,000'], ['Revaluation surplus', '4,000', '-'], ['Retained earnings', '56,500', '50,000'], ['10% debentures', '24,000', '-'], ['Bank overdraft', '-', '6,000'], ['Trade payables', '30,000', '33,000'], ['Income tax payable', '3,200', '3,600'], ['Accrued interest', '800', '400'], ['Total equity and liabilities', '152,500', '123,000']] },
       tasks: [
@@ -409,7 +409,7 @@
     {
       id: 'b10', kitRef: 10, area: 'groups', title: 'Jade and Kiwi',
       intro: `Jade bought 80% of the equity shares of Kiwi on 1 April 20X1. After that date Jade sold goods to Kiwi for $90,000, including a mark-up of 25% on cost, and one third of them were still in Kiwi's inventory at 31 December 20X1. Kiwi's income and expenses accrue evenly. Figures are in $000.`,
-      table: { head: ['Year ended 31 December 20X1 ($000)', 'Jade', 'Kiwi'], rows: [['Revenue', '1,200', '600'], ['Cost of sales', '(720)', '(320)'], ['Gross profit', '480', '280'], ['General and administrative expenses', '(230)', '(160)'], ['Operating profit', '250', '120'], ['Interest expense', '(60)', '(24)'], ['Profit before tax', '190', '96'], ['Income tax', '(50)', '(24)'], ['Profit for the year', '140', '72']] },
+      table: { head: ['Year ended 31 December 20X1 ($000)', 'Jade', 'Kiwi'], rows: [['Revenue', '1,200', '600'], ['Cost of sales', '(720)', '(320)'], ['Gross profit', '480', '280'], ['General and administrative expenses', '(230)', '(160)'], ['Operating profit', '250', '120'], ['Interest expense', '(60)', '(24)'], ['Profit before income taxes', '190', '96'], ['Income tax expense', '(50)', '(24)'], ['Profit for the year', '140', '72']] },
       tasks: [
         task(20, 2, 'number', `Task 1(a): What is consolidated revenue? Give your answer in $000.`, amount(1560, '$1,560,000 (1,560 in $000)'),
           `Kiwi is included for 9 months: $600 × 9/12 = $450. $1,200 + $450 - $90 intra-group = $1,560.`,
@@ -427,7 +427,7 @@
           `Gross profit $1,560 - $876 = $684. Less expenses $230 + $120 = $350: $334. Less interest $78 and tax $50 + $18 = $68: $188.`,
           `Валовая прибыль $1,560 - $876 = $684. Минус расходы $230 + $120 = $350: $334. Минус проценты $78 и налог $50 + $18 = $68: $188.`,
           `Yalpi foyda $1,560 - $876 = $684. Minus xarajatlar $230 + $120 = $350: $334. Minus foiz $78 va soliq $50 + $18 = $68: $188.`),
-        task(20, 2, 'single', `Task 1(e): Which calculation gives the profit attributable to the non-controlling interest?`, pick(['NCI % × Kiwi\'s profit for the year × 9/12', '(NCI % × Kiwi\'s profit for the year × 9/12) - NCI share of the unrealised profit', 'NCI % × Kiwi\'s profit before tax × 9/12'], 0),
+        task(20, 2, 'single', `Task 1(e): Which calculation gives the profit attributable to the non-controlling interest?`, pick(['NCI % × Kiwi\'s profit for the year × 9/12', '(NCI % × Kiwi\'s profit for the year × 9/12) - NCI share of the unrealised profit', 'NCI % × Kiwi\'s profit before income taxes × 9/12'], 0),
           `Jade sold the goods, so the unrealised profit is all Jade's and the NCI bears none of it. NCI = 20% × $72 × 9/12 = $10.8.`,
           `Товар продавала Jade, поэтому нереализованная прибыль целиком её, NCI её не несёт. NCI = 20% × $72 × 9/12 = $10.8.`,
           `Tovarni Jade sotgan, amalga oshmagan foyda to'liq uniki, NCI uni ko'tarmaydi. NCI = 20% × $72 × 9/12 = $10.8.`),
@@ -538,7 +538,7 @@
     {
       id: 'b13', kitRef: 13, area: 'groups', title: 'Pearl and Quill',
       intro: `Pearl bought 70% of Quill on 1 January 20X1. In 20X4 Quill sold goods to Pearl for $180,000 at a mark-up of 20% on cost, and one third were still in Pearl's inventory at the year end. On 1 July 20X4 Pearl lent Quill $800,000 at 5% interest a year. Figures are in $000.`,
-      table: { head: ['Year ended 31 December 20X4 ($000)', 'Pearl', 'Quill'], rows: [['Revenue', '1,800', '900'], ['Cost of sales', '(1,000)', '(500)'], ['Gross profit', '800', '400'], ['Administrative expenses', '(350)', '(160)'], ['Operating profit', '450', '240'], ['Interest income', '30', '-'], ['Interest expense', '(70)', '(40)'], ['Profit before tax', '410', '200'], ['Income tax', '(100)', '(50)'], ['Profit for the year', '310', '150']] },
+      table: { head: ['Year ended 31 December 20X4 ($000)', 'Pearl', 'Quill'], rows: [['Revenue', '1,800', '900'], ['Cost of sales', '(1,000)', '(500)'], ['Gross profit', '800', '400'], ['Administrative expenses', '(350)', '(160)'], ['Operating profit', '450', '240'], ['Interest income', '30', '-'], ['Interest expense', '(70)', '(40)'], ['Profit before income taxes', '410', '200'], ['Income tax expense', '(100)', '(50)'], ['Profit for the year', '310', '150']] },
       tasks: [
         task(20, 1, 'number', `Task 1(a): What is consolidated revenue? Give your answer in $000.`, amount(2520, '$2,520,000 (2,520 in $000)'),
           `$1,800 + $900 - $180 intra-group = $2,520.`,
@@ -553,7 +553,7 @@
           `Заём действовал 6 месяцев, $20 процентов — внутри группы. Они убираются и из расходов, и из доходов: $110 - $20 = $90.`,
           `Qarz 6 oy amal qilgan, $20 foiz guruh ichida. U ham xarajatdan, ham daromaddan olib tashlanadi: $110 - $20 = $90.`),
         task(20, 2, 'number', `Task 1(d): What is consolidated profit for the year? Give your answer in $000.`, amount(450, '$450,000 (450 in $000)'),
-          `Gross profit $2,520 - $1,330 = $1,190. Less admin $510: $680. Interest income $30 - $20 = $10, interest expense $90. Profit before tax $600, less tax $150 = $450.`,
+          `Gross profit $2,520 - $1,330 = $1,190. Less admin $510: $680. Interest income $30 - $20 = $10, interest expense $90. Profit before income taxes $600, less tax $150 = $450.`,
           `Валовая прибыль $2,520 - $1,330 = $1,190. Минус админ. $510: $680. Процентный доход $30 - $20 = $10, расход $90. Прибыль до налога $600, минус налог $150 = $450.`,
           `Yalpi foyda $2,520 - $1,330 = $1,190. Minus ma'muriy $510: $680. Foiz daromadi $30 - $20 = $10, xarajat $90. Soliqdan oldingi foyda $600, minus soliq $150 = $450.`),
         task(20, 2, 'number', `Task 1(e): What profit is attributable to the non-controlling interest? Give your answer in $000.`, amount(42, '$42,000 (42 in $000)'),
@@ -628,7 +628,7 @@
     {
       id: 'b15', kitRef: 15, area: 'groups', title: 'Tide and Umber',
       intro: `On 1 January 20X6 Tide bought 6 million of Umber's 8 million $1 equity shares, paying $5 per share. The NCI is valued at the Umber share price on that date, $3.50. At 1 July 20X5 Umber's retained earnings were $12 million, and its land was worth $1 million more than its carrying amount. After acquisition Umber sold Tide goods that had cost $8 million, at a mark-up of 25%, and Tide had sold 70% of them by the year end. Umber's income and expenses accrue evenly. Figures are in $000.`,
-      table: { head: ['Year ended 30 June 20X6 ($000)', 'Tide', 'Umber'], rows: [['Revenue', '180,000', '90,000'], ['Cost of sales', '(100,000)', '(50,000)'], ['Gross profit', '80,000', '40,000'], ['Selling expenses', '(18,000)', '(8,000)'], ['General and administrative expenses', '(32,000)', '(18,000)'], ['Operating profit', '30,000', '14,000'], ['Income tax', '(9,000)', '(4,000)'], ['Profit for the year', '21,000', '10,000']] },
+      table: { head: ['Year ended 30 June 20X6 ($000)', 'Tide', 'Umber'], rows: [['Revenue', '180,000', '90,000'], ['Cost of sales', '(100,000)', '(50,000)'], ['Gross profit', '80,000', '40,000'], ['Selling expenses', '(18,000)', '(8,000)'], ['General and administrative expenses', '(32,000)', '(18,000)'], ['Operating profit', '30,000', '14,000'], ['Income tax expense', '(9,000)', '(4,000)'], ['Profit for the year', '21,000', '10,000']] },
       tasks: [
         task(19, 1, 'number', `Task 1(a): What is the fair value of the non-controlling interest at acquisition? Give your answer in $000.`, amount(7000, '$7,000,000 (7,000 in $000)'),
           `The NCI holds 2 million shares: 2,000 × $3.50 = $7,000.`,

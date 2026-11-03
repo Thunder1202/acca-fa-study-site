@@ -19,15 +19,15 @@ const chapter06 = {
       key: {
         en: `- Non-current assets: long-term, not bought for resale, used to earn income.
 - They are not easy to turn into cash quickly without losing value.
-- Capital expenditure: buys or improves an asset. It goes on the balance sheet.
+- Capital expenditure: buys or improves an asset. It goes in the statement of financial position.
 - Revenue expenditure: day-to-day running and repairs. It is an expense.`,
         ru: `- Внеоборотные активы: долгосрочные, не для перепродажи, используются для получения дохода.
 - Их нелегко быстро превратить в деньги без потери стоимости.
-- Капитальные затраты: покупка или улучшение актива. Идут в баланс.
+- Капитальные затраты: покупка или улучшение актива. Идут в отчёт о финансовом положении.
 - Текущие затраты: повседневная работа и ремонт. Это расход.`,
         uz: `- Uzoq muddatli aktivlar: uzoq muddatli, qayta sotish uchun emas, daromad olish uchun ishlatiladi.
 - Ularni qiymatini yo'qotmasdan tez pulga aylantirish oson emas.
-- Kapital xarajat: aktiv sotib olish yoki yaxshilash. Balansga kiradi.
+- Kapital xarajat: aktiv sotib olish yoki yaxshilash. Moliyaviy holat hisobotiga kiradi.
 - Joriy xarajat: kundalik ish va ta'mir. Bu xarajat.`,
       },
       exam: {
@@ -277,7 +277,7 @@ Yil o'rtasida sotib olingan yoki sotilgan aktivlar uchun ikki yondashuv bor: xar
       body: {
         en: `Whichever method is used, the accounting is the same. Each year: Dr Depreciation charge (an expense in profit or loss), Cr Accumulated depreciation (a statement of financial position account).
 
-The depreciation charge account is an expense account, so it is cleared to profit or loss each year and is not accumulated. The accumulated depreciation account is a balance sheet account, so it keeps growing and holds all depreciation to date.
+The depreciation charge account is an expense account, so it is cleared to profit or loss each year and is not accumulated. The accumulated depreciation account is a statement of financial position account, so it keeps growing and holds all depreciation to date.
 
 In the statement of financial position it is shown as a deduction from cost: cost, less accumulated depreciation, equals carrying amount.`,
         ru: `Каким бы ни был метод, учёт одинаков. Каждый год: Дт Расход по амортизации (расход в прибыли или убытке), Кт Накопленная амортизация (счёт отчёта о финансовом положении).
@@ -287,7 +287,7 @@ In the statement of financial position it is shown as a deduction from cost: cos
 В отчёте о финансовом положении она показывается вычетом из стоимости: стоимость минус накопленная амортизация равна балансовой стоимости.`,
         uz: `Qaysi usul ishlatilishidan qat'i nazar, hisob bir xil. Har yili: Dt Amortizatsiya xarajati (foyda yoki zarardagi xarajat), Kt To'plangan amortizatsiya (moliyaviy holat hisobotidagi hisob).
 
-Amortizatsiya xarajati hisobi xarajat hisobi, shuning uchun har yili foyda yoki zararga yopiladi va to'planmaydi. To'plangan amortizatsiya hisobi balans hisobi, shuning uchun u o'sib boradi va hozirgacha bo'lgan barcha amortizatsiyani saqlaydi.
+Amortizatsiya xarajati hisobi xarajat hisobi, shuning uchun har yili foyda yoki zararga yopiladi va to'planmaydi. To'plangan amortizatsiya hisobi moliyaviy holat hisobotiga tegishli hisob, shuning uchun u o'sib boradi va hozirgacha bo'lgan barcha amortizatsiyani saqlaydi.
 
 Moliyaviy holat hisobotida u qiymatdan ayirma sifatida ko'rsatiladi: qiymat minus to'plangan amortizatsiya balans qiymatiga teng.`,
       },

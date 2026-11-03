@@ -17,6 +17,9 @@ The user is studying for ACCA FA (F3). This folder is their study website, built
 - `node --test "tests/*.test.mjs"`: 246 pass. Never run `node --test tests/`.
 - Checked in the browser at desktop and phone width, both themes; no console errors, no sideways scroll. The preview runs from `.claude/launch.json` (`acca-site`), whose server script lives in the old scratchpad; rewrite it if that folder is gone.
 
+- Official English terms: `js/terms.js` (`TERMS`, `annotate`) tags the Russian/Uzbek word with its English exam term, using the English version of the same text to decide which term is meant; `richTextT` and `termNodes` in `js/dom.js` apply it. To add a term, add an entry to `TERMS`. The Terms page reads `data/term-names.js`; a test keeps its translations equal to the chapter glossaries. `tests/syntax.test.mjs` compiles every browser script (the browser-only files were previously untested).
+- 2026-11-03: compared the site with the teacher's 20 slide decks (`pptx resources/`, git-ignored). They agree with the Study Text and the site (PIRATE criteria, probability table, ratio formulas). Wording standardised: "profit before income taxes", "income tax expense", no "balance sheet".
+
 ## Still unverified or open
 
 - Accuracy review done on 2026-11-02 for chapters 3, 4, 11-17 (every question key and figure, plus key points and exam notes), with judgement calls checked against the Kit answers. Fixed: the Q104 explanation and the Q435 wording. Chapters 18-20 and the Section B cases were written with every figure computed by script and re-checked; no errors found. Lesson bodies ("Explain more" text) for 3, 4, 11-20 were not re-read line by line.

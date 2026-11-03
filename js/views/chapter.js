@@ -1,15 +1,29 @@
 'use strict';
 
 (function () {
-  const { el, richText } = ACCA.dom;
+  const { el, richTextT, termNodes } = ACCA.dom;
   const { translate: t, label } = ACCA.i18n;
 
   // A short "Term: meaning" bullet leads with the term so the page can be scanned.
-  function keyPoint(line) {
+  function keyPoint(line, enLine, lang, seen) {
     const text = line.replace(/^- /, '');
+    const english = enLine.replace(/^- /, '');
     const colon = text.indexOf(':');
-    if (colon < 1 || colon > 44) return el('li', {}, text);
-    return el('li', {}, el('strong', {}, text.slice(0, colon + 1)), text.slice(colon + 1));
+    if (colon < 1 || colon > 44) return el('li', {}, termNodes(text, english, lang, seen));
+    return el('li', {}, el('strong', {}, text.slice(0, colon + 1)), termNodes(text.slice(colon + 1), english, lang, seen));
+  }
+
+  function keyPoints(section, lang) {
+    const seen = new Set();
+    const english = section.key.en.trim().split('\n');
+    return t(section.key, lang).trim().split('\n').map((line, n) => keyPoint(line, english[n] ?? section.key.en, lang, seen));
+  }
+
+  // In Russian and Uzbek the official English term is shown beside the translated one.
+  function glossaryTerm(term, lang) {
+    const translated = t(term, lang);
+    const needsEnglish = lang !== 'en' && !translated.toLowerCase().includes(term.en.toLowerCase());
+    return el('dt', {}, translated, needsEnglish && el('small', { class: 'en-chip', lang: 'en' }, term.en));
   }
 
   function chapterLink(chapter, lang, text, className) {
@@ -37,23 +51,23 @@
           el('div', { class: 'lesson-body' },
             el('details', { class: 'more' },
               el('summary', {}, label('objectives', lang)),
-              el('ul', {}, chapter.objectives.map((o) => el('li', {}, t(o, lang))))),
+              el('ul', {}, chapter.objectives.map((o) => el('li', {}, termNodes(t(o, lang), o.en, lang, new Set()))))),
             chapter.sections.map((section, i) => el('section', { class: 'lesson-section', id: `section-${i}` },
               el('h2', {}, t(section.heading, lang)),
-              el('ul', { class: 'key-points' }, t(section.key, lang).trim().split('\n').map(keyPoint)),
+              el('ul', { class: 'key-points' }, keyPoints(section, lang)),
               el('aside', { class: 'example' },
                 el('p', { class: 'example-label' }, label('example', lang)),
-                richText(t(section.example, lang))),
+                richTextT(section.example, lang)),
               el('details', { class: 'more' },
                 el('summary', {}, label('explainMore', lang)),
                 section.exam && el('div', { class: 'exam-notes' },
                   el('h3', {}, label('examNotes', lang)),
-                  richText(t(section.exam, lang))),
-                richText(t(section.body, lang))))),
+                  richTextT(section.exam, lang)),
+                richTextT(section.body, lang)))),
             el('section', { class: 'glossary' },
               el('h2', {}, label('glossary', lang)),
               el('dl', {}, chapter.glossary.map((g) => el('div', { class: 'term' },
-                el('dt', {}, t(g.term, lang)),
+                glossaryTerm(g.term, lang),
                 el('dd', {}, t(g.definition, lang)))))),
             el('div', { class: 'lesson-practice' }, startTraining()),
             el('nav', { class: 'chapter-nav' },

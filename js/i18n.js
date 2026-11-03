@@ -5,6 +5,14 @@ const LANGS = ['en', 'ru', 'uz'];
 
 const LABELS = {
   siteName: { en: 'Balanced', ru: 'Balanced', uz: 'Balanced' },
+  terms: { en: 'Terms', ru: 'Термины', uz: 'Atamalar' },
+  termsTitle: { en: 'Names you may meet in the exam', ru: 'Названия, которые можно встретить на экзамене', uz: 'Imtihonda uchrashi mumkin bo\'lgan nomlar' },
+  termsText: { en: 'The exam is in English and uses one official term. Books, older textbooks and teachers sometimes use another name for the same thing. Search any name here to see the official one.', ru: 'Экзамен на английском и использует один официальный термин. Книги, старые учебники и преподаватели иногда называют то же самое по-другому. Найдите любое название, чтобы увидеть официальное.', uz: 'Imtihon ingliz tilida va bitta rasmiy atamani ishlatadi. Kitoblar, eski darsliklar va o\'qituvchilar ba\'zan bir narsani boshqacha atashadi. Rasmiy nomni ko\'rish uchun istalgan nomni qidiring.' },
+  termsLegend: { en: 'A dashed name is an older or informal one that the Kaplan books do not use. You will not need it in the exam, but you may hear it.', ru: 'Название с пунктиром — старое или неформальное, в книгах Kaplan его нет. На экзамене оно не нужно, но вы можете его услышать.', uz: 'Chiziqli nom eski yoki norasmiy, Kaplan kitoblarida yo\'q. Imtihonda kerak emas, lekin eshitishingiz mumkin.' },
+  termsSearch: { en: 'Search a term or any other name', ru: 'Найти термин или другое название', uz: 'Atama yoki boshqa nomni qidirish' },
+  termsAlso: { en: 'Also called', ru: 'Также называют', uz: 'Boshqacha nomlari' },
+  termsOld: { en: 'Older or informal name', ru: 'Старое или неформальное название', uz: 'Eski yoki norasmiy nom' },
+  termsNone: { en: 'No matching term.', ru: 'Ничего не найдено.', uz: 'Hech narsa topilmadi.' },
   home: { en: 'Course', ru: 'Курс', uz: 'Kurs' },
   practice: { en: 'Practice', ru: 'Практика', uz: 'Mashq' },
   weakAreas: { en: 'Weak points', ru: 'Слабые места', uz: 'Zaif joylar' },

@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  const { el, richText } = ACCA.dom;
+  const { el, richText, richTextT } = ACCA.dom;
   const { translate: t, label, LANGS } = ACCA.i18n;
   const { startSession, answer, isCorrect, score, isComplete, scoreByTopic, bandFor, packAnswers, restoreSession, parseAmount } = ACCA.quiz;
   const { scoreMarks, formatClock, EXAM } = ACCA.exam;
@@ -160,7 +160,7 @@
     return el('div', { class: `feedback ${right ? 'good' : 'bad'}`, role: 'status', tabindex: '-1' },
       el('p', { class: 'feedback-title' }, label(right ? 'correct' : 'incorrect', lang)),
       q.type === 'number' && !right && el('p', { class: 'feedback-answer' }, `${label('correctAnswer', lang)}: ${q.answerText}`),
-      richText(t(q.explanation, lang)),
+      richTextT(q.explanation, lang),
       el('details', {},
         el('summary', {}, label('otherLanguages', lang)),
         LANGS.filter((l) => l !== lang).map((l) => el('div', { class: 'other-lang', lang: l }, richText(t(q.explanation, l))))));

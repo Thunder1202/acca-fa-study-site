@@ -84,6 +84,14 @@ Each chapter shows short key points and a Madina's Mart example, which is one sh
 - The timer keeps running if you leave the page. When time runs out, the paper is marked automatically.
 - After you submit you get your mark, pass or not passed, your score by chapter, and every question marked with an explanation. The result is kept after a reload.
 
+### English exam terms in Russian and Uzbek
+
+The exam is in English and uses one official term, but the Russian and Uzbek lessons use a translated word. So that the two always match, the official English term is shown as a small tag next to the translated word, for example *Дебиторы* `receivables` or *rezerv* `allowance`. It appears in lessons, key points, exam notes, key terms and answer explanations. Each term is tagged once per block, and only when the English version of that text uses the term, so a word with two meanings (such as резерв) gets the right English term.
+
+### Terms page (same thing, different name)
+
+The **Terms** page lists about 55 exam terms with the other names the Kaplan books, your teacher's slides and older textbooks use for the same thing: for example *cash flow statement* for *statement of cash flows*, *net book value* for *carrying amount*, *bad debts* for *irrecoverable debts*, *SFP* for *statement of financial position*. A dashed name is an older or informal one that the Kaplan books do not use. Terms that look alike but are different, such as *gearing* and *debt/equity ratio*, show their formula. You can search any name, in English, Russian or Uzbek.
+
 ### Scores
 
 Scores feed the home page progress, the weak points list and the chapter labels:
@@ -147,7 +155,9 @@ The Kaplan books cover FA (FFA) only. They contain nothing for F7, which is now 
 | `js/progress.js` | Saved scores and weak points |
 | `js/i18n.js` | Every on-screen label, in three languages |
 | `js/router.js`, `js/app.js`, `js/dom.js` | Routing, start-up and page building |
-| `js/views/` | Home, chapter, quiz, practice and mock exam pages |
+| `js/terms.js` | The list that matches Russian and Uzbek words to official English terms |
+| `data/term-names.js` | The Terms page: official term, other names, translations, formulas |
+| `js/views/` | Home, chapter, quiz, practice, mock exam and terms pages |
 | `tests/` | Automated tests |
 | `NEXT_CHAT.md` | Handoff notes for the next chat |
 | `PROJECT_NOTES.md` | Older decisions |
@@ -157,7 +167,7 @@ The Kaplan books cover FA (FFA) only. They contain nothing for F7, which is now 
 - Plain HTML, CSS and JavaScript, with no framework and no build step. It must open from `file://`, so use plain `<script>` tags, not modules.
 - All content goes through `el()` in `js/dom.js`, never `innerHTML`.
 - Every label needs English, Russian and Uzbek.
-- Run the tests with `node --test "tests/*.test.mjs"`. There are 246, all passing. Never run `node --test tests/`, which fails on Node 24.
+- Run the tests with `node --test "tests/*.test.mjs"`. There are 324, all passing. Never run `node --test tests/`, which fails on Node 24.
 - The tests check that every Kit question 1-550 is covered exactly once, that every case totals 15 marks, and that key points stay short and match across languages.
 
 ### Updating the phone link

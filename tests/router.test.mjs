@@ -30,6 +30,10 @@ test('chapter route with no id falls back to home', () => {
   assert.deepEqual(parseRoute('#/chapter'), { view: 'home', params: {} });
 });
 
+test('terms route has no parameters', () => {
+  assert.deepEqual(parseRoute('#/terms'), { view: 'terms', params: {} });
+});
+
 test('exam route has a start page and a paper page', () => {
   assert.deepEqual(parseRoute('#/exam'), { view: 'exam', params: { step: 'start' } });
   assert.deepEqual(parseRoute('#/exam/paper'), { view: 'exam', params: { step: 'paper' } });

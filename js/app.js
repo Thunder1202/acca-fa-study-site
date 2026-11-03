@@ -8,6 +8,7 @@
   const { renderQuiz, resetQuiz } = ACCA.quizView;
   const { renderPractice, renderWeakAreas } = ACCA.practiceView;
   const { renderExamStart, renderExamPaper } = ACCA.examView;
+  const { renderTerms } = ACCA.termsView;
   const { caseQuestions } = ACCA.exam;
   const { getTheme, getMode, setMode, nextMode } = ACCA.theme;
   const { el } = ACCA.dom;
@@ -111,6 +112,7 @@
     else if (view === 'quiz') showQuiz(params.topicId, lang);
     else if (view === 'practice') renderPractice(app, topics, storage, lang, sectionB);
     else if (view === 'exam') (params.step === 'paper' ? renderExamPaper : renderExamStart)(app, { storage, topics }, lang);
+    else if (view === 'terms') renderTerms(app, lang);
     else if (view === 'weak-areas') renderWeakAreas(app, topics, storage, lang);
     else renderHome(app, course, chapters, storage, lang);
   }
