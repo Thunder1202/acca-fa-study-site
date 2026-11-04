@@ -15,40 +15,55 @@ function el(tag, attrs = {}, ...children) {
   return node;
 }
 
-function richText(text) {
-  return text.trim().split(/\n\s*\n/).map((block) => {
-    const lines = block.split('\n');
-    if (lines.every((line) => line.startsWith('- '))) {
-      return el('ul', {}, lines.map((line) => el('li', {}, line.slice(2))));
-    }
-    return el('p', {}, block);
+// Russian and Uzbek words get their official English exam term beside them,
+// and glossary terms become buttons that show their meaning.
+function termNodes(text, enText, lang, seen = new Set()) {
+  const terms = globalThis.ACCA?.terms;
+  const glossary = globalThis.ACCA?.glossary;
+  const parts = lang === 'en' || !terms ? [{ text }] : terms.annotate(text, enText, lang, seen);
+  return parts.flatMap((part) => {
+    if (!part.term) return glossary ? glossary.link(part.text, lang, seen, enText) : [part.text];
+    const chip = el('span', { class: 'tl' }, part.text, el('small', { lang: 'en' }, part.term));
+    const entry = glossary?.byLabel(part.term, seen);
+    return entry ? glossary.button(entry, lang, chip) : chip;
   });
 }
 
-// In Russian and Uzbek the official English exam term is shown beside the translated word.
-function termNodes(text, enText, lang, seen) {
-  const terms = globalThis.ACCA?.terms;
-  if (!terms || lang === 'en') return [text];
-  return terms.annotate(text, enText, lang, seen).map((part) => (part.term
-    ? el('span', { class: 'tl' }, part.text, el('small', { lang: 'en' }, part.term))
-    : part.text));
+// Worked answers mark their lines: "# " a step title, "= " a result, "! " a trap to avoid,
+// and two leading spaces a line of working.
+const STEP_LINE = /^(# |= |! | {2})/;
+
+function stepLine(line, inline) {
+  if (line.startsWith('# ')) return el('p', { class: 'step-title' }, inline(line.slice(2)));
+  if (line.startsWith('= ')) return el('p', { class: 'step-result' }, inline(line.slice(2)));
+  if (line.startsWith('! ')) return el('p', { class: 'step-trap' }, inline(line.slice(2)));
+  if (line.startsWith('  ')) return el('p', { class: 'step-line working' }, inline(line.trim()));
+  if (line.startsWith('- ')) return el('p', { class: 'step-line bullet' }, inline(line.slice(2)));
+  return el('p', { class: 'step-line' }, inline(line));
 }
 
-function richTextT(field, lang) {
-  if (lang === 'en') return richText(field.en);
-  const seen = new Set();
+function block(text, enText, lang, seen, link) {
+  const lines = text.split('\n');
+  const enLines = enText.split('\n');
+  const enFor = (j) => (enLines.length === lines.length ? enLines[j] : enText);
+  const inline = (t, en) => (link ? termNodes(t, en, lang, seen) : [t]);
+  if (lines.every((line) => line.startsWith('- '))) {
+    return el('ul', {}, lines.map((line, j) => el('li', {}, inline(line.slice(2), enFor(j).replace(/^- /, '')))));
+  }
+  if (lines.some((line) => STEP_LINE.test(line))) {
+    return el('div', { class: 'steps' }, lines.map((line, j) => stepLine(line, (t) => inline(t, enFor(j)))));
+  }
+  return el('p', {}, inline(text, enText));
+}
+
+function richText(text) {
+  return text.trim().split(/\n\s*\n/).map((b) => block(b, b, 'en', null, false));
+}
+
+function richTextT(field, lang, seen = new Set()) {
   const enBlocks = field.en.trim().split(/\n\s*\n/);
   const blocks = field[lang].trim().split(/\n\s*\n/);
-  return blocks.map((block, i) => {
-    const enBlock = enBlocks.length === blocks.length ? enBlocks[i] : field.en;
-    const lines = block.split('\n');
-    const enLines = enBlock.split('\n');
-    if (lines.every((line) => line.startsWith('- '))) {
-      return el('ul', {}, lines.map((line, j) => el('li', {},
-        termNodes(line.slice(2), enLines.length === lines.length ? enLines[j].replace(/^- /, '') : enBlock, lang, seen))));
-    }
-    return el('p', {}, termNodes(block, enBlock, lang, seen));
-  });
+  return blocks.map((b, i) => block(b, enBlocks.length === blocks.length ? enBlocks[i] : field.en, lang, seen, true));
 }
 
 (globalThis.ACCA ??= {}).dom = { el, richText, richTextT, termNodes };

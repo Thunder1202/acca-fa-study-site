@@ -76,5 +76,26 @@ function restoreSession(questions, packed) {
   return { questions, answers: new Map(packed.filter(([id]) => known.has(id))) };
 }
 
-if (typeof module !== 'undefined') module.exports = { startSession, answer, isCorrect, score, isComplete, scoreByTopic, bandFor, packAnswers, restoreSession, parseAmount };
-else (globalThis.ACCA ??= {}).quiz = { startSession, answer, isCorrect, score, isComplete, scoreByTopic, bandFor, packAnswers, restoreSession, parseAmount };
+// Kit numbers as short ranges, so the book can be followed: [1, 2, 3, 5] -> "Q1–3, Q5".
+function kitRange(refs) {
+  const sorted = [...new Set(refs)].sort((a, b) => a - b);
+  const runs = [];
+  for (const n of sorted) {
+    const run = runs[runs.length - 1];
+    if (run && n === run[1] + 1) run[1] = n;
+    else runs.push([n, n]);
+  }
+  return runs.map(([a, b]) => (a === b ? `Q${a}` : `Q${a}–${b}`)).join(', ');
+}
+
+// The answer key written out, for showing an answer outside the quiz.
+function answerText(q) {
+  if (q.type === 'single') return q.options[q.correctIndex];
+  if (q.type === 'multi') return q.correctIndices.map((i) => q.options[i]).join('; ');
+  if (q.type === 'number') return q.answerText;
+  if (q.type === 'matrix') return q.rows.map((row) => `${row.text}: ${q.columns[row.correctIndex]}`).join('\n');
+  return '';
+}
+
+if (typeof module !== 'undefined') module.exports = { startSession, answer, isCorrect, score, isComplete, scoreByTopic, bandFor, packAnswers, restoreSession, parseAmount, kitRange, answerText };
+else (globalThis.ACCA ??= {}).quiz = { startSession, answer, isCorrect, score, isComplete, scoreByTopic, bandFor, packAnswers, restoreSession, parseAmount, kitRange, answerText };

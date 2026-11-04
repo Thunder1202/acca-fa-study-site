@@ -10,6 +10,11 @@ test('chapter route extracts id', () => {
   assert.deepEqual(parseRoute('#/chapter/1'), { view: 'chapter', params: { id: '1' } });
 });
 
+test('chapter route can name a section to open at', () => {
+  assert.deepEqual(parseRoute('#/chapter/17/2'), { view: 'chapter', params: { id: '17', section: 2 } });
+  assert.deepEqual(parseRoute('#/chapter/17/x'), { view: 'chapter', params: { id: '17' } });
+});
+
 test('quiz route extracts topicId', () => {
   assert.deepEqual(parseRoute('#/quiz/chapter-01'), { view: 'quiz', params: { topicId: 'chapter-01' } });
 });

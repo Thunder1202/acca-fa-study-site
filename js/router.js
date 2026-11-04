@@ -1,8 +1,8 @@
 'use strict';
 
 function parseRoute(hash) {
-  const [view, param] = hash.replace(/^#\/?/, '').split('/');
-  if (view === 'chapter' && param) return { view, params: { id: param } };
+  const [view, param, extra] = hash.replace(/^#\/?/, '').split('/');
+  if (view === 'chapter' && param) return { view, params: /^\d+$/.test(extra ?? '') ? { id: param, section: Number(extra) } : { id: param } };
   if (view === 'quiz' && param) return { view, params: { topicId: param } };
   if (view === 'exam') return { view, params: { step: param === 'paper' ? 'paper' : 'start' } };
   if (view === 'terms') return { view, params: {} };

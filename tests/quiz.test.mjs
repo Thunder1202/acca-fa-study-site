@@ -162,3 +162,18 @@ test('answer leaves the earlier session unchanged', () => {
   answer(before, 'q1', 0);
   assert.deepEqual(score(before), { attempted: 0, correct: 0 });
 });
+
+test('Kit numbers are shown as short ranges', async () => {
+  const { kitRange } = await import('../js/quiz.js');
+  assert.equal(kitRange([436, 437, 438]), 'Q436–438');
+  assert.equal(kitRange([171, 173, 174, 175, 178]), 'Q171, Q173–175, Q178');
+  assert.equal(kitRange([5]), 'Q5');
+});
+
+test('the answer key can be written out for every question type', async () => {
+  const { answerText } = await import('../js/quiz.js');
+  assert.equal(answerText({ type: 'single', options: ['a', 'b'], correctIndex: 1 }), 'b');
+  assert.equal(answerText({ type: 'multi', options: ['a', 'b', 'c'], correctIndices: [0, 2] }), 'a; c');
+  assert.equal(answerText({ type: 'number', answerText: '$1,200' }), '$1,200');
+  assert.equal(answerText({ type: 'matrix', columns: ['True', 'False'], rows: [{ text: 'x', correctIndex: 1 }] }), 'x: False');
+});

@@ -258,7 +258,7 @@
     return segments.length ? segments : [{ text }];
   }
 
-  const api = { annotate, TERMS };
+  const api = { annotate, TERMS, toRegex };
   if (typeof module !== 'undefined') module.exports = api;
   else (globalThis.ACCA ??= {}).terms = api;
 })();

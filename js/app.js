@@ -46,7 +46,9 @@
       el('a', { class: 'button primary', href: '#/' }, label('goHome', lang))));
   }
 
-  function showChapter(number, lang) {
+  const kitRangeFor = (topicId) => ACCA.quiz.kitRange(questions[topicId].map((q) => q.kitRef));
+
+  function showChapter(number, section, lang) {
     const position = openChapters.findIndex((chapter) => String(chapter.number) === number);
     if (position === -1) return renderNotFound(lang);
     const entry = openChapters[position];
@@ -55,6 +57,8 @@
       previous: openChapters[position - 1],
       next: openChapters[position + 1],
       questionCount: questions[entry.id].length,
+      kitRange: kitRangeFor(entry.id),
+      section,
     }, lang);
   }
 
@@ -82,6 +86,7 @@
     return renderQuiz(app, {
       key: topicId, questions: questions[topicId], storage,
       title: ACCA.i18n.translate(topic.title, lang), backHref: `#/chapter/${topic.number}`, backLabel: 'backToLesson',
+      subtitle: `${label('kitQuestions', lang)}: ${kitRangeFor(topicId)}`,
     }, lang);
   }
 
@@ -108,7 +113,10 @@
   function render() {
     const { view, params } = parseRoute(window.location.hash);
     renderChrome(lang);
-    if (view === 'chapter') showChapter(params.id, lang);
+    ACCA.glossary.setChapter(Infinity);
+    ACCA.glossary.closeCard();
+    ACCA.helper.setLang(lang);
+    if (view === 'chapter') showChapter(params.id, params.section, lang);
     else if (view === 'quiz') showQuiz(params.topicId, lang);
     else if (view === 'practice') renderPractice(app, topics, storage, lang, sectionB);
     else if (view === 'exam') (params.step === 'paper' ? renderExamPaper : renderExamStart)(app, { storage, topics }, lang);

@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  const { el, richText, richTextT } = ACCA.dom;
+  const { el, richText, richTextT, termNodes } = ACCA.dom;
   const { translate: t, label, LANGS } = ACCA.i18n;
   const { startSession, answer, isCorrect, score, isComplete, scoreByTopic, bandFor, packAnswers, restoreSession, parseAmount } = ACCA.quiz;
   const { scoreMarks, formatClock, EXAM } = ACCA.exam;
@@ -197,10 +197,11 @@
 
   function questionCard(q, number, total, lang, locked, onPick, onEnter, showCase = true) {
     const given = state.session.answers.get(q.id);
+    ACCA.glossary?.setChapter(ACCA.glossary.chapterOf(q.topicId));
     return el('section', { class: 'question', id: `q-${q.id}` },
       q.case && caseBlock(q, lang, showCase),
       questionMeta(q, number, total, lang),
-      el('h2', { lang: 'en' }, q.text),
+      el('h2', { lang: 'en' }, termNodes(q.text, q.text, 'en')),
       q.table && dataTable(q.table),
       q.type === 'multi' && el('p', { class: 'hint' }, label('selectTwo', lang)),
       el('div', { lang: 'en' }, answerArea(q, given, locked, onPick, onEnter, lang)),
@@ -361,7 +362,9 @@
     const redraw = () => renderQuiz(container, config, lang);
     container.replaceChildren(el('div', { class: `quiz${config.exam ? ' is-exam' : ''}` },
       el('header', { class: 'quiz-head' },
-        el('h1', {}, config.title),
+        el('div', {},
+          el('h1', {}, config.title),
+          config.subtitle && el('p', { class: 'kit-range' }, config.subtitle)),
         !config.fixedMode && modeSwitch(config, redraw, lang)),
       state.mode === 'all' ? allAtOnce(config, redraw, lang) : oneAtATime(config, redraw, lang)));
     if (state.mode !== 'one') return;
