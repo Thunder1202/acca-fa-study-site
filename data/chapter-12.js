@@ -8,11 +8,31 @@ const chapter12 = {
     uz: 'Kapital tuzilmasi va moliyaviy xarajatlar',
   },
   objectives: [
-    { en: 'Understand how a limited liability company is financed', ru: 'Понимать, как финансируется компания с ограниченной ответственностью', uz: 'Mas\'uliyati cheklangan kompaniya qanday moliyalashtirilishini tushunish' },
-    { en: 'Record share issues, share capital and share premium', ru: 'Отражать выпуск акций, акционерный капитал и эмиссионный доход', uz: 'Aksiya chiqarish, aksiya kapitali va emissiya daromadini qayd etish' },
-    { en: 'Define and record rights issues and bonus issues', ru: 'Определять и отражать выпуск прав и бонусный выпуск', uz: 'Huquqli va bonusli chiqarishlarni aniqlash va qayd etish' },
-    { en: 'Record dividends, loan note interest and reserves', ru: 'Отражать дивиденды, проценты по долговым нотам и резервы', uz: 'Dividendlar, qarz notasi foizi va rezervlarni qayd etish' },
-    { en: 'Record income tax in the ledger', ru: 'Отражать налог на прибыль в учёте', uz: 'Foyda solig\'ini hisobda qayd etish' },
+    {
+      en: 'Understand how a limited liability company is financed',
+      ru: 'Понимать, как финансируется компания с ограниченной ответственностью',
+      uz: 'Mas\'uliyati cheklangan kompaniya qanday moliyalashtirilishini tushunish',
+    },
+    {
+      en: 'Record share issues, share capital and share premium',
+      ru: 'Отражать выпуск акций, акционерный капитал и эмиссионный доход',
+      uz: 'Aksiya chiqarish, aksiya kapitali va emissiya daromadini qayd etish',
+    },
+    {
+      en: 'Define and record rights issues and bonus issues',
+      ru: 'Определять и отражать выпуск прав и бонусный выпуск',
+      uz: 'Huquqli va bonusli chiqarishlarni aniqlash va qayd etish',
+    },
+    {
+      en: 'Record dividends, loan note interest and reserves',
+      ru: 'Отражать дивиденды, проценты по долговым нотам и резервы',
+      uz: 'Dividendlar, qarz notasi foizi va rezervlarni qayd etish',
+    },
+    {
+      en: 'Record income tax in the ledger',
+      ru: 'Отражать налог на прибыль в учёте',
+      uz: 'Foyda solig\'ini hisobda qayd etish',
+    },
   ],
   sections: [
     {
@@ -76,9 +96,29 @@ Qarz notalari qarz. Foiz odatda har yili to'lanadi, to'liq summa keyin qaytarila
 Imtiyozli aksiyalar ikkalasi ham bo'lishi mumkin. Qaytarilishi kerak bo'lsa, ular majburiyat, dividendlar moliyaviy xarajat. Qaytarilmasa, kapital, dividendlar oddiydek ishlanadi. Baribir ular biznes qoldig'iga huquq bermaydi.`,
       },
       example: {
-        en: `Madina's Mart has become Madina's Mart LLC. It sells ordinary shares to raise money, with no promise to repay. It also borrows from investors with 8% loan notes repayable in ten years, which is a liability with interest in profit or loss. A relative buys 6% redeemable preference shares, which must be repaid in five years. Although they are called shares, they are a liability, and the 6% goes through finance costs.`,
-        ru: `Madina's Mart стал компанией Madina's Mart LLC. Она продаёт обыкновенные акции без обещания вернуть деньги. Она также занимает у инвесторов через 8% долговые ноты сроком на десять лет: это обязательство, проценты идут в прибыль или убыток. Родственница покупает 6% погашаемые привилегированные акции, подлежащие погашению через пять лет. Хотя они называются акциями, это обязательство, а 6% идут через финансовые расходы.`,
-        uz: `Madina's Mart endi Madina's Mart LLC. U qaytarish va'dasisiz oddiy aksiyalar sotadi. U investorlardan o'n yilga 8% qarz notalari bilan ham qarz oladi: bu majburiyat, foiz foyda yoki zararga o'tadi. Qarindoshi besh yilda qaytariladigan 6% imtiyozli aksiyalar sotib oladi. Aksiya deyilsa ham, bu majburiyat, 6% esa moliyaviy xarajatdan o'tadi.`,
+        en: `A new company raises money three ways. Ask for each: must it be paid back?
+- Ordinary shares: no promise to repay, dividends only if the directors choose. EQUITY.
+- 8% loan notes repayable in 10 years: must be repaid, interest every year. A LIABILITY; the interest is a finance cost.
+- 6% redeemable preference shares repayable in 5 years: must be repaid. A LIABILITY, even though they are called shares; the 6% goes to finance costs.`,
+        ru: `Новая компания привлекает деньги тремя способами. Спросите о каждом: нужно ли возвращать?
+- Обыкновенные акции: возвращать не обещают, дивиденды — по решению директоров. КАПИТАЛ.
+- Долговые ноты под 8% на 10 лет: вернуть обязаны, проценты каждый год. ОБЯЗАТЕЛЬСТВО; проценты — финансовые расходы.
+- Погашаемые привилегированные акции под 6% на 5 лет: вернуть обязаны. ОБЯЗАТЕЛЬСТВО, хоть и называются акциями; 6% идут в финансовые расходы.`,
+        uz: `Yangi kompaniya pulni uch yo'l bilan jalb qiladi. Har biri haqida so'rang: qaytarish kerakmi?
+- Oddiy aksiyalar: qaytarish va'da qilinmaydi, dividend — direktorlar xohlasa. KAPITAL.
+- 10 yilga 8% li qarz notalari: qaytarilishi shart, har yili foiz. MAJBURIYAT; foiz — moliyaviy xarajat.
+- 5 yilga 6% li qaytariladigan imtiyozli aksiyalar: qaytarilishi shart. Aksiya deb atalsa ham MAJBURIYAT; 6% moliyaviy xarajatga boradi.`,
+      },
+      simple: {
+        en: `A company raises money in two ways. Debt (loans) must be paid back, with interest. Equity (ordinary shares) never has to be paid back, and dividends are optional.
+
+The test is: MUST the company pay it back? If yes, it is a liability, and its interest or dividend is a finance cost. That is why redeemable preference shares count as debt, even though they are called "shares", while irredeemable ones are equity.`,
+        ru: `Компания привлекает деньги двумя способами. Долг (займы) нужно вернуть с процентами. Капитал (обыкновенные акции) возвращать не нужно, а дивиденды необязательны.
+
+Проверка: ОБЯЗАНА ли компания вернуть деньги? Если да — это обязательство, а проценты или дивиденды — финансовые расходы. Поэтому погашаемые привилегированные акции — долг, хоть и называются «акциями», а непогашаемые — капитал.`,
+        uz: `Kompaniya pulni ikki yo'l bilan jalb qiladi. Qarz (qarzlar) foiz bilan qaytarilishi kerak. Kapital (oddiy aksiyalar) hech qachon qaytarilmaydi, dividend esa ixtiyoriy.
+
+Sinov: kompaniya pulni qaytarishi SHARTmi? Ha bo'lsa — majburiyat, foizi yoki dividendi — moliyaviy xarajat. Shuning uchun qaytariladigan imtiyozli aksiyalar «aksiya» deb atalsa ham qarz, qaytarilmaydiganlari esa kapital.`,
       },
     },
     {
@@ -116,11 +156,7 @@ Imtiyozli aksiyalar ikkalasi ham bo'lishi mumkin. Qaytarilishi kerak bo'lsa, ula
 - Aksiya kapitali = aksiyalar soni x nominal. Hech qachon chiqarish narxini olmang.
 - Chaqirilgan kapital — to'langan nominal plus aksiyadorlar to'lashga kelishgan summalar. To'langan kapital — hozirgacha to'langani.`,
       },
-      heading: {
-        en: 'Issuing shares',
-        ru: 'Выпуск акций',
-        uz: 'Aksiya chiqarish',
-      },
+      heading: { en: 'Issuing shares', ru: 'Выпуск акций', uz: 'Aksiya chiqarish' },
       body: {
         en: `Every share has a nominal or par value, often $1, 50c or 25c. It stays fixed and is often used to work out dividends. The company first sells shares at an issue price, which is at least the nominal value. After that, holders may sell to others at the market value, which moves with the fortunes of the company. Market value does not feature in the financial statements.
 
@@ -139,9 +175,41 @@ Chiqarilgan aksiya kapitali — aksiyadorlarga berilgan aksiyalar soni va nomina
 Nominalda chiqarilsa, yozuv: Dt Bank, Kt Aksiya kapitali. Amalda kompaniyalar odatda mukofot bilan chiqaradi. Unda aksiya kapitali hisobi faqat nominalni oladi, farq esa emissiya daromadiga o'tadi. Ikkala hisob kapitalda ko'rsatiladi.`,
       },
       example: {
-        en: `Madina's Mart LLC issues 100,000 $1 ordinary shares at $1.50 each. Cash received is $150,000. The nominal value is $100,000 and the premium is 100,000 x $0.50 = $50,000. The entry is Dr Bank $150,000, Cr Share capital $100,000, Cr Share premium $50,000.`,
-        ru: `Madina's Mart LLC выпускает 100,000 обыкновенных акций номиналом $1 по $1.50. Получено $150,000. Номинал $100,000, премия 100,000 x $0.50 = $50,000. Запись: Дт Банк $150,000, Кт Акционерный капитал $100,000, Кт Эмиссионный доход $50,000.`,
-        uz: `Madina's Mart LLC 100,000 ta $1 lik oddiy aksiyani $1.50 dan chiqaradi. Olingan pul $150,000. Nominal $100,000, mukofot 100,000 x $0.50 = $50,000. Yozuv: Dt Bank $150,000, Kt Aksiya kapitali $100,000, Kt Emissiya daromadi $50,000.`,
+        en: `A company sells 100,000 $1 shares at $1.50 each.
+# Step 1: Cash received
+  100,000 × $1.50 = $150,000
+# Step 2: Share capital (nominal value only)
+  100,000 × $1 = $100,000
+# Step 3: Share premium (the extra)
+  100,000 × $0.50 = $50,000
+= Dr Bank $150,000, Cr Share capital $100,000, Cr Share premium $50,000`,
+        ru: `Компания продаёт 100,000 акций номиналом $1 по $1.50.
+# Шаг 1: Получено денег
+  100,000 × $1.50 = $150,000
+# Шаг 2: Акционерный капитал (только номинал)
+  100,000 × $1 = $100,000
+# Шаг 3: Эмиссионный доход (превышение)
+  100,000 × $0.50 = $50,000
+= Дт Банк $150,000, Кт Акционерный капитал $100,000, Кт Эмиссионный доход $50,000`,
+        uz: `Kompaniya $1 nominalli 100,000 aksiyani $1.50 dan sotadi.
+# 1-qadam: Olingan pul
+  100,000 × $1.50 = $150,000
+# 2-qadam: Aksiya kapitali (faqat nominal)
+  100,000 × $1 = $100,000
+# 3-qadam: Emissiya daromadi (ortiqcha)
+  100,000 × $0.50 = $50,000
+= Dt Bank $150,000, Kt Aksiya kapitali $100,000, Kt Emissiya daromadi $50,000`,
+      },
+      simple: {
+        en: `Every share has a fixed "label" value called its nominal (par) value, for example $1. Companies usually sell new shares for more than that.
+
+Share capital always records only the nominal value. Anything paid above it goes to share premium. Both are part of equity. The share's market value on the stock market never appears in the accounts.`,
+        ru: `У каждой акции есть фиксированная «этикеточная» стоимость — номинал, например $1. Новые акции обычно продают дороже.
+
+В акционерный капитал всегда записывают только номинал. Всё, что заплачено сверх него, идёт в эмиссионный доход. Оба — часть капитала. Рыночная цена акции на бирже в отчётности не появляется.`,
+        uz: `Har bir aksiyaning nominal deb ataluvchi qat'iy «yorliq» qiymati bor, masalan $1. Kompaniyalar yangi aksiyalarni odatda qimmatroq sotadi.
+
+Aksiya kapitaliga doim faqat nominal yoziladi. Undan ortiq to'langani emissiya daromadiga boradi. Ikkalasi ham kapital qismi. Aksiyaning birjadagi bozor narxi hisobotda ko'rinmaydi.`,
       },
     },
     {
@@ -208,9 +276,47 @@ Bonusli chiqarish mavjud aksiyadorlarga ulushiga mutanosib, pulsiz yangi aksiyal
 Pul kelmagani uchun yangi aksiyalar rezervlardan qoplanadi. Istalgan rezervni ishlatish mumkin, lekin dividend uchun rezervlarni saqlash uchun avval emissiya daromadi kabi taqsimlanmaydigan rezerv olinadi. Yozuv nominalni rezervdan aksiya kapitaliga o'tkazadi, shuning uchun jami kapital o'zgarmaydi.`,
       },
       example: {
-        en: `Madina's Mart LLC has 100,000 $1 shares and $50,000 of share premium. It makes a 1-for-5 rights issue at $1.20: 20,000 shares bring in $24,000. Dr Bank $24,000, Cr Share capital $20,000, Cr Share premium $4,000. Capital is now $120,000 and premium $54,000. Later a 1-for-10 bonus issue creates 12,000 shares: Dr Share premium $12,000, Cr Share capital $12,000. Capital is $132,000 and premium $42,000. Total equity is unchanged by the bonus.`,
-        ru: `У Madina's Mart LLC 100,000 акций по $1 и эмиссионный доход $50,000. Она проводит выпуск прав 1 за 5 по $1.20: 20,000 акций дают $24,000. Дт Банк $24,000, Кт Акционерный капитал $20,000, Кт Эмиссионный доход $4,000. Капитал теперь $120,000, премия $54,000. Позже бонусный выпуск 1 за 10 создаёт 12,000 акций: Дт Эмиссионный доход $12,000, Кт Акционерный капитал $12,000. Капитал $132,000, премия $42,000. Общий капитал от бонуса не меняется.`,
-        uz: `Madina's Mart LLC da 100,000 ta $1 lik aksiya va $50,000 emissiya daromadi bor. U $1.20 dan 1 ga 5 huquqli chiqarish qiladi: 20,000 aksiya $24,000 olib keladi. Dt Bank $24,000, Kt Aksiya kapitali $20,000, Kt Emissiya daromadi $4,000. Kapital endi $120,000, mukofot $54,000. Keyin 1 ga 10 bonusli chiqarish 12,000 aksiya yaratadi: Dt Emissiya daromadi $12,000, Kt Aksiya kapitali $12,000. Kapital $132,000, mukofot $42,000. Bonusdan jami kapital o'zgarmaydi.`,
+        en: `The company has 100,000 $1 shares and $50,000 of share premium.
+# Rights issue: 1 new share for every 5 held, at $1.20
+  New shares: 100,000 / 5 = 20,000. Cash: 20,000 × $1.20 = $24,000
+  Dr Bank $24,000, Cr Share capital $20,000, Cr Share premium $4,000
+  Now: capital $120,000, premium $54,000
+# Bonus issue: 1 free share for every 10 held
+  New shares: 120,000 / 10 = 12,000 × $1 = $12,000
+  Dr Share premium $12,000, Cr Share capital $12,000
+  Now: capital $132,000, premium $42,000
+= The bonus issue moved $12,000 inside equity; total equity did not change and no cash moved.`,
+        ru: `У компании 100,000 акций по $1 и эмиссионный доход $50,000.
+# Выпуск прав: 1 новая акция на каждые 5, по $1.20
+  Новых акций: 100,000 / 5 = 20,000. Деньги: 20,000 × $1.20 = $24,000
+  Дт Банк $24,000, Кт Акционерный капитал $20,000, Кт Эмиссионный доход $4,000
+  Теперь: капитал $120,000, эмиссионный доход $54,000
+# Бонусный выпуск: 1 бесплатная акция на каждые 10
+  Новых акций: 120,000 / 10 = 12,000 × $1 = $12,000
+  Дт Эмиссионный доход $12,000, Кт Акционерный капитал $12,000
+  Теперь: капитал $132,000, эмиссионный доход $42,000
+= Бонусный выпуск перенёс $12,000 внутри капитала; общий капитал не изменился, денег не было.`,
+        uz: `Kompaniyada $1 lik 100,000 aksiya va $50,000 emissiya daromadi bor.
+# Huquqli chiqarish: har 5 taga 1 ta yangi, $1.20 dan
+  Yangi aksiyalar: 100,000 / 5 = 20,000. Pul: 20,000 × $1.20 = $24,000
+  Dt Bank $24,000, Kt Aksiya kapitali $20,000, Kt Emissiya daromadi $4,000
+  Endi: kapital $120,000, emissiya daromadi $54,000
+# Bonusli chiqarish: har 10 taga 1 ta bepul
+  Yangi aksiyalar: 120,000 / 10 = 12,000 × $1 = $12,000
+  Dt Emissiya daromadi $12,000, Kt Aksiya kapitali $12,000
+  Endi: kapital $132,000, emissiya daromadi $42,000
+= Bonusli chiqarish kapital ichida $12,000 ni ko'chirdi; jami kapital o'zgarmadi, pul harakatlanmadi.`,
+      },
+      simple: {
+        en: `A rights issue: existing shareholders are offered new shares, in proportion to what they own, for CASH, usually at a price below the market price. It is recorded like any share issue.
+
+A bonus issue: existing shareholders get FREE new shares in proportion. No cash comes in, so the new shares are "paid for" by moving money from a reserve (share premium first) into share capital. Total equity does not change.`,
+        ru: `Выпуск прав: акционерам предлагают новые акции пропорционально их доле за ДЕНЬГИ, обычно ниже рыночной цены. Записывается как любой выпуск акций.
+
+Бонусный выпуск: акционеры получают БЕСПЛАТНЫЕ новые акции пропорционально. Денег нет, поэтому новые акции «оплачивают» переносом суммы из резерва (сначала эмиссионного дохода) в акционерный капитал. Общий капитал не меняется.`,
+        uz: `Huquqli chiqarish: mavjud aksiyadorlarga ulushiga mutanosib ravishda yangi aksiyalar PULGA, odatda bozor narxidan arzonroq taklif qilinadi. Oddiy aksiya chiqarish kabi yoziladi.
+
+Bonusli chiqarish: aksiyadorlar mutanosib ravishda BEPUL yangi aksiyalar oladi. Pul kelmaydi, shuning uchun yangi aksiyalar rezervdan (avval emissiya daromadidan) aksiya kapitaliga summa o'tkazib «to'lanadi». Jami kapital o'zgarmaydi.`,
       },
     },
     {
@@ -257,11 +363,7 @@ Pul kelmagani uchun yangi aksiyalar rezervlardan qoplanadi. Istalgan rezervni is
 - O'tgan yilning shu yil tasdiqlanib to'langan yakuniy dividendi shu yil ayiriladi. Shu yilning tasdiqlanmagan taklifi yo'q.
 - Aksiyalar soni = aksiya kapitali / nominal. 50c lik $200,000 kapital 400,000 aksiya.`,
       },
-      heading: {
-        en: 'Dividends and reserves',
-        ru: 'Дивиденды и резервы',
-        uz: 'Dividendlar va rezervlar',
-      },
+      heading: { en: 'Dividends and reserves', ru: 'Дивиденды и резервы', uz: 'Dividendlar va rezervlar' },
       body: {
         en: `Dividends share profits among shareholders and are usually stated as an amount per share or a percentage of nominal value. Preference dividends are usually a fixed percentage of nominal value.
 
@@ -286,9 +388,44 @@ Kompaniyalar o'zini ichkaridan ham moliyalashtiradi. To'plangan foyda (taqsimlan
 Kapitaldagi o'zgarishlar hisoboti har bir kapital qoldig'ini yil boshidan oxirigacha solishtiradi. Unda aksiya kapitali, emissiya daromadi, qayta baholash rezervi va taqsimlanmagan foyda ustunlari bor. Yil foydasi taqsimlanmagan foydaga kiradi, dividendlar undan chiqadi, qayta baholash foydasi rezervga kiradi, aksiya chiqarish esa aksiya kapitali va emissiya daromadiga kiradi. Yakuniy qoldiqlar moliyaviy holat hisobotiga o'tadi.`,
       },
       example: {
-        en: `Madina's Mart LLC has 132,000 $1 shares, opening retained earnings of $30,000 and profit for the year of $45,000. It pays an interim dividend of 10c a share: 132,000 x 10c = $13,200. At the year end it proposes a final dividend of $20,000, not yet approved. Closing retained earnings are $30,000 + $45,000 - $13,200 = $61,800. The $20,000 is not a liability and is not deducted. A $20,000 revaluation gain would add to total comprehensive income, making it $65,000, but would not change retained earnings.`,
-        ru: `У Madina's Mart LLC 132,000 акций по $1, нераспределённая прибыль на начало $30,000 и прибыль за год $45,000. Она платит промежуточный дивиденд 10c на акцию: 132,000 x 10c = $13,200. В конце года она предлагает итоговый дивиденд $20,000, ещё не утверждённый. Нераспределённая прибыль на конец: $30,000 + $45,000 - $13,200 = $61,800. $20,000 — не обязательство и не вычитаются. Прирост от переоценки $20,000 увеличил бы общий совокупный доход до $65,000, но не изменил бы нераспределённую прибыль.`,
-        uz: `Madina's Mart LLC da 132,000 ta $1 lik aksiya, boshlang'ich taqsimlanmagan foyda $30,000 va yil foydasi $45,000 bor. U aksiyaga 10c oraliq dividend to'laydi: 132,000 x 10c = $13,200. Yil oxirida hali tasdiqlanmagan $20,000 yakuniy dividend taklif qiladi. Yakuniy taqsimlanmagan foyda: $30,000 + $45,000 - $13,200 = $61,800. $20,000 majburiyat emas va ayirilmaydi. $20,000 qayta baholash foydasi jami umumlashgan daromadni $65,000 qilardi, lekin taqsimlanmagan foydani o'zgartirmasdi.`,
+        en: `The company has 132,000 shares, opening retained earnings of $30,000 and profit for the year of $45,000.
+# Step 1: Interim dividend paid during the year
+  132,000 × 10c = $13,200: Dr Retained earnings, Cr Bank
+# Step 2: Final dividend proposed at the year end ($20,000)
+  Not yet approved by shareholders, so it is NOT recorded
+# Step 3: Closing retained earnings
+  $30,000 + $45,000 - $13,200 = $61,800
+# What if land was also revalued up by $20,000?
+  Total comprehensive income = $45,000 + $20,000 = $65,000, but retained earnings stay $61,800 (the $20,000 goes to the revaluation surplus)`,
+        ru: `У компании 132,000 акций, нераспределённая прибыль на начало $30,000 и прибыль за год $45,000.
+# Шаг 1: Промежуточный дивиденд, выплаченный за год
+  132,000 × 10 центов = $13,200: Дт Нераспределённая прибыль, Кт Банк
+# Шаг 2: Предложенный на конец года итоговый дивиденд ($20,000)
+  Акционеры ещё не одобрили, поэтому его НЕ записывают
+# Шаг 3: Нераспределённая прибыль на конец
+  $30,000 + $45,000 - $13,200 = $61,800
+# А если землю ещё и переоценили на +$20,000?
+  Общий совокупный доход = $45,000 + $20,000 = $65,000, но нераспределённая прибыль остаётся $61,800 ($20,000 идут в резерв переоценки)`,
+        uz: `Kompaniyada 132,000 aksiya, boshlang'ich taqsimlanmagan foyda $30,000 va yil foydasi $45,000.
+# 1-qadam: Yil davomida to'langan oraliq dividend
+  132,000 × 10 sent = $13,200: Dt Taqsimlanmagan foyda, Kt Bank
+# 2-qadam: Yil oxirida taklif qilingan yakuniy dividend ($20,000)
+  Aksiyadorlar hali tasdiqlamagan, shuning uchun YOZILMAYDI
+# 3-qadam: Yakuniy taqsimlanmagan foyda
+  $30,000 + $45,000 - $13,200 = $61,800
+# Agar yer ham $20,000 ga qayta baholansa-chi?
+  Jami umumlashgan daromad = $45,000 + $20,000 = $65,000, lekin taqsimlanmagan foyda $61,800 qoladi ($20,000 qayta baholash rezerviga boradi)`,
+      },
+      simple: {
+        en: `A dividend is a share of the profit paid to shareholders. It is NOT an expense, so it never goes through profit or loss: it comes out of retained earnings and is shown in the statement of changes in equity.
+
+A dividend only becomes a debt once shareholders approve it. So a dividend merely proposed at the year end is not recorded yet. Reserves are the parts of equity apart from share capital: retained earnings, share premium and revaluation surplus.`,
+        ru: `Дивиденд — доля прибыли, выплачиваемая акционерам. Это НЕ расход, поэтому через прибыль или убыток он не проходит: он уменьшает нераспределённую прибыль и показывается в отчёте об изменениях в капитале.
+
+Дивиденд становится долгом только после одобрения акционерами. Поэтому лишь предложенный на конец года дивиденд пока не записывают. Резервы — части капитала, кроме акционерного: нераспределённая прибыль, эмиссионный доход и резерв переоценки.`,
+        uz: `Dividend — aksiyadorlarga to'lanadigan foyda ulushi. U xarajat EMAS, shuning uchun foyda yoki zarar orqali o'tmaydi: u taqsimlanmagan foydadan chiqadi va kapitaldagi o'zgarishlar hisobotida ko'rsatiladi.
+
+Dividend aksiyadorlar tasdiqlagandan keyingina qarzga aylanadi. Shuning uchun yil oxirida faqat taklif qilingan dividend hali yozilmaydi. Rezervlar — aksiya kapitalidan boshqa kapital qismlari: taqsimlanmagan foyda, emissiya daromadi va qayta baholash rezervi.`,
       },
     },
     {
@@ -343,9 +480,47 @@ Foiz nominaldan hisoblanadi, masalan yiliga 5%, va foyda yoki zarar hisobotida m
 Pul olinganda yozuv: Dt Bank, Kt Uzoq muddatli majburiyat. Har yili moliyaviy xarajat debetlanadi, kredit esa to'langan bo'lsa bankka, to'lanmagan bo'lsa qisqa muddatli majburiyatga o'tadi. Bu oddiy yondashuv, keyingi ACCA imtihonlari uni IFRS 9 bo'yicha rivojlantiradi.`,
       },
       example: {
-        en: `On 1 April, Madina's Mart LLC issues $50,000 of 8% loan notes, with interest paid half-yearly at the end of September and March. The year ends on 31 December. Annual interest is $4,000, so nine months' charge is $3,000. The six-month payment on 30 September is $2,000: Dr Finance costs, Cr Bank. Three more months are owed at the year end: Dr Finance costs $1,000, Cr Interest accrual $1,000. The statement of financial position shows the $50,000 as non-current and the $1,000 as current.`,
-        ru: `1 апреля Madina's Mart LLC выпускает 8% долговые ноты на $50,000 с выплатой процентов раз в полгода в конце сентября и марта. Год заканчивается 31 декабря. Годовые проценты $4,000, значит, за девять месяцев расход $3,000. Выплата за шесть месяцев 30 сентября — $2,000: Дт Финансовые расходы, Кт Банк. Ещё три месяца причитаются на конец года: Дт Финансовые расходы $1,000, Кт Начисленные проценты $1,000. В отчёте о финансовом положении $50,000 долгосрочные, а $1,000 краткосрочные.`,
-        uz: `1 aprelda Madina's Mart LLC $50,000 lik 8% qarz notalarini chiqaradi, foiz yarim yilda bir marta sentyabr va mart oxirida to'lanadi. Yil 31 dekabrda tugaydi. Yillik foiz $4,000, demak to'qqiz oylik xarajat $3,000. 30 sentyabrdagi olti oylik to'lov $2,000: Dt Moliyaviy xarajatlar, Kt Bank. Yil oxirida yana uch oy qarz: Dt Moliyaviy xarajatlar $1,000, Kt Hisoblangan foiz $1,000. Moliyaviy holat hisobotida $50,000 uzoq muddatli, $1,000 qisqa muddatli.`,
+        en: `On 1 April a company borrows $50,000 with 8% loan notes. Interest is paid every 30 September and 31 March. Its year ends on 31 December.
+# Step 1: Interest for a full year
+  $50,000 × 8% = $4,000
+# Step 2: This year's charge (April to December = 9 months)
+  $4,000 × 9/12 = $3,000
+# Step 3: Paid on 30 September (April to September)
+  $4,000 × 6/12 = $2,000: Dr Finance costs, Cr Bank
+# Step 4: October to December, unpaid at the year end
+  $3,000 - $2,000 = $1,000: Dr Finance costs, Cr Interest accrual
+= The $50,000 is a non-current liability; the $1,000 accrual is current.`,
+        ru: `1 апреля компания занимает $50,000 под 8% долговыми нотами. Проценты платят 30 сентября и 31 марта. Год заканчивается 31 декабря.
+# Шаг 1: Проценты за полный год
+  $50,000 × 8% = $4,000
+# Шаг 2: Расход этого года (апрель-декабрь = 9 месяцев)
+  $4,000 × 9/12 = $3,000
+# Шаг 3: Оплачено 30 сентября (апрель-сентябрь)
+  $4,000 × 6/12 = $2,000: Дт Финансовые расходы, Кт Банк
+# Шаг 4: Октябрь-декабрь, не оплачено на конец года
+  $3,000 - $2,000 = $1,000: Дт Финансовые расходы, Кт Начисленные проценты
+= $50,000 — долгосрочное обязательство; начисление $1,000 — краткосрочное.`,
+        uz: `1 aprelda kompaniya 8% li qarz notalari bilan $50,000 qarz oladi. Foiz 30 sentyabr va 31 martda to'lanadi. Yili 31 dekabrda tugaydi.
+# 1-qadam: To'liq yil foizi
+  $50,000 × 8% = $4,000
+# 2-qadam: Bu yil xarajati (aprel-dekabr = 9 oy)
+  $4,000 × 9/12 = $3,000
+# 3-qadam: 30 sentyabrda to'langan (aprel-sentyabr)
+  $4,000 × 6/12 = $2,000: Dt Moliyaviy xarajatlar, Kt Bank
+# 4-qadam: Oktyabr-dekabr, yil oxirida to'lanmagan
+  $3,000 - $2,000 = $1,000: Dt Moliyaviy xarajatlar, Kt Hisoblangan foiz
+= $50,000 — uzoq muddatli majburiyat; $1,000 hisoblangan — qisqa muddatli.`,
+      },
+      simple: {
+        en: `Loan notes are fixed-term loans to the company. The money received is a non-current liability until it is due within a year.
+
+Interest is worked out on the nominal value, for the months the loan existed during the year, and is a finance cost. Interest for months not yet paid at the year end is accrued.`,
+        ru: `Долговые ноты — займы компании на фиксированный срок. Полученные деньги — долгосрочное обязательство, пока срок погашения не наступит в течение года.
+
+Проценты считают от номинала за месяцы, когда заём существовал в течение года, это финансовые расходы. Проценты за месяцы, ещё не оплаченные на конец года, начисляют.`,
+        uz: `Qarz notalari — kompaniyaga qat'iy muddatli qarzlar. Olingan pul to'lov muddati bir yil ichida kelmaguncha uzoq muddatli majburiyat.
+
+Foiz nominaldan, yil davomida qarz mavjud bo'lgan oylar uchun hisoblanadi va moliyaviy xarajat bo'ladi. Yil oxirida hali to'lanmagan oylar foizi hisoblanadi (accrual).`,
       },
     },
     {
@@ -383,11 +558,7 @@ Pul olinganda yozuv: Dt Bank, Kt Uzoq muddatli majburiyat. Har yili moliyaviy xa
 - Bu yerda foyda solig'i kompaniya foydasidan soliq, xodimlar daromadidan soliq emas.
 - Soliqni hisoblash talab qilinmaydi. Summalar masalada beriladi.`,
       },
-      heading: {
-        en: 'Income tax',
-        ru: 'Налог на прибыль',
-        uz: 'Foyda solig\'i',
-      },
+      heading: { en: 'Income tax', ru: 'Налог на прибыль', uz: 'Foyda solig\'i' },
       body: {
         en: `In a sole trader or partnership, tax falls on the individual. If the business bank account pays that personal tax, it is treated as drawings.
 
@@ -418,24 +589,220 @@ Baho kamdan-kam aniq, shuning uchun uchinchi qadam hisobdagi qoldiqni hal qiladi
 Yil oxiridagi majburiyat faqat joriy yil bahosiga teng bo'lishi kerak.`,
       },
       example: {
-        en: `Madina's Mart LLC estimates tax of $18,000 for its first year: Dr Tax charge $18,000, Cr Tax liability $18,000. It later pays $16,500, leaving a $1,500 credit, an overprovision. In year two it estimates $21,000. The tax charge in profit or loss is $21,000 - $1,500 = $19,500. The liability in the statement of financial position is $21,000.`,
-        ru: `Madina's Mart LLC оценивает налог первого года в $18,000: Дт Расход по налогу $18,000, Кт Обязательство $18,000. Позже она платит $16,500, остаётся кредит $1,500, то есть переначисление. На второй год оценка $21,000. Расход в прибыли или убытке: $21,000 - $1,500 = $19,500. Обязательство в отчёте о финансовом положении $21,000.`,
-        uz: `Madina's Mart LLC birinchi yil solig'ini $18,000 deb baholaydi: Dt Soliq xarajati $18,000, Kt Soliq majburiyati $18,000. Keyin $16,500 to'laydi, $1,500 kredit qoladi, ya'ni ko'p hisoblangan. Ikkinchi yili baho $21,000. Foyda yoki zarardagi soliq xarajati: $21,000 - $1,500 = $19,500. Moliyaviy holat hisobotidagi majburiyat $21,000.`,
+        en: `A company's tax over two years.
+# Year 1: the estimate
+  Estimated tax $18,000: Dr Tax charge $18,000, Cr Tax liability $18,000
+# Year 2: the real bill for year 1
+  Only $16,500 is paid. $1,500 is left over: the estimate was too high (an overprovision)
+# Year 2: the new estimate
+  This year's tax is estimated at $21,000
+# Year 2 figures
+  Tax charge in profit or loss: $21,000 - $1,500 overprovision = $19,500
+  Liability in the statement of financial position: $21,000 (this year's estimate only)`,
+        ru: `Налог компании за два года.
+# Год 1: оценка
+  Оценка налога $18,000: Дт Расход по налогу $18,000, Кт Обязательство по налогу $18,000
+# Год 2: реальная сумма за год 1
+  Заплатили только $16,500. Осталось $1,500: оценка была завышена (переначисление)
+# Год 2: новая оценка
+  Налог этого года оценён в $21,000
+# Цифры года 2
+  Расход по налогу в прибыли или убытке: $21,000 - $1,500 переначисления = $19,500
+  Обязательство в отчёте о финансовом положении: $21,000 (только оценка этого года)`,
+        uz: `Kompaniyaning ikki yillik solig'i.
+# 1-yil: baho
+  Baholangan soliq $18,000: Dt Soliq xarajati $18,000, Kt Soliq majburiyati $18,000
+# 2-yil: 1-yil uchun haqiqiy summa
+  Faqat $16,500 to'landi. $1,500 qoldi: baho ko'p bo'lgan (ortiqcha hisoblangan)
+# 2-yil: yangi baho
+  Shu yil solig'i $21,000 deb baholanadi
+# 2-yil raqamlari
+  Foyda yoki zarardagi soliq xarajati: $21,000 - $1,500 ortiqcha = $19,500
+  Moliyaviy holat hisobotidagi majburiyat: $21,000 (faqat shu yil bahosi)`,
+      },
+      simple: {
+        en: `A company pays tax on its own profit, so the tax is a business expense and, if unpaid, a liability. (A sole trader's tax is personal, so paying it from the business is drawings.)
+
+At the year end the company only ESTIMATES its tax. When the real bill is settled the next year, any difference is fixed then: if last year's estimate was too high (overprovision), this year's tax charge goes down; if too low (underprovision), it goes up. The liability shown is just this year's estimate.`,
+        ru: `Компания платит налог со своей прибыли, поэтому налог — расход бизнеса, а неоплаченный — обязательство. (Налог индивидуального предпринимателя — личный, его оплата из бизнеса — изъятие.)
+
+На конец года компания лишь ОЦЕНИВАЕТ налог. Когда в следующем году платят реальную сумму, разницу исправляют тогда: если прошлогодняя оценка была завышена (переначисление), налог этого года уменьшают; если занижена (недоначисление) — увеличивают. Обязательство показывают только в сумме оценки этого года.`,
+        uz: `Kompaniya o'z foydasidan soliq to'laydi, shuning uchun soliq biznes xarajati, to'lanmagani esa majburiyat. (Yakka tadbirkor solig'i shaxsiy, uni biznesdan to'lash — olib qo'yish.)
+
+Yil oxirida kompaniya soliqni faqat BAHOLAYDI. Kelasi yil haqiqiy summa to'langanda farq o'shanda tuzatiladi: o'tgan yil bahosi ko'p bo'lsa (ortiqcha hisoblangan), bu yil soliq xarajati kamayadi; kam bo'lsa (kam hisoblangan) — oshadi. Majburiyat faqat shu yil bahosi miqdorida ko'rsatiladi.`,
       },
     },
   ],
   glossary: [
-    { term: { en: 'Ordinary shares', ru: 'Обыкновенные акции', uz: 'Oddiy aksiyalar' }, definition: { en: 'Shares giving ownership of the company and a residual interest in it.', ru: 'Акции, дающие право собственности на компанию и долю в остатке.', uz: 'Kompaniyaga egalik va qoldiqqa ulush beradigan aksiyalar.' } },
-    { term: { en: 'Preference shares', ru: 'Привилегированные акции', uz: 'Imtiyozli aksiyalar' }, definition: { en: 'Shares with a usually fixed dividend. Redeemable ones are liabilities, irredeemable ones are equity.', ru: 'Акции с обычно фиксированным дивидендом. Погашаемые — обязательство, непогашаемые — капитал.', uz: 'Odatda qat\'iy dividendli aksiyalar. Qaytariladigani majburiyat, qaytarilmaydigani kapital.' } },
-    { term: { en: 'Loan notes', ru: 'Долговые ноты', uz: 'Qarz notalari' }, definition: { en: 'Fixed-term loans to a company, evidenced by a document.', ru: 'Срочные займы компании, подтверждённые документом.', uz: 'Hujjat bilan tasdiqlangan kompaniyaga muddatli qarzlar.' } },
-    { term: { en: 'Nominal value', ru: 'Номинальная стоимость', uz: 'Nominal qiymat' }, definition: { en: 'The fixed value assigned to a share. Also called par value.', ru: 'Фиксированная стоимость, присвоенная акции.', uz: 'Aksiyaga berilgan qat\'iy qiymat.' } },
-    { term: { en: 'Share premium', ru: 'Эмиссионный доход', uz: 'Emissiya daromadi' }, definition: { en: 'The amount received for a share above its nominal value.', ru: 'Сумма, полученная за акцию сверх номинала.', uz: 'Aksiya uchun nominaldan ortiq olingan summa.' } },
-    { term: { en: 'Rights issue', ru: 'Выпуск прав', uz: 'Huquqli chiqarish' }, definition: { en: 'New shares offered to existing shareholders in proportion, for cash, normally below market value.', ru: 'Новые акции существующим акционерам пропорционально, за деньги, обычно ниже рынка.', uz: 'Mavjud aksiyadorlarga mutanosib, pulga, odatda bozordan past yangi aksiyalar.' } },
-    { term: { en: 'Bonus issue', ru: 'Бонусный выпуск', uz: 'Bonusli chiqarish' }, definition: { en: 'Free new shares to existing shareholders in proportion, funded from reserves.', ru: 'Бесплатные новые акции существующим акционерам пропорционально, из резервов.', uz: 'Mavjud aksiyadorlarga mutanosib, rezervlardan bepul yangi aksiyalar.' } },
-    { term: { en: 'Dividend', ru: 'Дивиденд', uz: 'Dividend' }, definition: { en: 'A distribution of profit to shareholders.', ru: 'Распределение прибыли акционерам.', uz: 'Foydani aksiyadorlarga taqsimlash.' } },
-    { term: { en: 'Reserves', ru: 'Резервы', uz: 'Rezervlar' }, definition: { en: 'Components of equity other than share capital, such as retained earnings.', ru: 'Компоненты капитала, кроме акционерного, например нераспределённая прибыль.', uz: 'Aksiya kapitalidan boshqa kapital qismlari, masalan taqsimlanmagan foyda.' } },
-    { term: { en: 'Overprovision', ru: 'Переначисление', uz: 'Ko\'p hisoblangan summa' }, definition: { en: 'When the tax estimate was higher than the amount paid.', ru: 'Когда оценка налога выше уплаченной суммы.', uz: 'Soliq bahosi to\'langan summadan yuqori bo\'lganda.' } },
-    { term: { en: 'Underprovision', ru: 'Недоначисление', uz: 'Kam hisoblangan summa' }, definition: { en: 'When the tax estimate was lower than the amount paid.', ru: 'Когда оценка налога ниже уплаченной суммы.', uz: 'Soliq bahosi to\'langan summadan past bo\'lganda.' } },
+    {
+      term: { en: 'Ordinary shares', ru: 'Обыкновенные акции', uz: 'Oddiy aksiyalar' },
+      definition: {
+        en: 'Shares giving ownership of the company and a residual interest in it.',
+        ru: 'Акции, дающие право собственности на компанию и долю в остатке.',
+        uz: 'Kompaniyaga egalik va qoldiqqa ulush beradigan aksiyalar.',
+      },
+      example: {
+        en: 'You buy 1,000 ordinary shares and own a small part of the company, with a vote and a share of any dividends.',
+        ru: 'Вы покупаете 1,000 обыкновенных акций и владеете частью компании, с голосом и долей в дивидендах.',
+        uz: '1,000 oddiy aksiya olib, kompaniyaning kichik qismiga, ovoz va dividend ulushiga egalik qilasiz.',
+      },
+    },
+    {
+      term: { en: 'Preference shares', ru: 'Привилегированные акции', uz: 'Imtiyozli aksiyalar' },
+      definition: {
+        en: 'Shares with a usually fixed dividend. Redeemable ones are liabilities, irredeemable ones are equity.',
+        ru: 'Акции с обычно фиксированным дивидендом. Погашаемые — обязательство, непогашаемые — капитал.',
+        uz: 'Odatda qat\'iy dividendli aksiyalar. Qaytariladigani majburiyat, qaytarilmaydigani kapital.',
+      },
+      example: {
+        en: '6% preference shares of $1 receive 6c a year each before ordinary shareholders get anything.',
+        ru: 'Привилегированные акции 6% по $1 получают по 6 центов в год до выплат по обыкновенным.',
+        uz: '$1 lik 6% imtiyozli aksiyalar oddiy aksiyadorlardan oldin har biri yiliga 6 sent oladi.',
+      },
+    },
+    {
+      term: { en: 'Loan notes', ru: 'Долговые ноты', uz: 'Qarz notalari' },
+      definition: {
+        en: 'Fixed-term loans to a company, evidenced by a document.',
+        ru: 'Срочные займы компании, подтверждённые документом.',
+        uz: 'Hujjat bilan tasdiqlangan kompaniyaga muddatli qarzlar.',
+      },
+      example: {
+        en: '$50,000 of 8% loan notes: $4,000 of interest a year, repaid in 10 years.',
+        ru: 'Долговые ноты на $50,000 под 8%: $4,000 процентов в год, погашение через 10 лет.',
+        uz: '8% li $50,000 qarz notalari: yiliga $4,000 foiz, 10 yilda qaytariladi.',
+      },
+    },
+    {
+      term: { en: 'Finance costs', ru: 'Финансовые расходы', uz: 'Moliyaviy xarajatlar' },
+      definition: {
+        en: 'The cost of borrowing: interest on loans and dividends on redeemable preference shares.',
+        ru: 'Стоимость заимствований: проценты по займам и дивиденды по погашаемым привилегированным акциям.',
+        uz: 'Qarz olish narxi: qarzlar foizi va qaytariladigan imtiyozli aksiyalar dividendlari.',
+      },
+      example: {
+        en: '$4,000 a year of interest on $50,000 of 8% loan notes.',
+        ru: '$4,000 процентов в год по долговым нотам $50,000 под 8%.',
+        uz: '8% li $50,000 qarz notalari bo\'yicha yiliga $4,000 foiz.',
+      },
+    },
+    {
+      term: { en: 'Nominal value', ru: 'Номинальная стоимость', uz: 'Nominal qiymat' },
+      definition: {
+        en: 'The fixed value assigned to a share. Also called par value.',
+        ru: 'Фиксированная стоимость, присвоенная акции.',
+        uz: 'Aksiyaga berilgan qat\'iy qiymat.',
+      },
+      example: {
+        en: 'A share labelled $1, even if it trades on the stock market for $3.',
+        ru: 'Акция с номиналом $1, даже если на бирже она стоит $3.',
+        uz: 'Birjada $3 tursa ham, nominali $1 bo\'lgan aksiya.',
+      },
+    },
+    {
+      term: { en: 'Share premium', ru: 'Эмиссионный доход', uz: 'Emissiya daromadi' },
+      definition: {
+        en: 'The amount received for a share above its nominal value.',
+        ru: 'Сумма, полученная за акцию сверх номинала.',
+        uz: 'Aksiya uchun nominaldan ortiq olingan summa.',
+      },
+      example: {
+        en: 'A $1 share sold for $1.50 creates $0.50 of share premium.',
+        ru: 'Акция номиналом $1, проданная за $1.50, даёт $0.50 эмиссионного дохода.',
+        uz: '$1 lik aksiya $1.50 ga sotilsa, $0.50 emissiya daromadi hosil bo\'ladi.',
+      },
+    },
+    {
+      term: { en: 'Rights issue', ru: 'Выпуск прав', uz: 'Huquqli chiqarish' },
+      definition: {
+        en: 'New shares offered to existing shareholders in proportion, for cash, normally below market value.',
+        ru: 'Новые акции существующим акционерам пропорционально, за деньги, обычно ниже рынка.',
+        uz: 'Mavjud aksiyadorlarga mutanosib, pulga, odatda bozordan past yangi aksiyalar.',
+      },
+      example: {
+        en: '"Buy 1 new share for every 5 you own, at $1.20" when the market price is $1.60.',
+        ru: '«Купите 1 новую акцию на каждые 5 по $1.20» при рыночной цене $1.60.',
+        uz: 'Bozor narxi $1.60 bo\'lganda «har 5 taga 1 ta yangi aksiyani $1.20 dan oling».',
+      },
+    },
+    {
+      term: { en: 'Bonus issue', ru: 'Бонусный выпуск', uz: 'Bonusli chiqarish' },
+      definition: {
+        en: 'Free new shares to existing shareholders in proportion, funded from reserves.',
+        ru: 'Бесплатные новые акции существующим акционерам пропорционально, из резервов.',
+        uz: 'Mavjud aksiyadorlarga mutanosib, rezervlardan bepul yangi aksiyalar.',
+      },
+      example: {
+        en: '"1 free share for every 10 you own": 1,000 shares become 1,100, and no cash moves.',
+        ru: '«1 бесплатная акция на каждые 10»: 1,000 акций превращаются в 1,100, денег нет.',
+        uz: '«Har 10 taga 1 ta bepul aksiya»: 1,000 aksiya 1,100 bo\'ladi, pul harakatlanmaydi.',
+      },
+    },
+    {
+      term: { en: 'Dividend', ru: 'Дивиденд', uz: 'Dividend' },
+      definition: {
+        en: 'A distribution of profit to shareholders.',
+        ru: 'Распределение прибыли акционерам.',
+        uz: 'Foydani aksiyadorlarga taqsimlash.',
+      },
+      example: {
+        en: '10c per share on 132,000 shares = $13,200 paid to shareholders.',
+        ru: '10 центов на акцию × 132,000 акций = $13,200 акционерам.',
+        uz: '132,000 aksiyaga har biriga 10 sent = aksiyadorlarga $13,200.',
+      },
+    },
+    {
+      term: { en: 'Reserves', ru: 'Резервы', uz: 'Rezervlar' },
+      definition: {
+        en: 'Components of equity other than share capital, such as retained earnings.',
+        ru: 'Компоненты капитала, кроме акционерного, например нераспределённая прибыль.',
+        uz: 'Aksiya kapitalidan boshqa kapital qismlari, masalan taqsimlanmagan foyda.',
+      },
+      example: {
+        en: 'Retained earnings $61,800 + share premium $42,000 + revaluation surplus $20,000.',
+        ru: 'Нераспределённая прибыль $61,800 + эмиссионный доход $42,000 + резерв переоценки $20,000.',
+        uz: 'Taqsimlanmagan foyda $61,800 + emissiya daromadi $42,000 + qayta baholash rezervi $20,000.',
+      },
+    },
+    {
+      term: { en: 'Income tax', ru: 'Налог на прибыль', uz: 'Foyda solig\'i' },
+      definition: {
+        en: 'Tax charged on a company\'s profit. It is an expense in profit or loss and, if unpaid, a current liability.',
+        ru: 'Налог на прибыль компании. Расход в прибыли или убытке, а неоплаченный — краткосрочное обязательство.',
+        uz: 'Kompaniya foydasiga soliq. Foyda yoki zarardagi xarajat, to\'lanmagani esa qisqa muddatli majburiyat.',
+      },
+      example: {
+        en: 'Profit before tax $84,000, income tax $37,000, profit for the year $47,000.',
+        ru: 'Прибыль до налога $84,000, налог $37,000, прибыль за год $47,000.',
+        uz: 'Soliqdan oldingi foyda $84,000, soliq $37,000, yil foydasi $47,000.',
+      },
+    },
+    {
+      term: { en: 'Overprovision', ru: 'Переначисление', uz: 'Ko\'p hisoblangan summa' },
+      definition: {
+        en: 'When the tax estimate was higher than the amount paid.',
+        ru: 'Когда оценка налога выше уплаченной суммы.',
+        uz: 'Soliq bahosi to\'langan summadan yuqori bo\'lganda.',
+      },
+      example: {
+        en: 'Tax estimated at $18,000 but only $16,500 paid: a $1,500 overprovision.',
+        ru: 'Налог оценён в $18,000, а заплачено $16,500: переначисление $1,500.',
+        uz: 'Soliq $18,000 deb baholangan, lekin $16,500 to\'langan: $1,500 ortiqcha hisoblangan.',
+      },
+    },
+    {
+      term: { en: 'Underprovision', ru: 'Недоначисление', uz: 'Kam hisoblangan summa' },
+      definition: {
+        en: 'When the tax estimate was lower than the amount paid.',
+        ru: 'Когда оценка налога ниже уплаченной суммы.',
+        uz: 'Soliq bahosi to\'langan summadan past bo\'lganda.',
+      },
+      example: {
+        en: 'Tax estimated at $10,000 but $11,000 paid: a $1,000 underprovision, added to next year\'s charge.',
+        ru: 'Налог оценён в $10,000, а заплачено $11,000: недоначисление $1,000, добавляется к расходу следующего года.',
+        uz: 'Soliq $10,000 deb baholangan, $11,000 to\'langan: $1,000 kam hisoblangan, kelasi yil xarajatiga qo\'shiladi.',
+      },
+    },
   ],
 };
 

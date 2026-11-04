@@ -2,17 +2,33 @@
 
 const chapter13 = {
   id: 'chapter-13',
-  titles: {
-    en: 'Reconciliations',
-    ru: 'Сверки',
-    uz: 'Solishtirishlar',
-  },
+  titles: { en: 'Reconciliations', ru: 'Сверки', uz: 'Solishtirishlar' },
   objectives: [
-    { en: 'Explain the purpose of a bank reconciliation', ru: 'Объяснять цель банковской сверки', uz: 'Bank solishtirishining maqsadini tushuntirish' },
-    { en: 'Identify why the ledger and the bank statement differ', ru: 'Определять, почему книга и выписка банка расходятся', uz: 'Kitob va bank ko\'chirmasi nega farq qilishini aniqlash' },
-    { en: 'Correct the cash at bank ledger account and prepare a reconciliation', ru: 'Исправлять счёт банка и готовить сверку', uz: 'Bank hisobini tuzatish va solishtirish tayyorlash' },
-    { en: 'Work out a missing bank or ledger balance', ru: 'Находить недостающий остаток банка или книги', uz: 'Yetishmagan bank yoki kitob qoldig\'ini topish' },
-    { en: 'Reconcile supplier statements to supplier accounts', ru: 'Сверять выписки поставщиков со счетами поставщиков', uz: 'Yetkazib beruvchi ko\'chirmalarini ularning hisoblari bilan solishtirish' },
+    {
+      en: 'Explain the purpose of a bank reconciliation',
+      ru: 'Объяснять цель банковской сверки',
+      uz: 'Bank solishtirishining maqsadini tushuntirish',
+    },
+    {
+      en: 'Identify why the ledger and the bank statement differ',
+      ru: 'Определять, почему книга и выписка банка расходятся',
+      uz: 'Kitob va bank ko\'chirmasi nega farq qilishini aniqlash',
+    },
+    {
+      en: 'Correct the cash at bank ledger account and prepare a reconciliation',
+      ru: 'Исправлять счёт банка и готовить сверку',
+      uz: 'Bank hisobini tuzatish va solishtirish tayyorlash',
+    },
+    {
+      en: 'Work out a missing bank or ledger balance',
+      ru: 'Находить недостающий остаток банка или книги',
+      uz: 'Yetishmagan bank yoki kitob qoldig\'ini topish',
+    },
+    {
+      en: 'Reconcile supplier statements to supplier accounts',
+      ru: 'Сверять выписки поставщиков со счетами поставщиков',
+      uz: 'Yetkazib beruvchi ko\'chirmalarini ularning hisoblari bilan solishtirish',
+    },
   ],
   sections: [
     {
@@ -47,11 +63,7 @@ const chapter13 = {
 - Kitobdagi kredit qoldiq overdraft degani.
 - Boshlashdan oldin masalada "overdraft", Dr va Cr so'zlariga e'tibor bering.`,
       },
-      heading: {
-        en: 'Why reconcile the bank',
-        ru: 'Зачем сверять банк',
-        uz: 'Bankni nega solishtirish kerak',
-      },
+      heading: { en: 'Why reconcile the bank', ru: 'Зачем сверять банк', uz: 'Bankni nega solishtirish kerak' },
       body: {
         en: `A business keeps its own record of bank transactions in the cash at bank ledger account. The bank keeps its record of the same account and sends it as a statement. In theory the two should agree, but in practice they rarely do.
 
@@ -82,9 +94,41 @@ Uchinchidan, ba'zi moddalar siz bilmasdan ko'chirmada paydo bo'ladi, masalan foi
 Pul biznesning eng zaif aktivi, shuning uchun ko'chirma qimmatli mustaqil tekshiruv. Muntazam solishtirish xato va tushib qolganlarni topishga yordam beradi.`,
       },
       example: {
-        en: `Madina's ledger shows $3,200 in the bank, a debit. Her bank statement shows $3,070 credit, which is also money in the bank, seen from the bank's side. The two figures differ by $130. The reconciliation shows exactly why, item by item.`,
-        ru: `В книге Мадины в банке $3,200, дебет. В выписке $3,070 кредит: это тоже деньги в банке, но со стороны банка. Разница $130. Сверка показывает точную причину, статья за статьёй.`,
-        uz: `Madina kitobida bankda $3,200, debet. Bank ko'chirmasida $3,070 kredit, bu ham bankdagi pul, faqat bank tomonidan. Farq $130. Solishtirish aniq sababni modda-modda ko'rsatadi.`,
+        en: `A shop's two records at the month end.
+# The shop's ledger
+  $3,200 debit: the shop has $3,200 in the bank
+# The bank statement
+  $3,070 credit: the bank owes the shop $3,070, the same idea seen from the bank's side
+# The gap
+  $3,200 - $3,070 = $130
+= The reconciliation (next sections) explains every dollar of that $130.`,
+        ru: `Две записи магазина на конец месяца.
+# Книга магазина
+  $3,200 дебет: у магазина $3,200 в банке
+# Банковская выписка
+  $3,070 кредит: банк должен магазину $3,070, то же самое со стороны банка
+# Разница
+  $3,200 - $3,070 = $130
+= Сверка (следующие разделы) объясняет каждый доллар этих $130.`,
+        uz: `Do'konning oy oxiridagi ikki yozuvi.
+# Do'kon kitobi
+  $3,200 debet: do'konning bankda $3,200 puli bor
+# Bank ko'chirmasi
+  $3,070 kredit: bank do'konga $3,070 qarz, bank tomonidan xuddi shu narsa
+# Farq
+  $3,200 - $3,070 = $130
+= Solishtirish (keyingi bo'limlar) o'sha $130 ning har bir dollarini tushuntiradi.`,
+      },
+      simple: {
+        en: `You keep your own record of your bank account (the cash at bank ledger). The bank keeps its record and sends it as a bank statement. They rarely show the same number, so you check them against each other: this is a bank reconciliation.
+
+One confusing thing: the bank sees your account the other way round. Money you have in the bank is money the BANK owes YOU, so the statement calls it a credit. In your ledger it is a debit. An overdraft is the opposite.`,
+        ru: `Вы ведёте свою запись банковского счёта (счёт «Деньги в банке»). Банк ведёт свою и присылает её как банковскую выписку. Цифры редко совпадают, поэтому их сверяют: это банковская сверка.
+
+Запутывает одно: банк видит ваш счёт наоборот. Ваши деньги в банке — это долг БАНКА перед ВАМИ, поэтому в выписке это кредит. У вас в книге это дебет. Овердрафт — наоборот.`,
+        uz: `Siz bank hisobingizning o'z yozuvingizni yuritasiz («Bankdagi pul» hisobi). Bank o'z yozuvini yuritadi va bank ko'chirmasi sifatida yuboradi. Raqamlar kamdan-kam mos keladi, shuning uchun ular solishtiriladi: bu bank solishtirishi.
+
+Chalkashtiradigan narsa: bank hisobingizni teskari ko'radi. Bankdagi pulingiz — BANKning SIZga qarzi, shuning uchun ko'chirmada bu kredit. Sizning kitobingizda debet. Overdraft — teskarisi.`,
       },
     },
     {
@@ -131,11 +175,7 @@ Pul biznesning eng zaif aktivi, shuning uchun ko'chirma qimmatli mustaqil tekshi
 - Noto'g'ri summa yozilgan chek farqqa tuzatiladi.
 - Bank hali aytmagan qaytgan chek ham solishtirishdan emas, kitobdan o'tadi.`,
       },
-      heading: {
-        en: 'What causes the differences',
-        ru: 'Что вызывает различия',
-        uz: 'Farqlarga nima sabab bo\'ladi',
-      },
+      heading: { en: 'What causes the differences', ru: 'Что вызывает различия', uz: 'Farqlarga nima sabab bo\'ladi' },
       body: {
         en: `Differences fall into three groups, and each group decides which side of the reconciliation you adjust.
 
@@ -160,9 +200,47 @@ Vaqt farqlari avval kitobga tushadi. Taqdim etilmagan chek yozilgan va qayd etil
 Xato har ikki tomonda bo'lishi mumkin. Biznes xato qilgan bo'lsa, kitobni tuzating. Bank xato qilgan bo'lsa, masalan boshqa mijoz chekini yozgan bo'lsa, ko'chirma qoldig'ini moslang va bankka ayting.`,
       },
       example: {
-        en: `Madina compares her records with the bank statement. The statement shows charges of $45, a $200 insurance direct debit, $15 of interest and a customer's $120 cheque that bounced: all unrecorded, so they go in her ledger. A $340 payment was entered as $430, which is her own error, so the ledger needs $90 added back. Her $380 cheque to a supplier has not cleared and her $250 banking from the last day is not on the statement yet: both are timing, so the ledger needs no change for them.`,
-        ru: `Мадина сравнивает записи с выпиской. В выписке комиссия $45, прямой дебет страховки $200, проценты $15 и возвращённый чек покупателя $120: всё это не записано и идёт в книгу. Платёж $340 записан как $430, это её ошибка, поэтому в книгу нужно вернуть $90. Её чек поставщику на $380 ещё не проведён, а сдача $250 в последний день ещё не в выписке: это время, и книга по ним не меняется.`,
-        uz: `Madina yozuvlarini ko'chirma bilan solishtiradi. Ko'chirmada $45 komissiya, $200 sug'urta to'g'ridan-to'g'ri debeti, $15 foiz va mijozning qaytgan $120 cheki bor: bular yozilmagan, kitobga kiradi. $340 to'lov $430 deb yozilgan, bu uning xatosi, kitobga $90 qaytarish kerak. Yetkazib beruvchiga $380 cheki o'tmagan, oxirgi kundagi $250 topshirish ko'chirmada yo'q: bular vaqt, kitob o'zgarmaydi.`,
+        en: `The shop sorts every difference it finds.
+# On the statement, not in the ledger → fix the LEDGER
+  Bank charges $45, insurance direct debit $200, interest received $15, a customer's $120 cheque that bounced
+# The shop's own mistake → fix the LEDGER
+  A $340 payment was written in the ledger as $430, so $90 must be added back
+# In the ledger, not yet on the statement (timing) → adjust the STATEMENT figure
+  A $380 cheque to a supplier has not cleared
+  $250 banked on the last day is not on the statement yet`,
+        ru: `Магазин сортирует каждую найденную разницу.
+# В выписке, но не в книге → исправить КНИГУ
+  Комиссия $45, прямое списание за страховку $200, полученные проценты $15, вернувшийся чек покупателя $120
+# Собственная ошибка магазина → исправить КНИГУ
+  Платёж $340 записали в книгу как $430, надо вернуть $90
+# В книге, но ещё не в выписке (сроки) → поправить цифру ВЫПИСКИ
+  Чек поставщику на $380 ещё не прошёл
+  $250, внесённые в последний день, ещё не в выписке`,
+        uz: `Do'kon topgan har bir farqni saralaydi.
+# Ko'chirmada bor, kitobda yo'q → KITOBNI tuzatish
+  Komissiya $45, sug'urta uchun to'g'ridan-to'g'ri yechish $200, olingan foiz $15, mijozning qaytgan $120 cheki
+# Do'konning o'z xatosi → KITOBNI tuzatish
+  $340 to'lov kitobga $430 deb yozilgan, $90 qaytarish kerak
+# Kitobda bor, ko'chirmada hali yo'q (vaqt) → KO'CHIRMA sonini tuzatish
+  Yetkazib beruvchiga $380 lik chek hali o'tmagan
+  Oxirgi kuni topshirilgan $250 ko'chirmada hali yo'q`,
+      },
+      simple: {
+        en: `Every difference is one of three kinds, and the kind tells you which record to fix.
+
+- Things the bank knew first (bank charges, interest, direct debits, a bounced cheque): fix YOUR LEDGER.
+- Things you knew first (a cheque you wrote that has not cleared, money you banked that is not on the statement yet): timing only. Adjust the BANK STATEMENT figure; your ledger is already right.
+- Mistakes: your mistake → fix your ledger. The bank's mistake → adjust the statement figure and tell the bank.`,
+        ru: `Каждая разница — одна из трёх видов, и вид подсказывает, какую запись исправлять.
+
+- То, что банк узнал первым (комиссии, проценты, прямые списания, вернувшийся чек): исправьте СВОЮ КНИГУ.
+- То, что вы узнали первыми (выписанный вами чек ещё не прошёл, внесённые деньги ещё не в выписке): только сроки. Поправьте цифру ВЫПИСКИ, ваша книга уже верна.
+- Ошибки: ваша — исправьте книгу. Ошибка банка — поправьте цифру выписки и сообщите банку.`,
+        uz: `Har bir farq uch turdan biri va turi qaysi yozuvni tuzatishni aytadi.
+
+- Bank birinchi bilgan narsalar (komissiya, foiz, to'g'ridan-to'g'ri yechish, qaytgan chek): O'Z KITOBINGIZNI tuzating.
+- Siz birinchi bilgan narsalar (yozgan chekingiz hali o'tmagan, topshirgan pulingiz ko'chirmada hali yo'q): faqat vaqt farqi. KO'CHIRMA sonini tuzating, kitobingiz allaqachon to'g'ri.
+- Xatolar: sizning xatoingiz — kitobni tuzating. Bank xatosi — ko'chirma sonini tuzating va bankka xabar bering.`,
       },
     },
     {
@@ -241,9 +319,50 @@ Uch narsaga ehtiyot bo'ling. Overdraftda hisob-kitobda xato qilish oson. Ko'chir
 Moliyaviy holat hisobotidagi bank qoldig'i doim tuzatilgan kitob qoldig'i, ko'chirmadagi raqam emas.`,
       },
       example: {
-        en: `Ledger first: $3,200 - charges $45 - direct debit $200 + interest $15 - dishonoured cheque $120 + error correction $90 = $2,940. Then the reconciliation: balance per statement $3,070, less unpresented cheque $380, plus uncleared lodgement $250, gives $2,940. The two agree. Madina reports $2,940 in her statement of financial position, not $3,200 and not $3,070.`,
-        ru: `Сначала книга: $3,200 - комиссия $45 - прямой дебет $200 + проценты $15 - возвращённый чек $120 + исправление $90 = $2,940. Затем сверка: остаток по выписке $3,070 минус непредъявленный чек $380 плюс незачисленное поступление $250 даёт $2,940. Суммы совпали. Мадина показывает $2,940 в отчёте о финансовом положении, а не $3,200 и не $3,070.`,
-        uz: `Avval kitob: $3,200 - komissiya $45 - to'g'ridan-to'g'ri debet $200 + foiz $15 - qaytgan chek $120 + tuzatish $90 = $2,940. So'ng solishtirish: ko'chirma qoldig'i $3,070 minus taqdim etilmagan chek $380 plus o'tmagan tushum $250 = $2,940. Ular mos keldi. Madina moliyaviy holat hisobotida $2,940 ko'rsatadi, $3,200 ham, $3,070 ham emas.`,
+        en: `Finishing the shop's reconciliation.
+# Stage 1: correct the ledger
+  Start $3,200
+  - charges $45 - direct debit $200 + interest $15 - bounced cheque $120 + error $90
+  = $2,940
+# Stage 2: work from the bank statement
+  Statement $3,070
+  - cheque not yet cleared $380 (the bank will still take this out)
+  + money banked, not yet showing $250 (the bank will still add this)
+  = $2,940
+= Both agree at $2,940. That is the bank figure in the statement of financial position, not $3,200 and not $3,070.`,
+        ru: `Заканчиваем сверку магазина.
+# Этап 1: исправляем книгу
+  Начало $3,200
+  - комиссия $45 - прямое списание $200 + проценты $15 - вернувшийся чек $120 + ошибка $90
+  = $2,940
+# Этап 2: идём от выписки
+  Выписка $3,070
+  - непрошедший чек $380 (банк ещё спишет)
+  + внесённые, ещё не видные деньги $250 (банк ещё зачислит)
+  = $2,940
+= Обе дают $2,940. Это сумма банка в отчёте о финансовом положении — не $3,200 и не $3,070.`,
+        uz: `Do'kon solishtirishini yakunlaymiz.
+# 1-bosqich: kitobni tuzatamiz
+  Boshi $3,200
+  - komissiya $45 - yechish $200 + foiz $15 - qaytgan chek $120 + xato $90
+  = $2,940
+# 2-bosqich: ko'chirmadan boramiz
+  Ko'chirma $3,070
+  - o'tmagan chek $380 (bank hali yechadi)
+  + topshirilgan, hali ko'rinmagan pul $250 (bank hali qo'shadi)
+  = $2,940
+= Ikkalasi $2,940 da mos. Bu moliyaviy holat hisobotidagi bank summasi — $3,200 ham, $3,070 ham emas.`,
+      },
+      simple: {
+        en: `Two stages. First, correct your ledger (charges, interest, direct debits, bounced cheques, your own mistakes). Second, start from the bank statement balance: take off cheques not yet cleared, add money banked but not yet showing, and fix any bank errors.
+
+Both stages must arrive at the SAME number, and that corrected number is what goes in the statement of financial position. Tip: write an overdraft as a negative number so the plus and minus work.`,
+        ru: `Два этапа. Сначала исправьте книгу (комиссии, проценты, прямые списания, вернувшиеся чеки, свои ошибки). Затем начните с остатка выписки: вычтите непрошедшие чеки, прибавьте внесённые, но ещё не видные деньги, и исправьте ошибки банка.
+
+Оба этапа должны прийти к ОДНОЙ цифре, и именно она идёт в отчёт о финансовом положении. Совет: записывайте овердрафт отрицательным числом, чтобы плюсы и минусы работали.`,
+        uz: `Ikki bosqich. Avval kitobingizni tuzating (komissiya, foiz, to'g'ridan-to'g'ri yechish, qaytgan cheklar, o'z xatolaringiz). Keyin ko'chirma qoldig'idan boshlang: o'tmagan cheklarni ayiring, topshirilgan, lekin hali ko'rinmagan pulni qo'shing va bank xatolarini tuzating.
+
+Ikkala bosqich BIR XIL songa kelishi kerak va aynan shu tuzatilgan son moliyaviy holat hisobotiga yoziladi. Maslahat: overdraftni manfiy son qilib yozing, shunda plyus va minuslar to'g'ri ishlaydi.`,
       },
     },
     {
@@ -322,9 +441,44 @@ Odatiy farqlar: to'lov qilingan, lekin ko'chirmada yo'q; hisob-faktura siz tomon
 Har bir moddani ko'rib, kim harakat qilishi kerakligini hal qiling. Ko'chirma xato bo'lsa, yetkazib beruvchiga ayting. Yozuvingiz xato bo'lsa, jurnal bilan tuzating, alohida hisob o'zgarishi odatda bosh kitobdagi kreditorlar hisobini ham o'zgartirishini unutmang.`,
       },
       example: {
-        en: `Madina's account for a supplier shows $1,500. The supplier's statement shows $2,110. Three items explain it: her $320 payment sent on the last day, and $90 of returned goods, are not yet on the statement, and an invoice for $200 on the statement has not reached her. She records the invoice, so her account becomes $1,700. The statement less $320 and $90 is also $1,700, and the two agree.`,
-        ru: `Счёт Мадины по поставщику показывает $1,500. Выписка показывает $2,110. Объясняют три статьи: её платёж $320 в последний день и возврат на $90 ещё не в выписке, а счёт на $200 из выписки до неё не дошёл. Она записывает счёт, и её запись становится $1,700. Выписка минус $320 и $90 тоже $1,700, суммы совпали.`,
-        uz: `Madinaning yetkazib beruvchi hisobi $1,500 ko'rsatadi. Ko'chirma $2,110 ko'rsatadi. Uch modda tushuntiradi: oxirgi kundagi $320 to'lovi va $90 qaytarish hali ko'chirmada yo'q, ko'chirmadagi $200 hisob-faktura esa unga kelmagan. U hisob-fakturani yozadi, hisobi $1,700 bo'ladi. Ko'chirma minus $320 va $90 ham $1,700, ular mos keldi.`,
+        en: `The shop's account for a supplier shows $1,500. The supplier's statement says $2,110.
+# Not yet recorded by the SUPPLIER (adjust its statement)
+  The shop's $320 payment sent on the last day
+  $90 of goods the shop returned
+  $2,110 - $320 - $90 = $1,700
+# Not yet recorded by the SHOP (update the ledger)
+  A $200 invoice still on its way to the shop
+  $1,500 + $200 = $1,700
+= Both are $1,700, so everything is explained.`,
+        ru: `Счёт магазина по поставщику показывает $1,500. Выписка поставщика — $2,110.
+# Ещё не записал ПОСТАВЩИК (поправить его выписку)
+  Платёж магазина $320, отправленный в последний день
+  Возвращённый магазином товар на $90
+  $2,110 - $320 - $90 = $1,700
+# Ещё не записал МАГАЗИН (обновить книгу)
+  Счёт на $200, который ещё идёт к магазину
+  $1,500 + $200 = $1,700
+= Обе $1,700, всё объяснено.`,
+        uz: `Do'konning yetkazib beruvchi bo'yicha hisobi $1,500. Yetkazib beruvchi ko'chirmasi $2,110.
+# YETKAZIB BERUVCHI hali yozmagan (uning ko'chirmasini tuzatish)
+  Do'konning oxirgi kuni yuborgan $320 to'lovi
+  Do'kon qaytargan $90 lik tovar
+  $2,110 - $320 - $90 = $1,700
+# DO'KON hali yozmagan (kitobni yangilash)
+  Do'konga hali yo'lda bo'lgan $200 lik hisob-faktura
+  $1,500 + $200 = $1,700
+= Ikkalasi $1,700, hammasi tushuntirildi.`,
+      },
+      simple: {
+        en: `A supplier statement is the supplier's own list of what it thinks you owe. Your account for that supplier should be its mirror image, but they often differ.
+
+Ask one question for each difference: WHO has not recorded it yet? If the supplier has not recorded something (your payment in the post, goods you sent back), its statement is wrong for now. If you have not recorded something (an invoice still on its way), your ledger needs updating.`,
+        ru: `Выписка поставщика — его собственный список того, сколько, по его мнению, вы должны. Ваш счёт этого поставщика должен быть её зеркалом, но часто отличается.
+
+Для каждой разницы спросите одно: КТО её ещё не записал? Если поставщик не записал (ваш платёж в пути, возвращённый товар), его выписка пока неверна. Если вы не записали (счёт ещё в пути), обновите свою книгу.`,
+        uz: `Yetkazib beruvchi ko'chirmasi — u sizni qancha qarz deb hisoblashi ro'yxati. Shu yetkazib beruvchi bo'yicha hisobingiz uning ko'zgusi bo'lishi kerak, lekin ko'pincha farq qiladi.
+
+Har bir farq uchun bitta savol bering: uni KIM hali yozmagan? Yetkazib beruvchi yozmagan bo'lsa (yo'ldagi to'lovingiz, qaytargan tovaringiz), uning ko'chirmasi hozircha noto'g'ri. Siz yozmagan bo'lsangiz (hali yo'ldagi hisob-faktura), kitobingizni yangilang.`,
       },
     },
     {
@@ -368,18 +522,159 @@ Ba'zan bosh kitob to'g'ri, faqat yetkazib beruvchi noto'g'ri. Bir yetkazib beruv
 Kreditorlar hisobining yakuniy qoldig'i moliyaviy holat hisobotidagi majburiyat summasi.`,
       },
       example: {
-        en: `Madina recorded a $25 discount when she paid a supplier, but the payment arrived late and the supplier refused it. She posts Dr Discount received $25, Cr Payables $25, and updates that supplier's account too. Separately, an invoice from Paper Co was entered on Print Co's account. Total payables are correct, so she only moves it between those two individual accounts.`,
-        ru: `Мадина записала скидку $25 при оплате, но платёж пришёл поздно, и поставщик отказал. Она проводит Дт Полученная скидка $25, Кт Кредиторы $25 и обновляет счёт этого поставщика. Отдельно счёт от Paper Co был записан на счёт Print Co. Общий долг верен, поэтому она только переносит его между этими двумя счетами.`,
-        uz: `Madina to'lovda $25 chegirma yozgan edi, lekin to'lov kech yetdi va yetkazib beruvchi rad etdi. U Dt Olingan chegirma $25, Kt Kreditorlar $25 yozadi va shu yetkazib beruvchi hisobini ham yangilaydi. Alohida, Paper Co hisob-fakturasi Print Co hisobiga yozilgan edi. Jami kreditor to'g'ri, shuning uchun u faqat shu ikki hisob orasida ko'chiradi.`,
+        en: `Two findings from the shop's supplier reconciliations.
+# 1. A $25 discount was refused because the payment was late
+  The shop owes $25 more: Dr Discount received $25, Cr Payables $25
+  The supplier's individual account is updated as well
+# 2. A Paper Co invoice was put on Print Co's account
+  Total payables are still right, so no journal in the general ledger
+  Just move the invoice from Print Co's account to Paper Co's account`,
+        ru: `Две находки сверок магазина с поставщиками.
+# 1. Скидку $25 не приняли из-за опоздания с оплатой
+  Магазин должен на $25 больше: Дт Полученные скидки $25, Кт Кредиторы $25
+  Личный счёт поставщика тоже обновляют
+# 2. Счёт Paper Co записали на счёт Print Co
+  Общие кредиторы верны, проводки в главной книге нет
+  Просто переносим счёт со счёта Print Co на счёт Paper Co`,
+        uz: `Do'konning yetkazib beruvchilar bilan solishtirishidan ikki topilma.
+# 1. To'lov kechikkani uchun $25 chegirma qabul qilinmadi
+  Do'kon $25 ko'proq qarz: Dt Olingan chegirmalar $25, Kt Kreditorlar $25
+  Yetkazib beruvchining shaxsiy hisobi ham yangilanadi
+# 2. Paper Co hisob-fakturasi Print Co hisobiga yozilgan
+  Jami kreditorlar to'g'ri, bosh kitobda yozuv yo'q
+  Shunchaki hisob-fakturani Print Co hisobidan Paper Co hisobiga ko'chiramiz`,
+      },
+      simple: {
+        en: `If the reconciliation finds a mistake in the general ledger, fix it with a journal. For example, if a supplier refuses a discount you took, you owe more: Dr Discount received, Cr Payables.
+
+If only the wrong supplier's name was used (the total owed is right), just move the amount between the two suppliers' individual accounts. The general ledger does not change.`,
+        ru: `Если сверка нашла ошибку в главной книге, исправьте её проводкой. Например, если поставщик не принял вашу скидку, вы должны больше: Дт Полученные скидки, Кт Кредиторы.
+
+Если просто указали не того поставщика (общий долг верен), перенесите сумму между личными счетами двух поставщиков. Главная книга не меняется.`,
+        uz: `Solishtirish bosh kitobda xato topsa, uni jurnal yozuvi bilan tuzating. Masalan, yetkazib beruvchi olgan chegirmangizni qabul qilmasa, ko'proq qarzsiz: Dt Olingan chegirmalar, Kt Kreditorlar.
+
+Faqat boshqa yetkazib beruvchi nomi ishlatilgan bo'lsa (jami qarz to'g'ri), summani ikki yetkazib beruvchining shaxsiy hisoblari o'rtasida ko'chiring. Bosh kitob o'zgarmaydi.`,
       },
     },
   ],
   glossary: [
-    { term: { en: 'Bank reconciliation', ru: 'Банковская сверка', uz: 'Bank solishtirishi' }, definition: { en: 'A statement explaining the difference between the ledger and the bank statement.', ru: 'Отчёт, объясняющий разницу между книгой и выпиской банка.', uz: 'Kitob va bank ko\'chirmasi orasidagi farqni tushuntiruvchi hisobot.' } },
-    { term: { en: 'Unpresented cheque', ru: 'Непредъявленный чек', uz: 'Taqdim etilmagan chek' }, definition: { en: 'A payment recorded in the ledger that the bank has not yet cleared.', ru: 'Платёж, записанный в книге, но ещё не проведённый банком.', uz: 'Kitobda yozilgan, lekin bank hali o\'tkazmagan to\'lov.' } },
-    { term: { en: 'Uncleared lodgement', ru: 'Незачисленное поступление', uz: 'O\'tmagan tushum' }, definition: { en: 'Money banked and recorded in the ledger but not yet on the statement.', ru: 'Деньги, сданные и записанные в книге, но ещё не в выписке.', uz: 'Bankka topshirilgan va kitobda yozilgan, lekin ko\'chirmada hali yo\'q pul.' } },
-    { term: { en: 'Dishonoured cheque', ru: 'Возвращённый чек', uz: 'Qaytgan chek' }, definition: { en: 'A cheque paid in that the bank has refused to honour.', ru: 'Внесённый чек, который банк отказался оплатить.', uz: 'Bank to\'lashni rad etgan topshirilgan chek.' } },
-    { term: { en: 'Supplier statement', ru: 'Выписка поставщика', uz: 'Yetkazib beruvchi ko\'chirmasi' }, definition: { en: 'A monthly summary from a supplier of transactions and the amount owed.', ru: 'Ежемесячная сводка поставщика об операциях и сумме долга.', uz: 'Yetkazib beruvchining operatsiyalar va qarz summasi haqidagi oylik jamlanmasi.' } },
+    {
+      term: { en: 'Bank reconciliation', ru: 'Банковская сверка', uz: 'Bank solishtirishi' },
+      definition: {
+        en: 'A statement explaining the difference between the ledger and the bank statement.',
+        ru: 'Отчёт, объясняющий разницу между книгой и выпиской банка.',
+        uz: 'Kitob va bank ko\'chirmasi orasidagi farqni tushuntiruvchi hisobot.',
+      },
+      example: {
+        en: 'Ledger $3,200 and statement $3,070 are both explained, and both arrive at $2,940.',
+        ru: 'Книга $3,200 и выписка $3,070 объяснены, обе приходят к $2,940.',
+        uz: 'Kitob $3,200 va ko\'chirma $3,070 tushuntiriladi, ikkalasi $2,940 ga keladi.',
+      },
+    },
+    {
+      term: { en: 'Bank statement', ru: 'Банковская выписка', uz: 'Bank ko\'chirmasi' },
+      definition: {
+        en: 'The bank\'s own record of your account: money in, money out and the balance, seen from the bank\'s side.',
+        ru: 'Запись банка о вашем счёте: поступления, списания и остаток со стороны банка.',
+        uz: 'Bankning hisobingiz haqidagi yozuvi: kirim, chiqim va qoldiq bank tomonidan.',
+      },
+      example: {
+        en: '"Balance $3,070 Cr" means you have $3,070 in the bank.',
+        ru: '«Остаток $3,070 Кт» значит, у вас в банке $3,070.',
+        uz: '«Qoldiq $3,070 Kt» bankda $3,070 pulingiz borligini bildiradi.',
+      },
+    },
+    {
+      term: { en: 'Unpresented cheque', ru: 'Непредъявленный чек', uz: 'Taqdim etilmagan chek' },
+      definition: {
+        en: 'A payment recorded in the ledger that the bank has not yet cleared.',
+        ru: 'Платёж, записанный в книге, но ещё не проведённый банком.',
+        uz: 'Kitobda yozilgan, lekin bank hali o\'tkazmagan to\'lov.',
+      },
+      example: {
+        en: 'A $380 cheque posted to a supplier on 30 March that the bank only pays on 4 April.',
+        ru: 'Чек на $380, отправленный поставщику 30 марта, который банк оплатит только 4 апреля.',
+        uz: '30 martda yetkazib beruvchiga yuborilgan, bank faqat 4 aprelda to\'laydigan $380 lik chek.',
+      },
+    },
+    {
+      term: { en: 'Uncleared lodgement', ru: 'Незачисленное поступление', uz: 'O\'tmagan tushum' },
+      definition: {
+        en: 'Money banked and recorded in the ledger but not yet on the statement.',
+        ru: 'Деньги, сданные и записанные в книге, но ещё не в выписке.',
+        uz: 'Bankka topshirilgan va kitobda yozilgan, lekin ko\'chirmada hali yo\'q pul.',
+      },
+      example: {
+        en: '$250 paid in on the last day that appears on the statement two days later.',
+        ru: '$250, внесённые в последний день, появятся в выписке через два дня.',
+        uz: 'Oxirgi kuni topshirilgan $250 ko\'chirmada ikki kundan keyin ko\'rinadi.',
+      },
+    },
+    {
+      term: { en: 'Direct debit', ru: 'Прямое списание', uz: 'To\'g\'ridan-to\'g\'ri yechish' },
+      definition: {
+        en: 'A payment the bank takes from your account automatically for a supplier you have authorised. It varies in amount.',
+        ru: 'Платёж, который банк автоматически списывает со счёта в пользу разрешённого вами получателя. Сумма может меняться.',
+        uz: 'Bank siz ruxsat bergan oluvchi uchun hisobingizdan avtomatik yechadigan to\'lov. Summasi o\'zgarishi mumkin.',
+      },
+      example: {
+        en: 'The electricity company takes each month\'s bill, $180 one month and $210 the next.',
+        ru: 'Энергокомпания списывает каждый месячный счёт: $180 в одном месяце, $210 в другом.',
+        uz: 'Elektr kompaniyasi har oylik hisobni yechadi: bir oy $180, keyingisi $210.',
+      },
+    },
+    {
+      term: { en: 'Standing order', ru: 'Постоянное поручение', uz: 'Doimiy topshiriq' },
+      definition: {
+        en: 'An instruction to your bank to pay a fixed amount to someone on a regular date.',
+        ru: 'Поручение банку регулярно платить кому-то фиксированную сумму.',
+        uz: 'Bankka kimgadir muntazam qat\'iy summa to\'lash topshirig\'i.',
+      },
+      example: {
+        en: '$900 of rent paid to the landlord on the 1st of every month.',
+        ru: '$900 аренды арендодателю 1-го числа каждого месяца.',
+        uz: 'Har oyning 1-sanasida uy egasiga $900 ijara.',
+      },
+    },
+    {
+      term: { en: 'Timing difference', ru: 'Временная разница', uz: 'Vaqt farqi' },
+      definition: {
+        en: 'An item already in your ledger that the bank has not processed yet, such as an unpresented cheque.',
+        ru: 'Статья, уже записанная в вашей книге, которую банк ещё не провёл, например непредъявленный чек.',
+        uz: 'Kitobingizda allaqachon bor, lekin bank hali o\'tkazmagan modda, masalan taqdim etilmagan chek.',
+      },
+      example: {
+        en: 'Money banked at 4pm on 31 March that the bank shows on 1 April.',
+        ru: 'Деньги, внесённые в 16:00 31 марта, банк показывает 1 апреля.',
+        uz: '31 mart soat 16:00 da topshirilgan pulni bank 1 aprelda ko\'rsatadi.',
+      },
+    },
+    {
+      term: { en: 'Dishonoured cheque', ru: 'Возвращённый чек', uz: 'Qaytgan chek' },
+      definition: {
+        en: 'A cheque paid in that the bank has refused to honour.',
+        ru: 'Внесённый чек, который банк отказался оплатить.',
+        uz: 'Bank to\'lashni rad etgan topshirilgan chek.',
+      },
+      example: {
+        en: 'A customer\'s $120 cheque bounces because their account is empty.',
+        ru: 'Чек покупателя на $120 возвращается, потому что на его счёте нет денег.',
+        uz: 'Mijozning $120 lik cheki hisobida pul yo\'qligi uchun qaytadi.',
+      },
+    },
+    {
+      term: { en: 'Supplier statement', ru: 'Выписка поставщика', uz: 'Yetkazib beruvchi ko\'chirmasi' },
+      definition: {
+        en: 'A monthly summary from a supplier of transactions and the amount owed.',
+        ru: 'Ежемесячная сводка поставщика об операциях и сумме долга.',
+        uz: 'Yetkazib beruvchining operatsiyalar va qarz summasi haqidagi oylik jamlanmasi.',
+      },
+      example: {
+        en: '"You owe us $2,110" from a supplier, listing its invoices, credit notes and your payments.',
+        ru: '«Вы должны нам $2,110» от поставщика, со списком счетов, кредит-нот и ваших платежей.',
+        uz: 'Yetkazib beruvchidan «Siz bizga $2,110 qarzsiz», hisob-fakturalar, kredit-notalar va to\'lovlaringiz ro\'yxati bilan.',
+      },
+    },
   ],
 };
 

@@ -152,3 +152,31 @@ for (const id of ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '1
     });
   });
 }
+
+// Chapters rewritten after the November 2026 feedback: plain words, everyday examples,
+// an example for every key term, and step-by-step answers that line up across languages.
+const REWORKED = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '17'];
+
+for (const id of REWORKED) {
+  const chapter = require(`../data/chapter-${id}.js`);
+  const questions = require(`../data/questions-ch${id}.js`);
+
+  test(`chapter ${id} explains every section in simple words, with an everyday example`, () => {
+    chapter.sections.forEach((s, i) => {
+      assertTrilingual(s.simple, `section ${i} simple`);
+      for (const lang of LANGS) assert.ok(!/Madina/.test(s.example[lang] + s.simple[lang] + s.body[lang]), `section ${i} ${lang} still uses Madina's Mart`);
+    });
+  });
+
+  test(`chapter ${id} gives every key term an easy example`, () => {
+    chapter.glossary.forEach((g) => assertTrilingual(g.example, `${g.term.en} example`));
+  });
+
+  test(`chapter ${id} answers have the same lines in every language`, () => {
+    for (const q of questions) {
+      const shape = (text) => text.trim().split('\n').map((line) => (line.match(/^(# |= |! | {2}|- )/) ?? [''])[0]).join('|');
+      assert.equal(shape(q.explanation.ru), shape(q.explanation.en), `Q${q.kitRef} ru lines differ`);
+      assert.equal(shape(q.explanation.uz), shape(q.explanation.en), `Q${q.kitRef} uz lines differ`);
+    }
+  });
+}

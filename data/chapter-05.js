@@ -4,11 +4,31 @@ const chapter05 = {
   id: 'chapter-05',
   titles: { en: 'Inventory', ru: 'Запасы', uz: 'Tovar zaxiralari' },
   objectives: [
-    { en: 'Record cost of sales and closing inventory', ru: 'Отражать себестоимость продаж и запасы на конец периода', uz: 'Sotilgan tovar tannarxi va yakuniy zaxirani qayd etish' },
-    { en: 'Value inventory under IAS 2', ru: 'Оценивать запасы по IAS 2', uz: 'Zaxirani IAS 2 bo\'yicha baholash' },
-    { en: 'Identify the costs included in inventory', ru: 'Определять затраты, включаемые в стоимость запасов', uz: 'Zaxira qiymatiga kiradigan xarajatlarni aniqlash' },
-    { en: 'Calculate inventory cost using FIFO and AVCO', ru: 'Рассчитывать стоимость запасов методами FIFO и AVCO', uz: 'Zaxira qiymatini FIFO va AVCO usullarida hisoblash' },
-    { en: 'Explain how inventory valuation affects profit and assets', ru: 'Объяснять влияние оценки запасов на прибыль и активы', uz: 'Zaxirani baholash foyda va aktivlarga qanday ta\'sir qilishini tushuntirish' },
+    {
+      en: 'Record cost of sales and closing inventory',
+      ru: 'Отражать себестоимость продаж и запасы на конец периода',
+      uz: 'Sotilgan tovar tannarxi va yakuniy zaxirani qayd etish',
+    },
+    {
+      en: 'Value inventory under IAS 2',
+      ru: 'Оценивать запасы по IAS 2',
+      uz: 'Zaxirani IAS 2 bo\'yicha baholash',
+    },
+    {
+      en: 'Identify the costs included in inventory',
+      ru: 'Определять затраты, включаемые в стоимость запасов',
+      uz: 'Zaxira qiymatiga kiradigan xarajatlarni aniqlash',
+    },
+    {
+      en: 'Calculate inventory cost using FIFO and AVCO',
+      ru: 'Рассчитывать стоимость запасов методами FIFO и AVCO',
+      uz: 'Zaxira qiymatini FIFO va AVCO usullarida hisoblash',
+    },
+    {
+      en: 'Explain how inventory valuation affects profit and assets',
+      ru: 'Объяснять влияние оценки запасов на прибыль и активы',
+      uz: 'Zaxirani baholash foyda va aktivlarga qanday ta\'sir qilishini tushuntirish',
+    },
   ],
   sections: [
     {
@@ -49,9 +69,44 @@ Yalpi foydani topish uchun tushum haqiqatda sotilgan tovarlar qiymati bilan soli
 Bu moslik tamoyili, hisoblash usulining davomi: zaxira xarajatlari ular topishga yordam bergan tushum bilan solishtiriladi.`,
       },
       example: {
-        en: `In its second year Madina's Mart starts with $4,000 of inventory, buys $30,000 more and has $5,000 left at the year end. Cost of sales is $4,000 + $30,000 - $5,000 = $29,000. With revenue of $45,000, gross profit is $16,000. The $5,000 of unsold goods stays on the statement of financial position as an asset.`,
-        ru: `Во второй год у Madina's Mart запасы на начало составляют $4,000, закупки $30,000, а на конец года остаётся $5,000. Себестоимость продаж: $4,000 + $30,000 - $5,000 = $29,000. При выручке $45,000 валовая прибыль равна $16,000. Непроданные товары на $5,000 остаются в отчёте о финансовом положении как актив.`,
-        uz: `Ikkinchi yilda Madina's Mart $4,000 zaxira bilan boshlaydi, yana $30,000 ga xarid qiladi va yil oxirida $5,000 qoladi. Tannarx: $4,000 + $30,000 - $5,000 = $29,000. $45,000 tushumda yalpi foyda $16,000. Sotilmagan $5,000 tovar moliyaviy holat hisobotida aktiv bo'lib qoladi.`,
+        en: `A toy shop's year.
+# Step 1: Goods available to sell
+  Toys at the start $4,000 + toys bought $30,000 = $34,000
+# Step 2: Take away what is still on the shelves
+  $34,000 - $5,000 = $29,000
+= Cost of sales: $29,000
+# Step 3: Gross profit
+  Revenue $45,000 - cost of sales $29,000 = $16,000
+The $5,000 of unsold toys stays as an asset and becomes next year's opening inventory.`,
+        ru: `Год магазина игрушек.
+# Шаг 1: Товар, доступный для продажи
+  Игрушки на начало $4,000 + куплено $30,000 = $34,000
+# Шаг 2: Вычтем то, что осталось на полках
+  $34,000 - $5,000 = $29,000
+= Себестоимость продаж: $29,000
+# Шаг 3: Валовая прибыль
+  Выручка $45,000 - себестоимость $29,000 = $16,000
+Непроданные игрушки на $5,000 остаются активом и становятся начальными запасами следующего года.`,
+        uz: `O'yinchoq do'konining yili.
+# 1-qadam: Sotishga mavjud tovar
+  Boshidagi o'yinchoqlar $4,000 + sotib olingan $30,000 = $34,000
+# 2-qadam: Javonda qolganini ayiramiz
+  $34,000 - $5,000 = $29,000
+= Sotilgan tovar tannarxi: $29,000
+# 3-qadam: Yalpi foyda
+  Tushum $45,000 - tannarx $29,000 = $16,000
+Sotilmagan $5,000 lik o'yinchoqlar aktiv bo'lib qoladi va kelasi yilning boshlang'ich zaxirasiga aylanadi.`,
+      },
+      simple: {
+        en: `Cost of sales is the cost of the goods you actually SOLD this year, not everything you bought.
+
+Take what you had at the start (opening inventory), add what you bought (purchases), and take away what is still on the shelves at the end (closing inventory). What is left must have been sold. Gross profit is then revenue minus cost of sales.`,
+        ru: `Себестоимость продаж — стоимость товара, который вы действительно ПРОДАЛИ за год, а не всего купленного.
+
+Возьмите то, что было на начало (начальные запасы), прибавьте купленное (закупки) и вычтите то, что ещё лежит на полках в конце (конечные запасы). Остальное, значит, продано. Валовая прибыль — выручка минус себестоимость.`,
+        uz: `Sotilgan tovar tannarxi — butun xarid emas, shu yili haqiqatda SOTILGAN tovar qiymati.
+
+Boshidagi bor narsani (boshlang'ich zaxira) oling, sotib olinganni (xaridlar) qo'shing va oxirida javonda qolganini (yakuniy zaxira) ayiring. Qolgani sotilgan bo'ladi. Yalpi foyda — tushum minus tannarx.`,
       },
     },
     {
@@ -109,9 +164,35 @@ Ikkinchidan, sotilmagan tovarlar tannarxdan chiqarilib, keyingi yilga o'tadigan 
 Shundan so'ng tannarx hisobida xaridlar, boshlang'ich va yakuniy zaxira bo'ladi, uning qoldig'i esa foyda yoki zararga o'tkaziladi.`,
       },
       example: {
-        en: `At the end of year two Madina posts Dr Cost of sales $4,000, Cr Inventory $4,000 to remove the opening goods. Then she posts Dr Inventory $5,000, Cr Cost of sales $5,000 for the goods still on her shelves. The inventory account now shows $5,000, ready for next year.`,
-        ru: `В конце второго года Мадина делает запись Дт Себестоимость $4,000, Кт Запасы $4,000, чтобы списать запасы на начало. Затем Дт Запасы $5,000, Кт Себестоимость $5,000 на товары, оставшиеся на полках. Теперь на счёте запасов $5,000, готовые к следующему году.`,
-        uz: `Ikkinchi yil oxirida Madina boshlang'ich tovarni chiqarish uchun Dt Tannarx $4,000, Kt Zaxira $4,000 yozadi. So'ng javondagi tovar uchun Dt Zaxira $5,000, Kt Tannarx $5,000 yozadi. Endi zaxira hisobida keyingi yil uchun $5,000 turibdi.`,
+        en: `The toy shop at the end of the year.
+# Step 1: Remove the opening stock (assumed sold)
+  Dr Cost of sales $4,000, Cr Inventory $4,000
+# Step 2: Record the closing stock (still unsold)
+  Dr Inventory $5,000, Cr Cost of sales $5,000
+= The inventory account now shows $5,000, a debit balance, ready for next year.`,
+        ru: `Магазин игрушек в конце года.
+# Шаг 1: Убираем начальные запасы (считаем проданными)
+  Дт Себестоимость $4,000, Кт Запасы $4,000
+# Шаг 2: Записываем конечные запасы (ещё не проданы)
+  Дт Запасы $5,000, Кт Себестоимость $5,000
+= На счёте запасов теперь $5,000, дебетовый остаток, к следующему году.`,
+        uz: `O'yinchoq do'koni yil oxirida.
+# 1-qadam: Boshlang'ich zaxirani olib tashlaymiz (sotilgan deb)
+  Dt Tannarx $4,000, Kt Zaxira $4,000
+# 2-qadam: Yakuniy zaxirani yozamiz (hali sotilmagan)
+  Dt Zaxira $5,000, Kt Tannarx $5,000
+= Zaxira hisobida endi $5,000, debet qoldiq, kelasi yil uchun tayyor.`,
+      },
+      simple: {
+        en: `At the year end two entries update the inventory account.
+
+First, last year's stock is assumed sold, so it moves into cost of sales. Second, the stock still unsold is taken out of cost of sales and shown as an asset. After both, the inventory account shows only this year's closing stock.`,
+        ru: `В конце года две проводки обновляют счёт запасов.
+
+Сначала считаем, что прошлогодний товар продан, и переносим его в себестоимость. Затем товар, который ещё не продан, убираем из себестоимости и показываем как актив. После обеих проводок на счёте запасов только конечные запасы этого года.`,
+        uz: `Yil oxirida ikki yozuv zaxira hisobini yangilaydi.
+
+Avval o'tgan yilgi tovar sotilgan deb hisoblanadi va tannarxga o'tadi. Keyin hali sotilmagan tovar tannarxdan chiqarilib, aktiv sifatida ko'rsatiladi. Ikkalasidan keyin zaxira hisobida faqat shu yilning yakuniy zaxirasi qoladi.`,
       },
     },
     {
@@ -184,9 +265,44 @@ SSQ — sotish uchun qo'shimcha xarajatlardan keyin olinadigan summa, masalan tu
 Solishtirish har bir tovar bo'yicha qilinadi. O'xshash guruhlar birga ko'rilishi mumkin, faqat hammasi tannarxdan arzon bo'lsa.`,
       },
       example: {
-        en: `Madina has 40 kettles that cost $18 each. Their boxes got wet. She can still sell them for $25 each, but must spend $9 each on repacking. NRV is $25 - $9 = $16, which is below cost, so she values them at 40 × $16 = $640. Her 50 mugs cost $3 and sell for $7, so they stay at cost: $150. She does not add everything together and compare totals.`,
-        ru: `У Мадины 40 чайников по себестоимости $18. Их коробки намокли. Она всё ещё может продать их по $25, но должна потратить $9 на штуку на переупаковку. ЧСР: $25 - $9 = $16, это ниже себестоимости, поэтому оценка 40 × $16 = $640. 50 кружек стоят $3 и продаются по $7, поэтому остаются по себестоимости: $150. Она не складывает всё и не сравнивает итоги.`,
-        uz: `Madinada tannarxi $18 dan 40 ta choynak bor. Qutilari ho'l bo'lgan. U ularni hali $25 dan sota oladi, lekin har biriga qayta qadoqlash uchun $9 sarflashi kerak. SSQ: $25 - $9 = $16, bu tannarxdan past, demak baho 40 × $16 = $640. 50 ta krujka $3 turadi va $7 dan sotiladi, shuning uchun tannarxda qoladi: $150. U hammasini qo'shib, jamini solishtirmaydi.`,
+        en: `A shop checks two items at the year end.
+# Item 1: 40 kettles with water-damaged boxes
+  Cost: $18 each
+  NRV: sell for $25 but must spend $9 on new boxes, so $25 - $9 = $16
+  Lower of $18 and $16 is $16: 40 × $16 = $640
+# Item 2: 50 mugs
+  Cost $3, NRV $7. Lower is cost: 50 × $3 = $150
+= Inventory: $640 + $150 = $790
+! Common trap: comparing totals. Each line is tested on its own, so a profitable item cannot hide a loss on another.`,
+        ru: `Магазин проверяет два товара на конец года.
+# Товар 1: 40 чайников с намокшими коробками
+  Стоимость: $18 за штуку
+  ЧСР: продать за $25, но нужно $9 на новые коробки, значит $25 - $9 = $16
+  Меньшее из $18 и $16 — $16: 40 × $16 = $640
+# Товар 2: 50 кружек
+  Стоимость $3, ЧСР $7. Меньшее — стоимость: 50 × $3 = $150
+= Запасы: $640 + $150 = $790
+! Частая ошибка: сравнивать итоги. Каждую строку проверяют отдельно, чтобы прибыльный товар не скрыл убыток другого.`,
+        uz: `Do'kon yil oxirida ikki tovarni tekshiradi.
+# 1-tovar: qutilari ho'l bo'lgan 40 ta choynak
+  Qiymati: har biri $18
+  SSQ: $25 ga sotiladi, lekin yangi qutiga $9 kerak, demak $25 - $9 = $16
+  $18 va $16 dan kichigi $16: 40 × $16 = $640
+# 2-tovar: 50 ta krujka
+  Qiymati $3, SSQ $7. Kichigi qiymat: 50 × $3 = $150
+= Zaxira: $640 + $150 = $790
+! Ko'p uchraydigan xato: jamlarni solishtirish. Har bir qator alohida tekshiriladi, foydali tovar boshqasining zararini yashirmasligi uchun.`,
+      },
+      simple: {
+        en: `Never show stock at more than you can get for it. IAS 2 says: use the LOWER of what it cost and what you can sell it for (net realisable value, NRV).
+
+Cost = everything spent to get it ready and on the shelf (price, import duty, delivery in, production costs). NRV = selling price minus any costs still needed to sell it. Check each item separately, not the totals.`,
+        ru: `Никогда не показывайте запасы дороже, чем можно за них получить. IAS 2: берите МЕНЬШЕЕ из того, сколько они стоили, и за сколько их можно продать (чистая стоимость реализации, ЧСР).
+
+Стоимость = всё, что потрачено, чтобы товар был готов и на полке (цена, пошлина, доставка к вам, затраты на производство). ЧСР = цена продажи минус затраты, ещё нужные для продажи. Проверяйте каждый товар отдельно, а не итоги.`,
+        uz: `Zaxirani hech qachon undan oladigan pulingizdan qimmatroq ko'rsatmang. IAS 2: qiymati va sotish mumkin bo'lgan narxidan (sof sotish qiymati, SSQ) KICHIGINI oling.
+
+Qiymat = tovarni tayyorlash va javonga qo'yish uchun sarflangan hamma narsa (narx, boj, sizga yetkazish, ishlab chiqarish xarajatlari). SSQ = sotish narxi minus sotish uchun hali kerak bo'lgan xarajatlar. Jamlarni emas, har bir tovarni alohida tekshiring.`,
       },
     },
     {
@@ -212,11 +328,7 @@ Solishtirish har bir tovar bo'yicha qilinadi. O'xshash guruhlar birga ko'rilishi
 - Davriy AVCO: davr oxirida hisoblanadigan bitta o'rtacha narx.
 - Uzluksiz AVCO: har xariddan keyin yangi o'rtacha. Sotuvlar oxirgi o'rtachada ketadi.`,
       },
-      heading: {
-        en: 'Methods of calculating cost',
-        ru: 'Методы расчёта стоимости',
-        uz: 'Qiymatni hisoblash usullari',
-      },
+      heading: { en: 'Methods of calculating cost', ru: 'Методы расчёта стоимости', uz: 'Qiymatni hisoblash usullari' },
       body: {
         en: `Unit cost is used only where items are individually identifiable and valuable, such as cars or jewellery.
 
@@ -241,27 +353,62 @@ Davriy o'rtacha tortilgan usul boshlang'ich zaxira va barcha xaridlar qiymatini 
 Uzluksiz o'rtacha tortilgan usul har xariddan keyin o'rtachani yangilaydi. Har bir sotuv shu paytdagi o'rtachada baholanadi. Eng ishonchli yo'l — sana tartibida jadval tuzish.`,
       },
       example: {
-        en: `Madina starts with 10 lamps at $8 ($80). She buys 10 at $10 ($100), sells 12, then buys 5 at $12 ($60). 13 lamps remain.
+        en: `A shop has 10 lamps at $8 ($80). It buys 10 more at $10 ($100), sells 12, then buys 5 at $12 ($60). 13 lamps are left.
+# FIFO
+  The 12 sold are the 10 oldest at $8 and 2 at $10
+  Left: 8 at $10 = $80, plus 5 at $12 = $60
+  Closing inventory: $80 + $60 = $140
+# Periodic AVCO
+  Total cost $80 + $100 + $60 = $240 for 25 lamps = $9.60 each
+  Closing inventory: 13 × $9.60 = $124.80
+# Continuous AVCO
+  After the first purchase: $180 / 20 lamps = $9 each
+  Sell 12, leaving 8 × $9 = $72
+  Buy 5 for $60: closing inventory $72 + $60 = $132
+= Same lamps, three different answers. That is why a business must pick one method and stick to it.`,
+        ru: `В магазине 10 ламп по $8 ($80). Он покупает ещё 10 по $10 ($100), продаёт 12, затем покупает 5 по $12 ($60). Остаётся 13 ламп.
+# FIFO
+  Проданы 12: 10 самых старых по $8 и 2 по $10
+  Осталось: 8 по $10 = $80, плюс 5 по $12 = $60
+  Конечные запасы: $80 + $60 = $140
+# Периодическое AVCO
+  Вся стоимость $80 + $100 + $60 = $240 за 25 ламп = $9.60 за штуку
+  Конечные запасы: 13 × $9.60 = $124.80
+# Непрерывное AVCO
+  После первой покупки: $180 / 20 ламп = $9 за штуку
+  Продаём 12, остаётся 8 × $9 = $72
+  Покупаем 5 за $60: конечные запасы $72 + $60 = $132
+= Одни и те же лампы, три разных ответа. Поэтому бизнес выбирает один метод и придерживается его.`,
+        uz: `Do'konda $8 dan 10 ta chiroq bor ($80). U yana $10 dan 10 ta oladi ($100), 12 tasini sotadi, keyin $12 dan 5 ta oladi ($60). 13 ta chiroq qoladi.
+# FIFO
+  Sotilgan 12 ta: $8 dan eng eski 10 ta va $10 dan 2 ta
+  Qoldi: $10 dan 8 ta = $80, plus $12 dan 5 ta = $60
+  Yakuniy zaxira: $80 + $60 = $140
+# Davriy AVCO
+  Jami qiymat $80 + $100 + $60 = $240, 25 ta chiroq uchun = har biri $9.60
+  Yakuniy zaxira: 13 × $9.60 = $124.80
+# Uzluksiz AVCO
+  Birinchi xariddan keyin: $180 / 20 ta = har biri $9
+  12 tasi sotiladi, 8 × $9 = $72 qoladi
+  $60 ga 5 ta olinadi: yakuniy zaxira $72 + $60 = $132
+= Bir xil chiroqlar, uch xil javob. Shuning uchun biznes bitta usulni tanlab, unga amal qiladi.`,
+      },
+      simple: {
+        en: `When identical items were bought at different prices, you need a rule for which price the sold ones carry.
 
-FIFO: the 8 left from the $10 batch plus the 5 at $12 = $80 + $60 = $140.
+- FIFO (first in, first out): the oldest are sold first, so what is left is at the newest prices.
+- Periodic AVCO: at the end of the period, one average price for everything.
+- Continuous AVCO: a new average after every purchase; each sale uses the average at that moment.`,
+        ru: `Когда одинаковые товары куплены по разным ценам, нужно правило, по какой цене списывать проданное.
 
-Periodic AVCO: $240 / 25 lamps = $9.60, so 13 × $9.60 = $124.80.
+- FIFO (первым пришёл — первым ушёл): сначала продаются самые старые, поэтому остаток — по самым новым ценам.
+- Периодическое AVCO: в конце периода одна средняя цена на всё.
+- Непрерывное AVCO: новая средняя после каждой покупки; каждая продажа идёт по средней на тот момент.`,
+        uz: `Bir xil tovarlar turli narxda olinganda, sotilganlari qaysi narxda hisobdan chiqishi uchun qoida kerak.
 
-Continuous AVCO: after the first purchase the average is $180 / 20 = $9. Selling 12 leaves 8 × $9 = $72. Adding $60 gives $132.`,
-        ru: `У Мадины на начало 10 ламп по $8 ($80). Она покупает 10 по $10 ($100), продаёт 12, затем покупает 5 по $12 ($60). Остаётся 13 ламп.
-
-FIFO: 8 из партии по $10 плюс 5 по $12 = $80 + $60 = $140.
-
-Периодический AVCO: $240 / 25 ламп = $9.60, значит 13 × $9.60 = $124.80.
-
-Непрерывный AVCO: после первой закупки средняя $180 / 20 = $9. После продажи 12 остаётся 8 × $9 = $72. С добавлением $60 получаем $132.`,
-        uz: `Madinada boshida $8 dan 10 ta chiroq bor ($80). U $10 dan 10 ta sotib oladi ($100), 12 tasini sotadi, keyin $12 dan 5 ta oladi ($60). 13 ta chiroq qoladi.
-
-FIFO: $10 lik partiyadan 8 ta va $12 dan 5 ta = $80 + $60 = $140.
-
-Davriy AVCO: $240 / 25 chiroq = $9.60, demak 13 × $9.60 = $124.80.
-
-Uzluksiz AVCO: birinchi xariddan keyin o'rtacha $180 / 20 = $9. 12 ta sotilgach 8 × $9 = $72 qoladi. $60 qo'shilsa $132 bo'ladi.`,
+- FIFO (birinchi kelgan — birinchi ketadi): eng eskisi avval sotiladi, qolgani eng yangi narxlarda.
+- Davriy AVCO: davr oxirida hamma narsa uchun bitta o'rtacha narx.
+- Uzluksiz AVCO: har bir xariddan keyin yangi o'rtacha; har bir sotuv o'sha paytdagi o'rtacha bilan.`,
       },
     },
     {
@@ -325,19 +472,145 @@ Davr oxiri yozuvlarida zaxira yil oxirida sanaladi va yozuvlar bilan solishtiril
 Uzluksiz yozuvlarda har hafta yoki oyda tovarlarning bir qismi sanaladi, toki hammasi qamrab olinguncha. Bu yaxshiroq axborot beradi, ba'zi tovarlarning ortiqchasi va boshqalarining kamligini oldini oladi va yil oxiri ishini kamaytiradi.`,
       },
       example: {
-        en: `If Madina wrongly counts $5,500 instead of $5,000 of closing inventory, her assets are $500 too high and cost of sales is $500 too low, so profit is $500 too high. Next year the error reverses, because her opening inventory is $500 too high.`,
-        ru: `Если Мадина ошибочно посчитает запасы на конец в $5,500 вместо $5,000, активы будут завышены на $500, а себестоимость занижена на $500, значит, прибыль завышена на $500. В следующем году ошибка развернётся, так как запасы на начало будут завышены на $500.`,
-        uz: `Agar Madina yakuniy zaxirani $5,000 o'rniga xato $5,500 deb sanasa, aktivlar $500 ga yuqori, tannarx $500 ga past bo'ladi, demak foyda $500 ga yuqori. Keyingi yili xato teskari ishlaydi, chunki boshlang'ich zaxira $500 ga yuqori bo'ladi.`,
+        en: `A shop counts its stock as $5,500, but it is really $5,000.
+# Effect this year
+  Assets: $500 too high
+  Cost of sales: $500 too low
+  Profit: $500 too high
+# Effect next year
+  Opening inventory is $500 too high, so next year's cost of sales is $500 too high and profit $500 too low
+= Over the two years the error cancels out, but each year on its own is wrong.`,
+        ru: `Магазин насчитал запасы на $5,500, а на самом деле их $5,000.
+# Влияние в этом году
+  Активы: завышены на $500
+  Себестоимость: занижена на $500
+  Прибыль: завышена на $500
+# Влияние в следующем году
+  Начальные запасы завышены на $500, поэтому себестоимость следующего года завышена на $500, а прибыль занижена на $500
+= За два года ошибка гасится, но каждый год по отдельности неверен.`,
+        uz: `Do'kon zaxirasini $5,500 deb sanadi, aslida $5,000.
+# Bu yilgi ta'sir
+  Aktivlar: $500 ko'p
+  Tannarx: $500 kam
+  Foyda: $500 ko'p
+# Kelasi yilgi ta'sir
+  Boshlang'ich zaxira $500 ko'p, shuning uchun kelasi yil tannarxi $500 ko'p, foyda $500 kam
+= Ikki yilda xato bir-birini yopadi, lekin har bir yil alohida noto'g'ri.`,
+      },
+      simple: {
+        en: `Closing inventory is taken away inside cost of sales. So if closing inventory is too HIGH, cost of sales is too low and profit is too high, dollar for dollar. Too low works the other way.
+
+That is why a method must be used consistently. Businesses either count everything once at the year end (period-end records) or count a few lines every week until all are covered (continuous records).`,
+        ru: `Конечные запасы вычитаются внутри себестоимости. Поэтому если конечные запасы ЗАВЫШЕНЫ, себестоимость занижена, а прибыль завышена, доллар в доллар. Заниженные запасы — наоборот.
+
+Поэтому метод нужно применять последовательно. Бизнес либо считает всё один раз в конце года (периодический учёт), либо каждую неделю считает несколько позиций, пока не охватит все (непрерывный учёт).`,
+        uz: `Yakuniy zaxira tannarx ichida ayiriladi. Shuning uchun yakuniy zaxira juda KATTA bo'lsa, tannarx kam, foyda esa ko'p bo'ladi, dollarga dollar. Kam bo'lsa — aksincha.
+
+Shuning uchun usul izchil qo'llanishi kerak. Biznes hamma narsani yil oxirida bir marta sanaydi (davriy hisob) yoki har hafta bir nechta qatorni hammasi qamralguncha sanaydi (uzluksiz hisob).`,
       },
     },
   ],
   glossary: [
-    { term: { en: 'Cost of sales', ru: 'Себестоимость продаж', uz: 'Sotilgan tovar tannarxi' }, definition: { en: 'Opening inventory plus purchases less closing inventory.', ru: 'Запасы на начало плюс закупки минус запасы на конец.', uz: 'Boshlang\'ich zaxira plus xaridlar minus yakuniy zaxira.' } },
-    { term: { en: 'Net realisable value (NRV)', ru: 'Чистая стоимость реализации (ЧСР)', uz: 'Sof sotish qiymati (SSQ)' }, definition: { en: 'Selling price less any further costs needed to make the sale.', ru: 'Цена продажи минус дальнейшие затраты, нужные для продажи.', uz: 'Sotish narxi minus sotish uchun kerak bo\'lgan qo\'shimcha xarajatlar.' } },
-    { term: { en: 'Work in progress', ru: 'Незавершённое производство', uz: 'Tugallanmagan ishlab chiqarish' }, definition: { en: 'Partly finished goods.', ru: 'Частично готовая продукция.', uz: 'Qisman tayyor mahsulot.' } },
-    { term: { en: 'FIFO', ru: 'FIFO', uz: 'FIFO' }, definition: { en: 'First in, first out: the oldest items are treated as sold first.', ru: 'Первым пришёл — первым ушёл: первыми считаются проданными самые старые единицы.', uz: 'Birinchi kirgan birinchi chiqadi: eng eski tovarlar avval sotilgan deb hisoblanadi.' } },
-    { term: { en: 'AVCO', ru: 'AVCO', uz: 'AVCO' }, definition: { en: 'Weighted average cost, worked out periodically or continuously.', ru: 'Средневзвешенная стоимость, рассчитываемая периодически или непрерывно.', uz: 'Davriy yoki uzluksiz hisoblanadigan o\'rtacha tortilgan qiymat.' } },
-    { term: { en: 'Periodic inventory records', ru: 'Периодический учёт запасов', uz: 'Davriy zaxira yozuvlari' }, definition: { en: 'Inventory is counted and valued at the end of the period.', ru: 'Запасы пересчитываются и оцениваются в конце периода.', uz: 'Zaxira davr oxirida sanaladi va baholanadi.' } },
+    {
+      term: { en: 'Inventory', ru: 'Запасы', uz: 'Tovar zaxiralari' },
+      definition: {
+        en: 'Goods held for sale, materials and parts for making them, and partly finished goods.',
+        ru: 'Товары для продажи, материалы и детали для их изготовления и незавершённая продукция.',
+        uz: 'Sotish uchun tovarlar, ularni tayyorlash uchun materiallar va qismlar hamda tugallanmagan mahsulot.',
+      },
+      example: {
+        en: 'The phones on a phone shop\'s shelves, waiting to be sold.',
+        ru: 'Телефоны на полках магазина, которые ждут продажи.',
+        uz: 'Do\'kon javonida sotilishni kutayotgan telefonlar.',
+      },
+    },
+    {
+      term: { en: 'Cost of sales', ru: 'Себестоимость продаж', uz: 'Sotilgan tovar tannarxi' },
+      definition: {
+        en: 'Opening inventory plus purchases less closing inventory.',
+        ru: 'Запасы на начало плюс закупки минус запасы на конец.',
+        uz: 'Boshlang\'ich zaxira plus xaridlar minus yakuniy zaxira.',
+      },
+      example: {
+        en: 'Start $4,000 + bought $30,000 - left at the end $5,000 = $29,000.',
+        ru: 'Начало $4,000 + куплено $30,000 - осталось на конец $5,000 = $29,000.',
+        uz: 'Boshi $4,000 + olingan $30,000 - oxirida qolgan $5,000 = $29,000.',
+      },
+    },
+    {
+      term: { en: 'Gross profit', ru: 'Валовая прибыль', uz: 'Yalpi foyda' },
+      definition: {
+        en: 'Revenue less cost of sales.',
+        ru: 'Выручка минус себестоимость продаж.',
+        uz: 'Tushum minus sotilgan tovar tannarxi.',
+      },
+      example: {
+        en: 'Revenue $45,000 - cost of sales $29,000 = gross profit $16,000.',
+        ru: 'Выручка $45,000 - себестоимость $29,000 = валовая прибыль $16,000.',
+        uz: 'Tushum $45,000 - tannarx $29,000 = yalpi foyda $16,000.',
+      },
+    },
+    {
+      term: { en: 'Net realisable value (NRV)', ru: 'Чистая стоимость реализации (ЧСР)', uz: 'Sof sotish qiymati (SSQ)' },
+      definition: {
+        en: 'Selling price less any further costs needed to make the sale.',
+        ru: 'Цена продажи минус дальнейшие затраты, нужные для продажи.',
+        uz: 'Sotish narxi minus sotish uchun kerak bo\'lgan qo\'shimcha xarajatlar.',
+      },
+      example: {
+        en: 'A damaged kettle sells for $25 after $9 of repairs: NRV = $16.',
+        ru: 'Повреждённый чайник продаётся за $25 после ремонта за $9: ЧСР = $16.',
+        uz: 'Shikastlangan choynak $9 ta\'mirdan keyin $25 ga sotiladi: SSQ = $16.',
+      },
+    },
+    {
+      term: { en: 'Work in progress', ru: 'Незавершённое производство', uz: 'Tugallanmagan ishlab chiqarish' },
+      definition: { en: 'Partly finished goods.', ru: 'Частично готовая продукция.', uz: 'Qisman tayyor mahsulot.' },
+      example: {
+        en: 'A tailor\'s half-sewn suits at the year end.',
+        ru: 'Наполовину сшитые костюмы портного на конец года.',
+        uz: 'Tikuvchining yil oxiridagi yarim tikilgan kostyumlari.',
+      },
+    },
+    {
+      term: { en: 'FIFO', ru: 'FIFO', uz: 'FIFO' },
+      definition: {
+        en: 'First in, first out: the oldest items are treated as sold first.',
+        ru: 'Первым пришёл — первым ушёл: первыми считаются проданными самые старые единицы.',
+        uz: 'Birinchi kirgan birinchi chiqadi: eng eski tovarlar avval sotilgan deb hisoblanadi.',
+      },
+      example: {
+        en: 'Bread baked on Monday is sold before bread baked on Tuesday.',
+        ru: 'Хлеб, испечённый в понедельник, продают раньше вторничного.',
+        uz: 'Dushanba kuni pishirilgan non seshanbadagidan oldin sotiladi.',
+      },
+    },
+    {
+      term: { en: 'AVCO', ru: 'AVCO', uz: 'AVCO' },
+      definition: {
+        en: 'Weighted average cost, worked out periodically or continuously.',
+        ru: 'Средневзвешенная стоимость, рассчитываемая периодически или непрерывно.',
+        uz: 'Davriy yoki uzluksiz hisoblanadigan o\'rtacha tortilgan qiymat.',
+      },
+      example: {
+        en: '10 units at $8 and 10 at $10 give an average of $9 each.',
+        ru: '10 штук по $8 и 10 по $10 дают среднюю $9 за штуку.',
+        uz: '$8 dan 10 ta va $10 dan 10 ta o\'rtacha $9 beradi.',
+      },
+    },
+    {
+      term: { en: 'Periodic inventory records', ru: 'Периодический учёт запасов', uz: 'Davriy zaxira yozuvlari' },
+      definition: {
+        en: 'Inventory is counted and valued at the end of the period.',
+        ru: 'Запасы пересчитываются и оцениваются в конце периода.',
+        uz: 'Zaxira davr oxirida sanaladi va baholanadi.',
+      },
+      example: {
+        en: 'A shop closes on 31 December and counts every item on its shelves.',
+        ru: 'Магазин закрывается 31 декабря и пересчитывает каждый товар на полках.',
+        uz: 'Do\'kon 31 dekabrda yopilib, javondagi har bir tovarni sanaydi.',
+      },
+    },
   ],
 };
 

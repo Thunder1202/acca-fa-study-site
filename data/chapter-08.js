@@ -4,10 +4,26 @@ const chapter08 = {
   id: 'chapter-08',
   titles: { en: 'Intangible assets', ru: 'Нематериальные активы', uz: 'Nomoddiy aktivlar' },
   objectives: [
-    { en: 'Tell tangible from intangible non-current assets', ru: 'Отличать материальные внеоборотные активы от нематериальных', uz: 'Moddiy va nomoddiy uzoq muddatli aktivlarni ajratish' },
-    { en: 'Explain how IAS 38 treats research and development costs', ru: 'Объяснять, как IAS 38 учитывает затраты на исследования и разработки', uz: 'IAS 38 tadqiqot va ishlanma xarajatlarini qanday hisobga olishini tushuntirish' },
-    { en: 'Calculate what to capitalise and what to expense', ru: 'Рассчитывать, что капитализировать, а что списывать на расходы', uz: 'Nimani kapitallashtirish va nimani xarajatga yozishni hisoblash' },
-    { en: 'Explain and calculate amortisation of intangible assets', ru: 'Объяснять и рассчитывать амортизацию нематериальных активов', uz: 'Nomoddiy aktivlar amortizatsiyasini tushuntirish va hisoblash' },
+    {
+      en: 'Tell tangible from intangible non-current assets',
+      ru: 'Отличать материальные внеоборотные активы от нематериальных',
+      uz: 'Moddiy va nomoddiy uzoq muddatli aktivlarni ajratish',
+    },
+    {
+      en: 'Explain how IAS 38 treats research and development costs',
+      ru: 'Объяснять, как IAS 38 учитывает затраты на исследования и разработки',
+      uz: 'IAS 38 tadqiqot va ishlanma xarajatlarini qanday hisobga olishini tushuntirish',
+    },
+    {
+      en: 'Calculate what to capitalise and what to expense',
+      ru: 'Рассчитывать, что капитализировать, а что списывать на расходы',
+      uz: 'Nimani kapitallashtirish va nimani xarajatga yozishni hisoblash',
+    },
+    {
+      en: 'Explain and calculate amortisation of intangible assets',
+      ru: 'Объяснять и рассчитывать амортизацию нематериальных активов',
+      uz: 'Nomoddiy aktivlar amortizatsiyasini tushuntirish va hisoblash',
+    },
   ],
   sections: [
     {
@@ -36,11 +52,7 @@ const chapter08 = {
 - Reklama va o'qitish xarajatlarini hech qachon nomoddiy aktiv sifatida kapitallashtirib bo'lmaydi.
 - Ichki yaratilgan gudvilni kapitallashtirib bo'lmaydi. Alohida sotib olingan nomoddiy aktivning ishlashini tekshirish xarajati uning qiymatiga kiradi.`,
       },
-      heading: {
-        en: 'What an intangible asset is',
-        ru: 'Что такое нематериальный актив',
-        uz: 'Nomoddiy aktiv nima',
-      },
+      heading: { en: 'What an intangible asset is', ru: 'Что такое нематериальный актив', uz: 'Nomoddiy aktiv nima' },
       body: {
         en: `Non-current assets are assets used in the business on an ongoing basis to generate revenue. IAS 38 defines an intangible asset as an identifiable non-monetary asset without physical substance.
 
@@ -59,9 +71,35 @@ Korxona uni o'tgan voqealar natijasida nazorat qiladi va undan kelajakda iqtisod
 Nomoddiy aktiv faqat shu ta'rifga va tan olish mezonlariga mos kelsa tan olinadi: uning qiymatini ishonchli o'lchash mumkin va kelajakdagi iqtisodiy foyda korxonaga kelishi ehtimol. Dastlab qiymatda o'lchanadi. Ishlanma xarajatlari ichki yaratilgan nomoddiy aktivlar bo'lib, faqat maxsus shartlar bajarilganda kapitallashtiriladi, buni keyingi bo'limda ko'ramiz.`,
       },
       example: {
-        en: `Madina's Mart buys a franchise licence for $12,000, allowing it to use a well-known brand name for four years. It has no physical form, belongs to the shop and will earn income, so it is an intangible asset recorded at its cost of $12,000. The $2,000 she spent on newspaper adverts cannot be added to it. Advertising is always an expense.`,
-        ru: `Madina's Mart покупает лицензию франшизы за $12,000, позволяющую четыре года пользоваться известным брендом. У неё нет физической формы, она принадлежит магазину и будет приносить доход, поэтому это нематериальный актив по стоимости $12,000. $2,000, потраченные на газетную рекламу, к ней добавить нельзя. Реклама — всегда расход.`,
-        uz: `Madina's Mart to'rt yil mashhur brend nomidan foydalanishga imkon beradigan franshiza litsenziyasini $12,000 ga sotib oladi. Uning jismoniy shakli yo'q, do'konga tegishli va daromad keltiradi, shuning uchun $12,000 qiymatda yoziladigan nomoddiy aktiv. Gazeta reklamasiga sarflangan $2,000 ni unga qo'shib bo'lmaydi. Reklama doim xarajat.`,
+        en: `A cafe pays for two things.
+# 1. A franchise licence: $12,000 to use a famous coffee brand for 4 years
+  No physical form, the cafe controls it, it will bring in sales: an intangible asset at $12,000
+# 2. Newspaper adverts: $2,000
+  They may bring customers, but advertising is never an asset: an expense of $2,000
+= Intangible assets: $12,000. Expenses: $2,000.`,
+        ru: `Кафе платит за две вещи.
+# 1. Франшизная лицензия: $12,000 за право использовать известный кофейный бренд 4 года
+  Нет физической формы, кафе контролирует её, она принесёт продажи: нематериальный актив $12,000
+# 2. Реклама в газете: $2,000
+  Она может привести клиентов, но реклама никогда не актив: расход $2,000
+= Нематериальные активы: $12,000. Расходы: $2,000.`,
+        uz: `Kafe ikki narsa uchun to'laydi.
+# 1. Franshiza litsenziyasi: mashhur qahva brendidan 4 yil foydalanish uchun $12,000
+  Jismoniy shakli yo'q, kafe nazorat qiladi, sotuv keltiradi: $12,000 nomoddiy aktiv
+# 2. Gazetadagi reklama: $2,000
+  Mijoz olib kelishi mumkin, lekin reklama hech qachon aktiv emas: $2,000 xarajat
+= Nomoddiy aktivlar: $12,000. Xarajatlar: $2,000.`,
+      },
+      simple: {
+        en: `An intangible asset is something valuable that you cannot touch: a licence, a patent, a brand, or the cost of developing a new product.
+
+It is recorded as an asset only if it is identifiable (separate from the business as a whole), its cost can be measured, and it will probably bring money in. It starts at cost. Advertising and training can never be intangible assets, however useful they are.`,
+        ru: `Нематериальный актив — ценность, которую нельзя потрогать: лицензия, патент, бренд или затраты на разработку нового продукта.
+
+Его записывают как актив, только если он идентифицируем (отделим от бизнеса в целом), его стоимость можно измерить и он, вероятно, принесёт деньги. Начальная оценка — по стоимости. Реклама и обучение никогда не становятся нематериальными активами, как бы полезны они ни были.`,
+        uz: `Nomoddiy aktiv — ushlab bo'lmaydigan qimmatli narsa: litsenziya, patent, brend yoki yangi mahsulotni ishlab chiqish xarajatlari.
+
+U faqat identifikatsiya qilinadigan (biznesdan alohida), qiymatini o'lchash mumkin va pul keltirishi ehtimoli katta bo'lsa aktiv sifatida yoziladi. Boshida qiymatda baholanadi. Reklama va o'qitish qanchalik foydali bo'lmasin, hech qachon nomoddiy aktiv bo'lmaydi.`,
       },
     },
     {
@@ -93,11 +131,7 @@ Nomoddiy aktiv faqat shu ta'rifga va tan olish mezonlariga mos kelsa tan olinadi
 - Tadqiqot uchun uskuna asosiy vosita, shuning uchun kapitallashtiriladi va IAS 16 bo'yicha amortizatsiyalanadi.
 - Loyihalar har yil oxirida qayta ko'riladi. Mezonlarga endi mos kelmaydigan loyiha foyda yoki zararga yozib yuboriladi.`,
       },
-      heading: {
-        en: 'Research and development',
-        ru: 'Исследования и разработки',
-        uz: 'Tadqiqot va ishlanma',
-      },
+      heading: { en: 'Research and development', ru: 'Исследования и разработки', uz: 'Tadqiqot va ishlanma' },
       body: {
         en: `IAS 38 defines research as original and planned investigation undertaken with the prospect of gaining new scientific or technical knowledge and understanding. Development is the application of research findings or other knowledge to a plan or design for new or substantially improved materials, products, processes or services before commercial production or use starts.
 
@@ -116,9 +150,47 @@ Barcha tadqiqot xarajatlari yuzaga kelganda foyda yoki zararga yoziladi. Tadqiqo
 Ishlanma xarajatlari ta'rif va tan olish mezonlariga mos kelsa, nomoddiy aktiv sifatida kapitallashtirilishi kerak. Odatda bu quyidagilarning hammasi bajarilishini anglatadi: foydaning ehtimoliy kirimi (sotuv yoki ichki tejash orqali), aktivni tugatish va ishlatish yoki sotish niyati, xarajatlarni ishonchli o'lchash, yetarli moliyaviy va boshqa resurslar, texnik imkoniyat va kutilayotgan foydalilik, bunda foyda loyiha xarajatlaridan oshadi. Birorta mezon bajarilmasa, xarajatlar yuzaga kelganda xarajatga yoziladi. Kapitallashtirish siyosati mezonlarga mos keladigan har bir loyihaga qo'llanishi kerak.`,
       },
       example: {
-        en: `Madina's Mart builds an online ordering app. The first $5,000 goes on investigating what customers want and which technology to use, so that is research and is expensed. Once the plan is clear, the money is available, it can be built and it looks profitable, the next $20,000 on writing the app meets every criterion and is capitalised as development cost. If a rival launched a free app halfway through and Madina stopped believing it would pay, the costs after that would be expensed.`,
-        ru: `Madina's Mart создаёт приложение для онлайн-заказов. Первые $5,000 уходят на выяснение, чего хотят клиенты и какую технологию применить, это исследование и расход. Когда план ясен, деньги есть, приложение можно создать и оно выглядит прибыльным, следующие $20,000 на разработку соответствуют всем критериям и капитализируются как затраты на разработку. Если бы конкурент выпустил бесплатное приложение на полпути и Мадина перестала бы верить в окупаемость, последующие затраты ушли бы в расходы.`,
-        uz: `Madina's Mart onlayn buyurtma ilovasini yaratadi. Dastlabki $5,000 mijozlar nimani xohlashini va qaysi texnologiyani tanlashni o'rganishga ketadi, bu tadqiqot va xarajat. Reja aniq bo'lib, pul bor, ilovani yaratish mumkin va foydali ko'rinsa, ilovani yozishga ketadigan keyingi $20,000 barcha mezonlarga mos keladi va ishlanma xarajati sifatida kapitallashtiriladi. Agar raqib yarim yo'lda bepul ilova chiqarsa va Madina uning o'zini oqlashiga ishonmay qo'ysa, keyingi xarajatlar xarajatga yozilardi.`,
+        en: `A bakery builds an online ordering app.
+# Stage 1: Research, $5,000
+  Surveying customers and testing which technology to use
+  Not yet sure it will work or pay: an expense
+# Stage 2: Development, $20,000
+  The plan is clear, the money is there, it can be built and it looks profitable: all six conditions are met
+  Capitalised as an intangible asset: $20,000
+# What if a rival launches a free app half-way?
+  If the bakery stops believing the app will pay, costs after that point are expensed
+! The $5,000 of research can never be moved into the asset later, even when the app succeeds.`,
+        ru: `Пекарня создаёт приложение для онлайн-заказов.
+# Этап 1: Исследования, $5,000
+  Опрос клиентов и выбор технологии
+  Ещё неясно, сработает ли и окупится ли: расход
+# Этап 2: Разработка, $20,000
+  План ясен, деньги есть, создать можно, выглядит прибыльно: все шесть условий выполнены
+  Капитализируется как нематериальный актив: $20,000
+# А если конкурент на полпути выпустит бесплатное приложение?
+  Если пекарня перестанет верить, что приложение окупится, затраты после этого — расходы
+! $5,000 исследований нельзя потом перенести в актив, даже если приложение будет успешным.`,
+        uz: `Novvoyxona onlayn buyurtma ilovasini yaratadi.
+# 1-bosqich: Tadqiqot, $5,000
+  Mijozlarni so'rash va texnologiyani tanlash
+  Ishlashi va o'zini oqlashi hali noaniq: xarajat
+# 2-bosqich: Ishlanma, $20,000
+  Reja aniq, pul bor, yaratish mumkin, foydali ko'rinadi: oltita shartning hammasi bajarilgan
+  Nomoddiy aktiv sifatida kapitallashtiriladi: $20,000
+# Raqib yarim yo'lda bepul ilova chiqarsa-chi?
+  Novvoyxona ilova o'zini oqlashiga ishonmay qolsa, shundan keyingi xarajatlar — xarajat
+! $5,000 tadqiqotni keyin, ilova muvaffaqiyatli bo'lsa ham, aktivga o'tkazib bo'lmaydi.`,
+      },
+      simple: {
+        en: `Research is finding out ("Can this work? What do customers want?"). It is ALWAYS an expense, because you cannot be sure it will ever earn money.
+
+Development is turning that knowledge into a real product. It MUST be made an asset once all six conditions are met (remember PIRATE): Probable benefits, Intention to complete, Reliable cost, Adequate resources, Technical feasibility, Expected profit. Costs spent before the conditions were met stay as expenses forever.`,
+        ru: `Исследования — выяснение («Сработает ли? Чего хотят клиенты?»). Это ВСЕГДА расход, ведь нельзя быть уверенным, что они принесут деньги.
+
+Разработка — превращение этих знаний в реальный продукт. Её ОБЯЗАТЕЛЬНО делают активом, когда выполнены все шесть условий (запомните PIRATE): вероятные выгоды, намерение завершить, надёжная оценка затрат, достаточные ресурсы, техническая осуществимость, ожидаемая прибыль. Затраты до выполнения условий навсегда остаются расходами.`,
+        uz: `Tadqiqot — aniqlash («Bu ishlaydimi? Mijozlar nima istaydi?»). Bu DOIM xarajat, chunki u pul keltirishiga ishonch yo'q.
+
+Ishlanma — bu bilimni haqiqiy mahsulotga aylantirish. Oltita shart bajarilganda u albatta aktiv qilinadi (PIRATE ni eslang): ehtimoliy naf, tugatish niyati, xarajatni ishonchli o'lchash, yetarli resurslar, texnik amalga oshirish mumkinligi, kutilgan foyda. Shartlar bajarilishidan oldingi xarajatlar abadiy xarajat bo'lib qoladi.`,
       },
     },
     {
@@ -179,9 +251,44 @@ Foydali muddati noaniq nomoddiy aktiv amortizatsiyalanmaydi. U pul kirimini kelt
 Hisob moddiy aktivlardagi bilan bir xil: Dt Amortizatsiya xarajati (foyda yoki zarar), Kt To'plangan amortizatsiya (moliyaviy holat hisoboti).`,
       },
       example: {
-        en: `The $20,000 app is launched on 1 October and Madina expects it to earn benefits for five years. Straight-line amortisation is $20,000 / 5 = $4,000 a year. For the year to 31 December only three months have passed: $4,000 x 3/12 = $1,000. The licence for $12,000 over four years gives $3,000 a year. Her statement of financial position shows the app at $20,000 - $1,000 = $19,000.`,
-        ru: `Приложение за $20,000 запущено 1 октября, и Мадина ожидает выгод от него пять лет. Прямолинейная амортизация: $20,000 / 5 = $4,000 в год. За год по 31 декабря прошло всего три месяца: $4,000 x 3/12 = $1,000. Лицензия за $12,000 на четыре года даёт $3,000 в год. В отчёте о финансовом положении приложение значится по $20,000 - $1,000 = $19,000.`,
-        uz: `$20,000 lik ilova 1 oktabrda ishga tushadi va Madina undan besh yil foyda kutadi. To'g'ri chiziqli amortizatsiya: $20,000 / 5 = yiliga $4,000. 31 dekabrgacha yilda faqat uch oy o'tgan: $4,000 x 3/12 = $1,000. To'rt yillik $12,000 lik litsenziya yiliga $3,000 beradi. Moliyaviy holat hisobotida ilova $20,000 - $1,000 = $19,000 da turadi.`,
+        en: `The bakery's $20,000 app goes live on 1 October. It should bring benefits for 5 years. The year ends on 31 December.
+# Step 1: A full year's amortisation
+  $20,000 / 5 = $4,000
+# Step 2: This year (only 3 months since launch)
+  $4,000 × 3/12 = $1,000
+# Step 3: Carrying amount at the year end
+  $20,000 - $1,000 = $19,000
+# The cafe's $12,000 licence for 4 years
+  $12,000 / 4 = $3,000 a year`,
+        ru: `Приложение пекарни за $20,000 запускают 1 октября. Оно должно приносить выгоду 5 лет. Год заканчивается 31 декабря.
+# Шаг 1: Амортизация за полный год
+  $20,000 / 5 = $4,000
+# Шаг 2: В этом году (всего 3 месяца после запуска)
+  $4,000 × 3/12 = $1,000
+# Шаг 3: Балансовая стоимость на конец года
+  $20,000 - $1,000 = $19,000
+# Лицензия кафе $12,000 на 4 года
+  $12,000 / 4 = $3,000 в год`,
+        uz: `Novvoyxonaning $20,000 lik ilovasi 1 oktyabrda ishga tushadi. U 5 yil naf keltirishi kerak. Yil 31 dekabrda tugaydi.
+# 1-qadam: To'liq yil amortizatsiyasi
+  $20,000 / 5 = $4,000
+# 2-qadam: Bu yil (ishga tushganidan beri 3 oy)
+  $4,000 × 3/12 = $1,000
+# 3-qadam: Yil oxiridagi balans qiymati
+  $20,000 - $1,000 = $19,000
+# Kafening 4 yillik $12,000 lik litsenziyasi
+  $12,000 / 4 = yiliga $3,000`,
+      },
+      simple: {
+        en: `Amortisation is depreciation for intangible assets: the cost is spread over the years the asset brings benefits. Use straight-line if you cannot tell the pattern.
+
+Development costs start being amortised only when the product goes on sale. An intangible with no foreseeable end to its life (indefinite) is not amortised; instead it is checked every year for impairment.`,
+        ru: `Амортизация нематериальных активов — то же, что амортизация основных средств: стоимость распределяют на годы, когда актив приносит выгоду. Если характер выгод неясен — линейно.
+
+Разработку начинают амортизировать, только когда продукт поступает в продажу. Нематериальный актив без предсказуемого конца срока (неопределённый) не амортизируют, а каждый год проверяют на обесценение.`,
+        uz: `Nomoddiy aktivlar amortizatsiyasi — asosiy vositalar amortizatsiyasi bilan bir xil: qiymat aktiv naf keltiradigan yillarga taqsimlanadi. Naf tartibi noaniq bo'lsa — to'g'ri chiziqli.
+
+Ishlanma faqat mahsulot sotuvga chiqqanda amortizatsiya qilina boshlaydi. Muddatining oxiri ko'rinmaydigan (noaniq) nomoddiy aktiv amortizatsiya qilinmaydi, har yili qadrsizlanishga tekshiriladi.`,
       },
     },
     {
@@ -236,19 +343,146 @@ Qayta baholash modeli faol bozorga asoslangan haqiqiy qiymatni talab qiladi, bu 
 IAS 38 amortizatsiya usullari va kutilayotgan muddatlarni, davr boshi va oxiridagi balans qiymati solishtirishini (yangi xarajat, amortizatsiya va loyiha tan olinish huquqini yo'qotgani uchun yozilgan summalar) hamda amortizatsiya xarajatini ochib berishni talab qiladi. Davrda xarajatga yozilgan tadqiqot va ishlanmaning jami summasi ham ochib beriladi.`,
       },
       example: {
-        en: `In Madina's Mart's notes, a grid has a column for development costs and one for licences. For the app it shows cost $20,000 added in the year, amortisation of $1,000 and a carrying amount of $19,000. A separate line states that $5,000 of research spending was expensed during the year.`,
-        ru: `В примечаниях Madina's Mart в таблице есть столбец для затрат на разработку и столбец для лицензий. По приложению показаны стоимость $20,000, добавленная за год, амортизация $1,000 и балансовая стоимость $19,000. Отдельной строкой указано, что $5,000 расходов на исследования списаны в расход за год.`,
-        uz: `Madina's Mart izohlarida jadvalda ishlanma xarajatlari va litsenziyalar uchun ustunlar bor. Ilova uchun yilda qo'shilgan $20,000 qiymat, $1,000 amortizatsiya va $19,000 balans qiymati ko'rsatilgan. Alohida qatorda yilda $5,000 tadqiqot xarajati xarajatga yozilgani aytilgan.`,
+        en: `The bakery's notes at the year end.
+# The grid (development costs column)
+  Cost added in the year: $20,000
+  Amortisation charged: $1,000
+  Carrying amount at the end: $19,000
+# A separate line
+  Research and development expensed in the year: $5,000`,
+        ru: `Примечания пекарни на конец года.
+# Таблица (колонка «затраты на разработку»)
+  Добавлено за год: $20,000
+  Начислена амортизация: $1,000
+  Балансовая стоимость на конец: $19,000
+# Отдельная строка
+  Исследования и разработки, списанные в расходы за год: $5,000`,
+        uz: `Novvoyxonaning yil oxiridagi izohlari.
+# Jadval («ishlanma xarajatlari» ustuni)
+  Yil davomida qo'shilgan: $20,000
+  Hisoblangan amortizatsiya: $1,000
+  Oxiridagi balans qiymati: $19,000
+# Alohida qator
+  Yil davomida xarajatga chiqarilgan tadqiqot va ishlanmalar: $5,000`,
+      },
+      simple: {
+        en: `In practice intangible assets are almost always kept at cost, less amortisation and any impairment (the cost model). Showing them at a current value needs an active market for identical assets, which is very rare, and development costs can never be revalued.
+
+The notes explain the methods and useful lives, show a table of how the carrying amounts changed, and state how much research and development was expensed in the year.`,
+        ru: `На практике нематериальные активы почти всегда учитывают по стоимости минус амортизация и обесценение (модель по стоимости). Для показа по текущей стоимости нужен активный рынок одинаковых активов, что очень редко, а разработки переоценивать нельзя никогда.
+
+В примечаниях объясняют методы и сроки, дают таблицу изменения балансовой стоимости и указывают, сколько исследований и разработок списано в расходы за год.`,
+        uz: `Amalda nomoddiy aktivlar deyarli doim qiymat minus amortizatsiya va qadrsizlanishda yuritiladi (qiymat modeli). Ularni joriy qiymatda ko'rsatish uchun bir xil aktivlarning faol bozori kerak, bu juda kam uchraydi, ishlanmalar esa hech qachon qayta baholanmaydi.
+
+Izohlarda usullar va muddatlar tushuntiriladi, balans qiymati o'zgarishi jadvali beriladi va yil davomida xarajatga chiqarilgan tadqiqot va ishlanmalar summasi ko'rsatiladi.`,
       },
     },
   ],
   glossary: [
-    { term: { en: 'Intangible asset', ru: 'Нематериальный актив', uz: 'Nomoddiy aktiv' }, definition: { en: 'An identifiable non-monetary asset without physical substance.', ru: 'Идентифицируемый неденежный актив без физической формы.', uz: 'Jismoniy shakli yo\'q, aniqlanadigan, pul bo\'lmagan aktiv.' } },
-    { term: { en: 'Research', ru: 'Исследования', uz: 'Tadqiqot' }, definition: { en: 'Original and planned investigation to gain new knowledge. Always expensed.', ru: 'Оригинальное плановое изучение для получения новых знаний. Всегда расход.', uz: 'Yangi bilim olish uchun asl va rejali o\'rganish. Doim xarajat.' } },
-    { term: { en: 'Development', ru: 'Разработка', uz: 'Ishlanma' }, definition: { en: 'Applying research to a plan or design before commercial production. Capitalised if criteria are met.', ru: 'Применение исследований к плану или проекту до коммерческого производства. Капитализируется при выполнении критериев.', uz: 'Tadqiqotni tijorat ishlab chiqarishdan oldin rejaga qo\'llash. Mezonlar bajarilsa kapitallashtiriladi.' } },
-    { term: { en: 'Amortisation', ru: 'Амортизация нематериальных активов', uz: 'Nomoddiy aktivlar amortizatsiyasi' }, definition: { en: 'Spreading the cost of an intangible asset over its useful life.', ru: 'Распределение стоимости нематериального актива на срок его использования.', uz: 'Nomoddiy aktiv qiymatini foydali muddatga taqsimlash.' } },
-    { term: { en: 'Indefinite useful life', ru: 'Неопределённый срок использования', uz: 'Noaniq foydali muddat' }, definition: { en: 'No foreseeable limit to the period of benefits. Not amortised, but reviewed annually for impairment.', ru: 'Нет предвидимого предела периода выгод. Не амортизируется, но ежегодно проверяется на обесценение.', uz: 'Foyda davrining ko\'zga ko\'rinadigan chegarasi yo\'q. Amortizatsiyalanmaydi, lekin har yili qadrsizlanishga tekshiriladi.' } },
-    { term: { en: 'Impairment', ru: 'Обесценение', uz: 'Qadrsizlanish' }, definition: { en: 'A fall in an asset\'s recoverable amount below its carrying amount, charged to profit or loss.', ru: 'Снижение возмещаемой стоимости актива ниже балансовой, относится на прибыль или убыток.', uz: 'Aktivning qoplanadigan qiymatining balans qiymatidan pasayishi, foyda yoki zararga yoziladi.' } },
+    {
+      term: { en: 'Intangible asset', ru: 'Нематериальный актив', uz: 'Nomoddiy aktiv' },
+      definition: {
+        en: 'An identifiable non-monetary asset without physical substance.',
+        ru: 'Идентифицируемый неденежный актив без физической формы.',
+        uz: 'Jismoniy shakli yo\'q, aniqlanadigan, pul bo\'lmagan aktiv.',
+      },
+      example: {
+        en: 'A $12,000 licence to use a famous brand for 4 years.',
+        ru: 'Лицензия за $12,000 на использование известного бренда 4 года.',
+        uz: 'Mashhur brenddan 4 yil foydalanish uchun $12,000 lik litsenziya.',
+      },
+    },
+    {
+      term: { en: 'Patent', ru: 'Патент', uz: 'Patent' },
+      definition: {
+        en: 'A legal right to be the only one allowed to make or sell an invention for a set number of years.',
+        ru: 'Законное право быть единственным, кто может производить или продавать изобретение определённое число лет.',
+        uz: 'Ixtironi ma\'lum yillar davomida yolg\'iz ishlab chiqarish yoki sotish huquqi.',
+      },
+      example: {
+        en: 'Buying the patent for a new kind of bicycle lock for $50,000.',
+        ru: 'Покупка патента на новый велосипедный замок за $50,000.',
+        uz: 'Yangi turdagi velosiped qulfi patentini $50,000 ga sotib olish.',
+      },
+    },
+    {
+      term: { en: 'Research', ru: 'Исследования', uz: 'Tadqiqot' },
+      definition: {
+        en: 'Original and planned investigation to gain new knowledge. Always expensed.',
+        ru: 'Оригинальное плановое изучение для получения новых знаний. Всегда расход.',
+        uz: 'Yangi bilim olish uchun asl va rejali o\'rganish. Doim xarajat.',
+      },
+      example: {
+        en: 'Surveying customers to find out whether they want an app.',
+        ru: 'Опрос клиентов, нужно ли им приложение.',
+        uz: 'Mijozlarga ilova kerakmi, shuni bilish uchun so\'rov.',
+      },
+    },
+    {
+      term: { en: 'Development', ru: 'Разработка', uz: 'Ishlanma' },
+      definition: {
+        en: 'Applying research to a plan or design before commercial production. Capitalised if criteria are met.',
+        ru: 'Применение исследований к плану или проекту до коммерческого производства. Капитализируется при выполнении критериев.',
+        uz: 'Tadqiqotni tijorat ishlab chiqarishdan oldin rejaga qo\'llash. Mezonlar bajarilsa kapitallashtiriladi.',
+      },
+      example: {
+        en: 'Writing the code for the app once it is clearly going ahead and will pay.',
+        ru: 'Написание кода приложения, когда ясно, что проект пойдёт и окупится.',
+        uz: 'Loyiha amalga oshishi va o\'zini oqlashi aniq bo\'lgach, ilova kodini yozish.',
+      },
+    },
+    {
+      term: { en: 'Amortisation', ru: 'Амортизация нематериальных активов', uz: 'Nomoddiy aktivlar amortizatsiyasi' },
+      definition: {
+        en: 'Spreading the cost of an intangible asset over its useful life.',
+        ru: 'Распределение стоимости нематериального актива на срок его использования.',
+        uz: 'Nomoddiy aktiv qiymatini foydali muddatga taqsimlash.',
+      },
+      example: {
+        en: 'A $20,000 app used for 5 years: $4,000 a year.',
+        ru: 'Приложение за $20,000 на 5 лет: $4,000 в год.',
+        uz: '5 yil ishlatiladigan $20,000 lik ilova: yiliga $4,000.',
+      },
+    },
+    {
+      term: { en: 'Indefinite useful life', ru: 'Неопределённый срок использования', uz: 'Noaniq foydali muddat' },
+      definition: {
+        en: 'No foreseeable limit to the period of benefits. Not amortised, but reviewed annually for impairment.',
+        ru: 'Нет предвидимого предела периода выгод. Не амортизируется, но ежегодно проверяется на обесценение.',
+        uz: 'Foyda davrining ko\'zga ko\'rinadigan chegarasi yo\'q. Amortizatsiyalanmaydi, lekin har yili qadrsizlanishga tekshiriladi.',
+      },
+      example: {
+        en: 'A brand that can be renewed for ever at little cost and has no foreseeable end.',
+        ru: 'Бренд, который можно продлевать бесконечно за небольшие деньги, без видимого конца.',
+        uz: 'Arzonga cheksiz yangilab turiladigan, oxiri ko\'rinmaydigan brend.',
+      },
+    },
+    {
+      term: { en: 'Impairment', ru: 'Обесценение', uz: 'Qadrsizlanish' },
+      definition: {
+        en: 'A fall in an asset\'s recoverable amount below its carrying amount, charged to profit or loss.',
+        ru: 'Снижение возмещаемой стоимости актива ниже балансовой, относится на прибыль или убыток.',
+        uz: 'Aktivning qoplanadigan qiymatining balans qiymatidan pasayishi, foyda yoki zararga yoziladi.',
+      },
+      example: {
+        en: 'An app carried at $19,000 is now expected to earn only $10,000: a $9,000 impairment.',
+        ru: 'Приложение с балансовой стоимостью $19,000 теперь принесёт только $10,000: обесценение $9,000.',
+        uz: 'Balans qiymati $19,000 bo\'lgan ilova endi faqat $10,000 keltiradi: $9,000 qadrsizlanish.',
+      },
+    },
+    {
+      term: { en: 'Cost model', ru: 'Модель учёта по стоимости', uz: 'Qiymat modeli' },
+      definition: {
+        en: 'Keeping an asset at cost less accumulated depreciation or amortisation and any impairment.',
+        ru: 'Учёт актива по стоимости минус накопленная амортизация и обесценение.',
+        uz: 'Aktivni qiymat minus to\'plangan amortizatsiya va qadrsizlanishda yuritish.',
+      },
+      example: {
+        en: 'Licence cost $12,000 - amortisation $3,000 = $9,000 shown after one year.',
+        ru: 'Лицензия $12,000 - амортизация $3,000 = через год показывают $9,000.',
+        uz: 'Litsenziya $12,000 - amortizatsiya $3,000 = bir yildan keyin $9,000 ko\'rsatiladi.',
+      },
+    },
   ],
 };
 

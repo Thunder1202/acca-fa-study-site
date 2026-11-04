@@ -8,11 +8,31 @@ const chapter06 = {
     uz: 'Uzoq muddatli aktivlar: sotib olish va amortizatsiya',
   },
   objectives: [
-    { en: 'Define non-current assets', ru: 'Дать определение внеоборотным активам', uz: 'Uzoq muddatli aktivlarga ta\'rif berish' },
-    { en: 'Tell asset (capitalised) items from expense items', ru: 'Отличать капитализируемые затраты от расходов', uz: 'Aktivga kiritiladigan xarajatlarni oddiy xarajatlardan ajratish' },
-    { en: 'Explain the purpose of an asset register', ru: 'Объяснить назначение реестра активов', uz: 'Aktivlar reyestrining maqsadini tushuntirish' },
-    { en: 'Record the acquisition of non-current assets', ru: 'Отражать приобретение внеоборотных активов', uz: 'Uzoq muddatli aktivlarni sotib olishni qayd etish' },
-    { en: 'Calculate and record depreciation', ru: 'Рассчитывать и отражать амортизацию', uz: 'Amortizatsiyani hisoblash va qayd etish' },
+    {
+      en: 'Define non-current assets',
+      ru: 'Дать определение внеоборотным активам',
+      uz: 'Uzoq muddatli aktivlarga ta\'rif berish',
+    },
+    {
+      en: 'Tell asset (capitalised) items from expense items',
+      ru: 'Отличать капитализируемые затраты от расходов',
+      uz: 'Aktivga kiritiladigan xarajatlarni oddiy xarajatlardan ajratish',
+    },
+    {
+      en: 'Explain the purpose of an asset register',
+      ru: 'Объяснить назначение реестра активов',
+      uz: 'Aktivlar reyestrining maqsadini tushuntirish',
+    },
+    {
+      en: 'Record the acquisition of non-current assets',
+      ru: 'Отражать приобретение внеоборотных активов',
+      uz: 'Uzoq muddatli aktivlarni sotib olishni qayd etish',
+    },
+    {
+      en: 'Calculate and record depreciation',
+      ru: 'Рассчитывать и отражать амортизацию',
+      uz: 'Amortizatsiyani hisoblash va qayd etish',
+    },
   ],
   sections: [
     {
@@ -41,11 +61,7 @@ const chapter06 = {
 - Avtosalon qayta sotish uchun olgan mashina zaxira, uzoq muddatli aktiv emas.
 - Bino sotib olishdagi yuridik xizmat uning qiymatiga kiradi, ya'ni kapital xarajat.`,
       },
-      heading: {
-        en: 'What a non-current asset is',
-        ru: 'Что такое внеоборотный актив',
-        uz: 'Uzoq muddatli aktiv nima',
-      },
+      heading: { en: 'What a non-current asset is', ru: 'Что такое внеоборотный актив', uz: 'Uzoq muddatli aktiv nima' },
       body: {
         en: `A non-current asset is long-term in nature, is not normally bought to be resold, may be tangible or intangible, and is used directly or indirectly to earn income for the business. It is not liquid: it cannot normally be turned into cash quickly without a significant loss of value.
 
@@ -58,9 +74,29 @@ Because of this, spending falls into two types. Asset (capitalised) expenditure 
 Shu sababli xarajatlar ikki turga bo'linadi. Aktivga kiritiladigan (kapital) xarajat uzoq muddatli aktivni sotib oladi yoki yaxshilaydi, shuning uchun moliyaviy holat hisobotida ko'rinadi. Joriy xarajat biznesni kundalik ishlatadi: ta'mir, qayta bezash, boshqaruv va umumiy ustama xarajatlar. U to'g'ridan-to'g'ri foyda yoki zararga xarajat sifatida yoziladi.`,
       },
       example: {
-        en: `Madina's Mart buys new shelves for $3,000. They will be used for years, so they are a non-current asset. Repainting the shop for $400 only freshens it up, so that is an expense. Building an extra room that adds $5,000 of selling space improves what the shop can earn, so that is added to the asset.`,
-        ru: `Madina's Mart покупает новые стеллажи за $3,000. Они прослужат годы, поэтому это внеоборотный актив. Покраска магазина за $400 лишь освежает его, поэтому это расход. Пристройка комнаты за $5,000, которая добавляет торговую площадь, повышает доходность магазина, поэтому её добавляют к активу.`,
-        uz: `Madina's Mart $3,000 ga yangi javonlar sotib oladi. Ular yillar davomida ishlatiladi, demak uzoq muddatli aktiv. Do'konni $400 ga qayta bo'yash uni faqat yangilaydi, bu xarajat. Savdo maydonini kengaytiradigan $5,000 lik xona qurish do'kon daromadini oshiradi, shuning uchun aktivga qo'shiladi.`,
+        en: `Three payments by a bakery. Ask: does it buy or improve something used for years?
+- New oven, $3,000: used for many years. Capital expenditure, added to the assets.
+- Repainting the shop, $400: only freshens it up. Revenue expenditure, an expense.
+- Building an extra room that adds selling space, $5,000: improves what the bakery can earn. Capital expenditure.`,
+        ru: `Три платежа пекарни. Спросите: покупает или улучшает ли он то, чем пользуются годами?
+- Новая печь, $3,000: служит много лет. Капитальные затраты, прибавляются к активам.
+- Покраска магазина, $400: лишь освежает. Текущие затраты, расход.
+- Пристройка, добавляющая торговую площадь, $5,000: увеличивает, сколько пекарня может заработать. Капитальные затраты.`,
+        uz: `Novvoyxonaning uchta to'lovi. So'rang: u yillar ishlatiladigan narsani sotib oladimi yoki yaxshilaydimi?
+- Yangi pech, $3,000: ko'p yil ishlaydi. Kapital xarajat, aktivlarga qo'shiladi.
+- Do'konni bo'yash, $400: faqat yangilaydi. Joriy xarajat.
+- Savdo maydonini oshiruvchi qo'shimcha xona, $5,000: novvoyxona topadigan pulni oshiradi. Kapital xarajat.`,
+      },
+      simple: {
+        en: `A non-current asset is something a business keeps and uses for more than a year to help it earn money, such as a van, a machine or a building. It is not bought to be sold.
+
+So every payment is one of two kinds. Capital expenditure buys or improves such an asset, and it is added to the asset. Revenue expenditure keeps things running day to day, such as repairs and repainting, and it is an expense.`,
+        ru: `Внеоборотный актив — то, что бизнес держит и использует больше года, чтобы зарабатывать: фургон, станок, здание. Его покупают не для продажи.
+
+Поэтому любой платёж бывает двух видов. Капитальные затраты покупают или улучшают такой актив и прибавляются к нему. Текущие затраты поддерживают ежедневную работу, например ремонт и покраска, и это расход.`,
+        uz: `Uzoq muddatli aktiv — biznes bir yildan ortiq saqlab, pul topish uchun ishlatadigan narsa: furgon, dastgoh, bino. U sotish uchun olinmaydi.
+
+Shuning uchun har bir to'lov ikki turdan biri. Kapital xarajat bunday aktivni sotib oladi yoki yaxshilaydi va aktivga qo'shiladi. Joriy xarajat kundalik ishni ta'minlaydi, masalan ta'mir va bo'yash, va bu xarajat.`,
       },
     },
     {
@@ -118,9 +154,53 @@ IAS 16 ga ko'ra qiymat — aktivni sotib olish va ishchi holatga keltirish uchun
 Yozuv: Dt Uzoq muddatli aktiv, Kt Bank yoki Kreditorlar. Xariddan keyingi xarajat aktivga faqat u keltiradigan daromadni oshirsa qo'shiladi, masalan savdo maydonini kengaytiradigan qurilish. Ta'mir doim xarajat.`,
       },
       example: {
-        en: `Madina buys a delivery van. The dealer's price is $10,000 and the number plates cost $100. She also pays $480 for one year of insurance and $120 for road tax. The van costs $10,100: Dr Van $10,100. The insurance and road tax are running costs, so $600 goes to expenses. Total paid is $10,700: Cr Bank $10,700. She then adds the van to the asset register with its date, plate number and cost.`,
-        ru: `Мадина покупает фургон для доставки. Цена у дилера $10,000, номерные знаки $100. Также она платит $480 за год страховки и $120 дорожного налога. Стоимость фургона $10,100: Дт Фургон $10,100. Страховка и налог — текущие расходы, поэтому $600 идёт в расходы. Всего заплачено $10,700: Кт Банк $10,700. Затем она вносит фургон в реестр активов с датой, номером и стоимостью.`,
-        uz: `Madina yetkazib berish furgonini sotib oladi. Dilerning narxi $10,000, davlat raqami $100. U yana bir yillik sug'urta uchun $480 va yo'l solig'i uchun $120 to'laydi. Furgon qiymati $10,100: Dt Furgon $10,100. Sug'urta va soliq joriy xarajat, shuning uchun $600 xarajatga o'tadi. Jami to'langan $10,700: Kt Bank $10,700. So'ng u furgonni sanasi, raqami va qiymati bilan aktivlar reyestriga yozadi.`,
+        en: `A bakery buys a delivery van and pays:
+  Van price $10,000
+  Number plates $100
+  One year of insurance $480
+  Road tax $120
+# Step 1: What is part of the van's cost?
+  Price $10,000 + plates $100 = $10,100 (needed to get the van on the road)
+# Step 2: What is a running cost?
+  Insurance $480 + road tax $120 = $600 (these repeat every year)
+# Step 3: The entries
+  Dr Van $10,100, Dr Motor expenses $600, Cr Bank $10,700
+= The van is added to the asset register at $10,100.`,
+        ru: `Пекарня покупает фургон и платит:
+  Цена фургона $10,000
+  Номера $100
+  Страховка на год $480
+  Дорожный налог $120
+# Шаг 1: Что входит в стоимость фургона?
+  Цена $10,000 + номера $100 = $10,100 (нужно, чтобы выехать на дорогу)
+# Шаг 2: Что текущие расходы?
+  Страховка $480 + налог $120 = $600 (повторяются каждый год)
+# Шаг 3: Проводки
+  Дт Фургон $10,100, Дт Расходы на транспорт $600, Кт Банк $10,700
+= Фургон вносят в реестр активов по $10,100.`,
+        uz: `Novvoyxona yetkazish furgonini olib, to'laydi:
+  Furgon narxi $10,000
+  Raqamlar $100
+  Bir yillik sug'urta $480
+  Yo'l solig'i $120
+# 1-qadam: Furgon qiymatiga nima kiradi?
+  Narx $10,000 + raqamlar $100 = $10,100 (yo'lga chiqish uchun kerak)
+# 2-qadam: Nima joriy xarajat?
+  Sug'urta $480 + soliq $120 = $600 (har yili takrorlanadi)
+# 3-qadam: Yozuvlar
+  Dt Furgon $10,100, Dt Transport xarajatlari $600, Kt Bank $10,700
+= Furgon aktivlar reyestriga $10,100 da yoziladi.`,
+      },
+      simple: {
+        en: `The cost of an asset is everything you pay to get it AND make it ready to work: the price, delivery, installation, preparing the site, testing, and legal or professional fees.
+
+Running costs are not part of the cost: insurance, tax, repairs, warranties and staff training are expenses. Each asset is also listed in an asset register, which is checked against the ledger.`,
+        ru: `Стоимость актива — всё, что вы платите, чтобы получить его И подготовить к работе: цена, доставка, установка, подготовка места, проверка, юридические и профессиональные услуги.
+
+Текущие расходы в стоимость не входят: страховка, налог, ремонт, гарантия и обучение персонала — это расходы. Каждый актив вносят в реестр активов, который сверяют с главной книгой.`,
+        uz: `Aktiv qiymati — uni olish VA ishga tayyorlash uchun to'lagan hamma narsa: narx, yetkazish, o'rnatish, joyni tayyorlash, sinov, yuridik va professional xizmatlar.
+
+Joriy xarajatlar qiymatga kirmaydi: sug'urta, soliq, ta'mir, kafolat va xodimlarni o'qitish — xarajatlar. Har bir aktiv aktivlar reyestriga yoziladi, u bosh kitob bilan solishtiriladi.`,
       },
     },
     {
@@ -149,11 +229,7 @@ Yozuv: Dt Uzoq muddatli aktiv, Kt Bank yoki Kreditorlar. Xariddan keyingi xaraja
 - Amortizatsiya sabablari: foydalanish, eskirish, vaqt o'tishi, texnik eskirish va tugab borish.
 - Amortizatsiya aktiv uchun to'lovni taqsimlash yoki uning bozor qiymatini ko'rsatish usuli emas.`,
       },
-      heading: {
-        en: 'Why we depreciate',
-        ru: 'Зачем нужна амортизация',
-        uz: 'Nega amortizatsiya kerak',
-      },
+      heading: { en: 'Why we depreciate', ru: 'Зачем нужна амортизация', uz: 'Nega amortizatsiya kerak' },
       body: {
         en: `IAS 16 defines depreciation as the systematic allocation of the depreciable amount of an asset over its useful life. In simple terms it spreads the cost over the years the asset is used, so each year's profit carries a fair share of the cost of using it.
 
@@ -172,9 +248,38 @@ Har yili ta'sir ikki xil: moliyaviy holat hisobotida aktivning balans qiymati to
 Amortizatsiya foydalanish, eskirish, vaqt o'tishi (masalan o'n yillik ijara), texnologiya yoki bozor o'zgarishidan texnik eskirish va tugab borish (masalan foydali qazilma qazib olish) tufayli paydo bo'lishi mumkin. Uning maqsadi aktivni joriy qiymatda ko'rsatish yoki almashtirish uchun jamg'arma yaratish emas. Yer odatda cheksiz muddatli va amortizatsiyalanmaydi, binolar esa amortizatsiyalanadi. Amortizatsiya aktiv foydalanishga tayyor bo'lganda boshlanadi.`,
       },
       example: {
-        en: `The $10,100 van will not last forever and will help earn sales for several years. If Madina charged the whole $10,100 against the year she bought it, that year would look terrible and the next years too good. Depreciation spreads the cost over the years the van is used. The shelves are used the same way, but the land under the shop is not depreciated.`,
-        ru: `Фургон за $10,100 прослужит не вечно и будет помогать зарабатывать выручку несколько лет. Если Мадина списала бы всё $10,100 на год покупки, тот год выглядел бы ужасно, а следующие — слишком хорошо. Амортизация распределяет стоимость на годы использования фургона. Так же используются стеллажи, а земля под магазином не амортизируется.`,
-        uz: `$10,100 lik furgon abadiy xizmat qilmaydi va bir necha yil davomida sotuvga yordam beradi. Agar Madina butun $10,100 ni sotib olgan yiliga xarajat qilsa, o'sha yil juda yomon, keyingi yillar esa juda yaxshi ko'rinardi. Amortizatsiya qiymatni furgon ishlatiladigan yillarga taqsimlaydi. Javonlar ham xuddi shunday ishlatiladi, lekin do'kon ostidagi yer amortizatsiyalanmaydi.`,
+        en: `A $10,000 van will be used for 5 years.
+# Without depreciation
+  Year 1 expense: $10,000. Years 2 to 5: $0
+  Year 1 looks terrible and the other years look too good, although the van worked equally hard every year.
+# With depreciation (straight-line, no residual value)
+  $10,000 / 5 = $2,000 each year for 5 years
+= Each year now carries a fair $2,000 share of the cost of the van.`,
+        ru: `Фургон за $10,000 будут использовать 5 лет.
+# Без амортизации
+  Расход 1-го года: $10,000. Годы 2-5: $0
+  1-й год выглядит ужасно, остальные слишком хорошо, хотя фургон работал одинаково каждый год.
+# С амортизацией (линейно, без ликвидационной стоимости)
+  $10,000 / 5 = $2,000 каждый год 5 лет
+= Теперь каждый год несёт честную долю $2,000 стоимости фургона.`,
+        uz: `$10,000 lik furgon 5 yil ishlatiladi.
+# Amortizatsiyasiz
+  1-yil xarajati: $10,000. 2-5 yillar: $0
+  1-yil juda yomon, qolganlari juda yaxshi ko'rinadi, holbuki furgon har yili bir xil ishlagan.
+# Amortizatsiya bilan (to'g'ri chiziqli, tugatish qiymatisiz)
+  $10,000 / 5 = 5 yil davomida har yili $2,000
+= Endi har bir yil furgon qiymatidan adolatli $2,000 ulush oladi.`,
+      },
+      simple: {
+        en: `A van wears out over the years it is used. Depreciation spreads its cost over those years, so each year carries a fair share of the cost of using it.
+
+It is not the van's market value, and it is not money saved for a new van. Land is not depreciated, because it does not wear out. Buildings are.`,
+        ru: `Фургон изнашивается за годы использования. Амортизация распределяет его стоимость по этим годам, и каждый год несёт свою честную долю.
+
+Это не рыночная цена фургона и не деньги, отложенные на новый. Землю не амортизируют, она не изнашивается. Здания — амортизируют.`,
+        uz: `Furgon ishlatilgan yillar davomida eskiradi. Amortizatsiya uning qiymatini shu yillarga taqsimlaydi va har bir yil o'z adolatli ulushini oladi.
+
+Bu furgonning bozor narxi ham, yangi furgonga yig'ilgan pul ham emas. Yer amortizatsiya qilinmaydi, u eskirmaydi. Binolar qilinadi.`,
       },
     },
     {
@@ -241,9 +346,53 @@ Foydali muddat — biznes aktivdan foydalanishni kutayotgan yillar soni, u doim 
 Yil o'rtasida sotib olingan yoki sotilgan aktivlar uchun ikki yondashuv bor: xarid yilida to'liq yil va sotuv yilida nol hisoblash, yoki egalik qilingan aniq oylar bo'yicha oylik hisoblash. Masalada doim qaysi biri ekani aytiladi.`,
       },
       example: {
-        en: `The $3,000 shelves have no residual value and a ten-year life: straight-line gives $300 a year. The van, at 25% reducing balance, is charged $2,525 in year one (25% of $10,100). Its carrying amount falls to $7,575, so year two is $1,893.75 (25% of $7,575). If Madina bought the van on 1 July and her year ends on 31 December, year one is charged monthly for 6 months: $2,525 x 6/12 = $1,262.50.`,
-        ru: `Стеллажи за $3,000 без ликвидационной стоимости и со сроком 10 лет: прямолинейный метод даёт $300 в год. Фургон при 25% уменьшаемого остатка получает $2,525 в первый год (25% от $10,100). Его балансовая стоимость падает до $7,575, поэтому второй год: $1,893.75 (25% от $7,575). Если Мадина купила фургон 1 июля, а год заканчивается 31 декабря, первый год начисляется помесячно за 6 месяцев: $2,525 x 6/12 = $1,262.50.`,
-        uz: `$3,000 lik javonlar tugatish qiymatisiz va 10 yillik muddatli: to'g'ri chiziqli usul yiliga $300 beradi. Furgon 25% kamayuvchi qoldiqda birinchi yili $2,525 hisoblanadi ($10,100 ning 25%). Uning balans qiymati $7,575 ga tushadi, shuning uchun ikkinchi yil $1,893.75 ($7,575 ning 25%). Agar Madina furgonni 1 iyulda sotib olgan bo'lsa va yili 31 dekabrda tugasa, birinchi yil 6 oy uchun oylik hisoblanadi: $2,525 x 6/12 = $1,262.50.`,
+        en: `Two assets.
+# Shelves: $3,000, 10-year life, no residual value, straight-line
+  $3,000 / 10 = $300 every year
+# Van: $10,100, 25% reducing balance
+  Year 1: 25% × $10,100 = $2,525. Carrying amount left: $10,100 - $2,525 = $7,575
+  Year 2: 25% × $7,575 = $1,893.75. The charge is smaller because less is left.
+# Van bought on 1 July, year ends 31 December, monthly basis
+  Owned for 6 months: $2,525 × 6/12 = $1,262.50
+! Reducing balance uses the carrying amount (what is left), never the original cost after year 1.`,
+        ru: `Два актива.
+# Полки: $3,000, срок 10 лет, без ликвидационной стоимости, линейно
+  $3,000 / 10 = $300 каждый год
+# Фургон: $10,100, уменьшаемый остаток 25%
+  Год 1: 25% × $10,100 = $2,525. Осталось: $10,100 - $2,525 = $7,575
+  Год 2: 25% × $7,575 = $1,893.75. Сумма меньше, потому что осталось меньше.
+# Фургон куплен 1 июля, год заканчивается 31 декабря, помесячно
+  Владели 6 месяцев: $2,525 × 6/12 = $1,262.50
+! Метод уменьшаемого остатка берёт балансовую стоимость (остаток), а не первоначальную стоимость после 1-го года.`,
+        uz: `Ikki aktiv.
+# Javonlar: $3,000, muddat 10 yil, tugatish qiymatisiz, to'g'ri chiziqli
+  $3,000 / 10 = har yili $300
+# Furgon: $10,100, 25% kamayuvchi qoldiq
+  1-yil: 25% × $10,100 = $2,525. Qolgan balans qiymati: $10,100 - $2,525 = $7,575
+  2-yil: 25% × $7,575 = $1,893.75. Summa kichik, chunki kamroq qolgan.
+# Furgon 1 iyulda olingan, yil 31 dekabrda tugaydi, oylik
+  6 oy egalik qilingan: $2,525 × 6/12 = $1,262.50
+! Kamayuvchi qoldiq 1-yildan keyin dastlabki qiymatni emas, balans qiymatini (qolganini) oladi.`,
+      },
+      simple: {
+        en: `Two methods.
+
+- Straight-line: the same amount every year. (Cost - residual value) / useful life.
+- Reducing balance: a fixed % of what is LEFT (the carrying amount) each year, so the charge gets smaller every year.
+
+If an asset is bought part-way through the year, the question tells you whether to charge a full year or only the months it was owned.`,
+        ru: `Два метода.
+
+- Линейный: одинаковая сумма каждый год. (Стоимость - ликвидационная стоимость) / срок полезного использования.
+- Уменьшаемого остатка: фиксированный % от того, что ОСТАЛОСЬ (балансовой стоимости), каждый год, поэтому сумма с каждым годом меньше.
+
+Если актив куплен в середине года, в задаче сказано, начислять ли полный год или только месяцы владения.`,
+        uz: `Ikki usul.
+
+- To'g'ri chiziqli: har yili bir xil summa. (Qiymat - tugatish qiymati) / foydali muddat.
+- Kamayuvchi qoldiq: har yili QOLGAN qismning (balans qiymatining) qat'iy %, shuning uchun summa har yili kichrayadi.
+
+Aktiv yil o'rtasida olinsa, masalada to'liq yilmi yoki faqat egalik oylarimi, aytiladi.`,
       },
     },
     {
@@ -269,11 +418,7 @@ Yil o'rtasida sotib olingan yoki sotilgan aktivlar uchun ikki yondashuv bor: xar
         uz: `- Agar ta'mir kabi xarajat xato aktiv hisobiga debetlangan bo'lsa, uni qaytaring (Dt Xarajat, Kt Aktiv) va unga ortiqcha hisoblangan amortizatsiyani ham qaytaring (Dt To'plangan amortizatsiya, Kt Amortizatsiya xarajati).
 - Amortizatsiya xarajati hisobi har yili foyda yoki zararga yopiladi, shuning uchun keyingi yilni noldan boshlaydi.`,
       },
-      heading: {
-        en: 'Accounting for depreciation',
-        ru: 'Учёт амортизации',
-        uz: 'Amortizatsiyani hisobda yuritish',
-      },
+      heading: { en: 'Accounting for depreciation', ru: 'Учёт амортизации', uz: 'Amortizatsiyani hisobda yuritish' },
       body: {
         en: `Whichever method is used, the accounting is the same. Each year: Dr Depreciation charge (an expense in profit or loss), Cr Accumulated depreciation (a statement of financial position account).
 
@@ -292,9 +437,41 @@ Amortizatsiya xarajati hisobi xarajat hisobi, shuning uchun har yili foyda yoki 
 Moliyaviy holat hisobotida u qiymatdan ayirma sifatida ko'rsatiladi: qiymat minus to'plangan amortizatsiya balans qiymatiga teng.`,
       },
       example: {
-        en: `For the year to 31 December, Madina's year-end entries are: Dr Depreciation charge $1,262.50, Cr Accumulated depreciation - van $1,262.50 for the van, and Dr Depreciation charge $300, Cr Accumulated depreciation - shelves $300. The statement of financial position shows the van at cost $10,100, less $1,262.50, giving a carrying amount of $8,837.50. The total $1,562.50 is also in her profit or loss.`,
-        ru: `За год по 31 декабря проводки Мадины на конец года: Дт Расход по амортизации $1,262.50, Кт Накопленная амортизация - фургон $1,262.50 по фургону и Дт Расход по амортизации $300, Кт Накопленная амортизация - стеллажи $300. В отчёте о финансовом положении фургон показан по стоимости $10,100 минус $1,262.50, балансовая стоимость $8,837.50. Общая сумма $1,562.50 отражена и в её прибыли или убытке.`,
-        uz: `31 dekabrgacha bo'lgan yil uchun Madinaning yil oxiri yozuvlari: furgon uchun Dt Amortizatsiya xarajati $1,262.50, Kt To'plangan amortizatsiya - furgon $1,262.50 va Dt Amortizatsiya xarajati $300, Kt To'plangan amortizatsiya - javonlar $300. Moliyaviy holat hisobotida furgon $10,100 qiymatda minus $1,262.50, balans qiymati $8,837.50. Umumiy $1,562.50 uning foyda yoki zararida ham bor.`,
+        en: `The bakery's van ($10,100, 6 months' depreciation of $1,262.50) and shelves ($3,000, $300 a year) at the year end.
+# The entries
+  Dr Depreciation charge $1,262.50, Cr Accumulated depreciation (van) $1,262.50
+  Dr Depreciation charge $300, Cr Accumulated depreciation (shelves) $300
+# Statement of financial position (van)
+  Cost $10,100 - accumulated depreciation $1,262.50 = carrying amount $8,837.50
+# Statement of profit or loss
+  Total depreciation expense: $1,262.50 + $300 = $1,562.50`,
+        ru: `Фургон пекарни ($10,100, амортизация за 6 месяцев $1,262.50) и полки ($3,000, $300 в год) на конец года.
+# Проводки
+  Дт Начисленная амортизация $1,262.50, Кт Накопленная амортизация (фургон) $1,262.50
+  Дт Начисленная амортизация $300, Кт Накопленная амортизация (полки) $300
+# Отчёт о финансовом положении (фургон)
+  Стоимость $10,100 - накопленная амортизация $1,262.50 = балансовая стоимость $8,837.50
+# Отчёт о прибыли или убытке
+  Весь расход на амортизацию: $1,262.50 + $300 = $1,562.50`,
+        uz: `Novvoyxona furgoni ($10,100, 6 oylik amortizatsiya $1,262.50) va javonlar ($3,000, yiliga $300) yil oxirida.
+# Yozuvlar
+  Dt Amortizatsiya xarajati $1,262.50, Kt To'plangan amortizatsiya (furgon) $1,262.50
+  Dt Amortizatsiya xarajati $300, Kt To'plangan amortizatsiya (javonlar) $300
+# Moliyaviy holat hisoboti (furgon)
+  Qiymat $10,100 - to'plangan amortizatsiya $1,262.50 = balans qiymati $8,837.50
+# Foyda yoki zarar hisoboti
+  Jami amortizatsiya xarajati: $1,262.50 + $300 = $1,562.50`,
+      },
+      simple: {
+        en: `The entry is always the same: Dr Depreciation charge (an expense this year), Cr Accumulated depreciation (all depreciation so far).
+
+The charge starts again at zero each year. Accumulated depreciation keeps growing. In the statement of financial position: cost - accumulated depreciation = carrying amount.`,
+        ru: `Проводка всегда одна: Дт Начисленная амортизация (расход года), Кт Накопленная амортизация (вся амортизация до сих пор).
+
+Начисление каждый год начинается с нуля. Накопленная амортизация продолжает расти. В отчёте о финансовом положении: стоимость - накопленная амортизация = балансовая стоимость.`,
+        uz: `Yozuv doim bir xil: Dt Amortizatsiya xarajati (shu yil xarajati), Kt To'plangan amortizatsiya (shu paytgacha barcha amortizatsiya).
+
+Xarajat har yili noldan boshlanadi. To'plangan amortizatsiya o'sib boradi. Moliyaviy holat hisobotida: qiymat - to'plangan amortizatsiya = balans qiymati.`,
       },
     },
     {
@@ -323,11 +500,7 @@ Moliyaviy holat hisobotida u qiymatdan ayirma sifatida ko'rsatiladi: qiymat minu
 - Bahoning o'zgarishi u kiritilgan davrda, shu davr amortizatsiyasi hisoblanishidan oldin kuchga kiradi.
 - To'plangan amortizatsiya va eski tugatish qiymati yangi hisobda qatnashmaydi. Faqat balans qiymati muhim.`,
       },
-      heading: {
-        en: 'Changing estimates',
-        ru: 'Изменение оценок',
-        uz: 'Baholarni o\'zgartirish',
-      },
+      heading: { en: 'Changing estimates', ru: 'Изменение оценок', uz: 'Baholarni o\'zgartirish' },
       body: {
         en: `A business should apply the same rates and methods consistently, but it may change its estimate of useful life or residual value if the old one is no longer appropriate. No past figures are restated. You simply work out the new annual charge from that point on.
 
@@ -340,21 +513,194 @@ Take the carrying amount at the date of the change, deduct any new residual valu
 O'zgarish sanasidagi balans qiymatini oling, yangi tugatish qiymatini ayiring va yangi qolgan foydali muddatga bo'ling.`,
       },
       example: {
-        en: `After two years Madina's shelves ($3,000, ten-year life, no residual value) have a carrying amount of $3,000 - 2 x $300 = $2,400. A supplier tells her they will wear out sooner, and she now expects only six more years of use. The new charge is $2,400 / 6 = $400 a year from now on. The $600 already charged is left alone.`,
-        ru: `Через два года стеллажи Мадины ($3,000, срок 10 лет, без ликвидационной стоимости) имеют балансовую стоимость $3,000 - 2 x $300 = $2,400. Поставщик говорит, что они износятся быстрее, и теперь она ожидает ещё лишь шесть лет использования. Новое начисление: $2,400 / 6 = $400 в год с этого момента. Уже начисленные $600 не меняются.`,
-        uz: `Ikki yildan keyin Madinaning javonlari ($3,000, 10 yillik muddat, tugatish qiymatisiz) balans qiymati $3,000 - 2 x $300 = $2,400. Yetkazib beruvchi ular tezroq eskirishini aytadi va u endi yana faqat olti yil foydalanishni kutadi. Yangi summa: hozirdan boshlab yiliga $2,400 / 6 = $400. Allaqachon hisoblangan $600 o'zgarmaydi.`,
+        en: `Shelves cost $3,000, with a 10-year life and no residual value.
+# Step 1: The old charge
+  $3,000 / 10 = $300 a year
+# Step 2: After 2 years
+  Carrying amount: $3,000 - 2 × $300 = $2,400
+# Step 3: New information
+  They will now last only 6 more years
+# Step 4: The new charge
+  $2,400 / 6 = $400 a year from now on
+= The $600 already charged is left as it is. Only the future changes.`,
+        ru: `Полки стоят $3,000, срок 10 лет, без ликвидационной стоимости.
+# Шаг 1: Старая сумма
+  $3,000 / 10 = $300 в год
+# Шаг 2: Через 2 года
+  Балансовая стоимость: $3,000 - 2 × $300 = $2,400
+# Шаг 3: Новая информация
+  Они прослужат ещё только 6 лет
+# Шаг 4: Новая сумма
+  $2,400 / 6 = $400 в год с этого момента
+= Уже начисленные $600 не трогают. Меняется только будущее.`,
+        uz: `Javonlar $3,000, muddat 10 yil, tugatish qiymatisiz.
+# 1-qadam: Eski summa
+  $3,000 / 10 = yiliga $300
+# 2-qadam: 2 yildan keyin
+  Balans qiymati: $3,000 - 2 × $300 = $2,400
+# 3-qadam: Yangi ma'lumot
+  Ular yana faqat 6 yil xizmat qiladi
+# 4-qadam: Yangi summa
+  $2,400 / 6 = hozirdan boshlab yiliga $400
+= Hisoblangan $600 ga tegilmaydi. Faqat kelajak o'zgaradi.`,
+      },
+      simple: {
+        en: `Sometimes you learn that an asset will last longer or shorter than you thought. You do not go back and fix earlier years.
+
+Instead, from now on: take what is left (the carrying amount today), take off any new residual value, and divide by the years still to go.`,
+        ru: `Иногда выясняется, что актив прослужит дольше или меньше, чем думали. Прошлые годы не исправляют.
+
+Вместо этого с этого момента: возьмите остаток (балансовую стоимость сегодня), вычтите новую ликвидационную стоимость, если есть, и разделите на оставшиеся годы.`,
+        uz: `Ba'zan aktiv o'ylagandan uzoqroq yoki qisqaroq xizmat qilishi ma'lum bo'ladi. O'tgan yillar tuzatilmaydi.
+
+Buning o'rniga hozirdan boshlab: qolganini (bugungi balans qiymatini) oling, yangi tugatish qiymati bo'lsa ayiring va qolgan yillarga bo'ling.`,
       },
     },
   ],
   glossary: [
-    { term: { en: 'Capital expenditure', ru: 'Капитальные затраты', uz: 'Kapital xarajat' }, definition: { en: 'Spending that buys or improves a non-current asset. It is shown in the statement of financial position.', ru: 'Затраты на покупку или улучшение внеоборотного актива. Отражаются в отчёте о финансовом положении.', uz: 'Uzoq muddatli aktivni sotib olish yoki yaxshilash xarajati. Moliyaviy holat hisobotida ko\'rsatiladi.' } },
-    { term: { en: 'Revenue expenditure', ru: 'Текущие затраты', uz: 'Joriy xarajat' }, definition: { en: 'Spending on running the business day to day, charged to profit or loss.', ru: 'Затраты на повседневную работу бизнеса, относятся на прибыль или убыток.', uz: 'Biznesning kundalik ishi uchun xarajat, foyda yoki zararga yoziladi.' } },
-    { term: { en: 'Asset register', ru: 'Реестр активов', uz: 'Aktivlar reyestri' }, definition: { en: 'A detailed record of each non-current asset, reconciled to the ledger.', ru: 'Подробная запись по каждому внеоборотному активу, сверяемая с книгой.', uz: 'Har bir uzoq muddatli aktiv bo\'yicha batafsil yozuv, kitob bilan solishtiriladi.' } },
-    { term: { en: 'Depreciation', ru: 'Амортизация', uz: 'Amortizatsiya' }, definition: { en: 'The systematic allocation of an asset\'s depreciable amount over its useful life.', ru: 'Систематическое распределение амортизируемой суммы актива на срок его использования.', uz: 'Aktivning amortizatsiya qilinadigan summasini foydali muddatga tizimli taqsimlash.' } },
-    { term: { en: 'Useful life', ru: 'Срок полезного использования', uz: 'Foydali muddat' }, definition: { en: 'The number of years the business expects to use the asset.', ru: 'Число лет, в течение которых бизнес планирует использовать актив.', uz: 'Biznes aktivdan foydalanishni kutayotgan yillar soni.' } },
-    { term: { en: 'Residual value', ru: 'Ликвидационная стоимость', uz: 'Tugatish qiymati' }, definition: { en: 'The estimated disposal value of the asset at the end of its useful life.', ru: 'Оценка выручки от выбытия актива в конце срока использования.', uz: 'Aktivning foydali muddat oxiridagi taxminiy sotuv qiymati.' } },
-    { term: { en: 'Carrying amount', ru: 'Балансовая стоимость', uz: 'Balans qiymati' }, definition: { en: 'Cost less accumulated depreciation.', ru: 'Стоимость минус накопленная амортизация.', uz: 'Qiymat minus to\'plangan amortizatsiya.' } },
-    { term: { en: 'Reducing balance', ru: 'Уменьшаемый остаток', uz: 'Kamayuvchi qoldiq' }, definition: { en: 'A method charging a fixed percentage of the carrying amount each year.', ru: 'Метод, при котором каждый год начисляется фиксированный процент от балансовой стоимости.', uz: 'Har yili balans qiymatining qat\'iy foizi hisoblanadigan usul.' } },
+    {
+      term: { en: 'Non-current asset', ru: 'Внеоборотный актив', uz: 'Uzoq muddatli aktiv' },
+      definition: {
+        en: 'An asset kept and used for more than a year to help earn income, not bought to be resold.',
+        ru: 'Актив, который держат и используют больше года для получения дохода, а не для перепродажи.',
+        uz: 'Qayta sotish uchun emas, daromad olish uchun bir yildan ortiq saqlanadigan va ishlatiladigan aktiv.',
+      },
+      example: {
+        en: 'A bakery\'s oven, delivery van and building.',
+        ru: 'Печь, фургон и здание пекарни.',
+        uz: 'Novvoyxonaning pechi, furgoni va binosi.',
+      },
+    },
+    {
+      term: { en: 'Capital expenditure', ru: 'Капитальные затраты', uz: 'Kapital xarajat' },
+      definition: {
+        en: 'Spending that buys or improves a non-current asset. It is shown in the statement of financial position.',
+        ru: 'Затраты на покупку или улучшение внеоборотного актива. Отражаются в отчёте о финансовом положении.',
+        uz: 'Uzoq muddatli aktivni sotib olish yoki yaxshilash xarajati. Moliyaviy holat hisobotida ko\'rsatiladi.',
+      },
+      example: {
+        en: 'Buying a $3,000 oven, or building an extra room.',
+        ru: 'Покупка печи за $3,000 или пристройка комнаты.',
+        uz: '$3,000 lik pech olish yoki qo\'shimcha xona qurish.',
+      },
+    },
+    {
+      term: { en: 'Revenue expenditure', ru: 'Текущие затраты', uz: 'Joriy xarajat' },
+      definition: {
+        en: 'Spending on running the business day to day, charged to profit or loss.',
+        ru: 'Затраты на повседневную работу бизнеса, относятся на прибыль или убыток.',
+        uz: 'Biznesning kundalik ishi uchun xarajat, foyda yoki zararga yoziladi.',
+      },
+      example: {
+        en: 'Repainting the shop for $400, or repairing a broken window.',
+        ru: 'Покраска магазина за $400 или ремонт разбитого окна.',
+        uz: 'Do\'konni $400 ga bo\'yash yoki singan oynani ta\'mirlash.',
+      },
+    },
+    {
+      term: { en: 'Asset register', ru: 'Реестр активов', uz: 'Aktivlar reyestri' },
+      definition: {
+        en: 'A detailed record of each non-current asset, reconciled to the ledger.',
+        ru: 'Подробная запись по каждому внеоборотному активу, сверяемая с книгой.',
+        uz: 'Har bir uzoq muddatli aktiv bo\'yicha batafsil yozuv, kitob bilan solishtiriladi.',
+      },
+      example: {
+        en: 'A list showing: "Van, plate 01A123, bought 1 July, cost $10,100, 25% reducing balance".',
+        ru: 'Список: «Фургон, номер 01A123, куплен 1 июля, стоимость $10,100, уменьшаемый остаток 25%».',
+        uz: 'Ro\'yxat: «Furgon, raqam 01A123, 1 iyulda olingan, qiymati $10,100, 25% kamayuvchi qoldiq».',
+      },
+    },
+    {
+      term: { en: 'Depreciation', ru: 'Амортизация', uz: 'Amortizatsiya' },
+      definition: {
+        en: 'The systematic allocation of an asset\'s depreciable amount over its useful life.',
+        ru: 'Систематическое распределение амортизируемой суммы актива на срок его использования.',
+        uz: 'Aktivning amortizatsiya qilinadigan summasini foydali muddatga tizimli taqsimlash.',
+      },
+      example: {
+        en: 'A $10,000 van used for 5 years: $2,000 of its cost is charged each year.',
+        ru: 'Фургон за $10,000 на 5 лет: каждый год списывают $2,000 его стоимости.',
+        uz: '5 yil ishlatiladigan $10,000 lik furgon: har yili qiymatidan $2,000 hisobdan chiqariladi.',
+      },
+    },
+    {
+      term: { en: 'Accumulated depreciation', ru: 'Накопленная амортизация', uz: 'To\'plangan amortizatsiya' },
+      definition: {
+        en: 'All the depreciation charged on an asset since it was bought. It is deducted from cost.',
+        ru: 'Вся амортизация по активу с момента покупки. Вычитается из стоимости.',
+        uz: 'Aktiv sotib olingandan beri hisoblangan barcha amortizatsiya. Qiymatdan ayiriladi.',
+      },
+      example: {
+        en: '$300 a year for 3 years on shelves = $900 of accumulated depreciation.',
+        ru: '$300 в год за 3 года по полкам = $900 накопленной амортизации.',
+        uz: 'Javonlar bo\'yicha 3 yil davomida yiliga $300 = $900 to\'plangan amortizatsiya.',
+      },
+    },
+    {
+      term: { en: 'Carrying amount', ru: 'Балансовая стоимость', uz: 'Balans qiymati' },
+      definition: {
+        en: 'Cost less accumulated depreciation.',
+        ru: 'Стоимость минус накопленная амортизация.',
+        uz: 'Qiymat minus to\'plangan amortizatsiya.',
+      },
+      example: {
+        en: 'Cost $10,100 - accumulated depreciation $1,262.50 = $8,837.50.',
+        ru: 'Стоимость $10,100 - накопленная амортизация $1,262.50 = $8,837.50.',
+        uz: 'Qiymat $10,100 - to\'plangan amortizatsiya $1,262.50 = $8,837.50.',
+      },
+    },
+    {
+      term: { en: 'Useful life', ru: 'Срок полезного использования', uz: 'Foydali muddat' },
+      definition: {
+        en: 'The number of years the business expects to use the asset.',
+        ru: 'Число лет, в течение которых бизнес планирует использовать актив.',
+        uz: 'Biznes aktivdan foydalanishni kutayotgan yillar soni.',
+      },
+      example: {
+        en: 'A laptop that could physically last 6 years, but the business plans to replace it after 3. Useful life: 3 years.',
+        ru: 'Ноутбук мог бы прослужить 6 лет, но бизнес заменит его через 3. Срок полезного использования: 3 года.',
+        uz: 'Noutbuk 6 yil ishlashi mumkin, lekin biznes uni 3 yildan keyin almashtiradi. Foydali muddat: 3 yil.',
+      },
+    },
+    {
+      term: { en: 'Residual value', ru: 'Ликвидационная стоимость', uz: 'Tugatish qiymati' },
+      definition: {
+        en: 'The estimated disposal value of the asset at the end of its useful life.',
+        ru: 'Оценка выручки от выбытия актива в конце срока использования.',
+        uz: 'Aktivning foydali muddat oxiridagi taxminiy sotuv qiymati.',
+      },
+      example: {
+        en: 'A van bought for $10,000 that you expect to sell for $2,000 after 5 years.',
+        ru: 'Фургон за $10,000, который вы рассчитываете продать за $2,000 через 5 лет.',
+        uz: '$10,000 ga olingan va 5 yildan keyin $2,000 ga sotishni kutayotgan furgon.',
+      },
+    },
+    {
+      term: { en: 'Straight-line method', ru: 'Линейный метод', uz: 'To\'g\'ri chiziqli usul' },
+      definition: {
+        en: 'Depreciation that charges the same amount every year: (cost - residual value) / useful life.',
+        ru: 'Амортизация одинаковой суммой каждый год: (стоимость - ликвидационная стоимость) / срок.',
+        uz: 'Har yili bir xil summa hisoblanadigan amortizatsiya: (qiymat - tugatish qiymati) / muddat.',
+      },
+      example: {
+        en: '($10,000 - $2,000) / 4 years = $2,000 a year.',
+        ru: '($10,000 - $2,000) / 4 года = $2,000 в год.',
+        uz: '($10,000 - $2,000) / 4 yil = yiliga $2,000.',
+      },
+    },
+    {
+      term: { en: 'Reducing balance', ru: 'Уменьшаемый остаток', uz: 'Kamayuvchi qoldiq' },
+      definition: {
+        en: 'A method charging a fixed percentage of the carrying amount each year.',
+        ru: 'Метод, при котором каждый год начисляется фиксированный процент от балансовой стоимости.',
+        uz: 'Har yili balans qiymatining qat\'iy foizi hisoblanadigan usul.',
+      },
+      example: {
+        en: '25% of $10,100 = $2,525 in year 1, then 25% of $7,575 = $1,893.75 in year 2.',
+        ru: '25% от $10,100 = $2,525 в 1-й год, затем 25% от $7,575 = $1,893.75 во 2-й.',
+        uz: '1-yil $10,100 ning 25% = $2,525, keyin 2-yil $7,575 ning 25% = $1,893.75.',
+      },
+    },
   ],
 };
 

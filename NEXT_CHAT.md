@@ -20,6 +20,33 @@ The user is studying for ACCA FA (F3). This folder is their study website, built
 - Official English terms: `js/terms.js` (`TERMS`, `annotate`) tags the Russian/Uzbek word with its English exam term, using the English version of the same text to decide which term is meant; `richTextT` and `termNodes` in `js/dom.js` apply it. To add a term, add an entry to `TERMS`. The Terms page reads `data/term-names.js`; a test keeps its translations equal to the chapter glossaries. `tests/syntax.test.mjs` compiles every browser script (the browser-only files were previously untested).
 - 2026-11-03: compared the site with the teacher's 20 slide decks (`pptx resources/`, git-ignored). They agree with the Study Text and the site (PIRATE criteria, probability table, ratio formulas). Wording standardised: "profit before income taxes", "income tax expense", no "balance sheet".
 
+## 2026-11-04: rework after real study (in progress)
+
+The user studied with the site and asked for: key terms first, a visible plain-words explanation, easy examples for terms, tap any term to see its meaning, a question helper, step-by-step answers, and no more Madina's Mart (it confused them). Chapter order stays as it is.
+
+Done for the whole site:
+- Chapter page order: Key terms (open, with examples) → What you will learn → each section as In simple words → key points → Example → Explain more. The Exam Kit range (e.g. Q436–457) shows on the chapter and quiz pages (`kitRange` in `js/quiz.js`).
+- `js/glossary.js` indexes every chapter's glossary. Terms from the current chapter and earlier ones are underlined in lessons, questions and answers; tapping opens a card with meaning, example and chapter link. In RU/UZ a word is linked only when the English text of the same block uses the term.
+- Study helper (`js/views/helper.js`, header button "Ask"): Search (offline, terms/lessons/questions, a Kit number shows that question with its answer), Ask Claude (only on the claude.ai link, `sample` capability, answers from the site's notes), NotebookLM (the user pastes their own notebook link once; the question is copied and the notebook opens).
+- Step format in any text: `# ` step title, two spaces = working line, `= ` result, `! ` common trap, `- ` bullet.
+
+The user approved the chapter 17 pilot and asked to roll it out. Rollout status (stopped on the user's request, 2026-11-04):
+
+- DONE: chapters 1-13 and 17. Each has: `simple` for every section; every Madina's Mart example replaced by an everyday example in step format; `example` for every glossary term; new core terms added (chapter 1 alone added asset, liability, equity, income, expense and 12 more; others added debit and credit, receivable, payable, inventory, gross profit, non-current asset, accumulated depreciation, finance costs, income tax, bank statement and so on); every Kit answer rewritten step by step, naming the mistake behind each wrong option. Every figure was re-checked. Section order was checked against the Study Text; all matched (chapter 12 groups preference shares with financing, which was kept).
+- Four chapter 1 question texts were reworded to remove Madina (Kit Q24, Q28, Q29, Q30).
+- `REWORKED` in `tests/content.test.mjs` lists '01'-'13' and '17'. 377 tests pass.
+- NOT DONE: chapters 14, 15, 16, 18, 19, 20 (lessons, terms and answers), and the Section B cases in `data/section-b.js`. Madina still appears in those chapters.
+- Chapter 14: the lesson patch (simple, examples, term examples, one new term) is written in `tools/rework/p14-lesson-draft.js` but NOT applied. Its 38 answers (Kit Q330-367) still need writing; all their figures were already checked and are correct.
+- The phone link still shows the earlier version (chapter 17 pilot only). Republish after the rollout. Nothing is committed yet.
+
+How to continue (the tools are in `tools/rework/`):
+1. `node tools/rework/dump.js "<project dir>" <n>` prints a chapter's English lesson and questions, with [MADINA] flags.
+2. Write a patch file exporting `{ sections: [{ simple: [en, ru, uz], example: [en, ru, uz] }, ...], terms: { 'Term name': [en, ru, uz] }, add: [{ at, term, definition, example }], glossaryOrder, texts: { kitRef: 'new question text' }, answers: { kitRef: [en, ru, uz] } }`. Section entries are index-aligned; a section with no `example` keeps its old one (only allowed if it has no Madina).
+3. `node tools/rework/rw.js "<project dir>" <n> <patch.js> --dry` checks it: all three languages present, line shapes equal across languages, every question answered, no Madina left, key point limits. Without `--dry` it rewrites `data/chapter-NN.js` and `data/questions-chNN.js` and round-trips them. Then add the chapter to `REWORKED` and run the tests.
+4. For chapter 14, copy `p14-lesson-draft.js` to a patch, add `answers` for Q330-367, and run it (the draft does `require('./p14q.js')`, so either create that file next to it or remove the line).
+
+Answer style the user approved: "# Step N: ..." titles, two-space working lines that say what each figure is, "= Answer: ..." and "! Common trap: ..." naming which wrong option comes from which mistake. Theory questions: one plain sentence of the idea, then a "- " line per option saying why it is right or wrong.
+
 ## Still unverified or open
 
 - Accuracy review done on 2026-11-02 for chapters 3, 4, 11-17 (every question key and figure, plus key points and exam notes), with judgement calls checked against the Kit answers. Fixed: the Q104 explanation and the Q435 wording. Chapters 18-20 and the Section B cases were written with every figure computed by script and re-checked; no errors found. Lesson bodies ("Explain more" text) for 3, 4, 11-20 were not re-read line by line.
@@ -30,4 +57,4 @@ The user is studying for ACCA FA (F3). This folder is their study website, built
 
 ## Rules that still apply
 
-See PROJECT_NOTES.md: plain HTML/CSS/JS, no build, plain script tags, content through `el()` never innerHTML, every label in three languages, questions in English with trilingual explanations, Madina's Mart examples, copyright (original wording, new numbers, `kitRef`), PDFs never committed. Commits end with `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`.
+See PROJECT_NOTES.md: plain HTML/CSS/JS, no build, plain script tags, content through `el()` never innerHTML, every label in three languages, questions in English with trilingual explanations, everyday examples with small round numbers (Madina's Mart is being removed), copyright (original wording, new numbers, `kitRef`), PDFs never committed. Commits end with `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`.

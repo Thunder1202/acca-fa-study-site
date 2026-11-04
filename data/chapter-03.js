@@ -2,18 +2,38 @@
 
 const chapter03 = {
   id: 'chapter-03',
-  titles: {
-    en: 'Double-entry bookkeeping',
-    ru: 'Двойная запись',
-    uz: 'Ikki yoqlama yozuv',
-  },
+  titles: { en: 'Double-entry bookkeeping', ru: 'Двойная запись', uz: 'Ikki yoqlama yozuv' },
   objectives: [
-    { en: 'Explain the main business documents and what each one is for', ru: 'Объяснять основные деловые документы и назначение каждого', uz: 'Asosiy biznes hujjatlari va har birining vazifasini tushuntirish' },
-    { en: 'Apply duality and the accounting equation', ru: 'Применять двойственность и бухгалтерское уравнение', uz: 'Ikki tomonlamalik va hisob tenglamasini qo\'llash' },
-    { en: 'Describe the parts of an accounting system, including cloud accounting', ru: 'Описывать части системы учёта, включая облачный учёт', uz: 'Hisob tizimi qismlarini, jumladan bulutli hisobni tavsiflash' },
-    { en: 'Record transactions in ledger accounts with debits and credits', ru: 'Записывать операции на счетах дебетом и кредитом', uz: 'Operatsiyalarni hisoblarda debet va kredit bilan yozish' },
-    { en: 'Use the journal, including to correct errors', ru: 'Использовать журнал, в том числе для исправления ошибок', uz: 'Jurnaldan, jumladan xatolarni tuzatish uchun foydalanish' },
-    { en: 'Balance and close ledger accounts', ru: 'Выводить остатки и закрывать счета', uz: 'Hisoblar qoldig\'ini chiqarish va yopish' },
+    {
+      en: 'Explain the main business documents and what each one is for',
+      ru: 'Объяснять основные деловые документы и назначение каждого',
+      uz: 'Asosiy biznes hujjatlari va har birining vazifasini tushuntirish',
+    },
+    {
+      en: 'Apply duality and the accounting equation',
+      ru: 'Применять двойственность и бухгалтерское уравнение',
+      uz: 'Ikki tomonlamalik va hisob tenglamasini qo\'llash',
+    },
+    {
+      en: 'Describe the parts of an accounting system, including cloud accounting',
+      ru: 'Описывать части системы учёта, включая облачный учёт',
+      uz: 'Hisob tizimi qismlarini, jumladan bulutli hisobni tavsiflash',
+    },
+    {
+      en: 'Record transactions in ledger accounts with debits and credits',
+      ru: 'Записывать операции на счетах дебетом и кредитом',
+      uz: 'Operatsiyalarni hisoblarda debet va kredit bilan yozish',
+    },
+    {
+      en: 'Use the journal, including to correct errors',
+      ru: 'Использовать журнал, в том числе для исправления ошибок',
+      uz: 'Jurnaldan, jumladan xatolarni tuzatish uchun foydalanish',
+    },
+    {
+      en: 'Balance and close ledger accounts',
+      ru: 'Выводить остатки и закрывать счета',
+      uz: 'Hisoblar qoldig\'ini chiqarish va yopish',
+    },
   ],
   sections: [
     {
@@ -60,11 +80,7 @@ const chapter03 = {
 - Hisob-fakturada faqat summa emas: tovar, sana, soliqsiz summa, soliq va soliqli summa bor.
 - Kichik kassaning asosiy hujjati kassa vaucheri. Chek unga dalil sifatida qo'shiladi.`,
       },
-      heading: {
-        en: 'Business documents',
-        ru: 'Деловые документы',
-        uz: 'Biznes hujjatlari',
-      },
+      heading: { en: 'Business documents', ru: 'Деловые документы', uz: 'Biznes hujjatlari' },
       body: {
         en: `Most transactions create a source document showing that the transaction happened, when it happened and how much it was for. The accountant works from these documents, so it helps to know who writes each one and who receives it.
 
@@ -89,9 +105,56 @@ Biznes sotganda, mijoz buyurtmasi yuk xati va sotuv hisob-fakturasiga olib kelad
 Bir nechta hujjat keyingi voqealarga tegishli. Kredit-nota mijoz qarzini kamaytiradi, odatda tovar qaytarilganda. Debet-notani mijoz tuzadi va u kutilayotgan kredit-notaga ishora qiladi. Yetkazib beruvchi ko'chirmasi o'tgan oy summalarini jamlaydi, shunda mijoz talab qilingan summani tekshiradi. To'lov xabarnomasi to'lov bilan birga boradi yoki u haqda xabar beradi, kvitansiya esa pul kelganini tasdiqlaydi.`,
       },
       example: {
-        en: `Madina orders 50 kettles from a supplier by sending a purchase order. The kettles arrive with a delivery note listing 50. She counts only 48 and writes that on her goods received note. The supplier's invoice is for 50, so she asks for a credit note covering the 2 missing kettles. At the end of the month she pays, and sends a remittance advice showing which invoice the money covers.`,
-        ru: `Мадина заказывает у поставщика 50 чайников, отправив заказ на покупку. Чайники приходят с накладной на 50 штук. Она насчитывает только 48 и записывает это в акт приёмки. Счёт поставщика выписан на 50, поэтому она просит кредит-ноту на 2 недостающих чайника. В конце месяца она платит и отправляет извещение об оплате, где указано, какой счёт покрывают деньги.`,
-        uz: `Madina xarid buyurtmasini yuborib, yetkazib beruvchidan 50 ta choynak buyurtma qiladi. Choynaklar 50 ta deb yozilgan yetkazib berish xati bilan keladi. U faqat 48 tasini sanaydi va buni qabul qilish xatiga yozadi. Hisob-faktura 50 taga yozilgan, shuning uchun u yetishmayotgan 2 ta choynak uchun kredit-nota so'raydi. Oy oxirida u to'laydi va pul qaysi hisob-fakturani qoplashini ko'rsatuvchi to'lov xabarnomasini yuboradi.`,
+        en: `You order 50 kettles for your shop.
+# 1. Purchase order (you send it)
+  "Please send 50 kettles at $20 each."
+# 2. Delivery note (comes with the goods)
+  The supplier's note says 50 kettles were sent.
+# 3. Goods received note (you write it)
+  You count only 48, so you write 48.
+# 4. Invoice (the supplier sends it)
+  It asks for 50 × $20 = $1,000.
+# 5. Credit note (the supplier sends it after you complain)
+  It cancels 2 × $20 = $40, so you now owe $960.
+# 6. Remittance advice (you send it with the payment)
+  "This $960 pays invoice 1234."`,
+        ru: `Вы заказываете 50 чайников для магазина.
+# 1. Заказ на покупку (отправляете вы)
+  «Пришлите 50 чайников по $20.»
+# 2. Накладная (приходит с товаром)
+  В накладной поставщика 50 чайников.
+# 3. Акт приёмки (пишете вы)
+  Вы насчитали только 48 и пишете 48.
+# 4. Счёт-фактура (присылает поставщик)
+  В нём 50 × $20 = $1,000.
+# 5. Кредит-нота (поставщик присылает после вашей жалобы)
+  Она отменяет 2 × $20 = $40, теперь вы должны $960.
+# 6. Извещение об оплате (отправляете вместе с платежом)
+  «Эти $960 оплачивают счёт 1234.»`,
+        uz: `Do'koningiz uchun 50 ta choynak buyurtma qilasiz.
+# 1. Xarid buyurtmasi (siz yuborasiz)
+  «Har biri $20 dan 50 ta choynak yuboring.»
+# 2. Yetkazib berish xati (tovar bilan keladi)
+  Yetkazib beruvchi xatida 50 ta choynak.
+# 3. Qabul qilish xati (siz yozasiz)
+  Faqat 48 tani sanadingiz va 48 deb yozasiz.
+# 4. Hisob-faktura (yetkazib beruvchi yuboradi)
+  Unda 50 × $20 = $1,000.
+# 5. Kredit-nota (shikoyatingizdan keyin yetkazib beruvchi yuboradi)
+  U 2 × $20 = $40 ni bekor qiladi, endi $960 qarzsiz.
+# 6. To'lov xabarnomasi (to'lov bilan yuborasiz)
+  «Bu $960 1234-hisob-fakturani to'laydi.»`,
+      },
+      simple: {
+        en: `Every time a business buys or sells, a piece of paper (or a screen) is created to prove it happened. These are source documents, and the accountant records the transactions from them.
+
+When buying, the usual order is: you send a purchase order, the goods arrive with the supplier's delivery note, you write a goods received note saying what really arrived, then the supplier sends an invoice asking to be paid. A credit note cancels part of an invoice, and a remittance advice tells the supplier what your payment covers.`,
+        ru: `Каждый раз, когда бизнес покупает или продаёт, появляется бумага (или экран), доказывающая, что это произошло. Это первичные документы, и бухгалтер записывает операции по ним.
+
+При покупке обычный порядок такой: вы отправляете заказ на покупку, товар приходит с накладной поставщика, вы пишете акт приёмки о том, что пришло на самом деле, затем поставщик присылает счёт-фактуру с просьбой оплатить. Кредит-нота отменяет часть счёта, а извещение об оплате сообщает поставщику, что покрывает ваш платёж.`,
+        uz: `Biznes har safar sotib olganda yoki sotganda, bu sodir bo'lganini isbotlovchi qog'oz (yoki ekran) paydo bo'ladi. Bular birlamchi hujjatlar, buxgalter operatsiyalarni ular asosida yozadi.
+
+Sotib olishda odatiy tartib: siz xarid buyurtmasini yuborasiz, tovar yetkazib beruvchining yetkazib berish xati bilan keladi, siz haqiqatda nima kelganini qabul qilish xatiga yozasiz, keyin yetkazib beruvchi to'lovni so'rab hisob-faktura yuboradi. Kredit-nota hisob-fakturaning bir qismini bekor qiladi, to'lov xabarnomasi esa to'lovingiz nimani qoplashini aytadi.`,
       },
     },
     {
@@ -167,9 +230,50 @@ Xarajatlar kapitalni kamaytiradi, foyda esa oshiradi, chunki har qanday foyda yo
 Tovar sotish yaxshi misol. $300 lik tovar nasiyaga $400 ga sotildi deylik. Debitorlar $400 ga oshadi, zaxira $300 ga kamayadi, demak aktivlar $100 ga oshadi. Kapital ham xuddi shu $100 ga oshadi, bu foyda.`,
       },
       example: {
-        en: `On day one Madina puts in $8,000 and borrows $3,000: assets $11,000 = equity $8,000 + liabilities $3,000. She buys shelves for $3,000 in cash, so the total stays $11,000. She buys $5,500 of inventory, paying $4,500 and owing $1,000. Assets are now $12,000 = equity $8,000 + liabilities $4,000. Then she sells goods that cost $600 for $1,000 cash. Assets rise by $400 to $12,400, and equity rises by the $400 profit to $8,400. Liabilities stay at $4,000, so the equation still holds.`,
-        ru: `В первый день Мадина вносит $8,000 и занимает $3,000: активы $11,000 = капитал $8,000 + обязательства $3,000. Она покупает стеллажи за $3,000 наличными, итог остаётся $11,000. Она покупает запасы на $5,500, платит $4,500 и остаётся должна $1,000. Теперь активы $12,000 = капитал $8,000 + обязательства $4,000. Затем она продаёт товар стоимостью $600 за $1,000 наличными. Активы растут на $400 до $12,400, а капитал — на прибыль $400 до $8,400. Обязательства остаются $4,000, и уравнение сохраняется.`,
-        uz: `Birinchi kuni Madina $8,000 kiritadi va $3,000 qarz oladi: aktivlar $11,000 = kapital $8,000 + majburiyatlar $3,000. U $3,000 ga naqd javon sotib oladi, jami $11,000 bo'lib qoladi. U $5,500 lik zaxira oladi, $4,500 to'laydi va $1,000 qarz bo'ladi. Endi aktivlar $12,000 = kapital $8,000 + majburiyatlar $4,000. So'ng u $600 lik tovarni $1,000 ga naqd sotadi. Aktivlar $400 ga oshib $12,400 bo'ladi, kapital esa $400 foydaga oshib $8,400 bo'ladi. Majburiyatlar $4,000 bo'lib qoladi, tenglama saqlanadi.`,
+        en: `Follow a small shop through four steps. The equation must balance after each one.
+# 1. You put in $8,000 and borrow $3,000
+  Assets: cash $11,000 = capital $8,000 + loan $3,000
+# 2. You buy shelves for $3,000 cash
+  Cash goes down $3,000, shelves go up $3,000. Assets are still $11,000.
+# 3. You buy goods for $5,500: pay $4,500, owe $1,000
+  Assets $12,000 = capital $8,000 + liabilities $4,000 (loan $3,000 + supplier $1,000)
+# 4. You sell goods that cost $600 for $1,000 cash
+  Goods go down $600, cash goes up $1,000, so assets go up $400 to $12,400
+  The $400 profit goes to capital: $8,000 + $400 = $8,400
+= Check: $12,400 = $8,400 + $4,000. It still balances.`,
+        ru: `Проследим за небольшим магазином в четыре шага. После каждого уравнение должно сходиться.
+# 1. Вы вкладываете $8,000 и занимаете $3,000
+  Активы: деньги $11,000 = капитал $8,000 + заём $3,000
+# 2. Покупаете полки за $3,000 наличными
+  Деньги уменьшаются на $3,000, полки растут на $3,000. Активы всё ещё $11,000.
+# 3. Покупаете товар на $5,500: платите $4,500, должны $1,000
+  Активы $12,000 = капитал $8,000 + обязательства $4,000 (заём $3,000 + поставщик $1,000)
+# 4. Продаёте товар себестоимостью $600 за $1,000 наличными
+  Товар уменьшается на $600, деньги растут на $1,000, значит активы растут на $400 до $12,400
+  Прибыль $400 идёт в капитал: $8,000 + $400 = $8,400
+= Проверка: $12,400 = $8,400 + $4,000. Всё сходится.`,
+        uz: `Kichik do'konni to'rt qadamda kuzatamiz. Har biridan keyin tenglama mos kelishi kerak.
+# 1. $8,000 qo'yasiz va $3,000 qarz olasiz
+  Aktivlar: pul $11,000 = kapital $8,000 + qarz $3,000
+# 2. Javonlarni $3,000 naqd pulga olasiz
+  Pul $3,000 kamayadi, javonlar $3,000 oshadi. Aktivlar hamon $11,000.
+# 3. $5,500 lik tovar olasiz: $4,500 to'laysiz, $1,000 qarz qolasiz
+  Aktivlar $12,000 = kapital $8,000 + majburiyatlar $4,000 (qarz $3,000 + yetkazib beruvchi $1,000)
+# 4. Tannarxi $600 bo'lgan tovarni $1,000 naqdga sotasiz
+  Tovar $600 kamayadi, pul $1,000 oshadi, demak aktivlar $400 oshib $12,400 bo'ladi
+  $400 foyda kapitalga qo'shiladi: $8,000 + $400 = $8,400
+= Tekshiruv: $12,400 = $8,400 + $4,000. Mos keladi.`,
+      },
+      simple: {
+        en: `Every transaction changes two things by the same amount. This is duality.
+
+That is why this always stays true: what the business has (assets) = what it owes to others (liabilities) + what belongs to the owner (capital). Profit makes capital bigger. Expenses, losses and drawings make it smaller.`,
+        ru: `Каждая операция меняет две вещи на одну и ту же сумму. Это двойственность.
+
+Поэтому всегда верно: что есть у бизнеса (активы) = что он должен другим (обязательства) + что принадлежит владельцу (капитал). Прибыль увеличивает капитал. Расходы, убытки и изъятия его уменьшают.`,
+        uz: `Har bir operatsiya ikki narsani bir xil summaga o'zgartiradi. Bu ikki yoqlamalik.
+
+Shuning uchun doim to'g'ri: biznesda nima bor (aktivlar) = boshqalarga nima qarz (majburiyatlar) + egasiga nima tegishli (kapital). Foyda kapitalni oshiradi. Xarajatlar, zararlar va olib qo'yishlar kamaytiradi.`,
       },
     },
     {
@@ -219,11 +323,7 @@ Tovar sotish yaxshi misol. $300 lik tovar nasiyaga $400 ga sotildi deylik. Debit
 - FA imtihonida yordamchi yozuvlar bosh kitob bilan bir vaqtda yangilanadi va bank hisobi integratsiyalanmagan deb qabul qilinadi.
 - Yozuvlar egasiga (boshqarish, nazorat, bank va kassani solishtirish, investitsiya qarorlari) va tashqi tomonlarga (kreditorlar, soliq organlari, jamoatchilik) xizmat qiladi.`,
       },
-      heading: {
-        en: 'Accounting systems',
-        ru: 'Системы учёта',
-        uz: 'Hisob tizimlari',
-      },
+      heading: { en: 'Accounting systems', ru: 'Системы учёта', uz: 'Hisob tizimlari' },
       body: {
         en: `A business of any size has an accounting system with the same three parts. Inputs go in, processes work on them, and outputs come out. This order does not change.
 
@@ -254,9 +354,50 @@ Chiqishlarga sinov balansi, moliyaviy hisobot va menejerlar uchun hisobotlar kir
 Moliyaviy yozuvlar biznes ichida ham, tashqarisida ham muhim. Ichkarida egasi ulardan boshqarish va nazorat, bank va kassani solishtirish hamda investitsiya qarorlari uchun foydalanadi. Tashqarida kreditorlar kredit arizasini baholaydi, soliq organlari foydalanadi, jamoatchilik esa biznesning jamiyatga ta'sirini ko'rish uchun o'qishi mumkin.`,
       },
       example: {
-        en: `Madina's till slips and supplier invoices are inputs. Her price list is standing data, because she uses it for every sale until prices change. A special 10% bonus for her assistant in December is not, because it applies once. Her software records the sales and updates the ledger, which are the processes. The trial balance, her annual accounts and the list showing which cafes owe her money are outputs. Her page for Cafe Zamin is a memorandum record.`,
-        ru: `Кассовые чеки и счета поставщиков Мадины — это входы. Её прайс-лист — постоянные данные, так как она использует его при каждой продаже, пока цены не изменятся. Особая премия 10% помощнику в декабре — нет, потому что она разовая. Её программа записывает продажи и обновляет книгу — это процессы. Оборотная ведомость, годовая отчётность и список, какие кафе ей должны, — выходы. Её страница по Cafe Zamin — вспомогательная запись.`,
-        uz: `Madinaning kassa cheklari va yetkazib beruvchi hisob-fakturalari kirish. Narxlar ro'yxati doimiy ma'lumot, chunki narxlar o'zgarguncha har sotuvda ishlatiladi. Dekabrda yordamchisiga berilgan maxsus 10% mukofot doimiy ma'lumot emas, chunki u bir martalik. Dasturi sotuvlarni yozadi va kitobni yangilaydi, bu jarayonlar. Sinov balansi, yillik hisobot va qaysi kafelar qarzdorligi ro'yxati chiqish. Cafe Zamin sahifasi yordamchi yozuv.`,
+        en: `A small cafe's system.
+
+- Input: today's till slips and a supplier's invoice for milk.
+- Standing data: the menu price list, used for every sale until prices change. A one-off December bonus for a waiter is not standing data.
+- Process: the software adds up the day's sales and updates the ledger.
+- Output: the trial balance, the year's accounts, and a list of which offices owe the cafe for catering.
+- Memorandum record: the separate page showing what one office owes.`,
+        ru: `Система небольшого кафе.
+
+- Вход: сегодняшние чеки кассы и счёт поставщика за молоко.
+- Постоянные данные: прайс-лист меню, который используется для каждой продажи, пока цены не изменятся. Разовый декабрьский бонус официанту — не постоянные данные.
+- Процесс: программа суммирует продажи дня и обновляет главную книгу.
+- Выход: оборотная ведомость, годовая отчётность и список офисов, которые должны кафе за кейтеринг.
+- Вспомогательная запись: отдельная страница с долгом одного офиса.`,
+        uz: `Kichik kafe tizimi.
+
+- Kirish: bugungi kassa cheklari va yetkazib beruvchining sut uchun hisob-fakturasi.
+- Doimiy ma'lumot: menyu narxlari ro'yxati, narxlar o'zgarguncha har bir sotuvda ishlatiladi. Ofitsiantga dekabrdagi bir martalik bonus doimiy ma'lumot emas.
+- Jarayon: dastur kunlik sotuvni qo'shadi va bosh kitobni yangilaydi.
+- Natija: sinov balansi, yillik hisobot va kafega ovqat yetkazish uchun qarz ofislar ro'yxati.
+- Yordamchi yozuv: bitta ofis qarzini ko'rsatuvchi alohida sahifa.`,
+      },
+      simple: {
+        en: `Every accounting system, from a notebook to big software, works the same way: inputs go in, processes work on them, outputs come out.
+
+- Inputs: source documents (invoices, receipts) and standing data (things used again and again, like a price list).
+- Processes: recording, calculating, sorting and updating the ledger.
+- Outputs: the trial balance, the financial statements and reports.
+
+Memorandum records, like each customer's own account, help run the business but are not part of the double entry.`,
+        ru: `Любая учётная система, от тетради до большой программы, работает одинаково: входы поступают, процессы их обрабатывают, выходы получаются.
+
+- Входы: первичные документы (счета, чеки) и постоянные данные (то, что используется снова и снова, например прайс-лист).
+- Процессы: запись, расчёт, сортировка и обновление главной книги.
+- Выходы: оборотная ведомость, финансовая отчётность и отчёты.
+
+Вспомогательные записи, например отдельный счёт каждого покупателя, помогают управлять бизнесом, но не входят в двойную запись.`,
+        uz: `Har qanday hisob tizimi, daftardan katta dasturgacha, bir xil ishlaydi: kirish ma'lumotlari kiradi, jarayonlar ularni ishlaydi, natijalar chiqadi.
+
+- Kirish: birlamchi hujjatlar (hisob-fakturalar, cheklar) va doimiy ma'lumotlar (qayta-qayta ishlatiladigan narsa, masalan narxlar ro'yxati).
+- Jarayonlar: yozish, hisoblash, saralash va bosh kitobni yangilash.
+- Natijalar: sinov balansi, moliyaviy hisobot va hisobotlar.
+
+Yordamchi yozuvlar, masalan har bir mijozning alohida hisobi, biznesni boshqarishga yordam beradi, lekin ikki yoqlama yozuvga kirmaydi.`,
       },
     },
     {
@@ -329,9 +470,41 @@ Ekranda T-hisoblar va debet, kredit so'zlari o'rniga ustunlar yoki plus va minus
 Bulutli hisob tashqi firmalarga tizimning tanlangan qismlariga kirish beradi. Auditorlar audit uchun ma'lumot oladi, ish haqi byurosi ish haqi va varaqalarni tayyorlaydi, yetkazib beruvchi esa o'z vaqtida yetkazish uchun ishlab chiqarish jadvalini ko'rishi mumkin.`,
       },
       example: {
-        en: `Madina moves her records to a cloud package. Her accountant in another district can log in to prepare the year-end accounts, and a payroll bureau can reach the wages section. Her shop assistant can record sales but cannot see what others are paid. When Madina's laptop is stolen, no data is lost, because nothing was stored on it. She does now depend on the provider staying in business and keeping its servers safe.`,
-        ru: `Мадина переводит учёт в облачный пакет. Её бухгалтер из другого района может войти и подготовить годовую отчётность, а расчётное бюро получает доступ к разделу зарплаты. Продавец может записывать продажи, но не видит, кому сколько платят. Когда у Мадины крадут ноутбук, данные не теряются, потому что на нём ничего не хранилось. Зато теперь она зависит от того, что поставщик продолжит работу и сохранит серверы в безопасности.`,
-        uz: `Madina yozuvlarini bulutli dasturga o'tkazadi. Boshqa tumandagi hisobchisi kirib yillik hisobotni tayyorlay oladi, ish haqi byurosi esa ish haqi bo'limiga kira oladi. Sotuvchi sotuvlarni yoza oladi, lekin kimga qancha to'lanishini ko'rmaydi. Madinaning noutbuki o'g'irlanganda ma'lumot yo'qolmaydi, chunki unda hech narsa saqlanmagan. Endi esa u provayder ishlashda davom etishi va serverlarni xavfsiz saqlashiga bog'liq.`,
+        en: `A shop moves its accounts to the cloud.
+
+- Its accountant in another city logs in to prepare the year-end accounts.
+- A payroll firm can reach the wages section only.
+- The shop assistant can record sales but cannot see anyone's pay.
+- The owner's laptop is stolen, but no data is lost, because nothing was stored on it.
+
+The downside: the shop now depends on the cloud provider staying in business and keeping its servers safe.`,
+        ru: `Магазин переводит учёт в облако.
+
+- Его бухгалтер из другого города входит, чтобы подготовить годовую отчётность.
+- Фирма по зарплате видит только раздел заработной платы.
+- Продавец может записывать продажи, но не видит чужих зарплат.
+- У владельца украли ноутбук, но данные не пропали: на нём ничего не хранилось.
+
+Минус: теперь магазин зависит от того, продолжит ли облачный провайдер работать и защищать свои серверы.`,
+        uz: `Do'kon hisobini bulutga ko'chiradi.
+
+- Boshqa shahardagi buxgalteri yil oxiri hisobotini tayyorlash uchun kiradi.
+- Ish haqi firmasi faqat ish haqi bo'limini ko'radi.
+- Sotuvchi sotuvni yoza oladi, lekin boshqalarning maoshini ko'ra olmaydi.
+- Egasining noutbuki o'g'irlandi, lekin ma'lumot yo'qolmadi: unda hech narsa saqlanmagan edi.
+
+Kamchiligi: do'kon endi bulut provayderi ishlashda davom etishi va serverlarini himoya qilishiga bog'liq.`,
+      },
+      simple: {
+        en: `Software can be bought ready-made (cheap and reliable, but may not fit perfectly) or built for one business (fits exactly, but riskier).
+
+Cloud accounting means the software and data live on the internet, not on your computer. Many people can log in from anywhere at any time, and you control who sees what. Screens may show plus and minus instead of debit and credit, but the double-entry rules stay the same.`,
+        ru: `Программу можно купить готовую (дёшево и надёжно, но может подойти не идеально) или сделать под один бизнес (подходит точно, но рискованнее).
+
+Облачный учёт — программа и данные хранятся в интернете, а не на вашем компьютере. Многие могут войти откуда угодно в любое время, и вы решаете, кто что видит. На экране может быть плюс и минус вместо дебета и кредита, но правила двойной записи те же.`,
+        uz: `Dasturni tayyor holda sotib olish (arzon va ishonchli, lekin to'liq mos kelmasligi mumkin) yoki bitta biznes uchun yaratish (aniq mos, lekin xavfliroq) mumkin.
+
+Bulutli hisob — dastur va ma'lumotlar kompyuteringizda emas, internetda saqlanadi. Ko'p odam istalgan joydan istalgan vaqtda kira oladi, kim nimani ko'rishini siz hal qilasiz. Ekranda debet va kredit o'rniga plyus va minus bo'lishi mumkin, lekin ikki yoqlama yozuv qoidalari o'sha-o'sha.`,
       },
     },
     {
@@ -381,11 +554,7 @@ Bulutli hisob tashqi firmalarga tizimning tanlangan qismlariga kirish beradi. Au
 - Bank hisobida kelgan pul debet, chiqqan pul kredit. Boshlang'ich overdraft kredit qoldiq.
 - Yetkazib beruvchiga qaytarilgan tovar uchun olingan pul tushum. Ijara daromadi ham tushum.`,
       },
-      heading: {
-        en: 'Ledger accounts, debits and credits',
-        ru: 'Счета, дебет и кредит',
-        uz: 'Hisoblar, debet va kredit',
-      },
+      heading: { en: 'Ledger accounts, debits and credits', ru: 'Счета, дебет и кредит', uz: 'Hisoblar, debet va kredit' },
       body: {
         en: `Transactions are classified by the elements of the financial statements and posted to ledger accounts. There is one account each for sales, purchases, rent, receivables, payables and so on, with no limit on how many a business may have. The whole set is the general ledger, also called the nominal ledger, and the trial balance and financial statements are built from it.
 
@@ -416,9 +585,62 @@ Operatsiyani yozish to'rt qadamdan iborat. Tegishli hisoblarni aniqlang. Har bir
 Imtihonda T-hisob ko'rsatilib, uni tugatish yoki xatoni topish so'ralishi mumkin.`,
       },
       example: {
-        en: `Here are Madina's day-one entries. Her $8,000: Dr Bank, Cr Capital. The loan: Dr Bank $3,000, Cr Loan $3,000. The shelves: Dr Shelves $3,000, Cr Bank $3,000. The goods: Dr Purchases $5,500, Cr Bank $4,500, Cr Payables $1,000. A later cash sale: Dr Bank $1,000, Cr Sales $1,000. Each entry has equal debits and credits, even the one with three lines.`,
-        ru: `Вот записи Мадины за первый день. Её $8,000: Дт Банк, Кт Капитал. Кредит: Дт Банк $3,000, Кт Кредит $3,000. Стеллажи: Дт Стеллажи $3,000, Кт Банк $3,000. Товар: Дт Закупки $5,500, Кт Банк $4,500, Кт Кредиторы $1,000. Позже продажа за наличные: Дт Банк $1,000, Кт Продажи $1,000. В каждой записи дебет равен кредиту, даже в записи из трёх строк.`,
-        uz: `Mana Madinaning birinchi kungi yozuvlari. Uning $8,000: Dt Bank, Kt Kapital. Kredit: Dt Bank $3,000, Kt Kredit $3,000. Javonlar: Dt Javonlar $3,000, Kt Bank $3,000. Tovar: Dt Xaridlar $5,500, Kt Bank $4,500, Kt Kreditorlar $1,000. Keyingi naqd sotuv: Dt Bank $1,000, Kt Sotuv $1,000. Har bir yozuvda debet kreditga teng, hatto uch qatorlisida ham.`,
+        en: `Five transactions for a new shop. For each: which accounts, up or down, then debit and credit.
+# 1. Owner puts in $8,000
+  Bank (asset) up = Dr Bank $8,000. Capital up = Cr Capital $8,000
+# 2. Bank lends $3,000
+  Bank up = Dr Bank $3,000. Loan (liability) up = Cr Loan $3,000
+# 3. Buy shelves for $3,000 from the bank
+  Shelves (asset) up = Dr Shelves $3,000. Bank down = Cr Bank $3,000
+# 4. Buy goods for $5,500: pay $4,500, owe $1,000
+  Dr Purchases $5,500. Cr Bank $4,500 and Cr Payables $1,000
+# 5. Sell goods for $1,000 cash
+  Bank up = Dr Bank $1,000. Sales (income) up = Cr Sales $1,000
+= Check: in every entry, debits equal credits, even when there are three lines.`,
+        ru: `Пять операций нового магазина. Для каждой: какие счета, растут или уменьшаются, затем дебет и кредит.
+# 1. Владелец вносит $8,000
+  Банк (актив) растёт = Дт Банк $8,000. Капитал растёт = Кт Капитал $8,000
+# 2. Банк даёт заём $3,000
+  Банк растёт = Дт Банк $3,000. Заём (обязательство) растёт = Кт Заём $3,000
+# 3. Покупаем полки за $3,000 с банковского счёта
+  Полки (актив) растут = Дт Полки $3,000. Банк уменьшается = Кт Банк $3,000
+# 4. Покупаем товар на $5,500: платим $4,500, должны $1,000
+  Дт Закупки $5,500. Кт Банк $4,500 и Кт Кредиторы $1,000
+# 5. Продаём товар за $1,000 наличными
+  Банк растёт = Дт Банк $1,000. Продажи (доход) растут = Кт Продажи $1,000
+= Проверка: в каждой проводке дебет равен кредиту, даже если строк три.`,
+        uz: `Yangi do'konning beshta operatsiyasi. Har biri uchun: qaysi hisoblar, oshadimi yoki kamayadimi, keyin debet va kredit.
+# 1. Egasi $8,000 qo'yadi
+  Bank (aktiv) oshadi = Dt Bank $8,000. Kapital oshadi = Kt Kapital $8,000
+# 2. Bank $3,000 qarz beradi
+  Bank oshadi = Dt Bank $3,000. Qarz (majburiyat) oshadi = Kt Qarz $3,000
+# 3. Javonlarni bankdan $3,000 ga olamiz
+  Javonlar (aktiv) oshadi = Dt Javonlar $3,000. Bank kamayadi = Kt Bank $3,000
+# 4. $5,500 lik tovar: $4,500 to'laymiz, $1,000 qarz qolamiz
+  Dt Xaridlar $5,500. Kt Bank $4,500 va Kt Kreditorlar $1,000
+# 5. Tovarni $1,000 naqdga sotamiz
+  Bank oshadi = Dt Bank $1,000. Sotuv (daromad) oshadi = Kt Sotuv $1,000
+= Tekshiruv: har bir yozuvda debet kreditga teng, qator uchta bo'lsa ham.`,
+      },
+      simple: {
+        en: `Each item (cash, sales, rent...) has its own account, drawn as a big T. The left side is the debit, the right side is the credit. Every transaction goes on the debit side of one account and the credit side of another, with the same amount.
+
+Use DEAD CLIC to know which side makes an account go UP:
+- DEAD: Debit increases Expenses, Assets and Drawings.
+- CLIC: Credit increases Liabilities, Income and Capital.
+To make an account go DOWN, use the other side.`,
+        ru: `У каждой статьи (деньги, продажи, аренда...) свой счёт в виде большой буквы T. Левая сторона — дебет, правая — кредит. Каждая операция записывается в дебет одного счёта и в кредит другого на одну сумму.
+
+DEAD CLIC подскажет, какая сторона УВЕЛИЧИВАЕТ счёт:
+- DEAD: дебет увеличивает расходы (Expenses), активы (Assets) и изъятия (Drawings).
+- CLIC: кредит увеличивает обязательства (Liabilities), доходы (Income) и капитал (Capital).
+Чтобы УМЕНЬШИТЬ счёт, используйте другую сторону.`,
+        uz: `Har bir modda (pul, sotuv, ijara...) katta T shaklidagi o'z hisobiga ega. Chap tomon — debet, o'ng tomon — kredit. Har bir operatsiya bir hisobning debetiga va boshqasining kreditiga bir xil summada yoziladi.
+
+DEAD CLIC qaysi tomon hisobni OSHIRISHINI eslatadi:
+- DEAD: debet xarajatlar (Expenses), aktivlar (Assets) va olib qo'yishlarni (Drawings) oshiradi.
+- CLIC: kredit majburiyatlar (Liabilities), daromad (Income) va kapitalni (Capital) oshiradi.
+Hisobni KAMAYTIRISH uchun boshqa tomondan foydalaning.`,
       },
     },
     {
@@ -468,11 +690,7 @@ Imtihonda T-hisob ko'rsatilib, uni tugatish yoki xatoni topish so'ralishi mumkin
 - Chiqib ketish tushumi xato sotuvga kreditlangan: Dt Tushum, Kt Chiqib ketish hisobi. Bank debeti to'g'ri edi.
 - Olingan muddatidan oldingi to'lov chegirmasi: Dt Kreditorlar, Kt Olingan chegirma.`,
       },
-      heading: {
-        en: 'The journal',
-        ru: 'Журнал',
-        uz: 'Jurnal',
-      },
+      heading: { en: 'The journal', ru: 'Журнал', uz: 'Jurnal' },
       body: {
         en: `The journal is the record of entries that do not come through normal processing. Many relate to the year end. Examples are writing off irrecoverable debts, changing the allowance for receivables, accruals and prepayments, depreciation and amortisation, buying and disposing of non-current assets, closing inventory, and correcting errors, including clearing a suspense account.
 
@@ -503,9 +721,47 @@ Jurnal yozuvi hisoblar, summalar va sababini tushuntiruvchi qisqa izohni ko'rsat
 Xatoni tuzatish uchun avval nima yozilganini qayd eting. So'ng nima yozilishi kerak edi, shuni yozing. Jurnal birinchisini ikkinchisiga aylantiradigan yozuvdir.`,
       },
       example: {
-        en: `Madina's new helper records the year's depreciation on her shelves the wrong way round: Dr Accumulated depreciation $300, Cr Depreciation expense $300. The correct entry is the opposite, so $300 must be undone and $300 must be posted. The journal is Dr Depreciation expense $600, Cr Accumulated depreciation $600, with the narrative "to correct depreciation on shelves posted in reverse". After it, the expense shows $300 debit, which is right.`,
-        ru: `Новый помощник Мадины записывает годовую амортизацию стеллажей наоборот: Дт Накопленная амортизация $300, Кт Расход по амортизации $300. Правильная запись противоположна, поэтому нужно отменить $300 и записать $300. Журнал: Дт Расход по амортизации $600, Кт Накопленная амортизация $600 с пояснением «исправление обратной записи амортизации стеллажей». После этого расход показывает дебет $300, что верно.`,
-        uz: `Madinaning yangi yordamchisi javonlarning yillik amortizatsiyasini teskari yozadi: Dt To'plangan amortizatsiya $300, Kt Amortizatsiya xarajati $300. To'g'ri yozuv buning teskarisi, shuning uchun $300 ni bekor qilish va $300 ni yozish kerak. Jurnal: Dt Amortizatsiya xarajati $600, Kt To'plangan amortizatsiya $600, izoh: "javonlar amortizatsiyasi teskari yozilganini tuzatish". Shundan keyin xarajat $300 debet ko'rsatadi, bu to'g'ri.`,
+        en: `A helper records $300 of depreciation the wrong way round.
+# 1. What was posted
+  Dr Accumulated depreciation $300, Cr Depreciation expense $300
+# 2. What should have been posted
+  Dr Depreciation expense $300, Cr Accumulated depreciation $300
+# 3. The fix
+  First undo the wrong entry ($300), then post the right one ($300)
+  Dr Depreciation expense $600, Cr Accumulated depreciation $600
+= After the fix, the expense shows $300 debit, which is correct.
+! Note: "to correct depreciation posted in reverse". Swapped sides always need double the amount.`,
+        ru: `Помощник провёл амортизацию $300 наоборот.
+# 1. Что провели
+  Дт Накопленная амортизация $300, Кт Расход на амортизацию $300
+# 2. Что надо было провести
+  Дт Расход на амортизацию $300, Кт Накопленная амортизация $300
+# 3. Исправление
+  Сначала отменяем неверную запись ($300), затем проводим верную ($300)
+  Дт Расход на амортизацию $600, Кт Накопленная амортизация $600
+= После исправления расход показывает дебет $300, это верно.
+! Пояснение: «исправление амортизации, проведённой наоборот». Перепутанные стороны всегда требуют двойной суммы.`,
+        uz: `Yordamchi $300 amortizatsiyani teskari yozdi.
+# 1. Nima yozilgan
+  Dt To'plangan amortizatsiya $300, Kt Amortizatsiya xarajati $300
+# 2. Nima yozilishi kerak edi
+  Dt Amortizatsiya xarajati $300, Kt To'plangan amortizatsiya $300
+# 3. Tuzatish
+  Avval noto'g'ri yozuvni bekor qilamiz ($300), keyin to'g'risini yozamiz ($300)
+  Dt Amortizatsiya xarajati $600, Kt To'plangan amortizatsiya $600
+= Tuzatishdan keyin xarajat $300 debet ko'rsatadi, bu to'g'ri.
+! Izoh: «teskari yozilgan amortizatsiyani tuzatish». Almashgan tomonlar doim ikki baravar summani talab qiladi.`,
+      },
+      simple: {
+        en: `The journal is a diary for unusual entries: year-end adjustments like depreciation, and fixing mistakes. Each journal shows the debit, the credit, the amount and a short note saying why.
+
+To fix a mistake, use three steps: write what was posted, write what should have been posted, and post whatever turns the first into the second. If both sides were swapped, the fix is double the amount.`,
+        ru: `Журнал — дневник для необычных записей: корректировок на конец года, например амортизации, и исправления ошибок. В каждой записи журнала есть дебет, кредит, сумма и короткое пояснение, зачем.
+
+Чтобы исправить ошибку, сделайте три шага: запишите, что провели, запишите, что надо было провести, и проведите то, что превращает первое во второе. Если стороны перепутали, исправление — двойная сумма.`,
+        uz: `Jurnal — g'ayrioddiy yozuvlar kundaligi: amortizatsiya kabi yil oxiri tuzatishlari va xatolarni to'g'rilash. Har bir jurnal yozuvida debet, kredit, summa va nima uchunligi haqida qisqa izoh bor.
+
+Xatoni tuzatish uchun uch qadam: nima yozilganini yozing, nima yozilishi kerak edi, yozing, va birinchisini ikkinchisiga aylantiradigan yozuvni kiriting. Ikki tomon almashib ketgan bo'lsa, tuzatish ikki baravar summa.`,
       },
     },
     {
@@ -566,28 +822,336 @@ Ikki xil hisob turlicha ishlanadi. Daromad va xarajat hisoblari foyda yoki zarar
 Aktiv, majburiyat va kapital hisoblari keyingi davrga o'tadi. Yakuniy qoldiqlar moliyaviy holat hisobotiga kiradi va keyingi davrning boshlang'ich qoldig'i bo'ladi. Bir kun oxiridagi bank qoldig'i keyingi kun boshidagi qoldiqdir.`,
       },
       example: {
-        en: `Madina's bank account after her first days shows debits of capital $8,000, loan $3,000, sales $1,000 and a customer's payment $500, which total $12,500. The credits are shelves $3,000, purchases $4,500, rent $900 and drawings $600, which total $9,000. Write $12,500 on both sides. The credit side needs $3,500 more, so that is the balance c/f. Below the totals, the balance b/f is $3,500 on the debit side, a debit balance, meaning she has $3,500 in the bank. Her $900 rent account has no balance c/f: it closes to profit or loss.`,
-        ru: `Счёт банка Мадины после первых дней показывает дебет: капитал $8,000, кредит $3,000, продажи $1,000 и оплата покупателя $500, всего $12,500. Кредит: стеллажи $3,000, закупки $4,500, аренда $900 и изъятия $600, всего $9,000. Запишите $12,500 на обеих сторонах. Кредитовой стороне не хватает $3,500, это balance c/f. Под итогами balance b/f $3,500 на дебетовой стороне: дебетовый остаток, то есть у неё в банке $3,500. Счёт аренды $900 не имеет остатка c/f: он закрывается на прибыль или убыток.`,
-        uz: `Madinaning birinchi kunlardan keyingi bank hisobida debet: kapital $8,000, kredit $3,000, sotuv $1,000 va mijoz to'lovi $500, jami $12,500. Kredit: javonlar $3,000, xaridlar $4,500, ijara $900 va olib qo'yishlar $600, jami $9,000. Ikkala tomonga $12,500 yozing. Kredit tomonga yana $3,500 kerak, bu balance c/f. Jamlar ostida balance b/f $3,500 debet tomonda, ya'ni debet qoldiq: bankda $3,500 bor. Uning $900 lik ijara hisobida c/f qoldiq yo'q: u foyda yoki zararga yopiladi.`,
+        en: `Balance a shop's bank account after its first weeks.
+# 1. Add the debit side (money in)
+  Capital $8,000 + loan $3,000 + sales $1,000 + customer $500 = $12,500
+# 2. Add the credit side (money out)
+  Shelves $3,000 + purchases $4,500 + rent $900 + drawings $600 = $9,000
+# 3. Write the bigger total ($12,500) on both sides
+  The credit side is short by $12,500 - $9,000 = $3,500
+  So write "Balance c/f $3,500" on the credit side
+# 4. Bring it down on the other side
+  "Balance b/f $3,500" on the debit side, under the totals
+= A debit balance of $3,500: the shop has $3,500 in the bank.
+The $900 rent account is not carried forward. It closes to profit or loss.`,
+        ru: `Закроем банковский счёт магазина после первых недель.
+# 1. Сложим дебет (деньги пришли)
+  Капитал $8,000 + заём $3,000 + продажи $1,000 + покупатель $500 = $12,500
+# 2. Сложим кредит (деньги ушли)
+  Полки $3,000 + закупки $4,500 + аренда $900 + изъятия $600 = $9,000
+# 3. Пишем большую сумму ($12,500) на обеих сторонах
+  Кредиту не хватает $12,500 - $9,000 = $3,500
+  Значит пишем «Остаток c/f $3,500» на кредите
+# 4. Переносим вниз на другую сторону
+  «Остаток b/f $3,500» на дебете, под итогами
+= Дебетовый остаток $3,500: у магазина $3,500 в банке.
+Счёт аренды $900 не переносится. Он закрывается на прибыль или убыток.`,
+        uz: `Do'konning bank hisobini birinchi haftalardan keyin balanslaymiz.
+# 1. Debetni qo'shamiz (kirgan pul)
+  Kapital $8,000 + qarz $3,000 + sotuv $1,000 + mijoz $500 = $12,500
+# 2. Kreditni qo'shamiz (chiqqan pul)
+  Javonlar $3,000 + xaridlar $4,500 + ijara $900 + olib qo'yish $600 = $9,000
+# 3. Kattaroq jamini ($12,500) ikkala tomonga yozamiz
+  Kreditga $12,500 - $9,000 = $3,500 yetmaydi
+  Demak kreditga «c/f qoldiq $3,500» yozamiz
+# 4. Boshqa tomonga pastga olib tushamiz
+  Debetga, jamlar ostiga «b/f qoldiq $3,500»
+= $3,500 debet qoldiq: do'konning bankda $3,500 puli bor.
+$900 ijara hisobi o'tkazilmaydi. U foyda yoki zararga yopiladi.`,
+      },
+      simple: {
+        en: `At the end of a period you "balance" each account to see what is left in it.
+
+Add up both sides. Write the bigger total on both sides. The gap on the smaller side is the balance c/f (carried forward). Write it again under the totals on the other side as balance b/f (brought forward): that is the opening balance for next time.
+
+Income and expense accounts are different: they are emptied into profit or loss and start again at zero.`,
+        ru: `В конце периода каждый счёт «закрывают», чтобы увидеть, что на нём осталось.
+
+Сложите обе стороны. Напишите большую сумму на обеих сторонах. Разница на меньшей стороне — остаток c/f (перенесён). Запишите его ещё раз под итогами на другой стороне как остаток b/f (принесён): это начальный остаток на следующий период.
+
+Счета доходов и расходов другие: они переносятся в прибыль или убыток и начинают снова с нуля.`,
+        uz: `Davr oxirida har bir hisobda nima qolganini ko'rish uchun u «balanslanadi».
+
+Ikki tomonni qo'shing. Kattaroq jamini ikkala tomonga yozing. Kichik tomondagi farq — c/f qoldiq (o'tkazilgan). Uni jamlardan pastda boshqa tomonga b/f qoldiq (olib kelingan) sifatida qayta yozing: bu keyingi davrning boshlang'ich qoldig'i.
+
+Daromad va xarajat hisoblari boshqacha: ular foyda yoki zararga o'tkaziladi va yana noldan boshlanadi.`,
       },
     },
   ],
   glossary: [
-    { term: { en: 'Source document', ru: 'Первичный документ', uz: 'Birlamchi hujjat' }, definition: { en: 'A document that is evidence of a transaction and is used to record it.', ru: 'Документ, подтверждающий операцию и используемый для её записи.', uz: 'Operatsiyani tasdiqlaydigan va uni yozish uchun ishlatiladigan hujjat.' } },
-    { term: { en: 'Purchase order', ru: 'Заказ на покупку', uz: 'Xarid buyurtmasi' }, definition: { en: 'A request sent to a supplier to supply goods on stated terms.', ru: 'Запрос поставщику поставить товар на указанных условиях.', uz: 'Yetkazib beruvchiga belgilangan shartlarda tovar so\'rab yuboriladigan so\'rov.' } },
-    { term: { en: 'Delivery note', ru: 'Накладная', uz: 'Yetkazib berish xati' }, definition: { en: 'A list from the supplier of the goods delivered. Also called a despatch note.', ru: 'Список доставленных товаров от поставщика.', uz: 'Yetkazib beruvchidan yetkazilgan tovarlar ro\'yxati.' } },
-    { term: { en: 'Goods received note', ru: 'Акт приёмки', uz: 'Qabul qilish xati' }, definition: { en: 'The buyer\'s own record of what arrived.', ru: 'Собственная запись покупателя о том, что прибыло.', uz: 'Xaridorning nima kelgani haqidagi o\'z yozuvi.' } },
-    { term: { en: 'Credit note', ru: 'Кредит-нота', uz: 'Kredit-nota' }, definition: { en: 'A document from the seller cancelling all or part of an invoice.', ru: 'Документ продавца, отменяющий весь счёт или его часть.', uz: 'Sotuvchining hisob-fakturani butunlay yoki qisman bekor qiluvchi hujjati.' } },
-    { term: { en: 'Remittance advice', ru: 'Извещение об оплате', uz: 'To\'lov xabarnomasi' }, definition: { en: 'A note from the buyer showing which items a payment covers.', ru: 'Сообщение покупателя о том, какие позиции покрывает платёж.', uz: 'Xaridorning to\'lov qaysi summalarni qoplashi haqidagi xabari.' } },
-    { term: { en: 'Duality', ru: 'Двойственность', uz: 'Ikki tomonlamalik' }, definition: { en: 'Every transaction has two equal effects.', ru: 'У каждой операции два равных эффекта.', uz: 'Har bir operatsiyaning ikkita teng ta\'siri bor.' } },
-    { term: { en: 'Accounting equation', ru: 'Бухгалтерское уравнение', uz: 'Hisob tenglamasi' }, definition: { en: 'Assets = equity + liabilities.', ru: 'Активы = капитал + обязательства.', uz: 'Aktivlar = kapital + majburiyatlar.' } },
-    { term: { en: 'Standing data', ru: 'Постоянные данные', uz: 'Doimiy ma\'lumotlar' }, definition: { en: 'Data used repeatedly for regular transactions, such as price lists and pay rates.', ru: 'Данные, многократно используемые для регулярных операций, например прайсы и ставки оплаты.', uz: 'Muntazam operatsiyalar uchun qayta ishlatiladigan ma\'lumotlar, masalan narxlar va ish haqi stavkalari.' } },
-    { term: { en: 'Memorandum records', ru: 'Вспомогательные записи', uz: 'Yordamchi yozuvlar' }, definition: { en: 'Records for management and control that are not part of the double entry.', ru: 'Записи для управления и контроля, не входящие в двойную запись.', uz: 'Ikki yoqlama yozuvga kirmaydigan boshqaruv va nazorat yozuvlari.' } },
-    { term: { en: 'Cloud accounting', ru: 'Облачный учёт', uz: 'Bulutli hisob' }, definition: { en: 'Accounting software and data held on remote servers and reached over the internet.', ru: 'Учётные программы и данные на удалённых серверах с доступом через интернет.', uz: 'Masofaviy serverlardagi va internet orqali kiriladigan hisob dasturi va ma\'lumotlari.' } },
-    { term: { en: 'General ledger', ru: 'Главная книга', uz: 'Bosh kitob' }, definition: { en: 'All the ledger accounts of a business. Also called the nominal ledger.', ru: 'Все счета бизнеса вместе.', uz: 'Biznesning barcha hisoblari.' } },
-    { term: { en: 'Ledger account', ru: 'Счёт', uz: 'Hisob' }, definition: { en: 'A record of all transactions for one asset, liability, equity, income or expense item.', ru: 'Запись всех операций по одному активу, обязательству, капиталу, доходу или расходу.', uz: 'Bitta aktiv, majburiyat, kapital, daromad yoki xarajat bo\'yicha barcha operatsiyalar yozuvi.' } },
-    { term: { en: 'Journal', ru: 'Журнал', uz: 'Jurnal' }, definition: { en: 'A record of non-routine entries and corrections of errors.', ru: 'Запись нестандартных операций и исправления ошибок.', uz: 'Nostandart yozuvlar va xatolarni tuzatish qaydi.' } },
-    { term: { en: 'Balance c/f and b/f', ru: 'Остаток c/f и b/f', uz: 'c/f va b/f qoldiq' }, definition: { en: 'The closing balance carried forward, and the same amount brought forward as the next opening balance.', ru: 'Остаток на конец, перенесённый вперёд, и та же сумма как остаток на начало следующего периода.', uz: 'O\'tkazilgan yakuniy qoldiq va keyingi boshlang\'ich qoldiq sifatida keltirilgan xuddi shu summa.' } },
+    {
+      term: { en: 'Source document', ru: 'Первичный документ', uz: 'Birlamchi hujjat' },
+      definition: {
+        en: 'A document that is evidence of a transaction and is used to record it.',
+        ru: 'Документ, подтверждающий операцию и используемый для её записи.',
+        uz: 'Operatsiyani tasdiqlaydigan va uni yozish uchun ishlatiladigan hujjat.',
+      },
+      example: {
+        en: 'A supplier\'s invoice for $1,000 of kettles is the evidence used to record the purchase.',
+        ru: 'Счёт поставщика за чайники на $1,000 — основание для записи покупки.',
+        uz: 'Yetkazib beruvchining $1,000 lik choynaklar uchun hisob-fakturasi xaridni yozish uchun asos.',
+      },
+    },
+    {
+      term: { en: 'Purchase order', ru: 'Заказ на покупку', uz: 'Xarid buyurtmasi' },
+      definition: {
+        en: 'A request sent to a supplier to supply goods on stated terms.',
+        ru: 'Запрос поставщику поставить товар на указанных условиях.',
+        uz: 'Yetkazib beruvchiga belgilangan shartlarda tovar so\'rab yuboriladigan so\'rov.',
+      },
+      example: {
+        en: '"Please send 50 kettles at $20 each, delivery by Friday."',
+        ru: '«Пришлите 50 чайников по $20, доставка до пятницы.»',
+        uz: '«Har biri $20 dan 50 ta choynak yuboring, juma kuniga qadar.»',
+      },
+    },
+    {
+      term: { en: 'Delivery note', ru: 'Накладная', uz: 'Yetkazib berish xati' },
+      definition: {
+        en: 'A list from the supplier of the goods delivered. Also called a despatch note.',
+        ru: 'Список доставленных товаров от поставщика.',
+        uz: 'Yetkazib beruvchidan yetkazilgan tovarlar ro\'yxati.',
+      },
+      example: {
+        en: 'The box of kettles arrives with a slip saying "50 kettles".',
+        ru: 'Коробка с чайниками приходит с листком «50 чайников».',
+        uz: 'Choynaklar qutisi «50 ta choynak» degan qog\'oz bilan keladi.',
+      },
+    },
+    {
+      term: { en: 'Goods received note', ru: 'Акт приёмки', uz: 'Qabul qilish xati' },
+      definition: {
+        en: 'The buyer\'s own record of what arrived.',
+        ru: 'Собственная запись покупателя о том, что прибыло.',
+        uz: 'Xaridorning nima kelgani haqidagi o\'z yozuvi.',
+      },
+      example: {
+        en: 'You count the kettles, find 48, and write "48 received".',
+        ru: 'Вы пересчитываете чайники, находите 48 и пишете «получено 48».',
+        uz: 'Choynaklarni sanab, 48 ta topasiz va «48 ta qabul qilindi» deb yozasiz.',
+      },
+    },
+    {
+      term: { en: 'Invoice', ru: 'Счёт-фактура', uz: 'Hisob-faktura' },
+      definition: {
+        en: 'The seller\'s request for payment, showing the goods, the date, the amount and any sales tax.',
+        ru: 'Запрос продавца об оплате с товаром, датой, суммой и налогом с продаж.',
+        uz: 'Sotuvchining tovar, sana, summa va sotuv solig\'i ko\'rsatilgan to\'lov so\'rovi.',
+      },
+      example: {
+        en: '"50 kettles × $20 = $1,000, please pay within 30 days."',
+        ru: '«50 чайников × $20 = $1,000, оплатите в течение 30 дней.»',
+        uz: '«50 ta choynak × $20 = $1,000, 30 kun ichida to\'lang.»',
+      },
+    },
+    {
+      term: { en: 'Credit note', ru: 'Кредит-нота', uz: 'Kredit-nota' },
+      definition: {
+        en: 'A document from the seller cancelling all or part of an invoice.',
+        ru: 'Документ продавца, отменяющий весь счёт или его часть.',
+        uz: 'Sotuvchining hisob-fakturani butunlay yoki qisman bekor qiluvchi hujjati.',
+      },
+      example: {
+        en: 'The supplier sends a note taking $40 off the invoice for 2 missing kettles.',
+        ru: 'Поставщик присылает документ, снимающий $40 со счёта за 2 недостающих чайника.',
+        uz: 'Yetkazib beruvchi yetishmagan 2 ta choynak uchun hisobdan $40 ni olib tashlovchi hujjat yuboradi.',
+      },
+    },
+    {
+      term: { en: 'Remittance advice', ru: 'Извещение об оплате', uz: 'To\'lov xabarnomasi' },
+      definition: {
+        en: 'A note from the buyer showing which items a payment covers.',
+        ru: 'Сообщение покупателя о том, какие позиции покрывает платёж.',
+        uz: 'Xaridorning to\'lov qaysi summalarni qoplashi haqidagi xabari.',
+      },
+      example: {
+        en: '"This payment of $960 settles invoice 1234."',
+        ru: '«Этот платёж $960 оплачивает счёт 1234.»',
+        uz: '«Bu $960 lik to\'lov 1234-hisob-fakturani yopadi.»',
+      },
+    },
+    {
+      term: { en: 'Duality', ru: 'Двойственность', uz: 'Ikki tomonlamalik' },
+      definition: {
+        en: 'Every transaction has two equal effects.',
+        ru: 'У каждой операции два равных эффекта.',
+        uz: 'Har bir operatsiyaning ikkita teng ta\'siri bor.',
+      },
+      example: {
+        en: 'Buying a $3,000 shelf with cash: shelves go up $3,000 and cash goes down $3,000.',
+        ru: 'Покупка полки за $3,000 наличными: полки +$3,000, деньги -$3,000.',
+        uz: '$3,000 lik javonni naqdga olish: javonlar +$3,000, pul -$3,000.',
+      },
+    },
+    {
+      term: { en: 'Accounting equation', ru: 'Бухгалтерское уравнение', uz: 'Hisob tenglamasi' },
+      definition: {
+        en: 'Assets = equity + liabilities.',
+        ru: 'Активы = капитал + обязательства.',
+        uz: 'Aktivlar = kapital + majburiyatlar.',
+      },
+      example: {
+        en: 'Assets $12,000 = capital $8,000 + liabilities $4,000.',
+        ru: 'Активы $12,000 = капитал $8,000 + обязательства $4,000.',
+        uz: 'Aktivlar $12,000 = kapital $8,000 + majburiyatlar $4,000.',
+      },
+    },
+    {
+      term: { en: 'Capital', ru: 'Капитал', uz: 'Kapital' },
+      definition: {
+        en: 'What the business owes its owner: money put in plus profits kept, less drawings.',
+        ru: 'Что бизнес «должен» владельцу: вложенные деньги плюс оставленная прибыль минус изъятия.',
+        uz: 'Biznesning egasiga «qarzi»: qo\'yilgan pul plus qoldirilgan foyda minus olib qo\'yishlar.',
+      },
+      example: {
+        en: 'Put in $8,000 + profit $400 - drawings $600 = capital $7,800.',
+        ru: 'Вложено $8,000 + прибыль $400 - изъятия $600 = капитал $7,800.',
+        uz: 'Qo\'yilgan $8,000 + foyda $400 - olib qo\'yish $600 = kapital $7,800.',
+      },
+    },
+    {
+      term: { en: 'Receivable', ru: 'Дебиторская задолженность', uz: 'Debitorlik qarzi' },
+      definition: {
+        en: 'Money that a customer owes the business for goods or services already supplied.',
+        ru: 'Деньги, которые покупатель должен бизнесу за уже поставленные товары или услуги.',
+        uz: 'Mijozning allaqachon berilgan tovar yoki xizmat uchun biznesga qarzi.',
+      },
+      example: {
+        en: 'You sell $400 of goods on credit. Until the customer pays, you have a $400 receivable.',
+        ru: 'Вы продали товар на $400 в кредит. Пока покупатель не заплатит, у вас дебиторская задолженность $400.',
+        uz: '$400 lik tovarni nasiyaga sotdingiz. Mijoz to\'lamaguncha, sizda $400 debitorlik qarzi bor.',
+      },
+    },
+    {
+      term: { en: 'Payable', ru: 'Кредиторская задолженность', uz: 'Kreditorlik qarzi' },
+      definition: {
+        en: 'Money the business owes a supplier for goods or services already received.',
+        ru: 'Деньги, которые бизнес должен поставщику за уже полученные товары или услуги.',
+        uz: 'Biznesning allaqachon olingan tovar yoki xizmat uchun yetkazib beruvchiga qarzi.',
+      },
+      example: {
+        en: 'You buy $1,000 of goods and pay only $600. The other $400 is a payable.',
+        ru: 'Вы купили товар на $1,000 и заплатили только $600. Остальные $400 — кредиторская задолженность.',
+        uz: '$1,000 lik tovar olib, faqat $600 to\'ladingiz. Qolgan $400 — kreditorlik qarzi.',
+      },
+    },
+    {
+      term: { en: 'Standing data', ru: 'Постоянные данные', uz: 'Doimiy ma\'lumotlar' },
+      definition: {
+        en: 'Data used repeatedly for regular transactions, such as price lists and pay rates.',
+        ru: 'Данные, многократно используемые для регулярных операций, например прайсы и ставки оплаты.',
+        uz: 'Muntazam operatsiyalar uchun qayta ishlatiladigan ma\'lumotlar, masalan narxlar va ish haqi stavkalari.',
+      },
+      example: {
+        en: 'The menu price list, used for every sale until prices change.',
+        ru: 'Прайс-лист меню, который используется для каждой продажи, пока цены не изменятся.',
+        uz: 'Narxlar o\'zgarguncha har bir sotuvda ishlatiladigan menyu narxlari ro\'yxati.',
+      },
+    },
+    {
+      term: { en: 'Memorandum records', ru: 'Вспомогательные записи', uz: 'Yordamchi yozuvlar' },
+      definition: {
+        en: 'Records for management and control that are not part of the double entry.',
+        ru: 'Записи для управления и контроля, не входящие в двойную запись.',
+        uz: 'Ikki yoqlama yozuvga kirmaydigan boshqaruv va nazorat yozuvlari.',
+      },
+      example: {
+        en: 'The page showing that one office owes the cafe $250.',
+        ru: 'Страница, где видно, что один офис должен кафе $250.',
+        uz: 'Bitta ofis kafega $250 qarzligini ko\'rsatuvchi sahifa.',
+      },
+    },
+    {
+      term: { en: 'Cloud accounting', ru: 'Облачный учёт', uz: 'Bulutli hisob' },
+      definition: {
+        en: 'Accounting software and data held on remote servers and reached over the internet.',
+        ru: 'Учётные программы и данные на удалённых серверах с доступом через интернет.',
+        uz: 'Masofaviy serverlardagi va internet orqali kiriladigan hisob dasturi va ma\'lumotlari.',
+      },
+      example: {
+        en: 'Your accountant logs in from another city to see the same figures you see.',
+        ru: 'Ваш бухгалтер из другого города входит и видит те же цифры, что и вы.',
+        uz: 'Boshqa shahardagi buxgalteringiz kirib, siz ko\'rgan raqamlarni ko\'radi.',
+      },
+    },
+    {
+      term: { en: 'General ledger', ru: 'Главная книга', uz: 'Bosh kitob' },
+      definition: {
+        en: 'All the ledger accounts of a business. Also called the nominal ledger.',
+        ru: 'Все счета бизнеса вместе.',
+        uz: 'Biznesning barcha hisoblari.',
+      },
+      example: {
+        en: 'All the accounts together: bank, sales, rent, capital, loan and the rest.',
+        ru: 'Все счета вместе: банк, продажи, аренда, капитал, заём и остальные.',
+        uz: 'Barcha hisoblar birga: bank, sotuv, ijara, kapital, qarz va boshqalar.',
+      },
+    },
+    {
+      term: { en: 'Ledger account', ru: 'Счёт', uz: 'Hisob' },
+      definition: {
+        en: 'A record of all transactions for one asset, liability, equity, income or expense item.',
+        ru: 'Запись всех операций по одному активу, обязательству, капиталу, доходу или расходу.',
+        uz: 'Bitta aktiv, majburiyat, kapital, daromad yoki xarajat bo\'yicha barcha operatsiyalar yozuvi.',
+      },
+      example: {
+        en: 'The rent account lists every rent payment in the year.',
+        ru: 'Счёт аренды содержит каждый платёж за аренду за год.',
+        uz: 'Ijara hisobida yil davomidagi har bir ijara to\'lovi bor.',
+      },
+    },
+    {
+      term: { en: 'Double entry', ru: 'Двойная запись', uz: 'Ikki yoqlama yozuv' },
+      definition: {
+        en: 'Recording every transaction twice, as a debit in one account and an equal credit in another.',
+        ru: 'Запись каждой операции дважды: дебет одного счёта и равный кредит другого.',
+        uz: 'Har bir operatsiyani ikki marta yozish: bir hisob debeti va boshqa hisobning teng krediti.',
+      },
+      example: {
+        en: 'Paying $900 rent: Dr Rent $900, Cr Bank $900.',
+        ru: 'Оплата аренды $900: Дт Аренда $900, Кт Банк $900.',
+        uz: '$900 ijara to\'lash: Dt Ijara $900, Kt Bank $900.',
+      },
+    },
+    {
+      term: { en: 'Debit and credit', ru: 'Дебет и кредит', uz: 'Debet va kredit' },
+      definition: {
+        en: 'The two sides of a ledger account: debit on the left, credit on the right. Debits increase expenses, assets and drawings. Credits increase liabilities, income and capital.',
+        ru: 'Две стороны счёта: дебет слева, кредит справа. Дебет увеличивает расходы, активы и изъятия. Кредит увеличивает обязательства, доходы и капитал.',
+        uz: 'Hisobning ikki tomoni: debet chapda, kredit o\'ngda. Debet xarajatlar, aktivlar va olib qo\'yishlarni oshiradi. Kredit majburiyatlar, daromad va kapitalni oshiradi.',
+      },
+      example: {
+        en: 'A $1,000 cash sale: Dr Bank $1,000 (an asset goes up), Cr Sales $1,000 (income goes up).',
+        ru: 'Продажа за $1,000 наличными: Дт Банк $1,000 (актив растёт), Кт Продажи $1,000 (доход растёт).',
+        uz: '$1,000 naqd sotuv: Dt Bank $1,000 (aktiv oshadi), Kt Sotuv $1,000 (daromad oshadi).',
+      },
+    },
+    {
+      term: { en: 'Journal', ru: 'Журнал', uz: 'Jurnal' },
+      definition: {
+        en: 'A record of non-routine entries and corrections of errors.',
+        ru: 'Запись нестандартных операций и исправления ошибок.',
+        uz: 'Nostandart yozuvlar va xatolarni tuzatish qaydi.',
+      },
+      example: {
+        en: '"Dr Depreciation expense $600, Cr Accumulated depreciation $600: to correct an entry posted in reverse."',
+        ru: '«Дт Расход на амортизацию $600, Кт Накопленная амортизация $600: исправление записи, проведённой наоборот.»',
+        uz: '«Dt Amortizatsiya xarajati $600, Kt To\'plangan amortizatsiya $600: teskari yozilgan yozuvni tuzatish.»',
+      },
+    },
+    {
+      term: { en: 'Balance c/f and b/f', ru: 'Остаток c/f и b/f', uz: 'c/f va b/f qoldiq' },
+      definition: {
+        en: 'The closing balance carried forward, and the same amount brought forward as the next opening balance.',
+        ru: 'Остаток на конец, перенесённый вперёд, и та же сумма как остаток на начало следующего периода.',
+        uz: 'O\'tkazilgan yakuniy qoldiq va keyingi boshlang\'ich qoldiq sifatida keltirilgan xuddi shu summa.',
+      },
+      example: {
+        en: 'The bank account ends the month with $3,500 c/f, which starts next month as $3,500 b/f.',
+        ru: 'Банковский счёт заканчивает месяц с $3,500 c/f, а следующий месяц начинается с $3,500 b/f.',
+        uz: 'Bank hisobi oyni $3,500 c/f bilan tugatadi, keyingi oy $3,500 b/f bilan boshlanadi.',
+      },
+    },
   ],
 };
 

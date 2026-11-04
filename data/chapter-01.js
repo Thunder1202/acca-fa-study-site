@@ -8,19 +8,43 @@ const chapter01 = {
     uz: 'Moliyaviy hisobotga kirish',
   },
   objectives: [
-    { en: 'Define financial reporting', ru: 'Дать определение финансовой отчётности', uz: 'Moliyaviy hisobotga ta\'rif berish' },
-    { en: 'Identify and define the types of business entity', ru: 'Назвать и описать виды предприятий', uz: 'Biznes subyektlari turlarini aniqlash va ta\'riflash' },
-    { en: 'Identify users of financial statements and their information needs', ru: 'Назвать пользователей отчётности и их информационные потребности', uz: 'Hisobot foydalanuvchilari va ularning axborot ehtiyojlarini aniqlash' },
-    { en: 'Identify the purpose of the main financial statements', ru: 'Объяснить назначение основных финансовых отчётов', uz: 'Asosiy moliyaviy hisobotlarning maqsadini tushuntirish' },
-    { en: 'Define the elements of the financial statements', ru: 'Дать определение элементам финансовой отчётности', uz: 'Moliyaviy hisobot elementlariga ta\'rif berish' },
-    { en: 'Define and explain accounting concepts and characteristics', ru: 'Объяснить принципы бухгалтерского учёта и качественные характеристики информации', uz: 'Buxgalteriya tamoyillari va axborotning sifat xususiyatlarini tushuntirish' },
+    {
+      en: 'Define financial reporting',
+      ru: 'Дать определение финансовой отчётности',
+      uz: 'Moliyaviy hisobotga ta\'rif berish',
+    },
+    {
+      en: 'Identify and define the types of business entity',
+      ru: 'Назвать и описать виды предприятий',
+      uz: 'Biznes subyektlari turlarini aniqlash va ta\'riflash',
+    },
+    {
+      en: 'Identify users of financial statements and their information needs',
+      ru: 'Назвать пользователей отчётности и их информационные потребности',
+      uz: 'Hisobot foydalanuvchilari va ularning axborot ehtiyojlarini aniqlash',
+    },
+    {
+      en: 'Identify the purpose of the main financial statements',
+      ru: 'Объяснить назначение основных финансовых отчётов',
+      uz: 'Asosiy moliyaviy hisobotlarning maqsadini tushuntirish',
+    },
+    {
+      en: 'Define the elements of the financial statements',
+      ru: 'Дать определение элементам финансовой отчётности',
+      uz: 'Moliyaviy hisobot elementlariga ta\'rif berish',
+    },
+    {
+      en: 'Define and explain accounting concepts and characteristics',
+      ru: 'Объяснить принципы бухгалтерского учёта и качественные характеристики информации',
+      uz: 'Buxgalteriya tamoyillari va axborotning sifat xususiyatlarini tushuntirish',
+    },
   ],
   sections: [
     {
       exam: {
-        en: `- Management accounts are normally not audited, but should be just as accurate as financial statements.`,
-        ru: `- Управленческая отчётность обычно не проходит аудит, но должна быть такой же точной, как финансовая.`,
-        uz: `- Boshqaruv hisobotlari odatda auditdan o'tmaydi, lekin moliyaviy hisobot kabi aniq bo'lishi kerak.`,
+        en: '- Management accounts are normally not audited, but should be just as accurate as financial statements.',
+        ru: '- Управленческая отчётность обычно не проходит аудит, но должна быть такой же точной, как финансовая.',
+        uz: '- Boshqaruv hisobotlari odatda auditdan o\'tmaydi, lekin moliyaviy hisobot kabi aniq bo\'lishi kerak.',
       },
       key: {
         en: `- Financial accounting: annual statements for outside users such as lenders and investors.
@@ -65,9 +89,29 @@ Boshqaruv hisobi (management accounting) biznesni boshqarayotganlar uchun kerak.
 Imtihon uchun muhim: mas'uliyati cheklangan kompaniyaning e'lon qilingan hisoboti ochiq hujjat hisoblanadi, lekin unda alohida mahsulotlar foydaliligi kabi tafsilotlar ko'rsatilmaydi.`,
       },
       example: {
-        en: `Meet Madina, who has just opened Madina's Mart, a household goods shop in Tashkent. Every evening she checks which products sold best so she can decide what to reorder. That is management accounting. Once a year she prepares a summary of the whole shop's results for her bank. That is financial accounting.`,
-        ru: `Познакомьтесь с Мадиной: она только что открыла магазин товаров для дома Madina's Mart в Ташкенте. Каждый вечер она смотрит, какие товары продавались лучше всего, чтобы решить, что заказать снова. Это управленческий учёт. Раз в год она готовит для банка сводку результатов всего магазина. Это финансовый учёт.`,
-        uz: `Madina bilan tanishing: u yaqinda Toshkentda Madina's Mart nomli uy-ro'zg'or buyumlari do'konini ochdi. Har kuni kechqurun qaysi mahsulotlar yaxshi sotilganini ko'rib, nimani qayta buyurtma qilishni hal qiladi. Bu boshqaruv hisobi. Yiliga bir marta esa bank uchun butun do'kon natijalarining qisqacha hisobotini tayyorlaydi. Bu moliyaviy hisob.`,
+        en: `You run a small phone-repair stall.
+
+- Every Friday you check which repairs earned the most, so you know which parts to order. That is management accounting: detailed, frequent, for you.
+- Once a year you send your bank a one-page summary of the year's income and of what you own and owe. That is financial accounting: a summary, for outsiders.`,
+        ru: `Вы держите небольшую мастерскую по ремонту телефонов.
+
+- Каждую пятницу вы смотрите, какой ремонт принёс больше всего, чтобы знать, какие детали заказать. Это управленческий учёт: подробно, часто, для вас.
+- Раз в год вы отправляете в банк одностраничную сводку о доходах за год и о том, что у вас есть и что вы должны. Это финансовый учёт: сводка для посторонних.`,
+        uz: `Siz kichik telefon ta'mirlash ustaxonasini yuritasiz.
+
+- Har juma qaysi ta'mir eng ko'p daromad berganini ko'rasiz, shunda qaysi ehtiyot qismni buyurtma qilishni bilasiz. Bu boshqaruv hisobi: batafsil, tez-tez, o'zingiz uchun.
+- Yiliga bir marta bankka yillik daromad va nima borligi hamda nima qarzligingiz haqida bir sahifalik xulosa yuborasiz. Bu moliyaviy hisob: tashqaridagilar uchun xulosa.`,
+      },
+      simple: {
+        en: `Accounting means keeping a record of a business's money and then summarising it.
+
+Financial accounting makes a yearly summary for people outside the business, such as the bank or investors. Management accounting makes detailed, frequent reports for the people running the business, to help them decide what to do next.`,
+        ru: `Учёт — это запись всех денежных операций бизнеса и их обобщение.
+
+Финансовый учёт готовит годовую сводку для людей вне бизнеса, например банка или инвесторов. Управленческий учёт готовит подробные и частые отчёты для тех, кто управляет бизнесом, чтобы им было легче решать, что делать дальше.`,
+        uz: `Hisob — biznesning barcha pul operatsiyalarini yozib borish va ularni jamlash.
+
+Moliyaviy hisob biznesdan tashqaridagi odamlar, masalan bank yoki investorlar uchun yillik xulosa tayyorlaydi. Boshqaruv hisobi biznesni boshqaruvchilar uchun batafsil va tez-tez hisobotlar tayyorlaydi, keyin nima qilishni hal qilishga yordam beradi.`,
       },
     },
     {
@@ -138,9 +182,41 @@ Rahbariyat va raqobatchilar ham hisobotdan foydalanadi. Rahbariyat asosan boshqa
 Barcha foydalanuvchilarga rahbariyat resurslarni qanday boshqarganini baholash va sarmoya kiritish yoki yangi mablag' berish haqida qaror qilish uchun tegishli va haqqoniy axborot kerak.`,
       },
       example: {
-        en: `Madina's bank wants to know the shop can repay its loan. Her main supplier checks she can pay on credit. Her shop assistant wonders whether the job is secure. The tax office wants to assess tax on her profit. One set of numbers, four very different questions.`,
-        ru: `Банк Мадины хочет знать, сможет ли магазин вернуть кредит. Главный поставщик проверяет, сможет ли она платить с отсрочкой. Продавец думает, надёжно ли его рабочее место. Налоговая хочет рассчитать налог с её прибыли. Одни и те же цифры, но четыре совершенно разных вопроса.`,
-        uz: `Madinaning banki do'kon kreditni qaytara olishini bilmoqchi. Asosiy yetkazib beruvchi u nasiyaga to'lay olishini tekshiradi. Sotuvchi ish joyi barqarormi, deb o'ylaydi. Soliq idorasi uning foydasidan soliqni hisoblamoqchi. Raqamlar bitta, lekin savollar to'rt xil.`,
+        en: `A small bakery's accounts show a profit of $20,000 and a bank loan of $5,000.
+
+- The bank asks: can it repay the $5,000?
+- The flour supplier asks: will my bills be paid?
+- The baker's assistant asks: is my job safe?
+- The tax office asks: how much tax is due on the $20,000?
+
+One set of numbers, four different questions.`,
+        ru: `В отчётности небольшой пекарни прибыль $20,000 и банковский заём $5,000.
+
+- Банк спрашивает: сможет ли она вернуть $5,000?
+- Поставщик муки: оплатят ли мои счета?
+- Помощник пекаря: сохранится ли моя работа?
+- Налоговая: сколько налога с $20,000?
+
+Одни и те же цифры, четыре разных вопроса.`,
+        uz: `Kichik novvoyxona hisobotida $20,000 foyda va $5,000 bank qarzi bor.
+
+- Bank so'raydi: $5,000 ni qaytara oladimi?
+- Un yetkazib beruvchi: hisoblarim to'lanadimi?
+- Novvoy yordamchisi: ishim saqlanadimi?
+- Soliq idorasi: $20,000 dan qancha soliq?
+
+Bitta raqamlar to'plami, to'rt xil savol.`,
+      },
+      simple: {
+        en: `Many different people read a business's accounts, and each looks for something different.
+
+Investors want to know if it makes money. Lenders want to know if they will be paid back. Staff want to know if their jobs are safe. Suppliers want to know if their bills will be paid, and the tax office wants to know how much tax is due.`,
+        ru: `Отчётность бизнеса читают очень разные люди, и каждый ищет своё.
+
+Инвесторы хотят знать, приносит ли бизнес деньги. Кредиторы — вернут ли им долг. Сотрудники — сохранится ли их работа. Поставщики — оплатят ли их счета, а налоговая — сколько налога нужно заплатить.`,
+        uz: `Biznes hisobotini juda turli odamlar o'qiydi va har biri o'zinikini qidiradi.
+
+Investorlar biznes pul topadimi, shuni bilmoqchi. Qarz beruvchilar qarz qaytarilishini. Xodimlar ishi saqlanib qolishini. Yetkazib beruvchilar hisoblari to'lanishini, soliq idorasi esa qancha soliq to'lanishini bilmoqchi.`,
       },
     },
     {
@@ -187,11 +263,7 @@ Barcha foydalanuvchilarga rahbariyat resurslarni qanday boshqarganini baholash v
 - Barcha sheriklar boshqara oladi. Aksiyadorlar faqat direktor bo'lsa.
 - Kompaniya kamchiliklari: ro'yxat xarajati, hisobot topshirish, audit, ochiqlik, qat'iy kapital qoidalari.`,
       },
-      heading: {
-        en: 'Types of business entity',
-        ru: 'Виды предприятий',
-        uz: 'Biznes subyektlari turlari',
-      },
+      heading: { en: 'Types of business entity', ru: 'Виды предприятий', uz: 'Biznes subyektlari turlari' },
       body: {
         en: `A sole trader is owned and run by one person, who may employ any number of staff. In law, the owner and the business are the same, so the owner keeps all profits but has unlimited liability for losses and debts, even from personal assets such as a house. The capital account rises with new capital and profits, and falls with drawings and losses. Advantages are flexibility and independence. Sole traders are usually small because they rely on the owner's own resources.
 
@@ -222,9 +294,38 @@ Kompaniya alohida yuridik shaxs bo'lgani uchun: o'z mol-mulkiga o'zi egalik qila
 Kompaniya tuzishning kamchiliklari: ro'yxatdan o'tish va yuridik xarajatlar; yillik hisobotni topshirish va odatda auditdan o'tkazish kerak, bu qimmat bo'lishi mumkin; hisobot hamma uchun ochiq; kapital va foydani kiritish va olish bo'yicha qat'iy qoidalar mavjud; ishtirokchilar direktor bo'lmasa, boshqaruvda qatnasha olmaydi.`,
       },
       example: {
-        en: `Madina's Mart starts as a sole trader business. If the shop cannot pay a $5,000 debt, Madina may have to sell her own car. If she later brings in her cousin Jasur as a partner, each of them could be pursued for all of the shop's debts. If they incorporate as Madina's Mart LLC, their risk is limited to what they invested, but they take on filing and audit costs and their accounts become public.`,
-        ru: `Madina's Mart начинается как бизнес индивидуального предпринимателя. Если магазин не сможет выплатить долг в $5,000, Мадине, возможно, придётся продать личный автомобиль. Если позже она примет в партнёры двоюродного брата Жасура, с каждого из них можно будет требовать все долги магазина. Если они зарегистрируют Madina's Mart LLC, риск ограничится их вложениями, но появятся расходы на подачу отчётности и аудит, а отчётность станет публичной.`,
-        uz: `Madina's Mart yakka tartibdagi tadbirkorlik sifatida boshlanadi. Agar do'kon $5,000 qarzni to'lay olmasa, Madina shaxsiy mashinasini sotishiga to'g'ri kelishi mumkin. Keyinroq amakivachchasi Jasurni sherik qilib olsa, ikkalasidan ham do'konning barcha qarzlari talab qilinishi mumkin. Agar ular Madina's Mart LLC ni ro'yxatdan o'tkazsa, xavf faqat kiritgan mablag'i bilan cheklanadi, ammo hisobot topshirish va audit xarajatlari paydo bo'ladi va hisobotlari ochiq bo'ladi.`,
+        en: `A business owes $5,000 that it cannot pay.
+
+- Sole trader: the owner must pay it, even if that means selling their own car.
+- Partnership of two friends: the lender can ask either friend for the whole $5,000.
+- Company: the owners lose only the money they paid for their shares. Their own cars are safe.`,
+        ru: `Бизнес должен $5,000 и не может заплатить.
+
+- Индивидуальный предприниматель: владелец обязан заплатить, даже если придётся продать свою машину.
+- Товарищество двух друзей: кредитор может потребовать все $5,000 с любого из них.
+- Компания: владельцы теряют только деньги, заплаченные за акции. Их машины в безопасности.`,
+        uz: `Biznes $5,000 qarz va to'lay olmaydi.
+
+- Yakka tadbirkor: egasi to'lashi shart, hatto o'z mashinasini sotishga to'g'ri kelsa ham.
+- Ikki do'stning sherikligi: qarz beruvchi butun $5,000 ni istalgan biridan talab qilishi mumkin.
+- Kompaniya: egalar faqat aksiyalar uchun to'lagan pulini yo'qotadi. Ularning mashinalari xavfsiz.`,
+      },
+      simple: {
+        en: `There are three main ways to own a business.
+
+- Sole trader: one person owns it alone. If it fails, they can lose their own house or car.
+- Partnership: two or more owners share the profits, and each is fully responsible for all the debts.
+- Company: a separate "person" in law. The owners hold shares and can lose only what they put in.`,
+        ru: `Есть три основных способа владеть бизнесом.
+
+- Индивидуальный предприниматель: один владелец. Если бизнес прогорит, он может потерять свой дом или машину.
+- Товарищество: двое или больше владельцев делят прибыль, и каждый полностью отвечает по всем долгам.
+- Компания: отдельное «лицо» по закону. Владельцы держат акции и могут потерять только то, что вложили.`,
+        uz: `Biznesga egalik qilishning uchta asosiy yo'li bor.
+
+- Yakka tadbirkor: bitta egasi bor. Biznes kuysa, u o'z uyi yoki mashinasini yo'qotishi mumkin.
+- Sheriklik: ikki yoki undan ko'p egalar foydani bo'lishadi va har biri barcha qarzlar uchun to'liq javob beradi.
+- Kompaniya: qonun bo'yicha alohida «shaxs». Egalar aksiyalarga ega va faqat qo'yganini yo'qotishi mumkin.`,
       },
     },
     {
@@ -242,11 +343,7 @@ Kompaniya tuzishning kamchiliklari: ro'yxatdan o'tish va yuridik xarajatlar; yil
 - Hisobot maqsadi: resurs berish qarorlari uchun foydali axborot.
 - Ehtiyotkorlik: noaniqlikda ehtiyot bo'lish, ataylab xolislikni buzmasdan.`,
       },
-      heading: {
-        en: 'The Conceptual Framework',
-        ru: 'Концептуальные основы',
-        uz: 'Konseptual asoslar',
-      },
+      heading: { en: 'The Conceptual Framework', ru: 'Концептуальные основы', uz: 'Konseptual asoslar' },
       body: {
         en: `The Conceptual Framework for Financial Reporting, written by the International Accounting Standards Board (IASB), sets out the main ideas behind IFRS Accounting Standards and therefore behind financial statements.
 
@@ -277,16 +374,36 @@ Hujjat hisobot maqsadini, foydali axborotning sifat xususiyatlarini, elementlarn
 Ehtiyotkorlik (prudence) noaniqlik sharoitida mulohaza yuritganda ehtiyot bo'lishni bildiradi, shunda aktivlar va daromadlar oshirib ko'rsatilmaydi, majburiyatlar va xarajatlar esa kamaytirib ko'rsatilmaydi.`,
       },
       example: {
-        en: `A customer owes Madina's Mart $300 but has stopped answering calls. Prudence means Madina should not simply assume the full $300 will arrive. Prudence does not allow her to invent extra losses either, because deliberately understating profit would be bias.`,
-        ru: `Покупатель должен Madina's Mart $300, но перестал отвечать на звонки. Осмотрительность означает, что Мадина не должна просто считать, что все $300 поступят. Но и придумывать лишние убытки она не может: намеренное занижение прибыли было бы предвзятостью.`,
-        uz: `Xaridor Madina's Mart ga $300 qarzdor, lekin qo'ng'iroqlarga javob bermay qo'ydi. Ehtiyotkorlik Madina $300 ning hammasi keladi deb oddiygina hisoblamasligi kerakligini bildiradi. Lekin u ortiqcha zararlarni ham o'ylab topa olmaydi, chunki foydani ataylab kamaytirish xolislikka zid.`,
+        en: `A customer owes you $300 but has stopped answering your calls.
+
+- Prudence: do not just assume the whole $300 will arrive.
+- But do not pretend you will lose $1,000 either. Making profit look smaller on purpose is bias, and that is not allowed.`,
+        ru: `Покупатель должен вам $300, но перестал отвечать на звонки.
+
+- Осмотрительность: не стоит просто считать, что все $300 придут.
+- Но и не делайте вид, что потеряете $1,000. Нарочно уменьшать прибыль — это предвзятость, так нельзя.`,
+        uz: `Mijoz sizga $300 qarz, lekin qo'ng'iroqlarga javob bermay qo'ydi.
+
+- Ehtiyotkorlik: $300 ning hammasi albatta keladi deb hisoblamang.
+- Lekin $1,000 yo'qotaman deb ham ko'rsatmang. Foydani ataylab kamaytirish — xolislikning yo'qligi, bunga yo'l qo'yilmaydi.`,
+      },
+      simple: {
+        en: `The Conceptual Framework is the "rule behind the rules". It is not a standard itself.
+
+It explains what financial statements are for and gives the basic ideas the IASB uses when it writes standards. When no standard covers a situation, accountants use it to decide what to do. One of its ideas is prudence: be careful when you are unsure, but never make the figures worse on purpose.`,
+        ru: `Концептуальная основа — это «правило за правилами». Сама она не стандарт.
+
+Она объясняет, зачем нужна отчётность, и даёт основные идеи, которыми IASB пользуется при написании стандартов. Когда ни один стандарт не подходит, бухгалтеры решают по ней. Одна из её идей — осмотрительность: будьте осторожны, когда не уверены, но никогда не ухудшайте цифры нарочно.`,
+        uz: `Kontseptual asos — «qoidalar ortidagi qoida». Uning o'zi standart emas.
+
+U hisobot nima uchun kerakligini tushuntiradi va IASB standart yozishda foydalanadigan asosiy g'oyalarni beradi. Hech bir standart to'g'ri kelmasa, buxgalterlar shunga qarab hal qiladi. G'oyalaridan biri ehtiyotkorlik: ishonchingiz komil bo'lmasa ehtiyot bo'ling, lekin raqamlarni ataylab yomonlashtirmang.`,
       },
     },
     {
       exam: {
-        en: `- Materiality is an entity-specific aspect of relevance, based on the nature or size of an item.`,
-        ru: `- Существенность — аспект уместности, зависящий от предприятия: от характера или размера статьи.`,
-        uz: `- Muhimlik tegishlilikning korxonaga xos jihati bo'lib, moddaning tabiati yoki hajmiga bog'liq.`,
+        en: '- Materiality is an entity-specific aspect of relevance, based on the nature or size of an item.',
+        ru: '- Существенность — аспект уместности, зависящий от предприятия: от характера или размера статьи.',
+        uz: '- Muhimlik tegishlilikning korxonaga xos jihati bo\'lib, moddaning tabiati yoki hajmiga bog\'liq.',
       },
       key: {
         en: `- There are two: relevance and faithful representation.
@@ -346,9 +463,41 @@ Haqqoniy aks ettirish (faithful representation) operatsiyalar faqat yuridik shak
 - Xatosizlik: muhimlik doirasida. Bu mutlaq aniqlikni anglatmaydi, taxmin esa aniq taxmin sifatida ko'rsatilishi kerak.`,
       },
       example: {
-        en: `A $2 mistake in Madina's stationery costs changes nobody's decision, so it is not material. Failing to mention a $3,000 bank loan would change her supplier's decision, so that is material. She also rents her fridge unit on a long agreement that gives her full use of it. Substance over form asks what the deal really is in economic terms, not just what the paper calls it.`,
-        ru: `Ошибка в $2 в расходах Мадины на канцелярию ничьего решения не изменит, поэтому она несущественна. А если не указать банковский кредит в $3,000, решение поставщика изменится, значит, это существенно. Мадина также арендует холодильное оборудование по длительному договору с полным правом пользования. Приоритет содержания спрашивает, чем эта сделка является экономически, а не только как она названа в документе.`,
-        uz: `Madinaning kantselyariya xarajatidagi $2 xato hech kimning qarorini o'zgartirmaydi, shuning uchun u muhim emas. $3,000 bank kreditini ko'rsatmaslik esa yetkazib beruvchi qarorini o'zgartiradi, demak bu muhim. Madina muzlatkich uskunasini ham undan to'liq foydalanish huquqi bilan uzoq muddatli shartnoma asosida ijaraga olgan. Mazmun ustunligi hujjatda nima deb yozilganini emas, bitim iqtisodiy jihatdan nima ekanini so'raydi.`,
+        en: `A shop's accounts.
+
+- A $2 mistake in stationery costs changes nobody's decision. It is not material.
+- Leaving out a $3,000 bank loan would change a lender's decision. It is material.
+- The shop rents a fridge on a 5-year deal that gives it full use of the fridge. Substance over form asks what the deal really is, not just what the paper calls it.`,
+        ru: `Отчётность магазина.
+
+- Ошибка в $2 в расходах на канцтовары ничьего решения не изменит. Это несущественно.
+- Пропуск банковского займа $3,000 изменил бы решение кредитора. Это существенно.
+- Магазин арендует холодильник на 5 лет с полным правом пользования. Приоритет содержания над формой спрашивает, что это за сделка на деле, а не как она названа на бумаге.`,
+        uz: `Do'kon hisoboti.
+
+- Kanselyariya xarajatidagi $2 xato hech kimning qarorini o'zgartirmaydi. Bu muhim emas.
+- $3,000 bank qarzini tushirib qoldirish qarz beruvchining qarorini o'zgartiradi. Bu muhim.
+- Do'kon muzlatgichni 5 yilga to'liq foydalanish huquqi bilan ijaraga olgan. Shakldan mazmunning ustunligi bitim qog'ozda qanday atalganini emas, aslida nima ekanini so'raydi.`,
+      },
+      simple: {
+        en: `For accounting information to be useful, it needs two things.
+
+- Relevant: it could change someone's decision.
+- Faithful representation: it shows what really happened, completely, without bias and without important mistakes.
+
+Something is material if getting it wrong or leaving it out could change a user's decision.`,
+        ru: `Чтобы учётная информация была полезной, ей нужны две вещи.
+
+- Уместность: она может изменить чьё-то решение.
+- Правдивое представление: она показывает, что произошло на самом деле, полностью, без предвзятости и без важных ошибок.
+
+Информация существенна, если ошибка в ней или её отсутствие может изменить решение пользователя.`,
+        uz: `Hisob ma'lumoti foydali bo'lishi uchun ikki narsa kerak.
+
+- Tegishlilik: u kimningdir qarorini o'zgartira oladi.
+- Haqqoniy aks ettirish: u haqiqatda nima bo'lganini to'liq, xolis va muhim xatolarsiz ko'rsatadi.
+
+Ma'lumotdagi xato yoki uning yo'qligi foydalanuvchi qarorini o'zgartirishi mumkin bo'lsa, u muhim (material) hisoblanadi.`,
       },
     },
     {
@@ -401,9 +550,47 @@ Memory aid: the two fundamental characteristics make information useful, and the
 Eslab qolish uchun: ikkita asosiy xususiyat axborotni foydali qiladi, to'rtta kuchaytiruvchi esa yanada foydali qiladi. Imtihondagi keng tarqalgan tuzoq — kuchaytiruvchi xususiyatni asosiy deb ko'rsatish.`,
       },
       example: {
-        en: `Madina can count her cash drawer, which is direct verification. She can recalculate her year-end inventory value from the supplier prices, which is indirect verification. If her bank asks for results and she delivers them nine months late, the figures may be accurate but they have lost their timeliness.`,
-        ru: `Мадина может пересчитать деньги в кассе — это прямая проверка. Она может заново рассчитать стоимость запасов на конец года по ценам поставщиков — это косвенная проверка. Если банк запросит результаты, а она предоставит их на девять месяцев позже, цифры могут быть точными, но своевременность потеряна.`,
-        uz: `Madina kassadagi pulni sanashi mumkin, bu to'g'ridan-to'g'ri tekshirish. U yil oxiridagi tovar zaxirasi qiymatini yetkazib beruvchi narxlari bo'yicha qayta hisoblashi mumkin, bu bilvosita tekshirish. Agar bank natijalarni so'rasa-yu, u ularni to'qqiz oy kechikib bersa, raqamlar aniq bo'lsa ham, o'z vaqtidalik yo'qolgan bo'ladi.`,
+        en: `Your shop's figures.
+
+- Verifiability: you count the cash in the till and get $250. That checks the figure directly.
+- Comparability: you count stock the same way this year as last year, so the two years can be compared.
+- Timeliness: your bank asks for last year's figures. If you send them nine months late, they are less useful even if they are correct.`,
+        ru: `Цифры вашего магазина.
+
+- Проверяемость: вы пересчитываете деньги в кассе и получаете $250. Это прямая проверка.
+- Сопоставимость: вы считаете запасы так же, как в прошлом году, поэтому два года можно сравнить.
+- Своевременность: банк просит цифры за прошлый год. Если вы пришлёте их через девять месяцев, они менее полезны, даже если верны.`,
+        uz: `Do'koningiz raqamlari.
+
+- Tekshiriluvchanlik: kassadagi pulni sanab $250 chiqarasiz. Bu bevosita tekshirish.
+- Taqqoslanuvchanlik: zaxirani o'tgan yilgidek sanaysiz, shuning uchun ikki yilni solishtirish mumkin.
+- O'z vaqtidalik: bank o'tgan yil raqamlarini so'raydi. To'qqiz oy kechikib yuborsangiz, to'g'ri bo'lsa ham foydasi kamroq.`,
+      },
+      simple: {
+        en: `Four more qualities make useful information even better.
+
+- Comparability: you can compare it with last year or with another business.
+- Verifiability: someone else can check it.
+- Timeliness: it arrives in time to be used.
+- Understandability: a reader with some business knowledge can follow it.
+
+Reliability is NOT on the list. That is a common exam trap.`,
+        ru: `Ещё четыре качества делают полезную информацию ещё лучше.
+
+- Сопоставимость: её можно сравнить с прошлым годом или с другим бизнесом.
+- Проверяемость: кто-то другой может её проверить.
+- Своевременность: она приходит вовремя, чтобы ею воспользоваться.
+- Понятность: читатель с базовыми знаниями бизнеса может в ней разобраться.
+
+Надёжности (reliability) в списке НЕТ. Это частая ловушка на экзамене.`,
+        uz: `Yana to'rt sifat foydali ma'lumotni yanada yaxshilaydi.
+
+- Taqqoslanuvchanlik: uni o'tgan yil yoki boshqa biznes bilan solishtirish mumkin.
+- Tekshiriluvchanlik: boshqa odam uni tekshira oladi.
+- O'z vaqtidalik: u foydalanish uchun o'z vaqtida keladi.
+- Tushunarlilik: biznesdan biroz xabardor o'quvchi uni tushuna oladi.
+
+Ishonchlilik (reliability) ro'yxatda YO'Q. Bu imtihondagi keng tarqalgan tuzoq.`,
       },
     },
     {
@@ -471,33 +658,71 @@ Aktiv va majburiyatlar muddat bo'yicha ham bo'linadi. Joriy aktivlar (current as
 Joriy majburiyatlar (current liabilities) hisobot sanasidan o'n ikki oy ichida to'lanadi, masalan yetkazib beruvchilarga qarz. Uzoq muddatli majburiyatlar (non-current liabilities) o'n ikki oydan keyin to'lanadi, masalan ikki yildan keyin qaytariladigan kredit.`,
       },
       example: {
-        en: `On day one Madina invests $8,000 of her own money and borrows $3,000 from the bank, repayable in two years. She buys shelves for $3,000, and $5,500 of inventory with $1,000 of that on credit.
+        en: `On day one you start a shop:
+  You put in $8,000 of your own money
+  You borrow $3,000 from the bank, to repay in two years
+  You buy shelves for $3,000, and goods for $5,500, still owing the supplier $1,000 of that
+# Assets (what the shop has)
+  Shelves $3,000 (non-current: used for years)
+  Goods $5,500 and cash $3,500 (current: used up within a year)
+  Total: $3,000 + $5,500 + $3,500 = $12,000
+# Liabilities (what the shop owes)
+  Bank loan $3,000 (non-current) + supplier $1,000 (current) = $4,000
+# Equity (what is left for you)
+  $12,000 - $4,000 = $8,000, exactly the money you put in
+= Check: assets $12,000 = equity $8,000 + liabilities $4,000`,
+        ru: `В первый день вы открываете магазин:
+  Вы вкладываете $8,000 своих денег
+  Берёте в банке заём $3,000 на два года
+  Покупаете полки за $3,000 и товар за $5,500, из которых $1,000 ещё должны поставщику
+# Активы (что есть у магазина)
+  Полки $3,000 (внеоборотные: служат годами)
+  Товар $5,500 и деньги $3,500 (оборотные: расходуются в течение года)
+  Всего: $3,000 + $5,500 + $3,500 = $12,000
+# Обязательства (что магазин должен)
+  Банковский заём $3,000 (долгосрочный) + поставщику $1,000 (краткосрочный) = $4,000
+# Капитал (что остаётся вам)
+  $12,000 - $4,000 = $8,000, ровно столько, сколько вы вложили
+= Проверка: активы $12,000 = капитал $8,000 + обязательства $4,000`,
+        uz: `Birinchi kuni siz do'kon ochasiz:
+  O'z pulingizdan $8,000 qo'yasiz
+  Bankdan ikki yilga $3,000 qarz olasiz
+  Javonlarni $3,000 ga va tovarni $5,500 ga olasiz, shundan $1,000 ni hali yetkazib beruvchiga qarzsiz
+# Aktivlar (do'konda nima bor)
+  Javonlar $3,000 (uzoq muddatli: yillar xizmat qiladi)
+  Tovar $5,500 va pul $3,500 (aylanma: bir yil ichida ishlatiladi)
+  Jami: $3,000 + $5,500 + $3,500 = $12,000
+# Majburiyatlar (do'kon nima qarz)
+  Bank qarzi $3,000 (uzoq muddatli) + yetkazib beruvchiga $1,000 (qisqa muddatli) = $4,000
+# Kapital (sizga nima qoladi)
+  $12,000 - $4,000 = $8,000, aynan siz qo'ygan pul
+= Tekshiruv: aktivlar $12,000 = kapital $8,000 + majburiyatlar $4,000`,
+      },
+      simple: {
+        en: `There are five building blocks.
 
-Assets: shelves $3,000 (non-current), inventory $5,500 and cash $3,500 (current), total $12,000.
+- Asset: something the business controls that will bring it money, such as cash or a van.
+- Liability: something it owes, such as a loan.
+- Equity: what is left for the owner, assets minus liabilities.
+- Income makes equity bigger and expenses make it smaller.
 
-Liabilities: bank loan $3,000 (non-current), supplier $1,000 (current).
+Money the owner puts in or takes out is not income or an expense.`,
+        ru: `Есть пять основных элементов.
 
-Equity: Madina's capital $8,000.
+- Актив: то, что контролирует бизнес и что принесёт ему деньги, например деньги в кассе или фургон.
+- Обязательство: то, что бизнес должен, например заём.
+- Капитал: то, что остаётся владельцу, активы минус обязательства.
+- Доход увеличивает капитал, а расходы уменьшают его.
 
-Check: $12,000 assets = $8,000 equity + $4,000 liabilities.`,
-        ru: `В первый день Мадина вкладывает $8,000 собственных денег и берёт в банке $3,000 на два года. Она покупает полки за $3,000 и товар на $5,500, из которых $1,000 в кредит у поставщика.
+Деньги, которые владелец вносит или забирает, — не доход и не расход.`,
+        uz: `Beshta asosiy element bor.
 
-Активы: полки $3,000 (внеоборотные), товар $5,500 и деньги $3,500 (оборотные), всего $12,000.
+- Aktiv: biznes nazorat qiladigan va unga pul keltiradigan narsa, masalan pul yoki furgon.
+- Majburiyat: biznes qarz bo'lgan narsa, masalan qarz.
+- Kapital: egasiga qoladigan qism, aktivlar minus majburiyatlar.
+- Daromad kapitalni oshiradi, xarajatlar kamaytiradi.
 
-Обязательства: банковский кредит $3,000 (долгосрочное), поставщик $1,000 (краткосрочное).
-
-Капитал: капитал Мадины $8,000.
-
-Проверка: активы $12,000 = капитал $8,000 + обязательства $4,000.`,
-        uz: `Birinchi kuni Madina o'zining $8,000 pulini kiritadi va bankdan ikki yilga $3,000 oladi. U $3,000 ga javonlar va $5,500 ga tovar sotib oladi, shundan $1,000 yetkazib beruvchiga nasiya.
-
-Aktivlar: javonlar $3,000 (uzoq muddatli), tovar $5,500 va pul $3,500 (joriy), jami $12,000.
-
-Majburiyatlar: bank krediti $3,000 (uzoq muddatli), yetkazib beruvchi $1,000 (joriy).
-
-Kapital: Madinaning kapitali $8,000.
-
-Tekshirish: aktivlar $12,000 = kapital $8,000 + majburiyatlar $4,000.`,
+Egasi qo'ygan yoki olgan pul daromad ham, xarajat ham emas.`,
       },
     },
     {
@@ -565,9 +790,38 @@ IFRS 18 uchta oraliq yakunni talab qiladi: operatsion foyda, moliyalashtirish va
 Boshqa umumlashgan daromad amalga oshmagan foyda va zararlarni o'z ichiga oladi. FA dagi asosiy misol — yer va binolarni qayta baholash rezervi. Foyda va boshqa umumlashgan daromad birgalikda jami umumlashgan daromadni beradi. Ikkalasi ham moliyaviy holat hisobotiga va kapitaldagi o'zgarishlar hisobotiga o'tadi.`,
       },
       example: {
-        en: `In its first year Madina's Mart sells goods for $40,000 that cost $26,000, and pays $9,000 of expenses. Gross profit is $14,000 and profit for the year is $5,000. As a sole trader she adds that $5,000 to her capital account. She has no statement of changes in equity, because that statement is only for limited companies.`,
-        ru: `За первый год Madina's Mart продаёт товары на $40,000 при себестоимости $26,000 и платит $9,000 расходов. Валовая прибыль составляет $14,000, прибыль за год — $5,000. Как индивидуальный предприниматель, Мадина прибавляет эти $5,000 к счёту капитала. Отчёта об изменениях в капитале у неё нет: он только для компаний с ограниченной ответственностью.`,
-        uz: `Birinchi yilda Madina's Mart tannarxi $26,000 bo'lgan tovarlarni $40,000 ga sotadi va $9,000 xarajat qiladi. Yalpi foyda $14,000, yillik foyda $5,000. Yakka tartibdagi tadbirkor sifatida u shu $5,000 ni kapital hisobiga qo'shadi. Unda kapitaldagi o'zgarishlar hisoboti yo'q, chunki u faqat mas'uliyati cheklangan kompaniyalar uchun.`,
+        en: `In its first year a shop sells goods for $40,000 that cost it $26,000, and pays $9,000 of other expenses.
+# Statement of profit or loss (the whole year)
+  Sales $40,000 - cost of the goods sold $26,000 = gross profit $14,000
+  Gross profit $14,000 - other expenses $9,000 = profit for the year $5,000
+# Statement of financial position (the last day of the year)
+  The owner is a sole trader, so the $5,000 profit is added to the owner's capital
+= A sole trader has no statement of changes in equity. That statement is only for limited liability companies.`,
+        ru: `За первый год магазин продаёт товар на $40,000, который обошёлся ему в $26,000, и платит $9,000 прочих расходов.
+# Отчёт о прибыли или убытке (весь год)
+  Продажи $40,000 - себестоимость проданного $26,000 = валовая прибыль $14,000
+  Валовая прибыль $14,000 - прочие расходы $9,000 = прибыль за год $5,000
+# Отчёт о финансовом положении (последний день года)
+  Владелец — индивидуальный предприниматель, поэтому прибыль $5,000 прибавляется к его капиталу
+= У индивидуального предпринимателя нет отчёта об изменениях в капитале. Он только для компаний с ограниченной ответственностью.`,
+        uz: `Birinchi yili do'kon tannarxi $26,000 bo'lgan tovarni $40,000 ga sotadi va $9,000 boshqa xarajat to'laydi.
+# Foyda yoki zarar hisoboti (butun yil)
+  Sotuv $40,000 - sotilgan tovar tannarxi $26,000 = yalpi foyda $14,000
+  Yalpi foyda $14,000 - boshqa xarajatlar $9,000 = yil foydasi $5,000
+# Moliyaviy holat hisoboti (yilning oxirgi kuni)
+  Egasi yakka tadbirkor, shuning uchun $5,000 foyda egasining kapitaliga qo'shiladi
+= Yakka tadbirkorda kapitaldagi o'zgarishlar hisoboti yo'q. U faqat mas'uliyati cheklangan kompaniyalar uchun.`,
+      },
+      simple: {
+        en: `A full set of financial statements has five parts.
+
+The statement of financial position is a photo of one day: what you own and what you owe. The statement of profit or loss is a film of the year: what you earned and what you spent. Companies also prepare a statement of changes in equity and a statement of cash flows, and every set has notes that explain the numbers.`,
+        ru: `Полный комплект финансовой отчётности состоит из пяти частей.
+
+Отчёт о финансовом положении — это фото одного дня: что у вас есть и что вы должны. Отчёт о прибыли или убытке — это фильм за год: что вы заработали и что потратили. Компании также готовят отчёт об изменениях в капитале и отчёт о движении денежных средств, и в каждом комплекте есть примечания с пояснениями к цифрам.`,
+        uz: `To'liq moliyaviy hisobot besh qismdan iborat.
+
+Moliyaviy holat hisoboti — bir kunning surati: nima borligi va nima qarzligingiz. Foyda yoki zarar hisoboti — yil davomidagi film: nima topganingiz va nima sarflaganingiz. Kompaniyalar kapitaldagi o'zgarishlar hisoboti va pul oqimlari hisobotini ham tayyorlaydi, har bir to'plamda raqamlarni tushuntiruvchi izohlar bor.`,
       },
     },
     {
@@ -643,47 +897,416 @@ Boshqa umumlashgan daromad amalga oshmagan foyda va zararlarni o'z ichiga oladi.
 - Tarixiy va joriy qiymat: tarixiy qiymat (historical cost) operatsiya sanasidagi dastlabki summa. Joriy qiymat inflyatsiya, eskirish yoki texnologiya sababli ancha yuqori yoki past bo'lishi mumkin.`,
       },
       example: {
-        en: `Business entity: Madina pays her home electricity from the shop till. That is drawings, not a shop expense.
+        en: `Five everyday cases from one shop.
 
-Accruals: she sells goods to a local cafe in June and is paid in July, so the sale belongs in June.
+- Business entity: the owner pays their home electricity bill from the shop till. That is drawings, not a shop expense.
+- Accruals: you sell to a cafe in June and are paid in July. The sale belongs in June.
+- No offsetting: the cafe owes you $200 and you owe it $40. Show both, not a net $160.
+- Duality: you buy a laptop for the shop by card. The shop gains an asset and its bank balance falls.
+- Historical cost: shelves stay at the $3,000 you paid, even if new ones now cost $3,500.`,
+        ru: `Пять повседневных случаев из одного магазина.
 
-Offsetting: the cafe also sells the shop paper bags and she owes it $40, while it owes her $200. She shows both, not a net $160.
+- Обособленность бизнеса: владелец оплачивает домашнее электричество из кассы магазина. Это изъятие, а не расход магазина.
+- Начисление: вы продаёте кафе товар в июне, а деньги получаете в июле. Продажа относится к июню.
+- Без взаимозачёта: кафе должно вам $200, а вы ему $40. Показываем обе суммы, а не нетто $160.
+- Двойственность: вы покупаете ноутбук для магазина картой. У магазина появляется актив, а остаток в банке уменьшается.
+- Историческая стоимость: полки остаются по $3,000, которые вы заплатили, даже если новые теперь стоят $3,500.`,
+        uz: `Bitta do'kondan beshta kundalik holat.
 
-Duality: she buys a laptop for the shop by debit card, so the shop gains an asset and her bank balance falls.
+- Biznesning alohidaligi: egasi uyining elektr haqini do'kon kassasidan to'laydi. Bu olib qo'yish, do'kon xarajati emas.
+- Hisoblash: kafega iyunda sotasiz, pul iyulda keladi. Sotuv iyunga tegishli.
+- O'zaro hisob-kitobsiz: kafe sizga $200, siz unga $40 qarzsiz. Ikkalasini ko'rsatamiz, sof $160 ni emas.
+- Ikki yoqlamalik: do'kon uchun noutbukni karta bilan olasiz. Do'konda aktiv paydo bo'ladi, bankdagi qoldiq kamayadi.
+- Tarixiy qiymat: javonlar siz to'lagan $3,000 da qoladi, yangilari endi $3,500 tursa ham.`,
+      },
+      simple: {
+        en: `These are the basic rules every set of accounts follows.
 
-Historical cost: the shelves stay at the $3,000 she paid, even if similar shelves now cost more.`,
-        ru: `Обособленность: Мадина оплачивает домашнее электричество из кассы магазина. Это изъятие, а не расход магазина.
+- Going concern: assume the business will keep going.
+- Accruals: record income when you earn it and costs when you incur them, not when the money moves.
+- Business entity: keep the owner's private life out of the business accounts.
+- Consistency: do things the same way each time.
+- No offsetting: show what you owe and what you are owed separately.
+- Historical cost: record things at what you paid for them.`,
+        ru: `Это основные правила, которым следует любая отчётность.
 
-Начисление: она продаёт товар местному кафе в июне, а деньги получает в июле, поэтому продажа относится к июню.
+- Непрерывность деятельности: считаем, что бизнес продолжит работать.
+- Начисление: доход записываем, когда заработали, а расходы — когда понесли, а не когда двигаются деньги.
+- Обособленность бизнеса: личная жизнь владельца не попадает в учёт бизнеса.
+- Последовательность: всё делаем каждый раз одинаково.
+- Без взаимозачёта: что вы должны и что должны вам, показываем отдельно.
+- Историческая стоимость: записываем вещи по цене, которую заплатили.`,
+        uz: `Bu har qanday hisobot amal qiladigan asosiy qoidalar.
 
-Взаимозачёт: кафе также продаёт магазину бумажные пакеты, и она должна ему $40, а оно ей $200. Она показывает обе суммы, а не чистые $160.
-
-Двойственность: она покупает ноутбук для магазина по дебетовой карте, поэтому появляется актив и уменьшается остаток в банке.
-
-Первоначальная стоимость: полки остаются по уплаченным $3,000, даже если сейчас такие стоят дороже.`,
-        uz: `Alohidalik: Madina uyining elektr to'lovini do'kon kassasidan to'laydi. Bu do'kon xarajati emas, olib qo'yish.
-
-Hisoblash: u mahalliy kafega iyunda tovar sotadi, pulni iyulda oladi, demak sotuv iyunga tegishli.
-
-O'zaro hisobga olish: kafe do'konga qog'oz paketlar ham sotadi va u kafega $40 qarzdor, kafe esa unga $200 qarzdor. U sof $160 emas, ikkala summani ko'rsatadi.
-
-Ikki yoqlamalik: u do'kon uchun debet karta bilan noutbuk sotib oladi, shunda aktiv paydo bo'ladi va bankdagi qoldiq kamayadi.
-
-Tarixiy qiymat: javonlar u to'lagan $3,000 da qoladi, hatto hozir shunaqasi qimmatroq bo'lsa ham.`,
+- Uzluksizlik: biznes ishlashda davom etadi deb hisoblaymiz.
+- Hisoblash: daromadni topganda, xarajatni qilganda yozamiz, pul harakatlanganda emas.
+- Biznesning alohidaligi: egasining shaxsiy hayoti biznes hisobiga kirmaydi.
+- Izchillik: har safar bir xil usulda qilamiz.
+- O'zaro hisob-kitobsiz: siz qarz bo'lgan va sizga qarz bo'lganlarni alohida ko'rsatamiz.
+- Tarixiy qiymat: narsalarni to'langan narxda yozamiz.`,
       },
     },
   ],
   glossary: [
-    { term: { en: 'Stewardship', ru: 'Управление ресурсами (stewardship)', uz: 'Ishonchli boshqaruv (stewardship)' }, definition: { en: 'How well management has looked after the resources entrusted to it.', ru: 'Насколько хорошо руководство распорядилось доверенными ресурсами.', uz: 'Rahbariyat ishonib topshirilgan resurslarni qanchalik yaxshi boshqargani.' } },
-    { term: { en: 'Unlimited liability', ru: 'Неограниченная ответственность', uz: 'Cheklanmagan javobgarlik' }, definition: { en: 'The owner must meet business debts from personal assets if needed.', ru: 'Владелец при необходимости отвечает по долгам бизнеса личным имуществом.', uz: 'Egasi zarur bo\'lsa biznes qarzlarini shaxsiy mol-mulki bilan to\'laydi.' } },
-    { term: { en: 'Drawings', ru: 'Изъятия', uz: 'Olib qo\'yishlar' }, definition: { en: 'Cash or goods taken from the business by a sole trader or partner.', ru: 'Деньги или товары, взятые из бизнеса предпринимателем или партнёром.', uz: 'Tadbirkor yoki sherik biznesdan olgan pul yoki tovar.' } },
-    { term: { en: 'Incorporation', ru: 'Регистрация компании', uz: 'Kompaniya tuzish' }, definition: { en: 'The legal process that creates a company as a separate legal entity.', ru: 'Юридическая процедура создания компании как отдельного юридического лица.', uz: 'Kompaniyani alohida yuridik shaxs sifatida yaratuvchi huquqiy jarayon.' } },
-    { term: { en: 'Floating charge', ru: 'Плавающий залог', uz: 'Suzuvchi garov' }, definition: { en: 'Loan security over fluctuating assets that the company can keep using.', ru: 'Обеспечение кредита меняющимися активами, которые компания продолжает использовать.', uz: 'Kompaniya foydalanishda davom etadigan o\'zgaruvchan aktivlar bilan kredit ta\'minoti.' } },
-    { term: { en: 'Materiality', ru: 'Существенность', uz: 'Muhimlik' }, definition: { en: 'Information that could reasonably influence primary users\' decisions if omitted, misstated or obscured.', ru: 'Информация, пропуск, искажение или сокрытие которой может обоснованно повлиять на решения основных пользователей.', uz: 'Tushirib qoldirilsa, noto\'g\'ri ko\'rsatilsa yoki yashirilsa, asosiy foydalanuvchilar qaroriga asosli ta\'sir qilishi mumkin bo\'lgan axborot.' } },
-    { term: { en: 'Substance over form', ru: 'Приоритет содержания над формой', uz: 'Shakldan mazmunning ustunligi' }, definition: { en: 'Recording the economic reality of a transaction, not only its legal form.', ru: 'Отражение экономической реальности операции, а не только её юридической формы.', uz: 'Operatsiyaning faqat yuridik shaklini emas, iqtisodiy haqiqatini qayd etish.' } },
-    { term: { en: 'Going concern', ru: 'Непрерывность деятельности', uz: 'Uzluksizlik' }, definition: { en: 'The assumption that the entity will keep operating for the foreseeable future.', ru: 'Допущение, что предприятие будет работать в обозримом будущем.', uz: 'Korxona yaqin kelajakda ishlashda davom etadi degan faraz.' } },
-    { term: { en: 'Accrual accounting', ru: 'Метод начисления', uz: 'Hisoblash usuli' }, definition: { en: 'Recording revenue when earned and expenses when incurred, not when cash moves.', ru: 'Отражение выручки, когда она заработана, а расходов, когда они понесены, а не при движении денег.', uz: 'Daromadni topilganda, xarajatni qilinganda qayd etish, pul harakatlanganda emas.' } },
-    { term: { en: 'Other comprehensive income', ru: 'Прочий совокупный доход', uz: 'Boshqa umumlashgan daromad' }, definition: { en: 'Unrealised gains and losses, such as a revaluation surplus.', ru: 'Нереализованные прибыли и убытки, например резерв переоценки.', uz: 'Amalga oshmagan foyda va zararlar, masalan qayta baholash rezervi.' } },
+    {
+      term: { en: 'Financial accounting', ru: 'Финансовый учёт', uz: 'Moliyaviy hisob' },
+      definition: {
+        en: 'Recording and summarising transactions to produce annual financial statements for people outside the business.',
+        ru: 'Запись и обобщение операций для годовой финансовой отчётности для людей вне бизнеса.',
+        uz: 'Biznesdan tashqaridagilar uchun yillik moliyaviy hisobot tuzish maqsadida operatsiyalarni yozish va jamlash.',
+      },
+      example: {
+        en: 'Sending your bank a summary of the year\'s results once a year.',
+        ru: 'Раз в год отправить банку сводку результатов года.',
+        uz: 'Yiliga bir marta bankka yil natijalari xulosasini yuborish.',
+      },
+    },
+    {
+      term: { en: 'Management accounting', ru: 'Управленческий учёт', uz: 'Boshqaruv hisobi' },
+      definition: {
+        en: 'Detailed, frequent reports for the people who run the business, to help them plan and decide.',
+        ru: 'Подробные и частые отчёты для руководителей бизнеса, помогающие планировать и принимать решения.',
+        uz: 'Biznesni boshqaruvchilar uchun reja tuzish va qaror qabul qilishga yordam beradigan batafsil va tez-tez hisobotlar.',
+      },
+      example: {
+        en: 'Checking every Friday which products sold best, to decide what to reorder.',
+        ru: 'Каждую пятницу смотреть, какие товары продавались лучше, чтобы решить, что дозаказать.',
+        uz: 'Har juma qaysi tovar yaxshi sotilganini ko\'rib, nimani qayta buyurtma qilishni hal qilish.',
+      },
+    },
+    {
+      term: { en: 'Stewardship', ru: 'Управление ресурсами (stewardship)', uz: 'Ishonchli boshqaruv (stewardship)' },
+      definition: {
+        en: 'How well management has looked after the resources entrusted to it.',
+        ru: 'Насколько хорошо руководство распорядилось доверенными ресурсами.',
+        uz: 'Rahbariyat ishonib topshirilgan resurslarni qanchalik yaxshi boshqargani.',
+      },
+      example: {
+        en: 'Shareholders give directors $100,000 to run a company. The accounts show how well the directors looked after that money.',
+        ru: 'Акционеры дают директорам $100,000 на управление компанией. Отчётность показывает, насколько хорошо директора распорядились этими деньгами.',
+        uz: 'Aksiyadorlar direktorlarga kompaniyani boshqarish uchun $100,000 beradi. Hisobot direktorlar bu pulni qanchalik yaxshi asraganini ko\'rsatadi.',
+      },
+    },
+    {
+      term: { en: 'Sole trader', ru: 'Индивидуальный предприниматель', uz: 'Yakka tadbirkor' },
+      definition: {
+        en: 'A business owned by one person, who keeps all the profit and is personally liable for all its debts.',
+        ru: 'Бизнес одного владельца, который получает всю прибыль и лично отвечает по всем долгам.',
+        uz: 'Bitta odamga tegishli biznes, u butun foydani oladi va barcha qarzlar uchun shaxsan javob beradi.',
+      },
+      example: {
+        en: 'A hairdresser who runs her own salon alone.',
+        ru: 'Парикмахер, которая одна держит свой салон.',
+        uz: 'O\'z salonini yolg\'iz yurituvchi sartarosh.',
+      },
+    },
+    {
+      term: { en: 'Unlimited liability', ru: 'Неограниченная ответственность', uz: 'Cheklanmagan javobgarlik' },
+      definition: {
+        en: 'The owner must meet business debts from personal assets if needed.',
+        ru: 'Владелец при необходимости отвечает по долгам бизнеса личным имуществом.',
+        uz: 'Egasi zarur bo\'lsa biznes qarzlarini shaxsiy mol-mulki bilan to\'laydi.',
+      },
+      example: {
+        en: 'A sole trader\'s shop owes $5,000 it cannot pay, so the owner has to sell their own car to pay it.',
+        ru: 'Магазин индивидуального предпринимателя должен $5,000 и не может заплатить, поэтому владелец продаёт свою машину.',
+        uz: 'Yakka tadbirkor do\'koni $5,000 qarz va to\'lay olmaydi, shuning uchun egasi o\'z mashinasini sotib to\'laydi.',
+      },
+    },
+    {
+      term: { en: 'Drawings', ru: 'Изъятия', uz: 'Olib qo\'yishlar' },
+      definition: {
+        en: 'Cash or goods taken from the business by a sole trader or partner.',
+        ru: 'Деньги или товары, взятые из бизнеса предпринимателем или партнёром.',
+        uz: 'Tadbirkor yoki sherik biznesdan olgan pul yoki tovar.',
+      },
+      example: {
+        en: 'The owner takes $200 from the till to buy groceries for home.',
+        ru: 'Владелец берёт из кассы $200 на продукты для дома.',
+        uz: 'Egasi uy uchun oziq-ovqatga kassadan $200 oladi.',
+      },
+    },
+    {
+      term: { en: 'Partnership', ru: 'Товарищество', uz: 'Sheriklik' },
+      definition: {
+        en: 'A business owned by two or more people who share the profits and are each fully liable for its debts.',
+        ru: 'Бизнес двух или более владельцев, которые делят прибыль и каждый полностью отвечает по долгам.',
+        uz: 'Ikki yoki undan ko\'p odamga tegishli biznes, ular foydani bo\'lishadi va har biri qarzlar uchun to\'liq javob beradi.',
+      },
+      example: {
+        en: 'Two dentists who share one clinic and split its profit 50:50.',
+        ru: 'Два стоматолога, которые делят одну клинику и её прибыль пополам.',
+        uz: 'Bitta klinikani bo\'lishib, foydani teng taqsimlaydigan ikki stomatolog.',
+      },
+    },
+    {
+      term: {
+        en: 'Limited liability company',
+        ru: 'Компания с ограниченной ответственностью',
+        uz: 'Mas\'uliyati cheklangan kompaniya',
+      },
+      definition: {
+        en: 'A business that is a separate legal person, owned by shareholders who can lose only what they invested.',
+        ru: 'Бизнес, являющийся отдельным юридическим лицом; акционеры рискуют только вложенным.',
+        uz: 'Alohida yuridik shaxs bo\'lgan biznes; aksiyadorlar faqat qo\'yganini yo\'qotishi mumkin.',
+      },
+      example: {
+        en: 'You buy $1,000 of shares in a company that later fails. You lose the $1,000, but nobody can claim your house.',
+        ru: 'Вы купили акции компании на $1,000, а она прогорела. Вы теряете $1,000, но ваш дом никто не заберёт.',
+        uz: 'Kompaniyaning $1,000 lik aksiyasini oldingiz, keyin u kuydi. $1,000 ni yo\'qotasiz, lekin uyingizga hech kim da\'vo qila olmaydi.',
+      },
+    },
+    {
+      term: { en: 'Incorporation', ru: 'Регистрация компании', uz: 'Kompaniya tuzish' },
+      definition: {
+        en: 'The legal process that creates a company as a separate legal entity.',
+        ru: 'Юридическая процедура создания компании как отдельного юридического лица.',
+        uz: 'Kompaniyani alohida yuridik shaxs sifatida yaratuvchi huquqiy jarayon.',
+      },
+      example: {
+        en: 'Two friends register their shop as a company, so it becomes a legal person separate from them.',
+        ru: 'Два друга регистрируют свой магазин как компанию, и он становится юридическим лицом, отдельным от них.',
+        uz: 'Ikki do\'st do\'konini kompaniya sifatida ro\'yxatdan o\'tkazadi va u ulardan alohida yuridik shaxsga aylanadi.',
+      },
+    },
+    {
+      term: { en: 'Floating charge', ru: 'Плавающий залог', uz: 'Suzuvchi garov' },
+      definition: {
+        en: 'Loan security over fluctuating assets that the company can keep using.',
+        ru: 'Обеспечение кредита меняющимися активами, которые компания продолжает использовать.',
+        uz: 'Kompaniya foydalanishda davom etadigan o\'zgaruvchan aktivlar bilan kredit ta\'minoti.',
+      },
+      example: {
+        en: 'A bank lends $10,000 secured on the shop\'s stock. The shop can keep buying and selling that stock while the loan is unpaid.',
+        ru: 'Банк даёт $10,000 под залог товара магазина. Магазин продолжает покупать и продавать этот товар, пока заём не погашен.',
+        uz: 'Bank do\'kon tovari garovi ostida $10,000 qarz beradi. Qarz to\'lanmaguncha do\'kon bu tovarni sotib olish va sotishni davom ettiradi.',
+      },
+    },
+    {
+      term: { en: 'Conceptual Framework', ru: 'Концептуальная основа', uz: 'Kontseptual asos' },
+      definition: {
+        en: 'The IASB\'s set of basic ideas behind financial reporting. It guides new standards but is not a standard itself.',
+        ru: 'Набор основных идей IASB, лежащих в основе отчётности. Направляет новые стандарты, но сам стандартом не является.',
+        uz: 'IASB ning moliyaviy hisobot asosidagi g\'oyalar to\'plami. Yangi standartlarga yo\'l ko\'rsatadi, lekin o\'zi standart emas.',
+      },
+      example: {
+        en: 'No standard covers a new kind of deal, so the accountant uses the Framework\'s definition of an asset to decide.',
+        ru: 'Ни один стандарт не описывает новый вид сделки, поэтому бухгалтер решает по определению актива из Концептуальной основы.',
+        uz: 'Yangi turdagi bitimni hech bir standart qamramaydi, shuning uchun buxgalter Kontseptual asosdagi aktiv ta\'rifiga qarab hal qiladi.',
+      },
+    },
+    {
+      term: { en: 'Prudence', ru: 'Осмотрительность', uz: 'Ehtiyotkorlik' },
+      definition: {
+        en: 'Being careful when judging under uncertainty, so assets and income are not overstated, without deliberately understating anything.',
+        ru: 'Осторожность в суждениях при неопределённости, чтобы не завышать активы и доходы, но и не занижать ничего нарочно.',
+        uz: 'Noaniqlikda ehtiyot bo\'lish, aktiv va daromadni oshirib yubormaslik, lekin hech narsani ataylab kamaytirmaslik.',
+      },
+      example: {
+        en: 'Not counting on the full $300 from a customer who has stopped answering calls.',
+        ru: 'Не рассчитывать на все $300 от покупателя, который перестал отвечать на звонки.',
+        uz: 'Qo\'ng\'iroqlarga javob bermay qo\'ygan mijozdan to\'liq $300 ga umid qilmaslik.',
+      },
+    },
+    {
+      term: { en: 'Relevance', ru: 'Уместность', uz: 'Tegishlilik' },
+      definition: {
+        en: 'Information is relevant if it can change users\' decisions, by helping them predict or confirm.',
+        ru: 'Информация уместна, если может изменить решения пользователей, помогая прогнозировать или подтверждать.',
+        uz: 'Ma\'lumot foydalanuvchilar qarorini o\'zgartira olsa, bashorat yoki tasdiqlashga yordam bersa, tegishli hisoblanadi.',
+      },
+      example: {
+        en: 'This year\'s sales help an investor guess next year\'s sales.',
+        ru: 'Продажи этого года помогают инвестору предположить продажи следующего года.',
+        uz: 'Bu yilgi sotuv investorga kelasi yil sotuvini taxmin qilishga yordam beradi.',
+      },
+    },
+    {
+      term: { en: 'Materiality', ru: 'Существенность', uz: 'Muhimlik' },
+      definition: {
+        en: 'Information that could reasonably influence primary users\' decisions if omitted, misstated or obscured.',
+        ru: 'Информация, пропуск, искажение или сокрытие которой может обоснованно повлиять на решения основных пользователей.',
+        uz: 'Tushirib qoldirilsa, noto\'g\'ri ko\'rsatilsa yoki yashirilsa, asosiy foydalanuvchilar qaroriga asosli ta\'sir qilishi mumkin bo\'lgan axborot.',
+      },
+      example: {
+        en: 'A $2 mistake does not matter to anyone. Leaving out a $3,000 loan does.',
+        ru: 'Ошибка в $2 ни на что не влияет. А пропущенный заём в $3,000 — влияет.',
+        uz: '$2 xato hech narsaga ta\'sir qilmaydi. Tushirib qoldirilgan $3,000 qarz esa ta\'sir qiladi.',
+      },
+    },
+    {
+      term: { en: 'Faithful representation', ru: 'Правдивое представление', uz: 'Haqqoniy aks ettirish' },
+      definition: {
+        en: 'Information that shows what really happened: complete, neutral and free from material error.',
+        ru: 'Информация, показывающая, что произошло на самом деле: полная, нейтральная и без существенных ошибок.',
+        uz: 'Haqiqatda nima bo\'lganini ko\'rsatuvchi ma\'lumot: to\'liq, xolis va muhim xatolarsiz.',
+      },
+      example: {
+        en: 'Showing all three bank loans, not only the smallest one.',
+        ru: 'Показать все три банковских займа, а не только самый маленький.',
+        uz: 'Faqat eng kichigini emas, uchala bank qarzini ham ko\'rsatish.',
+      },
+    },
+    {
+      term: { en: 'Substance over form', ru: 'Приоритет содержания над формой', uz: 'Shakldan mazmunning ustunligi' },
+      definition: {
+        en: 'Recording the economic reality of a transaction, not only its legal form.',
+        ru: 'Отражение экономической реальности операции, а не только её юридической формы.',
+        uz: 'Operatsiyaning faqat yuridik shaklini emas, iqtisodiy haqiqatini qayd etish.',
+      },
+      example: {
+        en: 'Shares that the company must buy back for cash later are legally shares, but they are shown as a liability, because the money must be paid back.',
+        ru: 'Акции, которые компания обязана потом выкупить за деньги, юридически акции, но показываются как обязательство, ведь деньги придётся вернуть.',
+        uz: 'Kompaniya keyin pulga qaytarib sotib olishi shart bo\'lgan aksiyalar huquqan aksiya, lekin majburiyat sifatida ko\'rsatiladi, chunki pulni qaytarish kerak.',
+      },
+    },
+    {
+      term: { en: 'Asset', ru: 'Актив', uz: 'Aktiv' },
+      definition: {
+        en: 'A present economic resource controlled by the entity as a result of past events.',
+        ru: 'Существующий экономический ресурс, контролируемый организацией в результате прошлых событий.',
+        uz: 'O\'tgan voqealar natijasida korxona nazorat qiladigan mavjud iqtisodiy resurs.',
+      },
+      example: {
+        en: 'Cash in the bank, a delivery van, goods on the shelf, money a customer owes you.',
+        ru: 'Деньги в банке, фургон для доставки, товар на полке, долг покупателя перед вами.',
+        uz: 'Bankdagi pul, yetkazish furgoni, javondagi tovar, mijozning sizga qarzi.',
+      },
+    },
+    {
+      term: { en: 'Liability', ru: 'Обязательство', uz: 'Majburiyat' },
+      definition: {
+        en: 'A present obligation to transfer an economic resource as a result of past events.',
+        ru: 'Существующая обязанность передать экономический ресурс в результате прошлых событий.',
+        uz: 'O\'tgan voqealar natijasida iqtisodiy resursni berish bo\'yicha mavjud burch.',
+      },
+      example: {
+        en: 'A bank loan, or $1,000 you still owe a supplier for goods.',
+        ru: 'Банковский заём или $1,000, которые вы ещё должны поставщику за товар.',
+        uz: 'Bank qarzi yoki tovar uchun yetkazib beruvchiga hali qarz bo\'lgan $1,000.',
+      },
+    },
+    {
+      term: { en: 'Equity', ru: 'Капитал', uz: 'Kapital' },
+      definition: {
+        en: 'What is left for the owners: assets minus liabilities.',
+        ru: 'То, что остаётся владельцам: активы минус обязательства.',
+        uz: 'Egalarga qoladigan qism: aktivlar minus majburiyatlar.',
+      },
+      example: {
+        en: 'Assets $12,000 - liabilities $4,000 = equity $8,000.',
+        ru: 'Активы $12,000 - обязательства $4,000 = капитал $8,000.',
+        uz: 'Aktivlar $12,000 - majburiyatlar $4,000 = kapital $8,000.',
+      },
+    },
+    {
+      term: { en: 'Income', ru: 'Доход', uz: 'Daromad' },
+      definition: {
+        en: 'Increases in assets or decreases in liabilities that increase equity, other than money put in by the owners.',
+        ru: 'Увеличение активов или уменьшение обязательств, увеличивающее капитал, кроме вкладов владельцев.',
+        uz: 'Kapitalni oshiradigan aktivlar oshishi yoki majburiyatlar kamayishi, egalar qo\'ygan puldan tashqari.',
+      },
+      example: {
+        en: 'Selling a cake for $10 is income. The owner putting $1,000 into the business is not.',
+        ru: 'Продажа торта за $10 — доход. Взнос владельца $1,000 в бизнес — нет.',
+        uz: 'Tortni $10 ga sotish daromad. Egasining biznesga $1,000 qo\'yishi esa daromad emas.',
+      },
+    },
+    {
+      term: { en: 'Expense', ru: 'Расход', uz: 'Xarajat' },
+      definition: {
+        en: 'Decreases in assets or increases in liabilities that decrease equity, other than payments to the owners.',
+        ru: 'Уменьшение активов или увеличение обязательств, уменьшающее капитал, кроме выплат владельцам.',
+        uz: 'Kapitalni kamaytiradigan aktivlar kamayishi yoki majburiyatlar oshishi, egalarga to\'lovlardan tashqari.',
+      },
+      example: {
+        en: 'Paying $500 of rent is an expense. The owner taking $500 for themselves is drawings, not an expense.',
+        ru: 'Аренда $500 — расход. А $500, взятые владельцем себе, — изъятие, а не расход.',
+        uz: '$500 ijara to\'lash xarajat. Egasining o\'ziga $500 olishi esa olib qo\'yish, xarajat emas.',
+      },
+    },
+    {
+      term: { en: 'Other comprehensive income', ru: 'Прочий совокупный доход', uz: 'Boshqa umumlashgan daromad' },
+      definition: {
+        en: 'Unrealised gains and losses, such as a revaluation surplus.',
+        ru: 'Нереализованные прибыли и убытки, например резерв переоценки.',
+        uz: 'Amalga oshmagan foyda va zararlar, masalan qayta baholash rezervi.',
+      },
+      example: {
+        en: 'Land bought for $50,000 is revalued to $70,000. The $20,000 gain is other comprehensive income, not profit.',
+        ru: 'Земля, купленная за $50,000, переоценена до $70,000. Прирост $20,000 — прочий совокупный доход, а не прибыль.',
+        uz: '$50,000 ga olingan yer $70,000 ga qayta baholandi. $20,000 o\'sish — boshqa umumlashgan daromad, foyda emas.',
+      },
+    },
+    {
+      term: { en: 'Going concern', ru: 'Непрерывность деятельности', uz: 'Uzluksizlik' },
+      definition: {
+        en: 'The assumption that the entity will keep operating for the foreseeable future.',
+        ru: 'Допущение, что предприятие будет работать в обозримом будущем.',
+        uz: 'Korxona yaqin kelajakda ishlashda davom etadi degan faraz.',
+      },
+      example: {
+        en: 'A busy cafe expects to stay open next year, so its oven is shown at cost less depreciation, not at a quick-sale price.',
+        ru: 'Загруженное кафе рассчитывает работать и в следующем году, поэтому его печь показана по стоимости минус амортизация, а не по цене срочной продажи.',
+        uz: 'Gavjum kafe kelasi yil ham ishlashni kutadi, shuning uchun pechi tez sotish narxida emas, qiymat minus amortizatsiyada ko\'rsatiladi.',
+      },
+    },
+    {
+      term: {
+        en: 'Business entity concept',
+        ru: 'Принцип обособленности бизнеса',
+        uz: 'Biznesning alohidaligi tamoyili',
+      },
+      definition: {
+        en: 'The business is accounted for separately from its owner\'s private affairs.',
+        ru: 'Учёт бизнеса ведётся отдельно от личных дел владельца.',
+        uz: 'Biznes hisobi egasining shaxsiy ishlaridan alohida yuritiladi.',
+      },
+      example: {
+        en: 'The owner\'s family holiday is not a business expense, even if it was paid from the shop\'s bank account.',
+        ru: 'Семейный отпуск владельца — не расход бизнеса, даже если оплачен со счёта магазина.',
+        uz: 'Egasining oilaviy ta\'tili do\'kon hisobidan to\'langan bo\'lsa ham, biznes xarajati emas.',
+      },
+    },
+    {
+      term: { en: 'Accrual accounting', ru: 'Метод начисления', uz: 'Hisoblash usuli' },
+      definition: {
+        en: 'Recording revenue when earned and expenses when incurred, not when cash moves.',
+        ru: 'Отражение выручки, когда она заработана, а расходов, когда они понесены, а не при движении денег.',
+        uz: 'Daromadni topilganda, xarajatni qilinganda qayd etish, pul harakatlanganda emas.',
+      },
+      example: {
+        en: 'Electricity used in December but billed in January is a December expense.',
+        ru: 'Электричество, потраченное в декабре, но выставленное к оплате в январе, — расход декабря.',
+        uz: 'Dekabrda ishlatilgan, lekin yanvarda hisob yuborilgan elektr — dekabr xarajati.',
+      },
+    },
+    {
+      term: { en: 'Consistency', ru: 'Последовательность', uz: 'Izchillik' },
+      definition: {
+        en: 'Treating and presenting similar items in the same way within a period and from one period to the next.',
+        ru: 'Одинаковый учёт и представление похожих статей в течение периода и от периода к периоду.',
+        uz: 'O\'xshash moddalarni davr ichida va davrdan davrga bir xil hisobga olish va ko\'rsatish.',
+      },
+      example: {
+        en: 'Using the same depreciation method for vans every year.',
+        ru: 'Каждый год использовать один и тот же метод амортизации фургонов.',
+        uz: 'Har yili furgonlar uchun bir xil amortizatsiya usulini qo\'llash.',
+      },
+    },
+    {
+      term: { en: 'Historical cost', ru: 'Историческая стоимость', uz: 'Tarixiy qiymat' },
+      definition: {
+        en: 'The amount actually paid for an item on the day it was bought.',
+        ru: 'Сумма, фактически уплаченная за объект в день покупки.',
+        uz: 'Ob\'ekt uchun sotib olingan kuni haqiqatda to\'langan summa.',
+      },
+      example: {
+        en: 'Shelves bought for $3,000 stay at $3,000 in the records, even if they would cost $3,500 today.',
+        ru: 'Полки, купленные за $3,000, остаются в учёте по $3,000, даже если сегодня стоили бы $3,500.',
+        uz: '$3,000 ga olingan javonlar bugun $3,500 tursa ham, hisobda $3,000 da qoladi.',
+      },
+    },
   ],
 };
 

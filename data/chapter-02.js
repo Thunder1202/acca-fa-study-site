@@ -2,16 +2,28 @@
 
 const chapter02 = {
   id: 'chapter-02',
-  titles: {
-    en: 'The regulatory framework',
-    ru: 'Нормативная база',
-    uz: 'Tartibga solish tizimi',
-  },
+  titles: { en: 'The regulatory framework', ru: 'Нормативная база', uz: 'Tartibga solish tizimi' },
   objectives: [
-    { en: 'Explain the purpose of the financial reporting regulatory system', ru: 'Объяснить назначение системы регулирования финансовой отчётности', uz: 'Moliyaviy hisobotni tartibga solish tizimining maqsadini tushuntirish' },
-    { en: 'Explain the role of IFRS Accounting Standards', ru: 'Объяснить роль стандартов IFRS', uz: 'IFRS standartlarining rolini tushuntirish' },
-    { en: 'Explain what is meant by corporate governance', ru: 'Объяснить, что такое корпоративное управление', uz: 'Korporativ boshqaruv nimani anglatishini tushuntirish' },
-    { en: 'Describe the duties and responsibilities of company directors', ru: 'Описать обязанности и ответственность директоров компании', uz: 'Kompaniya direktorlarining burch va mas\'uliyatlarini tavsiflash' },
+    {
+      en: 'Explain the purpose of the financial reporting regulatory system',
+      ru: 'Объяснить назначение системы регулирования финансовой отчётности',
+      uz: 'Moliyaviy hisobotni tartibga solish tizimining maqsadini tushuntirish',
+    },
+    {
+      en: 'Explain the role of IFRS Accounting Standards',
+      ru: 'Объяснить роль стандартов IFRS',
+      uz: 'IFRS standartlarining rolini tushuntirish',
+    },
+    {
+      en: 'Explain what is meant by corporate governance',
+      ru: 'Объяснить, что такое корпоративное управление',
+      uz: 'Korporativ boshqaruv nimani anglatishini tushuntirish',
+    },
+    {
+      en: 'Describe the duties and responsibilities of company directors',
+      ru: 'Описать обязанности и ответственность директоров компании',
+      uz: 'Kompaniya direktorlarining burch va mas\'uliyatlarini tavsiflash',
+    },
   ],
   sections: [
     {
@@ -64,9 +76,35 @@ Buni faqat buxgalteriya standartlari bilan amalga oshirib bo'lmaydi. Huquqiy va 
 Odatiy milliy tizimga milliy hisobot standartlari, milliy qonunlar, bozor qoidalari va fond birjasi qoidalari kiradi. Masalan, Buyuk Britaniyada standartlarni Moliyaviy hisobot kengashi (Financial Reporting Council) chiqaradi, asosiy qonun Companies Act 2006, bozor regulyatori Financial Conduct Authority, London fond birjasi esa kotirovka qilinadigan kompaniyalar uchun qoidalar belgilaydi.`,
       },
       example: {
-        en: `Imagine Madina's Mart asks a new investor for money. Without rules, Madina could count unsold inventory as a sale and look far more profitable than a rival shop that counts only real sales. The investor could not trust or compare the two sets of numbers. Regulation gives everyone the same rulebook.`,
-        ru: `Представьте, что Madina's Mart просит денег у нового инвестора. Без правил Мадина могла бы считать непроданный товар продажей и выглядеть намного прибыльнее конкурента, который учитывает только реальные продажи. Инвестор не смог бы ни доверять этим цифрам, ни сравнивать их. Регулирование даёт всем одни правила.`,
-        uz: `Tasavvur qiling, Madina's Mart yangi investordan pul so'rayapti. Qoidalar bo'lmasa, Madina sotilmagan tovarni sotuv deb hisoblab, faqat haqiqiy sotuvlarni sanaydigan raqib do'kondan ancha foydali ko'rinishi mumkin edi. Investor bu raqamlarga ishona ham, solishtira ham olmasdi. Tartibga solish hammaga bir xil qoida beradi.`,
+        en: `Two shops each ask an investor for money.
+
+- Shop A counts a sale only when a customer actually buys something.
+- Shop B also counts goods still on its shelves as "sales", so it looks twice as profitable.
+
+The investor cannot trust or compare these numbers. Regulation makes both shops follow the same rulebook.`,
+        ru: `Два магазина просят деньги у инвестора.
+
+- Магазин A считает продажу, только когда покупатель действительно что-то купил.
+- Магазин B считает «продажами» и товар, который ещё на полках, и выглядит вдвое прибыльнее.
+
+Инвестор не может ни доверять этим цифрам, ни сравнивать их. Регулирование заставляет оба магазина играть по одним правилам.`,
+        uz: `Ikki do'kon investordan pul so'raydi.
+
+- A do'kon sotuvni faqat mijoz haqiqatan nimadir sotib olganda hisoblaydi.
+- B do'kon hali javonlardagi tovarni ham «sotuv» deb hisoblaydi va ikki baravar foydali ko'rinadi.
+
+Investor bu raqamlarga ishona ham, solishtira ham olmaydi. Tartibga solish ikkala do'konni bir xil qoidalarga bo'ysundiradi.`,
+      },
+      simple: {
+        en: `Without rules, every business could count its numbers however it liked, and nobody could trust or compare them.
+
+A regulatory framework is the set of rules that makes accounts trustworthy and comparable. It is made of accounting standards plus company law and stock market rules, because standards alone cannot force anyone to follow them.`,
+        ru: `Без правил каждый бизнес считал бы цифры как хочет, и никто не смог бы им доверять или сравнивать их.
+
+Нормативная база — набор правил, которые делают отчётность надёжной и сопоставимой. Это стандарты учёта плюс закон о компаниях и правила фондового рынка, потому что одни стандарты не могут никого заставить их соблюдать.`,
+        uz: `Qoidalar bo'lmasa, har bir biznes raqamlarini xohlagancha hisoblardi va hech kim ularga ishonmas yoki solishtira olmasdi.
+
+Tartibga solish tizimi — hisobotni ishonchli va taqqoslanadigan qiladigan qoidalar to'plami. Bu hisob standartlari, kompaniyalar to'g'risidagi qonun va fond bozori qoidalari, chunki standartlarning o'zi hech kimni ularga amal qilishga majbur qila olmaydi.`,
       },
     },
     {
@@ -107,9 +145,20 @@ IFRS standartlari hech bir mamlakatda avtomatik kuchga kirmaydi. Ularni xalqaro 
 Yevropa Ittifoqi ularni 2005-yilda barcha listingdagi kompaniyalar uchun qabul qilgan. Boshqa qabul qilgan mamlakatlar qatorida Argentina, Avstraliya, Braziliya, Kanada, Rossiya, Meksika, Saudiya Arabistoni va Janubiy Afrika bor. AQSh, Xitoy va Hindiston yaqinlashish (convergence) jarayonidan o'tmoqda, ya'ni milliy standartlarini asta-sekin IFRS ga moslashtirmoqda.`,
       },
       example: {
-        en: `A foreign investor considers two household goods chains, one in Tashkent and one in Istanbul. If both report under the same standards, the investor can compare their profits directly. If each uses its own local rules, one set of accounts must be rebuilt before the comparison means anything.`,
-        ru: `Иностранный инвестор рассматривает две сети товаров для дома: в Ташкенте и в Стамбуле. Если обе отчитываются по одним стандартам, прибыль можно сравнить напрямую. Если каждая использует свои местные правила, отчётность одной из них придётся пересобрать, прежде чем сравнение будет иметь смысл.`,
-        uz: `Xorijiy investor ikkita uy-ro'zg'or buyumlari tarmog'ini ko'rib chiqmoqda: biri Toshkentda, biri Istanbulda. Agar ikkalasi bir xil standartlar bo'yicha hisobot bersa, foydalarini to'g'ridan-to'g'ri solishtirish mumkin. Agar har biri o'z mahalliy qoidalaridan foydalansa, solishtirish ma'noli bo'lishi uchun bittasining hisobotini qayta tuzish kerak.`,
+        en: 'A foreign investor considers two household goods chains, one in Tashkent and one in Istanbul. If both report under the same standards, the investor can compare their profits directly. If each uses its own local rules, one set of accounts must be rebuilt before the comparison means anything.',
+        ru: 'Иностранный инвестор рассматривает две сети товаров для дома: в Ташкенте и в Стамбуле. Если обе отчитываются по одним стандартам, прибыль можно сравнить напрямую. Если каждая использует свои местные правила, отчётность одной из них придётся пересобрать, прежде чем сравнение будет иметь смысл.',
+        uz: 'Xorijiy investor ikkita uy-ro\'zg\'or buyumlari tarmog\'ini ko\'rib chiqmoqda: biri Toshkentda, biri Istanbulda. Agar ikkalasi bir xil standartlar bo\'yicha hisobot bersa, foydalarini to\'g\'ridan-to\'g\'ri solishtirish mumkin. Agar har biri o\'z mahalliy qoidalaridan foydalansa, solishtirish ma\'noli bo\'lishi uchun bittasining hisobotini qayta tuzish kerak.',
+      },
+      simple: {
+        en: `Harmonisation means countries using the same accounting rules, so an investor anywhere in the world can compare companies fairly.
+
+IFRS Accounting Standards are those shared rules. But they only apply in a country once that country decides to adopt them. Countries that are slowly changing their own rules to match IFRS are going through convergence.`,
+        ru: `Гармонизация — страны пользуются одинаковыми правилами учёта, и инвестор в любой точке мира может честно сравнивать компании.
+
+МСФО (IFRS Accounting Standards) и есть эти общие правила. Но в стране они действуют, только когда страна решает их принять. Страны, которые постепенно меняют свои правила под МСФО, проходят сближение (convergence).`,
+        uz: `Uyg'unlashtirish — mamlakatlar bir xil hisob qoidalaridan foydalanadi, shunda dunyoning istalgan joyidagi investor kompaniyalarni adolatli solishtira oladi.
+
+MSFO (IFRS Accounting Standards) — ana shu umumiy qoidalar. Lekin ular mamlakatda faqat u qabul qilishga qaror qilgandan keyin amal qiladi. O'z qoidalarini asta-sekin MSFOga moslayotgan mamlakatlar yaqinlashish (convergence) jarayonida.`,
       },
     },
     {
@@ -165,9 +214,32 @@ Exam tip: the Foundation supervises, the Board sets standards, IFRIC interprets 
 Imtihon maslahati: Fond nazorat qiladi, Kengash standart chiqaradi, IFRIC talqin qiladi, Maslahat kengashi maslahat beradi, ISSB barqarorlik bilan shug'ullanadi.`,
       },
       example: {
-        en: `Think of a school. The Foundation is the governing body that oversees and funds it. The Board writes the exam rules. IFRIC answers questions when teachers disagree about what a rule means. The Council is the group of parents and teachers giving advice. The ISSB is a new department that sets rules for a new subject.`,
-        ru: `Представьте школу. Фонд — это попечители, которые надзирают и финансируют. Совет пишет правила экзаменов. IFRIC отвечает, когда учителя расходятся в понимании правила. Консультативный совет — родители и учителя, дающие советы. ISSB — новое отделение, задающее правила нового предмета.`,
-        uz: `Maktabni tasavvur qiling. Fond — nazorat qiluvchi va moliyalashtiruvchi vasiylik kengashi. Kengash imtihon qoidalarini yozadi. IFRIC o'qituvchilar qoida ma'nosida kelisha olmaganda javob beradi. Maslahat kengashi — maslahat beruvchi ota-onalar va o'qituvchilar. ISSB — yangi fan qoidalarini belgilaydigan yangi bo'lim.`,
+        en: 'Think of a school. The Foundation is the governing body that oversees and funds it. The Board writes the exam rules. IFRIC answers questions when teachers disagree about what a rule means. The Council is the group of parents and teachers giving advice. The ISSB is a new department that sets rules for a new subject.',
+        ru: 'Представьте школу. Фонд — это попечители, которые надзирают и финансируют. Совет пишет правила экзаменов. IFRIC отвечает, когда учителя расходятся в понимании правила. Консультативный совет — родители и учителя, дающие советы. ISSB — новое отделение, задающее правила нового предмета.',
+        uz: 'Maktabni tasavvur qiling. Fond — nazorat qiluvchi va moliyalashtiruvchi vasiylik kengashi. Kengash imtihon qoidalarini yozadi. IFRIC o\'qituvchilar qoida ma\'nosida kelisha olmaganda javob beradi. Maslahat kengashi — maslahat beruvchi ota-onalar va o\'qituvchilar. ISSB — yangi fan qoidalarini belgilaydigan yangi bo\'lim.',
+      },
+      simple: {
+        en: `Five international bodies are involved, and each has one job.
+
+- IFRS Foundation: the boss in the background. It supervises and pays for everything.
+- IASB (the Board): writes the standards.
+- IFRS Interpretations Committee: explains how to use a standard when people disagree.
+- IFRS Advisory Council: gives advice.
+- ISSB: writes standards on sustainability reporting.`,
+        ru: `Участвуют пять международных органов, у каждого одна задача.
+
+- Фонд МСФО (IFRS Foundation): «начальник за кадром». Он надзирает и всё финансирует.
+- Совет (IASB): пишет стандарты.
+- Комитет по интерпретациям (IFRIC): объясняет, как применять стандарт, когда мнения расходятся.
+- Консультативный совет (Advisory Council): даёт советы.
+- ISSB: пишет стандарты отчётности об устойчивом развитии.`,
+        uz: `Beshta xalqaro tashkilot qatnashadi, har birining bitta vazifasi bor.
+
+- MSFO Fondi (IFRS Foundation): «parda ortidagi rahbar». U nazorat qiladi va hammasini moliyalashtiradi.
+- Kengash (IASB): standartlarni yozadi.
+- Talqin qo'mitasi (IFRIC): fikrlar turlicha bo'lganda standartni qanday qo'llashni tushuntiradi.
+- Maslahat kengashi (Advisory Council): maslahat beradi.
+- ISSB: barqaror rivojlanish hisoboti standartlarini yozadi.`,
       },
     },
     {
@@ -223,9 +295,20 @@ Darslikda aytilishicha, standart, standart loyihasi yoki IFRIC talqinini e'lon q
 Milliy standart belgilovchi organlar ham ishtirok etadi. Ularning ko'pchiligi vakillik qiladi, muhokama hujjatlari va loyihalarni o'z mamlakatlarida fikr uchun tarqatishi mumkin, yirik milliy organ esa odatda har bir loyihani boshqaradi.`,
       },
       example: {
-        en: `Picture retailers worldwide disagreeing over how to account for loyalty points. The Board takes up the subject and publishes a draft. Shops, accountants and auditors comment on it. Only after those comments are considered does the final rule appear, which is why a new standard rarely surprises anyone.`,
-        ru: `Представьте, что розничные сети по всему миру расходятся в учёте бонусных баллов. Совет берётся за тему и публикует проект. Магазины, бухгалтеры и аудиторы его комментируют. Только после рассмотрения комментариев выходит окончательное правило, поэтому новый стандарт редко кого-то удивляет.`,
-        uz: `Tasavvur qiling, butun dunyodagi chakana savdo tarmoqlari bonus ballarini hisobga olishda kelisha olmayapti. Kengash mavzuni oladi va loyihani e'lon qiladi. Do'konlar, buxgalterlar va auditorlar fikr bildiradi. Fikrlar ko'rib chiqilgandan keyingina yakuniy qoida chiqadi, shuning uchun yangi standart kamdan-kam hollarda kutilmagan bo'ladi.`,
+        en: 'Picture retailers worldwide disagreeing over how to account for loyalty points. The Board takes up the subject and publishes a draft. Shops, accountants and auditors comment on it. Only after those comments are considered does the final rule appear, which is why a new standard rarely surprises anyone.',
+        ru: 'Представьте, что розничные сети по всему миру расходятся в учёте бонусных баллов. Совет берётся за тему и публикует проект. Магазины, бухгалтеры и аудиторы его комментируют. Только после рассмотрения комментариев выходит окончательное правило, поэтому новый стандарт редко кого-то удивляет.',
+        uz: 'Tasavvur qiling, butun dunyodagi chakana savdo tarmoqlari bonus ballarini hisobga olishda kelisha olmayapti. Kengash mavzuni oladi va loyihani e\'lon qiladi. Do\'konlar, buxgalterlar va auditorlar fikr bildiradi. Fikrlar ko\'rib chiqilgandan keyingina yakuniy qoida chiqadi, shuning uchun yangi standart kamdan-kam hollarda kutilmagan bo\'ladi.',
+      },
+      simple: {
+        en: `A new standard is never a surprise, because everyone gets a say first.
+
+The Board picks a topic, publishes a draft called an exposure draft, listens to public comments, and only then publishes the final standard. It can also publish a discussion paper at any stage to start the conversation.`,
+        ru: `Новый стандарт никогда не бывает сюрпризом: сначала высказаться может каждый.
+
+Совет выбирает тему, публикует проект (exposure draft), выслушивает публичные комментарии и только потом выпускает окончательный стандарт. На любом этапе он может выпустить и дискуссионный документ (discussion paper), чтобы начать обсуждение.`,
+        uz: `Yangi standart hech qachon kutilmagan bo'lmaydi: avval hamma fikr bildira oladi.
+
+Kengash mavzu tanlaydi, loyiha (exposure draft) e'lon qiladi, ommaviy izohlarni tinglaydi va shundan keyingina yakuniy standartni chiqaradi. Istalgan bosqichda muhokamani boshlash uchun muhokama hujjati (discussion paper) ham chiqarishi mumkin.`,
       },
     },
     {
@@ -278,9 +361,35 @@ Ko'pchilik mamlakatlarda mustaqil, malakali tashqi auditor talab qilinadi. Audit
 Enron, Lehman Brothers, WorldCom, Parmalat va Wells Fargo mojarolari buzilgan hisobot aksiyadorlarni qanday chalg'itishi va moliyaviy hisobotga ishonchni yo'qotishini ko'rsatadi.`,
       },
       example: {
-        en: `Madina's Mart has grown into Madina's Mart LLC with ten shops. Madina now owns 40% of the shares, and investors own the rest. She hires Rustam as managing director, with a bonus tied to profit. Rustam now has a reason to make profit look higher. The investors cannot check every shop themselves, so an independent auditor reviews the accounts for them.`,
-        ru: `Madina's Mart вырос в Madina's Mart LLC с десятью магазинами. Мадине теперь принадлежит 40% акций, остальное — инвесторам. Она нанимает управляющего директора Рустама, чья премия зависит от прибыли. Теперь у Рустама есть причина показывать прибыль выше. Инвесторы не могут сами проверить каждый магазин, поэтому отчётность за них проверяет независимый аудитор.`,
-        uz: `Madina's Mart o'nta do'konli Madina's Mart LLC ga aylandi. Endi aksiyalarning 40% Madinaga, qolgani investorlarga tegishli. U Rustamni boshqaruvchi direktor qilib yollaydi, uning mukofoti foydaga bog'liq. Endi Rustamda foydani yuqoriroq ko'rsatish uchun sabab bor. Investorlar har bir do'konni o'zlari tekshira olmaydi, shuning uchun ular uchun hisobotni mustaqil auditor tekshiradi.`,
+        en: `A company with ten shops is owned by 50 shareholders. They hire a manager and promise a bonus of 10% of profit.
+
+- Profit is really $100,000, so the fair bonus is $10,000.
+- If the manager shows profit as $150,000, the bonus becomes $15,000.
+
+The shareholders cannot check every shop themselves, so an independent auditor checks the accounts for them.`,
+        ru: `Компанией с десятью магазинами владеют 50 акционеров. Они нанимают управляющего и обещают бонус 10% от прибыли.
+
+- Реальная прибыль $100,000, честный бонус $10,000.
+- Если управляющий покажет прибыль $150,000, бонус станет $15,000.
+
+Акционеры не могут сами проверить каждый магазин, поэтому за них отчётность проверяет независимый аудитор.`,
+        uz: `O'nta do'konli kompaniya 50 aksiyadorga tegishli. Ular boshqaruvchi yollab, foydaning 10% bonusini va'da qilishadi.
+
+- Haqiqiy foyda $100,000, adolatli bonus $10,000.
+- Boshqaruvchi foydani $150,000 deb ko'rsatsa, bonus $15,000 bo'ladi.
+
+Aksiyadorlar har bir do'konni o'zlari tekshira olmaydi, shuning uchun hisobotni ular uchun mustaqil auditor tekshiradi.`,
+      },
+      simple: {
+        en: `In a big company, the shareholders own it but hired directors run it. That is the separation of ownership and control.
+
+The risk is that directors look after themselves, for example by making profit look higher to earn a bigger bonus. Two things protect shareholders: good corporate governance, and an independent external auditor who gives an opinion on whether the accounts are true and fair.`,
+        ru: `В большой компании акционеры ею владеют, а нанятые директора управляют. Это разделение собственности и контроля.
+
+Риск в том, что директора заботятся о себе, например завышают прибыль ради большего бонуса. Акционеров защищают две вещи: хорошее корпоративное управление и независимый внешний аудитор, который даёт мнение, достоверна ли отчётность (true and fair).`,
+        uz: `Katta kompaniyada aksiyadorlar unga egalik qiladi, yollangan direktorlar esa boshqaradi. Bu egalik va nazoratning ajralishi.
+
+Xavf shundaki, direktorlar o'zini o'ylashi mumkin, masalan katta bonus uchun foydani oshirib ko'rsatish. Aksiyadorlarni ikki narsa himoya qiladi: yaxshi korporativ boshqaruv va hisobot haqqoniymi (true and fair), shu haqda fikr beradigan mustaqil tashqi auditor.`,
       },
     },
     {
@@ -360,9 +469,35 @@ Yaxshi korporativ boshqaruvning asosiy elementlari:
 Ko'rsatmalar hozirgi biznes amaliyotiga mos bo'lishi uchun muntazam qayta ko'rib chiqilishi kerak.`,
       },
       example: {
-        en: `Madina's Mart LLC appoints two non-executive directors who do not run the shops, and they oversee Rustam's work. The board reviews his pay against fair targets, adds a rule that two people must approve large payments, and holds a yearly meeting where shareholders can question management.`,
-        ru: `Madina's Mart LLC назначает двух неисполнительных директоров, которые не управляют магазинами и контролируют работу Рустама. Совет проверяет его вознаграждение по справедливым целям, вводит правило, что крупные платежи подтверждают два человека, и проводит ежегодное собрание, где акционеры могут задавать вопросы руководству.`,
-        uz: `Madina's Mart LLC do'konlarni boshqarmaydigan ikki noijrochi direktorni tayinlaydi, ular Rustam ishini nazorat qiladi. Kengash uning maoshini adolatli maqsadlar bo'yicha ko'rib chiqadi, yirik to'lovlarni ikki kishi tasdiqlashi qoidasini kiritadi va aksiyadorlar rahbariyatga savol bera oladigan yillik yig'ilish o'tkazadi.`,
+        en: `The ten-shop company tightens its governance.
+
+- It appoints two non-executive directors who do not run the shops, to watch the manager.
+- Any payment over $5,000 now needs two people to approve it.
+- The manager's bonus is checked against fair targets.
+- Once a year, shareholders can question the board at a meeting.`,
+        ru: `Компания с десятью магазинами усиливает управление.
+
+- Назначает двух неисполнительных директоров, которые не управляют магазинами, чтобы следить за управляющим.
+- Любой платёж больше $5,000 теперь утверждают два человека.
+- Бонус управляющего сверяется со справедливыми целями.
+- Раз в год акционеры могут задать вопросы совету на собрании.`,
+        uz: `O'nta do'konli kompaniya boshqaruvni kuchaytiradi.
+
+- Boshqaruvchini kuzatish uchun do'konlarni boshqarmaydigan ikki noijrochi direktor tayinlaydi.
+- $5,000 dan ortiq har qanday to'lovni endi ikki kishi tasdiqlaydi.
+- Boshqaruvchi bonusi adolatli maqsadlar bilan solishtiriladi.
+- Yiliga bir marta aksiyadorlar yig'ilishda kengashga savol bera oladi.`,
+      },
+      simple: {
+        en: `Corporate governance is "the system by which companies are directed and controlled". In plain words: the rules and habits that keep the people running a company honest and working for its owners.
+
+Typical parts: independent non-executive directors watching the managers, good internal controls, fair pay for directors, fair financial reporting and a good relationship with shareholders.`,
+        ru: `Корпоративное управление — «система, с помощью которой компании направляются и контролируются». Проще говоря: правила и привычки, которые держат управляющих компанией честными и работающими на владельцев.
+
+Обычные части: независимые неисполнительные директора, наблюдающие за менеджерами, хороший внутренний контроль, справедливое вознаграждение директоров, честная отчётность и хорошие отношения с акционерами.`,
+        uz: `Korporativ boshqaruv — «kompaniyalar yo'naltiriladigan va nazorat qilinadigan tizim». Oddiy qilib aytganda: kompaniyani boshqaruvchilarni halol va egalar uchun ishlashga majbur qiladigan qoidalar va odatlar.
+
+Odatiy qismlari: menejerlarni kuzatadigan mustaqil noijrochi direktorlar, yaxshi ichki nazorat, direktorlarga adolatli haq, halol hisobot va aksiyadorlar bilan yaxshi munosabat.`,
       },
     },
     {
@@ -456,21 +591,229 @@ Yondashuvlar mamlakatlarda farq qiladi. Buyuk Britaniya tamoyillarga asoslangan 
 AQSh qoidalarga asoslangan yondashuvni qo'llaydi. Sarbanes-Oxley qonuni boshqaruvni qonunga kiritadi, shuning uchun rioya qilish majburiy, buzish esa jinoiy javobgarlikka olib kelishi mumkin. U ishonchli ichki nazoratni, jarayonlar, xavflar va nazoratlarning aniq hujjatlashtirilishini hamda rahbariyat va auditor nazoratlarni baholaganiga dalilni talab qiladi.`,
       },
       example: {
-        en: `Rustam's brother owns a delivery company that bids for Madina's Mart's contract. Rustam must disclose this conflict and stay out of the decision. If the accounts contain an error, responsibility for preparing them stays with the directors, even though the auditor signed an opinion.`,
-        ru: `Брату Рустама принадлежит служба доставки, которая участвует в тендере на контракт Madina's Mart. Рустам должен раскрыть этот конфликт и не участвовать в решении. Если в отчётности есть ошибка, ответственность за её подготовку остаётся на директорах, даже если аудитор подписал заключение.`,
-        uz: `Rustamning akasiga Madina's Mart shartnomasi uchun tanlovda qatnashayotgan yetkazib berish kompaniyasi tegishli. Rustam bu to'qnashuvni oshkor qilishi va qarorda qatnashmasligi kerak. Agar hisobotda xato bo'lsa, auditor o'z fikriga imzo qo'ygan bo'lsa ham, uni tayyorlash uchun javobgarlik direktorlarda qoladi.`,
+        en: `A director's brother owns a delivery firm that wants the company's $20,000 delivery contract.
+
+- The director must tell the board about this conflict straight away.
+- The director should stay out of the decision.
+
+Later an error is found in the accounts. The board is still responsible, even though the auditor signed an opinion.`,
+        ru: `Брат директора владеет службой доставки, которая хочет получить контракт компании на $20,000.
+
+- Директор должен сразу сообщить совету об этом конфликте.
+- Директору следует не участвовать в решении.
+
+Позже в отчётности находят ошибку. Ответственность всё равно на совете, хотя аудитор подписал мнение.`,
+        uz: `Direktorning akasi kompaniyaning $20,000 lik yetkazib berish shartnomasini olmoqchi bo'lgan firma egasi.
+
+- Direktor bu to'qnashuv haqida darhol kengashga aytishi kerak.
+- Direktor qarorda qatnashmasligi kerak.
+
+Keyinroq hisobotda xato topiladi. Auditor fikrga imzo chekkan bo'lsa ham, javobgarlik baribir kengashda.`,
+      },
+      simple: {
+        en: `Directors must act honestly for the company and tell the board about any conflict of interest.
+
+The whole board together is responsible for good controls, proper records and preparing the financial statements. The auditor only checks them and gives an opinion. The UK lets listed companies "comply or explain" with its code, while the US puts the rules into law (Sarbanes-Oxley).`,
+        ru: `Директора обязаны честно действовать в интересах компании и сообщать совету о любом конфликте интересов.
+
+Весь совет вместе отвечает за хороший контроль, правильные записи и подготовку финансовой отчётности. Аудитор лишь проверяет её и даёт мнение. Великобритания позволяет компаниям «соблюдать или объяснять» свой кодекс, а США закрепили правила в законе (Sarbanes-Oxley).`,
+        uz: `Direktorlar kompaniya manfaati uchun halol harakat qilishi va kengashga har qanday manfaatlar to'qnashuvi haqida aytishi shart.
+
+Butun kengash birgalikda yaxshi nazorat, to'g'ri yozuvlar va moliyaviy hisobotni tayyorlash uchun javobgar. Auditor uni faqat tekshiradi va fikr beradi. Buyuk Britaniya kompaniyalarga kodeksga «bajar yoki tushuntir» imkonini beradi, AQSh esa qoidalarni qonunga kiritgan (Sarbanes-Oxley).`,
       },
     },
   ],
   glossary: [
-    { term: { en: 'Harmonisation', ru: 'Гармонизация', uz: 'Uyg\'unlashtirish' }, definition: { en: 'Moving countries towards consistent, comparable financial reporting.', ru: 'Приближение стран к последовательной и сопоставимой отчётности.', uz: 'Mamlakatlarni izchil va taqqoslanadigan hisobotga yaqinlashtirish.' } },
-    { term: { en: 'Convergence', ru: 'Сближение', uz: 'Yaqinlashish' }, definition: { en: 'Updating national standards over time to become consistent with IFRS Accounting Standards.', ru: 'Постепенное приведение национальных стандартов в соответствие с IFRS.', uz: 'Milliy standartlarni asta-sekin IFRS ga moslashtirish.' } },
-    { term: { en: 'Exposure draft', ru: 'Проект стандарта', uz: 'Standart loyihasi' }, definition: { en: 'A draft version of a standard published for public comment.', ru: 'Черновик стандарта, опубликованный для общественного обсуждения.', uz: 'Jamoatchilik muhokamasi uchun e\'lon qilingan standart qoralamasi.' } },
-    { term: { en: 'Separation of ownership and control', ru: 'Разделение собственности и контроля', uz: 'Egalik va nazoratning ajralishi' }, definition: { en: 'Shareholders own the company while directors run it.', ru: 'Акционеры владеют компанией, а директора управляют ею.', uz: 'Aksiyadorlar kompaniyaga egalik qiladi, direktorlar esa uni boshqaradi.' } },
-    { term: { en: 'External audit', ru: 'Внешний аудит', uz: 'Tashqi audit' }, definition: { en: 'An independent examination giving an opinion on whether statements are true and fair.', ru: 'Независимая проверка с мнением о достоверности отчётности.', uz: 'Hisobot haqqoniy va adolatli ekanligi haqida fikr beruvchi mustaqil tekshiruv.' } },
-    { term: { en: 'Corporate governance', ru: 'Корпоративное управление', uz: 'Korporativ boshqaruv' }, definition: { en: 'The system by which companies are directed and controlled.', ru: 'Система, с помощью которой компании направляются и контролируются.', uz: 'Kompaniyalar yo\'naltiriladigan va nazorat qilinadigan tizim.' } },
-    { term: { en: 'Non-executive director', ru: 'Неисполнительный директор', uz: 'Noijrochi direktor' }, definition: { en: 'A board member who oversees management but does not run the business day to day.', ru: 'Член совета, который контролирует руководство, но не управляет бизнесом ежедневно.', uz: 'Rahbariyatni nazorat qiladigan, lekin biznesni kundalik boshqarmaydigan kengash a\'zosi.' } },
-    { term: { en: 'Comply or explain', ru: 'Соблюдай или объясняй', uz: 'Bajar yoki tushuntir' }, definition: { en: 'The UK approach: follow the Code or explain any departure.', ru: 'Подход Великобритании: следовать Кодексу или объяснять отклонения.', uz: 'Buyuk Britaniya yondashuvi: Kodeksga amal qilish yoki og\'ishni tushuntirish.' } },
+    {
+      term: { en: 'Harmonisation', ru: 'Гармонизация', uz: 'Uyg\'unlashtirish' },
+      definition: {
+        en: 'Moving countries towards consistent, comparable financial reporting.',
+        ru: 'Приближение стран к последовательной и сопоставимой отчётности.',
+        uz: 'Mamlakatlarni izchil va taqqoslanadigan hisobotga yaqinlashtirish.',
+      },
+      example: {
+        en: 'Investors can compare a Tashkent company with an Istanbul one because both use the same standards.',
+        ru: 'Инвестор может сравнить ташкентскую компанию со стамбульской, потому что обе применяют одни стандарты.',
+        uz: 'Investor Toshkent va Istanbul kompaniyalarini solishtira oladi, chunki ikkalasi bir xil standartlardan foydalanadi.',
+      },
+    },
+    {
+      term: { en: 'Convergence', ru: 'Сближение', uz: 'Yaqinlashish' },
+      definition: {
+        en: 'Updating national standards over time to become consistent with IFRS Accounting Standards.',
+        ru: 'Постепенное приведение национальных стандартов в соответствие с IFRS.',
+        uz: 'Milliy standartlarni asta-sekin IFRS ga moslashtirish.',
+      },
+      example: {
+        en: 'A country changes one national rule each year until its rules match IFRS.',
+        ru: 'Страна каждый год меняет одно национальное правило, пока её правила не совпадут с МСФО.',
+        uz: 'Mamlakat har yili bitta milliy qoidani o\'zgartirib, oxiri MSFOga moslashadi.',
+      },
+    },
+    {
+      term: { en: 'IFRS Accounting Standards', ru: 'МСФО', uz: 'MSFO' },
+      definition: {
+        en: 'The international accounting rules set by the IASB, used by many countries for company accounts.',
+        ru: 'Международные правила учёта, которые устанавливает IASB и применяют многие страны.',
+        uz: 'IASB belgilaydigan va ko\'p mamlakatlar qo\'llaydigan xalqaro hisob qoidalari.',
+      },
+      example: {
+        en: 'All listed companies in the EU have prepared accounts under IFRS since 2005.',
+        ru: 'Все листинговые компании ЕС с 2005 года готовят отчётность по МСФО.',
+        uz: 'YeI dagi barcha listing kompaniyalari 2005 yildan beri MSFO bo\'yicha hisobot tayyorlaydi.',
+      },
+    },
+    {
+      term: { en: 'IFRS Foundation', ru: 'Фонд МСФО', uz: 'MSFO Fondi' },
+      definition: {
+        en: 'The supervisory body that governs and funds the standard-setting boards.',
+        ru: 'Надзорный орган, который управляет советами по стандартам и финансирует их.',
+        uz: 'Standart belgilovchi kengashlarni boshqaradigan va moliyalashtiradigan nazorat organi.',
+      },
+      example: {
+        en: 'Like a school\'s governing body: it does not write the exams, it oversees and pays for those who do.',
+        ru: 'Как попечительский совет школы: экзамены не пишет, но надзирает и платит тем, кто пишет.',
+        uz: 'Maktab vasiylik kengashi kabi: imtihon yozmaydi, lekin yozuvchilarni nazorat qiladi va ularga pul to\'laydi.',
+      },
+    },
+    {
+      term: {
+        en: 'International Accounting Standards Board (IASB)',
+        ru: 'Совет по МСФО (IASB)',
+        uz: 'MSFO Kengashi (IASB)',
+      },
+      definition: {
+        en: 'The independent board that writes and publishes IFRS Accounting Standards.',
+        ru: 'Независимый совет, который пишет и публикует МСФО.',
+        uz: 'MSFOni yozadigan va e\'lon qiladigan mustaqil kengash.',
+      },
+      example: {
+        en: 'The IASB published IFRS 18, the new standard on presenting financial statements.',
+        ru: 'IASB выпустил IFRS 18 — новый стандарт о представлении отчётности.',
+        uz: 'IASB moliyaviy hisobotni taqdim etish bo\'yicha yangi IFRS 18 standartini chiqardi.',
+      },
+    },
+    {
+      term: { en: 'IFRS Interpretations Committee', ru: 'Комитет по интерпретациям МСФО', uz: 'MSFO Talqin qo\'mitasi' },
+      definition: {
+        en: 'The committee that gives guidance when a standard is being applied in different ways.',
+        ru: 'Комитет, который даёт разъяснения, когда стандарт применяют по-разному.',
+        uz: 'Standart turlicha qo\'llanganda tushuntirish beradigan qo\'mita.',
+      },
+      example: {
+        en: 'Companies disagree on how to record a new type of fee, so the Committee issues an interpretation.',
+        ru: 'Компании спорят, как учитывать новый вид платы, и Комитет выпускает интерпретацию.',
+        uz: 'Kompaniyalar yangi turdagi to\'lovni qanday hisobga olishda kelisha olmaydi, Qo\'mita talqin chiqaradi.',
+      },
+    },
+    {
+      term: { en: 'IFRS Advisory Council', ru: 'Консультативный совет МСФО', uz: 'MSFO Maslahat kengashi' },
+      definition: {
+        en: 'The formal advisory body that gives the Board and the Foundation advice on priorities and projects.',
+        ru: 'Официальный консультативный орган, который советует Совету и Фонду по приоритетам и проектам.',
+        uz: 'Kengash va Fondga ustuvorliklar va loyihalar bo\'yicha maslahat beradigan rasmiy organ.',
+      },
+      example: {
+        en: 'It tells the Board that small businesses most need a simpler rule on leases.',
+        ru: 'Он сообщает Совету, что малому бизнесу больше всего нужно упрощённое правило по аренде.',
+        uz: 'U Kengashga kichik bizneslarga ijara bo\'yicha soddaroq qoida eng kerakligini aytadi.',
+      },
+    },
+    {
+      term: { en: 'Exposure draft', ru: 'Проект стандарта', uz: 'Standart loyihasi' },
+      definition: {
+        en: 'A draft version of a standard published for public comment.',
+        ru: 'Черновик стандарта, опубликованный для общественного обсуждения.',
+        uz: 'Jamoatchilik muhokamasi uchun e\'lon qilingan standart qoralamasi.',
+      },
+      example: {
+        en: 'A draft rule on loyalty points is published so shops and accountants can comment before it is final.',
+        ru: 'Проект правила о бонусных баллах публикуют, чтобы магазины и бухгалтеры прокомментировали его до утверждения.',
+        uz: 'Bonus ballar haqidagi qoida loyihasi e\'lon qilinadi, shunda do\'konlar va buxgalterlar tasdiqlanishidan oldin izoh beradi.',
+      },
+    },
+    {
+      term: { en: 'Discussion paper', ru: 'Дискуссионный документ', uz: 'Muhokama hujjati' },
+      definition: {
+        en: 'An early paper the Board may publish at any stage to collect views on a topic.',
+        ru: 'Ранний документ, который Совет может выпустить на любом этапе, чтобы собрать мнения.',
+        uz: 'Kengash fikr yig\'ish uchun istalgan bosqichda chiqarishi mumkin bo\'lgan dastlabki hujjat.',
+      },
+      example: {
+        en: '"Should loyalty points be treated as a liability? Tell us what you think."',
+        ru: '«Считать ли бонусные баллы обязательством? Расскажите, что вы думаете.»',
+        uz: '«Bonus ballar majburiyat hisoblanadimi? Fikringizni ayting.»',
+      },
+    },
+    {
+      term: {
+        en: 'Separation of ownership and control',
+        ru: 'Разделение собственности и контроля',
+        uz: 'Egalik va nazoratning ajralishi',
+      },
+      definition: {
+        en: 'Shareholders own the company while directors run it.',
+        ru: 'Акционеры владеют компанией, а директора управляют ею.',
+        uz: 'Aksiyadorlar kompaniyaga egalik qiladi, direktorlar esa uni boshqaradi.',
+      },
+      example: {
+        en: '50 shareholders own a company, but a hired manager runs it day to day.',
+        ru: 'Компанией владеют 50 акционеров, а каждый день ею управляет нанятый менеджер.',
+        uz: 'Kompaniya 50 aksiyadorga tegishli, lekin uni har kuni yollangan menejer boshqaradi.',
+      },
+    },
+    {
+      term: { en: 'External audit', ru: 'Внешний аудит', uz: 'Tashqi audit' },
+      definition: {
+        en: 'An independent examination giving an opinion on whether statements are true and fair.',
+        ru: 'Независимая проверка с мнением о достоверности отчётности.',
+        uz: 'Hisobot haqqoniy va adolatli ekanligi haqida fikr beruvchi mustaqil tekshiruv.',
+      },
+      example: {
+        en: 'An independent firm checks a company\'s accounts and says whether they give a true and fair view.',
+        ru: 'Независимая фирма проверяет отчётность компании и сообщает, достоверна ли она.',
+        uz: 'Mustaqil firma kompaniya hisobotini tekshirib, u haqqoniymi yoki yo\'qmi, aytadi.',
+      },
+    },
+    {
+      term: { en: 'Corporate governance', ru: 'Корпоративное управление', uz: 'Korporativ boshqaruv' },
+      definition: {
+        en: 'The system by which companies are directed and controlled.',
+        ru: 'Система, с помощью которой компании направляются и контролируются.',
+        uz: 'Kompaniyalar yo\'naltiriladigan va nazorat qilinadigan tizim.',
+      },
+      example: {
+        en: 'Requiring two people to approve any payment over $5,000.',
+        ru: 'Правило, что любой платёж больше $5,000 утверждают два человека.',
+        uz: '$5,000 dan ortiq har qanday to\'lovni ikki kishi tasdiqlashi qoidasi.',
+      },
+    },
+    {
+      term: { en: 'Non-executive director', ru: 'Неисполнительный директор', uz: 'Noijrochi direktor' },
+      definition: {
+        en: 'A board member who oversees management but does not run the business day to day.',
+        ru: 'Член совета, который контролирует руководство, но не управляет бизнесом ежедневно.',
+        uz: 'Rahbariyatni nazorat qiladigan, lekin biznesni kundalik boshqarmaydigan kengash a\'zosi.',
+      },
+      example: {
+        en: 'A retired banker who sits on the board to watch the managers but does not run any shop.',
+        ru: 'Банкир на пенсии, который входит в совет, чтобы следить за менеджерами, но не управляет магазинами.',
+        uz: 'Kengashda menejerlarni kuzatib turadigan, lekin do\'kon boshqarmaydigan nafaqadagi bankir.',
+      },
+    },
+    {
+      term: { en: 'Comply or explain', ru: 'Соблюдай или объясняй', uz: 'Bajar yoki tushuntir' },
+      definition: {
+        en: 'The UK approach: follow the Code or explain any departure.',
+        ru: 'Подход Великобритании: следовать Кодексу или объяснять отклонения.',
+        uz: 'Buyuk Britaniya yondashuvi: Kodeksga amal qilish yoki og\'ishni tushuntirish.',
+      },
+      example: {
+        en: 'A UK listed company that does not have an independent chair explains why in its annual report.',
+        ru: 'Британская листинговая компания без независимого председателя объясняет причину в годовом отчёте.',
+        uz: 'Mustaqil raisi yo\'q Britaniya listing kompaniyasi sababini yillik hisobotida tushuntiradi.',
+      },
+    },
   ],
 };
 

@@ -8,11 +8,31 @@ const chapter04 = {
     uz: 'Operatsiya va voqealarni qayd etish',
   },
   objectives: [
-    { en: 'Record cash and credit transactions', ru: 'Отражать операции за наличные и в кредит', uz: 'Naqd va nasiya operatsiyalarini qayd etish' },
-    { en: 'Record petty cash under the imprest system', ru: 'Отражать мелкую кассу по системе имприст', uz: 'Kichik kassani imprest tizimida qayd etish' },
-    { en: 'Record sales, purchases and returns', ru: 'Отражать продажи, закупки и возвраты', uz: 'Sotuv, xarid va qaytarishlarni qayd etish' },
-    { en: 'Calculate and record sales tax', ru: 'Рассчитывать и отражать налог с продаж', uz: 'Sotuv solig\'ini hisoblash va qayd etish' },
-    { en: 'Record trade and settlement discounts', ru: 'Отражать торговые скидки и скидки за раннюю оплату', uz: 'Savdo va muddatidan oldingi to\'lov chegirmalarini qayd etish' },
+    {
+      en: 'Record cash and credit transactions',
+      ru: 'Отражать операции за наличные и в кредит',
+      uz: 'Naqd va nasiya operatsiyalarini qayd etish',
+    },
+    {
+      en: 'Record petty cash under the imprest system',
+      ru: 'Отражать мелкую кассу по системе имприст',
+      uz: 'Kichik kassani imprest tizimida qayd etish',
+    },
+    {
+      en: 'Record sales, purchases and returns',
+      ru: 'Отражать продажи, закупки и возвраты',
+      uz: 'Sotuv, xarid va qaytarishlarni qayd etish',
+    },
+    {
+      en: 'Calculate and record sales tax',
+      ru: 'Рассчитывать и отражать налог с продаж',
+      uz: 'Sotuv solig\'ini hisoblash va qayd etish',
+    },
+    {
+      en: 'Record trade and settlement discounts',
+      ru: 'Отражать торговые скидки и скидки за раннюю оплату',
+      uz: 'Savdo va muddatidan oldingi to\'lov chegirmalarini qayd etish',
+    },
   ],
   sections: [
     {
@@ -85,9 +105,50 @@ Kunlik bank hisoboti har bir tushum va to'lovni sanab beradi. Biznes har bir qat
 Mijoz va yetkazib beruvchilar qatorlarida shaxsiy hisob kodi ham bor, shunda har birining yordamchi hisobi bosh kitob bilan birga yangilanadi.`,
       },
       example: {
-        en: `Monday's bank report for Madina's Mart shows $700 paid to a supplier, $400 of wages and $900 of rent. She posts Dr Payables $700, Dr Wages $400, Dr Rent $900 and Cr Cash at bank $2,000, and enters the $700 on that supplier's own account. The same day a cafe pays $350 and $600 of card takings arrive. She posts Dr Cash at bank $950, Cr Receivables $350, Cr Sales $600.`,
-        ru: `Банковский отчёт Madina's Mart за понедельник показывает $700 поставщику, $400 зарплаты и $900 аренды. Она проводит Дт Кредиторы $700, Дт Зарплата $400, Дт Аренда $900 и Кт Банк $2,000 и записывает $700 на счёт этого поставщика. В тот же день кафе платит $350 и приходят $600 выручки по картам. Она проводит Дт Банк $950, Кт Дебиторы $350, Кт Продажи $600.`,
-        uz: `Madina's Mart dushanba bank hisobotida yetkazib beruvchiga $700, ish haqi $400 va ijara $900 ko'rsatilgan. U Dt Kreditorlar $700, Dt Ish haqi $400, Dt Ijara $900 va Kt Bank $2,000 yozadi va $700 ni shu yetkazib beruvchi hisobiga kiritadi. Shu kuni kafe $350 to'laydi va kartadan $600 tushum keladi. U Dt Bank $950, Kt Debitorlar $350, Kt Sotuv $600 yozadi.`,
+        en: `One day's bank report for a small shop.
+# Money out: $2,000
+  Paid a supplier $700: Dr Payables $700
+  Paid wages $400: Dr Wages $400
+  Paid rent $900: Dr Rent $900
+  One total credit: Cr Cash at bank $2,000
+# Money in: $950
+  A credit customer paid $350: Cr Receivables $350
+  Card takings for today's sales $600: Cr Sales $600
+  One total debit: Dr Cash at bank $950
+= The $700 is also entered on that supplier's own account, and the $350 on that customer's.`,
+        ru: `Банковский отчёт небольшого магазина за один день.
+# Деньги ушли: $2,000
+  Оплата поставщику $700: Дт Кредиторы $700
+  Зарплата $400: Дт Зарплата $400
+  Аренда $900: Дт Аренда $900
+  Один общий кредит: Кт Деньги в банке $2,000
+# Деньги пришли: $950
+  Покупатель в кредит заплатил $350: Кт Дебиторы $350
+  Оплата картами за сегодняшние продажи $600: Кт Продажи $600
+  Один общий дебет: Дт Деньги в банке $950
+= $700 также записывают на личный счёт этого поставщика, а $350 — на счёт покупателя.`,
+        uz: `Kichik do'konning bir kunlik bank hisoboti.
+# Pul chiqdi: $2,000
+  Yetkazib beruvchiga $700: Dt Kreditorlar $700
+  Ish haqi $400: Dt Ish haqi $400
+  Ijara $900: Dt Ijara $900
+  Bitta umumiy kredit: Kt Bankdagi pul $2,000
+# Pul kirdi: $950
+  Nasiya mijoz $350 to'ladi: Kt Debitorlar $350
+  Bugungi sotuv uchun karta to'lovlari $600: Kt Sotuv $600
+  Bitta umumiy debet: Dt Bankdagi pul $950
+= $700 o'sha yetkazib beruvchining shaxsiy hisobiga, $350 esa mijoz hisobiga ham yoziladi.`,
+      },
+      simple: {
+        en: `A cash transaction is paid straight away (cash, card or instant transfer). A credit transaction is "buy now, pay later": what customers owe you is a receivable, what you owe suppliers is a payable.
+
+For the bank account, remember: money IN is a debit to Cash at bank, money OUT is a credit.`,
+        ru: `Операция за наличные оплачивается сразу (наличными, картой или мгновенным переводом). Операция в кредит — «купи сейчас, плати потом»: долг покупателей вам — дебиторская задолженность, ваш долг поставщикам — кредиторская.
+
+Для банковского счёта запомните: деньги ПРИШЛИ — дебет «Денег в банке», деньги УШЛИ — кредит.`,
+        uz: `Naqd operatsiya darhol to'lanadi (naqd, karta yoki tezkor o'tkazma). Nasiya operatsiya — «hozir ol, keyin to'la»: mijozlarning sizga qarzi — debitorlik, sizning yetkazib beruvchilarga qarzingiz — kreditorlik qarzi.
+
+Bank hisobi uchun eslang: pul KIRDI — «Bankdagi pul» debeti, pul CHIQDI — kredit.`,
       },
     },
     {
@@ -125,11 +186,7 @@ Mijoz va yetkazib beruvchilar qatorlarida shaxsiy hisob kodi ham bor, shunda har
 - Doimiy summa oshirilsa, yakuniy summa yangi, kattaroq raqam.
 - To'ldirish chiqimlar minus kichik kassaga kirimlarga teng.`,
       },
-      heading: {
-        en: 'Petty cash',
-        ru: 'Мелкая касса',
-        uz: 'Kichik kassa',
-      },
+      heading: { en: 'Petty cash', ru: 'Мелкая касса', uz: 'Kichik kassa' },
       body: {
         en: `Petty cash is a small amount of notes and coins kept to repay small out-of-pocket costs, such as cleaning materials, refreshments or a taxi fare to a meeting. The general ledger has a petty cash account that works like any other, and the cashier keeps a simple record with payments analysed under standard headings.
 
@@ -154,9 +211,47 @@ Davr oxirida doimiy summa odatdagi darajaga qaytishi uchun kerakli miqdorda bank
 Ikki yozuv kerak. Bankdan kelgan pul: Dt Kichik kassa, Kt Bank. Sarflangan pul: har bir xarajatga debet va kichik kassaga kredit.`,
       },
       example: {
-        en: `Madina keeps a petty cash float of $100. This month's vouchers are tea $14, stamps $11, a taxi $6 and cleaning materials $19, a total of $50. She counts $50 of cash, which agrees: $50 + $50 = $100. She posts a debit to each expense and Cr Petty cash $50. Then she tops up with Dr Petty cash $50, Cr Cash at bank $50, and the float is back to $100.`,
-        ru: `Мадина держит лимит мелкой кассы $100. Ваучеры за месяц: чай $14, марки $11, такси $6 и моющие средства $19, всего $50. Она считает $50 наличными, это сходится: $50 + $50 = $100. Она проводит дебет каждого расхода и Кт Мелкая касса $50. Затем пополняет: Дт Мелкая касса $50, Кт Банк $50, и лимит снова $100.`,
-        uz: `Madina $100 doimiy kichik kassa saqlaydi. Bu oy vaucherlari: choy $14, marka $11, taksi $6 va tozalash vositalari $19, jami $50. U $50 naqd sanaydi, bu mos keladi: $50 + $50 = $100. U har bir xarajatga debet va Kt Kichik kassa $50 yozadi. So'ng to'ldiradi: Dt Kichik kassa $50, Kt Bank $50, va doimiy summa yana $100.`,
+        en: `An office keeps a petty cash float of $100.
+# During the month (vouchers)
+  Tea $14 + stamps $11 + taxi $6 + cleaning $19 = $50 spent
+# Check
+  Cash counted in the tin: $50. Cash $50 + vouchers $50 = $100. It agrees.
+# Record the spending
+  Dr Tea $14, Dr Postage $11, Dr Travel $6, Dr Cleaning $19, Cr Petty cash $50
+# Top up from the bank
+  Dr Petty cash $50, Cr Cash at bank $50
+= The float is back to $100.`,
+        ru: `Офис держит аванс мелкой кассы $100.
+# За месяц (ордера)
+  Чай $14 + марки $11 + такси $6 + уборка $19 = потрачено $50
+# Проверка
+  В коробке пересчитали $50. Деньги $50 + ордера $50 = $100. Сходится.
+# Записываем расходы
+  Дт Чай $14, Дт Почта $11, Дт Проезд $6, Дт Уборка $19, Кт Мелкая касса $50
+# Пополняем из банка
+  Дт Мелкая касса $50, Кт Деньги в банке $50
+= Аванс снова $100.`,
+        uz: `Ofis mayda kassada $100 avans saqlaydi.
+# Oy davomida (orderlar)
+  Choy $14 + marka $11 + taksi $6 + tozalash $19 = $50 sarflandi
+# Tekshiruv
+  Qutidagi pul sanaldi: $50. Pul $50 + orderlar $50 = $100. Mos.
+# Xarajatlarni yozamiz
+  Dt Choy $14, Dt Pochta $11, Dt Yo'l $6, Dt Tozalash $19, Kt Mayda kassa $50
+# Bankdan to'ldiramiz
+  Dt Mayda kassa $50, Kt Bankdagi pul $50
+= Avans yana $100.`,
+      },
+      simple: {
+        en: `Petty cash is a small tin of notes and coins for little expenses like tea, stamps or a taxi.
+
+With the imprest system you keep a fixed amount (the float), say $100. At any moment, cash in the tin + receipts for what was spent = $100. At the end of the month you top it up by exactly what was spent, so it is back to $100.`,
+        ru: `Мелкая касса — небольшая коробка с купюрами и монетами на мелкие расходы: чай, марки, такси.
+
+При системе имприст вы держите фиксированную сумму (аванс), например $100. В любой момент деньги в коробке + чеки на потраченное = $100. В конце месяца вы пополняете её ровно на потраченное, и снова $100.`,
+        uz: `Mayda kassa — choy, marka yoki taksi kabi kichik xarajatlar uchun pul solingan kichik quti.
+
+Imprest tizimida qat'iy summa (avans), masalan $100 saqlanadi. Istalgan paytda qutidagi pul + sarflanganlar uchun cheklar = $100. Oy oxirida sarflangan aynan summa qo'shiladi va yana $100 bo'ladi.`,
       },
     },
     {
@@ -212,11 +307,7 @@ Ikki yozuv kerak. Bankdan kelgan pul: Dt Kichik kassa, Kt Bank. Sarflangan pul: 
 - Yetkazib beruvchi ortiqcha to'lovni qaytarganda: Dt Bank, Kt Kreditorlar.
 - Balance c/d kichik tomonda turadi, shuning uchun debet qoldiqda c/d kredit tomonda. Haqiqiy qoldiqni b/d ko'rsatadi.`,
       },
-      heading: {
-        en: 'Sales, purchases and returns',
-        ru: 'Продажи, закупки и возвраты',
-        uz: 'Sotuv, xarid va qaytarishlar',
-      },
+      heading: { en: 'Sales, purchases and returns', ru: 'Продажи, закупки и возвраты', uz: 'Sotuv, xarid va qaytarishlar' },
       body: {
         en: `The entries for sales and purchases depend on whether the deal was for cash or on credit. A sale always credits sales, and a purchase always debits purchases. The other side shows how it is settled: cash at bank straight away, or receivables or payables until the money moves.
 
@@ -247,9 +338,50 @@ Xarid qaytarishlari returns outwards deb ham ataladi. Ular manfiy xariddek ishla
 Xuddi shu mantiq yashirilgan raqamli masalalarda teskari ishlaydi. Debitorlar yoki kreditorlar hisobini ma'lum narsalar bilan yozing. Yetishmagan summa ikki tomonni tenglashtiradigan raqamdir.`,
       },
       example: {
-        en: `A customer brings back a $40 lamp bought for cash: Dr Sales returns $40, Cr Cash at bank $40. Madina sends $120 of cracked mugs back to a credit supplier: Dr Payables $120, Cr Purchase returns $120. Her credit customers owed $1,400 at the start of the month. She sold them $9,000 of goods, received $8,200 and accepted $300 of returns. Receivables at the month end are $1,400 + $9,000 - $8,200 - $300 = $1,900.`,
-        ru: `Покупатель приносит лампу за $40, купленную за наличные: Дт Возвраты продаж $40, Кт Банк $40. Мадина отправляет кредитному поставщику треснувшие кружки на $120: Дт Кредиторы $120, Кт Возвраты закупок $120. Покупатели в кредит должны были $1,400 на начало месяца. Она продала им на $9,000, получила $8,200 и приняла возвраты на $300. Дебиторы на конец месяца: $1,400 + $9,000 - $8,200 - $300 = $1,900.`,
-        uz: `Mijoz naqdga olingan $40 lik chiroqni qaytaradi: Dt Sotuv qaytarishlari $40, Kt Bank $40. Madina nasiya yetkazib beruvchiga $120 lik yorilgan krujkalarni qaytaradi: Dt Kreditorlar $120, Kt Xarid qaytarishlari $120. Nasiya mijozlari oy boshida $1,400 qarz edi. U ularga $9,000 sotdi, $8,200 oldi va $300 qaytarishni qabul qildi. Oy oxiridagi debitorlar: $1,400 + $9,000 - $8,200 - $300 = $1,900.`,
+        en: `Three everyday cases, then a missing figure.
+# 1. A customer returns a $40 lamp bought for cash
+  Dr Sales returns $40, Cr Cash at bank $40 (you give the money back)
+# 2. You send $120 of cracked mugs back to a credit supplier
+  Dr Payables $120, Cr Purchase returns $120 (you now owe less)
+# 3. How much do credit customers owe at the month end?
+  Owed at the start: $1,400
+  Plus new credit sales: + $9,000
+  Less cash received: - $8,200
+  Less goods returned: - $300
+= Receivables at the month end: $1,400 + $9,000 - $8,200 - $300 = $1,900`,
+        ru: `Три обычных случая, затем недостающая цифра.
+# 1. Покупатель возвращает лампу за $40, купленную за наличные
+  Дт Возвраты покупателей $40, Кт Деньги в банке $40 (вы возвращаете деньги)
+# 2. Вы возвращаете поставщику в кредит треснувшие кружки на $120
+  Дт Кредиторы $120, Кт Возвраты поставщикам $120 (теперь вы должны меньше)
+# 3. Сколько должны покупатели в кредит на конец месяца?
+  Долг на начало: $1,400
+  Плюс новые продажи в кредит: + $9,000
+  Минус полученные деньги: - $8,200
+  Минус возвраты: - $300
+= Дебиторы на конец месяца: $1,400 + $9,000 - $8,200 - $300 = $1,900`,
+        uz: `Uchta oddiy holat, keyin yetishmayotgan son.
+# 1. Mijoz naqdga olingan $40 lik chiroqni qaytaradi
+  Dt Sotuv qaytarishlari $40, Kt Bankdagi pul $40 (pulni qaytarasiz)
+# 2. Nasiya yetkazib beruvchiga $120 lik yoriq krujkalarni qaytarasiz
+  Dt Kreditorlar $120, Kt Xarid qaytarishlari $120 (endi kamroq qarzsiz)
+# 3. Oy oxirida nasiya mijozlar qancha qarz?
+  Boshidagi qarz: $1,400
+  Plus yangi nasiya sotuv: + $9,000
+  Minus olingan pul: - $8,200
+  Minus qaytarilgan tovar: - $300
+= Oy oxiridagi debitorlar: $1,400 + $9,000 - $8,200 - $300 = $1,900`,
+      },
+      simple: {
+        en: `A sale always credits Sales, and a purchase always debits Purchases. The other side shows how it was paid: Cash at bank if paid now, Receivables or Payables if paid later.
+
+Returns get their own accounts. Goods a customer brings back are sales returns (returns inwards), which work like negative sales. Goods you send back to a supplier are purchase returns (returns outwards), which work like negative purchases.`,
+        ru: `Продажа всегда кредитует Продажи, а покупка всегда дебетует Закупки. Вторая сторона показывает, как платили: Деньги в банке, если сразу, или Дебиторы/Кредиторы, если позже.
+
+Для возвратов свои счета. Товар, который вернул покупатель, — возвраты покупателей (returns inwards), они как отрицательные продажи. Товар, который вы вернули поставщику, — возвраты поставщикам (returns outwards), как отрицательные закупки.`,
+        uz: `Sotuv doim Sotuvni kreditlaydi, xarid doim Xaridlarni debetlaydi. Ikkinchi tomon qanday to'langanini ko'rsatadi: darhol bo'lsa Bankdagi pul, keyin bo'lsa Debitorlar yoki Kreditorlar.
+
+Qaytarishlar uchun alohida hisoblar bor. Mijoz qaytargan tovar — sotuv qaytarishlari (returns inwards), manfiy sotuv kabi. Yetkazib beruvchiga qaytargan tovaringiz — xarid qaytarishlari (returns outwards), manfiy xarid kabi.`,
       },
     },
     {
@@ -319,9 +451,53 @@ Soliqsiz sotuv narxi biznes sotuv deb tan oladigan summa. Soliqli narx mijozdan 
 Soliqli narxdagi soliqni topish uchun stavkani soliqli foizga bo'ling. 17.5% da bu narxning 17.5/117.5 qismi. Soliqsiz narxdagi soliqni topish uchun stavkaga ko'paytiring.`,
       },
       example: {
-        en: `Sales tax in Madina's country is 20%. She sells a rice cooker for $500 before tax. The tax is $500 x 20% = $100, so the customer pays $600. She buys goods from a supplier for $360 including tax. The tax in that price is $360 x 20/120 = $60, so the goods cost her $300. She owes the tax authority $100 - $60 = $40. Her profit is unaffected by the tax.`,
-        ru: `Налог с продаж в стране Мадины 20%. Она продаёт рисоварку за $500 без налога. Налог: $500 x 20% = $100, покупатель платит $600. Она покупает товар за $360 с налогом. Налог в этой цене: $360 x 20/120 = $60, значит, товар стоит ей $300. Она должна налоговому органу $100 - $60 = $40. На её прибыль налог не влияет.`,
-        uz: `Madina mamlakatida sotuv solig'i 20%. U guruch pishirgichni soliqsiz $500 ga sotadi. Soliq: $500 x 20% = $100, mijoz $600 to'laydi. U yetkazib beruvchidan soliq bilan $360 ga tovar oladi. Bu narxdagi soliq: $360 x 20/120 = $60, demak tovar unga $300 ga tushadi. U soliq organiga $100 - $60 = $40 qarz. Soliq uning foydasiga ta'sir qilmaydi.`,
+        en: `Sales tax is 20%.
+# 1. You sell a rice cooker for $500 before tax
+  Tax on a net price: $500 × 20% = $100
+  The customer pays $500 + $100 = $600
+# 2. You buy goods for $360 including tax
+  Tax inside a gross price: $360 × 20/120 = $60
+  The goods really cost you $360 - $60 = $300
+# 3. What you pay the government
+  Output tax $100 - input tax $60 = $40
+= Your profit is $500 - $300 = $200. The tax does not change it.`,
+        ru: `Налог с продаж 20%.
+# 1. Вы продаёте рисоварку за $500 без налога
+  Налог с цены без налога: $500 × 20% = $100
+  Покупатель платит $500 + $100 = $600
+# 2. Вы покупаете товар за $360 с налогом
+  Налог внутри цены с налогом: $360 × 20/120 = $60
+  Товар на самом деле стоит вам $360 - $60 = $300
+# 3. Что вы платите государству
+  Выходной налог $100 - входной налог $60 = $40
+= Ваша прибыль $500 - $300 = $200. Налог её не меняет.`,
+        uz: `Sotuv solig'i 20%.
+# 1. Guruch pishirgichni soliqsiz $500 ga sotasiz
+  Soliqsiz narxdan soliq: $500 × 20% = $100
+  Mijoz $500 + $100 = $600 to'laydi
+# 2. Tovarni soliq bilan $360 ga olasiz
+  Soliqli narx ichidagi soliq: $360 × 20/120 = $60
+  Tovar sizga aslida $360 - $60 = $300 turadi
+# 3. Davlatga to'lovingiz
+  Chiqish solig'i $100 - kirish solig'i $60 = $40
+= Foydangiz $500 - $300 = $200. Soliq uni o'zgartirmaydi.`,
+      },
+      simple: {
+        en: `Sales tax is a tax paid by the final customer. A business just collects it for the government.
+
+You add tax to your sales (output tax) and you pay tax on your purchases (input tax). You pay the government the difference: output minus input. Because the tax is not yours, it is not income or an expense, and your profit does not change.
+
+At 20%: net price = 100%, tax = 20%, gross price = 120%. To find the tax inside a gross price, use gross × 20/120.`,
+        ru: `Налог с продаж платит конечный покупатель. Бизнес лишь собирает его для государства.
+
+Вы добавляете налог к продажам (выходной налог) и платите налог при покупках (входной налог). Государству платите разницу: выходной минус входной. Налог не ваш, поэтому это не доход и не расход, и прибыль от него не меняется.
+
+При 20%: цена без налога = 100%, налог = 20%, цена с налогом = 120%. Чтобы найти налог внутри цены с налогом: цена × 20/120.`,
+        uz: `Sotuv solig'ini oxirgi xaridor to'laydi. Biznes uni davlat uchun yig'adi, xolos.
+
+Sotuvingizga soliq qo'shasiz (chiqish solig'i) va xaridlaringizda soliq to'laysiz (kirish solig'i). Davlatga farqni to'laysiz: chiqish minus kirish. Soliq sizniki emas, shuning uchun daromad ham, xarajat ham emas va foydangiz o'zgarmaydi.
+
+20% da: soliqsiz narx = 100%, soliq = 20%, soliqli narx = 120%. Soliqli narx ichidagi soliqni topish: narx × 20/120.`,
       },
     },
     {
@@ -362,11 +538,7 @@ Soliqli narxdagi soliqni topish uchun stavkani soliqli foizga bo'ling. 17.5% da 
 - Soliq hisob-faktura bilan yoziladi. Yetkazib beruvchiga keyingi to'lov soliq hisobiga ta'sir qilmaydi.
 - Tushum hisobi soliqsiz sotuv bilan kreditlanadi.`,
       },
-      heading: {
-        en: 'Sales tax: the entries',
-        ru: 'Налог с продаж: проводки',
-        uz: 'Sotuv solig\'i: yozuvlar',
-      },
+      heading: { en: 'Sales tax: the entries', ru: 'Налог с продаж: проводки', uz: 'Sotuv solig\'i: yozuvlar' },
       body: {
         en: `A sales tax ledger account collects the tax. It can be a payable or a receivable, depending on which way the balance falls.
 
@@ -391,9 +563,56 @@ Sotuvda soliqli summa debitorlar yoki bankka yoziladi, chunki mijoz shuni to'lay
 Biznes sotuvga xaridlarda to'laganidan ko'p soliq hisoblasa, kredit qoldiq, ya'ni majburiyat paydo bo'ladi. To'lash: Dt Soliq, Kt Bank. Ko'proq to'lagan bo'lsa, masalan qimmat uskuna olgandan keyin, debet qoldiq, ya'ni aktiv paydo bo'ladi. Qaytarish: Dt Bank, Kt Soliq.`,
       },
       example: {
-        en: `The rice cooker is sold on credit: Dr Receivables $600, Cr Sales $500, Cr Sales tax $100. The goods bought for $360 including tax are on credit: Dr Purchases $300, Dr Sales tax $60, Cr Payables $360. The sales tax account now shows a credit balance of $40, a liability. When Madina pays, she posts Dr Sales tax $40, Cr Cash at bank $40, and the account is clear.`,
-        ru: `Рисоварка продана в кредит: Дт Дебиторы $600, Кт Продажи $500, Кт Налог $100. Товар за $360 с налогом куплен в кредит: Дт Закупки $300, Дт Налог $60, Кт Кредиторы $360. Счёт налога показывает кредитовый остаток $40, обязательство. Когда Мадина платит, она проводит Дт Налог $40, Кт Банк $40, и счёт закрыт.`,
-        uz: `Guruch pishirgich nasiyaga sotildi: Dt Debitorlar $600, Kt Sotuv $500, Kt Soliq $100. Soliq bilan $360 lik tovar nasiyaga olindi: Dt Xaridlar $300, Dt Soliq $60, Kt Kreditorlar $360. Soliq hisobi $40 kredit qoldiq ko'rsatadi, bu majburiyat. Madina to'laganda Dt Soliq $40, Kt Bank $40 yozadi va hisob yopiladi.`,
+        en: `The same two deals as before, both on credit, tax at 20%.
+# 1. Sale of the rice cooker
+  Dr Receivables $600 (gross: what the customer owes)
+  Cr Sales $500 (net: what you earned)
+  Cr Sales tax $100 (owed to the government)
+# 2. Purchase of goods
+  Dr Purchases $300 (net)
+  Dr Sales tax $60 (you can claim it back)
+  Cr Payables $360 (gross: what the supplier is owed)
+# 3. The Sales tax account
+  Credit $100 - debit $60 = credit balance $40, a liability
+# 4. Paying the government
+  Dr Sales tax $40, Cr Cash at bank $40. The account is now clear.`,
+        ru: `Те же две сделки, обе в кредит, налог 20%.
+# 1. Продажа рисоварки
+  Дт Дебиторы $600 (с налогом: что должен покупатель)
+  Кт Продажи $500 (без налога: что вы заработали)
+  Кт Налог с продаж $100 (долг государству)
+# 2. Покупка товара
+  Дт Закупки $300 (без налога)
+  Дт Налог с продаж $60 (его можно вернуть)
+  Кт Кредиторы $360 (с налогом: что должны поставщику)
+# 3. Счёт налога с продаж
+  Кредит $100 - дебет $60 = кредитовый остаток $40, обязательство
+# 4. Оплата государству
+  Дт Налог с продаж $40, Кт Деньги в банке $40. Счёт закрыт.`,
+        uz: `Xuddi shu ikki bitim, ikkalasi nasiya, soliq 20%.
+# 1. Guruch pishirgich sotuvi
+  Dt Debitorlar $600 (soliqli: mijoz qarzi)
+  Kt Sotuv $500 (soliqsiz: siz topgan)
+  Kt Sotuv solig'i $100 (davlatga qarz)
+# 2. Tovar xaridi
+  Dt Xaridlar $300 (soliqsiz)
+  Dt Sotuv solig'i $60 (uni qaytarib olish mumkin)
+  Kt Kreditorlar $360 (soliqli: yetkazib beruvchiga qarz)
+# 3. Sotuv solig'i hisobi
+  Kredit $100 - debet $60 = $40 kredit qoldiq, majburiyat
+# 4. Davlatga to'lash
+  Dt Sotuv solig'i $40, Kt Bankdagi pul $40. Hisob yopildi.`,
+      },
+      simple: {
+        en: `The rule for the entries: Sales and Purchases always use the NET amount (without tax). Receivables, Payables and Cash use the GROSS amount (what is really paid). The tax goes to a Sales tax account.
+
+If the Sales tax account ends with a credit balance, you owe the government (a liability). A debit balance means the government owes you a refund (an asset).`,
+        ru: `Правило проводок: Продажи и Закупки всегда по сумме БЕЗ налога. Дебиторы, Кредиторы и Деньги — по сумме С налогом (что реально платят). Налог идёт на счёт «Налог с продаж».
+
+Если у счёта налога кредитовый остаток, вы должны государству (обязательство). Дебетовый остаток — государство должно вам возврат (актив).`,
+        uz: `Yozuvlar qoidasi: Sotuv va Xaridlar doim SOLIQSIZ summada. Debitorlar, Kreditorlar va Pul — SOLIQLI summada (haqiqatda to'lanadigani). Soliq «Sotuv solig'i» hisobiga boradi.
+
+Soliq hisobida kredit qoldiq bo'lsa, davlatga qarzsiz (majburiyat). Debet qoldiq — davlat sizga qaytarish qarz (aktiv).`,
       },
     },
     {
@@ -431,11 +650,7 @@ Biznes sotuvga xaridlarda to'laganidan ko'p soliq hisoblasa, kredit qoldiq, ya'n
 - Xaridor uchun sof qiymat to'langan summa. $200 xarid minus 3% chegirma $194 turadi.
 - Avval savdo chegirmasini, so'ng qolganiga muddatidan oldingi to'lov chegirmasini qo'llang.`,
       },
-      heading: {
-        en: 'Discounts for the buyer',
-        ru: 'Скидки у покупателя',
-        uz: 'Xaridor uchun chegirmalar',
-      },
+      heading: { en: 'Discounts for the buyer', ru: 'Скидки у покупателя', uz: 'Xaridor uchun chegirmalar' },
       body: {
         en: `A trade discount is a definite reduction in price. Suppliers offer it to encourage bulk orders and loyalty. Because the discount is certain, it is simply deducted, and both seller and buyer record only the net amount.
 
@@ -460,9 +675,56 @@ Xaridor xaridni to'liq summada yozadi: Dt Xaridlar, Kt Kreditorlar. Kech to'lans
 Yakuniy hisobotda olingan chegirma odatda xaridlardan ayiriladi, bu tannarxni kamaytiradi.`,
       },
       example: {
-        en: `Madina orders goods with a list price of $400 and gets 10% trade discount, so she records Dr Purchases $360, Cr Payables $360. The $40 never appears in her books. The supplier offers 2% for payment within ten days and she pays in time. The discount is 2% x $360 = $7.20, so she pays $352.80: Dr Payables $360, Cr Cash at bank $352.80, Cr Discount received $7.20.`,
-        ru: `Мадина заказывает товар по прайсу $400 и получает торговую скидку 10%, поэтому записывает Дт Закупки $360, Кт Кредиторы $360. $40 в её учёте не появляются. Поставщик предлагает 2% за оплату в течение десяти дней, и она успевает. Скидка: 2% x $360 = $7.20, она платит $352.80: Дт Кредиторы $360, Кт Банк $352.80, Кт Полученная скидка $7.20.`,
-        uz: `Madina ro'yxat narxi $400 bo'lgan tovar buyurtma qiladi va 10% savdo chegirmasi oladi, shuning uchun Dt Xaridlar $360, Kt Kreditorlar $360 yozadi. $40 uning kitobida ko'rinmaydi. Yetkazib beruvchi o'n kunda to'lash uchun 2% taklif qiladi va u ulguradi. Chegirma: 2% x $360 = $7.20, u $352.80 to'laydi: Dt Kreditorlar $360, Kt Bank $352.80, Kt Olingan chegirma $7.20.`,
+        en: `You order goods with a list price of $400.
+# 1. Trade discount of 10%
+  $400 × 10% = $40 off, so the price is $360
+  Record only $360: Dr Purchases $360, Cr Payables $360. The $40 never appears.
+# 2. Settlement discount of 2% for paying within 10 days
+  You pay on day 8, so you take it: $360 × 2% = $7.20
+  You pay $360 - $7.20 = $352.80
+# 3. The entry when you pay
+  Dr Payables $360 (the whole debt is cleared)
+  Cr Cash at bank $352.80 (what actually left the bank)
+  Cr Discount received $7.20 (your saving)
+! Order matters: trade discount first, then settlement discount on what is left.`,
+        ru: `Вы заказываете товар по прайсу $400.
+# 1. Торговая скидка 10%
+  $400 × 10% = $40 скидки, цена $360
+  Записываем только $360: Дт Закупки $360, Кт Кредиторы $360. $40 нигде нет.
+# 2. Скидка 2% за оплату в течение 10 дней
+  Вы платите на 8-й день и берёте её: $360 × 2% = $7.20
+  Платите $360 - $7.20 = $352.80
+# 3. Проводка при оплате
+  Дт Кредиторы $360 (весь долг закрыт)
+  Кт Деньги в банке $352.80 (что ушло из банка)
+  Кт Полученные скидки $7.20 (ваша экономия)
+! Порядок важен: сначала торговая скидка, затем скидка за раннюю оплату с остатка.`,
+        uz: `Narxi $400 bo'lgan tovar buyurtma qilasiz.
+# 1. 10% savdo chegirmasi
+  $400 × 10% = $40 chegirma, narx $360
+  Faqat $360 yoziladi: Dt Xaridlar $360, Kt Kreditorlar $360. $40 hech qayerda yo'q.
+# 2. 10 kun ichida to'lash uchun 2% chegirma
+  8-kuni to'laysiz va uni olasiz: $360 × 2% = $7.20
+  $360 - $7.20 = $352.80 to'laysiz
+# 3. To'lashdagi yozuv
+  Dt Kreditorlar $360 (butun qarz yopildi)
+  Kt Bankdagi pul $352.80 (bankdan chiqqani)
+  Kt Olingan chegirmalar $7.20 (tejaganingiz)
+! Tartib muhim: avval savdo chegirmasi, keyin qolganiga muddatidan oldingi to'lov chegirmasi.`,
+      },
+      simple: {
+        en: `There are two kinds of discount.
+
+- Trade discount: a fixed price cut, for example for a big order. It is taken off BEFORE anything is recorded, so it never appears in the accounts.
+- Settlement discount: a reward for paying EARLY. The buyer can choose to take it. The buyer records the full price first, and if they pay early, the saving is "discount received", which reduces cost of sales.`,
+        ru: `Есть два вида скидок.
+
+- Торговая скидка: фиксированное снижение цены, например за крупный заказ. Её вычитают ДО записи, поэтому в учёте её нет.
+- Скидка за раннюю оплату: награда за то, что заплатили РАНЬШЕ. Покупатель сам решает, брать ли её. Покупатель сначала записывает полную цену, а если платит рано, экономия — «полученная скидка», она уменьшает себестоимость.`,
+        uz: `Chegirmaning ikki turi bor.
+
+- Savdo chegirmasi: narxning qat'iy kamayishi, masalan katta buyurtma uchun. U hech narsa yozilishidan OLDIN ayiriladi, shuning uchun hisobda ko'rinmaydi.
+- Muddatidan oldingi to'lov chegirmasi: ERTA to'lagani uchun mukofot. Xaridor uni olish-olmaslikni o'zi tanlaydi. Xaridor avval to'liq narxni yozadi, erta to'lasa tejalgan summa — «olingan chegirma», u tannarxni kamaytiradi.`,
       },
     },
     {
@@ -535,25 +797,262 @@ Mijoz erta to'lashi kutilsa, hisob-faktura pasaytirilgan summaga yoziladi, shuni
 Har ikki holda ham berilgan chegirma xarajat sifatida yozilmaydi. U faqat tushumni o'zgartiradi.`,
       },
       example: {
-        en: `Madina sells goods for $1,000 to a cafe and offers 2% for paying within ten days. If she expects the cafe to take it, she invoices $980: Dr Receivables $980, Cr Revenue $980. If the cafe pays late, she receives $1,000: Dr Cash at bank $1,000, Cr Receivables $980, Cr Revenue $20. If instead she expects no early payment, she invoices $1,000. If the cafe then pays early, she receives $980: Dr Cash at bank $980, Dr Revenue $20, Cr Receivables $1,000.`,
-        ru: `Мадина продаёт кафе товар за $1,000 и предлагает 2% за оплату в течение десяти дней. Если она ожидает, что кафе возьмёт скидку, счёт на $980: Дт Дебиторы $980, Кт Выручка $980. Если кафе платит поздно, она получает $1,000: Дт Банк $1,000, Кт Дебиторы $980, Кт Выручка $20. Если же она не ожидает ранней оплаты, счёт на $1,000. Если затем кафе платит рано, она получает $980: Дт Банк $980, Дт Выручка $20, Кт Дебиторы $1,000.`,
-        uz: `Madina kafega $1,000 ga tovar sotadi va o'n kunda to'lash uchun 2% taklif qiladi. Kafe chegirmani olishini kutsa, $980 hisob-faktura yozadi: Dt Debitorlar $980, Kt Tushum $980. Kafe kech to'lasa, $1,000 oladi: Dt Bank $1,000, Kt Debitorlar $980, Kt Tushum $20. Agar erta to'lovni kutmasa, $1,000 hisob-faktura yozadi. So'ng kafe erta to'lasa, $980 oladi: Dt Bank $980, Dt Tushum $20, Kt Debitorlar $1,000.`,
+        en: `You sell goods for $1,000 and offer 2% off for paying within 10 days.
+# Case A: you EXPECT the customer to pay early
+  Invoice the reduced amount: $1,000 × 98% = $980
+  Dr Receivables $980, Cr Revenue $980
+  They pay late instead and send $1,000:
+  Dr Cash at bank $1,000, Cr Receivables $980, Cr Revenue $20 (extra money = extra revenue)
+# Case B: you DO NOT expect early payment
+  Invoice the full $1,000: Dr Receivables $1,000, Cr Revenue $1,000
+  They pay early instead and send $980:
+  Dr Cash at bank $980, Dr Revenue $20, Cr Receivables $1,000 (less money = less revenue)
+= Either way, the receivable is cleared in full and only revenue changes.`,
+        ru: `Вы продаёте товар за $1,000 и предлагаете 2% скидки за оплату в течение 10 дней.
+# Случай A: вы ОЖИДАЕТЕ раннюю оплату
+  Выставляете уменьшенную сумму: $1,000 × 98% = $980
+  Дт Дебиторы $980, Кт Выручка $980
+  А покупатель платит поздно и присылает $1,000:
+  Дт Деньги в банке $1,000, Кт Дебиторы $980, Кт Выручка $20 (больше денег = больше выручки)
+# Случай B: вы НЕ ожидаете ранней оплаты
+  Выставляете полные $1,000: Дт Дебиторы $1,000, Кт Выручка $1,000
+  А покупатель платит рано и присылает $980:
+  Дт Деньги в банке $980, Дт Выручка $20, Кт Дебиторы $1,000 (меньше денег = меньше выручки)
+= В обоих случаях дебиторка закрывается полностью и меняется только выручка.`,
+        uz: `Tovarni $1,000 ga sotib, 10 kun ichida to'lash uchun 2% chegirma taklif qilasiz.
+# A holat: erta to'lovni KUTASIZ
+  Kamaytirilgan summa yoziladi: $1,000 × 98% = $980
+  Dt Debitorlar $980, Kt Tushum $980
+  Mijoz esa kech to'lab, $1,000 yuboradi:
+  Dt Bankdagi pul $1,000, Kt Debitorlar $980, Kt Tushum $20 (ko'p pul = ko'p tushum)
+# B holat: erta to'lovni KUTMAYSIZ
+  To'liq $1,000 yoziladi: Dt Debitorlar $1,000, Kt Tushum $1,000
+  Mijoz esa erta to'lab, $980 yuboradi:
+  Dt Bankdagi pul $980, Dt Tushum $20, Kt Debitorlar $1,000 (kam pul = kam tushum)
+= Ikkala holatda ham debitorlik to'liq yopiladi va faqat tushum o'zgaradi.`,
+      },
+      simple: {
+        en: `When YOU offer an early-payment discount, you do not know yet if the customer will take it. So you record the sale at the amount you EXPECT to get (the question always tells you what is expected).
+
+If the customer then pays a different amount than expected, the difference simply goes to revenue: less money means less revenue, more money means more revenue. A seller never records "discount allowed" as an expense.`,
+        ru: `Когда ВЫ предлагаете скидку за раннюю оплату, вы ещё не знаете, возьмёт ли её покупатель. Поэтому продажу записывают по сумме, которую вы ОЖИДАЕТЕ получить (в задаче всегда сказано, чего ожидают).
+
+Если покупатель потом платит не так, как ожидалось, разница просто идёт в выручку: меньше денег — меньше выручка, больше денег — больше выручка. Продавец никогда не записывает предоставленную скидку как расход.`,
+        uz: `SIZ erta to'lov chegirmasini taklif qilganingizda, mijoz uni olishini hali bilmaysiz. Shuning uchun sotuv siz OLISHNI KUTGAN summada yoziladi (masalada nima kutilishi doim aytiladi).
+
+Mijoz keyin kutilganidan boshqacha to'lasa, farq shunchaki tushumga boradi: kam pul — kam tushum, ko'p pul — ko'p tushum. Sotuvchi berilgan chegirmani hech qachon xarajat sifatida yozmaydi.`,
       },
     },
   ],
   glossary: [
-    { term: { en: 'Cash transaction', ru: 'Операция за наличные', uz: 'Naqd operatsiya' }, definition: { en: 'A deal settled at once, including by cheque or immediate transfer.', ru: 'Сделка с немедленным расчётом, в том числе чеком или мгновенным переводом.', uz: 'Darhol, jumladan chek yoki tezkor o\'tkazma bilan yopiladigan bitim.' } },
-    { term: { en: 'Credit transaction', ru: 'Операция в кредит', uz: 'Nasiya operatsiya' }, definition: { en: 'A deal where goods or services move now and payment follows later.', ru: 'Сделка, где товар передаётся сейчас, а оплата позже.', uz: 'Tovar yoki xizmat hozir, to\'lov keyin bo\'ladigan bitim.' } },
-    { term: { en: 'Imprest system', ru: 'Система имприст', uz: 'Imprest tizimi' }, definition: { en: 'Topping up petty cash by the exact amount spent to restore a fixed float.', ru: 'Пополнение мелкой кассы на потраченную сумму для возврата постоянного лимита.', uz: 'Kichik kassani sarflangan summaga to\'ldirib, doimiy summani tiklash.' } },
-    { term: { en: 'Petty cash voucher', ru: 'Кассовый ваучер', uz: 'Kassa vaucheri' }, definition: { en: 'The signed record of a petty cash payment.', ru: 'Подписанная запись о выплате из мелкой кассы.', uz: 'Kichik kassa to\'lovining imzolangan yozuvi.' } },
-    { term: { en: 'Returns inwards', ru: 'Возвраты покупателей', uz: 'Sotuv qaytarishlari' }, definition: { en: 'Goods sent back by customers. Also called sales returns.', ru: 'Товар, возвращённый покупателями.', uz: 'Mijozlar qaytargan tovar.' } },
-    { term: { en: 'Returns outwards', ru: 'Возвраты поставщикам', uz: 'Xarid qaytarishlari' }, definition: { en: 'Goods sent back to suppliers. Also called purchase returns.', ru: 'Товар, возвращённый поставщикам.', uz: 'Yetkazib beruvchilarga qaytarilgan tovar.' } },
-    { term: { en: 'Output tax', ru: 'Выходной налог', uz: 'Chiqish solig\'i' }, definition: { en: 'Sales tax charged on sales.', ru: 'Налог с продаж, начисленный на продажи.', uz: 'Sotuvga hisoblangan sotuv solig\'i.' } },
-    { term: { en: 'Input tax', ru: 'Входной налог', uz: 'Kirish solig\'i' }, definition: { en: 'Sales tax paid on purchases.', ru: 'Налог с продаж, уплаченный при закупках.', uz: 'Xaridlarda to\'langan sotuv solig\'i.' } },
-    { term: { en: 'Trade discount', ru: 'Торговая скидка', uz: 'Savdo chegirmasi' }, definition: { en: 'A definite price reduction taken off before anything is recorded.', ru: 'Определённое снижение цены, вычитаемое до записи.', uz: 'Yozuvdan oldin ayiriladigan aniq narx pasayishi.' } },
-    { term: { en: 'Settlement discount', ru: 'Скидка за раннюю оплату', uz: 'Muddatidan oldingi to\'lov chegirmasi' }, definition: { en: 'An optional discount for paying early.', ru: 'Необязательная скидка за раннюю оплату.', uz: 'Erta to\'lash uchun ixtiyoriy chegirma.' } },
-    { term: { en: 'Discount received', ru: 'Полученная скидка', uz: 'Olingan chegirma' }, definition: { en: 'A settlement discount taken by the buyer, netted off purchases.', ru: 'Скидка за раннюю оплату, полученная покупателем, вычитается из закупок.', uz: 'Xaridor olgan muddatidan oldingi to\'lov chegirmasi, xariddan ayiriladi.' } },
-    { term: { en: 'Variable consideration', ru: 'Переменное возмещение', uz: 'O\'zgaruvchan to\'lov' }, definition: { en: 'Revenue whose final amount is unknown at the time of sale.', ru: 'Выручка, итоговая сумма которой неизвестна при продаже.', uz: 'Yakuniy summasi sotuv paytida noma\'lum bo\'lgan tushum.' } },
+    {
+      term: { en: 'Cash transaction', ru: 'Операция за наличные', uz: 'Naqd operatsiya' },
+      definition: {
+        en: 'A deal settled at once, including by cheque or immediate transfer.',
+        ru: 'Сделка с немедленным расчётом, в том числе чеком или мгновенным переводом.',
+        uz: 'Darhol, jumladan chek yoki tezkor o\'tkazma bilan yopiladigan bitim.',
+      },
+      example: {
+        en: 'Paying for a coffee by card at the till.',
+        ru: 'Оплата кофе картой на кассе.',
+        uz: 'Kassada qahvani karta bilan to\'lash.',
+      },
+    },
+    {
+      term: { en: 'Credit transaction', ru: 'Операция в кредит', uz: 'Nasiya operatsiya' },
+      definition: {
+        en: 'A deal where goods or services move now and payment follows later.',
+        ru: 'Сделка, где товар передаётся сейчас, а оплата позже.',
+        uz: 'Tovar yoki xizmat hozir, to\'lov keyin bo\'ladigan bitim.',
+      },
+      example: {
+        en: 'A cafe buys $500 of cups now and pays in 30 days.',
+        ru: 'Кафе покупает стаканы на $500 сейчас и платит через 30 дней.',
+        uz: 'Kafe $500 lik stakanlarni hozir olib, 30 kundan keyin to\'laydi.',
+      },
+    },
+    {
+      term: { en: 'Petty cash', ru: 'Мелкая касса', uz: 'Mayda kassa' },
+      definition: {
+        en: 'A small amount of notes and coins kept for small everyday expenses.',
+        ru: 'Небольшая сумма купюр и монет на мелкие повседневные расходы.',
+        uz: 'Kichik kundalik xarajatlar uchun saqlanadigan oz miqdordagi naqd pul.',
+      },
+      example: {
+        en: 'A $100 tin in the office for tea, stamps and taxis.',
+        ru: 'Коробка с $100 в офисе на чай, марки и такси.',
+        uz: 'Ofisdagi choy, marka va taksi uchun $100 li quti.',
+      },
+    },
+    {
+      term: { en: 'Imprest system', ru: 'Система имприст', uz: 'Imprest tizimi' },
+      definition: {
+        en: 'Topping up petty cash by the exact amount spent to restore a fixed float.',
+        ru: 'Пополнение мелкой кассы на потраченную сумму для возврата постоянного лимита.',
+        uz: 'Kichik kassani sarflangan summaga to\'ldirib, doimiy summani tiklash.',
+      },
+      example: {
+        en: 'Float $100, spent $50, so $50 is put back to restore $100.',
+        ru: 'Аванс $100, потрачено $50, значит добавляют $50, чтобы снова было $100.',
+        uz: 'Avans $100, $50 sarflandi, $100 ni tiklash uchun $50 qo\'shiladi.',
+      },
+    },
+    {
+      term: { en: 'Petty cash voucher', ru: 'Кассовый ваучер', uz: 'Kassa vaucheri' },
+      definition: {
+        en: 'The signed record of a petty cash payment.',
+        ru: 'Подписанная запись о выплате из мелкой кассы.',
+        uz: 'Kichik kassa to\'lovining imzolangan yozuvi.',
+      },
+      example: {
+        en: 'A signed slip: "Taxi to the bank, $6", with the taxi receipt stapled to it.',
+        ru: 'Подписанный листок: «Такси до банка, $6», к нему прикреплён чек такси.',
+        uz: 'Imzolangan varaqa: «Bankka taksi, $6», taksi cheki biriktirilgan.',
+      },
+    },
+    {
+      term: { en: 'Returns inwards', ru: 'Возвраты покупателей', uz: 'Sotuv qaytarishlari' },
+      definition: {
+        en: 'Goods sent back by customers. Also called sales returns.',
+        ru: 'Товар, возвращённый покупателями.',
+        uz: 'Mijozlar qaytargan tovar.',
+      },
+      example: {
+        en: 'A customer brings back a $40 lamp: Dr Sales returns $40.',
+        ru: 'Покупатель возвращает лампу за $40: Дт Возвраты покупателей $40.',
+        uz: 'Mijoz $40 lik chiroqni qaytaradi: Dt Sotuv qaytarishlari $40.',
+      },
+    },
+    {
+      term: { en: 'Returns outwards', ru: 'Возвраты поставщикам', uz: 'Xarid qaytarishlari' },
+      definition: {
+        en: 'Goods sent back to suppliers. Also called purchase returns.',
+        ru: 'Товар, возвращённый поставщикам.',
+        uz: 'Yetkazib beruvchilarga qaytarilgan tovar.',
+      },
+      example: {
+        en: 'You send $120 of cracked mugs back: Cr Purchase returns $120.',
+        ru: 'Вы возвращаете треснувшие кружки на $120: Кт Возвраты поставщикам $120.',
+        uz: '$120 lik yoriq krujkalarni qaytarasiz: Kt Xarid qaytarishlari $120.',
+      },
+    },
+    {
+      term: { en: 'Sales tax', ru: 'Налог с продаж', uz: 'Sotuv solig\'i' },
+      definition: {
+        en: 'An indirect tax paid by the final customer and collected by businesses for the government.',
+        ru: 'Косвенный налог, который платит конечный покупатель, а бизнес собирает для государства.',
+        uz: 'Oxirgi xaridor to\'laydigan va biznes davlat uchun yig\'adigan bilvosita soliq.',
+      },
+      example: {
+        en: 'A $500 item plus 20% tax costs the customer $600. The $100 goes to the government.',
+        ru: 'Товар за $500 плюс 20% налога обходится покупателю в $600. $100 уходят государству.',
+        uz: '$500 lik tovar plus 20% soliq mijozga $600 turadi. $100 davlatga boradi.',
+      },
+    },
+    {
+      term: { en: 'Output tax', ru: 'Выходной налог', uz: 'Chiqish solig\'i' },
+      definition: {
+        en: 'Sales tax charged on sales.',
+        ru: 'Налог с продаж, начисленный на продажи.',
+        uz: 'Sotuvga hisoblangan sotuv solig\'i.',
+      },
+      example: {
+        en: 'Selling a $500 cooker at 20% tax: output tax $100.',
+        ru: 'Продажа плиты за $500 при налоге 20%: выходной налог $100.',
+        uz: '$500 lik plitani 20% soliq bilan sotish: chiqish solig\'i $100.',
+      },
+    },
+    {
+      term: { en: 'Input tax', ru: 'Входной налог', uz: 'Kirish solig\'i' },
+      definition: {
+        en: 'Sales tax paid on purchases.',
+        ru: 'Налог с продаж, уплаченный при закупках.',
+        uz: 'Xaridlarda to\'langan sotuv solig\'i.',
+      },
+      example: {
+        en: 'Buying goods for $360 including 20% tax: input tax $60.',
+        ru: 'Покупка товара за $360 с налогом 20%: входной налог $60.',
+        uz: 'Tovarni 20% soliq bilan $360 ga olish: kirish solig\'i $60.',
+      },
+    },
+    {
+      term: { en: 'Trade discount', ru: 'Торговая скидка', uz: 'Savdo chegirmasi' },
+      definition: {
+        en: 'A definite price reduction taken off before anything is recorded.',
+        ru: 'Определённое снижение цены, вычитаемое до записи.',
+        uz: 'Yozuvdan oldin ayiriladigan aniq narx pasayishi.',
+      },
+      example: {
+        en: 'List price $400 less 10% for a big order: you record $360.',
+        ru: 'Прайс $400 минус 10% за крупный заказ: записываете $360.',
+        uz: 'Narx $400 minus katta buyurtma uchun 10%: $360 yoziladi.',
+      },
+    },
+    {
+      term: { en: 'Settlement discount', ru: 'Скидка за раннюю оплату', uz: 'Muddatidan oldingi to\'lov chegirmasi' },
+      definition: {
+        en: 'An optional discount for paying early.',
+        ru: 'Необязательная скидка за раннюю оплату.',
+        uz: 'Erta to\'lash uchun ixtiyoriy chegirma.',
+      },
+      example: {
+        en: '"2% off if you pay within 10 days."',
+        ru: '«Скидка 2%, если оплатите в течение 10 дней.»',
+        uz: '«10 kun ichida to\'lasangiz, 2% chegirma.»',
+      },
+    },
+    {
+      term: { en: 'Discount received', ru: 'Полученная скидка', uz: 'Olingan chegirma' },
+      definition: {
+        en: 'A settlement discount taken by the buyer, netted off purchases.',
+        ru: 'Скидка за раннюю оплату, полученная покупателем, вычитается из закупок.',
+        uz: 'Xaridor olgan muddatidan oldingi to\'lov chegirmasi, xariddan ayiriladi.',
+      },
+      example: {
+        en: 'You pay a $360 bill early and only $352.80 leaves the bank. The $7.20 saved is discount received.',
+        ru: 'Вы оплатили счёт $360 рано, и из банка ушло только $352.80. Сэкономленные $7.20 — полученная скидка.',
+        uz: '$360 lik hisobni erta to\'ladingiz va bankdan faqat $352.80 chiqdi. Tejalgan $7.20 — olingan chegirma.',
+      },
+    },
+    {
+      term: { en: 'Variable consideration', ru: 'Переменное возмещение', uz: 'O\'zgaruvchan to\'lov' },
+      definition: {
+        en: 'Revenue whose final amount is unknown at the time of sale.',
+        ru: 'Выручка, итоговая сумма которой неизвестна при продаже.',
+        uz: 'Yakuniy summasi sotuv paytida noma\'lum bo\'lgan tushum.',
+      },
+      example: {
+        en: 'You sell for $1,000 with 2% off for early payment, so you might receive $1,000 or $980.',
+        ru: 'Вы продаёте за $1,000 со скидкой 2% за раннюю оплату, поэтому можете получить $1,000 или $980.',
+        uz: '$1,000 ga erta to\'lov uchun 2% chegirma bilan sotasiz, $1,000 yoki $980 olishingiz mumkin.',
+      },
+    },
+    {
+      term: { en: 'Carriage inwards', ru: 'Доставка от поставщика', uz: 'Yetkazib beruvchidan tashish' },
+      definition: {
+        en: 'The cost of bringing purchased goods into the business. It is part of cost of sales.',
+        ru: 'Расходы на доставку купленного товара в бизнес. Входят в себестоимость.',
+        uz: 'Sotib olingan tovarni biznesga olib kelish xarajati. Tannarxga kiradi.',
+      },
+      example: {
+        en: '$50 paid to a lorry that brings your new stock from the supplier.',
+        ru: '$50 за грузовик, который привозит новый товар от поставщика.',
+        uz: 'Yangi tovarni yetkazib beruvchidan olib kelgan yuk mashinasiga $50.',
+      },
+    },
+    {
+      term: { en: 'Carriage outwards', ru: 'Доставка покупателям', uz: 'Mijozlarga tashish' },
+      definition: {
+        en: 'The cost of delivering goods to customers. It is an expense, not part of cost of sales.',
+        ru: 'Расходы на доставку товара покупателям. Это расход, а не часть себестоимости.',
+        uz: 'Tovarni mijozlarga yetkazish xarajati. Bu xarajat, tannarxning qismi emas.',
+      },
+      example: {
+        en: '$15 courier fee to send a parcel to a customer.',
+        ru: '$15 курьеру за отправку посылки покупателю.',
+        uz: 'Mijozga posilka yuborish uchun kuryerga $15.',
+      },
+    },
   ],
 };
 
