@@ -19,6 +19,18 @@ test('cases are single-entity statements, cash flows or groups', () => {
   assert.ok(areas.filter((a) => a === 'groups').length >= 1);
 });
 
+const shape = (t) => t.trim().split('\n').map((line) => (line.match(/^(# |= |! | {2}|- )/) ?? [''])[0]).join('|');
+
+test('every task explanation is in step format, with the same line shapes in all three languages', () => {
+  for (const c of cases) {
+    for (const [i, t] of c.tasks.entries()) {
+      const where = `${c.id} task ${i + 1}`;
+      assert.match(t.explanation.en, /^(# |= |- )/m, `${where} has no step, result or option line`);
+      for (const lang of ['ru', 'uz']) assert.equal(shape(t.explanation[lang]), shape(t.explanation.en), `${where} ${lang} line shape`);
+    }
+  }
+});
+
 for (const c of cases) {
   test(`${c.id} ${c.title} totals 15 marks and every task is well formed`, () => {
     assert.ok(c.intro.trim().length > 0);
