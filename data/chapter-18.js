@@ -8,11 +8,31 @@ const chapter18 = {
     uz: 'Moliyaviy hisobotni tahlil qilish',
   },
   objectives: [
-    { en: 'Explain why financial statements are interpreted and who uses the results', ru: 'Объяснять, зачем анализируют отчётность и кто использует результаты', uz: 'Hisobot nega tahlil qilinishini va natijadan kim foydalanishini tushuntirish' },
-    { en: 'Calculate and interpret profitability ratios', ru: 'Рассчитывать и толковать показатели рентабельности', uz: 'Rentabellik koeffitsientlarini hisoblash va izohlash' },
-    { en: 'Calculate and interpret liquidity and efficiency ratios', ru: 'Рассчитывать и толковать показатели ликвидности и эффективности', uz: 'Likvidlik va samaradorlik koeffitsientlarini hisoblash va izohlash' },
-    { en: 'Calculate and interpret gearing and interest cover', ru: 'Рассчитывать и толковать финансовый рычаг и покрытие процентов', uz: 'Moliyaviy leveraj va foizlarni qoplashni hisoblash va izohlash' },
-    { en: 'Explain how ratios link together and draw valid conclusions', ru: 'Объяснять связь показателей и делать обоснованные выводы', uz: 'Koeffitsientlar bog\'liqligini tushuntirish va asosli xulosa chiqarish' },
+    {
+      en: 'Explain why financial statements are interpreted and who uses the results',
+      ru: 'Объяснять, зачем анализируют отчётность и кто использует результаты',
+      uz: 'Hisobot nega tahlil qilinishini va natijadan kim foydalanishini tushuntirish',
+    },
+    {
+      en: 'Calculate and interpret profitability ratios',
+      ru: 'Рассчитывать и толковать показатели рентабельности',
+      uz: 'Rentabellik koeffitsientlarini hisoblash va izohlash',
+    },
+    {
+      en: 'Calculate and interpret liquidity and efficiency ratios',
+      ru: 'Рассчитывать и толковать показатели ликвидности и эффективности',
+      uz: 'Likvidlik va samaradorlik koeffitsientlarini hisoblash va izohlash',
+    },
+    {
+      en: 'Calculate and interpret gearing and interest cover',
+      ru: 'Рассчитывать и толковать финансовый рычаг и покрытие процентов',
+      uz: 'Moliyaviy leveraj va foizlarni qoplashni hisoblash va izohlash',
+    },
+    {
+      en: 'Explain how ratios link together and draw valid conclusions',
+      ru: 'Объяснять связь показателей и делать обоснованные выводы',
+      uz: 'Koeffitsientlar bog\'liqligini tushuntirish va asosli xulosa chiqarish',
+    },
   ],
   sections: [
     {
@@ -82,9 +102,44 @@ Har xil foydalanuvchiga har xil narsa kerak. Aksiyadorlar va bo'lajak investorla
 Har bir koeffitsient uchun to'rt savol bering. U nimani bildiradi? Uning o'zgarishi nimani bildiradi? Me'yor yoki mezon bormi? Cheklovlari nima? Koeffitsientlarni hisob siyosati, yil oxiridagi odatiy bo'lmagan raqamlar va turli sohadagi kompaniyalarni solishtirish buzishi mumkin.`,
       },
       example: {
-        en: `Madina's Mart LLC made an operating profit of $24,000 this year. Is that good? Last year it made $27,000 on lower sales, and a similar shop nearby earns 15% of its revenue as operating profit. Ratios turn these figures into something Madina can compare and act on.`,
-        ru: `Операционная прибыль Madina's Mart LLC в этом году $24,000. Это хорошо? В прошлом году было $27,000 при меньших продажах, а похожий магазин рядом получает 15% выручки в виде операционной прибыли. Показатели превращают эти цифры в то, что Мадина может сравнить и использовать.`,
-        uz: `Madina's Mart LLC bu yil $24,000 operatsion foyda ko'rdi. Bu yaxshimi? O'tgan yili kamroq sotuvda $27,000 bo'lgan, yaqindagi o'xshash do'kon esa tushumining 15% ini operatsion foyda sifatida oladi. Koeffitsientlar bu raqamlarni Madina solishtirib, harakat qila oladigan narsaga aylantiradi.`,
+        en: `A corner shop made an operating profit of $2,400 this year.
+# On its own
+  $2,400 tells us very little
+# Compared with last year
+  Last year: $2,700 on LOWER sales. Profit has fallen while sales rose
+# Compared with a similar shop
+  A similar shop keeps 15% of its sales as operating profit
+  Our shop: $2,400 / $20,000 = 12%
+= The ratio shows our shop keeps less of each sale than the other shop. Now we can ask why.`,
+        ru: `Магазин у дома получил операционную прибыль $2,400 в этом году.
+# Сама по себе
+  $2,400 говорит очень мало
+# По сравнению с прошлым годом
+  В прошлом году: $2,700 при МЕНЬШИХ продажах. Прибыль упала, хотя продажи выросли
+# По сравнению с похожим магазином
+  Похожий магазин оставляет 15% продаж как операционную прибыль
+  Наш магазин: $2,400 / $20,000 = 12%
+= Коэффициент показывает, что наш магазин оставляет себе меньшую часть каждой продажи. Теперь можно спросить почему.`,
+        uz: `Mahalla do'koni bu yil $2,400 operatsion foyda oldi.
+# O'zi
+  $2,400 juda kam narsa aytadi
+# O'tgan yil bilan solishtirsak
+  O'tgan yil: KAMROQ sotuvda $2,700. Sotuv oshgan, foyda esa tushgan
+# O'xshash do'kon bilan solishtirsak
+  O'xshash do'kon sotuvining 15% ini operatsion foyda sifatida saqlaydi
+  Bizning do'kon: $2,400 / $20,000 = 12%
+= Koeffitsient bizning do'kon har bir sotuvdan kamroq saqlashini ko'rsatadi. Endi sababini so'rash mumkin.`,
+      },
+      simple: {
+        en: `A number on its own says little. "Profit $2,400" — is that good? You only know once you compare it: with last year, with the budget, with a similar business.
+
+Ratios make that comparison easy by putting two related figures together, such as profit and sales. They fall into four groups: profitability (is it making money?), liquidity (can it pay its bills?), efficiency (how fast does cash go round?) and financial position (how risky is its borrowing?). For each ratio ask: what does it mean, what does a change mean, what is normal, and what are its limits?`,
+        ru: `Число само по себе говорит мало. «Прибыль $2,400» — это хорошо? Это понятно, только если сравнить: с прошлым годом, с бюджетом, с похожим бизнесом.
+
+Коэффициенты упрощают сравнение, ставя рядом две связанные цифры, например прибыль и продажи. Они делятся на четыре группы: рентабельность (зарабатывает ли?), ликвидность (может ли платить по счетам?), эффективность (как быстро оборачиваются деньги?) и финансовое положение (насколько рискованны займы?). По каждому коэффициенту спросите: что он значит, что значит его изменение, какова норма и каковы ограничения?`,
+        uz: `Son o'zi kam narsa aytadi. «Foyda $2,400» — bu yaxshimi? Faqat solishtirganda bilasiz: o'tgan yil, byudjet, o'xshash biznes bilan.
+
+Koeffitsientlar ikki bog'liq sonni, masalan foyda va sotuvni yonma-yon qo'yib, solishtirishni osonlashtiradi. Ular to'rt guruhga bo'linadi: rentabellik (pul topyaptimi?), likvidlik (hisoblarni to'lay oladimi?), samaradorlik (pul qanchalik tez aylanadi?) va moliyaviy holat (qarzlari qanchalik xavfli?). Har bir koeffitsient haqida so'rang: nimani anglatadi, o'zgarishi nimani anglatadi, me'yor qanday va cheklovlari nima?`,
       },
     },
     {
@@ -131,11 +186,7 @@ Har bir koeffitsient uchun to'rt savol bering. U nimani bildiradi? Uning o'zgari
 - Qayta baholash jalb qilingan kapital va amortizatsiyani oshiradi, shuning uchun ROCE tushadi.
 - Marja — foyda / sotish narxi. Ustama — foyda / tannarx. 25% ustamada tannarx = narx × 100/125.`,
       },
-      heading: {
-        en: 'Profitability',
-        ru: 'Рентабельность',
-        uz: 'Rentabellik',
-      },
+      heading: { en: 'Profitability', ru: 'Рентабельность', uz: 'Rentabellik' },
       body: {
         en: `Gross profit margin shows the average profit on each sale after the direct cost of the goods. It changes with selling prices, the mix of products sold, purchase or production costs, and inventory values. If gross profit has not grown in line with revenue, ask why: higher purchase costs, inventory write-offs, or other costs put into cost of sales. Food retailers live on low margins and high volume. Jewellers need higher margins to make up for fewer sales.
 
@@ -160,9 +211,68 @@ Jalb qilingan kapital rentabelligi (ROCE) biznesga qo'yilgan har $1 qancha foyda
 Sof aktivlar aylanmasi jalb qilingan kapitalning har $1 qancha tushum berishini, ya'ni aktivlar qanchalik faol ishlatilishini ko'rsatadi. Operatsion marjani aylanmaga ko'paytirsangiz, ROCE chiqadi. Shuning uchun ikki biznes bir xil ROCE ga turli yo'l bilan erishishi mumkin: past marja va yuqori aylanmali supermarket yoki yuqori marja va past aylanmali zargar.`,
       },
       example: {
-        en: `Madina's Mart LLC: revenue $200,000, cost of sales $146,000, operating expenses $30,000. Gross profit is $54,000, a margin of 27%. Operating profit is $24,000, a margin of 12%. Equity is $90,000 and the bank loan $30,000, so capital employed is $120,000. ROCE is $24,000 / $120,000 = 20%. Asset turnover is $200,000 / $120,000 = 1.67 times, and 12% × 1.67 ≈ 20%.`,
-        ru: `Madina's Mart LLC: выручка $200,000, себестоимость $146,000, операционные расходы $30,000. Валовая прибыль $54,000, маржа 27%. Операционная прибыль $24,000, маржа 12%. Капитал $90,000 и банковский заём $30,000, задействованный капитал $120,000. ROCE: $24,000 / $120,000 = 20%. Оборачиваемость: $200,000 / $120,000 = 1.67 раза, и 12% × 1.67 ≈ 20%.`,
-        uz: `Madina's Mart LLC: tushum $200,000, tannarx $146,000, operatsion xarajatlar $30,000. Yalpi foyda $54,000, marja 27%. Operatsion foyda $24,000, marja 12%. Kapital $90,000 va bank qarzi $30,000, jalb qilingan kapital $120,000. ROCE: $24,000 / $120,000 = 20%. Aylanma: $200,000 / $120,000 = 1.67 marta, va 12% × 1.67 ≈ 20%.`,
+        en: `The corner shop's year.
+# Margins
+  Revenue $20,000 - cost of sales $14,600 = gross profit $5,400
+  Gross margin: $5,400 / $20,000 = 27%
+  Gross profit $5,400 - running costs $3,000 = operating profit $2,400
+  Operating margin: $2,400 / $20,000 = 12%
+# ROCE
+  Capital employed: equity $9,000 + bank loan $3,000 = $12,000
+  ROCE: $2,400 / $12,000 = 20%
+# Asset turnover
+  $20,000 / $12,000 = 1.67 times
+= Check: 12% x 1.67 = 20%, the same as ROCE.`,
+        ru: `Год магазина у дома.
+# Маржи
+  Выручка $20,000 - себестоимость $14,600 = валовая прибыль $5,400
+  Валовая маржа: $5,400 / $20,000 = 27%
+  Валовая прибыль $5,400 - текущие расходы $3,000 = операционная прибыль $2,400
+  Операционная маржа: $2,400 / $20,000 = 12%
+# ROCE
+  Задействованный капитал: капитал $9,000 + банковский заём $3,000 = $12,000
+  ROCE: $2,400 / $12,000 = 20%
+# Оборачиваемость активов
+  $20,000 / $12,000 = 1.67 раза
+= Проверка: 12% x 1.67 = 20%, как и ROCE.`,
+        uz: `Mahalla do'konining yili.
+# Marjalar
+  Tushum $20,000 - tannarx $14,600 = yalpi foyda $5,400
+  Yalpi marja: $5,400 / $20,000 = 27%
+  Yalpi foyda $5,400 - joriy xarajatlar $3,000 = operatsion foyda $2,400
+  Operatsion marja: $2,400 / $20,000 = 12%
+# ROCE
+  Jalb qilingan kapital: kapital $9,000 + bank qarzi $3,000 = $12,000
+  ROCE: $2,400 / $12,000 = 20%
+# Aktivlar aylanmasi
+  $20,000 / $12,000 = 1.67 marta
+= Tekshiruv: 12% x 1.67 = 20%, ROCE bilan bir xil.`,
+      },
+      simple: {
+        en: `Profitability ratios ask: how much profit does the business keep?
+
+- Gross profit margin = gross profit / revenue. What is left from each sale after the cost of the goods.
+- Operating profit margin = operating profit / revenue. What is left after ALL running costs too.
+- ROCE = operating profit / capital employed. How much profit each $1 invested earns. Capital employed = equity + long-term loans.
+- Net asset turnover = revenue / capital employed. How many dollars of sales each $1 invested brings in.
+
+Operating margin x asset turnover = ROCE.`,
+        ru: `Коэффициенты рентабельности спрашивают: сколько прибыли остаётся бизнесу?
+
+- Валовая маржа = валовая прибыль / выручка. Что остаётся с каждой продажи после стоимости товара.
+- Операционная маржа = операционная прибыль / выручка. Что остаётся и после ВСЕХ текущих расходов.
+- ROCE = операционная прибыль / задействованный капитал. Сколько прибыли приносит каждый вложенный $1. Задействованный капитал = капитал + долгосрочные займы.
+- Оборачиваемость чистых активов = выручка / задействованный капитал. Сколько долларов продаж приносит каждый вложенный $1.
+
+Операционная маржа x оборачиваемость = ROCE.`,
+        uz: `Rentabellik koeffitsientlari so'raydi: biznesga qancha foyda qoladi?
+
+- Yalpi foyda marjasi = yalpi foyda / tushum. Tovar tannarxidan keyin har bir sotuvdan nima qoladi.
+- Operatsion foyda marjasi = operatsion foyda / tushum. BARCHA joriy xarajatlardan keyin ham nima qoladi.
+- ROCE = operatsion foyda / jalb qilingan kapital. Kiritilgan har $1 qancha foyda keltiradi. Jalb qilingan kapital = kapital + uzoq muddatli qarzlar.
+- Sof aktivlar aylanmasi = tushum / jalb qilingan kapital. Kiritilgan har $1 necha dollar sotuv keltiradi.
+
+Operatsion marja x aylanma = ROCE.`,
       },
     },
     {
@@ -200,11 +310,7 @@ Sof aktivlar aylanmasi jalb qilingan kapitalning har $1 qancha tushum berishini,
 - Uzoq muddatli aktivlarni qayta baholash aylanma aktiv va majburiyatlarga ta'sir qilmaydi, joriy koeffitsient o'zgarmaydi.
 - Supermarketlarda koeffitsientlar ko'pincha past: debitorlar kam, kreditorlar ko'p, pul qattiq nazoratda.`,
       },
-      heading: {
-        en: 'Liquidity',
-        ru: 'Ликвидность',
-        uz: 'Likvidlik',
-      },
+      heading: { en: 'Liquidity', ru: 'Ликвидность', uz: 'Likvidlik' },
       body: {
         en: `The current ratio measures whether current assets are enough to meet current liabilities. Traditionally 2:1 was seen as safe, but today about 1.5:1 is treated as normal, with wide variation between industries. Judge it against what is normal for that business and its sector.
 
@@ -223,9 +329,56 @@ Yuqori yoki o'sayotgan joriy koeffitsient avtomatik yaxshi emas. U sotilmaydigan
 Tezkor koeffitsient zaxirani chiqarib tashlaydi, chunki zaxira pulga eng uzoq aylanadi. U faqat debitorlar va pul joriy majburiyatlarni yopa oladimi, shuni so'raydi. Odatiy oraliq 1:1 dan 0.7:1 gacha. Biznesda kelishilgan overdraft limiti bo'lsa, past tezkor koeffitsient unchalik xavfli emas.`,
       },
       example: {
-        en: `Madina's Mart LLC has inventory $24,000, receivables $15,000 and cash $3,000, so current assets are $42,000. Current liabilities are payables $18,000, tax $5,000 and accruals $5,000, a total of $28,000. The current ratio is $42,000 / $28,000 = 1.5:1. The quick ratio is ($42,000 - $24,000) / $28,000 = 0.64:1, a little low, because most of its current assets are goods on the shelves.`,
-        ru: `У Madina's Mart LLC запасы $24,000, дебиторы $15,000 и деньги $3,000, оборотные активы $42,000. Краткосрочные обязательства: кредиторы $18,000, налог $5,000 и начисления $5,000, всего $28,000. Текущая ликвидность: $42,000 / $28,000 = 1.5:1. Быстрая: ($42,000 - $24,000) / $28,000 = 0.64:1, немного низко, так как большая часть оборотных активов — товар на полках.`,
-        uz: `Madina's Mart LLC da zaxira $24,000, debitorlar $15,000 va pul $3,000, aylanma aktivlar $42,000. Joriy majburiyatlar: kreditorlar $18,000, soliq $5,000 va hisoblanganlar $5,000, jami $28,000. Joriy koeffitsient: $42,000 / $28,000 = 1.5:1. Tezkor: ($42,000 - $24,000) / $28,000 = 0.64:1, biroz past, chunki aylanma aktivlarning ko'pi javondagi tovar.`,
+        en: `The corner shop at the year end.
+# Current assets
+  Inventory $2,400 + receivables $1,500 + cash $300 = $4,200
+# Current liabilities
+  Payables $1,800 + tax $500 + accruals $500 = $2,800
+# Current ratio
+  $4,200 / $2,800 = 1.5:1
+# Quick ratio
+  ($4,200 - $2,400) / $2,800 = 0.64:1
+= 1.5:1 is fine, but 0.64:1 is a little low: most of its current assets are goods on the shelves.`,
+        ru: `Магазин у дома на конец года.
+# Оборотные активы
+  Запасы $2,400 + дебиторы $1,500 + деньги $300 = $4,200
+# Краткосрочные обязательства
+  Кредиторы $1,800 + налог $500 + начисления $500 = $2,800
+# Текущая ликвидность
+  $4,200 / $2,800 = 1.5:1
+# Быстрая ликвидность
+  ($4,200 - $2,400) / $2,800 = 0.64:1
+= 1.5:1 — нормально, но 0.64:1 немного низко: большая часть оборотных активов — товар на полках.`,
+        uz: `Mahalla do'koni yil oxirida.
+# Aylanma aktivlar
+  Zaxira $2,400 + debitorlar $1,500 + pul $300 = $4,200
+# Qisqa muddatli majburiyatlar
+  Kreditorlar $1,800 + soliq $500 + hisoblanganlar $500 = $2,800
+# Joriy likvidlik
+  $4,200 / $2,800 = 1.5:1
+# Tezkor likvidlik
+  ($4,200 - $2,400) / $2,800 = 0.64:1
+= 1.5:1 yaxshi, lekin 0.64:1 biroz past: aylanma aktivlarning ko'pi javondagi tovar.`,
+      },
+      simple: {
+        en: `Liquidity means: can the business pay its bills as they fall due?
+
+- Current ratio = current assets / current liabilities. Around 1.5:1 is normal.
+- Quick ratio (acid test) = (current assets - inventory) / current liabilities. Around 0.7:1 to 1:1 is normal. Inventory is left out because it is the slowest to turn into cash.
+
+Remember the overdraft is a current liability. Very high is not always good either: it can mean unsold goods, slow customers or idle cash.`,
+        ru: `Ликвидность — может ли бизнес платить по счетам в срок?
+
+- Текущая ликвидность = оборотные активы / краткосрочные обязательства. Около 1.5:1 — норма.
+- Быстрая ликвидность = (оборотные активы - запасы) / краткосрочные обязательства. Около 0.7:1–1:1 — норма. Запасы исключают, потому что они медленнее всего превращаются в деньги.
+
+Помните: овердрафт — краткосрочное обязательство. Слишком высокое значение тоже не всегда хорошо: это может быть непроданный товар, медленные покупатели или простаивающие деньги.`,
+        uz: `Likvidlik — biznes hisoblarni muddatida to'lay oladimi?
+
+- Joriy likvidlik = aylanma aktivlar / qisqa muddatli majburiyatlar. Taxminan 1.5:1 me'yor.
+- Tezkor likvidlik = (aylanma aktivlar - zaxira) / qisqa muddatli majburiyatlar. Taxminan 0.7:1–1:1 me'yor. Zaxira chiqariladi, chunki u pulga eng sekin aylanadi.
+
+Esda tuting: overdraft qisqa muddatli majburiyat. Juda yuqori ham har doim yaxshi emas: bu sotilmagan tovar, sekin mijozlar yoki bekor turgan pul bo'lishi mumkin.`,
       },
     },
     {
@@ -301,9 +454,62 @@ Kreditorlik kunlari biznes yetkazib beruvchilarga qancha vaqtda to'lashini ko'rs
 Pul aylanish sikli uchalasini birlashtiradi. Pul yetkazib beruvchiga to'langanda chiqadi va mijoz to'laganda qaytadi, shuning uchun sikl zaxira kunlari plus debitorlik kunlari minus kreditorlik kunlari. Naqd savdo qiladigan do'konda sikl juda qisqa yoki hatto manfiy bo'lishi mumkin. Nasiyaga sotadigan ishlab chiqaruvchida u uzun va ko'proq aylanma kapital kerak.`,
       },
       example: {
-        en: `Madina's Mart LLC: inventory $24,000 and cost of sales $146,000 give $24,000 / $146,000 × 365 = 60 days. Only the cafe customers buy on credit, $73,000 a year, and they owe $15,000: 75 days. Payables of $18,000 give 45 days. The cycle is 60 + 75 - 45 = 90 days. Using total revenue of $200,000 would wrongly show receivables days of only 27.`,
-        ru: `Madina's Mart LLC: запасы $24,000 и себестоимость $146,000 дают $24,000 / $146,000 × 365 = 60 дней. В кредит покупают только кафе, $73,000 в год, и они должны $15,000: 75 дней. Кредиторы $18,000 дают 45 дней. Цикл: 60 + 75 - 45 = 90 дней. Если взять всю выручку $200,000, дни дебиторов ошибочно составят лишь 27.`,
-        uz: `Madina's Mart LLC: zaxira $24,000 va tannarx $146,000: $24,000 / $146,000 × 365 = 60 kun. Nasiyaga faqat kafelar oladi, yiliga $73,000, ular $15,000 qarzdor: 75 kun. $18,000 kreditorlar 45 kun beradi. Sikl: 60 + 75 - 45 = 90 kun. Umumiy tushum $200,000 olinsa, debitorlik kunlari xato ravishda atigi 27 bo'ladi.`,
+        en: `The corner shop again. Cost of sales $14,600.
+# Inventory days
+  $2,400 / $14,600 x 365 = 60 days
+# Receivables days
+  Only cafes buy on credit: $7,300 a year, and they owe $1,500
+  $1,500 / $7,300 x 365 = 75 days
+# Payables days
+  $1,800 / $14,600 x 365 = 45 days
+# Cash conversion cycle
+  60 + 75 - 45 = 90 days
+= Using total revenue $20,000 for receivables would wrongly give 27 days.`,
+        ru: `Снова магазин у дома. Себестоимость $14,600.
+# Дни запасов
+  $2,400 / $14,600 x 365 = 60 дней
+# Дни дебиторов
+  В кредит покупают только кафе: $7,300 в год, должны $1,500
+  $1,500 / $7,300 x 365 = 75 дней
+# Дни кредиторов
+  $1,800 / $14,600 x 365 = 45 дней
+# Цикл оборота денег
+  60 + 75 - 45 = 90 дней
+= Если взять для дебиторов всю выручку $20,000, ошибочно выйдет 27 дней.`,
+        uz: `Yana mahalla do'koni. Tannarx $14,600.
+# Zaxira kunlari
+  $2,400 / $14,600 x 365 = 60 kun
+# Debitorlar kunlari
+  Kreditga faqat kafelar oladi: yiliga $7,300, qarzi $1,500
+  $1,500 / $7,300 x 365 = 75 kun
+# Kreditorlar kunlari
+  $1,800 / $14,600 x 365 = 45 kun
+# Pul aylanish sikli
+  60 + 75 - 45 = 90 kun
+= Debitorlar uchun jami tushum $20,000 olinsa, xato bilan 27 kun chiqadi.`,
+      },
+      simple: {
+        en: `Efficiency ratios count DAYS: how long money is stuck at each stage.
+
+- Inventory days = inventory / cost of sales x 365. How long goods sit before they sell.
+- Receivables days = trade receivables / credit sales x 365. How long customers take to pay.
+- Payables days = trade payables / cost of sales (or credit purchases) x 365. How long we take to pay suppliers.
+
+Cash conversion cycle = inventory days + receivables days - payables days. The shorter it is, the less cash is tied up. If only total revenue is given, assume all sales are on credit.`,
+        ru: `Коэффициенты эффективности считают ДНИ: сколько деньги «застревают» на каждом этапе.
+
+- Дни запасов = запасы / себестоимость x 365. Сколько товар лежит до продажи.
+- Дни дебиторов = торговые дебиторы / продажи в кредит x 365. Сколько покупатели тянут с оплатой.
+- Дни кредиторов = торговые кредиторы / себестоимость (или закупки в кредит) x 365. Сколько мы тянем с оплатой поставщикам.
+
+Цикл оборота денег = дни запасов + дни дебиторов - дни кредиторов. Чем он короче, тем меньше денег связано. Если дана только общая выручка, считайте все продажи кредитными.`,
+        uz: `Samaradorlik koeffitsientlari KUNLARNI sanaydi: pul har bosqichda qancha «qotib» turadi.
+
+- Zaxira kunlari = zaxira / tannarx x 365. Tovar sotilguncha qancha yotadi.
+- Debitorlar kunlari = savdo debitorlari / kreditga sotuv x 365. Mijozlar qancha vaqtda to'laydi.
+- Kreditorlar kunlari = savdo kreditorlari / tannarx (yoki kreditga xarid) x 365. Biz yetkazib beruvchilarga qancha vaqtda to'laymiz.
+
+Pul aylanish sikli = zaxira kunlari + debitorlar kunlari - kreditorlar kunlari. U qancha qisqa bo'lsa, shuncha kam pul bog'lanadi. Faqat jami tushum berilgan bo'lsa, barcha sotuvni kreditga deb hisoblang.`,
       },
     },
     {
@@ -379,22 +585,240 @@ Foizlarni qoplash moliyalashtirish va foyda solig'idan oldingi foyda foiz xaraja
 Moliya maqsadga mos bo'lishi kerak. Doimiy kengayish qisqa muddatli overdraft bilan emas, uzoq muddatli kapital bilan moliyalashtirilishi kerak, qisqa mavsumiy cho'qqini esa overdraft bilan qoplash o'rinli.`,
       },
       example: {
-        en: `Madina's Mart LLC has equity of $90,000 and a $30,000 bank loan. Debt/equity is $30,000 / $90,000 = 33.3%. Gearing is $30,000 / $120,000 = 25%. Interest on the loan is $3,000 and operating profit is $24,000, so interest cover is 8 times, comfortably safe. If Madina used an overdraft over the busy season, it would be a current liability and stay out of both gearing figures.`,
-        ru: `У Madina's Mart LLC капитал $90,000 и банковский заём $30,000. Долг/капитал: $30,000 / $90,000 = 33.3%. Рычаг: $30,000 / $120,000 = 25%. Проценты по займу $3,000, операционная прибыль $24,000, покрытие процентов 8 раз, вполне надёжно. Если Мадина возьмёт овердрафт на горячий сезон, это будет краткосрочное обязательство, и оно не войдёт ни в один показатель рычага.`,
-        uz: `Madina's Mart LLC da kapital $90,000 va $30,000 bank qarzi bor. Qarz/kapital: $30,000 / $90,000 = 33.3%. Leveraj: $30,000 / $120,000 = 25%. Qarz foizi $3,000, operatsion foyda $24,000, foizlarni qoplash 8 marta, yetarlicha xavfsiz. Madina qizg'in mavsumda overdraft olsa, u joriy majburiyat bo'ladi va leverajning hech biriga kirmaydi.`,
+        en: `The corner shop has equity of $9,000 and a $3,000 bank loan.
+# Debt/equity
+  $3,000 / $9,000 = 33.3%
+# Gearing
+  $3,000 / ($9,000 + $3,000) = 25%
+# Interest cover
+  Operating profit $2,400 / loan interest $300 = 8 times
+# A busy-season overdraft
+  A current liability, so it stays out of both gearing figures
+= Low gearing and 8 times cover: comfortably safe.`,
+        ru: `У магазина у дома капитал $9,000 и банковский заём $3,000.
+# Долг/капитал
+  $3,000 / $9,000 = 33.3%
+# Финансовый рычаг
+  $3,000 / ($9,000 + $3,000) = 25%
+# Покрытие процентов
+  Операционная прибыль $2,400 / проценты по займу $300 = 8 раз
+# Овердрафт на сезон
+  Краткосрочное обязательство, в рычаг не входит
+= Низкий рычаг и покрытие в 8 раз: вполне безопасно.`,
+        uz: `Mahalla do'konining kapitali $9,000 va bank qarzi $3,000.
+# Qarz/kapital
+  $3,000 / $9,000 = 33.3%
+# Moliyaviy leveraj
+  $3,000 / ($9,000 + $3,000) = 25%
+# Foizlarni qoplash
+  Operatsion foyda $2,400 / qarz foizi $300 = 8 marta
+# Mavsumiy overdraft
+  Qisqa muddatli majburiyat, leverajga kirmaydi
+= Past leveraj va 8 marta qoplash: bemalol xavfsiz.`,
+      },
+      simple: {
+        en: `These ratios ask: how risky is the way the business is funded?
+
+- Gearing = long-term debt / (equity + long-term debt). The share of long-term money that is borrowed.
+- Debt/equity = long-term debt / equity.
+- Interest cover = operating profit / interest. How many times profit covers the interest bill. Below 2 times is worrying.
+
+Debt must be repaid with interest whatever happens, so more debt means more risk. The overdraft is a current liability, so it stays OUT of gearing. Issuing shares or revaluing assets raises equity, so gearing falls; a bonus issue changes nothing.`,
+        ru: `Эти коэффициенты спрашивают: насколько рискованно финансируется бизнес?
+
+- Финансовый рычаг = долгосрочный долг / (капитал + долгосрочный долг). Доля заёмных средств в долгосрочных деньгах.
+- Долг/капитал = долгосрочный долг / капитал.
+- Покрытие процентов = операционная прибыль / проценты. Во сколько раз прибыль покрывает проценты. Меньше 2 раз — тревожно.
+
+Долг нужно вернуть с процентами в любом случае, поэтому больше долга — больше риска. Овердрафт — краткосрочное обязательство, он НЕ входит в рычаг. Выпуск акций или переоценка активов увеличивают капитал, рычаг падает; бонусная эмиссия ничего не меняет.`,
+        uz: `Bu koeffitsientlar so'raydi: biznes qanchalik xavfli moliyalashtirilgan?
+
+- Moliyaviy leveraj = uzoq muddatli qarz / (kapital + uzoq muddatli qarz). Uzoq muddatli pulning qarz olingan ulushi.
+- Qarz/kapital = uzoq muddatli qarz / kapital.
+- Foizlarni qoplash = operatsion foyda / foiz. Foyda foizni necha marta qoplaydi. 2 martadan kam — xavotirli.
+
+Qarz har qanday holatda foiz bilan qaytarilishi kerak, shuning uchun ko'proq qarz — ko'proq xavf. Overdraft qisqa muddatli majburiyat, u leverajga KIRMAYDI. Aksiya chiqarish yoki aktivlarni qayta baholash kapitalni oshiradi, leveraj tushadi; bonus emissiya hech narsani o'zgartirmaydi.`,
       },
     },
   ],
   glossary: [
-    { term: { en: 'Gross profit margin', ru: 'Валовая маржа', uz: 'Yalpi foyda marjasi' }, definition: { en: 'Gross profit as a percentage of revenue.', ru: 'Валовая прибыль в процентах от выручки.', uz: 'Yalpi foydaning tushumga foiz nisbati.' } },
-    { term: { en: 'Operating profit margin', ru: 'Операционная маржа', uz: 'Operatsion foyda marjasi' }, definition: { en: 'Profit before financing and income taxes as a percentage of revenue.', ru: 'Прибыль до финансирования и налога на прибыль в процентах от выручки.', uz: 'Moliyalashtirish va foyda solig\'idan oldingi foydaning tushumga foiz nisbati.' } },
-    { term: { en: 'Return on capital employed (ROCE)', ru: 'Рентабельность задействованного капитала (ROCE)', uz: 'Jalb qilingan kapital rentabelligi (ROCE)' }, definition: { en: 'Profit before financing and income taxes as a percentage of capital employed.', ru: 'Прибыль до финансирования и налога в процентах от задействованного капитала.', uz: 'Moliyalashtirish va soliqdan oldingi foydaning jalb qilingan kapitalga foiz nisbati.' } },
-    { term: { en: 'Capital employed', ru: 'Задействованный капитал', uz: 'Jalb qilingan kapital' }, definition: { en: 'Equity plus non-current loans, which equals total assets less current liabilities.', ru: 'Капитал плюс долгосрочные займы, что равно всем активам минус краткосрочные обязательства.', uz: 'Kapital plus uzoq muddatli qarzlar, bu jami aktivlar minus joriy majburiyatlarga teng.' } },
-    { term: { en: 'Current ratio', ru: 'Коэффициент текущей ликвидности', uz: 'Joriy likvidlik koeffitsienti' }, definition: { en: 'Current assets divided by current liabilities.', ru: 'Оборотные активы, делённые на краткосрочные обязательства.', uz: 'Aylanma aktivlar joriy majburiyatlarga bo\'lingan.' } },
-    { term: { en: 'Quick ratio (acid test)', ru: 'Коэффициент быстрой ликвидности', uz: 'Tezkor likvidlik koeffitsienti' }, definition: { en: 'Current assets less inventory, divided by current liabilities.', ru: 'Оборотные активы без запасов, делённые на краткосрочные обязательства.', uz: 'Zaxirasiz aylanma aktivlar joriy majburiyatlarga bo\'lingan.' } },
-    { term: { en: 'Cash conversion cycle', ru: 'Цикл оборота денег', uz: 'Pul aylanish sikli' }, definition: { en: 'Inventory days plus receivables days less payables days.', ru: 'Дни запасов плюс дни дебиторов минус дни кредиторов.', uz: 'Zaxira kunlari plus debitorlik kunlari minus kreditorlik kunlari.' } },
-    { term: { en: 'Gearing', ru: 'Финансовый рычаг', uz: 'Moliyaviy leveraj' }, definition: { en: 'The proportion of long-term finance that comes from debt rather than equity.', ru: 'Доля долгосрочного финансирования, которая приходится на долг, а не на капитал.', uz: 'Uzoq muddatli moliyaning kapital emas, qarzdan keladigan ulushi.' } },
-    { term: { en: 'Interest cover', ru: 'Покрытие процентов', uz: 'Foizlarni qoplash' }, definition: { en: 'How many times profit before financing and income taxes covers the interest charge.', ru: 'Сколько раз прибыль до финансирования и налога покрывает процентный расход.', uz: 'Moliyalashtirish va soliqdan oldingi foyda foiz xarajatini necha marta qoplashi.' } },
+    {
+      term: { en: 'Gross profit margin', ru: 'Валовая маржа', uz: 'Yalpi foyda marjasi' },
+      definition: {
+        en: 'Gross profit as a percentage of revenue.',
+        ru: 'Валовая прибыль в процентах от выручки.',
+        uz: 'Yalpi foydaning tushumga foiz nisbati.',
+      },
+      example: {
+        en: 'Sales $20,000, gross profit $5,400: margin 27%.',
+        ru: 'Продажи $20,000, валовая прибыль $5,400: маржа 27%.',
+        uz: 'Sotuv $20,000, yalpi foyda $5,400: marja 27%.',
+      },
+    },
+    {
+      term: { en: 'Operating profit margin', ru: 'Операционная маржа', uz: 'Operatsion foyda marjasi' },
+      definition: {
+        en: 'Profit before financing and income taxes as a percentage of revenue.',
+        ru: 'Прибыль до финансирования и налога на прибыль в процентах от выручки.',
+        uz: 'Moliyalashtirish va foyda solig\'idan oldingi foydaning tushumga foiz nisbati.',
+      },
+      example: {
+        en: 'Operating profit $2,400 on sales $20,000: 12%.',
+        ru: 'Операционная прибыль $2,400 при продажах $20,000: 12%.',
+        uz: '$20,000 sotuvda $2,400 operatsion foyda: 12%.',
+      },
+    },
+    {
+      term: {
+        en: 'Return on capital employed (ROCE)',
+        ru: 'Рентабельность задействованного капитала (ROCE)',
+        uz: 'Jalb qilingan kapital rentabelligi (ROCE)',
+      },
+      definition: {
+        en: 'Profit before financing and income taxes as a percentage of capital employed.',
+        ru: 'Прибыль до финансирования и налога в процентах от задействованного капитала.',
+        uz: 'Moliyalashtirish va soliqdan oldingi foydaning jalb qilingan kapitalga foiz nisbati.',
+      },
+      example: {
+        en: '$2,400 profit on $12,000 invested: ROCE 20%.',
+        ru: 'Прибыль $2,400 на вложенные $12,000: ROCE 20%.',
+        uz: 'Kiritilgan $12,000 ga $2,400 foyda: ROCE 20%.',
+      },
+    },
+    {
+      term: { en: 'Capital employed', ru: 'Задействованный капитал', uz: 'Jalb qilingan kapital' },
+      definition: {
+        en: 'Equity plus non-current loans, which equals total assets less current liabilities.',
+        ru: 'Капитал плюс долгосрочные займы, что равно всем активам минус краткосрочные обязательства.',
+        uz: 'Kapital plus uzoq muddatli qarzlar, bu jami aktivlar minus joriy majburiyatlarga teng.',
+      },
+      example: {
+        en: 'Equity $9,000 + long-term loan $3,000 = $12,000.',
+        ru: 'Капитал $9,000 + долгосрочный заём $3,000 = $12,000.',
+        uz: 'Kapital $9,000 + uzoq muddatli qarz $3,000 = $12,000.',
+      },
+    },
+    {
+      term: { en: 'Net asset turnover', ru: 'Оборачиваемость чистых активов', uz: 'Sof aktivlar aylanmasi' },
+      definition: {
+        en: 'Revenue divided by capital employed: how much revenue each $1 invested brings in.',
+        ru: 'Выручка, делённая на задействованный капитал: сколько выручки приносит каждый вложенный $1.',
+        uz: 'Tushum jalb qilingan kapitalga bo\'linadi: kiritilgan har $1 qancha tushum keltiradi.',
+      },
+      example: {
+        en: 'Sales $20,000 / capital employed $12,000 = 1.67 times.',
+        ru: 'Продажи $20,000 / задействованный капитал $12,000 = 1.67 раза.',
+        uz: 'Sotuv $20,000 / jalb qilingan kapital $12,000 = 1.67 marta.',
+      },
+    },
+    {
+      term: { en: 'Current ratio', ru: 'Коэффициент текущей ликвидности', uz: 'Joriy likvidlik koeffitsienti' },
+      definition: {
+        en: 'Current assets divided by current liabilities.',
+        ru: 'Оборотные активы, делённые на краткосрочные обязательства.',
+        uz: 'Aylanma aktivlar joriy majburiyatlarga bo\'lingan.',
+      },
+      example: {
+        en: 'Current assets $4,200 / current liabilities $2,800 = 1.5:1.',
+        ru: 'Оборотные активы $4,200 / краткосрочные обязательства $2,800 = 1.5:1.',
+        uz: 'Aylanma aktivlar $4,200 / qisqa muddatli majburiyatlar $2,800 = 1.5:1.',
+      },
+    },
+    {
+      term: {
+        en: 'Quick ratio (acid test)',
+        ru: 'Коэффициент быстрой ликвидности',
+        uz: 'Tezkor likvidlik koeffitsienti',
+      },
+      definition: {
+        en: 'Current assets less inventory, divided by current liabilities.',
+        ru: 'Оборотные активы без запасов, делённые на краткосрочные обязательства.',
+        uz: 'Zaxirasiz aylanma aktivlar joriy majburiyatlarga bo\'lingan.',
+      },
+      example: {
+        en: '($4,200 - inventory $2,400) / $2,800 = 0.64:1.',
+        ru: '($4,200 - запасы $2,400) / $2,800 = 0.64:1.',
+        uz: '($4,200 - zaxira $2,400) / $2,800 = 0.64:1.',
+      },
+    },
+    {
+      term: { en: 'Inventory days', ru: 'Дни запасов', uz: 'Zaxira kunlari' },
+      definition: {
+        en: 'Inventory divided by cost of sales, times 365: how long goods are held before they are sold.',
+        ru: 'Запасы, делённые на себестоимость, умноженные на 365: сколько товар лежит до продажи.',
+        uz: 'Zaxira tannarxga bo\'linib 365 ga ko\'paytiriladi: tovar sotilguncha qancha saqlanadi.',
+      },
+      example: {
+        en: '$2,400 / $14,600 x 365 = 60 days.',
+        ru: '$2,400 / $14,600 x 365 = 60 дней.',
+        uz: '$2,400 / $14,600 x 365 = 60 kun.',
+      },
+    },
+    {
+      term: { en: 'Receivables days', ru: 'Дни дебиторов', uz: 'Debitorlar kunlari' },
+      definition: {
+        en: 'Trade receivables divided by credit sales, times 365: how long credit customers take to pay.',
+        ru: 'Торговые дебиторы, делённые на продажи в кредит, умноженные на 365: сколько покупатели в кредит тянут с оплатой.',
+        uz: 'Savdo debitorlari kreditga sotuvga bo\'linib 365 ga ko\'paytiriladi: kredit mijozlar qancha vaqtda to\'laydi.',
+      },
+      example: {
+        en: '$1,500 / $7,300 x 365 = 75 days.',
+        ru: '$1,500 / $7,300 x 365 = 75 дней.',
+        uz: '$1,500 / $7,300 x 365 = 75 kun.',
+      },
+    },
+    {
+      term: { en: 'Payables days', ru: 'Дни кредиторов', uz: 'Kreditorlar kunlari' },
+      definition: {
+        en: 'Trade payables divided by credit purchases (or cost of sales), times 365: how long the business takes to pay suppliers.',
+        ru: 'Торговые кредиторы, делённые на закупки в кредит (или себестоимость), умноженные на 365: сколько бизнес тянет с оплатой поставщикам.',
+        uz: 'Savdo kreditorlari kreditga xaridga (yoki tannarxga) bo\'linib 365 ga ko\'paytiriladi: biznes yetkazib beruvchilarga qancha vaqtda to\'laydi.',
+      },
+      example: {
+        en: '$1,800 / $14,600 x 365 = 45 days.',
+        ru: '$1,800 / $14,600 x 365 = 45 дней.',
+        uz: '$1,800 / $14,600 x 365 = 45 kun.',
+      },
+    },
+    {
+      term: { en: 'Cash conversion cycle', ru: 'Цикл оборота денег', uz: 'Pul aylanish sikli' },
+      definition: {
+        en: 'Inventory days plus receivables days less payables days.',
+        ru: 'Дни запасов плюс дни дебиторов минус дни кредиторов.',
+        uz: 'Zaxira kunlari plus debitorlik kunlari minus kreditorlik kunlari.',
+      },
+      example: {
+        en: '60 inventory days + 75 receivables days - 45 payables days = 90 days.',
+        ru: '60 дней запасов + 75 дней дебиторов - 45 дней кредиторов = 90 дней.',
+        uz: '60 zaxira kuni + 75 debitorlar kuni - 45 kreditorlar kuni = 90 kun.',
+      },
+    },
+    {
+      term: { en: 'Gearing', ru: 'Финансовый рычаг', uz: 'Moliyaviy leveraj' },
+      definition: {
+        en: 'The proportion of long-term finance that comes from debt rather than equity.',
+        ru: 'Доля долгосрочного финансирования, которая приходится на долг, а не на капитал.',
+        uz: 'Uzoq muddatli moliyaning kapital emas, qarzdan keladigan ulushi.',
+      },
+      example: {
+        en: 'Loan $3,000 out of $12,000 of long-term money: 25%.',
+        ru: 'Заём $3,000 из $12,000 долгосрочных денег: 25%.',
+        uz: '$12,000 uzoq muddatli puldan $3,000 qarz: 25%.',
+      },
+    },
+    {
+      term: { en: 'Interest cover', ru: 'Покрытие процентов', uz: 'Foizlarni qoplash' },
+      definition: {
+        en: 'How many times profit before financing and income taxes covers the interest charge.',
+        ru: 'Сколько раз прибыль до финансирования и налога покрывает процентный расход.',
+        uz: 'Moliyalashtirish va soliqdan oldingi foyda foiz xarajatini necha marta qoplashi.',
+      },
+      example: {
+        en: 'Profit $2,400 covers interest of $300 eight times.',
+        ru: 'Прибыль $2,400 покрывает проценты $300 восемь раз.',
+        uz: '$2,400 foyda $300 foizni sakkiz marta qoplaydi.',
+      },
+    },
   ],
 };
 

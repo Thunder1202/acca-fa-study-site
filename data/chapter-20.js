@@ -8,11 +8,31 @@ const chapter20 = {
     uz: 'Konsolidatsiyalangan foyda yoki zarar hisoboti va assotsiatsiyalangan kompaniyalar',
   },
   objectives: [
-    { en: 'Prepare a consolidated statement of profit or loss or extracts from it', ru: 'Составлять консолидированный отчёт о прибыли или убытке или его части', uz: 'Konsolidatsiyalangan foyda yoki zarar hisoboti yoki uning qismlarini tuzish' },
-    { en: 'Adjust for intra-group trading, unrealised profit and mid-year acquisitions', ru: 'Корректировать внутригрупповую торговлю, нереализованную прибыль и покупку в середине года', uz: 'Guruh ichidagi savdo, amalga oshmagan foyda va yil o\'rtasidagi xaridni tuzatish' },
-    { en: 'Calculate the profit attributable to the non-controlling interest', ru: 'Рассчитывать прибыль, относящуюся к неконтролирующей доле', uz: 'Nazoratsiz ulushga tegishli foydani hisoblash' },
-    { en: 'Define and identify an associate', ru: 'Определять и распознавать ассоциированную компанию', uz: 'Assotsiatsiyalangan kompaniyani ta\'riflash va aniqlash' },
-    { en: 'Describe the principle of equity accounting', ru: 'Описывать принцип метода долевого участия', uz: 'Ulushli qatnashish usuli tamoyilini tavsiflash' },
+    {
+      en: 'Prepare a consolidated statement of profit or loss or extracts from it',
+      ru: 'Составлять консолидированный отчёт о прибыли или убытке или его части',
+      uz: 'Konsolidatsiyalangan foyda yoki zarar hisoboti yoki uning qismlarini tuzish',
+    },
+    {
+      en: 'Adjust for intra-group trading, unrealised profit and mid-year acquisitions',
+      ru: 'Корректировать внутригрупповую торговлю, нереализованную прибыль и покупку в середине года',
+      uz: 'Guruh ichidagi savdo, amalga oshmagan foyda va yil o\'rtasidagi xaridni tuzatish',
+    },
+    {
+      en: 'Calculate the profit attributable to the non-controlling interest',
+      ru: 'Рассчитывать прибыль, относящуюся к неконтролирующей доле',
+      uz: 'Nazoratsiz ulushga tegishli foydani hisoblash',
+    },
+    {
+      en: 'Define and identify an associate',
+      ru: 'Определять и распознавать ассоциированную компанию',
+      uz: 'Assotsiatsiyalangan kompaniyani ta\'riflash va aniqlash',
+    },
+    {
+      en: 'Describe the principle of equity accounting',
+      ru: 'Описывать принцип метода долевого участия',
+      uz: 'Ulushli qatnashish usuli tamoyilini tavsiflash',
+    },
   ],
   sections: [
     {
@@ -79,9 +99,59 @@ So'ng guruh ichidagi savdoni chiqaring. Bir guruh kompaniyasining boshqasiga sot
 Nihoyat, yil foydasidan keyin u qanday bo'linishini ko'rsating. Nazoratsiz ulushga sho'baning soliqdan keyingi foydasidagi foizi tegishli. Amalga oshmagan foydani yaratgan sotuvni sho'ba qilgan bo'lsa, NCI bu tuzatishdan ham o'z ulushini ko'taradi. Qolgani bosh kompaniya egalariga tegishli.`,
       },
       example: {
-        en: `Madina's Mart's revenue is $200,000 and cost of sales $146,000. Since 1 April the bakery's revenue is $60,000 and cost of sales $36,000, and it sold $6,000 of bread to Madina's Mart, with $1,000 of unrealised profit left in inventory. Group revenue is $200,000 + $60,000 - $6,000 = $254,000. Group cost of sales is $146,000 + $36,000 - $6,000 + $1,000 = $177,000. The bakery's post-acquisition profit is $6,000, and it was the seller, so the NCI's share is 20% × ($6,000 - $1,000) = $1,000.`,
-        ru: `Выручка Madina's Mart $200,000, себестоимость $146,000. С 1 апреля выручка пекарни $60,000, себестоимость $36,000, и она продала Madina's Mart хлеба на $6,000, оставив в запасах $1,000 нереализованной прибыли. Выручка группы $200,000 + $60,000 - $6,000 = $254,000. Себестоимость группы $146,000 + $36,000 - $6,000 + $1,000 = $177,000. Прибыль пекарни после покупки $6,000, продавала она, поэтому доля NCI 20% × ($6,000 - $1,000) = $1,000.`,
-        uz: `Madina's Mart tushumi $200,000, tannarxi $146,000. 1 apreldan beri novvoyxona tushumi $60,000, tannarxi $36,000, u Madina's Mart ga $6,000 lik non sotdi, zaxirada $1,000 amalga oshmagan foyda qoldi. Guruh tushumi $200,000 + $60,000 - $6,000 = $254,000. Guruh tannarxi $146,000 + $36,000 - $6,000 + $1,000 = $177,000. Novvoyxonaning xariddan keyingi foydasi $6,000, sotuvchi u edi, shuning uchun NCI ulushi 20% × ($6,000 - $1,000) = $1,000.`,
+        en: `Shop Co owns 80% of Bake Co from 1 April. Year end 31 December.
+# Revenue
+  Shop Co $20,000 + Bake Co (since 1 April) $6,000 - bread sold to Shop Co $600 = $25,400
+# Cost of sales
+  $14,600 + $3,600 - $600 + unrealised profit $100 = $17,700
+# NCI share of profit
+  Bake Co's profit since 1 April: $600
+  Bake Co was the seller, so take off the PURP: $600 - $100 = $500
+  20% x $500 = $100
+= Group revenue $25,400; cost of sales $17,700; NCI $100.`,
+        ru: `Shop Co владеет 80% Bake Co с 1 апреля. Конец года 31 декабря.
+# Выручка
+  Shop Co $20,000 + Bake Co (с 1 апреля) $6,000 - хлеб, проданный Shop Co, $600 = $25,400
+# Себестоимость
+  $14,600 + $3,600 - $600 + нереализованная прибыль $100 = $17,700
+# Доля NCI в прибыли
+  Прибыль Bake Co с 1 апреля: $600
+  Продавала Bake Co, вычитаем PURP: $600 - $100 = $500
+  20% x $500 = $100
+= Выручка группы $25,400; себестоимость $17,700; NCI $100.`,
+        uz: `Shop Co 1 apreldan Bake Co ning 80% iga ega. Yil oxiri 31 dekabr.
+# Tushum
+  Shop Co $20,000 + Bake Co (1 apreldan) $6,000 - Shop Co ga sotilgan non $600 = $25,400
+# Tannarx
+  $14,600 + $3,600 - $600 + amalga oshmagan foyda $100 = $17,700
+# NCI ning foydadagi ulushi
+  Bake Co ning 1 apreldan foydasi: $600
+  Sotuvchi Bake Co, PURP ni ayiramiz: $600 - $100 = $500
+  20% x $500 = $100
+= Guruh tushumi $25,400; tannarx $17,700; NCI $100.`,
+      },
+      simple: {
+        en: `The group statement of profit or loss shows the whole group's year as if it were one business.
+
+- Add the parent's and subsidiary's income and costs line by line, in FULL.
+- Sales between group companies are just goods moving between the group's own shops: take the whole amount out of revenue AND out of cost of sales.
+- If some of those goods are still unsold at the year end, add the unrealised profit (PURP) to cost of sales.
+
+After profit for the year, split it: the NCI gets its % of the subsidiary's profit (less its % of any PURP, if the subsidiary was the seller); the rest belongs to the parent's owners.`,
+        ru: `Групповой отчёт о прибыли или убытке показывает год всей группы, как будто это один бизнес.
+
+- Складываем доходы и расходы материнской и дочерней построчно, ПОЛНОСТЬЮ.
+- Продажи между компаниями группы — это просто перемещение товара между своими магазинами: убираем всю сумму из выручки И из себестоимости.
+- Если часть этого товара не продана на конец года, прибавляем нереализованную прибыль (PURP) к себестоимости.
+
+После прибыли за год делим её: NCI получает свой % прибыли дочерней (минус свой % PURP, если продавала дочерняя); остальное принадлежит владельцам материнской.`,
+        uz: `Guruh foyda yoki zarar hisoboti butun guruh yilini go'yo u bitta biznes kabi ko'rsatadi.
+
+- Bosh va sho'ba kompaniyalarning daromad va xarajatlarini qatorma-qator, TO'LIQ qo'shamiz.
+- Guruh kompaniyalari orasidagi sotuv — tovarning o'z do'konlari orasida ko'chishi: butun summani tushumdan HAM, tannarxdan HAM chiqaramiz.
+- Bu tovarning bir qismi yil oxirida sotilmagan bo'lsa, amalga oshmagan foydani (PURP) tannarxga qo'shamiz.
+
+Yil foydasidan keyin uni bo'lamiz: NCI sho'ba foydasidan o'z % ini oladi (sho'ba sotgan bo'lsa, PURP dan o'z % i ayiriladi); qolgani bosh kompaniya egalariga.`,
       },
     },
     {
@@ -116,11 +186,7 @@ Nihoyat, yil foydasidan keyin u qanday bo'linishini ko'rsating. Nazoratsiz ulush
 - Avval vaqt bo'yicha bo'ling, so'ng xariddan keyingi guruh ichidagi sotuvni to'liq ayiring.
 - Xariddan oldingi foyda gudvil hisobiga kiradi, hech qachon guruh foyda yoki zarar hisobotiga emas.`,
       },
-      heading: {
-        en: 'Mid-year acquisitions',
-        ru: 'Покупка в середине года',
-        uz: 'Yil o\'rtasidagi xarid',
-      },
+      heading: { en: 'Mid-year acquisitions', ru: 'Покупка в середине года', uz: 'Yil o\'rtasidagi xarid' },
       body: {
         en: `A subsidiary's results are consolidated only from the date the parent gained control. Profit earned before that date was earned for the old owners. It is pre-acquisition and is part of the net assets that the parent bought.
 
@@ -139,9 +205,53 @@ Sho'ba yil o'rtasida olinsa, uning tushumi va har bir xarajat qatori vaqt bo'yic
 Vaqt bo'yicha bo'lgach, guruh ichidagi sotuv va amalga oshmagan foydani odatdagidek chiqaring. Faqat xarid sanasidan keyingi savdo guruh ichidagi, chunki undan oldin kompaniyalar bir guruhda emas edi. Xariddan oldingi sotuvlar vaqt bo'yicha bo'lishda allaqachon chiqarilgan.`,
       },
       example: {
-        en: `The bakery's revenue for all of 20X6 was $80,000 and its cost of sales $48,000. Madina's Mart gained control on 1 April, so 9/12 is included: $60,000 of revenue and $36,000 of cost of sales. Its profit of $8,000 for the year gives $6,000 after acquisition. The other $2,000, earned from January to March, is pre-acquisition and was part of the net assets used to calculate goodwill.`,
-        ru: `Выручка пекарни за весь 20X6 год $80,000, себестоимость $48,000. Madina's Mart получила контроль 1 апреля, поэтому включается 9/12: $60,000 выручки и $36,000 себестоимости. Из годовой прибыли $8,000 после покупки приходится $6,000. Остальные $2,000, заработанные с января по март, — прибыль до покупки, они вошли в чистые активы для расчёта гудвила.`,
-        uz: `Novvoyxonaning butun 20X6 yilgi tushumi $80,000, tannarxi $48,000. Madina's Mart nazoratni 1 aprelda oldi, shuning uchun 9/12 kiritiladi: $60,000 tushum va $36,000 tannarx. Yillik $8,000 foydadan xariddan keyin $6,000. Yanvar-martda topilgan qolgan $2,000 xariddan oldingi va gudvilni hisoblashdagi sof aktivlarga kirgan.`,
+        en: `Bake Co's whole year 20X6: revenue $8,000, cost of sales $4,800, profit $800. Shop Co took control on 1 April.
+# Months in the group
+  April to December: 9 months
+# Time-apportion each line
+  Revenue: $8,000 x 9/12 = $6,000
+  Cost of sales: $4,800 x 9/12 = $3,600
+  Profit: $800 x 9/12 = $600
+# The other 3 months
+  $800 - $600 = $200 earned January to March: pre-acquisition, part of goodwill
+= Only $6,000 of Bake Co's revenue enters the group statement.`,
+        ru: `Весь 20X6 год Bake Co: выручка $8,000, себестоимость $4,800, прибыль $800. Shop Co получила контроль 1 апреля.
+# Месяцы в группе
+  Апрель–декабрь: 9 месяцев
+# Распределяем каждую строку по времени
+  Выручка: $8,000 x 9/12 = $6,000
+  Себестоимость: $4,800 x 9/12 = $3,600
+  Прибыль: $800 x 9/12 = $600
+# Остальные 3 месяца
+  $800 - $600 = $200 заработаны в январе–марте: до покупки, часть гудвила
+= В отчёт группы входит только $6,000 выручки Bake Co.`,
+        uz: `Bake Co ning butun 20X6 yili: tushum $8,000, tannarx $4,800, foyda $800. Shop Co 1 aprelda nazoratni oldi.
+# Guruhdagi oylar
+  Aprel–dekabr: 9 oy
+# Har bir qatorni vaqt bo'yicha taqsimlaymiz
+  Tushum: $8,000 x 9/12 = $6,000
+  Tannarx: $4,800 x 9/12 = $3,600
+  Foyda: $800 x 9/12 = $600
+# Qolgan 3 oy
+  $800 - $600 = $200 yanvar–martda topilgan: xariddan oldingi, gudvil qismi
+= Guruh hisobotiga Bake Co tushumining faqat $6,000 i kiradi.`,
+      },
+      simple: {
+        en: `A subsidiary's results count only from the day the parent took control. What it earned before belonged to the old owners (and was part of the net assets used for goodwill).
+
+So if it was bought part-way through the year, include only the months since: take that fraction of EVERY line (revenue, cost of sales, expenses, tax), assuming they happen evenly.
+
+Count whole months. Bought 1 October, year end 31 December: 3/12. Then cancel only the intra-group sales made after the purchase.`,
+        ru: `Результаты дочерней учитываются только со дня получения контроля. Заработанное раньше принадлежало старым владельцам (и вошло в чистые активы для расчёта гудвила).
+
+Поэтому при покупке в середине года включаем только месяцы после неё: берём эту долю от КАЖДОЙ строки (выручка, себестоимость, расходы, налог), считая, что всё происходит равномерно.
+
+Считайте целые месяцы. Покупка 1 октября, конец года 31 декабря: 3/12. Затем исключаем только внутригрупповые продажи после покупки.`,
+        uz: `Sho'ba natijalari faqat bosh kompaniya nazoratni olgan kundan hisoblanadi. Undan oldin topilgani eski egalarga tegishli edi (va gudvil uchun sof aktivlarga kirgan).
+
+Shuning uchun yil o'rtasida sotib olinsa, faqat undan keyingi oylarni olamiz: HAR BIR qatorning (tushum, tannarx, xarajatlar, soliq) shu ulushini, hammasi bir tekis bo'ladi deb.
+
+To'liq oylarni sanang. 1 oktyabrda olingan, yil oxiri 31 dekabr: 3/12. Keyin faqat xariddan keyingi guruh ichidagi sotuvlarni chiqaramiz.`,
       },
     },
     {
@@ -220,18 +330,128 @@ Konsolidatsiyalangan foyda yoki zarar hisobotida u operatsion foydadan keyin bit
 Ulushli qatnashish faqat konsolidatsiyalangan hisobotda ishlatiladi, shuning uchun sho'basi yo'q investor uni qo'llamaydi. Sarmoya na nazorat, na sezilarli ta'sir bermasa, u oddiy sarmoya: moliyaviy holat hisobotida uzoq muddatli aktiv, olingan dividendlar daromad sifatida.`,
       },
       example: {
-        en: `On 1 January 20X6 Madina's Mart buys 30% of Chorsu Tea House LLC for $12,000 and gets one seat on its board. That is significant influence, so the tea house is an associate. It makes a profit after tax of $5,000 in 20X6. The group statement of profit or loss shows a share of profit of associates of 30% × $5,000 = $1,500. The group statement of financial position shows an investment in associate of $12,000 + $1,500 = $13,500. None of the tea house's assets or liabilities are added line by line.`,
-        ru: `1 января 20X6 Madina's Mart покупает 30% Chorsu Tea House LLC за $12,000 и получает одно место в совете. Это значительное влияние, поэтому чайхана — ассоциированная компания. Её прибыль после налога в 20X6 — $5,000. Отчёт группы о прибыли или убытке показывает долю в прибыли ассоциированных 30% × $5,000 = $1,500. Отчёт группы о финансовом положении показывает вложение в ассоциированную $12,000 + $1,500 = $13,500. Активы и обязательства чайханы построчно не добавляются.`,
-        uz: `20X6 yil 1 yanvarda Madina's Mart Chorsu Tea House LLC ning 30% ini $12,000 ga sotib oladi va kengashda bitta o'rin oladi. Bu sezilarli ta'sir, shuning uchun choyxona assotsiatsiyalangan kompaniya. Uning 20X6 dagi soliqdan keyingi foydasi $5,000. Guruh foyda yoki zarar hisobotida assotsiatsiyalangan kompaniyalar foydasidagi ulush 30% × $5,000 = $1,500. Guruh moliyaviy holat hisobotida assotsiatsiyalangan kompaniyadagi sarmoya $12,000 + $1,500 = $13,500. Choyxona aktiv va majburiyatlari qatorma-qator qo'shilmaydi.`,
+        en: `On 1 January 20X6 Shop Co buys 30% of a tea house for $1,200 and gets one seat on its board.
+# What kind of investment
+  30% and a board seat: significant influence, so an ASSOCIATE
+# The tea house's year
+  Profit after tax: $500
+# Group profit or loss
+  Share of profit of associates: 30% x $500 = $150
+# Group statement of financial position
+  Investment in associate: $1,200 + $150 = $1,350
+= One line in each statement. None of the tea house's assets are added line by line.`,
+        ru: `1 января 20X6 Shop Co покупает 30% чайханы за $1,200 и получает одно место в совете.
+# Что это за вложение
+  30% и место в совете: значительное влияние, значит АССОЦИИРОВАННАЯ
+# Год чайханы
+  Прибыль после налога: $500
+# Прибыль или убыток группы
+  Доля в прибыли ассоциированных: 30% x $500 = $150
+# Отчёт о финансовом положении группы
+  Инвестиция в ассоциированную: $1,200 + $150 = $1,350
+= Одна строка в каждом отчёте. Активы чайханы построчно не складывают.`,
+        uz: `20X6 yil 1 yanvarda Shop Co choyxonaning 30% ini $1,200 ga sotib oladi va kengashda bitta o'rin oladi.
+# Bu qanday sarmoya
+  30% va kengashda o'rin: sezilarli ta'sir, demak ASSOTSIATSIYALANGAN
+# Choyxona yili
+  Soliqdan keyingi foyda: $500
+# Guruh foyda yoki zarari
+  Assotsiatsiyalanganlar foydasidagi ulush: 30% x $500 = $150
+# Guruh moliyaviy holat hisoboti
+  Assotsiatsiyalangan kompaniyaga investitsiya: $1,200 + $150 = $1,350
+= Har bir hisobotda bitta qator. Choyxona aktivlari qatorma-qator qo'shilmaydi.`,
+      },
+      simple: {
+        en: `An associate is a company the investor can INFLUENCE but not control, usually with 20% to 50% of the votes and a seat on the board. (Over 50%, or most of the board, is control: a subsidiary.)
+
+An associate is NOT added line by line. It is shown on just one line in each statement (the equity method):
+- Statement of financial position: cost + group share of its profits since purchase.
+- Profit or loss: group share of its profit after tax.
+
+Dividends from the associate are not shown as income (they are already inside that share), and sales with it are not cancelled.`,
+        ru: `Ассоциированная компания — та, на которую инвестор может ВЛИЯТЬ, но не контролирует: обычно 20%–50% голосов и место в совете. (Больше 50% или большинство совета — это контроль: дочерняя.)
+
+Ассоциированную НЕ складывают построчно. Её показывают одной строкой в каждом отчёте (метод долевого участия):
+- Отчёт о финансовом положении: стоимость + доля группы в её прибыли после покупки.
+- Прибыль или убыток: доля группы в её прибыли после налога.
+
+Дивиденды от ассоциированной не показывают как доход (они уже внутри этой доли), а продажи с ней не исключают.`,
+        uz: `Assotsiatsiyalangan kompaniya — investor TA'SIR qila oladigan, lekin nazorat qilmaydigan kompaniya: odatda ovozlarning 20%–50% i va kengashda o'rin. (50% dan ko'p yoki kengash ko'pchiligi — nazorat: sho'ba.)
+
+Assotsiatsiyalangan kompaniya qatorma-qator QO'SHILMAYDI. U har bir hisobotda bitta qatorda ko'rsatiladi (ulushli qatnashish usuli):
+- Moliyaviy holat hisoboti: tannarx + xariddan keyingi foydasidan guruh ulushi.
+- Foyda yoki zarar: soliqdan keyingi foydasidan guruh ulushi.
+
+Assotsiatsiyalangan kompaniyadan dividendlar daromad sifatida ko'rsatilmaydi (ular shu ulush ichida), u bilan sotuvlar esa chiqarilmaydi.`,
       },
     },
   ],
   glossary: [
-    { term: { en: 'Intra-group trading', ru: 'Внутригрупповая торговля', uz: 'Guruh ichidagi savdo' }, definition: { en: 'Sales and purchases between companies in the same group, cancelled on consolidation.', ru: 'Продажи и покупки между компаниями одной группы, исключаемые при консолидации.', uz: 'Bir guruh kompaniyalari o\'rtasidagi oldi-sotdi, konsolidatsiyada chiqariladi.' } },
-    { term: { en: 'Time-apportionment', ru: 'Распределение по времени', uz: 'Vaqt bo\'yicha taqsimlash' }, definition: { en: 'Including only the part of a subsidiary\'s results earned after the acquisition date.', ru: 'Включение только той части результатов дочерней, что получена после даты покупки.', uz: 'Sho\'ba natijalarining faqat xarid sanasidan keyin topilgan qismini kiritish.' } },
-    { term: { en: 'Associate', ru: 'Ассоциированная компания', uz: 'Assotsiatsiyalangan kompaniya' }, definition: { en: 'An entity over which the investor has significant influence.', ru: 'Предприятие, на которое инвестор имеет значительное влияние.', uz: 'Investor sezilarli ta\'sirga ega korxona.' } },
-    { term: { en: 'Significant influence', ru: 'Значительное влияние', uz: 'Sezilarli ta\'sir' }, definition: { en: 'The power to take part in an investee\'s policy decisions without controlling them.', ru: 'Право участвовать в решениях о политике объекта, не контролируя их.', uz: 'Obyekt siyosati qarorlarida ularni nazorat qilmay qatnashish huquqi.' } },
-    { term: { en: 'Equity method', ru: 'Метод долевого участия', uz: 'Ulushli qatnashish usuli' }, definition: { en: 'Recording an investment at cost, then adjusting it for the investor\'s share of post-acquisition changes in net assets.', ru: 'Учёт вложения по стоимости с последующей корректировкой на долю инвестора в изменении чистых активов после покупки.', uz: 'Sarmoyani qiymatda yozib, so\'ng xariddan keyingi sof aktivlar o\'zgarishidagi investor ulushiga tuzatish.' } },
+    {
+      term: { en: 'Intra-group trading', ru: 'Внутригрупповая торговля', uz: 'Guruh ichidagi savdo' },
+      definition: {
+        en: 'Sales and purchases between companies in the same group, cancelled on consolidation.',
+        ru: 'Продажи и покупки между компаниями одной группы, исключаемые при консолидации.',
+        uz: 'Bir guruh kompaniyalari o\'rtasidagi oldi-sotdi, konsolidatsiyada chiqariladi.',
+      },
+      example: {
+        en: 'Bake Co sells $600 of bread to Shop Co: removed from group revenue and cost of sales.',
+        ru: 'Bake Co продаёт хлеб на $600 Shop Co: исключается из выручки и себестоимости группы.',
+        uz: 'Bake Co Shop Co ga $600 lik non sotadi: guruh tushumi va tannarxidan chiqariladi.',
+      },
+    },
+    {
+      term: { en: 'Time-apportionment', ru: 'Распределение по времени', uz: 'Vaqt bo\'yicha taqsimlash' },
+      definition: {
+        en: 'Including only the part of a subsidiary\'s results earned after the acquisition date.',
+        ru: 'Включение только той части результатов дочерней, что получена после даты покупки.',
+        uz: 'Sho\'ba natijalarining faqat xarid sanasidan keyin topilgan qismini kiritish.',
+      },
+      example: {
+        en: 'Bought on 1 April: 9/12 of Bake Co\'s $8,000 revenue = $6,000.',
+        ru: 'Куплена 1 апреля: 9/12 от выручки Bake Co $8,000 = $6,000.',
+        uz: '1 aprelda olingan: Bake Co ning $8,000 tushumining 9/12 i = $6,000.',
+      },
+    },
+    {
+      term: { en: 'Associate', ru: 'Ассоциированная компания', uz: 'Assotsiatsiyalangan kompaniya' },
+      definition: {
+        en: 'An entity over which the investor has significant influence.',
+        ru: 'Предприятие, на которое инвестор имеет значительное влияние.',
+        uz: 'Investor sezilarli ta\'sirga ega korxona.',
+      },
+      example: {
+        en: 'A tea house in which Shop Co holds 30% and one board seat.',
+        ru: 'Чайхана, где Shop Co владеет 30% и одним местом в совете.',
+        uz: 'Shop Co 30% va kengashda bitta o\'ringa ega bo\'lgan choyxona.',
+      },
+    },
+    {
+      term: { en: 'Significant influence', ru: 'Значительное влияние', uz: 'Sezilarli ta\'sir' },
+      definition: {
+        en: 'The power to take part in an investee\'s policy decisions without controlling them.',
+        ru: 'Право участвовать в решениях о политике объекта, не контролируя их.',
+        uz: 'Obyekt siyosati qarorlarida ularni nazorat qilmay qatnashish huquqi.',
+      },
+      example: {
+        en: 'One seat on a seven-person board: a say in decisions, but not the final word.',
+        ru: 'Одно место в совете из семи человек: голос в решениях, но не последнее слово.',
+        uz: 'Yetti kishilik kengashda bitta o\'rin: qarorlarda ovoz bor, lekin oxirgi so\'z emas.',
+      },
+    },
+    {
+      term: { en: 'Equity method', ru: 'Метод долевого участия', uz: 'Ulushli qatnashish usuli' },
+      definition: {
+        en: 'Recording an investment at cost, then adjusting it for the investor\'s share of post-acquisition changes in net assets.',
+        ru: 'Учёт вложения по стоимости с последующей корректировкой на долю инвестора в изменении чистых активов после покупки.',
+        uz: 'Sarmoyani qiymatda yozib, so\'ng xariddan keyingi sof aktivlar o\'zgarishidagi investor ulushiga tuzatish.',
+      },
+      example: {
+        en: 'Investment $1,200 + 30% of $500 profit = $1,350 on one line.',
+        ru: 'Инвестиция $1,200 + 30% от прибыли $500 = $1,350 одной строкой.',
+        uz: 'Investitsiya $1,200 + $500 foydaning 30% i = bitta qatorda $1,350.',
+      },
+    },
   ],
 };
 

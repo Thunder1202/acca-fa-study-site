@@ -8,12 +8,36 @@ const chapter15 = {
     uz: 'Asosiy moliyaviy hisobotni tayyorlash',
   },
   objectives: [
-    { en: 'Prepare a statement of financial position and a statement of profit or loss', ru: 'Составлять отчёт о финансовом положении и отчёт о прибыли или убытке', uz: 'Moliyaviy holat hisoboti va foyda yoki zarar hisobotini tuzish' },
-    { en: 'Show other comprehensive income and changes in equity', ru: 'Показывать прочий совокупный доход и изменения капитала', uz: 'Boshqa umumlashgan daromad va kapital o\'zgarishlarini ko\'rsatish' },
-    { en: 'Classify income and expenses under IFRS 18', ru: 'Классифицировать доходы и расходы по IFRS 18', uz: 'IFRS 18 bo\'yicha daromad va xarajatlarni tasniflash' },
-    { en: 'Explain the purpose of disclosure notes', ru: 'Объяснять цель примечаний', uz: 'Izohlarning maqsadini tushuntirish' },
-    { en: 'Classify events after the reporting period', ru: 'Классифицировать события после отчётной даты', uz: 'Hisobot sanasidan keyingi voqealarni tasniflash' },
-    { en: 'Apply the five-step approach to revenue in IFRS 15', ru: 'Применять пятишаговую модель выручки IFRS 15', uz: 'IFRS 15 dagi tushumning besh bosqichli yondashuvini qo\'llash' },
+    {
+      en: 'Prepare a statement of financial position and a statement of profit or loss',
+      ru: 'Составлять отчёт о финансовом положении и отчёт о прибыли или убытке',
+      uz: 'Moliyaviy holat hisoboti va foyda yoki zarar hisobotini tuzish',
+    },
+    {
+      en: 'Show other comprehensive income and changes in equity',
+      ru: 'Показывать прочий совокупный доход и изменения капитала',
+      uz: 'Boshqa umumlashgan daromad va kapital o\'zgarishlarini ko\'rsatish',
+    },
+    {
+      en: 'Classify income and expenses under IFRS 18',
+      ru: 'Классифицировать доходы и расходы по IFRS 18',
+      uz: 'IFRS 18 bo\'yicha daromad va xarajatlarni tasniflash',
+    },
+    {
+      en: 'Explain the purpose of disclosure notes',
+      ru: 'Объяснять цель примечаний',
+      uz: 'Izohlarning maqsadini tushuntirish',
+    },
+    {
+      en: 'Classify events after the reporting period',
+      ru: 'Классифицировать события после отчётной даты',
+      uz: 'Hisobot sanasidan keyingi voqealarni tasniflash',
+    },
+    {
+      en: 'Apply the five-step approach to revenue in IFRS 15',
+      ru: 'Применять пятишаговую модель выручки IFRS 15',
+      uz: 'IFRS 15 dagi tushumning besh bosqichli yondashuvini qo\'llash',
+    },
   ],
   sections: [
     {
@@ -77,9 +101,47 @@ Odatiy yozuvlarni esda tuting. Yakuniy zaxira: Dt Zaxira, Kt Sotilgan tovar tann
 IFRS 18 talab qilinadigan qismlarni belgilaydi. Hisobotdagi ma'lumot juda jamlangan. O'xshash moddalar agregatsiya qilinadi, masalan asosiy vositalar bitta summada, izohlar esa uni dezagregatsiya qilib tafsilotni ko'rsatadi.`,
       },
       example: {
-        en: `Madina's Mart LLC's trial balance is done. Before the statements she posts closing inventory of $11,000, depreciation, a $500 prepayment, the allowance movement and a tax estimate of $9,000. In the notes, the single property, plant and equipment figure on the statement of financial position is split into land and buildings, fixtures and vehicles.`,
-        ru: `Оборотная ведомость Madina's Mart LLC готова. Перед отчётностью она проводит запасы на конец $11,000, амортизацию, предоплату $500, изменение резерва и оценку налога $9,000. В примечаниях единая сумма основных средств из отчёта о финансовом положении разбита на землю и здания, оборудование и транспорт.`,
-        uz: `Madina's Mart LLC sinov balansi tayyor. Hisobotdan oldin u $11,000 yakuniy zaxira, amortizatsiya, $500 oldindan to'lov, rezerv o'zgarishi va $9,000 soliq bahosini yozadi. Izohlarda moliyaviy holat hisobotidagi yagona asosiy vositalar summasi yer va binolar, jihozlar va transportga bo'linadi.`,
+        en: `A small bakery has finished its trial balance.
+# Year-end adjustments it still makes
+  Closing inventory: $1,000
+  Depreciation on the oven: $500
+  Rent paid in advance: $200 prepayment
+  Tax estimate for the year: $900
+# Aggregation and disaggregation
+  The statement of financial position shows one figure: property, plant and equipment $9,000
+  The note splits it: shop $6,000 + oven $2,000 + van $1,000 = $9,000
+= Adjust first, then prepare the statements and notes.`,
+        ru: `Небольшая пекарня закончила оборотную ведомость.
+# Годовые корректировки, которые ещё нужны
+  Запасы на конец: $1,000
+  Амортизация печи: $500
+  Аренда, оплаченная вперёд: предоплата $200
+  Оценка налога за год: $900
+# Агрегирование и дезагрегирование
+  В отчёте о финансовом положении одна цифра: основные средства $9,000
+  Примечание раскладывает её: магазин $6,000 + печь $2,000 + фургон $1,000 = $9,000
+= Сначала корректировки, потом отчёты и примечания.`,
+        uz: `Kichik novvoyxona sinov balansini tugatdi.
+# Hali qilinadigan yil oxiri tuzatishlari
+  Yakuniy zaxira: $1,000
+  Pech amortizatsiyasi: $500
+  Oldindan to'langan ijara: $200 oldindan to'lov
+  Yillik soliq bahosi: $900
+# Agregatsiya va dezagregatsiya
+  Moliyaviy holat hisobotida bitta son: asosiy vositalar $9,000
+  Izoh uni ajratadi: do'kon $6,000 + pech $2,000 + furgon $1,000 = $9,000
+= Avval tuzatishlar, keyin hisobotlar va izohlar.`,
+      },
+      simple: {
+        en: `The trial balance is not the finish line. First fix any mistakes, then make the year-end adjustments you learned in earlier chapters: closing inventory, depreciation, accruals and prepayments, irrecoverable debts and tax. Only then write the financial statements.
+
+A full set has five parts: the statement of financial position, the statement of profit or loss and other comprehensive income, the statement of changes in equity, the statement of cash flows, and the notes. The statements show short totals (aggregation); the notes break them into detail (disaggregation).`,
+        ru: `Оборотная ведомость — ещё не финиш. Сначала исправьте ошибки, затем сделайте годовые корректировки из прошлых глав: запасы на конец, амортизация, начисления и предоплаты, безнадёжные долги и налог. Только потом составляйте финансовую отчётность.
+
+Полный комплект состоит из пяти частей: отчёт о финансовом положении, отчёт о прибыли или убытке и прочем совокупном доходе, отчёт об изменениях в капитале, отчёт о движении денежных средств и примечания. В отчётах — краткие итоги (агрегирование); примечания раскладывают их на детали (дезагрегирование).`,
+        uz: `Sinov balansi hali marra emas. Avval xatolarni tuzating, keyin oldingi boblardagi yil oxiri tuzatishlarini qiling: yakuniy zaxira, amortizatsiya, hisoblangan va oldindan to'langanlar, undirib bo'lmaydigan qarzlar va soliq. Faqat shundan keyin moliyaviy hisobotni tuzing.
+
+To'liq to'plam besh qismdan iborat: moliyaviy holat hisoboti, foyda yoki zarar va boshqa umumlashgan daromad hisoboti, kapitaldagi o'zgarishlar hisoboti, pul oqimlari hisoboti va izohlar. Hisobotlarda qisqa jamlar (agregatsiya); izohlar ularni tafsilotlarga ajratadi (dezagregatsiya).`,
       },
     },
     {
@@ -155,9 +217,50 @@ IFRS 18 aylanma modda tamoyillarini belgilaydi. Aktiv odatiy operatsion siklda s
 Majburiyat odatiy operatsion siklda to'lansa, asosan savdo uchun saqlansa, 12 oy ichida to'lanishi kerak bo'lsa yoki kamida 12 oyga kechiktirishga shartsiz huquq bo'lmasa, qisqa muddatli. Qolganlari uzoq muddatli.`,
       },
       example: {
-        en: `Madina's Mart LLC has a $40,000 loan repayable in four equal yearly instalments, the first in eight months. $10,000 is a current liability and $30,000 is non-current. Its bank statement shows a debit of $2,000, which is an overdraft, so that also goes in current liabilities. Inventory of $11,000 and receivables of $8,000 less a $400 allowance go in current assets at $18,600.`,
-        ru: `У Madina's Mart LLC кредит $40,000 с погашением четырьмя равными годовыми платежами, первый через восемь месяцев. $10,000 — краткосрочное обязательство, $30,000 — долгосрочное. В выписке дебет $2,000: это овердрафт, он тоже краткосрочный. Запасы $11,000 и дебиторы $8,000 минус резерв $400 дают оборотные активы $18,600.`,
-        uz: `Madina's Mart LLC da to'rtta teng yillik to'lovli $40,000 kredit bor, birinchisi sakkiz oydan keyin. $10,000 qisqa, $30,000 uzoq muddatli. Ko'chirmada $2,000 debet: bu overdraft, u ham qisqa muddatli. $11,000 zaxira va $8,000 debitorlar minus $400 rezerv aylanma aktivlarda $18,600.`,
+        en: `The bakery's year-end balances.
+# The loan
+  $4,000 repaid in four yearly parts of $1,000, the first in 8 months
+  Current liability: $1,000
+  Non-current liability: $3,000
+# The bank
+  The bank statement shows a DEBIT of $200: the bakery is overdrawn
+  Current liability: $200
+# Current assets
+  Inventory $1,000 + receivables $800 - allowance $50 = $1,750
+= Net current assets = current assets - current liabilities.`,
+        ru: `Остатки пекарни на конец года.
+# Заём
+  $4,000 гасится четырьмя годовыми частями по $1,000, первая через 8 месяцев
+  Краткосрочное обязательство: $1,000
+  Долгосрочное обязательство: $3,000
+# Банк
+  Выписка показывает ДЕБЕТ $200: у пекарни овердрафт
+  Краткосрочное обязательство: $200
+# Оборотные активы
+  Запасы $1,000 + дебиторы $800 - резерв $50 = $1,750
+= Чистые оборотные активы = оборотные активы - краткосрочные обязательства.`,
+        uz: `Novvoyxonaning yil oxiridagi qoldiqlari.
+# Qarz
+  $4,000 yiliga $1,000 dan to'rt qismda qaytariladi, birinchisi 8 oydan keyin
+  Qisqa muddatli majburiyat: $1,000
+  Uzoq muddatli majburiyat: $3,000
+# Bank
+  Ko'chirmada $200 DEBET: novvoyxonada overdraft
+  Qisqa muddatli majburiyat: $200
+# Aylanma aktivlar
+  Zaxira $1,000 + debitorlar $800 - rezerv $50 = $1,750
+= Sof aylanma aktivlar = aylanma aktivlar - qisqa muddatli majburiyatlar.`,
+      },
+      simple: {
+        en: `This statement is a snapshot of what the business owns and owes on the last day of the year. It follows the accounting equation: assets = equity + liabilities.
+
+Every asset and liability is split into current and non-current. Current means it turns into cash, or must be paid, soon: within 12 months or within the normal trading cycle. Cash, inventory and receivables are current assets. Payables, overdrafts and tax due are current liabilities. A loan is split: the part due within 12 months is current, the rest is non-current.`,
+        ru: `Этот отчёт — снимок того, чем бизнес владеет и что должен в последний день года. Он следует уравнению: активы = капитал + обязательства.
+
+Каждый актив и обязательство делят на оборотные (краткосрочные) и внеоборотные (долгосрочные). Краткосрочное значит, что оно скоро станет деньгами или его скоро платить: в течение 12 месяцев или обычного торгового цикла. Деньги, запасы и дебиторы — оборотные активы. Кредиторы, овердрафт и налог к уплате — краткосрочные обязательства. Заём делят: часть к оплате в течение 12 месяцев — краткосрочная, остальное — долгосрочное.`,
+        uz: `Bu hisobot yilning oxirgi kunida biznes nimaga egaligi va nima qarzi borligining surati. U tenglamaga amal qiladi: aktivlar = kapital + majburiyatlar.
+
+Har bir aktiv va majburiyat aylanma (qisqa muddatli) va uzoq muddatliga bo'linadi. Qisqa muddatli — tez orada pulga aylanadi yoki to'lanadi: 12 oy ichida yoki odatiy savdo sikli ichida. Pul, zaxira va debitorlar aylanma aktivlar. Kreditorlar, overdraft va to'lanadigan soliq qisqa muddatli majburiyatlar. Qarz bo'linadi: 12 oy ichida to'lanadigan qismi qisqa muddatli, qolgani uzoq muddatli.`,
       },
     },
     {
@@ -204,11 +307,7 @@ Majburiyat odatiy operatsion siklda to'lansa, asosan savdo uchun saqlansa, 12 oy
 - Amortizatsiya ishlatilish joyi bo'yicha bo'linadi. Zavod va ofis 70:30 bo'lsa, 70% tannarxga.
 - Tushum = yalpi foyda + tannarx.`,
       },
-      heading: {
-        en: 'The statement of profit or loss',
-        ru: 'Отчёт о прибыли или убытке',
-        uz: 'Foyda yoki zarar hisoboti',
-      },
+      heading: { en: 'The statement of profit or loss', ru: 'Отчёт о прибыли или убытке', uz: 'Foyda yoki zarar hisoboti' },
       body: {
         en: `This statement summarises income earned and expenses incurred in the period. IFRS 18 classifies income and expenses into five categories, of which four are in the FA syllabus.
 
@@ -239,9 +338,68 @@ Moliyaviy toifada qarzlar bo'yicha foizlar bor, bu soliqdan oldingi foydani bera
 Operatsion xarajatlarni funksiya bo'yicha ko'rsatish mumkin: tannarx, tarqatish, boshqaruv. Unda bitta xarajat bo'linishi mumkin, masalan uskuna amortizatsiyasi tannarxda, furgonlarniki tarqatishda. Yoki tabiati bo'yicha: materiallar, xodimlar, amortizatsiya. Aralash ham mumkin, ACCA istalganini ishlatishi mumkin.`,
       },
       example: {
-        en: `Madina's Mart LLC's year: revenue $200,000. Cost of sales is $9,000 + $120,000 - $11,000 = $118,000, so gross profit is $82,000. Distribution costs are $14,000 and administrative expenses $28,000, so operating profit is $40,000. Interest income of $500 gives profit before financing and income taxes of $40,500. Interest on borrowings of $4,000 gives profit before income taxes of $36,500. Tax of $9,000 leaves profit for the year of $27,500.`,
-        ru: `Год Madina's Mart LLC: выручка $200,000. Себестоимость $9,000 + $120,000 - $11,000 = $118,000, валовая прибыль $82,000. Расходы на сбыт $14,000 и административные $28,000, операционная прибыль $40,000. Процентный доход $500 даёт прибыль до финансирования и налогов $40,500. Проценты по займам $4,000 дают прибыль до налога $36,500. Налог $9,000 оставляет прибыль за год $27,500.`,
-        uz: `Madina's Mart LLC yili: tushum $200,000. Tannarx $9,000 + $120,000 - $11,000 = $118,000, yalpi foyda $82,000. Tarqatish $14,000 va boshqaruv $28,000, operatsion foyda $40,000. $500 foiz daromadi moliyalashtirish va soliqdan oldingi $40,500 foyda beradi. Qarz foizi $4,000 soliqdan oldingi $36,500 foyda beradi. $9,000 soliq yil foydasi $27,500 qoldiradi.`,
+        en: `The bakery's year, worked down the layers.
+# Operating
+  Cost of sales: opening inventory $900 + purchases $12,100 - closing inventory $1,000 = $12,000
+  Gross profit: revenue $20,000 - $12,000 = $8,000
+  Operating profit: $8,000 - distribution $1,400 - admin $2,600 = $4,000
+# Investing
+  Interest received $100: $4,000 + $100 = $4,100
+# Financing
+  Loan interest $400: $4,100 - $400 = $3,700 profit before income taxes
+# Income tax
+  Tax $900: $3,700 - $900 = $2,800
+= Profit for the year: $2,800`,
+        ru: `Год пекарни по уровням сверху вниз.
+# Операционная
+  Себестоимость: запасы на начало $900 + закупки $12,100 - запасы на конец $1,000 = $12,000
+  Валовая прибыль: выручка $20,000 - $12,000 = $8,000
+  Операционная прибыль: $8,000 - сбыт $1,400 - администрация $2,600 = $4,000
+# Инвестиционная
+  Полученные проценты $100: $4,000 + $100 = $4,100
+# Финансовая
+  Проценты по займу $400: $4,100 - $400 = $3,700 прибыль до налога на прибыль
+# Налог на прибыль
+  Налог $900: $3,700 - $900 = $2,800
+= Прибыль за год: $2,800`,
+        uz: `Novvoyxona yili qatlamlar bo'yicha yuqoridan pastga.
+# Operatsion
+  Tannarx: boshlang'ich zaxira $900 + xaridlar $12,100 - yakuniy zaxira $1,000 = $12,000
+  Yalpi foyda: tushum $20,000 - $12,000 = $8,000
+  Operatsion foyda: $8,000 - sotish $1,400 - ma'muriy $2,600 = $4,000
+# Investitsion
+  Olingan foiz $100: $4,000 + $100 = $4,100
+# Moliyaviy
+  Qarz foizi $400: $4,100 - $400 = $3,700 foyda solig'igacha foyda
+# Foyda solig'i
+  Soliq $900: $3,700 - $900 = $2,800
+= Yil foydasi: $2,800`,
+      },
+      simple: {
+        en: `This statement shows how much profit was made over the year. Under IFRS 18 it has layers, and you work down them:
+
+- Operating: revenue, cost of sales, distribution and admin costs. This gives operating profit.
+- Investing: income such as interest received and dividends received.
+- Financing: interest paid on loans. This gives profit before income taxes.
+- Income tax: tax on the company's profit. This gives profit for the year.
+
+Costs can be grouped by what they are for (function: cost of sales, distribution, admin) or by what they are (nature: wages, materials, depreciation).`,
+        ru: `Этот отчёт показывает, сколько прибыли получено за год. По IFRS 18 в нём есть уровни, и вы идёте по ним сверху вниз:
+
+- Операционная: выручка, себестоимость, расходы на сбыт и административные. Так получаем операционную прибыль.
+- Инвестиционная: доходы вроде полученных процентов и дивидендов.
+- Финансовая: проценты по займам. Так получаем прибыль до налога на прибыль.
+- Налог на прибыль: налог на прибыль компании. Так получаем прибыль за год.
+
+Расходы можно группировать по назначению (функции: себестоимость, сбыт, администрация) или по характеру (зарплата, материалы, амортизация).`,
+        uz: `Bu hisobot yil davomida qancha foyda olinganini ko'rsatadi. IFRS 18 bo'yicha unda qatlamlar bor va siz ulardan pastga qarab yurasiz:
+
+- Operatsion: tushum, tannarx, sotish va ma'muriy xarajatlar. Shunday qilib operatsion foyda olinadi.
+- Investitsion: olingan foiz va dividendlar kabi daromadlar.
+- Moliyaviy: qarzlar bo'yicha to'langan foiz. Shunday qilib foyda solig'igacha foyda olinadi.
+- Foyda solig'i: kompaniya foydasiga soliq. Shunday qilib yil foydasi olinadi.
+
+Xarajatlarni maqsadi bo'yicha (funksiya: tannarx, sotish, ma'muriy) yoki tabiati bo'yicha (ish haqi, materiallar, amortizatsiya) guruhlash mumkin.`,
       },
     },
     {
@@ -285,11 +443,7 @@ Operatsion xarajatlarni funksiya bo'yicha ko'rsatish mumkin: tannarx, tarqatish,
 - Amortizatsiyalangan aktivni qayta baholash: Dt Aktiv (bahogacha), Dt To'plangan amortizatsiya, Kt Qayta baholash rezervi, baho minus balans qiymatiga.
 - Mezonlarga mos ishlanma xarajatlari kapitallashtiriladi, xarajat emas.`,
       },
-      heading: {
-        en: 'Other comprehensive income',
-        ru: 'Прочий совокупный доход',
-        uz: 'Boshqa umumlashgan daromad',
-      },
+      heading: { en: 'Other comprehensive income', ru: 'Прочий совокупный доход', uz: 'Boshqa umumlashgan daromad' },
       body: {
         en: `Some gains made in a period are not realised. The best example is the revaluation of tangible non-current assets. Until the asset is sold and turned into cash, the gain is only what would be made if it were sold. It therefore stays out of profit for the year, which represents realised profit, and is added on at the end as other comprehensive income. This gives total comprehensive income for the year.
 
@@ -308,9 +462,47 @@ Qayta baholash foydasi kelajakda foyda yoki zararga qayta tasniflanmaydigan modd
 Ba'zi muhim bir martalik moddalar oddiy savdoga kirmaydi va natijalarni buzishi mumkin. Ular alohida qator yoki izoh talab qiladi. Misollar: qayta tuzish xarajati, asosiy vositalar yoki investitsiyalar chiqishidan foyda yoki zarar, zaxira yoki asosiy vositalar qadrsizlanishi.`,
       },
       example: {
-        en: `Madina's Mart LLC's profit for the year is $27,500. Its shop building is revalued upward by $20,000. That is added below profit, so total comprehensive income is $47,500. Profit stays at $27,500, because the building has not been sold. If it also spent $5,000 closing a branch, that would be on a line of its own, so readers can see it is a one-off cost.`,
-        ru: `Прибыль Madina's Mart LLC за год $27,500. Здание магазина переоценено вверх на $20,000. Это добавляется ниже прибыли, и общий совокупный доход равен $47,500. Прибыль остаётся $27,500, потому что здание не продано. Если компания также потратила $5,000 на закрытие филиала, это отдельная строка, чтобы читатели видели разовый расход.`,
-        uz: `Madina's Mart LLC yil foydasi $27,500. Do'kon binosi $20,000 ga qayta baholandi. Bu foydadan pastga qo'shiladi, jami umumlashgan daromad $47,500. Foyda $27,500 qoladi, chunki bino sotilmagan. Agar filialni yopishga $5,000 sarflagan bo'lsa, bu alohida qatorda, o'quvchilar bir martalik xarajatni ko'rishi uchun.`,
+        en: `The bakery's profit for the year is $2,800.
+# The shop is revalued up by $2,000
+  Not sold, so not profit: other comprehensive income $2,000
+# Total comprehensive income
+  $2,800 + $2,000 = $4,800
+# A one-off cost
+  Closing a market stall cost $500: shown on its own line in profit or loss
+= Profit $2,800; total comprehensive income $4,800`,
+        ru: `Прибыль пекарни за год — $2,800.
+# Магазин переоценили вверх на $2,000
+  Не продан, значит не прибыль: прочий совокупный доход $2,000
+# Общий совокупный доход
+  $2,800 + $2,000 = $4,800
+# Разовый расход
+  Закрытие рыночного прилавка стоило $500: отдельная строка в прибыли или убытке
+= Прибыль $2,800; общий совокупный доход $4,800`,
+        uz: `Novvoyxonaning yil foydasi $2,800.
+# Do'kon $2,000 ga oshirib qayta baholandi
+  Sotilmagan, demak foyda emas: boshqa umumlashgan daromad $2,000
+# Jami umumlashgan daromad
+  $2,800 + $2,000 = $4,800
+# Bir martalik xarajat
+  Bozordagi rastani yopish $500 turdi: foyda yoki zararda alohida qator
+= Foyda $2,800; jami umumlashgan daromad $4,800`,
+      },
+      simple: {
+        en: `Some gains are only "on paper". If a building is revalued upwards, the business is richer, but it has not sold the building, so no money was earned. That gain is kept out of profit and added below it, as other comprehensive income.
+
+Profit for the year + other comprehensive income = total comprehensive income.
+
+Big one-off items, such as the cost of closing a branch or a gain on selling equipment, still go in profit or loss, but on their own line so readers can see they will not happen every year.`,
+        ru: `Некоторые прибыли — только «на бумаге». Если здание переоценили вверх, бизнес стал богаче, но здание не продано, и денег не заработано. Этот прирост не включают в прибыль, а добавляют ниже — как прочий совокупный доход.
+
+Прибыль за год + прочий совокупный доход = общий совокупный доход.
+
+Крупные разовые статьи, например затраты на закрытие филиала или прибыль от продажи оборудования, всё равно идут в прибыль или убыток, но отдельной строкой, чтобы читатель видел, что они не повторяются каждый год.`,
+        uz: `Ba'zi daromadlar faqat «qog'ozda». Bino qiymati oshirib qayta baholansa, biznes boyroq bo'ladi, lekin bino sotilmagan, pul topilmagan. Bu o'sish foydaga kiritilmaydi, undan pastda boshqa umumlashgan daromad sifatida qo'shiladi.
+
+Yil foydasi + boshqa umumlashgan daromad = jami umumlashgan daromad.
+
+Filialni yopish xarajati yoki uskunani sotishdan foyda kabi katta bir martalik moddalar baribir foyda yoki zararga kiradi, lekin alohida qatorda, o'quvchi ular har yili takrorlanmasligini ko'rishi uchun.`,
       },
     },
     {
@@ -398,9 +590,56 @@ Hisobotlar bog'liq. Yil foydasi yoki zarari taqsimlanmagan foydaga kiradi. To'la
 Yakka tadbirkorda soddaroq. Kapital foyda va yangi kapital bilan oshadi, olib qo'yishlar bilan kamayadi. Kapital sof aktivlarga teng bo'lgani uchun bu bog'lanishlar yetishmagan summani topishga yordam beradi.`,
       },
       example: {
-        en: `Madina's Mart LLC starts the year with retained earnings of $30,000. Profit is $27,500 and dividends of $13,200 are paid, so closing retained earnings are $44,300. The revaluation surplus rises by $20,000. These closing balances go straight into the equity section of the statement of financial position. Back when Madina was a sole trader, she started with capital of $8,000, added $2,000, made a profit of $5,000 and drew $3,000, leaving capital of $12,000.`,
-        ru: `Madina's Mart LLC начинает год с нераспределённой прибылью $30,000. Прибыль $27,500, дивиденды $13,200, на конец $44,300. Резерв переоценки растёт на $20,000. Эти остатки идут прямо в раздел капитала отчёта о финансовом положении. Когда Мадина была предпринимателем, она начала с капитала $8,000, добавила $2,000, заработала $5,000 и изъяла $3,000, капитал стал $12,000.`,
-        uz: `Madina's Mart LLC yilni $30,000 taqsimlanmagan foyda bilan boshlaydi. Foyda $27,500, dividendlar $13,200, yakuniy $44,300. Qayta baholash rezervi $20,000 oshadi. Bu qoldiqlar to'g'ridan-to'g'ri moliyaviy holat hisobotining kapital bo'limiga kiradi. Madina yakka tadbirkor bo'lganda $8,000 kapital bilan boshlagan, $2,000 qo'shgan, $5,000 foyda qilgan va $3,000 olgan, kapital $12,000 bo'lgan.`,
+        en: `The bakery's equity for the year.
+# Retained earnings
+  Opening $3,000 + profit $2,800 - dividends paid $1,300 = $4,500
+# Revaluation surplus
+  Opening $0 + revaluation $2,000 = $2,000
+# These closing figures go straight into the statement of financial position
+# A sole trader instead
+  Opening capital $8,000 + new capital $2,000 + profit $5,000 - drawings $3,000 = $12,000
+= Each line: opening + increases - decreases = closing.`,
+        ru: `Капитал пекарни за год.
+# Нераспределённая прибыль
+  Начало $3,000 + прибыль $2,800 - выплаченные дивиденды $1,300 = $4,500
+# Резерв переоценки
+  Начало $0 + переоценка $2,000 = $2,000
+# Эти конечные цифры сразу идут в отчёт о финансовом положении
+# Если бы это был индивидуальный предприниматель
+  Начальный капитал $8,000 + новый капитал $2,000 + прибыль $5,000 - изъятия $3,000 = $12,000
+= Каждая строка: начало + увеличения - уменьшения = конец.`,
+        uz: `Novvoyxonaning yillik kapitali.
+# Taqsimlanmagan foyda
+  Boshi $3,000 + foyda $2,800 - to'langan dividendlar $1,300 = $4,500
+# Qayta baholash rezervi
+  Boshi $0 + qayta baholash $2,000 = $2,000
+# Bu yakuniy sonlar to'g'ridan-to'g'ri moliyaviy holat hisobotiga o'tadi
+# Agar bu yakka tadbirkor bo'lsa
+  Boshlang'ich kapital $8,000 + yangi kapital $2,000 + foyda $5,000 - olib qo'yish $3,000 = $12,000
+= Har bir qator: boshi + oshishlar - kamayishlar = oxiri.`,
+      },
+      simple: {
+        en: `Equity is what belongs to the owners. The statement of changes in equity shows, for each part of equity, where it started, what changed it, and where it ended.
+
+- Profit goes into retained earnings; dividends paid come out of it.
+- A revaluation gain goes into the revaluation surplus.
+- New shares go into share capital and share premium.
+
+The closing balances become the equity section of the statement of financial position. For a sole trader it is one line: opening capital + new capital + profit - drawings = closing capital.`,
+        ru: `Капитал — то, что принадлежит владельцам. Отчёт об изменениях в капитале показывает по каждой части капитала, с чего она начала, что её изменило и чем закончилась.
+
+- Прибыль идёт в нераспределённую прибыль; выплаченные дивиденды уходят из неё.
+- Прирост от переоценки идёт в резерв переоценки.
+- Новые акции идут в акционерный капитал и эмиссионный доход.
+
+Конечные остатки становятся разделом капитала в отчёте о финансовом положении. У индивидуального предпринимателя это одна строка: начальный капитал + новый капитал + прибыль - изъятия = конечный капитал.`,
+        uz: `Kapital — egalarga tegishli narsa. Kapitaldagi o'zgarishlar hisoboti kapitalning har bir qismi nimadan boshlangani, uni nima o'zgartirgani va nima bilan tugaganini ko'rsatadi.
+
+- Foyda taqsimlanmagan foydaga kiradi; to'langan dividendlar undan chiqadi.
+- Qayta baholash o'sishi qayta baholash rezerviga kiradi.
+- Yangi aksiyalar ustav kapitali va emissiya daromadiga kiradi.
+
+Yakuniy qoldiqlar moliyaviy holat hisobotining kapital bo'limiga aylanadi. Yakka tadbirkorda bu bitta qator: boshlang'ich kapital + yangi kapital + foyda - olib qo'yishlar = yakuniy kapital.`,
       },
     },
     {
@@ -456,11 +695,7 @@ Yakka tadbirkorda soddaroq. Kapital foyda va yangi kapital bilan oshadi, olib qo
 - Kafolat xarajati rezerv o'sishi. To'lovlar rezervni ishlatadi, xarajat emas.
 - Nomoddiy aktivlar qiymat yoki baho minus amortizatsiya va qadrsizlanishda ko'rsatiladi.`,
       },
-      heading: {
-        en: 'Disclosure notes',
-        ru: 'Примечания',
-        uz: 'Izohlar',
-      },
+      heading: { en: 'Disclosure notes', ru: 'Примечания', uz: 'Izohlar' },
       body: {
         en: `Disclosure notes are part of the financial statements. They explain the accounting policies used, show the movement between opening and closing balances on major items, show how certain balances are made up, and give whatever further detail users need to understand the statements.
 
@@ -485,9 +720,47 @@ Siyosat izohi aniq bo'lishi kerak. U qaysi o'lchash modeli ishlatilishini, aktiv
 Izohlar raqamli, masalan harakat jadvali, yoki so'zli, masalan amortizatsiya hisob-kitobi tavsifi bo'lishi mumkin. Ko'p talablar ularning aralashmasi bilan bajariladi.`,
       },
       example: {
-        en: `Madina's Mart LLC's policy note reads: "Land and buildings are shown at cost. Land is not depreciated. Buildings are depreciated on a straight-line basis over 50 years." Its warranty note shows: opening $6,000, increase in provision $1,200, payments $2,900, closing $4,300. Only the $1,200 is an expense for the year.`,
-        ru: `Примечание о политике Madina's Mart LLC: «Земля и здания показаны по стоимости. Земля не амортизируется. Здания амортизируются прямолинейно в течение 50 лет». Примечание о гарантии: на начало $6,000, рост резерва $1,200, выплаты $2,900, на конец $4,300. Расход года — только $1,200.`,
-        uz: `Madina's Mart LLC siyosat izohi: "Yer va binolar qiymatda ko'rsatilgan. Yer amortizatsiyalanmaydi. Binolar 50 yil davomida to'g'ri chiziqli amortizatsiyalanadi." Kafolat izohi: boshida $6,000, rezerv o'sishi $1,200, to'lovlar $2,900, oxirida $4,300. Yil xarajati faqat $1,200.`,
+        en: `Two of the bakery's notes.
+# Policy note for land and buildings
+  "Land and buildings are at cost. Land is not depreciated."
+  "Buildings are depreciated straight line over 50 years."
+# Warranty provision note
+  Opening $600
+  Increase in the provision + $120
+  Repairs paid out - $290
+  Closing $430
+= Only the $120 increase is an expense this year. The $290 repairs used up the provision.`,
+        ru: `Два примечания пекарни.
+# Примечание о политике для земли и зданий
+  «Земля и здания учитываются по стоимости. Земля не амортизируется.»
+  «Здания амортизируются линейно в течение 50 лет.»
+# Примечание о гарантийном резерве
+  Начало $600
+  Увеличение резерва + $120
+  Оплаченный ремонт - $290
+  Конец $430
+= Расход этого года — только увеличение $120. Ремонт $290 использовал резерв.`,
+        uz: `Novvoyxonaning ikki izohi.
+# Yer va binolar uchun siyosat izohi
+  «Yer va binolar tannarxda. Yer amortizatsiya qilinmaydi.»
+  «Binolar 50 yil davomida to'g'ri chiziqli amortizatsiya qilinadi.»
+# Kafolat rezervi izohi
+  Boshi $600
+  Rezerv oshishi + $120
+  To'langan ta'mir - $290
+  Oxiri $430
+= Bu yil xarajat faqat $120 oshish. $290 ta'mir rezervdan foydalandi.`,
+      },
+      simple: {
+        en: `The notes are part of the financial statements. They explain the figures: which accounting policies were used, how the big balances moved during the year, and what a total is made of.
+
+For FA you need the notes on inventory, property, plant and equipment, intangible assets, provisions and events after the reporting period. A good policy note is specific: it names the model, the method and the period. Notes can be numbers (a table of movements) or words (a policy), and usually both.`,
+        ru: `Примечания — часть финансовой отчётности. Они объясняют цифры: какая учётная политика применялась, как крупные остатки менялись за год и из чего состоит итог.
+
+Для FA нужны примечания о запасах, основных средствах, нематериальных активах, резервах и событиях после отчётной даты. Хорошее примечание о политике конкретно: называет модель, метод и срок. Примечания бывают цифрами (таблица движения) или словами (политика), обычно и тем и другим.`,
+        uz: `Izohlar moliyaviy hisobotning bir qismi. Ular sonlarni tushuntiradi: qaysi hisob siyosati qo'llangan, katta qoldiqlar yil davomida qanday o'zgargan va jami nimadan iborat.
+
+FA uchun zaxira, asosiy vositalar, nomoddiy aktivlar, rezervlar va hisobot sanasidan keyingi voqealar haqidagi izohlar kerak. Yaxshi siyosat izohi aniq: model, usul va muddatni aytadi. Izohlar sonlar (harakat jadvali) yoki so'zlar (siyosat) bo'ladi, odatda ikkalasi ham.`,
       },
     },
     {
@@ -569,9 +842,56 @@ Tuzatmaydigan voqealar hisobot sanasidan keyin paydo bo'lgan holatlarga tegishli
 Muhim tuzatmaydigan voqea izohi uning mohiyati va moliyaviy ta'sir bahosini yoki baho berib bo'lmasligini aytadi.`,
       },
       example: {
-        en: `Madina's Mart LLC's year ends on 31 December and the accounts are approved on 20 March. On 15 January Cafe Aziz, which owed $800 at the year end, goes bankrupt: adjusting, so she writes the debt off. In January some inventory is sold below cost: adjusting. On 10 February a fire destroys $5,000 of goods bought after the year end: non-adjusting, so she only adds a note if it is material. A dividend declared on 1 February is non-adjusting too.`,
-        ru: `Год Madina's Mart LLC заканчивается 31 декабря, отчётность утверждается 20 марта. 15 января Cafe Aziz, должное $800 на конец года, банкротится: корректирующее, долг списывается. В январе часть запасов продана ниже стоимости: корректирующее. 10 февраля пожар уничтожает товар на $5,000, купленный после конца года: некорректирующее, только примечание, если существенно. Дивиденд, объявленный 1 февраля, тоже некорректирующий.`,
-        uz: `Madina's Mart LLC yili 31 dekabrda tugaydi, hisobot 20 martda tasdiqlanadi. 15 yanvarda yil oxirida $800 qarzdor Cafe Aziz bankrot bo'ladi: tuzatuvchi, qarz yozib yuboriladi. Yanvarda ba'zi zaxira tannarxdan past sotiladi: tuzatuvchi. 10 fevralda yong'in yil oxiridan keyin olingan $5,000 tovarni yo'q qiladi: tuzatmaydigan, muhim bo'lsa faqat izoh. 1 fevralda e'lon qilingan dividend ham tuzatmaydigan.`,
+        en: `The bakery's year ends on 31 December; the accounts are approved on 20 March.
+# 15 January: a cafe that owed $800 at the year end goes bankrupt
+  The debt was already bad on 31 December: ADJUSTING. Write off the $800
+# January: some cakes in stock at the year end are sold below cost
+  They were worth less on 31 December: ADJUSTING. Write the inventory down
+# 10 February: a fire destroys $5,000 of goods bought in January
+  New problem after the year end: NON-ADJUSTING. A note if material
+# 1 February: a dividend is declared
+  NON-ADJUSTING. No liability at 31 December
+= Already there at the year end: adjust. Started later: note only.`,
+        ru: `Год пекарни заканчивается 31 декабря; отчётность утверждают 20 марта.
+# 15 января: кафе, должное $800 на конец года, банкротится
+  Долг был плохим уже 31 декабря: КОРРЕКТИРУЮЩЕЕ. Списываем $800
+# Январь: часть тортов из запасов на конец года продана ниже стоимости
+  Они стоили меньше уже 31 декабря: КОРРЕКТИРУЮЩЕЕ. Уценяем запасы
+# 10 февраля: пожар уничтожает товар на $5,000, купленный в январе
+  Новая проблема после конца года: НЕКОРРЕКТИРУЮЩЕЕ. Примечание, если существенно
+# 1 февраля: объявлен дивиденд
+  НЕКОРРЕКТИРУЮЩЕЕ. Обязательства на 31 декабря нет
+= Было уже на конец года: корректируем. Возникло позже: только примечание.`,
+        uz: `Novvoyxona yili 31 dekabrda tugaydi; hisobot 20 martda tasdiqlanadi.
+# 15 yanvar: yil oxirida $800 qarzi bo'lgan kafe bankrot bo'ladi
+  Qarz 31 dekabrdayoq yomon edi: TUZATUVCHI. $800 ni hisobdan chiqaramiz
+# Yanvar: yil oxiridagi zaxiradagi tortlarning bir qismi tannarxdan arzon sotiladi
+  Ular 31 dekabrdayoq arzon edi: TUZATUVCHI. Zaxirani arzonlashtiramiz
+# 10 fevral: yong'in yanvarda olingan $5,000 lik tovarni yo'q qiladi
+  Yil oxiridan keyingi yangi muammo: TUZATMAYDIGAN. Muhim bo'lsa izoh
+# 1 fevral: dividend e'lon qilinadi
+  TUZATMAYDIGAN. 31 dekabrda majburiyat yo'q
+= Yil oxirida bor edi: tuzatamiz. Keyin boshlandi: faqat izoh.`,
+      },
+      simple: {
+        en: `Some things happen after the year end but before the directors approve the accounts. Ask one question: was the problem ALREADY there on the last day of the year?
+
+- Yes: an adjusting event. Change the figures. Example: a customer who owed money at the year end goes bankrupt in January.
+- No, it started afterwards: a non-adjusting event. Do not change the figures, but write a note if it is big. Example: a fire in February.
+
+A dividend declared after the year end is always non-adjusting.`,
+        ru: `Некоторые события происходят после конца года, но до утверждения отчётности директорами. Задайте один вопрос: была ли проблема УЖЕ в последний день года?
+
+- Да: корректирующее событие. Меняем цифры. Пример: покупатель, должный на конец года, банкротится в январе.
+- Нет, она возникла потом: некорректирующее событие. Цифры не меняем, но пишем примечание, если оно существенное. Пример: пожар в феврале.
+
+Дивиденд, объявленный после конца года, всегда некорректирующий.`,
+        uz: `Ba'zi voqealar yil tugagandan keyin, lekin direktorlar hisobotni tasdiqlashidan oldin sodir bo'ladi. Bitta savol bering: muammo yilning oxirgi kunida ALLAQACHON bormidi?
+
+- Ha: tuzatuvchi voqea. Sonlarni o'zgartiring. Misol: yil oxirida qarzi bor mijoz yanvarda bankrot bo'ladi.
+- Yo'q, keyin boshlangan: tuzatmaydigan voqea. Sonlarni o'zgartirmang, lekin muhim bo'lsa izoh yozing. Misol: fevraldagi yong'in.
+
+Yil tugagandan keyin e'lon qilingan dividend har doim tuzatmaydigan.`,
       },
     },
     {
@@ -662,23 +982,258 @@ Aks holda u nazorat o'tgan paytda tan olinadi. Nazorat aktivdan foydalanishni bo
 Agent boshqalar uchun pul yig'adi. Tushum faqat komissiya: $3,000 lik sayohat uchun 10% komissiyali agentning tushumi $300, qolgan $2,700 sayohat kompaniyasiga majburiyat.`,
       },
       example: {
-        en: `On 1 October Madina's Mart LLC sells a cafe a coffee machine with 12 months of servicing for $3,600: $3,000 for the machine and $600 for service if bought separately. There are two obligations. The machine is delivered that day, so $3,000 is revenue now. Service runs over time, so by the 31 December year end 3/12 x $600 = $150 is earned. Revenue for the year is $3,150, and $450 stays as deferred income, a current liability.`,
-        ru: `1 октября Madina's Mart LLC продаёт кафе кофемашину с обслуживанием на 12 месяцев за $3,600: $3,000 за машину и $600 за обслуживание при отдельной покупке. Две обязанности. Машина доставлена в тот же день, поэтому $3,000 — выручка сейчас. Обслуживание идёт во времени, поэтому к 31 декабря заработано 3/12 x $600 = $150. Выручка года $3,150, а $450 остаются доходами будущих периодов, краткосрочным обязательством.`,
-        uz: `1 oktyabrda Madina's Mart LLC kafega 12 oylik xizmat bilan kofe mashinasini $3,600 ga sotadi: alohida olinganda mashina $3,000, xizmat $600. Ikkita majburiyat. Mashina shu kuni yetkaziladi, $3,000 hozir tushum. Xizmat vaqt davomida, 31 dekabrgacha 3/12 x $600 = $150 topilgan. Yil tushumi $3,150, $450 kelgusi davr daromadi, qisqa muddatli majburiyat bo'lib qoladi.`,
+        en: `On 1 October a shop sells a cafe a coffee machine plus 12 months of servicing for $3,600. Year end: 31 December.
+# Steps 1-4: the promises and their prices
+  Machine alone sells for $3,000; service alone for $600
+# Step 5: the machine
+  Delivered on 1 October: revenue $3,000 now
+# Step 5: the service
+  Given over 12 months; October to December is 3 months
+  3/12 x $600 = $150
+# Revenue for the year
+  $3,000 + $150 = $3,150
+= The other $450 of service is deferred income, a current liability.`,
+        ru: `1 октября магазин продаёт кафе кофемашину и 12 месяцев обслуживания за $3,600. Конец года: 31 декабря.
+# Шаги 1-4: обещания и их цены
+  Машина отдельно стоит $3,000; обслуживание отдельно $600
+# Шаг 5: машина
+  Доставлена 1 октября: выручка $3,000 сразу
+# Шаг 5: обслуживание
+  Оказывается 12 месяцев; октябрь–декабрь — 3 месяца
+  3/12 x $600 = $150
+# Выручка за год
+  $3,000 + $150 = $3,150
+= Остальные $450 обслуживания — доходы будущих периодов, краткосрочное обязательство.`,
+        uz: `1 oktyabrda do'kon kafega qahva mashinasi va 12 oylik xizmatni $3,600 ga sotadi. Yil oxiri: 31 dekabr.
+# 1-4 qadamlar: va'dalar va ularning narxi
+  Mashina alohida $3,000; xizmat alohida $600
+# 5-qadam: mashina
+  1 oktyabrda yetkazilgan: darhol $3,000 tushum
+# 5-qadam: xizmat
+  12 oy davomida ko'rsatiladi; oktyabr–dekabr 3 oy
+  3/12 x $600 = $150
+# Yillik tushum
+  $3,000 + $150 = $3,150
+= Xizmatning qolgan $450 i kelgusi davr daromadi, qisqa muddatli majburiyat.`,
+      },
+      simple: {
+        en: `Revenue is the money earned from normal trading, without sales tax. It is earned when you DELIVER what you promised, not when the customer pays. IFRS 15 gives five steps:
+
+- 1. Find the contract (it need not be written).
+- 2. List the promises in it (performance obligations).
+- 3. Find the total price.
+- 4. Share the price between the promises.
+- 5. Count each promise as revenue when it is done.
+
+Goods usually count at one point in time, when the customer gets control. Services count bit by bit over time. Money received before delivery is deferred income, a liability. An agent counts only its commission.`,
+        ru: `Выручка — деньги, заработанные обычной торговлей, без налога с продаж. Она заработана, когда вы ВЫПОЛНИЛИ обещанное, а не когда покупатель заплатил. IFRS 15 даёт пять шагов:
+
+- 1. Найти договор (он может быть устным).
+- 2. Перечислить обещания в нём (обязанности к исполнению).
+- 3. Найти общую цену.
+- 4. Распределить цену между обещаниями.
+- 5. Признать каждое обещание выручкой, когда оно выполнено.
+
+Товары обычно признают в один момент, когда покупатель получает контроль. Услуги — постепенно, в течение времени. Деньги, полученные до поставки, — доходы будущих периодов, обязательство. Агент признаёт только свою комиссию.`,
+        uz: `Tushum — odatiy savdodan topilgan pul, sotuv solig'isiz. U mijoz to'laganda emas, va'da qilinganini BAJARGANDA topiladi. IFRS 15 besh qadam beradi:
+
+- 1. Shartnomani toping (u yozma bo'lishi shart emas).
+- 2. Undagi va'dalarni sanab chiqing (bajarish majburiyatlari).
+- 3. Umumiy narxni toping.
+- 4. Narxni va'dalar o'rtasida taqsimlang.
+- 5. Har bir va'dani bajarilganda tushum deb tan oling.
+
+Tovarlar odatda bir lahzada, mijoz nazoratni olganda tan olinadi. Xizmatlar vaqt davomida asta-sekin. Yetkazib berishdan oldin olingan pul kelgusi davr daromadi, majburiyat. Agent faqat o'z komissiyasini tan oladi.`,
       },
     },
   ],
   glossary: [
-    { term: { en: 'Aggregation', ru: 'Агрегирование', uz: 'Agregatsiya' }, definition: { en: 'Adding together items that share characteristics and belong to the same classification.', ru: 'Сложение статей с общими характеристиками одной классификации.', uz: 'Umumiy xususiyatli va bir xil tasnifdagi moddalarni qo\'shish.' } },
-    { term: { en: 'Disaggregation', ru: 'Дезагрегирование', uz: 'Dezagregatsiya' }, definition: { en: 'Separating an item into parts that do not share characteristics.', ru: 'Разделение статьи на части без общих характеристик.', uz: 'Moddani umumiy xususiyatsiz qismlarga ajratish.' } },
-    { term: { en: 'Current asset', ru: 'Оборотный актив', uz: 'Aylanma aktiv' }, definition: { en: 'An asset used in the operating cycle, held for trading, due within 12 months, or cash.', ru: 'Актив операционного цикла, для торговли, со сроком до 12 месяцев или деньги.', uz: 'Operatsion siklda ishlatiladigan, savdo uchun, 12 oy ichidagi aktiv yoki pul.' } },
-    { term: { en: 'Current liability', ru: 'Краткосрочное обязательство', uz: 'Qisqa muddatli majburiyat' }, definition: { en: 'A liability due in the operating cycle or within 12 months, or with no right to defer settlement for 12 months.', ru: 'Обязательство в операционном цикле или до 12 месяцев либо без права отсрочки на 12 месяцев.', uz: 'Operatsion siklda yoki 12 oy ichida to\'lanadigan yoki 12 oyga kechiktirish huquqi yo\'q majburiyat.' } },
-    { term: { en: 'Total comprehensive income', ru: 'Общий совокупный доход', uz: 'Jami umumlashgan daromad' }, definition: { en: 'Profit or loss plus other comprehensive income.', ru: 'Прибыль или убыток плюс прочий совокупный доход.', uz: 'Foyda yoki zarar plus boshqa umumlashgan daromad.' } },
-    { term: { en: 'Adjusting event', ru: 'Корректирующее событие', uz: 'Tuzatuvchi voqea' }, definition: { en: 'An event after the reporting date giving evidence of conditions at that date.', ru: 'Событие после отчётной даты, свидетельствующее об условиях на эту дату.', uz: 'Hisobot sanasidan keyin shu sanadagi holatni tasdiqlovchi voqea.' } },
-    { term: { en: 'Non-adjusting event', ru: 'Некорректирующее событие', uz: 'Tuzatmaydigan voqea' }, definition: { en: 'An event after the reporting date about conditions that arose afterwards.', ru: 'Событие после отчётной даты об условиях, возникших позже.', uz: 'Hisobot sanasidan keyin paydo bo\'lgan holatga oid voqea.' } },
-    { term: { en: 'Performance obligation', ru: 'Обязанность к исполнению', uz: 'Bajarish majburiyati' }, definition: { en: 'A promise in a contract to transfer goods or services to a customer.', ru: 'Обещание в договоре передать покупателю товары или услуги.', uz: 'Shartnomadagi mijozga tovar yoki xizmat berish va\'dasi.' } },
-    { term: { en: 'Deferred income', ru: 'Доходы будущих периодов', uz: 'Kelgusi davr daromadi' }, definition: { en: 'Money received for goods or services not yet supplied, shown as a liability.', ru: 'Деньги за ещё не поставленные товары или услуги, показываются обязательством.', uz: 'Hali yetkazilmagan tovar yoki xizmat uchun olingan pul, majburiyat sifatida ko\'rsatiladi.' } },
-    { term: { en: 'Agent', ru: 'Агент', uz: 'Agent' }, definition: { en: 'A business that arranges a sale for another party and earns a commission.', ru: 'Бизнес, организующий продажу для другой стороны за комиссию.', uz: 'Boshqa tomon uchun sotuvni tashkil qilib, komissiya oladigan biznes.' } },
+    {
+      term: { en: 'Aggregation', ru: 'Агрегирование', uz: 'Agregatsiya' },
+      definition: {
+        en: 'Adding together items that share characteristics and belong to the same classification.',
+        ru: 'Сложение статей с общими характеристиками одной классификации.',
+        uz: 'Umumiy xususiyatli va bir xil tasnifdagi moddalarni qo\'shish.',
+      },
+      example: {
+        en: 'One line "Property, plant and equipment $9,000" instead of listing the shop, oven and van.',
+        ru: 'Одна строка «Основные средства $9,000» вместо перечня магазина, печи и фургона.',
+        uz: 'Do\'kon, pech va furgon o\'rniga bitta qator «Asosiy vositalar $9,000».',
+      },
+    },
+    {
+      term: { en: 'Disaggregation', ru: 'Дезагрегирование', uz: 'Dezagregatsiya' },
+      definition: {
+        en: 'Separating an item into parts that do not share characteristics.',
+        ru: 'Разделение статьи на части без общих характеристик.',
+        uz: 'Moddani umumiy xususiyatsiz qismlarga ajratish.',
+      },
+      example: {
+        en: 'The note splits $9,000 into shop $6,000, oven $2,000 and van $1,000.',
+        ru: 'Примечание делит $9,000 на магазин $6,000, печь $2,000 и фургон $1,000.',
+        uz: 'Izoh $9,000 ni do\'kon $6,000, pech $2,000 va furgon $1,000 ga ajratadi.',
+      },
+    },
+    {
+      term: { en: 'Current asset', ru: 'Оборотный актив', uz: 'Aylanma aktiv' },
+      definition: {
+        en: 'An asset used in the operating cycle, held for trading, due within 12 months, or cash.',
+        ru: 'Актив операционного цикла, для торговли, со сроком до 12 месяцев или деньги.',
+        uz: 'Operatsion siklda ishlatiladigan, savdo uchun, 12 oy ichidagi aktiv yoki pul.',
+      },
+      example: {
+        en: 'Flour in stock, money customers owe, cash in the till.',
+        ru: 'Мука на складе, долги покупателей, деньги в кассе.',
+        uz: 'Ombordagi un, mijozlar qarzi, kassadagi pul.',
+      },
+    },
+    {
+      term: { en: 'Current liability', ru: 'Краткосрочное обязательство', uz: 'Qisqa muddatli majburiyat' },
+      definition: {
+        en: 'A liability due in the operating cycle or within 12 months, or with no right to defer settlement for 12 months.',
+        ru: 'Обязательство в операционном цикле или до 12 месяцев либо без права отсрочки на 12 месяцев.',
+        uz: 'Operatsion siklda yoki 12 oy ichida to\'lanadigan yoki 12 oyga kechiktirish huquqi yo\'q majburiyat.',
+      },
+      example: {
+        en: 'A $500 supplier bill due next month, or a bank overdraft.',
+        ru: 'Счёт поставщика $500 к оплате в следующем месяце или овердрафт.',
+        uz: 'Kelasi oy to\'lanadigan $500 lik yetkazib beruvchi hisobi yoki overdraft.',
+      },
+    },
+    {
+      term: { en: 'Net current assets', ru: 'Чистые оборотные активы', uz: 'Sof aylanma aktivlar' },
+      definition: {
+        en: 'Current assets minus current liabilities.',
+        ru: 'Оборотные активы минус краткосрочные обязательства.',
+        uz: 'Aylanma aktivlar minus qisqa muddatli majburiyatlar.',
+      },
+      example: {
+        en: 'Current assets $1,750 - current liabilities $1,200 = $550.',
+        ru: 'Оборотные активы $1,750 - краткосрочные обязательства $1,200 = $550.',
+        uz: 'Aylanma aktivlar $1,750 - qisqa muddatli majburiyatlar $1,200 = $550.',
+      },
+    },
+    {
+      term: { en: 'Total comprehensive income', ru: 'Общий совокупный доход', uz: 'Jami umumlashgan daromad' },
+      definition: {
+        en: 'Profit or loss plus other comprehensive income.',
+        ru: 'Прибыль или убыток плюс прочий совокупный доход.',
+        uz: 'Foyda yoki zarar plus boshqa umumlashgan daromad.',
+      },
+      example: {
+        en: 'Profit $2,800 + revaluation gain $2,000 = $4,800.',
+        ru: 'Прибыль $2,800 + прирост от переоценки $2,000 = $4,800.',
+        uz: 'Foyda $2,800 + qayta baholash o\'sishi $2,000 = $4,800.',
+      },
+    },
+    {
+      term: {
+        en: 'Statement of changes in equity',
+        ru: 'Отчёт об изменениях в капитале',
+        uz: 'Kapitaldagi o\'zgarishlar hisoboti',
+      },
+      definition: {
+        en: 'A statement showing the opening balance, the movements and the closing balance of each part of equity.',
+        ru: 'Отчёт, показывающий начальный остаток, движения и конечный остаток каждой части капитала.',
+        uz: 'Kapitalning har bir qismi boshlang\'ich qoldig\'i, harakatlari va yakuniy qoldig\'ini ko\'rsatadigan hisobot.',
+      },
+      example: {
+        en: 'Retained earnings: $3,000 + profit $2,800 - dividends $1,300 = $4,500.',
+        ru: 'Нераспределённая прибыль: $3,000 + прибыль $2,800 - дивиденды $1,300 = $4,500.',
+        uz: 'Taqsimlanmagan foyda: $3,000 + foyda $2,800 - dividendlar $1,300 = $4,500.',
+      },
+    },
+    {
+      term: { en: 'Adjusting event', ru: 'Корректирующее событие', uz: 'Tuzatuvchi voqea' },
+      definition: {
+        en: 'An event after the reporting date giving evidence of conditions at that date.',
+        ru: 'Событие после отчётной даты, свидетельствующее об условиях на эту дату.',
+        uz: 'Hisobot sanasidan keyin shu sanadagi holatni tasdiqlovchi voqea.',
+      },
+      example: {
+        en: 'A customer who owed $800 at the year end goes bankrupt in January.',
+        ru: 'Покупатель, должный $800 на конец года, банкротится в январе.',
+        uz: 'Yil oxirida $800 qarzi bo\'lgan mijoz yanvarda bankrot bo\'ladi.',
+      },
+    },
+    {
+      term: { en: 'Non-adjusting event', ru: 'Некорректирующее событие', uz: 'Tuzatmaydigan voqea' },
+      definition: {
+        en: 'An event after the reporting date about conditions that arose afterwards.',
+        ru: 'Событие после отчётной даты об условиях, возникших позже.',
+        uz: 'Hisobot sanasidan keyin paydo bo\'lgan holatga oid voqea.',
+      },
+      example: {
+        en: 'A fire in February destroys goods bought in January.',
+        ru: 'Пожар в феврале уничтожает товар, купленный в январе.',
+        uz: 'Fevraldagi yong\'in yanvarda olingan tovarni yo\'q qiladi.',
+      },
+    },
+    {
+      term: { en: 'Revenue', ru: 'Выручка', uz: 'Tushum' },
+      definition: {
+        en: 'Income from a business\'s ordinary activities, excluding sales tax.',
+        ru: 'Доход от обычной деятельности бизнеса без налога с продаж.',
+        uz: 'Biznesning odatiy faoliyatidan daromad, sotuv solig\'isiz.',
+      },
+      example: {
+        en: 'A bakery sells $20,000 of bread in the year. Selling its old van is not revenue.',
+        ru: 'Пекарня продала хлеба на $20,000 за год. Продажа старого фургона — не выручка.',
+        uz: 'Novvoyxona yil davomida $20,000 lik non sotdi. Eski furgonni sotish tushum emas.',
+      },
+    },
+    {
+      term: { en: 'Performance obligation', ru: 'Обязанность к исполнению', uz: 'Bajarish majburiyati' },
+      definition: {
+        en: 'A promise in a contract to transfer goods or services to a customer.',
+        ru: 'Обещание в договоре передать покупателю товары или услуги.',
+        uz: 'Shartnomadagi mijozga tovar yoki xizmat berish va\'dasi.',
+      },
+      example: {
+        en: 'Selling a phone with a year of repairs: two promises, the phone and the repairs.',
+        ru: 'Продажа телефона с годом ремонта: два обещания — телефон и ремонт.',
+        uz: 'Telefonni bir yillik ta\'mir bilan sotish: ikki va\'da — telefon va ta\'mir.',
+      },
+    },
+    {
+      term: { en: 'Transaction price', ru: 'Цена сделки', uz: 'Bitim narxi' },
+      definition: {
+        en: 'The amount the business expects to receive for the goods or services in a contract.',
+        ru: 'Сумма, которую бизнес ожидает получить за товары или услуги по договору.',
+        uz: 'Biznes shartnoma bo\'yicha tovar yoki xizmatlar uchun olishni kutadigan summa.',
+      },
+      example: {
+        en: 'A coffee machine with a year of servicing for $3,600 in total.',
+        ru: 'Кофемашина с годом обслуживания всего за $3,600.',
+        uz: 'Bir yillik xizmat bilan qahva mashinasi jami $3,600.',
+      },
+    },
+    {
+      term: { en: 'Deferred income', ru: 'Доходы будущих периодов', uz: 'Kelgusi davr daromadi' },
+      definition: {
+        en: 'Money received for goods or services not yet supplied, shown as a liability.',
+        ru: 'Деньги за ещё не поставленные товары или услуги, показываются обязательством.',
+        uz: 'Hali yetkazilmagan tovar yoki xizmat uchun olingan pul, majburiyat sifatida ko\'rsatiladi.',
+      },
+      example: {
+        en: 'A $50 deposit for a birthday cake to be collected next month.',
+        ru: 'Задаток $50 за торт, который заберут в следующем месяце.',
+        uz: 'Kelasi oy olib ketiladigan tort uchun $50 zaklad.',
+      },
+    },
+    {
+      term: { en: 'Agent', ru: 'Агент', uz: 'Agent' },
+      definition: {
+        en: 'A business that arranges a sale for another party and earns a commission.',
+        ru: 'Бизнес, организующий продажу для другой стороны за комиссию.',
+        uz: 'Boshqa tomon uchun sotuvni tashkil qilib, komissiya oladigan biznes.',
+      },
+      example: {
+        en: 'A travel agent sells a $1,000 holiday at 10% commission: its revenue is $100.',
+        ru: 'Турагент продаёт тур за $1,000 с комиссией 10%: его выручка $100.',
+        uz: 'Sayohat agenti $1,000 lik turni 10% komissiya bilan sotadi: uning tushumi $100.',
+      },
+    },
   ],
 };
 

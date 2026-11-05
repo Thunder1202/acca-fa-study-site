@@ -155,7 +155,7 @@ for (const id of ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '1
 
 // Chapters rewritten after the November 2026 feedback: plain words, everyday examples,
 // an example for every key term, and step-by-step answers that line up across languages.
-const REWORKED = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '17'];
+const REWORKED = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'];
 
 for (const id of REWORKED) {
   const chapter = require(`../data/chapter-${id}.js`);

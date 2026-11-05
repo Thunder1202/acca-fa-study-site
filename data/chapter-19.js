@@ -8,11 +8,31 @@ const chapter19 = {
     uz: 'Konsolidatsiyalangan moliyaviy holat hisoboti',
   },
   objectives: [
-    { en: 'Define parent, subsidiary, control, non-controlling interest and trade investment', ru: 'Определять материнскую и дочернюю компанию, контроль, неконтролирующую долю и простое вложение', uz: 'Bosh va sho\'ba kompaniya, nazorat, nazoratsiz ulush va oddiy sarmoyani ta\'riflash' },
-    { en: 'Explain why consolidated financial statements are prepared', ru: 'Объяснять, зачем готовится консолидированная отчётность', uz: 'Konsolidatsiyalangan hisobot nega tuziladi, tushuntirish' },
-    { en: 'Calculate goodwill using the fair value of consideration and net assets', ru: 'Рассчитывать гудвил по справедливой стоимости возмещения и чистых активов', uz: 'Gudvilni to\'lov va sof aktivlarning adolatli qiymati bo\'yicha hisoblash' },
-    { en: 'Calculate non-controlling interest and group retained earnings', ru: 'Рассчитывать неконтролирующую долю и нераспределённую прибыль группы', uz: 'Nazoratsiz ulush va guruhning taqsimlanmagan foydasini hisoblash' },
-    { en: 'Adjust for intra-group balances, unrealised profit and mid-year acquisitions', ru: 'Корректировать внутригрупповые остатки, нереализованную прибыль и покупку в середине года', uz: 'Guruh ichidagi qoldiqlar, amalga oshmagan foyda va yil o\'rtasidagi xaridni tuzatish' },
+    {
+      en: 'Define parent, subsidiary, control, non-controlling interest and trade investment',
+      ru: 'Определять материнскую и дочернюю компанию, контроль, неконтролирующую долю и простое вложение',
+      uz: 'Bosh va sho\'ba kompaniya, nazorat, nazoratsiz ulush va oddiy sarmoyani ta\'riflash',
+    },
+    {
+      en: 'Explain why consolidated financial statements are prepared',
+      ru: 'Объяснять, зачем готовится консолидированная отчётность',
+      uz: 'Konsolidatsiyalangan hisobot nega tuziladi, tushuntirish',
+    },
+    {
+      en: 'Calculate goodwill using the fair value of consideration and net assets',
+      ru: 'Рассчитывать гудвил по справедливой стоимости возмещения и чистых активов',
+      uz: 'Gudvilni to\'lov va sof aktivlarning adolatli qiymati bo\'yicha hisoblash',
+    },
+    {
+      en: 'Calculate non-controlling interest and group retained earnings',
+      ru: 'Рассчитывать неконтролирующую долю и нераспределённую прибыль группы',
+      uz: 'Nazoratsiz ulush va guruhning taqsimlanmagan foydasini hisoblash',
+    },
+    {
+      en: 'Adjust for intra-group balances, unrealised profit and mid-year acquisitions',
+      ru: 'Корректировать внутригрупповые остатки, нереализованную прибыль и покупку в середине года',
+      uz: 'Guruh ichidagi qoldiqlar, amalga oshmagan foyda va yil o\'rtasidagi xaridni tuzatish',
+    },
   ],
   sections: [
     {
@@ -50,11 +70,7 @@ const chapter19 = {
 - Direktorlar kengashining ko'pchiligini tayinlash huquqi odatda nazoratni bildiradi.
 - Oddiy sarmoya moliyaviy aktiv, odatda adolatli qiymatda. Olingan dividendlar daromad.`,
       },
-      heading: {
-        en: 'Groups and control',
-        ru: 'Группы и контроль',
-        uz: 'Guruhlar va nazorat',
-      },
+      heading: { en: 'Groups and control', ru: 'Группы и контроль', uz: 'Guruhlar va nazorat' },
       body: {
         en: `A group exists when one entity, the parent, controls another, the subsidiary. IFRS 10 Consolidated Financial Statements says an investor controls an investee when it has all three of: power over the investee, normally through a majority of the voting rights; exposure, or rights, to variable returns from it, such as dividends; and the ability to use its power to affect the amount of those returns.
 
@@ -79,9 +95,50 @@ Bosh kompaniya barcha aksiyalarga ega bo'lishi shart emas. Agar uning 80% i bo'l
 Bosh kompaniya sho'bani nazorat qilgach, uning aksiyadorlari sarmoyasi ikkala kompaniyaga bog'liq. Shuning uchun IFRS 10 konsolidatsiyalangan hisobotni talab qiladi: bosh va sho'ba kompaniyalarning aktiv, majburiyat, daromad va xarajatlarini bitta korxona kabi birlashtiruvchi yagona to'plam.`,
       },
       example: {
-        en: `On 1 April 20X6 Madina's Mart LLC buys 80% of the shares of a local bakery, Samarkand Bakery LLC, so that it can supply fresh bread to its own shops. Madina's Mart is now a parent and the bakery is its subsidiary. The bakery's founder keeps the other 20%, and is the non-controlling interest. From now on Madina's Mart must prepare group accounts.`,
-        ru: `1 апреля 20X6 Madina's Mart LLC покупает 80% акций местной пекарни Samarkand Bakery LLC, чтобы снабжать свои магазины свежим хлебом. Теперь Madina's Mart — материнская компания, а пекарня — дочерняя. Основатель пекарни сохраняет остальные 20% и является неконтролирующей долей. С этого момента Madina's Mart должна готовить отчётность группы.`,
-        uz: `20X6 yil 1 aprelda Madina's Mart LLC o'z do'konlarini yangi non bilan ta'minlash uchun mahalliy Samarkand Bakery LLC novvoyxonasi aksiyalarining 80% ini sotib oladi. Endi Madina's Mart bosh kompaniya, novvoyxona sho'ba kompaniya. Novvoyxona asoschisi qolgan 20% ni saqlaydi va u nazoratsiz ulush. Bundan buyon Madina's Mart guruh hisobotini tuzishi kerak.`,
+        en: `On 1 April 20X6 Shop Co buys 80% of the shares of Bake Co, so it can supply its own bread.
+# Who is who
+  Shop Co owns more than 50%: it is the PARENT
+  Bake Co is controlled: it is the SUBSIDIARY
+# The other 20%
+  The bakery's founder keeps 20%: the NON-CONTROLLING INTEREST
+# What changes
+  From now on Shop Co must prepare group (consolidated) accounts
+= Over 50% of the votes = control = a group.`,
+        ru: `1 апреля 20X6 Shop Co покупает 80% акций Bake Co, чтобы снабжать себя хлебом.
+# Кто есть кто
+  Shop Co владеет более 50%: это МАТЕРИНСКАЯ компания
+  Bake Co под контролем: это ДОЧЕРНЯЯ компания
+# Остальные 20%
+  Основатель пекарни сохраняет 20%: НЕКОНТРОЛИРУЮЩАЯ ДОЛЯ
+# Что меняется
+  Отныне Shop Co должна готовить групповую (консолидированную) отчётность
+= Более 50% голосов = контроль = группа.`,
+        uz: `20X6 yil 1 aprelda Shop Co o'zini non bilan ta'minlash uchun Bake Co aksiyalarining 80% ini sotib oladi.
+# Kim kim
+  Shop Co 50% dan ko'piga ega: u BOSH kompaniya
+  Bake Co nazorat ostida: u SHO'BA kompaniya
+# Qolgan 20%
+  Novvoyxona asoschisi 20% ni saqlaydi: NAZORATSIZ ULUSH
+# Nima o'zgaradi
+  Endi Shop Co guruh (konsolidatsiyalangan) hisobotini tayyorlashi kerak
+= Ovozlarning 50% dan ko'pi = nazorat = guruh.`,
+      },
+      simple: {
+        en: `When one company CONTROLS another, they form a group. The one in control is the parent; the one controlled is the subsidiary. Control usually means owning more than 50% of the voting shares, because then you can outvote everyone else.
+
+IFRS 10 says control needs three things together: power over the company, exposure to its returns (such as dividends), and the ability to use that power to change those returns.
+
+If the parent owns less than 100%, the other shareholders are the non-controlling interest (NCI). The group then prepares one set of consolidated statements, as if it were a single business.`,
+        ru: `Когда одна компания КОНТРОЛИРУЕТ другую, они образуют группу. Контролирующая — материнская, контролируемая — дочерняя. Контроль обычно означает владение более 50% голосующих акций: тогда вы перевешиваете всех остальных.
+
+IFRS 10 говорит, что для контроля нужны три вещи вместе: власть над компанией, подверженность её доходам (например, дивидендам) и способность использовать власть, чтобы влиять на эти доходы.
+
+Если материнская владеет меньше чем 100%, остальные акционеры — неконтролирующая доля (NCI). Группа готовит один комплект консолидированной отчётности, как будто это один бизнес.`,
+        uz: `Bir kompaniya boshqasini NAZORAT qilsa, ular guruh hosil qiladi. Nazorat qiluvchi — bosh kompaniya, nazorat qilinuvchi — sho'ba kompaniya. Nazorat odatda ovoz beruvchi aksiyalarning 50% dan ko'piga egalikni bildiradi: shunda boshqalarni ovozda yengasiz.
+
+IFRS 10 nazorat uchun uch narsa birga kerak deydi: kompaniya ustidan hokimiyat, uning daromadlariga ta'sirchanlik (masalan, dividendlar) va bu daromadlarga ta'sir qilish uchun hokimiyatdan foydalanish qobiliyati.
+
+Bosh kompaniya 100% dan kam egalik qilsa, qolgan aksiyadorlar nazoratsiz ulush (NCI). Guruh bitta konsolidatsiyalangan hisobot tayyorlaydi, go'yo u bitta biznes.`,
       },
     },
     {
@@ -148,9 +205,56 @@ Har safar besh standart hisobni bir xil tartibda bajaring. W1, guruh tuzilmasi: 
 W2 da aksiya kapitali, emissiya daromadi, bo'lsa qayta baholash rezervi, taqsimlanmagan foyda va adolatli qiymat tuzatishlarini yozing. Kapital va emissiya daromadi ikkala ustunda bir xil bo'lishi kerak. Ikki jam farqi sho'ba sof aktivlarining xariddan keyingi o'zgarishi, u guruh va NCI o'rtasida bo'linadi.`,
       },
       example: {
-        en: `At 31 December 20X6 Madina's Mart has property, plant and equipment of $106,000 and the bakery $30,000. The bakery's land was worth $5,000 more than its carrying amount when it was bought. Group property, plant and equipment is $106,000 + $30,000 + $5,000 = $141,000, in full, even though Madina's Mart owns only 80%. Share capital in the group statement is Madina's Mart's only.`,
-        ru: `На 31 декабря 20X6 основные средства Madina's Mart $106,000, пекарни $30,000. Земля пекарни на дату покупки стоила на $5,000 больше балансовой стоимости. Основные средства группы $106,000 + $30,000 + $5,000 = $141,000, полностью, хотя Madina's Mart владеет только 80%. Акционерный капитал в отчёте группы — только Madina's Mart.`,
-        uz: `20X6 yil 31 dekabrda Madina's Mart asosiy vositalari $106,000, novvoyxonaniki $30,000. Novvoyxona yeri xarid paytida balans qiymatidan $5,000 qimmat edi. Guruh asosiy vositalari $106,000 + $30,000 + $5,000 = $141,000, Madina's Mart faqat 80% ga ega bo'lsa ham, to'liq. Guruh hisobotidagi aksiya kapitali faqat Madina's Mart niki.`,
+        en: `Group property, plant and equipment at 31 December 20X6.
+# Add both in full
+  Shop Co $10,000 + Bake Co $3,000 = $13,000
+# Add the fair value uplift
+  Bake Co's land was worth $500 more than its book value when bought: + $500
+# Group figure
+  $13,000 + $500 = $13,500
+= All of Bake Co's assets go in, not 80% of them. Share capital shown is Shop Co's only.`,
+        ru: `Основные средства группы на 31 декабря 20X6.
+# Складываем обе полностью
+  Shop Co $10,000 + Bake Co $3,000 = $13,000
+# Прибавляем дооценку до справедливой стоимости
+  Земля Bake Co при покупке стоила на $500 больше балансовой: + $500
+# Цифра группы
+  $13,000 + $500 = $13,500
+= Включаем все активы Bake Co, а не 80% из них. Акционерный капитал — только Shop Co.`,
+        uz: `20X6 yil 31 dekabrdagi guruh asosiy vositalari.
+# Ikkalasini to'liq qo'shamiz
+  Shop Co $10,000 + Bake Co $3,000 = $13,000
+# Adolatli qiymat oshishini qo'shamiz
+  Sotib olinganda Bake Co yeri balans qiymatidan $500 qimmat edi: + $500
+# Guruh soni
+  $13,000 + $500 = $13,500
+= Bake Co aktivlarining 80% i emas, hammasi kiradi. Ustav kapitali faqat Shop Co niki.`,
+      },
+      simple: {
+        en: `The group statement shows everything the parent CONTROLS. So:
+
+- Add the parent's and subsidiary's assets and liabilities line by line, in FULL, even if the parent owns only 80%.
+- Remove the parent's "investment in subsidiary" and put goodwill in its place.
+- Show only the PARENT's share capital and share premium.
+- Show the outside owners' part as one line in equity: the NCI.
+
+Use five workings, always in the same order: W1 group structure, W2 the subsidiary's net assets, W3 goodwill, W4 NCI, W5 group retained earnings.`,
+        ru: `Групповой отчёт показывает всё, что материнская КОНТРОЛИРУЕТ. Поэтому:
+
+- Складываем активы и обязательства материнской и дочерней построчно, ПОЛНОСТЬЮ, даже если материнская владеет лишь 80%.
+- Убираем «инвестицию в дочернюю» материнской и ставим вместо неё гудвил.
+- Показываем только акционерный капитал и эмиссионный доход МАТЕРИНСКОЙ.
+- Долю внешних владельцев показываем одной строкой в капитале: NCI.
+
+Используем пять расчётов, всегда в одном порядке: W1 структура группы, W2 чистые активы дочерней, W3 гудвил, W4 NCI, W5 нераспределённая прибыль группы.`,
+        uz: `Guruh hisoboti bosh kompaniya NAZORAT qiladigan hamma narsani ko'rsatadi. Shuning uchun:
+
+- Bosh va sho'ba kompaniyalarning aktiv va majburiyatlarini qatorma-qator, TO'LIQ qo'shamiz, hatto bosh kompaniya faqat 80% ga ega bo'lsa ham.
+- Bosh kompaniyaning «sho'baga investitsiya»sini olib tashlab, o'rniga gudvil qo'yamiz.
+- Faqat BOSH kompaniyaning ustav kapitali va emissiya daromadini ko'rsatamiz.
+- Tashqi egalar ulushini kapitalda bitta qator qilib ko'rsatamiz: NCI.
+
+Besh hisob-kitobdan har doim bir xil tartibda foydalanamiz: W1 guruh tuzilmasi, W2 sho'ba sof aktivlari, W3 gudvil, W4 NCI, W5 guruh taqsimlanmagan foydasi.`,
       },
     },
     {
@@ -191,11 +295,7 @@ W2 da aksiya kapitali, emissiya daromadi, bo'lsa qayta baholash rezervi, taqsiml
 - Yil oxiridagi rezervlar berilsa, xariddan keyingi foydani ayirib, xarid paytidagi rezervlarni toping.
 - Gudvil qadrsizlanmasa, xarid paytidagi summasida qoladi. Kechiktirilgan va shartli to'lov imtihonda yo'q.`,
       },
-      heading: {
-        en: 'Goodwill and fair values',
-        ru: 'Гудвил и справедливая стоимость',
-        uz: 'Gudvil va adolatli qiymat',
-      },
+      heading: { en: 'Goodwill and fair values', ru: 'Гудвил и справедливая стоимость', uz: 'Gudvil va adolatli qiymat' },
       body: {
         en: `A business is usually worth more than its separate net assets. The difference is goodwill: reputation, brands, trained staff, customers and suppliers that do not appear in its own statement of financial position. A buyer pays for it because buying a working business is easier than building one from nothing. IFRS 3 Business Combinations requires goodwill to be recognised at the acquisition date as an intangible non-current asset in the group statement.
 
@@ -226,9 +326,62 @@ Nazoratsiz ulush ham xarid paytidagi adolatli qiymatda o'lchanadi. Bu to'liq gud
 Sho'ba yil o'rtasida sotib olinsa, uning sof aktivlarini xarid sanasida topish kerak. Foyda bir tekis topiladi deb hisoblanadi, shuning uchun xarid paytidagi rezervlar boshlang'ich rezervlar plus xariddan oldingi oylar foydasi.`,
       },
       example: {
-        en: `Madina's Mart pays $24,000 cash and issues 2,000 of its $1 shares, worth $4 each, for 80% of the bakery. Consideration is $24,000 + $8,000 = $32,000. It records Dr investment $8,000, Cr share capital $2,000, Cr share premium $6,000. The bakery had share capital of $10,000 and retained earnings of $18,000 on 1 January, and earned $8,000 evenly in 20X6, so at 1 April retained earnings were $18,000 + 3/12 × $8,000 = $20,000. With the $5,000 land uplift, net assets at acquisition are $35,000. The NCI was worth $7,500. Goodwill is $32,000 + $7,500 - $35,000 = $4,500.`,
-        ru: `Madina's Mart платит $24,000 деньгами и выпускает 2,000 своих акций по $1 стоимостью $4 каждая за 80% пекарни. Возмещение $24,000 + $8,000 = $32,000. Запись: Дт вложение $8,000, Кт капитал $2,000, Кт эмиссионный доход $6,000. У пекарни капитал $10,000 и нераспределённая прибыль $18,000 на 1 января, а в 20X6 она равномерно заработала $8,000, поэтому на 1 апреля прибыль $18,000 + 3/12 × $8,000 = $20,000. С дооценкой земли $5,000 чистые активы при покупке $35,000. NCI стоила $7,500. Гудвил: $32,000 + $7,500 - $35,000 = $4,500.`,
-        uz: `Madina's Mart novvoyxonaning 80% i uchun $24,000 pul to'laydi va har biri $4 turadigan 2,000 ta $1 lik aksiyasini chiqaradi. To'lov $24,000 + $8,000 = $32,000. Yozuv: Dt sarmoya $8,000, Kt kapital $2,000, Kt emissiya daromadi $6,000. Novvoyxonaning 1 yanvarda kapitali $10,000, taqsimlanmagan foydasi $18,000 edi, 20X6 da bir tekis $8,000 topdi, shuning uchun 1 aprelda foyda $18,000 + 3/12 × $8,000 = $20,000. Yerning $5,000 oshirilishi bilan xarid paytidagi sof aktivlar $35,000. NCI $7,500 turardi. Gudvil: $32,000 + $7,500 - $35,000 = $4,500.`,
+        en: `Shop Co buys 80% of Bake Co on 1 April 20X6.
+# What Shop Co paid
+  Cash $2,400 + 200 of its own $1 shares worth $4 each ($800) = $3,200
+  Shop Co records: Dr Investment $800, Cr Share capital $200, Cr Share premium $600
+# Bake Co's reserves on 1 April
+  $1,800 on 1 January + 3/12 x profit $800 = $1,800 + $200 = $2,000
+# Bake Co's net assets at fair value on 1 April
+  Share capital $1,000 + reserves $2,000 + land uplift $500 = $3,500
+# Goodwill
+  Paid $3,200 + NCI fair value $750 - net assets $3,500 = $450
+= Goodwill $450: an intangible asset in the group statement.`,
+        ru: `Shop Co покупает 80% Bake Co 1 апреля 20X6.
+# Что заплатила Shop Co
+  Деньги $2,400 + 200 своих акций по $1 стоимостью $4 каждая ($800) = $3,200
+  Shop Co записывает: Дт Инвестиция $800, Кт Акционерный капитал $200, Кт Эмиссионный доход $600
+# Резервы Bake Co на 1 апреля
+  $1,800 на 1 января + 3/12 x прибыль $800 = $1,800 + $200 = $2,000
+# Чистые активы Bake Co по справедливой стоимости на 1 апреля
+  Акционерный капитал $1,000 + резервы $2,000 + дооценка земли $500 = $3,500
+# Гудвил
+  Заплачено $3,200 + справедливая стоимость NCI $750 - чистые активы $3,500 = $450
+= Гудвил $450: нематериальный актив в отчёте группы.`,
+        uz: `Shop Co 20X6 yil 1 aprelda Bake Co ning 80% ini sotib oladi.
+# Shop Co nima to'ladi
+  Pul $2,400 + har biri $4 turadigan 200 ta o'z $1 lik aksiyasi ($800) = $3,200
+  Shop Co yozadi: Dt Investitsiya $800, Kt Ustav kapitali $200, Kt Emissiya daromadi $600
+# Bake Co ning 1 apreldagi rezervlari
+  1 yanvarda $1,800 + 3/12 x foyda $800 = $1,800 + $200 = $2,000
+# Bake Co ning 1 apreldagi adolatli qiymatdagi sof aktivlari
+  Ustav kapitali $1,000 + rezervlar $2,000 + yer oshishi $500 = $3,500
+# Gudvil
+  To'langan $3,200 + NCI adolatli qiymati $750 - sof aktivlar $3,500 = $450
+= Gudvil $450: guruh hisobotidagi nomoddiy aktiv.`,
+      },
+      simple: {
+        en: `Goodwill is the extra paid for a business above the value of its separate assets: its name, customers and trained staff.
+
+Goodwill = what the parent paid + fair value of the NCI - fair value of the subsidiary's net assets at the date of purchase.
+
+- If the parent pays in its own shares, value them at their MARKET price, not nominal value.
+- Value the subsidiary's assets at FAIR value: add any uplift (for example on land).
+- If bought part-way through the year, find the reserves on the purchase date: opening reserves + profit for the months before it.`,
+        ru: `Гудвил — переплата за бизнес сверх стоимости его отдельных активов: имя, покупатели, обученный персонал.
+
+Гудвил = что заплатила материнская + справедливая стоимость NCI - справедливая стоимость чистых активов дочерней на дату покупки.
+
+- Если материнская платит своими акциями, оценивайте их по РЫНОЧНОЙ цене, а не по номиналу.
+- Активы дочерней — по СПРАВЕДЛИВОЙ стоимости: прибавьте дооценку (например, земли).
+- Если покупка в середине года, найдите резервы на дату покупки: резервы на начало + прибыль за месяцы до неё.`,
+        uz: `Gudvil — biznes uchun alohida aktivlari qiymatidan ortiq to'langan summa: nomi, mijozlari va o'qitilgan xodimlari.
+
+Gudvil = bosh kompaniya to'lagani + NCI adolatli qiymati - xarid sanasidagi sho'ba sof aktivlarining adolatli qiymati.
+
+- Bosh kompaniya o'z aksiyalari bilan to'lasa, ularni nominal emas, BOZOR narxida baholang.
+- Sho'ba aktivlarini ADOLATLI qiymatda baholang: har qanday oshishni qo'shing (masalan, yer).
+- Yil o'rtasida sotib olinsa, xarid sanasidagi rezervlarni toping: boshlang'ich rezervlar + undan oldingi oylar foydasi.`,
       },
     },
     {
@@ -292,9 +445,68 @@ Demak, hisobot sanasidagi nazoratsiz ulush xarid paytidagi adolatli qiymati plus
 Sho'baning qayta baholash rezervi ham shunday ishlaydi. Xarid paytidagi qoldiq xariddan oldingi. Keyingi o'sish bo'linadi: guruh qismi alohida kapital tarkibiy qismi — guruh qayta baholash rezervi sifatida ko'rsatiladi, NCI qismi NCI ga boradi.`,
       },
       example: {
-        en: `At 31 December 20X6 the bakery's retained earnings are $26,000, so its net assets are $10,000 + $26,000 + $5,000 = $41,000, before the unrealised profit adjustment in the next section. After that $1,000 adjustment they are $40,000, so the post-acquisition change is $40,000 - $35,000 = $5,000. NCI is $7,500 + 20% × $5,000 = $8,500. Madina's Mart's own retained earnings are $60,000, so group retained earnings are $60,000 + 80% × $5,000 = $64,000.`,
-        ru: `На 31 декабря 20X6 нераспределённая прибыль пекарни $26,000, чистые активы $10,000 + $26,000 + $5,000 = $41,000 до корректировки нереализованной прибыли из следующего раздела. После корректировки $1,000 они $40,000, изменение после покупки $40,000 - $35,000 = $5,000. NCI: $7,500 + 20% × $5,000 = $8,500. Прибыль самой Madina's Mart $60,000, прибыль группы $60,000 + 80% × $5,000 = $64,000.`,
-        uz: `20X6 yil 31 dekabrda novvoyxonaning taqsimlanmagan foydasi $26,000, sof aktivlari keyingi bo'limdagi amalga oshmagan foyda tuzatishidan oldin $10,000 + $26,000 + $5,000 = $41,000. $1,000 tuzatishdan keyin $40,000, xariddan keyingi o'zgarish $40,000 - $35,000 = $5,000. NCI: $7,500 + 20% × $5,000 = $8,500. Madina's Mart ning o'z foydasi $60,000, guruh foydasi $60,000 + 80% × $5,000 = $64,000.`,
+        en: `Bake Co at 31 December 20X6.
+# W2: net assets now
+  Share capital $1,000 + reserves $2,600 + land uplift $500 = $4,100
+  Less unsold profit on bread sold to Shop Co (next section): - $100 = $4,000
+# Post-acquisition change
+  $4,000 now - $3,500 at purchase = $500
+# W4: NCI
+  $750 + 20% x $500 = $850
+# W5: group retained earnings
+  Shop Co's own $6,000 + 80% x $500 = $6,400
+= The $2,000 of reserves at purchase stays out of group retained earnings.`,
+        ru: `Bake Co на 31 декабря 20X6.
+# W2: чистые активы сейчас
+  Акционерный капитал $1,000 + резервы $2,600 + дооценка земли $500 = $4,100
+  Минус нереализованная прибыль по хлебу, проданному Shop Co (следующий раздел): - $100 = $4,000
+# Изменение после покупки
+  $4,000 сейчас - $3,500 при покупке = $500
+# W4: NCI
+  $750 + 20% x $500 = $850
+# W5: нераспределённая прибыль группы
+  Собственная Shop Co $6,000 + 80% x $500 = $6,400
+= Резервы $2,000 на дату покупки не входят в нераспределённую прибыль группы.`,
+        uz: `20X6 yil 31 dekabrda Bake Co.
+# W2: hozirgi sof aktivlar
+  Ustav kapitali $1,000 + rezervlar $2,600 + yer oshishi $500 = $4,100
+  Minus Shop Co ga sotilgan nonning sotilmagan foydasi (keyingi bo'lim): - $100 = $4,000
+# Xariddan keyingi o'zgarish
+  Hozir $4,000 - xarid paytida $3,500 = $500
+# W4: NCI
+  $750 + 20% x $500 = $850
+# W5: guruh taqsimlanmagan foydasi
+  Shop Co ning o'zi $6,000 + 80% x $500 = $6,400
+= Xarid paytidagi $2,000 rezerv guruh taqsimlanmagan foydasiga kirmaydi.`,
+      },
+      simple: {
+        en: `Profits the subsidiary made BEFORE the parent bought it belong to the old owners. They are not group profits.
+
+Profits made AFTER the purchase are shared:
+- The parent's % goes into group retained earnings.
+- The NCI's % goes to the NCI.
+
+Post-acquisition change = subsidiary's net assets now - net assets at purchase.
+NCI = NCI fair value at purchase + NCI % x post-acquisition change.
+Group retained earnings = parent's own retained earnings + parent % x post-acquisition change.`,
+        ru: `Прибыль, которую дочерняя получила ДО покупки материнской, принадлежит старым владельцам. Это не прибыль группы.
+
+Прибыль ПОСЛЕ покупки делится:
+- Доля материнской идёт в нераспределённую прибыль группы.
+- Доля NCI идёт в NCI.
+
+Изменение после покупки = чистые активы дочерней сейчас - чистые активы на дату покупки.
+NCI = справедливая стоимость NCI при покупке + % NCI x изменение после покупки.
+Нераспределённая прибыль группы = собственная прибыль материнской + % материнской x изменение после покупки.`,
+        uz: `Sho'ba kompaniya bosh kompaniya sotib olishidan OLDIN topgan foyda eski egalarga tegishli. Bu guruh foydasi emas.
+
+Xariddan KEYINGI foyda bo'linadi:
+- Bosh kompaniya ulushi guruh taqsimlanmagan foydasiga boradi.
+- NCI ulushi NCI ga boradi.
+
+Xariddan keyingi o'zgarish = sho'baning hozirgi sof aktivlari - xarid paytidagi sof aktivlari.
+NCI = xarid paytidagi NCI adolatli qiymati + NCI % x xariddan keyingi o'zgarish.
+Guruh taqsimlanmagan foydasi = bosh kompaniyaning o'z foydasi + bosh kompaniya % x xariddan keyingi o'zgarish.`,
       },
     },
     {
@@ -355,23 +567,229 @@ Guruh o'ziga sotib foyda ham ko'ra olmaydi, xuddi o'ng qo'l chap qo'lga sotib fo
 Avval berilgan ustama yoki marja bilan qolgan tovardagi foydani toping. So'ng guruh zaxirasini shu summaga kreditlang. Debet kim sotganiga bog'liq. Bosh kompaniya sotgan bo'lsa, foyda uning taqsimlanmagan foydasida, u W5 da to'liq ayiriladi. Sho'ba sotgan bo'lsa, foyda sho'ba taqsimlanmagan foydasida, u W2 da hisobot sanasidagi sof aktivlardan ayiriladi. So'ng u W4 va W5 ga o'tadi va NCI va guruh o'rtasida bo'linadi.`,
       },
       example: {
-        en: `In 20X6 the bakery sells bread to Madina's Mart for $6,000, at a mark-up of 50% on cost. The profit is $6,000 × 50/150 = $2,000. Half is still unsold at the year end, so the unrealised profit is $1,000. Group inventory falls by $1,000. The bakery was the seller, so the $1,000 comes off its net assets in W2, and the NCI bears 20% of it. Madina's Mart also owes the bakery $1,500 at the year end: that comes off both group receivables and group payables.`,
-        ru: `В 20X6 пекарня продаёт хлеб Madina's Mart на $6,000 с наценкой 50% на себестоимость. Прибыль $6,000 × 50/150 = $2,000. Половина не продана на конец года, нереализованная прибыль $1,000. Запасы группы уменьшаются на $1,000. Продавала пекарня, поэтому $1,000 вычитается из её чистых активов в W2, и NCI несёт 20%. Кроме того, Madina's Mart должна пекарне $1,500 на конец года: эта сумма вычитается и из дебиторов, и из кредиторов группы.`,
-        uz: `20X6 da novvoyxona Madina's Mart ga nonni tannarxga 50% ustama bilan $6,000 ga sotadi. Foyda $6,000 × 50/150 = $2,000. Yil oxirida yarmi sotilmagan, amalga oshmagan foyda $1,000. Guruh zaxirasi $1,000 ga kamayadi. Sotuvchi novvoyxona, shuning uchun $1,000 W2 da uning sof aktivlaridan ayiriladi va NCI 20% ini ko'taradi. Yana Madina's Mart yil oxirida novvoyxonaga $1,500 qarzdor: bu summa guruh debitorlari va kreditorlaridan ayiriladi.`,
+        en: `Bake Co sells bread to Shop Co for $600, at a 50% mark-up on cost.
+# Profit in the sale
+  $600 x 50/150 = $200
+# Unrealised part
+  Half is still unsold at the year end: $200 x 1/2 = $100
+# Where it goes
+  Group inventory: - $100
+  Bake Co (the subsidiary) was the seller: take $100 off its net assets in W2, so the NCI bears 20%
+# Money owed inside the group
+  Shop Co owes Bake Co $150: take $150 off group receivables AND group payables
+= PURP $100; intra-group balance $150 cancelled.`,
+        ru: `Bake Co продаёт хлеб Shop Co за $600 с наценкой 50% на себестоимость.
+# Прибыль в продаже
+  $600 x 50/150 = $200
+# Нереализованная часть
+  Половина не продана на конец года: $200 x 1/2 = $100
+# Куда идёт
+  Запасы группы: - $100
+  Продавала Bake Co (дочерняя): вычитаем $100 из её чистых активов в W2, NCI несёт 20%
+# Долг внутри группы
+  Shop Co должна Bake Co $150: вычитаем $150 из дебиторов И кредиторов группы
+= PURP $100; внутригрупповой остаток $150 исключён.`,
+        uz: `Bake Co Shop Co ga nonni tannarxga 50% ustama bilan $600 ga sotadi.
+# Sotuvdagi foyda
+  $600 x 50/150 = $200
+# Amalga oshmagan qism
+  Yarmi yil oxirida sotilmagan: $200 x 1/2 = $100
+# Qayerga boradi
+  Guruh zaxirasi: - $100
+  Sotuvchi Bake Co (sho'ba): W2 da uning sof aktivlaridan $100 ayiramiz, NCI 20% ni ko'taradi
+# Guruh ichidagi qarz
+  Shop Co Bake Co ga $150 qarz: guruh debitorlaridan HAM, kreditorlaridan HAM $150 ayiramiz
+= PURP $100; guruh ichidagi $150 qoldiq chiqarildi.`,
+      },
+      simple: {
+        en: `A group cannot owe money to itself or make a profit selling to itself.
+
+- Money owed between group companies: cancel it from BOTH receivables and payables.
+- Goods sold inside the group and still unsold at the year end: the profit in them is unrealised (PURP). Take it off group inventory.
+
+Who bears the PURP? If the PARENT sold the goods, take it all off group retained earnings (W5). If the SUBSIDIARY sold them, take it off the subsidiary's net assets now (W2), so the NCI shares it.
+
+Mark-up is on cost: profit = price x mark-up / (100 + mark-up). Margin is on price: profit = price x margin.`,
+        ru: `Группа не может быть должна сама себе или получать прибыль от продаж самой себе.
+
+- Долги между компаниями группы: вычеркните их И из дебиторов, И из кредиторов.
+- Товар, проданный внутри группы и не проданный на конец года: прибыль в нём нереализована (PURP). Вычтите её из запасов группы.
+
+Кто несёт PURP? Если продавала МАТЕРИНСКАЯ, вычтите всё из нераспределённой прибыли группы (W5). Если продавала ДОЧЕРНЯЯ, вычтите из её текущих чистых активов (W2), чтобы NCI разделила её.
+
+Наценка — от себестоимости: прибыль = цена x наценка / (100 + наценка). Маржа — от цены: прибыль = цена x маржа.`,
+        uz: `Guruh o'ziga qarzdor bo'la olmaydi va o'ziga sotib foyda ola olmaydi.
+
+- Guruh kompaniyalari orasidagi qarz: uni debitorlardan HAM, kreditorlardan HAM chiqaring.
+- Guruh ichida sotilgan va yil oxirida sotilmay qolgan tovar: undagi foyda amalga oshmagan (PURP). Uni guruh zaxirasidan ayiring.
+
+PURP ni kim ko'taradi? Agar BOSH kompaniya sotgan bo'lsa, hammasini guruh taqsimlanmagan foydasidan (W5) ayiring. Agar SHO'BA sotgan bo'lsa, uning hozirgi sof aktivlaridan (W2) ayiring, shunda NCI ham baham ko'radi.
+
+Ustama tannarxdan: foyda = narx x ustama / (100 + ustama). Marja narxdan: foyda = narx x marja.`,
       },
     },
   ],
   glossary: [
-    { term: { en: 'Parent', ru: 'Материнская компания', uz: 'Bosh kompaniya' }, definition: { en: 'An entity that controls one or more other entities.', ru: 'Компания, контролирующая одну или несколько других компаний.', uz: 'Bir yoki bir nechta boshqa korxonani nazorat qiluvchi korxona.' } },
-    { term: { en: 'Subsidiary', ru: 'Дочерняя компания', uz: 'Sho\'ba kompaniya' }, definition: { en: 'An entity that is controlled by another entity.', ru: 'Компания, контролируемая другой компанией.', uz: 'Boshqa korxona tomonidan nazorat qilinadigan korxona.' } },
-    { term: { en: 'Control', ru: 'Контроль', uz: 'Nazorat' }, definition: { en: 'Power over an investee, exposure to its variable returns, and the ability to use that power to affect them.', ru: 'Власть над объектом, подверженность его переменному доходу и способность властью влиять на этот доход.', uz: 'Obyekt ustidan hokimiyat, uning o\'zgaruvchan daromadiga ta\'sirchanlik va hokimiyat bilan unga ta\'sir qilish qobiliyati.' } },
-    { term: { en: 'Non-controlling interest (NCI)', ru: 'Неконтролирующая доля (NCI)', uz: 'Nazoratsiz ulush (NCI)' }, definition: { en: 'The part of a subsidiary\'s equity not owned by the parent.', ru: 'Часть капитала дочерней компании, не принадлежащая материнской.', uz: 'Sho\'ba kapitalining bosh kompaniyaga tegishli bo\'lmagan qismi.' } },
-    { term: { en: 'Consolidated financial statements', ru: 'Консолидированная отчётность', uz: 'Konsolidatsiyalangan hisobot' }, definition: { en: 'Financial statements of a group presented as those of a single economic entity.', ru: 'Отчётность группы, представленная как отчётность одного экономического субъекта.', uz: 'Guruhning bitta iqtisodiy subyekt hisoboti sifatida taqdim etilgan hisoboti.' } },
-    { term: { en: 'Goodwill', ru: 'Гудвил', uz: 'Gudvil' }, definition: { en: 'Consideration plus fair value of NCI, less the fair value of net assets acquired.', ru: 'Возмещение плюс справедливая стоимость NCI минус справедливая стоимость приобретённых чистых активов.', uz: 'To\'lov plus NCI adolatli qiymati minus olingan sof aktivlar adolatli qiymati.' } },
-    { term: { en: 'Fair value', ru: 'Справедливая стоимость', uz: 'Adolatli qiymat' }, definition: { en: 'The price that would be received to sell an asset, or paid to transfer a liability, in an orderly transaction.', ru: 'Цена, которую получили бы при продаже актива или заплатили бы при передаче обязательства в обычной сделке.', uz: 'Oddiy bitimda aktivni sotishda olinadigan yoki majburiyatni o\'tkazishda to\'lanadigan narx.' } },
-    { term: { en: 'Pre-acquisition profits', ru: 'Прибыль до покупки', uz: 'Xariddan oldingi foyda' }, definition: { en: 'A subsidiary\'s reserves at the date control was gained. They are not part of group reserves.', ru: 'Резервы дочерней на дату получения контроля. Они не входят в резервы группы.', uz: 'Nazorat olingan sanadagi sho\'ba rezervlari. Ular guruh rezervlariga kirmaydi.' } },
-    { term: { en: 'Unrealised profit (PURP)', ru: 'Нереализованная прибыль (PURP)', uz: 'Amalga oshmagan foyda (PURP)' }, definition: { en: 'Profit on intra-group sales of goods still held in the group\'s inventory at the year end.', ru: 'Прибыль от внутригрупповых продаж товара, который остаётся в запасах группы на конец года.', uz: 'Yil oxirida guruh zaxirasida qolgan tovarning guruh ichidagi sotuvidan foyda.' } },
-    { term: { en: 'Trade investment', ru: 'Простое вложение', uz: 'Oddiy sarmoya' }, definition: { en: 'A shareholding giving neither control nor significant influence, held as a financial asset.', ru: 'Доля, не дающая ни контроля, ни значительного влияния, учитываемая как финансовый актив.', uz: 'Na nazorat, na sezilarli ta\'sir beruvchi, moliyaviy aktiv sifatida hisoblanadigan ulush.' } },
+    {
+      term: { en: 'Parent', ru: 'Материнская компания', uz: 'Bosh kompaniya' },
+      definition: {
+        en: 'An entity that controls one or more other entities.',
+        ru: 'Компания, контролирующая одну или несколько других компаний.',
+        uz: 'Bir yoki bir nechta boshqa korxonani nazorat qiluvchi korxona.',
+      },
+      example: {
+        en: 'Shop Co owns 80% of Bake Co, so Shop Co is the parent.',
+        ru: 'Shop Co владеет 80% Bake Co, значит Shop Co — материнская.',
+        uz: 'Shop Co Bake Co ning 80% iga ega, demak Shop Co bosh kompaniya.',
+      },
+    },
+    {
+      term: { en: 'Subsidiary', ru: 'Дочерняя компания', uz: 'Sho\'ba kompaniya' },
+      definition: {
+        en: 'An entity that is controlled by another entity.',
+        ru: 'Компания, контролируемая другой компанией.',
+        uz: 'Boshqa korxona tomonidan nazorat qilinadigan korxona.',
+      },
+      example: {
+        en: 'Bake Co, 80% owned and controlled by Shop Co.',
+        ru: 'Bake Co, на 80% принадлежит Shop Co и контролируется ею.',
+        uz: 'Bake Co, 80% i Shop Co ga tegishli va u nazorat qiladi.',
+      },
+    },
+    {
+      term: { en: 'Control', ru: 'Контроль', uz: 'Nazorat' },
+      definition: {
+        en: 'Power over an investee, exposure to its variable returns, and the ability to use that power to affect them.',
+        ru: 'Власть над объектом, подверженность его переменному доходу и способность властью влиять на этот доход.',
+        uz: 'Obyekt ustidan hokimiyat, uning o\'zgaruvchan daromadiga ta\'sirchanlik va hokimiyat bilan unga ta\'sir qilish qobiliyati.',
+      },
+      example: {
+        en: 'Owning 80% of the votes lets Shop Co choose Bake Co\'s board and its dividends.',
+        ru: 'Владея 80% голосов, Shop Co выбирает совет директоров Bake Co и её дивиденды.',
+        uz: 'Ovozlarning 80% iga ega bo\'lib, Shop Co Bake Co kengashini va dividendlarini tanlaydi.',
+      },
+    },
+    {
+      term: { en: 'Non-controlling interest (NCI)', ru: 'Неконтролирующая доля (NCI)', uz: 'Nazoratsiz ulush (NCI)' },
+      definition: {
+        en: 'The part of a subsidiary\'s equity not owned by the parent.',
+        ru: 'Часть капитала дочерней компании, не принадлежащая материнской.',
+        uz: 'Sho\'ba kapitalining bosh kompaniyaga tegishli bo\'lmagan qismi.',
+      },
+      example: {
+        en: 'The bakery founder\'s 20%: $750 at purchase, $850 at the year end.',
+        ru: '20% основателя пекарни: $750 при покупке, $850 на конец года.',
+        uz: 'Novvoyxona asoschisining 20% i: xaridda $750, yil oxirida $850.',
+      },
+    },
+    {
+      term: {
+        en: 'Consolidated financial statements',
+        ru: 'Консолидированная отчётность',
+        uz: 'Konsolidatsiyalangan hisobot',
+      },
+      definition: {
+        en: 'Financial statements of a group presented as those of a single economic entity.',
+        ru: 'Отчётность группы, представленная как отчётность одного экономического субъекта.',
+        uz: 'Guruhning bitta iqtisodiy subyekt hisoboti sifatida taqdim etilgan hisoboti.',
+      },
+      example: {
+        en: 'One statement of financial position for Shop Co and Bake Co together.',
+        ru: 'Один отчёт о финансовом положении для Shop Co и Bake Co вместе.',
+        uz: 'Shop Co va Bake Co uchun birgalikda bitta moliyaviy holat hisoboti.',
+      },
+    },
+    {
+      term: { en: 'Consideration', ru: 'Возмещение', uz: 'To\'lov (kompensatsiya)' },
+      definition: {
+        en: 'What the parent gives to buy the subsidiary: cash, its own shares at fair value, or both.',
+        ru: 'То, что материнская отдаёт за дочернюю: деньги, свои акции по справедливой стоимости или и то и другое.',
+        uz: 'Bosh kompaniya sho\'bani sotib olish uchun beradigan narsa: pul, adolatli qiymatdagi o\'z aksiyalari yoki ikkalasi.',
+      },
+      example: {
+        en: 'Cash $2,400 + 200 shares worth $4 each = $3,200.',
+        ru: 'Деньги $2,400 + 200 акций по $4 = $3,200.',
+        uz: 'Pul $2,400 + har biri $4 lik 200 aksiya = $3,200.',
+      },
+    },
+    {
+      term: { en: 'Fair value', ru: 'Справедливая стоимость', uz: 'Adolatli qiymat' },
+      definition: {
+        en: 'The price that would be received to sell an asset, or paid to transfer a liability, in an orderly transaction.',
+        ru: 'Цена, которую получили бы при продаже актива или заплатили бы при передаче обязательства в обычной сделке.',
+        uz: 'Oddiy bitimda aktivni sotishda olinadigan yoki majburiyatni o\'tkazishda to\'lanadigan narx.',
+      },
+      example: {
+        en: 'Land in the books at $2,000 but worth $2,500 today: fair value $2,500.',
+        ru: 'Земля по книгам $2,000, но сегодня стоит $2,500: справедливая стоимость $2,500.',
+        uz: 'Kitobda $2,000 lik yer bugun $2,500 turadi: adolatli qiymat $2,500.',
+      },
+    },
+    {
+      term: { en: 'Goodwill', ru: 'Гудвил', uz: 'Gudvil' },
+      definition: {
+        en: 'Consideration plus fair value of NCI, less the fair value of net assets acquired.',
+        ru: 'Возмещение плюс справедливая стоимость NCI минус справедливая стоимость приобретённых чистых активов.',
+        uz: 'To\'lov plus NCI adolatli qiymati minus olingan sof aktivlar adolatli qiymati.',
+      },
+      example: {
+        en: '$3,200 paid + $750 NCI - $3,500 net assets = $450.',
+        ru: 'Заплачено $3,200 + NCI $750 - чистые активы $3,500 = $450.',
+        uz: 'To\'langan $3,200 + NCI $750 - sof aktivlar $3,500 = $450.',
+      },
+    },
+    {
+      term: { en: 'Pre-acquisition profits', ru: 'Прибыль до покупки', uz: 'Xariddan oldingi foyda' },
+      definition: {
+        en: 'A subsidiary\'s reserves at the date control was gained. They are not part of group reserves.',
+        ru: 'Резервы дочерней на дату получения контроля. Они не входят в резервы группы.',
+        uz: 'Nazorat olingan sanadagi sho\'ba rezervlari. Ular guruh rezervlariga kirmaydi.',
+      },
+      example: {
+        en: 'Bake Co\'s $2,000 of reserves on the day Shop Co bought it.',
+        ru: 'Резервы Bake Co $2,000 в день покупки Shop Co.',
+        uz: 'Shop Co sotib olgan kuni Bake Co ning $2,000 rezervi.',
+      },
+    },
+    {
+      term: { en: 'Post-acquisition profits', ru: 'Прибыль после покупки', uz: 'Xariddan keyingi foyda' },
+      definition: {
+        en: 'Profits a subsidiary earns after the parent gains control; they are shared between the group and the NCI.',
+        ru: 'Прибыль дочерней после получения контроля материнской; делится между группой и NCI.',
+        uz: 'Bosh kompaniya nazoratni olgandan keyin sho\'ba topgan foyda; guruh va NCI o\'rtasida bo\'linadi.',
+      },
+      example: {
+        en: 'Net assets rose from $3,500 to $4,000: $500, of which the group takes 80% = $400.',
+        ru: 'Чистые активы выросли с $3,500 до $4,000: $500, из них группе 80% = $400.',
+        uz: 'Sof aktivlar $3,500 dan $4,000 ga oshdi: $500, shundan guruhga 80% = $400.',
+      },
+    },
+    {
+      term: { en: 'Unrealised profit (PURP)', ru: 'Нереализованная прибыль (PURP)', uz: 'Amalga oshmagan foyda (PURP)' },
+      definition: {
+        en: 'Profit on intra-group sales of goods still held in the group\'s inventory at the year end.',
+        ru: 'Прибыль от внутригрупповых продаж товара, который остаётся в запасах группы на конец года.',
+        uz: 'Yil oxirida guruh zaxirasida qolgan tovarning guruh ichidagi sotuvidan foyda.',
+      },
+      example: {
+        en: '$100 profit on bread sold by Bake Co to Shop Co and still on Shop Co\'s shelves.',
+        ru: 'Прибыль $100 по хлебу, проданному Bake Co в Shop Co и ещё лежащему на полках Shop Co.',
+        uz: 'Bake Co Shop Co ga sotgan va hali Shop Co javonida turgan nondagi $100 foyda.',
+      },
+    },
+    {
+      term: { en: 'Trade investment', ru: 'Простое вложение', uz: 'Oddiy sarmoya' },
+      definition: {
+        en: 'A shareholding giving neither control nor significant influence, held as a financial asset.',
+        ru: 'Доля, не дающая ни контроля, ни значительного влияния, учитываемая как финансовый актив.',
+        uz: 'Na nazorat, na sezilarli ta\'sir beruvchi, moliyaviy aktiv sifatida hisoblanadigan ulush.',
+      },
+      example: {
+        en: 'Owning 5% of a supplier\'s shares: no control and no significant influence.',
+        ru: 'Владение 5% акций поставщика: ни контроля, ни значительного влияния.',
+        uz: 'Yetkazib beruvchi aksiyalarining 5% iga egalik: na nazorat, na sezilarli ta\'sir.',
+      },
+    },
   ],
 };
 

@@ -8,11 +8,31 @@ const chapter14 = {
     uz: 'Sinov balansi, xatolar va vaqtinchalik hisoblar',
   },
   objectives: [
-    { en: 'Describe the purpose of a trial balance and extract one', ru: 'Описывать цель оборотной ведомости и составлять её', uz: 'Sinov balansining maqsadini tavsiflash va uni tuzish' },
-    { en: 'Identify errors a trial balance would and would not show', ru: 'Определять ошибки, которые оборотная ведомость показывает и не показывает', uz: 'Sinov balansi ko\'rsatadigan va ko\'rsatmaydigan xatolarni aniqlash' },
-    { en: 'Prepare journals to correct errors', ru: 'Составлять журналы для исправления ошибок', uz: 'Xatolarni tuzatish uchun jurnallar tuzish' },
-    { en: 'Use and clear a suspense account', ru: 'Использовать и закрывать счёт неясных сумм', uz: 'Vaqtinchalik hisobdan foydalanish va uni yopish' },
-    { en: 'Calculate the effect of errors on profit and net assets', ru: 'Рассчитывать влияние ошибок на прибыль и чистые активы', uz: 'Xatolarning foyda va sof aktivlarga ta\'sirini hisoblash' },
+    {
+      en: 'Describe the purpose of a trial balance and extract one',
+      ru: 'Описывать цель оборотной ведомости и составлять её',
+      uz: 'Sinov balansining maqsadini tavsiflash va uni tuzish',
+    },
+    {
+      en: 'Identify errors a trial balance would and would not show',
+      ru: 'Определять ошибки, которые оборотная ведомость показывает и не показывает',
+      uz: 'Sinov balansi ko\'rsatadigan va ko\'rsatmaydigan xatolarni aniqlash',
+    },
+    {
+      en: 'Prepare journals to correct errors',
+      ru: 'Составлять журналы для исправления ошибок',
+      uz: 'Xatolarni tuzatish uchun jurnallar tuzish',
+    },
+    {
+      en: 'Use and clear a suspense account',
+      ru: 'Использовать и закрывать счёт неясных сумм',
+      uz: 'Vaqtinchalik hisobdan foydalanish va uni yopish',
+    },
+    {
+      en: 'Calculate the effect of errors on profit and net assets',
+      ru: 'Рассчитывать влияние ошибок на прибыль и чистые активы',
+      uz: 'Xatolarning foyda va sof aktivlarga ta\'sirini hisoblash',
+    },
   ],
   sections: [
     {
@@ -65,11 +85,7 @@ const chapter14 = {
 - Kamayuvchi qoldiq amortizatsiyasi — qiymat minus boshlang'ich to'plangan amortizatsiyaning foizi. Ikkalasi sinov balansida bor.
 - Sinov balansi to'langanini ko'rsatadi: 12 x $2,400 ijara minus to'langan $26,000 = $2,800 hisoblangan.`,
       },
-      heading: {
-        en: 'The trial balance',
-        ru: 'Оборотная ведомость',
-        uz: 'Sinov balansi',
-      },
+      heading: { en: 'The trial balance', ru: 'Оборотная ведомость', uz: 'Sinov balansi' },
       body: {
         en: `When the ledger accounts have been balanced at the year end, the closing balances are listed in a trial balance, with debits in one column and credits in the other. Because every transaction has equal debits and credits, the two totals should agree. If they do not, the difference is shown as a suspense account.
 
@@ -94,9 +110,35 @@ Sinov balansida istalgan sondagi hisob bo'lishi mumkin. Odatda avval daromad va 
 Mos kelgan sinov balansi foydali, lekin cheklangan. U faqat teng debet va kredit yozilganini isbotlaydi. Ular to'g'ri hisoblarda va to'g'ri summalarda ekanini ko'rsatmaydi.`,
       },
       example: {
-        en: `Madina's trial balance after her first days lists debits of bank $3,500, shelves $3,000, purchases $5,500, rent $900, drawings $600 and receivables $400. The credits are capital $8,000, loan $3,000, payables $1,000 and sales $1,900. Both columns total $13,900, so equal debits and credits have been recorded. It does not prove there are no mistakes.`,
-        ru: `Оборотная ведомость Мадины после первых дней: дебет — банк $3,500, стеллажи $3,000, закупки $5,500, аренда $900, изъятия $600 и дебиторы $400. Кредит — капитал $8,000, кредит $3,000, кредиторы $1,000 и продажи $1,900. Оба столбца дают $13,900, значит, равные дебет и кредит записаны. Отсутствие ошибок это не доказывает.`,
-        uz: `Madinaning birinchi kunlardan keyingi sinov balansi: debet — bank $3,500, javonlar $3,000, xaridlar $5,500, ijara $900, olib qo'yishlar $600 va debitorlar $400. Kredit — kapital $8,000, kredit $3,000, kreditorlar $1,000 va sotuv $1,900. Ikkala ustun $13,900, demak teng debet va kredit yozilgan. Bu xato yo'qligini isbotlamaydi.`,
+        en: `A new shop's trial balance after its first weeks.
+# Debit column (assets, expenses, drawings)
+  Bank $3,500 + shelves $3,000 + purchases $5,500 + rent $900 + drawings $600 + receivables $400 = $13,900
+# Credit column (capital, liabilities, income)
+  Capital $8,000 + loan $3,000 + payables $1,000 + sales $1,900 = $13,900
+= Both $13,900: equal debits and credits were recorded. It still does not prove there are no mistakes.`,
+        ru: `Оборотная ведомость нового магазина после первых недель.
+# Дебет (активы, расходы, изъятия)
+  Банк $3,500 + полки $3,000 + закупки $5,500 + аренда $900 + изъятия $600 + дебиторы $400 = $13,900
+# Кредит (капитал, обязательства, доходы)
+  Капитал $8,000 + заём $3,000 + кредиторы $1,000 + продажи $1,900 = $13,900
+= Обе $13,900: дебеты и кредиты записаны поровну. Но это не доказывает, что ошибок нет.`,
+        uz: `Yangi do'konning birinchi haftalardan keyingi sinov balansi.
+# Debet (aktivlar, xarajatlar, olib qo'yishlar)
+  Bank $3,500 + javonlar $3,000 + xaridlar $5,500 + ijara $900 + olib qo'yish $600 + debitorlar $400 = $13,900
+# Kredit (kapital, majburiyatlar, daromad)
+  Kapital $8,000 + qarz $3,000 + kreditorlar $1,000 + sotuv $1,900 = $13,900
+= Ikkalasi $13,900: debet va kreditlar teng yozilgan. Lekin bu xato yo'qligini isbotlamaydi.`,
+      },
+      simple: {
+        en: `A trial balance is a list of every account's balance at the year end, with debits in one column and credits in the other. Because every entry has an equal debit and credit, the two columns should add up to the same total.
+
+If they agree, you know debits and credits were recorded equally, but NOT that everything is right: an amount could be in the wrong account or simply missing. The trial balance is a working document, not one of the financial statements.`,
+        ru: `Оборотная ведомость — список остатков всех счетов на конец года: дебеты в одной колонке, кредиты в другой. Так как в каждой записи дебет равен кредиту, итоги колонок должны совпасть.
+
+Если совпали, вы знаете, что дебеты и кредиты записаны поровну, но НЕ то, что всё верно: сумма может быть не на том счёте или вовсе пропущена. Оборотная ведомость — рабочий документ, а не финансовый отчёт.`,
+        uz: `Sinov balansi — yil oxirida har bir hisob qoldig'i ro'yxati: debetlar bir ustunda, kreditlar boshqasida. Har bir yozuvda debet kreditga teng bo'lgani uchun ustunlar jami bir xil bo'lishi kerak.
+
+Mos kelsa, debet va kreditlar teng yozilganini bilasiz, lekin hammasi to'g'riligini EMAS: summa noto'g'ri hisobda yoki umuman tushib qolgan bo'lishi mumkin. Sinov balansi ishchi hujjat, moliyaviy hisobot emas.`,
       },
     },
     {
@@ -178,9 +220,65 @@ Tuzatish uchun uch qadam qiling. Yozuv qanday bo'lishi kerak edi, yozing. Aslida
 Qo'lda yuritiladigan tizimdagi ba'zi xatolar kompyuterda bo'lmaydi, chunki dastur bir tomonlama yoki teng bo'lmagan yozuvni qabul qilmaydi. Hisobni noto'g'ri qo'shish yoki sinov balansida qoldiqni tushirib qoldirish ham qo'lda yuritishga xos.`,
       },
       example: {
-        en: `Madina's helper buys a new freezer for $3,000 and posts Dr Repairs $3,000, Cr Bank $3,000. The trial balance still agrees, but this is an error of principle. It should be Dr Freezer, Cr Bank. Bank is right, so only the debit moves: Dr Freezer $3,000, Cr Repairs $3,000. In the same month a $400 insurance payment went to rent, which is an error of commission: Dr Insurance $400, Cr Rent $400.`,
-        ru: `Помощник Мадины покупает морозильник за $3,000 и проводит Дт Ремонт $3,000, Кт Банк $3,000. Ведомость сходится, но это нарушение принципа. Нужно Дт Морозильник, Кт Банк. Банк верен, переносится только дебет: Дт Морозильник $3,000, Кт Ремонт $3,000. В том же месяце оплата страховки $400 попала на аренду, это ошибка счёта: Дт Страховка $400, Кт Аренда $400.`,
-        uz: `Madinaning yordamchisi $3,000 ga yangi muzlatgich oladi va Dt Ta'mir $3,000, Kt Bank $3,000 yozadi. Sinov balansi mos keladi, lekin bu tamoyil xatosi. Dt Muzlatgich, Kt Bank bo'lishi kerak. Bank to'g'ri, faqat debet ko'chadi: Dt Muzlatgich $3,000, Kt Ta'mir $3,000. Shu oyda $400 sug'urta to'lovi ijaraga tushgan, bu noto'g'ri hisob xatosi: Dt Sug'urta $400, Kt Ijara $400.`,
+        en: `Two mistakes in a cafe's books.
+# Mistake 1: a new $3,000 freezer posted as Dr Repairs, Cr Bank
+  Should be: Dr Freezer $3,000, Cr Bank $3,000
+  Was: Dr Repairs $3,000, Cr Bank $3,000
+  The bank side is right, so only the debit moves: Dr Freezer $3,000, Cr Repairs $3,000
+  Type: error of PRINCIPLE (an asset treated as an expense)
+# Mistake 2: $400 of insurance posted to the rent account
+  Fix: Dr Insurance $400, Cr Rent $400
+  Type: error of COMMISSION (right type of account, wrong one)
+= The trial balance agreed before and after both fixes.`,
+        ru: `Две ошибки в учёте кафе.
+# Ошибка 1: новая морозилка $3,000 проведена как Дт Ремонт, Кт Банк
+  Надо: Дт Морозилка $3,000, Кт Банк $3,000
+  Было: Дт Ремонт $3,000, Кт Банк $3,000
+  Банк верен, двигаем только дебет: Дт Морозилка $3,000, Кт Ремонт $3,000
+  Вид: НАРУШЕНИЕ ПРИНЦИПА (актив учтён как расход)
+# Ошибка 2: страховку $400 провели на счёт аренды
+  Исправление: Дт Страхование $400, Кт Аренда $400
+  Вид: ОШИБКА СЧЁТА (тип верный, счёт не тот)
+= Ведомость сходилась и до, и после обоих исправлений.`,
+        uz: `Kafe hisobida ikki xato.
+# 1-xato: yangi $3,000 lik muzlatgich Dt Ta'mir, Kt Bank deb yozilgan
+  Kerak: Dt Muzlatgich $3,000, Kt Bank $3,000
+  Bo'lgan: Dt Ta'mir $3,000, Kt Bank $3,000
+  Bank to'g'ri, faqat debet ko'chadi: Dt Muzlatgich $3,000, Kt Ta'mir $3,000
+  Turi: TAMOYIL xatosi (aktiv xarajat sifatida)
+# 2-xato: $400 sug'urta ijara hisobiga yozilgan
+  Tuzatish: Dt Sug'urta $400, Kt Ijara $400
+  Turi: NOTO'G'RI HISOB xatosi (turi to'g'ri, hisob boshqa)
+= Sinov balansi ikkala tuzatishdan oldin ham, keyin ham mos edi.`,
+      },
+      simple: {
+        en: `Six kinds of mistake leave the trial balance balancing, because the debit and credit are still equal:
+- Omission: the transaction was not recorded at all.
+- Commission: right type of account, wrong one (rates posted to wages).
+- Principle: wrong TYPE of account (a new machine posted as repairs).
+- Compensating: two mistakes that cancel out.
+- Original entry: the wrong amount on both sides.
+- Reversal: right accounts, but debit and credit swapped.
+
+To fix any mistake: write what SHOULD have been posted, write what WAS posted, and post whatever turns the second into the first.`,
+        ru: `Шесть видов ошибок не нарушают баланс ведомости, потому что дебет и кредит всё равно равны:
+- Пропуск: операцию вообще не записали.
+- Ошибка счёта: счёт того же типа, но не тот (налог на имущество на зарплату).
+- Нарушение принципа: счёт не того ТИПА (новый станок как ремонт).
+- Компенсирующие: две ошибки, гасящие друг друга.
+- Исходная запись: неверная сумма на обеих сторонах.
+- Обратная запись: верные счета, но дебет и кредит перепутаны.
+
+Чтобы исправить любую: запишите, что НАДО было провести, что ПРОВЕЛИ, и проведите то, что превращает второе в первое.`,
+        uz: `Olti turdagi xato sinov balansini buzmaydi, chunki debet va kredit baribir teng:
+- Tushib qolish: operatsiya umuman yozilmagan.
+- Noto'g'ri hisob: bir xil turdagi, lekin boshqa hisob (mol-mulk solig'i ish haqiga).
+- Tamoyil xatosi: noto'g'ri TURDAGI hisob (yangi dastgoh ta'mir sifatida).
+- Kompensatsiyalovchi: bir-birini yopadigan ikki xato.
+- Dastlabki yozuv: ikkala tomonda noto'g'ri summa.
+- Teskari yozuv: to'g'ri hisoblar, lekin debet va kredit almashgan.
+
+Har qanday xatoni tuzatish: nima yozilishi KERAK edi, nima YOZILGAN, va ikkinchisini birinchisiga aylantiradigan yozuvni kiriting.`,
       },
     },
     {
@@ -239,11 +337,7 @@ Qo'lda yuritiladigan tizimdagi ba'zi xatolar kompyuterda bo'lmaydi, chunki dastu
 - Qarzni yozib yuborishda kredit debitorlarga yoziladi.
 - Debet qoldiq kredit debetdan oshganda paydo bo'ladi: masalan ijara to'lovi ijara va pulga kreditlangan yoki debet qoldiq sinov balansiga kirmagan.`,
       },
-      heading: {
-        en: 'Suspense accounts',
-        ru: 'Счета неясных сумм',
-        uz: 'Vaqtinchalik hisoblar',
-      },
+      heading: { en: 'Suspense accounts', ru: 'Счета неясных сумм', uz: 'Vaqtinchalik hisoblar' },
       body: {
         en: `A suspense account is a temporary home for a debit or credit until there is enough information to put it in the right account.
 
@@ -268,9 +362,47 @@ Vaqtinchalik hisob yopilguncha moliyaviy holat hisobi hisoblanadi. U yillik moli
 Yopish uchun har bir moddani o'sha uch savol bilan ko'ring. Yozuv qanday bo'lishi kerak edi? Nima yozilgan? Qaysi jurnal tuzatadi? Shu hisobga tegadigan har bir tuzatish qoldiq nol bo'lguncha unga yoziladi. Topilgan har bir xato unga ta'sir qilmasligini unutmang.`,
       },
       example: {
-        en: `Madina's helper pays $650 for a display stand but is unsure where it goes, so posts Dr Suspense, Cr Bank. Then $200 arrives at the bank from an unknown source: Dr Bank, Cr Suspense. Suspense has a debit balance of $450. Madina finds the stand is an asset, so Dr Fixtures $650, Cr Suspense $650. The $200 was a customer paying a debt, so Dr Suspense $200, Cr Receivables $200. Suspense is now nil.`,
-        ru: `Помощник Мадины платит $650 за витрину, но не знает, куда её отнести, и проводит Дт Счёт неясных сумм, Кт Банк. Затем в банк приходят $200 из неизвестного источника: Дт Банк, Кт Счёт неясных сумм. На счёте дебетовый остаток $450. Мадина выясняет, что витрина — актив: Дт Оборудование $650, Кт Счёт неясных сумм $650. $200 — оплата покупателя: Дт Счёт неясных сумм $200, Кт Дебиторы $200. Счёт теперь нулевой.`,
-        uz: `Madinaning yordamchisi vitrina uchun $650 to'laydi, lekin qayerga yozishni bilmaydi va Dt Vaqtinchalik hisob, Kt Bank yozadi. So'ng bankka noma'lum manbadan $200 keladi: Dt Bank, Kt Vaqtinchalik hisob. Hisobda $450 debet qoldiq. Madina vitrina aktiv ekanini aniqlaydi: Dt Jihozlar $650, Kt Vaqtinchalik hisob $650. $200 mijoz to'lovi: Dt Vaqtinchalik hisob $200, Kt Debitorlar $200. Hisob endi nol.`,
+        en: `A shop's helper is unsure about two items.
+# Item 1: pays $650 for a display stand
+  Not sure where it goes: Dr Suspense $650, Cr Bank $650
+# Item 2: $200 arrives from an unknown source
+  Dr Bank $200, Cr Suspense $200
+# Suspense now has a debit balance of $650 - $200 = $450
+# Clearing it
+  The stand is an asset: Dr Fixtures $650, Cr Suspense $650
+  The $200 was a customer paying a debt: Dr Suspense $200, Cr Receivables $200
+= Suspense: $450 - $650 + $200 = $0. Cleared.`,
+        ru: `Помощник магазина не уверен в двух статьях.
+# Статья 1: платит $650 за витрину
+  Не знает, куда: Дт Неясные суммы $650, Кт Банк $650
+# Статья 2: приходят $200 из неизвестного источника
+  Дт Банк $200, Кт Неясные суммы $200
+# На счёте неясных сумм дебет $650 - $200 = $450
+# Закрываем
+  Витрина — актив: Дт Оборудование $650, Кт Неясные суммы $650
+  $200 — покупатель погасил долг: Дт Неясные суммы $200, Кт Дебиторы $200
+= Неясные суммы: $450 - $650 + $200 = $0. Закрыто.`,
+        uz: `Do'kon yordamchisi ikki moddaga ishonchsiz.
+# 1-modda: vitrina uchun $650 to'laydi
+  Qayerga yozishni bilmaydi: Dt Vaqtinchalik $650, Kt Bank $650
+# 2-modda: noma'lum manbadan $200 keladi
+  Dt Bank $200, Kt Vaqtinchalik $200
+# Vaqtinchalik hisobda $650 - $200 = $450 debet
+# Yopamiz
+  Vitrina — aktiv: Dt Jihozlar $650, Kt Vaqtinchalik $650
+  $200 — mijoz qarzini to'lagan: Dt Vaqtinchalik $200, Kt Debitorlar $200
+= Vaqtinchalik: $450 - $650 + $200 = $0. Yopildi.`,
+      },
+      simple: {
+        en: `A suspense account is a temporary "waiting room" for an amount whose proper account is not known yet, or for the difference when debits and credits do not match.
+
+To clear it, ask for each item: which side was recorded correctly? The amount in suspense is the side that went astray, so move it from suspense to the account it belongs in. It must be empty before the financial statements are prepared.`,
+        ru: `Счёт неясных сумм — временная «приёмная» для суммы, чей правильный счёт пока неизвестен, или для разницы, когда дебеты и кредиты не сходятся.
+
+Чтобы закрыть его, спросите по каждой статье: какая сторона записана верно? В счёте неясных сумм — та сторона, что «потерялась», перенесите её туда, где ей место. До подготовки отчётности счёт должен быть пуст.`,
+        uz: `Vaqtinchalik hisob — to'g'ri hisobi hali noma'lum summa yoki debet va kreditlar mos kelmaganda farq uchun vaqtinchalik «kutish zali».
+
+Uni yopish uchun har bir modda haqida so'rang: qaysi tomon to'g'ri yozilgan? Vaqtinchalik hisobda «adashgan» tomon turibdi, uni tegishli hisobga ko'chiring. Hisobot tayyorlanishidan oldin u bo'sh bo'lishi kerak.`,
       },
     },
     {
@@ -352,21 +484,177 @@ Tuzatishlar boshqa umumlashgan daromadga ham ta'sir qilishi mumkin, lekin FA imt
 Chekka holat sinov balansi nega yetarli emasligini ko'rsatadi. $1,000 naqd sotuv Dt Uzoq muddatli aktivlar, Kt Savdo kreditorlari deb yozilsa, sinov balansi mos keladi. Lekin aktivlar va kreditorlar oshgan, pul va tushum kamaygan, foyda $1,000 past. Tuzatish: Dt Bank, Kt Uzoq muddatli aktivlar va Dt Savdo kreditorlari, Kt Tushum.`,
       },
       example: {
-        en: `Madina's draft profit is $8,000. The $3,000 freezer posted to repairs is corrected: repairs fall, so profit rises by $3,000. It now needs depreciation of 20%, which is $600, so profit falls by $600. The $400 of insurance moved out of rent has no effect, because both are expenses. A $500 customer receipt that was omitted has no effect, because bank and receivables are not in profit or loss. Revised profit is $8,000 + $3,000 - $600 = $10,400.`,
-        ru: `Черновая прибыль Мадины $8,000. Морозильник на $3,000 в ремонте исправлен: ремонт падает, прибыль растёт на $3,000. Теперь нужна амортизация 20%, это $600, и прибыль падает на $600. Перенос страховки $400 с аренды не влияет, так как оба — расходы. Пропущенное поступление от покупателя $500 не влияет: банк и дебиторы не в прибыли или убытке. Исправленная прибыль: $8,000 + $3,000 - $600 = $10,400.`,
-        uz: `Madinaning qoralama foydasi $8,000. Ta'mirga yozilgan $3,000 lik muzlatgich tuzatildi: ta'mir kamayadi, foyda $3,000 oshadi. Endi 20% amortizatsiya kerak, bu $600, foyda $600 kamayadi. $400 sug'urtani ijaradan ko'chirish ta'sir qilmaydi, ikkalasi xarajat. Tushib qolgan $500 mijoz to'lovi ta'sir qilmaydi: bank va debitorlar foyda yoki zararda emas. Tuzatilgan foyda: $8,000 + $3,000 - $600 = $10,400.`,
+        en: `The cafe's draft profit is $8,000. Correct it.
+# The $3,000 freezer posted to repairs
+  Repairs (an expense) go down by $3,000: profit + $3,000
+  The freezer now needs a year's depreciation at 20%: $600: profit - $600
+# $400 moved from rent to insurance
+  Both are expenses: no change
+# A $500 customer receipt that was left out
+  Bank and receivables only: no change
+= Revised profit: $8,000 + $3,000 - $600 = $10,400`,
+        ru: `Черновая прибыль кафе $8,000. Исправим её.
+# Морозилка $3,000 на ремонте
+  Ремонт (расход) уменьшается на $3,000: прибыль + $3,000
+  Морозилке нужна амортизация за год 20%: $600: прибыль - $600
+# $400 перенесены с аренды на страховку
+  Оба — расходы: без изменений
+# Пропущенное поступление от покупателя $500
+  Только банк и дебиторы: без изменений
+= Исправленная прибыль: $8,000 + $3,000 - $600 = $10,400`,
+        uz: `Kafening dastlabki foydasi $8,000. Uni tuzatamiz.
+# Ta'mirga yozilgan $3,000 muzlatgich
+  Ta'mir (xarajat) $3,000 kamayadi: foyda + $3,000
+  Muzlatgichga 20% yillik amortizatsiya kerak: $600: foyda - $600
+# Ijaradan sug'urtaga o'tkazilgan $400
+  Ikkalasi xarajat: o'zgarishsiz
+# Tushib qolgan mijozdan $500 tushum
+  Faqat bank va debitorlar: o'zgarishsiz
+= Tuzatilgan foyda: $8,000 + $3,000 - $600 = $10,400`,
+      },
+      simple: {
+        en: `Does a correction change profit? Look at the two accounts it touches.
+
+- Both in the statement of financial position (bank, receivables, suspense...): profit does NOT change.
+- One in profit or loss: a debit to it LOWERS profit; a credit to it RAISES profit.
+- Both in profit or loss (moving a cost from rent to insurance): total profit does NOT change.
+
+Suspense counts as a statement of financial position account.`,
+        ru: `Меняет ли исправление прибыль? Посмотрите на два затронутых счёта.
+
+- Оба в отчёте о финансовом положении (банк, дебиторы, неясные суммы...): прибыль НЕ меняется.
+- Один в прибыли или убытке: дебет ему СНИЖАЕТ прибыль, кредит — ПОВЫШАЕТ.
+- Оба в прибыли или убытке (перенос с аренды на страховку): общая прибыль НЕ меняется.
+
+Счёт неясных сумм считается счётом отчёта о финансовом положении.`,
+        uz: `Tuzatish foydani o'zgartiradimi? U tegadigan ikki hisobga qarang.
+
+- Ikkalasi moliyaviy holat hisobotida (bank, debitorlar, vaqtinchalik...): foyda O'ZGARMAYDI.
+- Bittasi foyda yoki zararda: unga debet foydani KAMAYTIRADI, kredit OSHIRADI.
+- Ikkalasi foyda yoki zararda (ijaradan sug'urtaga ko'chirish): jami foyda O'ZGARMAYDI.
+
+Vaqtinchalik hisob moliyaviy holat hisoboti hisobi hisoblanadi.`,
       },
     },
   ],
   glossary: [
-    { term: { en: 'Trial balance', ru: 'Оборотная ведомость', uz: 'Sinov balansi' }, definition: { en: 'A list of ledger balances in debit and credit columns.', ru: 'Список остатков счетов в столбцах дебета и кредита.', uz: 'Hisob qoldiqlarining debet va kredit ustunlaridagi ro\'yxati.' } },
-    { term: { en: 'Error of omission', ru: 'Ошибка пропуска', uz: 'Tushib qolish xatosi' }, definition: { en: 'A transaction left out of the records completely.', ru: 'Операция полностью не записана.', uz: 'Operatsiya umuman yozilmagan.' } },
-    { term: { en: 'Error of commission', ru: 'Ошибка счёта', uz: 'Noto\'g\'ri hisob xatosi' }, definition: { en: 'An entry made in the wrong account of the right type.', ru: 'Запись на неверном счёте верного типа.', uz: 'To\'g\'ri turdagi boshqa hisobga yozuv.' } },
-    { term: { en: 'Error of principle', ru: 'Нарушение принципа', uz: 'Tamoyil xatosi' }, definition: { en: 'An entry that breaks an accounting principle, such as treating an asset as an expense.', ru: 'Запись, нарушающая принцип учёта, например актив как расход.', uz: 'Hisob tamoyilini buzuvchi yozuv, masalan aktivni xarajat qilish.' } },
-    { term: { en: 'Compensating error', ru: 'Компенсирующая ошибка', uz: 'Kompensatsiyalovchi xato' }, definition: { en: 'Two errors that cancel each other out.', ru: 'Две ошибки, гасящие друг друга.', uz: 'Bir-birini qoplaydigan ikki xato.' } },
-    { term: { en: 'Error of original entry', ru: 'Ошибка исходной записи', uz: 'Dastlabki yozuv xatosi' }, definition: { en: 'The wrong amount used for both sides of an entry.', ru: 'Неверная сумма с обеих сторон записи.', uz: 'Yozuvning ikkala tomonida noto\'g\'ri summa.' } },
-    { term: { en: 'Reversal of entries', ru: 'Обратная запись', uz: 'Teskari yozuv' }, definition: { en: 'The right accounts and amount, with debit and credit swapped.', ru: 'Верные счета и сумма, но дебет и кредит перепутаны.', uz: 'Hisob va summa to\'g\'ri, debet va kredit almashgan.' } },
-    { term: { en: 'Suspense account', ru: 'Счёт неясных сумм', uz: 'Vaqtinchalik hisob' }, definition: { en: 'A temporary account for entries until their right place is known.', ru: 'Временный счёт для записей, пока не известно их место.', uz: 'Yozuvlar to\'g\'ri joyi aniqlanguncha turadigan vaqtinchalik hisob.' } },
+    {
+      term: { en: 'Trial balance', ru: 'Оборотная ведомость', uz: 'Sinov balansi' },
+      definition: {
+        en: 'A list of ledger balances in debit and credit columns.',
+        ru: 'Список остатков счетов в столбцах дебета и кредита.',
+        uz: 'Hisob qoldiqlarining debet va kredit ustunlaridagi ro\'yxati.',
+      },
+      example: {
+        en: 'Debit column $13,900 and credit column $13,900: it agrees.',
+        ru: 'Дебет $13,900 и кредит $13,900: ведомость сходится.',
+        uz: 'Debet $13,900 va kredit $13,900: balans mos.',
+      },
+    },
+    {
+      term: { en: 'Error of omission', ru: 'Ошибка пропуска', uz: 'Tushib qolish xatosi' },
+      definition: {
+        en: 'A transaction left out of the records completely.',
+        ru: 'Операция полностью не записана.',
+        uz: 'Operatsiya umuman yozilmagan.',
+      },
+      example: {
+        en: 'A $200 sales invoice that was never entered at all.',
+        ru: 'Счёт на продажу $200, который вообще не внесли.',
+        uz: 'Umuman kiritilmagan $200 lik sotuv hisob-fakturasi.',
+      },
+    },
+    {
+      term: { en: 'Error of commission', ru: 'Ошибка счёта', uz: 'Noto\'g\'ri hisob xatosi' },
+      definition: {
+        en: 'An entry made in the wrong account of the right type.',
+        ru: 'Запись на неверном счёте верного типа.',
+        uz: 'To\'g\'ri turdagi boshqa hisobga yozuv.',
+      },
+      example: {
+        en: 'Insurance of $400 posted to the rent account.',
+        ru: 'Страховка $400 проведена на счёт аренды.',
+        uz: '$400 sug\'urta ijara hisobiga yozilgan.',
+      },
+    },
+    {
+      term: { en: 'Error of principle', ru: 'Нарушение принципа', uz: 'Tamoyil xatosi' },
+      definition: {
+        en: 'An entry that breaks an accounting principle, such as treating an asset as an expense.',
+        ru: 'Запись, нарушающая принцип учёта, например актив как расход.',
+        uz: 'Hisob tamoyilini buzuvchi yozuv, masalan aktivni xarajat qilish.',
+      },
+      example: {
+        en: 'A new $3,000 freezer posted to repairs.',
+        ru: 'Новая морозилка за $3,000 проведена как ремонт.',
+        uz: 'Yangi $3,000 lik muzlatgich ta\'mirga yozilgan.',
+      },
+    },
+    {
+      term: { en: 'Compensating error', ru: 'Компенсирующая ошибка', uz: 'Kompensatsiyalovchi xato' },
+      definition: {
+        en: 'Two errors that cancel each other out.',
+        ru: 'Две ошибки, гасящие друг друга.',
+        uz: 'Bir-birini qoplaydigan ikki xato.',
+      },
+      example: {
+        en: 'Wages are $90 too high and rent is $90 too low, so the totals still agree.',
+        ru: 'Зарплата завышена на $90, аренда занижена на $90, итоги всё равно сходятся.',
+        uz: 'Ish haqi $90 ko\'p, ijara $90 kam, jamlar baribir mos.',
+      },
+    },
+    {
+      term: { en: 'Error of original entry', ru: 'Ошибка исходной записи', uz: 'Dastlabki yozuv xatosi' },
+      definition: {
+        en: 'The wrong amount used for both sides of an entry.',
+        ru: 'Неверная сумма с обеих сторон записи.',
+        uz: 'Yozuvning ikkala tomonida noto\'g\'ri summa.',
+      },
+      example: {
+        en: 'An invoice for $985 entered as $859 on both sides.',
+        ru: 'Счёт на $985 внесён как $859 на обеих сторонах.',
+        uz: '$985 lik hisob-faktura ikkala tomonga $859 deb kiritilgan.',
+      },
+    },
+    {
+      term: { en: 'Reversal of entries', ru: 'Обратная запись', uz: 'Teskari yozuv' },
+      definition: {
+        en: 'The right accounts and amount, with debit and credit swapped.',
+        ru: 'Верные счета и сумма, но дебет и кредит перепутаны.',
+        uz: 'Hisob va summa to\'g\'ri, debet va kredit almashgan.',
+      },
+      example: {
+        en: 'A sale posted as Dr Sales $200, Cr Bank $200 instead of the other way round.',
+        ru: 'Продажа проведена как Дт Продажи $200, Кт Банк $200 вместо наоборот.',
+        uz: 'Sotuv teskarisi o\'rniga Dt Sotuv $200, Kt Bank $200 deb yozilgan.',
+      },
+    },
+    {
+      term: { en: 'Suspense account', ru: 'Счёт неясных сумм', uz: 'Vaqtinchalik hisob' },
+      definition: {
+        en: 'A temporary account for entries until their right place is known.',
+        ru: 'Временный счёт для записей, пока не известно их место.',
+        uz: 'Yozuvlar to\'g\'ri joyi aniqlanguncha turadigan vaqtinchalik hisob.',
+      },
+      example: {
+        en: '$650 paid for a stand, parked in suspense until someone decides it is an asset.',
+        ru: '$650 за витрину временно на счёте неясных сумм, пока не решат, что это актив.',
+        uz: 'Vitrina uchun $650, aktiv ekani hal bo\'lguncha vaqtinchalik hisobda.',
+      },
+    },
+    {
+      term: { en: 'Correcting journal', ru: 'Исправительная проводка', uz: 'Tuzatuvchi yozuv' },
+      definition: {
+        en: 'A journal that turns what was posted into what should have been posted.',
+        ru: 'Проводка, которая превращает проведённое в то, что следовало провести.',
+        uz: 'Yozilganini yozilishi kerak bo\'lganiga aylantiradigan jurnal yozuvi.',
+      },
+      example: {
+        en: 'Freezer posted to repairs: Dr Freezer $3,000, Cr Repairs $3,000.',
+        ru: 'Морозилка на ремонте: Дт Морозилка $3,000, Кт Ремонт $3,000.',
+        uz: 'Ta\'mirga yozilgan muzlatgich: Dt Muzlatgich $3,000, Kt Ta\'mir $3,000.',
+      },
+    },
   ],
 };
 

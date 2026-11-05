@@ -1,137 +1,914 @@
 'use strict';
 
+// Explanations use step lines: "# " a step, two spaces a line of working, "= " the result, "! " a trap.
 (function () {
   const TOPIC = 'chapter-19';
-  const PREFIX = 'ch19';
-
-  const base = (kitRef, type, text, en, ru, uz) => ({ id: `${PREFIX}-q${kitRef}`, kitRef, topicId: TOPIC, type, text, explanation: { en, ru, uz } });
-  const single = (kitRef, text, options, correctIndex, en, ru, uz, extra = {}) => ({ ...base(kitRef, 'single', text, en, ru, uz), options, correctIndex, ...extra });
-  const number = (kitRef, text, correctValue, answerText, en, ru, uz, extra = {}) => ({ ...base(kitRef, 'number', text, en, ru, uz), correctValue, answerText, ...extra });
-
-  const OAK_ASH = {
-    head: ['At 31 December 20X5', 'Oak $000', 'Ash $000'],
-    rows: [
-      ['Property, plant and equipment', '2,450', '1,730'],
-      ['Investment in Ash', '2,000', '-'],
-      ['Investment in Elm', '520', '-'],
-      ['Inventory', '800', '1,100'],
-      ['Receivables', '410', '540'],
-      ['Cash', '90', '130'],
-      ['Total assets', '6,270', '3,500'],
-      ['Equity shares of $1', '2,500', '1,500'],
-      ['Retained earnings', '3,100', '950'],
-      ['Payables', '480', '900'],
-      ['Income tax payable', '190', '150'],
-      ['Total equity and liabilities', '6,270', '3,500'],
-    ],
-  };
-  const OAK_NOTE = 'Oak bought 80% of Ash\'s equity shares on 1 January 20X5, when Ash had retained losses of $150,000. On 31 December 20X5 Oak bought 25% of Elm, when Elm had retained earnings of $300,000.';
-
   const questions = [
-    single(470, 'On 1 January 20X3 a parent bought 70% of a subsidiary for $2,100,000. At that date the subsidiary had 800,000 equity shares of $0.50 each and other components of equity of $1,100,000. The fair value of the non-controlling interest was $700,000. There has been no impairment since. What is goodwill in the consolidated statement of financial position at 31 December 20X7?',
-      ['$1,300,000', '$900,000', '$600,000', '$1,050,000'], 0,
-      `Share capital is 800,000 × $0.50 = $400,000, so net assets are $400,000 + $1,100,000 = $1,500,000. Goodwill = $2,100,000 + $700,000 - $1,500,000 = $1,300,000. It stays at that figure because there has been no impairment. Valuing the shares at $1 each gives $900,000.`,
-      `Акционерный капитал 800,000 × $0.50 = $400,000, чистые активы $400,000 + $1,100,000 = $1,500,000. Гудвил = $2,100,000 + $700,000 - $1,500,000 = $1,300,000. Он не меняется, так как обесценения не было. Если считать акции по $1, выйдет $900,000.`,
-      `Aksiya kapitali 800,000 × $0.50 = $400,000, sof aktivlar $400,000 + $1,100,000 = $1,500,000. Gudvil = $2,100,000 + $700,000 - $1,500,000 = $1,300,000. Qadrsizlanish bo'lmagani uchun u o'zgarmaydi. Aksiyalarni $1 dan hisoblasangiz $900,000 chiqadi.`),
-    single(471, 'On 1 January 20X8 a parent bought 75% of a subsidiary for $120,000. At that date the subsidiary had 60,000 equity shares of $1 and other components of equity of $40,000. At 31 December 20X9 other components of equity were $500,000 for the parent and $64,000 for the subsidiary. What are group other components of equity at 31 December 20X9?',
-      ['$518,000', '$500,000', '$548,000', '$524,000'], 0,
-      `The parent's own $500,000 plus its 75% share of the subsidiary's post-acquisition increase: 75% × ($64,000 - $40,000) = $18,000. Total $518,000. The $40,000 at acquisition is pre-acquisition, and only the group's 75% of the increase is included.`,
-      `Собственные $500,000 материнской плюс её 75% роста дочерней после покупки: 75% × ($64,000 - $40,000) = $18,000. Итого $518,000. $40,000 на дату покупки — до покупки, и в группу входит только 75% роста.`,
-      `Boshning o'z $500,000 plus sho'baning xariddan keyingi o'sishidagi 75% ulushi: 75% × ($64,000 - $40,000) = $18,000. Jami $518,000. Xarid paytidagi $40,000 xariddan oldingi, guruhga o'sishning faqat 75% i kiradi.`),
-    single(472, 'On 1 January 20X6 a parent bought 60% of a subsidiary for $54,000. At that date the subsidiary had 30,000 equity shares of $1 and other components of equity of $45,000. The fair value of the non-controlling interest was $36,000. What is goodwill at 31 December 20X9, assuming no impairment?',
-      ['$15,000', '$9,000', '$60,000', '$21,000'], 0,
-      `Net assets at acquisition are $30,000 + $45,000 = $75,000. Goodwill = $54,000 + $36,000 - $75,000 = $15,000. Leaving out the reserves, or comparing cost with only 60% of net assets, gives the wrong answers.`,
-      `Чистые активы при покупке $30,000 + $45,000 = $75,000. Гудвил = $54,000 + $36,000 - $75,000 = $15,000. Если не учесть резервы или сравнить цену только с 60% чистых активов, ответ будет неверным.`,
-      `Xarid paytidagi sof aktivlar $30,000 + $45,000 = $75,000. Gudvil = $54,000 + $36,000 - $75,000 = $15,000. Rezervlarni tashlab ketish yoki narxni sof aktivlarning faqat 60% i bilan solishtirish noto'g'ri javob beradi.`),
-    single(473, 'A parent bought 70% of a subsidiary some years ago. At acquisition the subsidiary\'s other components of equity were $18,000 and the fair value of the NCI was $33,000. At the reporting date the subsidiary\'s other components of equity are $26,000. What is the non-controlling interest in the consolidated statement of financial position?',
-      ['$35,400', '$33,000', '$40,800', '$38,600'], 0,
-      `NCI = fair value at acquisition + NCI share of the post-acquisition increase: $33,000 + 30% × ($26,000 - $18,000) = $35,400. Using 70%, the parent's share, gives $38,600.`,
-      `NCI = справедливая стоимость при покупке + доля NCI в росте после покупки: $33,000 + 30% × ($26,000 - $18,000) = $35,400. С долей материнской 70% получится $38,600.`,
-      `NCI = xarid paytidagi adolatli qiymat + xariddan keyingi o'sishdagi NCI ulushi: $33,000 + 30% × ($26,000 - $18,000) = $35,400. Boshning 70% ulushi bilan $38,600 chiqadi.`),
-    number(474, 'On 1 January 20X8 a parent bought 55% of a subsidiary for $200,000. At that date the subsidiary had 500,000 equity shares of $0.20 each and other components of equity of $90,000. At 31 December 20X9 the subsidiary\'s other components of equity were $130,000. The fair value of the NCI at acquisition was $120,000. What is the non-controlling interest at 31 December 20X9?', 138000, '$138,000',
-      `The NCI holds 45%. NCI = $120,000 + 45% × ($130,000 - $90,000) = $120,000 + $18,000 = $138,000. The price the parent paid is not needed here.`,
-      `NCI владеет 45%. NCI = $120,000 + 45% × ($130,000 - $90,000) = $120,000 + $18,000 = $138,000. Цена, уплаченная материнской, здесь не нужна.`,
-      `NCI 45% ga ega. NCI = $120,000 + 45% × ($130,000 - $90,000) = $120,000 + $18,000 = $138,000. Bosh to'lagan narx bu yerda kerak emas.`),
-    single(475, 'A parent owns 75% of a subsidiary. It sold goods to the subsidiary for $2,400, at a mark-up of 20% on cost. By the year end the subsidiary had sold 25% of these goods to outside customers. What is the unrealised profit adjustment?',
-      ['$300', '$100', '$360', '$480'], 0,
-      `The profit is $2,400 × 20/120 = $400, because a mark-up is on cost and the price is 120% of cost. 75% of the goods are still held, so the unrealised profit is $400 × 75% = $300. Taking 20% of the price treats the mark-up as a margin.`,
-      `Прибыль $2,400 × 20/120 = $400, так как наценка от себестоимости, а цена — 120% себестоимости. 75% товара ещё в запасах, нереализованная прибыль $400 × 75% = $300. 20% от цены — это ошибочный подход маржи.`,
-      `Foyda $2,400 × 20/120 = $400, chunki ustama tannarxdan, narx tannarxning 120% i. Tovarning 75% i hali zaxirada, amalga oshmagan foyda $400 × 75% = $300. Narxning 20% ini olish ustamani marja deb hisoblaydi.`),
-    single(476, 'Extracts ($000): the parent has receivables of 610 and payables of 290; the subsidiary has receivables of 150 and payables of 210. The parent\'s receivables include $35,000 owed by the subsidiary, and the subsidiary\'s payables include the same amount. What are consolidated receivables and payables?',
-      ['Receivables $725,000; payables $465,000', 'Receivables $760,000; payables $500,000', 'Receivables $725,000; payables $500,000', 'Receivables $760,000; payables $465,000'], 0,
-      `The $35,000 is owed within the group, so it is cancelled from both sides. Receivables = $610,000 + $150,000 - $35,000 = $725,000. Payables = $290,000 + $210,000 - $35,000 = $465,000.`,
-      `$35,000 — долг внутри группы, он исключается с обеих сторон. Дебиторы = $610,000 + $150,000 - $35,000 = $725,000. Кредиторы = $290,000 + $210,000 - $35,000 = $465,000.`,
-      `$35,000 guruh ichidagi qarz, u ikkala tomondan chiqariladi. Debitorlar = $610,000 + $150,000 - $35,000 = $725,000. Kreditorlar = $290,000 + $210,000 - $35,000 = $465,000.`),
-    number(477, 'A parent bought 100% of a subsidiary two years ago. At that date the fair value of the subsidiary\'s land was $600,000 more than its carrying amount, and this has not been recorded by the subsidiary. At the reporting date the parent\'s non-current assets have a carrying amount of $3,100,000, excluding its investment in the subsidiary, and the subsidiary\'s are $2,300,000. What are consolidated non-current assets, before goodwill?', 6000000, '$6,000,000',
-      `Add both in full and include the fair value uplift on the land: $3,100,000 + $2,300,000 + $600,000 = $6,000,000. Land is not depreciated, so the uplift is unchanged.`,
-      `Складываем полностью и добавляем дооценку земли: $3,100,000 + $2,300,000 + $600,000 = $6,000,000. Земля не амортизируется, поэтому дооценка не меняется.`,
-      `Ikkalasini to'liq qo'shib, yer oshirilishini qo'shamiz: $3,100,000 + $2,300,000 + $600,000 = $6,000,000. Yer amortizatsiya qilinmaydi, oshirish o'zgarmaydi.`),
-    number(481, `${OAK_NOTE} What is property, plant and equipment in the consolidated statement of financial position? Give your answer in $000.`, 4180, '$4,180,000 (4,180 in $000)',
-      `Add the two in full: $2,450,000 + $1,730,000 = $4,180,000. The investments in Ash and Elm are not property, plant and equipment.`,
-      `Складываем полностью: $2,450,000 + $1,730,000 = $4,180,000. Вложения в Ash и Elm — не основные средства.`,
-      `To'liq qo'shamiz: $2,450,000 + $1,730,000 = $4,180,000. Ash va Elm dagi sarmoyalar asosiy vosita emas.`,
-      { table: OAK_ASH }),
-    single(482, `${OAK_NOTE} What are consolidated retained earnings?`,
-      ['$3,980,000', '$3,860,000', '$3,740,000', '$4,200,000'], 0,
-      `Ash went from a $150,000 loss to $950,000 of earnings, a post-acquisition increase of $1,100,000. Oak takes 80%: $880,000. Group retained earnings = $3,100,000 + $880,000 = $3,980,000. Elm was bought on the last day, so the group has no share of its earnings yet.`,
-      `Ash перешла от убытка $150,000 к прибыли $950,000, рост после покупки $1,100,000. Oak берёт 80%: $880,000. Прибыль группы = $3,100,000 + $880,000 = $3,980,000. Elm куплена в последний день, доли в её прибыли у группы пока нет.`,
-      `Ash $150,000 zarardan $950,000 foydaga o'tdi, xariddan keyingi o'sish $1,100,000. Oak 80% ini oladi: $880,000. Guruh foydasi = $3,100,000 + $880,000 = $3,980,000. Elm oxirgi kunda olingan, guruhda hali uning foydasidan ulush yo'q.`,
-      { table: OAK_ASH }),
-    single(484, 'IFRS 10 sets out three elements that must all be present for one entity to control another. Which of these is NOT one of them?',
-      ['Power over the other entity', 'Exposure, or rights, to variable returns from its involvement with the other entity', 'The ability to use its power over the other entity to affect the amount of its returns', 'The ability to exercise significant influence over the other entity'], 3,
-      `Significant influence is the test for an associate, not for control. The other three are the elements of control in IFRS 10.`,
-      `Значительное влияние — критерий ассоциированной компании, а не контроля. Остальные три — элементы контроля по IFRS 10.`,
-      `Sezilarli ta'sir nazorat emas, assotsiatsiyalangan kompaniya mezoni. Qolgan uchtasi IFRS 10 bo'yicha nazorat elementlari.`),
-    single(486, 'Which shareholding would normally indicate that one entity controls another?',
-      ['Holding some of its equity shares', 'Holding up to 20% of its equity shares', 'Holding more than 50% of its equity shares', 'Holding between 20% and 50% of its equity shares'], 2,
-      `Control normally comes from holding a majority of the voting shares, which is more than 50%. A holding of 20% to 50% normally gives significant influence, and below 20% is usually a trade investment.`,
-      `Контроль обычно даёт большинство голосующих акций, то есть более 50%. Доля 20-50% обычно даёт значительное влияние, а менее 20% — обычно простое вложение.`,
-      `Nazorat odatda ovoz beruvchi aksiyalarning ko'pchiligidan, ya'ni 50% dan ko'pidan keladi. 20-50% odatda sezilarli ta'sir, 20% dan kami odatda oddiy sarmoya.`),
-    single(487, 'Which of these would normally indicate that one entity controls another?',
-      ['The right to appoint a majority of its board of directors', 'The right to appoint one of its directors', 'The right to send requests about policy to its board', 'The right to attend its general meetings'], 0,
-      `Appointing most of the board lets the investor direct the company's policies, which is control. Appointing one director normally indicates significant influence only. The others give no real power.`,
-      `Назначение большинства совета позволяет определять политику компании, это контроль. Назначение одного директора обычно говорит лишь о значительном влиянии. Остальное реальной власти не даёт.`,
-      `Kengash ko'pchiligini tayinlash kompaniya siyosatini boshqarish imkonini beradi, bu nazorat. Bitta direktor tayinlash odatda faqat sezilarli ta'sir. Qolganlari haqiqiy hokimiyat bermaydi.`),
-    single(489, 'Entity A bought 75% of the 120,000 equity shares of entity B by issuing 2 of its own shares for every 3 shares acquired. On that date an A share had a fair value of $4.20 and a B share $2.50. Both have a nominal value of $1. What is the fair value of the consideration?',
-      ['$252,000', '$225,000', '$60,000', '$567,000'], 0,
-      `A acquired 120,000 × 75% = 90,000 shares and issued 90,000 × 2/3 = 60,000 of its own. At fair value: 60,000 × $4.20 = $252,000. The nominal value, $60,000, and B's share price are not the consideration.`,
-      `A купила 120,000 × 75% = 90,000 акций и выпустила 90,000 × 2/3 = 60,000 своих. По справедливой стоимости: 60,000 × $4.20 = $252,000. Номинал $60,000 и цена акций B не являются возмещением.`,
-      `A 120,000 × 75% = 90,000 aksiya oldi va 90,000 × 2/3 = 60,000 o'z aksiyasini chiqardi. Adolatli qiymatda: 60,000 × $4.20 = $252,000. Nominal $60,000 va B aksiyasi narxi to'lov emas.`),
-    number(490, 'Entity C bought 60% of the 400,000 equity shares of entity D. It paid $2.50 cash per share acquired and also issued 2 of its own shares for every 5 shares acquired. A C share had a fair value of $4.00 at that date. What is the fair value of the consideration?', 984000, '$984,000',
-      `Shares acquired: 400,000 × 60% = 240,000. Cash: 240,000 × $2.50 = $600,000. Shares issued: 240,000 × 2/5 = 96,000, worth 96,000 × $4.00 = $384,000. Total $984,000.`,
-      `Куплено акций: 400,000 × 60% = 240,000. Деньги: 240,000 × $2.50 = $600,000. Выпущено акций: 240,000 × 2/5 = 96,000 стоимостью 96,000 × $4.00 = $384,000. Итого $984,000.`,
-      `Olingan aksiyalar: 400,000 × 60% = 240,000. Pul: 240,000 × $2.50 = $600,000. Chiqarilgan aksiyalar: 240,000 × 2/5 = 96,000, qiymati 96,000 × $4.00 = $384,000. Jami $984,000.`),
-    number(495, 'On 1 April 20X4 a parent paid $15 million for 60% of a subsidiary. The subsidiary had share capital of $5 million and retained earnings of $9 million at 1 January 20X4, and made a profit of $4 million in the year to 31 December 20X4, earned evenly. The fair value of the NCI at acquisition was $8 million. What is goodwill? Give your answer in $ million.', 8, '$8 million',
-      `Retained earnings at 1 April: $9m + 3/12 × $4m = $10m. Net assets at acquisition: $5m + $10m = $15m. Goodwill = $15m + $8m - $15m = $8m.`,
-      `Нераспределённая прибыль на 1 апреля: $9m + 3/12 × $4m = $10m. Чистые активы при покупке: $5m + $10m = $15m. Гудвил = $15m + $8m - $15m = $8m.`,
-      `1 apreldagi taqsimlanmagan foyda: $9m + 3/12 × $4m = $10m. Xarid paytidagi sof aktivlar: $5m + $10m = $15m. Gudvil = $15m + $8m - $15m = $8m.`),
-    single(496, 'On 1 October 20X7 a parent paid $36 million for 75% of a subsidiary. The subsidiary had share capital of $20 million, retained earnings of $12 million at 1 January 20X7, and a profit of $8 million for 20X7, earned evenly. At acquisition its land was worth $2 million more than its carrying amount, and the fair value of the NCI was $11 million. What is goodwill?',
-      ['$7 million', '$9 million', '$5 million', '$13 million'], 0,
-      `Retained earnings at 1 October: $12m + 9/12 × $8m = $18m. Net assets at fair value: $20m + $18m + $2m = $40m. Goodwill = $36m + $11m - $40m = $7m. Leaving out the land uplift gives $9m. Using the year-end or opening reserves gives $5m or $13m.`,
-      `Нераспределённая прибыль на 1 октября: $12m + 9/12 × $8m = $18m. Чистые активы по справедливой стоимости: $20m + $18m + $2m = $40m. Гудвил = $36m + $11m - $40m = $7m. Без дооценки земли выйдет $9m. С резервами на конец или на начало года — $5m или $13m.`,
-      `1 oktyabrdagi taqsimlanmagan foyda: $12m + 9/12 × $8m = $18m. Adolatli qiymatdagi sof aktivlar: $20m + $18m + $2m = $40m. Gudvil = $36m + $11m - $40m = $7m. Yer oshirilishisiz $9m chiqadi. Yil oxiri yoki boshidagi rezervlar bilan $5m yoki $13m.`),
-    number(497, 'A parent bought 80% of a subsidiary that had 5 million $1 equity shares, share premium of $4 million and retained earnings of $20 million. It paid $2 cash per share acquired and issued 3 of its own shares for every 2 acquired. A parent share was worth $3.00. The fair value of the NCI was $9 million. What is goodwill? Give your answer in $ million.', 6, '$6 million',
-      `Shares acquired: 4 million. Cash: 4m × $2 = $8m. Shares issued: 4m × 3/2 = 6m, worth 6m × $3 = $18m. Consideration $26m. Net assets: $5m + $4m + $20m = $29m. Goodwill = $26m + $9m - $29m = $6m.`,
-      `Куплено 4 млн акций. Деньги: 4m × $2 = $8m. Выпущено: 4m × 3/2 = 6m акций стоимостью 6m × $3 = $18m. Возмещение $26m. Чистые активы: $5m + $4m + $20m = $29m. Гудвил = $26m + $9m - $29m = $6m.`,
-      `4 mln aksiya olindi. Pul: 4m × $2 = $8m. Chiqarildi: 4m × 3/2 = 6m aksiya, qiymati 6m × $3 = $18m. To'lov $26m. Sof aktivlar: $5m + $4m + $20m = $29m. Gudvil = $26m + $9m - $29m = $6m.`),
-    single(498, 'A parent bought 60% of a subsidiary with 20 million $1 equity shares, share premium of $4 million and retained earnings of $50 million. Its factory was worth $3 million more than its carrying amount. The parent paid $3 cash per share acquired and issued 1 new share for every 2 acquired, each worth $6. The fair value of the NCI was $36 million. What is goodwill?',
-      ['$31 million', '$34 million', '$35 million', '$1 million'], 0,
-      `Shares acquired: 12m. Cash $36m. Shares issued 6m × $6 = $36m. Consideration $72m. Net assets: $20m + $4m + $50m + $3m = $77m. Goodwill = $72m + $36m - $77m = $31m. Leaving out the factory uplift gives $34m, leaving out share premium $35m, and valuing new shares at nominal $1m.`,
-      `Куплено 12m акций. Деньги $36m. Выпущено 6m × $6 = $36m. Возмещение $72m. Чистые активы: $20m + $4m + $50m + $3m = $77m. Гудвил = $72m + $36m - $77m = $31m. Без дооценки завода — $34m, без эмиссионного дохода — $35m, по номиналу акций — $1m.`,
-      `12m aksiya olindi. Pul $36m. Chiqarildi 6m × $6 = $36m. To'lov $72m. Sof aktivlar: $20m + $4m + $50m + $3m = $77m. Gudvil = $72m + $36m - $77m = $31m. Zavod oshirilishisiz $34m, emissiya daromadisiz $35m, nominalda $1m.`),
-    number(499, 'A parent bought 80% of a subsidiary with 300,000 $1 equity shares, share premium of $60,000 and retained earnings of $720,000. It paid $2.50 cash per share acquired and issued one new share, nominal value $0.25, for each share acquired. A parent share was worth $1.75. Some plant had a fair value of $150,000 and a carrying amount of $110,000. The fair value of the NCI was $160,000. What is goodwill?', 60000, '$60,000',
-      `Shares acquired: 240,000. Cash: $600,000. Shares: 240,000 × $1.75 = $420,000, using fair value, not the $0.25 nominal value. Net assets: $300,000 + $60,000 + $720,000 + $40,000 uplift = $1,120,000. Goodwill = $600,000 + $420,000 + $160,000 - $1,120,000 = $60,000.`,
-      `Куплено 240,000 акций. Деньги $600,000. Акции: 240,000 × $1.75 = $420,000, по справедливой стоимости, а не по номиналу $0.25. Чистые активы: $300,000 + $60,000 + $720,000 + дооценка $40,000 = $1,120,000. Гудвил = $600,000 + $420,000 + $160,000 - $1,120,000 = $60,000.`,
-      `240,000 aksiya olindi. Pul $600,000. Aksiyalar: 240,000 × $1.75 = $420,000, $0.25 nominalda emas, adolatli qiymatda. Sof aktivlar: $300,000 + $60,000 + $720,000 + $40,000 oshirish = $1,120,000. Gudvil = $600,000 + $420,000 + $160,000 - $1,120,000 = $60,000.`),
-    single(501, 'On 1 July 20X3 a parent bought 60% of a subsidiary, paying $3 for each equity share acquired. The NCI\'s fair value was $1,000. At 31 December 20X3 the subsidiary had share capital of $1,500 in $1 shares and retained earnings of $1,240. Its profit for 20X3 was $360, earned evenly. What was goodwill at acquisition?',
-      ['$1,140', '$960', '$1,320', '$140'], 0,
-      `Retained earnings at 1 July: $1,240 - 6/12 × $360 = $1,060. Net assets: $1,500 + $1,060 = $2,560. Consideration: 900 shares × $3 = $2,700. Goodwill = $2,700 + $1,000 - $2,560 = $1,140. Using the year-end reserves gives $960.`,
-      `Нераспределённая прибыль на 1 июля: $1,240 - 6/12 × $360 = $1,060. Чистые активы: $1,500 + $1,060 = $2,560. Возмещение: 900 акций × $3 = $2,700. Гудвил = $2,700 + $1,000 - $2,560 = $1,140. С резервами на конец года — $960.`,
-      `1 iyuldagi taqsimlanmagan foyda: $1,240 - 6/12 × $360 = $1,060. Sof aktivlar: $1,500 + $1,060 = $2,560. To'lov: 900 aksiya × $3 = $2,700. Gudvil = $2,700 + $1,000 - $2,560 = $1,140. Yil oxiridagi rezervlar bilan $960.`),
-    number(504, 'A parent bought 80% of a subsidiary\'s 200,000 $1 equity shares. It paid $1.50 cash per share acquired and issued 1 of its own shares for every 2 acquired. Its shares have a nominal value of $1 and a fair value of $2.40. The fair value of the NCI was $95,000 and the fair value of net assets acquired was $410,000. What is goodwill?', 117000, '$117,000',
-      `Shares acquired: 160,000. Cash: $240,000. Shares: 80,000 × $2.40 = $192,000. Goodwill = $240,000 + $192,000 + $95,000 - $410,000 = $117,000.`,
-      `Куплено 160,000 акций. Деньги $240,000. Акции: 80,000 × $2.40 = $192,000. Гудвил = $240,000 + $192,000 + $95,000 - $410,000 = $117,000.`,
-      `160,000 aksiya olindi. Pul $240,000. Aksiyalar: 80,000 × $2.40 = $192,000. Gudvil = $240,000 + $192,000 + $95,000 - $410,000 = $117,000.`),
+    {
+      id: 'ch19-q470',
+      kitRef: 470,
+      topicId: 'chapter-19',
+      type: 'single',
+      text: 'On 1 January 20X3 a parent bought 70% of a subsidiary for $2,100,000. At that date the subsidiary had 800,000 equity shares of $0.50 each and other components of equity of $1,100,000. The fair value of the non-controlling interest was $700,000. There has been no impairment since. What is goodwill in the consolidated statement of financial position at 31 December 20X7?',
+      explanation: {
+        en: `Goodwill = consideration + NCI fair value - net assets at acquisition.
+# Step 1: Share capital (count the shares at their $0.50 value)
+  800,000 x $0.50 = $400,000
+# Step 2: Net assets at acquisition
+  $400,000 + other equity $1,100,000 = $1,500,000
+# Step 3: Goodwill
+  $2,100,000 + $700,000 - $1,500,000 = $1,300,000
+  No impairment, so it is the same at 20X7
+= Answer: $1,300,000
+! Common trap: $900,000 values the shares at $1 each; $600,000 leaves out the NCI; $1,050,000 compares cost with 70% of net assets.`,
+        ru: `Гудвил = возмещение + справедливая стоимость NCI - чистые активы при покупке.
+# Шаг 1: Акционерный капитал (акции по $0.50)
+  800,000 x $0.50 = $400,000
+# Шаг 2: Чистые активы при покупке
+  $400,000 + прочий капитал $1,100,000 = $1,500,000
+# Шаг 3: Гудвил
+  $2,100,000 + $700,000 - $1,500,000 = $1,300,000
+  Обесценения нет, в 20X7 он тот же
+= Ответ: $1,300,000
+! Частая ошибка: $900,000 оценивает акции по $1; $600,000 не учитывает NCI; $1,050,000 сравнивает цену с 70% чистых активов.`,
+        uz: `Gudvil = to'lov + NCI adolatli qiymati - xarid paytidagi sof aktivlar.
+# 1-qadam: Ustav kapitali (aksiyalar $0.50 dan)
+  800,000 x $0.50 = $400,000
+# 2-qadam: Xarid paytidagi sof aktivlar
+  $400,000 + boshqa kapital $1,100,000 = $1,500,000
+# 3-qadam: Gudvil
+  $2,100,000 + $700,000 - $1,500,000 = $1,300,000
+  Qadrsizlanish yo'q, 20X7 da ham o'sha
+= Javob: $1,300,000
+! Ko'p uchraydigan xato: $900,000 aksiyalarni $1 dan baholaydi; $600,000 NCI ni hisobga olmaydi; $1,050,000 narxni sof aktivlarning 70% i bilan solishtiradi.`,
+      },
+      options: ['$1,300,000', '$900,000', '$600,000', '$1,050,000'],
+      correctIndex: 0,
+    },
+    {
+      id: 'ch19-q471',
+      kitRef: 471,
+      topicId: 'chapter-19',
+      type: 'single',
+      text: 'On 1 January 20X8 a parent bought 75% of a subsidiary for $120,000. At that date the subsidiary had 60,000 equity shares of $1 and other components of equity of $40,000. At 31 December 20X9 other components of equity were $500,000 for the parent and $64,000 for the subsidiary. What are group other components of equity at 31 December 20X9?',
+      explanation: {
+        en: `Group reserve = parent's own + parent's % of the subsidiary's increase SINCE acquisition.
+# Step 1: Subsidiary's post-acquisition increase
+  $64,000 now - $40,000 at acquisition = $24,000
+# Step 2: Parent's share
+  75% x $24,000 = $18,000
+# Step 3: Group figure
+  $500,000 + $18,000 = $518,000
+= Answer: $518,000
+! Common trap: $548,000 adds 75% of the WHOLE $64,000 (including pre-acquisition); $524,000 adds 100% of the increase.`,
+        ru: `Резерв группы = собственный материнской + % материнской от прироста дочерней ПОСЛЕ покупки.
+# Шаг 1: Прирост дочерней после покупки
+  $64,000 сейчас - $40,000 при покупке = $24,000
+# Шаг 2: Доля материнской
+  75% x $24,000 = $18,000
+# Шаг 3: Цифра группы
+  $500,000 + $18,000 = $518,000
+= Ответ: $518,000
+! Частая ошибка: $548,000 прибавляет 75% от ВСЕХ $64,000 (вместе с суммой до покупки); $524,000 прибавляет 100% прироста.`,
+        uz: `Guruh rezervi = bosh kompaniyaning o'zi + sho'baning xariddan KEYINGI o'sishidan bosh kompaniya %.
+# 1-qadam: Sho'baning xariddan keyingi o'sishi
+  Hozir $64,000 - xaridda $40,000 = $24,000
+# 2-qadam: Bosh kompaniya ulushi
+  75% x $24,000 = $18,000
+# 3-qadam: Guruh soni
+  $500,000 + $18,000 = $518,000
+= Javob: $518,000
+! Ko'p uchraydigan xato: $548,000 BUTUN $64,000 ning 75% ini qo'shadi (xariddan oldingisi bilan); $524,000 o'sishning 100% ini qo'shadi.`,
+      },
+      options: ['$518,000', '$500,000', '$548,000', '$524,000'],
+      correctIndex: 0,
+    },
+    {
+      id: 'ch19-q472',
+      kitRef: 472,
+      topicId: 'chapter-19',
+      type: 'single',
+      text: 'On 1 January 20X6 a parent bought 60% of a subsidiary for $54,000. At that date the subsidiary had 30,000 equity shares of $1 and other components of equity of $45,000. The fair value of the non-controlling interest was $36,000. What is goodwill at 31 December 20X9, assuming no impairment?',
+      explanation: {
+        en: `Goodwill = consideration + NCI fair value - net assets at acquisition.
+# Step 1: Net assets at acquisition
+  Shares $30,000 + other equity $45,000 = $75,000
+# Step 2: Goodwill
+  $54,000 + $36,000 - $75,000 = $15,000
+= Answer: $15,000
+! Common trap: $60,000 leaves out the reserves; $9,000 compares the cost with only 60% of net assets ($45,000).`,
+        ru: `Гудвил = возмещение + справедливая стоимость NCI - чистые активы при покупке.
+# Шаг 1: Чистые активы при покупке
+  Акции $30,000 + прочий капитал $45,000 = $75,000
+# Шаг 2: Гудвил
+  $54,000 + $36,000 - $75,000 = $15,000
+= Ответ: $15,000
+! Частая ошибка: $60,000 не учитывает резервы; $9,000 сравнивает цену только с 60% чистых активов ($45,000).`,
+        uz: `Gudvil = to'lov + NCI adolatli qiymati - xarid paytidagi sof aktivlar.
+# 1-qadam: Xarid paytidagi sof aktivlar
+  Aksiyalar $30,000 + boshqa kapital $45,000 = $75,000
+# 2-qadam: Gudvil
+  $54,000 + $36,000 - $75,000 = $15,000
+= Javob: $15,000
+! Ko'p uchraydigan xato: $60,000 rezervlarni hisobga olmaydi; $9,000 narxni sof aktivlarning faqat 60% i ($45,000) bilan solishtiradi.`,
+      },
+      options: ['$15,000', '$9,000', '$60,000', '$21,000'],
+      correctIndex: 0,
+    },
+    {
+      id: 'ch19-q473',
+      kitRef: 473,
+      topicId: 'chapter-19',
+      type: 'single',
+      text: 'A parent bought 70% of a subsidiary some years ago. At acquisition the subsidiary\'s other components of equity were $18,000 and the fair value of the NCI was $33,000. At the reporting date the subsidiary\'s other components of equity are $26,000. What is the non-controlling interest in the consolidated statement of financial position?',
+      explanation: {
+        en: `NCI = fair value at acquisition + NCI % of the post-acquisition increase.
+# Step 1: NCI %
+  100% - 70% = 30%
+# Step 2: Post-acquisition increase
+  $26,000 - $18,000 = $8,000
+# Step 3: NCI
+  $33,000 + 30% x $8,000 = $33,000 + $2,400 = $35,400
+= Answer: $35,400
+! Common trap: $38,600 uses the parent's 70%; $40,800 takes 30% of the whole $26,000.`,
+        ru: `NCI = справедливая стоимость при покупке + % NCI от прироста после покупки.
+# Шаг 1: % NCI
+  100% - 70% = 30%
+# Шаг 2: Прирост после покупки
+  $26,000 - $18,000 = $8,000
+# Шаг 3: NCI
+  $33,000 + 30% x $8,000 = $33,000 + $2,400 = $35,400
+= Ответ: $35,400
+! Частая ошибка: $38,600 берёт 70% материнской; $40,800 берёт 30% от всех $26,000.`,
+        uz: `NCI = xarid paytidagi adolatli qiymat + xariddan keyingi o'sishdan NCI %.
+# 1-qadam: NCI %
+  100% - 70% = 30%
+# 2-qadam: Xariddan keyingi o'sish
+  $26,000 - $18,000 = $8,000
+# 3-qadam: NCI
+  $33,000 + 30% x $8,000 = $33,000 + $2,400 = $35,400
+= Javob: $35,400
+! Ko'p uchraydigan xato: $38,600 bosh kompaniyaning 70% ini oladi; $40,800 butun $26,000 ning 30% ini oladi.`,
+      },
+      options: ['$35,400', '$33,000', '$40,800', '$38,600'],
+      correctIndex: 0,
+    },
+    {
+      id: 'ch19-q474',
+      kitRef: 474,
+      topicId: 'chapter-19',
+      type: 'number',
+      text: 'On 1 January 20X8 a parent bought 55% of a subsidiary for $200,000. At that date the subsidiary had 500,000 equity shares of $0.20 each and other components of equity of $90,000. At 31 December 20X9 the subsidiary\'s other components of equity were $130,000. The fair value of the NCI at acquisition was $120,000. What is the non-controlling interest at 31 December 20X9?',
+      explanation: {
+        en: `NCI = fair value at acquisition + NCI % of the post-acquisition increase.
+# Step 1: NCI %
+  100% - 55% = 45%
+# Step 2: Post-acquisition increase
+  $130,000 - $90,000 = $40,000
+# Step 3: NCI
+  $120,000 + 45% x $40,000 = $120,000 + $18,000 = $138,000
+= Answer: $138,000
+! Common trap: using the parent's price ($200,000) or 55%. The price paid is only needed for goodwill.`,
+        ru: `NCI = справедливая стоимость при покупке + % NCI от прироста после покупки.
+# Шаг 1: % NCI
+  100% - 55% = 45%
+# Шаг 2: Прирост после покупки
+  $130,000 - $90,000 = $40,000
+# Шаг 3: NCI
+  $120,000 + 45% x $40,000 = $120,000 + $18,000 = $138,000
+= Ответ: $138,000
+! Частая ошибка: брать цену материнской ($200,000) или 55%. Цена покупки нужна только для гудвила.`,
+        uz: `NCI = xarid paytidagi adolatli qiymat + xariddan keyingi o'sishdan NCI %.
+# 1-qadam: NCI %
+  100% - 55% = 45%
+# 2-qadam: Xariddan keyingi o'sish
+  $130,000 - $90,000 = $40,000
+# 3-qadam: NCI
+  $120,000 + 45% x $40,000 = $120,000 + $18,000 = $138,000
+= Javob: $138,000
+! Ko'p uchraydigan xato: bosh kompaniya narxini ($200,000) yoki 55% ni olish. To'langan narx faqat gudvil uchun kerak.`,
+      },
+      correctValue: 138000,
+      answerText: '$138,000',
+    },
+    {
+      id: 'ch19-q475',
+      kitRef: 475,
+      topicId: 'chapter-19',
+      type: 'single',
+      text: 'A parent owns 75% of a subsidiary. It sold goods to the subsidiary for $2,400, at a mark-up of 20% on cost. By the year end the subsidiary had sold 25% of these goods to outside customers. What is the unrealised profit adjustment?',
+      explanation: {
+        en: `Find the profit in the sale, then keep only the part in goods still held.
+# Step 1: Profit (mark-up is on cost, so the price is 120%)
+  $2,400 x 20/120 = $400
+# Step 2: Part still held
+  25% sold on, so 75% still held
+  $400 x 75% = $300
+= Answer: $300
+! Common trap: $360 takes 20% of the price (treating the mark-up as a margin); $100 uses the 25% that was sold; $480 is 20% of the whole price.`,
+        ru: `Найдём прибыль в продаже и оставим только часть в непроданном товаре.
+# Шаг 1: Прибыль (наценка от себестоимости, цена — 120%)
+  $2,400 x 20/120 = $400
+# Шаг 2: Часть, ещё не проданная
+  25% перепродано, значит 75% ещё на складе
+  $400 x 75% = $300
+= Ответ: $300
+! Частая ошибка: $360 берёт 20% от цены (считая наценку маржой); $100 берёт проданные 25%; $480 — 20% от всей цены.`,
+        uz: `Sotuvdagi foydani topib, faqat hali saqlanayotgan tovardagi qismini qoldiramiz.
+# 1-qadam: Foyda (ustama tannarxdan, narx 120%)
+  $2,400 x 20/120 = $400
+# 2-qadam: Hali saqlanayotgan qism
+  25% qayta sotilgan, demak 75% hali omborda
+  $400 x 75% = $300
+= Javob: $300
+! Ko'p uchraydigan xato: $360 narxning 20% ini oladi (ustamani marja deb); $100 sotilgan 25% ni oladi; $480 butun narxning 20% i.`,
+      },
+      options: ['$300', '$100', '$360', '$480'],
+      correctIndex: 0,
+    },
+    {
+      id: 'ch19-q476',
+      kitRef: 476,
+      topicId: 'chapter-19',
+      type: 'single',
+      text: 'Extracts ($000): the parent has receivables of 610 and payables of 290; the subsidiary has receivables of 150 and payables of 210. The parent\'s receivables include $35,000 owed by the subsidiary, and the subsidiary\'s payables include the same amount. What are consolidated receivables and payables?',
+      explanation: {
+        en: `Money owed inside the group must disappear from BOTH sides.
+# Receivables
+  $610,000 + $150,000 - $35,000 = $725,000
+# Payables
+  $290,000 + $210,000 - $35,000 = $465,000
+= Answer: receivables $725,000; payables $465,000
+! Common trap: cancelling it from only one side. The group cannot owe money to itself, so both balances go.`,
+        ru: `Долг внутри группы должен исчезнуть С ОБЕИХ сторон.
+# Дебиторы
+  $610,000 + $150,000 - $35,000 = $725,000
+# Кредиторы
+  $290,000 + $210,000 - $35,000 = $465,000
+= Ответ: дебиторы $725,000; кредиторы $465,000
+! Частая ошибка: исключить только с одной стороны. Группа не может быть должна себе, поэтому убираются оба остатка.`,
+        uz: `Guruh ichidagi qarz IKKALA tomondan yo'qolishi kerak.
+# Debitorlar
+  $610,000 + $150,000 - $35,000 = $725,000
+# Kreditorlar
+  $290,000 + $210,000 - $35,000 = $465,000
+= Javob: debitorlar $725,000; kreditorlar $465,000
+! Ko'p uchraydigan xato: faqat bir tomondan chiqarish. Guruh o'ziga qarzdor bo'la olmaydi, ikkala qoldiq ham ketadi.`,
+      },
+      options: [
+        'Receivables $725,000; payables $465,000',
+        'Receivables $760,000; payables $500,000',
+        'Receivables $725,000; payables $500,000',
+        'Receivables $760,000; payables $465,000',
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'ch19-q477',
+      kitRef: 477,
+      topicId: 'chapter-19',
+      type: 'number',
+      text: 'A parent bought 100% of a subsidiary two years ago. At that date the fair value of the subsidiary\'s land was $600,000 more than its carrying amount, and this has not been recorded by the subsidiary. At the reporting date the parent\'s non-current assets have a carrying amount of $3,100,000, excluding its investment in the subsidiary, and the subsidiary\'s are $2,300,000. What are consolidated non-current assets, before goodwill?',
+      explanation: {
+        en: `Add both companies in full, plus the fair value uplift.
+# Step 1: Both in full
+  Parent $3,100,000 + subsidiary $2,300,000 = $5,400,000
+# Step 2: Fair value uplift on the land
+  + $600,000 (land is not depreciated, so it is unchanged)
+# Step 3: Group figure
+  $5,400,000 + $600,000 = $6,000,000
+= Answer: $6,000,000
+! Common trap: leaving out the uplift ($5,400,000). The subsidiary did not record it, so the group must add it.`,
+        ru: `Складываем обе компании полностью и прибавляем дооценку.
+# Шаг 1: Обе полностью
+  Материнская $3,100,000 + дочерняя $2,300,000 = $5,400,000
+# Шаг 2: Дооценка земли
+  + $600,000 (земля не амортизируется, сумма не меняется)
+# Шаг 3: Цифра группы
+  $5,400,000 + $600,000 = $6,000,000
+= Ответ: $6,000,000
+! Частая ошибка: забыть дооценку ($5,400,000). Дочерняя её не записала, поэтому её добавляет группа.`,
+        uz: `Ikkala kompaniyani to'liq qo'shib, adolatli qiymat oshishini qo'shamiz.
+# 1-qadam: Ikkalasi to'liq
+  Bosh $3,100,000 + sho'ba $2,300,000 = $5,400,000
+# 2-qadam: Yerning adolatli qiymat oshishi
+  + $600,000 (yer amortizatsiya qilinmaydi, o'zgarmaydi)
+# 3-qadam: Guruh soni
+  $5,400,000 + $600,000 = $6,000,000
+= Javob: $6,000,000
+! Ko'p uchraydigan xato: oshishni unutish ($5,400,000). Sho'ba uni yozmagan, shuning uchun guruh qo'shadi.`,
+      },
+      correctValue: 6000000,
+      answerText: '$6,000,000',
+    },
+    {
+      id: 'ch19-q481',
+      kitRef: 481,
+      topicId: 'chapter-19',
+      type: 'number',
+      text: 'Oak bought 80% of Ash\'s equity shares on 1 January 20X5, when Ash had retained losses of $150,000. On 31 December 20X5 Oak bought 25% of Elm, when Elm had retained earnings of $300,000. What is property, plant and equipment in the consolidated statement of financial position? Give your answer in $000.',
+      explanation: {
+        en: `Group PPE = parent's PPE + subsidiary's PPE, in full.
+# Add both
+  Oak $2,450,000 + Ash $1,730,000 = $4,180,000
+# What is NOT PPE
+  The investments in Ash and Elm are not property, plant and equipment
+= Answer: $4,180,000 (4,180 in $000)
+! Common trap: taking only 80% of Ash's PPE. The group controls ALL of Ash's assets.`,
+        ru: `ОС группы = ОС материнской + ОС дочерней, полностью.
+# Складываем обе
+  Oak $2,450,000 + Ash $1,730,000 = $4,180,000
+# Что НЕ является ОС
+  Инвестиции в Ash и Elm — не основные средства
+= Ответ: $4,180,000 (4,180 в $000)
+! Частая ошибка: брать только 80% ОС Ash. Группа контролирует ВСЕ активы Ash.`,
+        uz: `Guruh AV = bosh kompaniya AV + sho'ba AV, to'liq.
+# Ikkalasini qo'shamiz
+  Oak $2,450,000 + Ash $1,730,000 = $4,180,000
+# Nima AV EMAS
+  Ash va Elm ga investitsiyalar asosiy vosita emas
+= Javob: $4,180,000 ($000 da 4,180)
+! Ko'p uchraydigan xato: Ash AV ning faqat 80% ini olish. Guruh Ash ning BARCHA aktivlarini nazorat qiladi.`,
+      },
+      correctValue: 4180,
+      answerText: '$4,180,000 (4,180 in $000)',
+      table: {
+        head: ['At 31 December 20X5', 'Oak $000', 'Ash $000'],
+        rows: [
+          ['Property, plant and equipment', '2,450', '1,730'],
+          ['Investment in Ash', '2,000', '-'],
+          ['Investment in Elm', '520', '-'],
+          ['Inventory', '800', '1,100'],
+          ['Receivables', '410', '540'],
+          ['Cash', '90', '130'],
+          ['Total assets', '6,270', '3,500'],
+          ['Equity shares of $1', '2,500', '1,500'],
+          ['Retained earnings', '3,100', '950'],
+          ['Payables', '480', '900'],
+          ['Income tax payable', '190', '150'],
+          ['Total equity and liabilities', '6,270', '3,500'],
+        ],
+      },
+    },
+    {
+      id: 'ch19-q482',
+      kitRef: 482,
+      topicId: 'chapter-19',
+      type: 'single',
+      text: 'Oak bought 80% of Ash\'s equity shares on 1 January 20X5, when Ash had retained losses of $150,000. On 31 December 20X5 Oak bought 25% of Elm, when Elm had retained earnings of $300,000. What are consolidated retained earnings?',
+      explanation: {
+        en: `Group retained earnings = Oak's own + 80% of Ash's change since acquisition.
+# Step 1: Ash's change since acquisition
+  From a $150,000 LOSS to $950,000 of earnings
+  $950,000 - (-$150,000) = $1,100,000
+# Step 2: Oak's share
+  80% x $1,100,000 = $880,000
+# Step 3: Elm
+  Bought on the last day of the year: no post-acquisition earnings yet
+# Step 4: Group figure
+  $3,100,000 + $880,000 = $3,980,000
+= Answer: $3,980,000
+! Common trap: $3,860,000 takes 80% of the closing $950,000; $3,740,000 subtracts the loss instead of adding it back; $4,200,000 takes 100%.`,
+        ru: `Нераспределённая прибыль группы = собственная Oak + 80% изменения Ash после покупки.
+# Шаг 1: Изменение Ash после покупки
+  От УБЫТКА $150,000 до прибыли $950,000
+  $950,000 - (-$150,000) = $1,100,000
+# Шаг 2: Доля Oak
+  80% x $1,100,000 = $880,000
+# Шаг 3: Elm
+  Куплена в последний день года: прибыли после покупки ещё нет
+# Шаг 4: Цифра группы
+  $3,100,000 + $880,000 = $3,980,000
+= Ответ: $3,980,000
+! Частая ошибка: $3,860,000 берёт 80% от конечных $950,000; $3,740,000 вычитает убыток вместо прибавления; $4,200,000 берёт 100%.`,
+        uz: `Guruh taqsimlanmagan foydasi = Oak ning o'zi + Ash ning xariddan keyingi o'zgarishining 80% i.
+# 1-qadam: Ash ning xariddan keyingi o'zgarishi
+  $150,000 ZARARdan $950,000 foydagacha
+  $950,000 - (-$150,000) = $1,100,000
+# 2-qadam: Oak ulushi
+  80% x $1,100,000 = $880,000
+# 3-qadam: Elm
+  Yilning oxirgi kunida olingan: xariddan keyingi foyda hali yo'q
+# 4-qadam: Guruh soni
+  $3,100,000 + $880,000 = $3,980,000
+= Javob: $3,980,000
+! Ko'p uchraydigan xato: $3,860,000 yakuniy $950,000 ning 80% ini oladi; $3,740,000 zararni qo'shish o'rniga ayiradi; $4,200,000 100% ni oladi.`,
+      },
+      options: ['$3,980,000', '$3,860,000', '$3,740,000', '$4,200,000'],
+      correctIndex: 0,
+      table: {
+        head: ['At 31 December 20X5', 'Oak $000', 'Ash $000'],
+        rows: [
+          ['Property, plant and equipment', '2,450', '1,730'],
+          ['Investment in Ash', '2,000', '-'],
+          ['Investment in Elm', '520', '-'],
+          ['Inventory', '800', '1,100'],
+          ['Receivables', '410', '540'],
+          ['Cash', '90', '130'],
+          ['Total assets', '6,270', '3,500'],
+          ['Equity shares of $1', '2,500', '1,500'],
+          ['Retained earnings', '3,100', '950'],
+          ['Payables', '480', '900'],
+          ['Income tax payable', '190', '150'],
+          ['Total equity and liabilities', '6,270', '3,500'],
+        ],
+      },
+    },
+    {
+      id: 'ch19-q484',
+      kitRef: 484,
+      topicId: 'chapter-19',
+      type: 'single',
+      text: 'IFRS 10 sets out three elements that must all be present for one entity to control another. Which of these is NOT one of them?',
+      explanation: {
+        en: `IFRS 10 control needs three things: power, exposure to variable returns, and the ability to use power to affect those returns.
+- Power over the other entity: one of the three.
+- Exposure to variable returns: one of the three.
+- Ability to use power to affect returns: one of the three.
+- Significant influence: NOT part of control. It is the test for an ASSOCIATE.
+= Answer: the ability to exercise significant influence`,
+        ru: `Контроль по IFRS 10 требует трёх вещей: власть, подверженность переменному доходу и способность использовать власть, чтобы влиять на доход.
+- Власть над другой компанией: один из трёх.
+- Подверженность переменному доходу: один из трёх.
+- Способность использовать власть для влияния на доход: один из трёх.
+- Значительное влияние: НЕ часть контроля. Это признак АССОЦИИРОВАННОЙ компании.
+= Ответ: способность оказывать значительное влияние`,
+        uz: `IFRS 10 bo'yicha nazorat uch narsani talab qiladi: hokimiyat, o'zgaruvchan daromadga ta'sirchanlik va daromadga ta'sir qilish uchun hokimiyatdan foydalanish qobiliyati.
+- Boshqa kompaniya ustidan hokimiyat: uchtadan biri.
+- O'zgaruvchan daromadga ta'sirchanlik: uchtadan biri.
+- Daromadga ta'sir qilish uchun hokimiyatdan foydalanish: uchtadan biri.
+- Sezilarli ta'sir: nazoratning qismi EMAS. Bu ASSOTSIATSIYALANGAN kompaniya belgisi.
+= Javob: sezilarli ta'sir ko'rsatish qobiliyati`,
+      },
+      options: [
+        'Power over the other entity',
+        'Exposure, or rights, to variable returns from its involvement with the other entity',
+        'The ability to use its power over the other entity to affect the amount of its returns',
+        'The ability to exercise significant influence over the other entity',
+      ],
+      correctIndex: 3,
+    },
+    {
+      id: 'ch19-q486',
+      kitRef: 486,
+      topicId: 'chapter-19',
+      type: 'single',
+      text: 'Which shareholding would normally indicate that one entity controls another?',
+      explanation: {
+        en: `Control normally comes from a MAJORITY of the votes.
+- Some of the shares: too vague; could be tiny. WRONG.
+- Up to 20%: usually just a trade investment. WRONG.
+- More than 50%: a majority of the votes, so CONTROL. RIGHT.
+- 20% to 50%: usually significant influence (an associate). WRONG.
+= Answer: holding more than 50% of its equity shares`,
+        ru: `Контроль обычно даёт БОЛЬШИНСТВО голосов.
+- Часть акций: слишком расплывчато, может быть совсем мало. НЕВЕРНО.
+- До 20%: обычно просто вложение. НЕВЕРНО.
+- Более 50%: большинство голосов, значит КОНТРОЛЬ. ВЕРНО.
+- От 20% до 50%: обычно значительное влияние (ассоциированная). НЕВЕРНО.
+= Ответ: владение более 50% обыкновенных акций`,
+        uz: `Nazoratni odatda ovozlarning KO'PCHILIGI beradi.
+- Aksiyalarning bir qismi: juda noaniq, juda oz bo'lishi mumkin. NOTO'G'RI.
+- 20% gacha: odatda oddiy sarmoya. NOTO'G'RI.
+- 50% dan ko'p: ovozlar ko'pchiligi, demak NAZORAT. TO'G'RI.
+- 20% dan 50% gacha: odatda sezilarli ta'sir (assotsiatsiyalangan). NOTO'G'RI.
+= Javob: oddiy aksiyalarning 50% dan ko'piga egalik`,
+      },
+      options: [
+        'Holding some of its equity shares',
+        'Holding up to 20% of its equity shares',
+        'Holding more than 50% of its equity shares',
+        'Holding between 20% and 50% of its equity shares',
+      ],
+      correctIndex: 2,
+    },
+    {
+      id: 'ch19-q487',
+      kitRef: 487,
+      topicId: 'chapter-19',
+      type: 'single',
+      text: 'Which of these would normally indicate that one entity controls another?',
+      explanation: {
+        en: `Control means being able to direct the company's policies.
+- Appointing a MAJORITY of the board: the board runs the company, so this is CONTROL. RIGHT.
+- Appointing one director: usually only significant influence. WRONG.
+- Sending policy requests: no power to make the board act. WRONG.
+- Attending general meetings: any shareholder can. WRONG.
+= Answer: the right to appoint a majority of its board`,
+        ru: `Контроль — это возможность определять политику компании.
+- Назначение БОЛЬШИНСТВА совета директоров: совет управляет компанией, значит это КОНТРОЛЬ. ВЕРНО.
+- Назначение одного директора: обычно лишь значительное влияние. НЕВЕРНО.
+- Отправка запросов о политике: нет власти заставить совет. НЕВЕРНО.
+- Посещение общих собраний: может любой акционер. НЕВЕРНО.
+= Ответ: право назначать большинство совета директоров`,
+        uz: `Nazorat — kompaniya siyosatini belgilay olish.
+- Kengashning KO'PCHILIGINI tayinlash: kengash kompaniyani boshqaradi, demak bu NAZORAT. TO'G'RI.
+- Bitta direktorni tayinlash: odatda faqat sezilarli ta'sir. NOTO'G'RI.
+- Siyosat haqida so'rov yuborish: kengashni majburlash hokimiyati yo'q. NOTO'G'RI.
+- Umumiy yig'ilishlarda qatnashish: har qanday aksiyador qila oladi. NOTO'G'RI.
+= Javob: direktorlar kengashining ko'pchiligini tayinlash huquqi`,
+      },
+      options: [
+        'The right to appoint a majority of its board of directors',
+        'The right to appoint one of its directors',
+        'The right to send requests about policy to its board',
+        'The right to attend its general meetings',
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'ch19-q489',
+      kitRef: 489,
+      topicId: 'chapter-19',
+      type: 'single',
+      text: 'Entity A bought 75% of the 120,000 equity shares of entity B by issuing 2 of its own shares for every 3 shares acquired. On that date an A share had a fair value of $4.20 and a B share $2.50. Both have a nominal value of $1. What is the fair value of the consideration?',
+      explanation: {
+        en: `Consideration in shares = shares the parent ISSUES x the parent's share price.
+# Step 1: Shares acquired
+  120,000 x 75% = 90,000
+# Step 2: Shares A issues (2 for every 3)
+  90,000 x 2/3 = 60,000
+# Step 3: Fair value
+  60,000 x $4.20 = $252,000
+= Answer: $252,000
+! Common trap: $60,000 uses nominal value; $225,000 uses B's share price; $567,000 turns the ratio upside down (3 for 2).`,
+        ru: `Возмещение акциями = акции, ВЫПУЩЕННЫЕ материнской x цена акции материнской.
+# Шаг 1: Приобретено акций
+  120,000 x 75% = 90,000
+# Шаг 2: A выпускает (2 за каждые 3)
+  90,000 x 2/3 = 60,000
+# Шаг 3: Справедливая стоимость
+  60,000 x $4.20 = $252,000
+= Ответ: $252,000
+! Частая ошибка: $60,000 берёт номинал; $225,000 — цену акции B; $567,000 переворачивает соотношение (3 за 2).`,
+        uz: `Aksiyalardagi to'lov = bosh kompaniya CHIQARGAN aksiyalar x bosh kompaniya aksiya narxi.
+# 1-qadam: Olingan aksiyalar
+  120,000 x 75% = 90,000
+# 2-qadam: A chiqaradigan aksiyalar (har 3 taga 2)
+  90,000 x 2/3 = 60,000
+# 3-qadam: Adolatli qiymat
+  60,000 x $4.20 = $252,000
+= Javob: $252,000
+! Ko'p uchraydigan xato: $60,000 nominalni oladi; $225,000 B aksiya narxini; $567,000 nisbatni teskari oladi (2 taga 3).`,
+      },
+      options: ['$252,000', '$225,000', '$60,000', '$567,000'],
+      correctIndex: 0,
+    },
+    {
+      id: 'ch19-q490',
+      kitRef: 490,
+      topicId: 'chapter-19',
+      type: 'number',
+      text: 'Entity C bought 60% of the 400,000 equity shares of entity D. It paid $2.50 cash per share acquired and also issued 2 of its own shares for every 5 shares acquired. A C share had a fair value of $4.00 at that date. What is the fair value of the consideration?',
+      explanation: {
+        en: `Add the cash part and the share part.
+# Step 1: Shares acquired
+  400,000 x 60% = 240,000
+# Step 2: Cash
+  240,000 x $2.50 = $600,000
+# Step 3: Shares issued (2 for every 5)
+  240,000 x 2/5 = 96,000 shares x $4.00 = $384,000
+# Step 4: Total
+  $600,000 + $384,000 = $984,000
+= Answer: $984,000
+! Common trap: working on all 400,000 shares instead of the 240,000 acquired.`,
+        ru: `Сложим денежную часть и часть акциями.
+# Шаг 1: Приобретено акций
+  400,000 x 60% = 240,000
+# Шаг 2: Деньги
+  240,000 x $2.50 = $600,000
+# Шаг 3: Выпущенные акции (2 за каждые 5)
+  240,000 x 2/5 = 96,000 акций x $4.00 = $384,000
+# Шаг 4: Итого
+  $600,000 + $384,000 = $984,000
+= Ответ: $984,000
+! Частая ошибка: считать от всех 400,000 акций вместо 240,000 приобретённых.`,
+        uz: `Pul qismi va aksiya qismini qo'shamiz.
+# 1-qadam: Olingan aksiyalar
+  400,000 x 60% = 240,000
+# 2-qadam: Pul
+  240,000 x $2.50 = $600,000
+# 3-qadam: Chiqarilgan aksiyalar (har 5 taga 2)
+  240,000 x 2/5 = 96,000 aksiya x $4.00 = $384,000
+# 4-qadam: Jami
+  $600,000 + $384,000 = $984,000
+= Javob: $984,000
+! Ko'p uchraydigan xato: olingan 240,000 o'rniga barcha 400,000 aksiyadan hisoblash.`,
+      },
+      correctValue: 984000,
+      answerText: '$984,000',
+    },
+    {
+      id: 'ch19-q495',
+      kitRef: 495,
+      topicId: 'chapter-19',
+      type: 'number',
+      text: 'On 1 April 20X4 a parent paid $15 million for 60% of a subsidiary. The subsidiary had share capital of $5 million and retained earnings of $9 million at 1 January 20X4, and made a profit of $4 million in the year to 31 December 20X4, earned evenly. The fair value of the NCI at acquisition was $8 million. What is goodwill? Give your answer in $ million.',
+      explanation: {
+        en: `Bought on 1 April, so find the reserves on that date first.
+# Step 1: Retained earnings on 1 April
+  $9m + 3/12 x $4m = $9m + $1m = $10m
+# Step 2: Net assets at acquisition
+  Share capital $5m + $10m = $15m
+# Step 3: Goodwill
+  $15m paid + $8m NCI - $15m net assets = $8m
+= Answer: $8 million
+! Common trap: using the opening $9m ($9m goodwill) or the year-end $13m ($5m goodwill).`,
+        ru: `Покупка 1 апреля, поэтому сначала найдём резервы на эту дату.
+# Шаг 1: Нераспределённая прибыль на 1 апреля
+  $9m + 3/12 x $4m = $9m + $1m = $10m
+# Шаг 2: Чистые активы при покупке
+  Акционерный капитал $5m + $10m = $15m
+# Шаг 3: Гудвил
+  Заплачено $15m + NCI $8m - чистые активы $15m = $8m
+= Ответ: $8 млн
+! Частая ошибка: брать начальные $9m (гудвил $9m) или конечные $13m (гудвил $5m).`,
+        uz: `1 aprelda sotib olingan, shuning uchun avval shu sanadagi rezervlarni topamiz.
+# 1-qadam: 1 apreldagi taqsimlanmagan foyda
+  $9m + 3/12 x $4m = $9m + $1m = $10m
+# 2-qadam: Xarid paytidagi sof aktivlar
+  Ustav kapitali $5m + $10m = $15m
+# 3-qadam: Gudvil
+  To'langan $15m + NCI $8m - sof aktivlar $15m = $8m
+= Javob: $8 mln
+! Ko'p uchraydigan xato: boshlang'ich $9m (gudvil $9m) yoki yil oxiridagi $13m (gudvil $5m) ni olish.`,
+      },
+      correctValue: 8,
+      answerText: '$8 million',
+    },
+    {
+      id: 'ch19-q496',
+      kitRef: 496,
+      topicId: 'chapter-19',
+      type: 'single',
+      text: 'On 1 October 20X7 a parent paid $36 million for 75% of a subsidiary. The subsidiary had share capital of $20 million, retained earnings of $12 million at 1 January 20X7, and a profit of $8 million for 20X7, earned evenly. At acquisition its land was worth $2 million more than its carrying amount, and the fair value of the NCI was $11 million. What is goodwill?',
+      explanation: {
+        en: `Bought on 1 October: find reserves on that date, then add the fair value uplift.
+# Step 1: Retained earnings on 1 October
+  $12m + 9/12 x $8m = $12m + $6m = $18m
+# Step 2: Net assets at fair value
+  $20m + $18m + land uplift $2m = $40m
+# Step 3: Goodwill
+  $36m + $11m - $40m = $7m
+= Answer: $7 million
+! Common trap: $9m leaves out the land uplift; $5m uses the year-end reserves ($20m); $13m uses the opening reserves ($12m).`,
+        ru: `Покупка 1 октября: найдём резервы на эту дату и прибавим дооценку.
+# Шаг 1: Нераспределённая прибыль на 1 октября
+  $12m + 9/12 x $8m = $12m + $6m = $18m
+# Шаг 2: Чистые активы по справедливой стоимости
+  $20m + $18m + дооценка земли $2m = $40m
+# Шаг 3: Гудвил
+  $36m + $11m - $40m = $7m
+= Ответ: $7 млн
+! Частая ошибка: $9m забывает дооценку земли; $5m берёт резервы на конец года ($20m); $13m — на начало ($12m).`,
+        uz: `1 oktyabrda olingan: shu sanadagi rezervlarni topib, adolatli qiymat oshishini qo'shamiz.
+# 1-qadam: 1 oktyabrdagi taqsimlanmagan foyda
+  $12m + 9/12 x $8m = $12m + $6m = $18m
+# 2-qadam: Adolatli qiymatdagi sof aktivlar
+  $20m + $18m + yer oshishi $2m = $40m
+# 3-qadam: Gudvil
+  $36m + $11m - $40m = $7m
+= Javob: $7 mln
+! Ko'p uchraydigan xato: $9m yer oshishini unutadi; $5m yil oxiridagi rezervni ($20m) oladi; $13m boshlang'ichini ($12m).`,
+      },
+      options: ['$7 million', '$9 million', '$5 million', '$13 million'],
+      correctIndex: 0,
+    },
+    {
+      id: 'ch19-q497',
+      kitRef: 497,
+      topicId: 'chapter-19',
+      type: 'number',
+      text: 'A parent bought 80% of a subsidiary that had 5 million $1 equity shares, share premium of $4 million and retained earnings of $20 million. It paid $2 cash per share acquired and issued 3 of its own shares for every 2 acquired. A parent share was worth $3.00. The fair value of the NCI was $9 million. What is goodwill? Give your answer in $ million.',
+      explanation: {
+        en: `Work out the consideration, then goodwill.
+# Step 1: Shares acquired
+  5m x 80% = 4m
+# Step 2: Consideration
+  Cash: 4m x $2 = $8m
+  Shares: 4m x 3/2 = 6m shares x $3 = $18m
+  Total: $26m
+# Step 3: Net assets
+  $5m + $4m + $20m = $29m
+# Step 4: Goodwill
+  $26m + $9m - $29m = $6m
+= Answer: $6 million
+! Common trap: turning 3-for-2 the wrong way (4m x 2/3), or forgetting the share premium in net assets.`,
+        ru: `Рассчитаем возмещение, затем гудвил.
+# Шаг 1: Приобретено акций
+  5m x 80% = 4m
+# Шаг 2: Возмещение
+  Деньги: 4m x $2 = $8m
+  Акции: 4m x 3/2 = 6m акций x $3 = $18m
+  Итого: $26m
+# Шаг 3: Чистые активы
+  $5m + $4m + $20m = $29m
+# Шаг 4: Гудвил
+  $26m + $9m - $29m = $6m
+= Ответ: $6 млн
+! Частая ошибка: перевернуть 3 за 2 (4m x 2/3) или забыть эмиссионный доход в чистых активах.`,
+        uz: `To'lovni, keyin gudvilni hisoblaymiz.
+# 1-qadam: Olingan aksiyalar
+  5m x 80% = 4m
+# 2-qadam: To'lov
+  Pul: 4m x $2 = $8m
+  Aksiyalar: 4m x 3/2 = 6m aksiya x $3 = $18m
+  Jami: $26m
+# 3-qadam: Sof aktivlar
+  $5m + $4m + $20m = $29m
+# 4-qadam: Gudvil
+  $26m + $9m - $29m = $6m
+= Javob: $6 mln
+! Ko'p uchraydigan xato: 2 taga 3 ni teskari olish (4m x 2/3) yoki sof aktivlarda emissiya daromadini unutish.`,
+      },
+      correctValue: 6,
+      answerText: '$6 million',
+    },
+    {
+      id: 'ch19-q498',
+      kitRef: 498,
+      topicId: 'chapter-19',
+      type: 'single',
+      text: 'A parent bought 60% of a subsidiary with 20 million $1 equity shares, share premium of $4 million and retained earnings of $50 million. Its factory was worth $3 million more than its carrying amount. The parent paid $3 cash per share acquired and issued 1 new share for every 2 acquired, each worth $6. The fair value of the NCI was $36 million. What is goodwill?',
+      explanation: {
+        en: `Work out the consideration, then net assets at fair value, then goodwill.
+# Step 1: Shares acquired
+  20m x 60% = 12m
+# Step 2: Consideration
+  Cash: 12m x $3 = $36m
+  Shares: 12m x 1/2 = 6m x $6 = $36m
+  Total: $72m
+# Step 3: Net assets at fair value
+  $20m + $4m + $50m + factory uplift $3m = $77m
+# Step 4: Goodwill
+  $72m + $36m - $77m = $31m
+= Answer: $31 million
+! Common trap: $34m leaves out the uplift; $35m leaves out share premium; $1m values the new shares at $1 nominal.`,
+        ru: `Рассчитаем возмещение, затем чистые активы по справедливой стоимости, затем гудвил.
+# Шаг 1: Приобретено акций
+  20m x 60% = 12m
+# Шаг 2: Возмещение
+  Деньги: 12m x $3 = $36m
+  Акции: 12m x 1/2 = 6m x $6 = $36m
+  Итого: $72m
+# Шаг 3: Чистые активы по справедливой стоимости
+  $20m + $4m + $50m + дооценка завода $3m = $77m
+# Шаг 4: Гудвил
+  $72m + $36m - $77m = $31m
+= Ответ: $31 млн
+! Частая ошибка: $34m забывает дооценку; $35m забывает эмиссионный доход; $1m оценивает новые акции по номиналу $1.`,
+        uz: `To'lovni, keyin adolatli qiymatdagi sof aktivlarni, keyin gudvilni hisoblaymiz.
+# 1-qadam: Olingan aksiyalar
+  20m x 60% = 12m
+# 2-qadam: To'lov
+  Pul: 12m x $3 = $36m
+  Aksiyalar: 12m x 1/2 = 6m x $6 = $36m
+  Jami: $72m
+# 3-qadam: Adolatli qiymatdagi sof aktivlar
+  $20m + $4m + $50m + zavod oshishi $3m = $77m
+# 4-qadam: Gudvil
+  $72m + $36m - $77m = $31m
+= Javob: $31 mln
+! Ko'p uchraydigan xato: $34m oshishni unutadi; $35m emissiya daromadini unutadi; $1m yangi aksiyalarni $1 nominalda baholaydi.`,
+      },
+      options: ['$31 million', '$34 million', '$35 million', '$1 million'],
+      correctIndex: 0,
+    },
+    {
+      id: 'ch19-q499',
+      kitRef: 499,
+      topicId: 'chapter-19',
+      type: 'number',
+      text: 'A parent bought 80% of a subsidiary with 300,000 $1 equity shares, share premium of $60,000 and retained earnings of $720,000. It paid $2.50 cash per share acquired and issued one new share, nominal value $0.25, for each share acquired. A parent share was worth $1.75. Some plant had a fair value of $150,000 and a carrying amount of $110,000. The fair value of the NCI was $160,000. What is goodwill?',
+      explanation: {
+        en: `Value the new shares at fair value, not nominal, and include the plant uplift.
+# Step 1: Shares acquired
+  300,000 x 80% = 240,000
+# Step 2: Consideration
+  Cash: 240,000 x $2.50 = $600,000
+  Shares: 240,000 x $1.75 = $420,000 (the $0.25 nominal is not used)
+# Step 3: Net assets at fair value
+  $300,000 + $60,000 + $720,000 + plant uplift ($150,000 - $110,000 = $40,000) = $1,120,000
+# Step 4: Goodwill
+  $600,000 + $420,000 + $160,000 - $1,120,000 = $60,000
+= Answer: $60,000
+! Common trap: valuing the new shares at $0.25 nominal, which would make goodwill negative.`,
+        ru: `Оценим новые акции по справедливой стоимости, а не номиналу, и учтём дооценку оборудования.
+# Шаг 1: Приобретено акций
+  300,000 x 80% = 240,000
+# Шаг 2: Возмещение
+  Деньги: 240,000 x $2.50 = $600,000
+  Акции: 240,000 x $1.75 = $420,000 (номинал $0.25 не используем)
+# Шаг 3: Чистые активы по справедливой стоимости
+  $300,000 + $60,000 + $720,000 + дооценка ($150,000 - $110,000 = $40,000) = $1,120,000
+# Шаг 4: Гудвил
+  $600,000 + $420,000 + $160,000 - $1,120,000 = $60,000
+= Ответ: $60,000
+! Частая ошибка: оценить новые акции по номиналу $0.25, тогда гудвил стал бы отрицательным.`,
+        uz: `Yangi aksiyalarni nominalda emas, adolatli qiymatda baholab, uskuna oshishini qo'shamiz.
+# 1-qadam: Olingan aksiyalar
+  300,000 x 80% = 240,000
+# 2-qadam: To'lov
+  Pul: 240,000 x $2.50 = $600,000
+  Aksiyalar: 240,000 x $1.75 = $420,000 ($0.25 nominal ishlatilmaydi)
+# 3-qadam: Adolatli qiymatdagi sof aktivlar
+  $300,000 + $60,000 + $720,000 + uskuna oshishi ($150,000 - $110,000 = $40,000) = $1,120,000
+# 4-qadam: Gudvil
+  $600,000 + $420,000 + $160,000 - $1,120,000 = $60,000
+= Javob: $60,000
+! Ko'p uchraydigan xato: yangi aksiyalarni $0.25 nominalda baholash, unda gudvil manfiy chiqardi.`,
+      },
+      correctValue: 60000,
+      answerText: '$60,000',
+    },
+    {
+      id: 'ch19-q501',
+      kitRef: 501,
+      topicId: 'chapter-19',
+      type: 'single',
+      text: 'On 1 July 20X3 a parent bought 60% of a subsidiary, paying $3 for each equity share acquired. The NCI\'s fair value was $1,000. At 31 December 20X3 the subsidiary had share capital of $1,500 in $1 shares and retained earnings of $1,240. Its profit for 20X3 was $360, earned evenly. What was goodwill at acquisition?',
+      explanation: {
+        en: `Bought on 1 July. Year-end reserves are given, so take OFF the profit earned after the purchase.
+# Step 1: Retained earnings on 1 July
+  $1,240 - 6/12 x $360 = $1,240 - $180 = $1,060
+# Step 2: Net assets at acquisition
+  $1,500 + $1,060 = $2,560
+# Step 3: Consideration
+  Shares acquired: 1,500 x 60% = 900; 900 x $3 = $2,700
+# Step 4: Goodwill
+  $2,700 + $1,000 - $2,560 = $1,140
+= Answer: $1,140
+! Common trap: $960 uses the year-end reserves; $1,320 takes off the whole year's profit; $140 leaves out the NCI.`,
+        ru: `Покупка 1 июля. Даны резервы на конец года, поэтому ВЫЧИТАЕМ прибыль после покупки.
+# Шаг 1: Нераспределённая прибыль на 1 июля
+  $1,240 - 6/12 x $360 = $1,240 - $180 = $1,060
+# Шаг 2: Чистые активы при покупке
+  $1,500 + $1,060 = $2,560
+# Шаг 3: Возмещение
+  Приобретено акций: 1,500 x 60% = 900; 900 x $3 = $2,700
+# Шаг 4: Гудвил
+  $2,700 + $1,000 - $2,560 = $1,140
+= Ответ: $1,140
+! Частая ошибка: $960 берёт резервы на конец года; $1,320 вычитает прибыль за весь год; $140 не учитывает NCI.`,
+        uz: `1 iyulda olingan. Yil oxiridagi rezervlar berilgan, shuning uchun xariddan keyingi foydani AYIRAMIZ.
+# 1-qadam: 1 iyuldagi taqsimlanmagan foyda
+  $1,240 - 6/12 x $360 = $1,240 - $180 = $1,060
+# 2-qadam: Xarid paytidagi sof aktivlar
+  $1,500 + $1,060 = $2,560
+# 3-qadam: To'lov
+  Olingan aksiyalar: 1,500 x 60% = 900; 900 x $3 = $2,700
+# 4-qadam: Gudvil
+  $2,700 + $1,000 - $2,560 = $1,140
+= Javob: $1,140
+! Ko'p uchraydigan xato: $960 yil oxiridagi rezervni oladi; $1,320 butun yil foydasini ayiradi; $140 NCI ni hisobga olmaydi.`,
+      },
+      options: ['$1,140', '$960', '$1,320', '$140'],
+      correctIndex: 0,
+    },
+    {
+      id: 'ch19-q504',
+      kitRef: 504,
+      topicId: 'chapter-19',
+      type: 'number',
+      text: 'A parent bought 80% of a subsidiary\'s 200,000 $1 equity shares. It paid $1.50 cash per share acquired and issued 1 of its own shares for every 2 acquired. Its shares have a nominal value of $1 and a fair value of $2.40. The fair value of the NCI was $95,000 and the fair value of net assets acquired was $410,000. What is goodwill?',
+      explanation: {
+        en: `Net assets at fair value are given, so only the consideration needs working.
+# Step 1: Shares acquired
+  200,000 x 80% = 160,000
+# Step 2: Consideration
+  Cash: 160,000 x $1.50 = $240,000
+  Shares: 160,000 x 1/2 = 80,000 x $2.40 = $192,000
+  Total: $432,000
+# Step 3: Goodwill
+  $432,000 + $95,000 - $410,000 = $117,000
+= Answer: $117,000
+! Common trap: valuing the 80,000 new shares at $1 nominal ($80,000) instead of $2.40.`,
+        ru: `Чистые активы по справедливой стоимости даны, рассчитать нужно только возмещение.
+# Шаг 1: Приобретено акций
+  200,000 x 80% = 160,000
+# Шаг 2: Возмещение
+  Деньги: 160,000 x $1.50 = $240,000
+  Акции: 160,000 x 1/2 = 80,000 x $2.40 = $192,000
+  Итого: $432,000
+# Шаг 3: Гудвил
+  $432,000 + $95,000 - $410,000 = $117,000
+= Ответ: $117,000
+! Частая ошибка: оценить 80,000 новых акций по номиналу $1 ($80,000) вместо $2.40.`,
+        uz: `Adolatli qiymatdagi sof aktivlar berilgan, faqat to'lovni hisoblash kerak.
+# 1-qadam: Olingan aksiyalar
+  200,000 x 80% = 160,000
+# 2-qadam: To'lov
+  Pul: 160,000 x $1.50 = $240,000
+  Aksiyalar: 160,000 x 1/2 = 80,000 x $2.40 = $192,000
+  Jami: $432,000
+# 3-qadam: Gudvil
+  $432,000 + $95,000 - $410,000 = $117,000
+= Javob: $117,000
+! Ko'p uchraydigan xato: 80,000 yangi aksiyani $2.40 o'rniga $1 nominalda ($80,000) baholash.`,
+      },
+      correctValue: 117000,
+      answerText: '$117,000',
+    },
   ];
 
   if (typeof module !== 'undefined') module.exports = questions;

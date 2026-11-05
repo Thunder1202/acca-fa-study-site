@@ -2,17 +2,33 @@
 
 const chapter16 = {
   id: 'chapter-16',
-  titles: {
-    en: 'Incomplete records',
-    ru: 'Неполные записи',
-    uz: 'To\'liq bo\'lmagan yozuvlar',
-  },
+  titles: { en: 'Incomplete records', ru: 'Неполные записи', uz: 'To\'liq bo\'lmagan yozuvlar' },
   objectives: [
-    { en: 'Use the accounting equation to find a missing profit', ru: 'Использовать бухгалтерское уравнение, чтобы найти неизвестную прибыль', uz: 'Yetishmagan foydani hisob tenglamasi bilan topish' },
-    { en: 'Use ledger accounts to find missing figures', ru: 'Использовать счета, чтобы найти недостающие суммы', uz: 'Yetishmagan summalarni hisoblar bilan topish' },
-    { en: 'Use cash and bank summaries', ru: 'Использовать сводки кассы и банка', uz: 'Kassa va bank jamlanmalaridan foydalanish' },
-    { en: 'Use margin and mark-up to find missing figures', ru: 'Использовать маржу и наценку для нахождения сумм', uz: 'Yetishmagan summalarni marja va ustama bilan topish' },
-    { en: 'Calculate and record lost inventory', ru: 'Рассчитывать и отражать потерянные запасы', uz: 'Yo\'qolgan zaxirani hisoblash va qayd etish' },
+    {
+      en: 'Use the accounting equation to find a missing profit',
+      ru: 'Использовать бухгалтерское уравнение, чтобы найти неизвестную прибыль',
+      uz: 'Yetishmagan foydani hisob tenglamasi bilan topish',
+    },
+    {
+      en: 'Use ledger accounts to find missing figures',
+      ru: 'Использовать счета, чтобы найти недостающие суммы',
+      uz: 'Yetishmagan summalarni hisoblar bilan topish',
+    },
+    {
+      en: 'Use cash and bank summaries',
+      ru: 'Использовать сводки кассы и банка',
+      uz: 'Kassa va bank jamlanmalaridan foydalanish',
+    },
+    {
+      en: 'Use margin and mark-up to find missing figures',
+      ru: 'Использовать маржу и наценку для нахождения сумм',
+      uz: 'Yetishmagan summalarni marja va ustama bilan topish',
+    },
+    {
+      en: 'Calculate and record lost inventory',
+      ru: 'Рассчитывать и отражать потерянные запасы',
+      uz: 'Yo\'qolgan zaxirani hisoblash va qayd etish',
+    },
   ],
   sections: [
     {
@@ -73,9 +89,44 @@ Juda oz yozuv bo'lsa, faqat yil foydasini topish mumkin. Tenglama aktivlar kapit
 Kompaniya uchun xuddi shu g'oya taqsimlanmagan foyda orqali ishlaydi. Uni aktivlar, majburiyatlar va aksiya kapitalidan toping. O'tgan yil bilan solishtiring, dividendlarni hisobga oling, qolgani foyda yoki zarar.`,
       },
       example: {
-        en: `Before she became a company, a flood damaged Madina's records for one year. Net assets were $15,000 at the start and are $19,000 at the end. She paid in $2,000 of savings and took out $6,000 for herself. Profit = $19,000 - $15,000 - $2,000 + $6,000 = $8,000.`,
-        ru: `До создания компании наводнение повредило записи Мадины за год. Чистые активы на начало $15,000, на конец $19,000. Она внесла $2,000 сбережений и забрала $6,000. Прибыль = $19,000 - $15,000 - $2,000 + $6,000 = $8,000.`,
-        uz: `Kompaniya bo'lishidan oldin toshqin Madinaning bir yillik yozuvlariga zarar yetkazdi. Sof aktivlar boshida $15,000, oxirida $19,000. U $2,000 jamg'arma kiritdi va o'zi uchun $6,000 oldi. Foyda = $19,000 - $15,000 - $2,000 + $6,000 = $8,000.`,
+        en: `A flood ruined a market stall owner's records for one year.
+# What we know
+  Net assets at the start $15,000, at the end $19,000
+  The owner paid in $2,000 of savings and took out $6,000
+# The capital line
+  Opening $15,000 + paid in $2,000 + profit - taken out $6,000 = closing $19,000
+# Solve for profit
+  $19,000 - $15,000 - $2,000 + $6,000 = $8,000
+= Profit for the year: $8,000`,
+        ru: `Наводнение испортило записи владельца рыночного прилавка за год.
+# Что известно
+  Чистые активы на начало $15,000, на конец $19,000
+  Владелец внёс $2,000 сбережений и забрал $6,000
+# Строка капитала
+  Начало $15,000 + внесено $2,000 + прибыль - забрано $6,000 = конец $19,000
+# Находим прибыль
+  $19,000 - $15,000 - $2,000 + $6,000 = $8,000
+= Прибыль за год: $8,000`,
+        uz: `Suv toshqini bozor rastasi egasining bir yillik yozuvlarini buzdi.
+# Nima ma'lum
+  Boshidagi sof aktivlar $15,000, oxiridagi $19,000
+  Egasi $2,000 jamg'armani kiritdi va $6,000 oldi
+# Kapital qatori
+  Boshi $15,000 + kiritilgan $2,000 + foyda - olingan $6,000 = oxiri $19,000
+# Foydani topamiz
+  $19,000 - $15,000 - $2,000 + $6,000 = $8,000
+= Yil foydasi: $8,000`,
+      },
+      simple: {
+        en: `Sometimes the records are poor or lost (a fire, a flood, a broken computer). You still have to find the missing figures. Four tools help: the accounting equation, a T-account, cash records and profit percentages.
+
+If almost nothing was kept, use the accounting equation. Capital equals net assets. So if you know net assets at the start and the end, the change is explained by three things: profit, money the owner put in, and money or goods the owner took out.`,
+        ru: `Иногда записи плохие или утеряны (пожар, наводнение, сломанный компьютер). Недостающие цифры всё равно нужно найти. Помогают четыре инструмента: уравнение баланса, T-счёт, кассовые записи и процент прибыли.
+
+Если почти ничего не сохранилось, используйте уравнение баланса. Капитал равен чистым активам. Если знать чистые активы на начало и конец, изменение объясняют три вещи: прибыль, деньги, внесённые владельцем, и деньги или товар, взятые владельцем.`,
+        uz: `Ba'zan yozuvlar yomon yoki yo'qolgan (yong'in, suv toshqini, buzilgan kompyuter). Yetishmayotgan sonlarni baribir topish kerak. To'rt vosita yordam beradi: buxgalteriya tenglamasi, T-hisob, kassa yozuvlari va foyda foizlari.
+
+Agar deyarli hech narsa saqlanmagan bo'lsa, buxgalteriya tenglamasidan foydalaning. Kapital sof aktivlarga teng. Boshi va oxiridagi sof aktivlarni bilsangiz, o'zgarishni uch narsa tushuntiradi: foyda, egasi kiritgan pul va egasi olgan pul yoki tovar.`,
       },
     },
     {
@@ -116,11 +167,7 @@ Kompaniya uchun xuddi shu g'oya taqsimlanmagan foyda orqali ishlaydi. Uni aktivl
 - Kutilmagan chegirmalar sotuv yalpi yozilganini bildiradi, shuning uchun debitorlarda kredit.
 - Yakuniy zaxira yetkazib beruvchilarga to'lov hisobiga kirmaydi. Avval xaridni toping, so'ng kreditorlarni ishlating.`,
       },
-      heading: {
-        en: 'The ledger account approach',
-        ru: 'Подход через счета',
-        uz: 'Hisoblar orqali yondashuv',
-      },
+      heading: { en: 'The ledger account approach', ru: 'Подход через счета', uz: 'Hisoblar orqali yondashuv' },
       body: {
         en: `When some transactions are known but others are not, a T-account can find what is missing. Enter everything you do know, and the figure needed to make both sides agree is the answer.
 
@@ -145,9 +192,62 @@ Ba'zan naqd va nasiyani ajratib bo'lmaydi. Unda umumiy hisoblardan foydalaning. 
 Xarajatlar ham shunday ishlaydi. Masalan ijara yoki elektr. To'langan puldan boshlang. Boshlang'ich hisoblanganni ayiring, u o'tgan yilga tegishli, yakuniy hisoblanganni qo'shing. Boshlang'ich oldindan to'lovni qo'shing, u shu yil ishlatiladi, yakuniy oldindan to'lovni ayiring. T-hisob ham, oddiy tenglama ham ishlaydi.`,
       },
       example: {
-        en: `Madina's credit customers owed $1,400 at the start and $1,900 at the end. She received $8,200 from them and took back $300 of returns. Credit sales = $1,900 + $8,200 + $300 - $1,400 = $9,000. With cash sales of $15,000, revenue is $24,000. For electricity she paid $3,900, with $300 owing at the start and $500 at the end, so the expense is $3,900 - $300 + $500 = $4,100. For insurance she paid $2,400, with $500 prepaid at the start and $700 at the end, so the expense is $2,400 + $500 - $700 = $2,200.`,
-        ru: `Покупатели в кредит были должны Мадине $1,400 на начало и $1,900 на конец. Она получила от них $8,200 и приняла возвраты на $300. Продажи в кредит = $1,900 + $8,200 + $300 - $1,400 = $9,000. С продажами за наличные $15,000 выручка $24,000. За электричество уплачено $3,900, начисление $300 на начало и $500 на конец, расход $3,900 - $300 + $500 = $4,100. За страховку уплачено $2,400, предоплата $500 на начало и $700 на конец, расход $2,400 + $500 - $700 = $2,200.`,
-        uz: `Nasiya mijozlar Madinaga boshida $1,400, oxirida $1,900 qarz edi. U ulardan $8,200 oldi va $300 qaytarish qabul qildi. Nasiya sotuv = $1,900 + $8,200 + $300 - $1,400 = $9,000. $15,000 naqd sotuv bilan tushum $24,000. Elektr uchun $3,900 to'langan, boshida $300, oxirida $500 qarz, xarajat $3,900 - $300 + $500 = $4,100. Sug'urta uchun $2,400 to'langan, boshida $500, oxirida $700 oldindan, xarajat $2,400 + $500 - $700 = $2,200.`,
+        en: `A small shop's missing figures.
+# Credit sales from the receivables account
+  Customers owed $1,400 at the start and $1,900 at the end
+  Cash received from them $8,200; goods returned $300
+  Credit sales = closing $1,900 + received $8,200 + returns $300 - opening $1,400 = $9,000
+# Total revenue
+  Credit sales $9,000 + cash sales $15,000 = $24,000
+# Electricity expense
+  Paid $3,900; $300 owing at the start (last year's); $500 owing at the end (this year's)
+  $3,900 - $300 + $500 = $4,100
+= Revenue $24,000; electricity $4,100`,
+        ru: `Недостающие цифры небольшого магазина.
+# Продажи в кредит по счёту дебиторов
+  Покупатели должны $1,400 на начало и $1,900 на конец
+  Получено от них $8,200; возвращено товара $300
+  Продажи в кредит = конец $1,900 + получено $8,200 + возвраты $300 - начало $1,400 = $9,000
+# Общая выручка
+  Продажи в кредит $9,000 + продажи за наличные $15,000 = $24,000
+# Расход на электричество
+  Уплачено $3,900; долг $300 на начало (прошлого года); долг $500 на конец (этого года)
+  $3,900 - $300 + $500 = $4,100
+= Выручка $24,000; электричество $4,100`,
+        uz: `Kichik do'konning yetishmayotgan sonlari.
+# Debitorlar hisobidan kreditga sotuv
+  Mijozlar boshida $1,400, oxirida $1,900 qarz
+  Ulardan olingan pul $8,200; qaytarilgan tovar $300
+  Kreditga sotuv = oxiri $1,900 + olingan $8,200 + qaytarish $300 - boshi $1,400 = $9,000
+# Jami tushum
+  Kreditga sotuv $9,000 + naqd sotuv $15,000 = $24,000
+# Elektr xarajati
+  To'langan $3,900; boshida $300 qarz (o'tgan yilniki); oxirida $500 qarz (shu yilniki)
+  $3,900 - $300 + $500 = $4,100
+= Tushum $24,000; elektr $4,100`,
+      },
+      simple: {
+        en: `When you know most of the movements in an account but one is missing, draw the T-account. Fill in everything you know. The amount needed to make both sides equal is the missing figure (the balancing figure).
+
+- Receivables account: finds credit sales, or cash received from customers.
+- Payables account: finds credit purchases, or cash paid to suppliers.
+- Cash and bank: finds drawings, cash sales or money stolen.
+
+Expenses work the same way: cash paid, then adjust for accruals and prepayments at the start and end.`,
+        ru: `Если известно большинство движений по счёту, а одного не хватает, нарисуйте T-счёт. Внесите всё, что знаете. Сумма, нужная для равенства сторон, и есть недостающая цифра (балансирующая).
+
+- Счёт дебиторов: находит продажи в кредит или деньги от покупателей.
+- Счёт кредиторов: находит закупки в кредит или оплату поставщикам.
+- Касса и банк: находят изъятия, продажи за наличные или украденные деньги.
+
+С расходами так же: уплаченная сумма, затем поправки на начисления и предоплаты на начало и конец.`,
+        uz: `Hisobdagi harakatlarning ko'pi ma'lum, bittasi yetishmasa, T-hisob chizing. Bilgan hamma narsani yozing. Ikki tomonni tenglashtirish uchun kerak bo'lgan summa yetishmayotgan son (balanslovchi summa).
+
+- Debitorlar hisobi: kreditga sotuvni yoki mijozlardan olingan pulni topadi.
+- Kreditorlar hisobi: kreditga xaridni yoki yetkazib beruvchilarga to'lovni topadi.
+- Kassa va bank: olib qo'yish, naqd sotuv yoki o'g'irlangan pulni topadi.
+
+Xarajatlar ham shunday: to'langan summa, keyin boshi va oxiridagi hisoblangan va oldindan to'langanlarga tuzatish.`,
       },
     },
     {
@@ -217,9 +317,56 @@ Usul har qanday hisobdagi kabi: bilganni kiriting va balanslovchi summani toping
 Pul ma'lumotlari keyin hisoblarga o'tadi. Jami tushum va naqd sotuv ma'lum bo'lsa, qolgani nasiya mijozlardan kelgan va bu summa nasiya sotuvni topish uchun debitorlar hisobiga yoziladi.`,
       },
       example: {
-        en: `Madina's till held $200 at the start of the year and $300 at the end. She banked $18,000, paid wages of $2,500 from the till and took $1,000 for herself. Cash sales are what fills the gap: $18,000 + $2,500 + $1,000 + $300 - $200 = $21,600.`,
-        ru: `В кассе Мадины было $200 на начало года и $300 на конец. Она сдала в банк $18,000, заплатила из кассы зарплату $2,500 и взяла себе $1,000. Продажи за наличные закрывают разрыв: $18,000 + $2,500 + $1,000 + $300 - $200 = $21,600.`,
-        uz: `Madina kassasida yil boshida $200, oxirida $300 bor edi. U bankka $18,000 topshirdi, kassadan $2,500 ish haqi to'ladi va o'ziga $1,000 oldi. Naqd sotuv farqni yopadi: $18,000 + $2,500 + $1,000 + $300 - $200 = $21,600.`,
+        en: `A shop's till for the year.
+# What went OUT of the till
+  Banked $18,000 + wages paid from the till $2,500 + owner took $1,000 = $21,500
+# Cash left at the end
+  $300
+# Cash there at the start
+  $200 (this was not a sale)
+# Cash sales fill the gap
+  $21,500 + $300 - $200 = $21,600
+= Cash sales: $21,600`,
+        ru: `Касса магазина за год.
+# Что УШЛО из кассы
+  Сдано в банк $18,000 + зарплата из кассы $2,500 + владелец забрал $1,000 = $21,500
+# Деньги на конец
+  $300
+# Деньги на начало
+  $200 (это не продажа)
+# Продажи за наличные закрывают разницу
+  $21,500 + $300 - $200 = $21,600
+= Продажи за наличные: $21,600`,
+        uz: `Do'kon kassasi bir yil uchun.
+# Kassadan nima CHIQDI
+  Bankka $18,000 + kassadan ish haqi $2,500 + egasi olgani $1,000 = $21,500
+# Oxirida qolgan pul
+  $300
+# Boshida bo'lgan pul
+  $200 (bu sotuv emas)
+# Naqd sotuv farqni yopadi
+  $21,500 + $300 - $200 = $21,600
+= Naqd sotuv: $21,600`,
+      },
+      simple: {
+        en: `Even with no ledgers, bank statements show what went in and out of the bank. A small shop also keeps cash in the till: it takes cash sales, pays some costs from the till, and banks the rest.
+
+Treat the till like an account:
+  Cash at the start + cash sales = money banked + costs paid from the till + owner's drawings + cash at the end
+
+If cash sales are the missing figure, everything else tells you what they must be. Take care if the bank starts overdrawn: that opening balance is negative.`,
+        ru: `Даже без книг банковские выписки показывают, что пришло и ушло со счёта. У небольшого магазина есть ещё касса: в неё поступают продажи за наличные, из неё платят часть расходов, остальное сдают в банк.
+
+Считайте кассу счётом:
+  Деньги на начало + продажи за наличные = сдано в банк + расходы из кассы + изъятия владельца + деньги на конец
+
+Если не хватает продаж за наличные, всё остальное показывает, какими они должны быть. Осторожно, если банк начинается с овердрафта: начальный остаток отрицательный.`,
+        uz: `Kitoblar bo'lmasa ham, bank ko'chirmalari bankka nima kirib-chiqqanini ko'rsatadi. Kichik do'konda kassa ham bor: unga naqd sotuv tushadi, undan ba'zi xarajatlar to'lanadi, qolgani bankka topshiriladi.
+
+Kassani hisob deb oling:
+  Boshidagi pul + naqd sotuv = bankka topshirilgan + kassadan xarajatlar + egasining olib qo'yishi + oxiridagi pul
+
+Agar naqd sotuv yetishmasa, qolgan hamma narsa u qancha bo'lishi kerakligini aytadi. Bank overdraft bilan boshlansa ehtiyot bo'ling: boshlang'ich qoldiq manfiy.`,
       },
     },
     {
@@ -260,11 +407,7 @@ Pul ma'lumotlari keyin hisoblarga o'tadi. Jami tushum va naqd sotuv ma'lum bo'ls
 - Sotuv minus qaytarishlar sof sotuv, xaridlar minus qaytarishlar sof xaridlar.
 - Marjani yil oxiridan keyingi sanashdan topish mumkin: tannarxdagi sotuv = boshlang'ich zaxira + xaridlar - keyingi zaxira.`,
       },
-      heading: {
-        en: 'Margin and mark-up',
-        ru: 'Маржа и наценка',
-        uz: 'Marja va ustama',
-      },
+      heading: { en: 'Margin and mark-up', ru: 'Маржа и наценка', uz: 'Marja va ustama' },
       body: {
         en: `Gross profit can be expressed against sales or against cost of sales, and the two measures give different percentages for the same trade.
 
@@ -295,9 +438,44 @@ Foiz va sotuv, tannarx yoki foydadan birini bilsangiz, qolgan ikkitasini topasiz
 Tannarx boshlang'ich zaxira plus xaridlar minus yakuniy zaxiraga ham teng, shuning uchun xuddi shu hisob xarid yoki zaxirani ko'rsatishi mumkin.`,
       },
       example: {
-        en: `Madina prices goods at a 20% mark-up. Goods that cost her $30,000 sell for $30,000 x 120% = $36,000, so gross profit is $6,000. As a margin that is $6,000 / $36,000, or about 16.7%. The profit in dollars is the same. The percentage differs because it is measured against a different base.`,
-        ru: `Мадина ставит наценку 20%. Товар стоимостью $30,000 продаётся за $30,000 x 120% = $36,000, валовая прибыль $6,000. Как маржа это $6,000 / $36,000, или около 16.7%. Прибыль в долларах та же. Процент разный, так как база другая.`,
-        uz: `Madina 20% ustama qo'yadi. $30,000 lik tovar $30,000 x 120% = $36,000 ga sotiladi, yalpi foyda $6,000. Marja sifatida bu $6,000 / $36,000, ya'ni taxminan 16.7%. Dollardagi foyda bir xil. Foiz boshqa asosdan o'lchangani uchun farq qiladi.`,
+        en: `A shop buys a jacket for $300 and adds a 20% mark-up.
+# Mark-up: cost is 100%
+  Selling price: $300 x 120% = $360
+  Gross profit: $360 - $300 = $60
+# The same jacket as a margin: sales is 100%
+  $60 / $360 = 16.7%
+= The profit is $60 either way. 20% mark-up and 16.7% margin describe the same sale.`,
+        ru: `Магазин покупает куртку за $300 и делает наценку 20%.
+# Наценка: себестоимость — 100%
+  Цена продажи: $300 x 120% = $360
+  Валовая прибыль: $360 - $300 = $60
+# Та же куртка как маржа: продажи — 100%
+  $60 / $360 = 16.7%
+= Прибыль $60 в обоих случаях. Наценка 20% и маржа 16.7% описывают одну продажу.`,
+        uz: `Do'kon kurtkani $300 ga oladi va 20% ustama qo'yadi.
+# Ustama: tannarx 100%
+  Sotish narxi: $300 x 120% = $360
+  Yalpi foyda: $360 - $300 = $60
+# Shu kurtka marja sifatida: sotuv 100%
+  $60 / $360 = 16.7%
+= Foyda ikkala holda $60. 20% ustama va 16.7% marja bitta sotuvni tasvirlaydi.`,
+      },
+      simple: {
+        en: `Both measure gross profit as a percentage, but against a different base.
+- Margin: gross profit out of SALES. Sales = 100%.
+- Mark-up: gross profit added on top of COST. Cost = 100%.
+
+Draw a little table. For a 25% margin: sales 100, cost 75, profit 25. For a 25% mark-up: cost 100, profit 25, sales 125. Then put in the one figure you know and scale the rest. Read the question carefully: margin and mark-up give different answers.`,
+        ru: `Оба показывают валовую прибыль в процентах, но от разной базы.
+- Маржа: валовая прибыль от ПРОДАЖ. Продажи = 100%.
+- Наценка: валовая прибыль сверху на СЕБЕСТОИМОСТЬ. Себестоимость = 100%.
+
+Нарисуйте маленькую таблицу. Для маржи 25%: продажи 100, себестоимость 75, прибыль 25. Для наценки 25%: себестоимость 100, прибыль 25, продажи 125. Затем подставьте известную цифру и пересчитайте остальные. Читайте вопрос внимательно: маржа и наценка дают разные ответы.`,
+        uz: `Ikkalasi ham yalpi foydani foizda o'lchaydi, lekin boshqa asosga nisbatan.
+- Marja: SOTUVdan yalpi foyda. Sotuv = 100%.
+- Ustama: TANNARX ustiga qo'shilgan yalpi foyda. Tannarx = 100%.
+
+Kichik jadval chizing. 25% marja uchun: sotuv 100, tannarx 75, foyda 25. 25% ustama uchun: tannarx 100, foyda 25, sotuv 125. Keyin bilgan bitta sonni qo'yib, qolganini hisoblang. Savolni diqqat bilan o'qing: marja va ustama turli javob beradi.`,
       },
     },
     {
@@ -358,18 +536,125 @@ Xuddi shu hisob yong'in, toshqin yoki o'g'irlikda yo'qolgan tovarni topadi. Yaku
 Hisobda zaxira tannarxdan olinadi, chunki bu tovar sotilmagan. Ikkinchi tomon sug'urtaga bog'liq. Sug'urtalangan bo'lsa, tannarx qoplanadi va debet sug'urta da'vosi aylanma aktiviga yoziladi. Aks holda debet foyda yoki zarardagi xarajat.`,
       },
       example: {
-        en: `A storeroom flood hits Madina's shop. Opening inventory was $6,000, purchases $40,000 and sales $50,000, at a 25% margin. Cost of sales is $37,500, so $8,500 of goods should be there. She counts only $5,000, so $3,500 is lost. She is insured: Dr Insurance claim $3,500, Cr Cost of sales $3,500. Without insurance it would be Dr Expense $3,500, Cr Cost of sales $3,500.`,
-        ru: `Наводнение на складе в магазине Мадины. Запасы на начало $6,000, закупки $40,000, продажи $50,000, маржа 25%. Себестоимость $37,500, поэтому должно быть товара на $8,500. Она насчитывает только $5,000, потеряно $3,500. Она застрахована: Дт Страховое требование $3,500, Кт Себестоимость $3,500. Без страховки: Дт Расход $3,500, Кт Себестоимость $3,500.`,
-        uz: `Madina do'koni omborini toshqin bosdi. Boshlang'ich zaxira $6,000, xaridlar $40,000, sotuv $50,000, marja 25%. Tannarx $37,500, $8,500 tovar bo'lishi kerak. U faqat $5,000 sanaydi, $3,500 yo'qolgan. U sug'urtalangan: Dt Sug'urta da'vosi $3,500, Kt Tannarx $3,500. Sug'urtasiz: Dt Xarajat $3,500, Kt Tannarx $3,500.`,
+        en: `A flood hits a shop's storeroom. The margin is 25%.
+# Cost of sales
+  Sales $5,000; cost is 75% of sales: $5,000 x 75% = $3,750
+# What should be there
+  Opening inventory $600 + purchases $4,000 - cost of sales $3,750 = $850
+# What is lost
+  Counted $500, so $850 - $500 = $350 lost (at cost)
+# The entry
+  Insured: Dr Insurance claim $350, Cr Cost of sales $350
+  Not insured: Dr Expense $350, Cr Cost of sales $350
+= Loss: $350 at cost, never at selling price.`,
+        ru: `Наводнение затопило склад магазина. Маржа 25%.
+# Себестоимость
+  Продажи $5,000; себестоимость — 75% продаж: $5,000 x 75% = $3,750
+# Что должно быть
+  Запасы на начало $600 + закупки $4,000 - себестоимость $3,750 = $850
+# Что потеряно
+  Пересчитано $500, значит $850 - $500 = $350 потеряно (по стоимости)
+# Запись
+  Застраховано: Дт Требование к страховщику $350, Кт Себестоимость $350
+  Без страховки: Дт Расход $350, Кт Себестоимость $350
+= Потеря: $350 по стоимости, никогда по цене продажи.`,
+        uz: `Suv toshqini do'kon omborini bosdi. Marja 25%.
+# Tannarx
+  Sotuv $5,000; tannarx sotuvning 75% i: $5,000 x 75% = $3,750
+# Nima bo'lishi kerak
+  Boshlang'ich zaxira $600 + xaridlar $4,000 - tannarx $3,750 = $850
+# Nima yo'qolgan
+  Sanalgan $500, demak $850 - $500 = $350 yo'qolgan (tannarxda)
+# Yozuv
+  Sug'urtalangan: Dt Sug'urta talabi $350, Kt Tannarx $350
+  Sug'urtasiz: Dt Xarajat $350, Kt Tannarx $350
+= Yo'qotish: $350 tannarxda, hech qachon sotish narxida emas.`,
+      },
+      simple: {
+        en: `You can work out what inventory SHOULD be, even if no one counted it:
+  Opening inventory + purchases - cost of sales = closing inventory
+Cost of sales comes from sales and the margin or mark-up.
+
+If goods were lost (fire, flood, theft), the loss is what should be there minus what is actually there, valued at COST. Take the lost goods out of cost of sales, because they were not sold. If insured, the other side is an insurance claim (an asset); if not, it is an expense.`,
+        ru: `Можно рассчитать, какими ДОЛЖНЫ быть запасы, даже если их не пересчитали:
+  Запасы на начало + закупки - себестоимость = запасы на конец
+Себестоимость находят из продаж и маржи или наценки.
+
+Если товар утерян (пожар, наводнение, кража), потеря = что должно быть минус что есть на самом деле, по СТОИМОСТИ. Уберите потерянный товар из себестоимости, ведь он не продан. Если есть страховка, другая сторона — требование к страховщику (актив); если нет — расход.`,
+        uz: `Hech kim sanamagan bo'lsa ham, zaxira qancha BO'LISHI kerakligini hisoblash mumkin:
+  Boshlang'ich zaxira + xaridlar - tannarx = yakuniy zaxira
+Tannarx sotuv va marja yoki ustamadan topiladi.
+
+Agar tovar yo'qolsa (yong'in, suv toshqini, o'g'irlik), yo'qotish = bo'lishi kerak bo'lgani minus haqiqatda bori, TANNARXda. Yo'qolgan tovarni tannarxdan chiqaring, chunki u sotilmagan. Sug'urta bo'lsa, ikkinchi tomon sug'urta talabi (aktiv); bo'lmasa, xarajat.`,
       },
     },
   ],
   glossary: [
-    { term: { en: 'Incomplete records', ru: 'Неполные записи', uz: 'To\'liq bo\'lmagan yozuvlar' }, definition: { en: 'Accounting records where some information is missing or lost.', ru: 'Учётные записи, где часть информации отсутствует или утеряна.', uz: 'Ba\'zi ma\'lumot yo\'q yoki yo\'qolgan hisob yozuvlari.' } },
-    { term: { en: 'Balancing figure', ru: 'Балансирующая цифра', uz: 'Balanslovchi summa' }, definition: { en: 'The amount needed to make both sides of an account agree.', ru: 'Сумма, уравнивающая обе стороны счёта.', uz: 'Hisobning ikki tomonini tenglashtiruvchi summa.' } },
-    { term: { en: 'Gross profit margin', ru: 'Валовая маржа', uz: 'Yalpi foyda marjasi' }, definition: { en: 'Gross profit as a percentage of sales.', ru: 'Валовая прибыль в процентах от продаж.', uz: 'Yalpi foyda sotuvning foizi sifatida.' } },
-    { term: { en: 'Mark-up', ru: 'Наценка', uz: 'Ustama' }, definition: { en: 'Gross profit as a percentage of cost of sales.', ru: 'Валовая прибыль в процентах от себестоимости.', uz: 'Yalpi foyda tannarxning foizi sifatida.' } },
-    { term: { en: 'Total receivables account', ru: 'Общий счёт дебиторов', uz: 'Umumiy debitorlar hisobi' }, definition: { en: 'A working that puts all sales and all receipts together when cash and credit cannot be split.', ru: 'Расчёт, объединяющий все продажи и поступления, если наличные и кредит не разделить.', uz: 'Naqd va nasiyani ajratib bo\'lmaganda barcha sotuv va tushumlarni birlashtiruvchi hisob-kitob.' } },
+    {
+      term: { en: 'Incomplete records', ru: 'Неполные записи', uz: 'To\'liq bo\'lmagan yozuvlar' },
+      definition: {
+        en: 'Accounting records where some information is missing or lost.',
+        ru: 'Учётные записи, где часть информации отсутствует или утеряна.',
+        uz: 'Ba\'zi ma\'lumot yo\'q yoki yo\'qolgan hisob yozuvlari.',
+      },
+      example: {
+        en: 'A stall owner kept only bank statements; the sales book was lost in a flood.',
+        ru: 'Владелец прилавка сохранил только банковские выписки; книга продаж утонула при наводнении.',
+        uz: 'Rasta egasi faqat bank ko\'chirmalarini saqlagan; sotuv daftari suv toshqinida yo\'qolgan.',
+      },
+    },
+    {
+      term: { en: 'Balancing figure', ru: 'Балансирующая цифра', uz: 'Balanslovchi summa' },
+      definition: {
+        en: 'The amount needed to make both sides of an account agree.',
+        ru: 'Сумма, уравнивающая обе стороны счёта.',
+        uz: 'Hisobning ikki tomonini tenglashtiruvchi summa.',
+      },
+      example: {
+        en: 'Receivables: $1,900 + $8,200 + $300 - $1,400 = $9,000 of credit sales.',
+        ru: 'Дебиторы: $1,900 + $8,200 + $300 - $1,400 = $9,000 продаж в кредит.',
+        uz: 'Debitorlar: $1,900 + $8,200 + $300 - $1,400 = $9,000 kreditga sotuv.',
+      },
+    },
+    {
+      term: { en: 'Gross profit margin', ru: 'Валовая маржа', uz: 'Yalpi foyda marjasi' },
+      definition: {
+        en: 'Gross profit as a percentage of sales.',
+        ru: 'Валовая прибыль в процентах от продаж.',
+        uz: 'Yalpi foyda sotuvning foizi sifatida.',
+      },
+      example: {
+        en: 'Sell for $100, cost $75: margin $25 / $100 = 25%.',
+        ru: 'Продажа за $100, себестоимость $75: маржа $25 / $100 = 25%.',
+        uz: '$100 ga sotish, tannarx $75: marja $25 / $100 = 25%.',
+      },
+    },
+    {
+      term: { en: 'Mark-up', ru: 'Наценка', uz: 'Ustama' },
+      definition: {
+        en: 'Gross profit as a percentage of cost of sales.',
+        ru: 'Валовая прибыль в процентах от себестоимости.',
+        uz: 'Yalpi foyda tannarxning foizi sifatida.',
+      },
+      example: {
+        en: 'Cost $100, sell for $125: mark-up $25 / $100 = 25%.',
+        ru: 'Себестоимость $100, продажа за $125: наценка $25 / $100 = 25%.',
+        uz: 'Tannarx $100, $125 ga sotish: ustama $25 / $100 = 25%.',
+      },
+    },
+    {
+      term: { en: 'Total receivables account', ru: 'Общий счёт дебиторов', uz: 'Umumiy debitorlar hisobi' },
+      definition: {
+        en: 'A working that puts all sales and all receipts together when cash and credit cannot be split.',
+        ru: 'Расчёт, объединяющий все продажи и поступления, если наличные и кредит не разделить.',
+        uz: 'Naqd va nasiyani ajratib bo\'lmaganda barcha sotuv va tushumlarni birlashtiruvchi hisob-kitob.',
+      },
+      example: {
+        en: 'All sales $24,000 on one side, all money received on the other, because cash and credit sales cannot be split.',
+        ru: 'Все продажи $24,000 с одной стороны, все поступления с другой, так как наличные и кредитные продажи не разделить.',
+        uz: 'Barcha sotuv $24,000 bir tomonda, barcha tushumlar boshqasida, chunki naqd va kredit sotuvni ajratib bo\'lmaydi.',
+      },
+    },
   ],
 };
 
