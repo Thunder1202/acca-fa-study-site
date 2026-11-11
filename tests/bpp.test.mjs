@@ -206,3 +206,70 @@ test('BPP chapter 8: every calculated answer matches a fresh calculation', () =>
   assert.equal(c8['9.9'].correctValue, 180000 / 12);
   assert.ok(chosen('9.10').includes(money(24000 / 4)));
 });
+
+test('BPP chapter 9: every calculated answer matches a fresh calculation', () => {
+  const c9 = Object.fromEntries(require('../data/bpp-ch09.js').map((q) => [q.bppRef, q]));
+  const chosen = (ref) => c9[ref].options[c9[ref].correctIndex];
+  const money = (n) => `$${n.toLocaleString('en-US')}`;
+  const income101 = 6000 / 3 + 6000 + 7200 + 7200 + 7200 * 2 / 3;
+  assert.equal(chosen('10.1'), `Rental income ${money(income101)}; rent received in advance (credit) ${money(7200 / 3)}`);
+  assert.equal(chosen('10.2'), `Expense ${money(48000 * 10 / 12 + 60000 * 2 / 12)}; accrual ${money(60000 * 2 / 12)}`);
+  assert.equal(c9['10.3'].correctValue, 29800 + 6400 - 2700 - 7100 + 3500);
+  assert.equal(chosen('10.5'), money(36000 * 8 / 12 + 42000 * 4 / 12));
+  assert.equal(chosen('10.6'), money(14200 + (92600 - 2100 + 1800) - 11300));
+  // 10.7 month by month: April from the first bill, then three full bills, then Feb-March accrued.
+  const byMonth = 390 / 3 + 480 + 540 + 600 + 720 * 2 / 3;
+  assert.equal(byMonth, 390 + 480 + 540 + 600 - 260 + 480);
+  assert.equal(chosen('10.7'), `Accrual ${money(720 * 2 / 3)}; charge ${money(byMonth)}`);
+  assert.equal(chosen('10.8'), money(1250 + 1500 + 1900 + 1650));
+  assert.equal(c9['10.10'].correctValue, 264500 + 21300 - 25800 - 13600 + 15200);
+  assert.equal(chosen('10.11'), `Expense ${money(45000 / 18 * 12)}; prepayment ${money(45000 / 18 * 4)}`);
+  assert.equal(chosen('10.12'), `Profit ${money(40000 - 27000 / 3)}; net assets ${money(310000 - 27000 / 3)}`);
+  assert.equal(chosen('10.13'), `A profit of ${money(2350 - 1980 + 760)}`);
+  assert.equal(chosen('10.15'), money((4600 + 800 + 1500) + (7200 - 600 - 900)));
+});
+
+test('BPP chapter 10: every calculated answer matches a fresh calculation', () => {
+  const c = Object.fromEntries(require('../data/bpp-ch10.js').map((q) => [q.bppRef, q]));
+  const chosen = (ref) => c[ref].options[c[ref].correctIndex];
+  const money = (n) => `$${n.toLocaleString('en-US')}`;
+  // Receivables expense = write-offs + (closing allowance - opening allowance) - recoveries.
+  const expense = (writeOff, opening, closing, recovered = 0) => writeOff + (closing - opening) - recovered;
+  assert.equal(chosen('11.2'), money(expense(34000, 61000, (520000 - 34000) * 0.1)));
+  assert.equal(chosen('11.3'), money(expense(17300, 22000, 19500)));
+  assert.equal(42000 / 0.06, 700000);
+  assert.equal(c['11.4'].correctValue, expense(35000, 42000, (935000 - 35000) * 0.06));
+  assert.equal(chosen('11.5'), money(expense(158000, 96000, 231000)));
+  const allow7 = (726000 - 16000) * 0.05;
+  assert.equal(chosen('11.7'), `Expense ${money(expense(16000, 41000, allow7))}; net receivables ${money(726000 - 16000 - allow7)}`);
+  assert.ok(chosen('11.10').startsWith(`Profit overstated by ${money(6000 * 2)}`));
+  assert.equal(chosen('11.11'), `${money(-expense(1300, 4200, 36000 * 0.05, 900))} credit (income)`);
+  assert.equal(chosen('11.13'), money(expense(640, 920, 1150)));
+});
+
+test('BPP chapter 11: every calculated answer matches a fresh calculation', () => {
+  const c = Object.fromEntries(require('../data/bpp-ch11.js').map((q) => [q.bppRef, q]));
+  const chosen = (ref) => c[ref].options[c[ref].correctIndex];
+  const money = (n) => `$${n.toLocaleString('en-US')}`;
+  assert.equal(chosen('11.15'), money(29750 + 6420));
+  assert.equal(chosen('12.6'), `A charge of ${money(6115 - 5240)}`);
+  assert.equal(chosen('12.7'), `A credit of ${money(3200 - 2600)}`);
+});
+
+test('BPP chapter 12: every calculated answer matches a fresh calculation', () => {
+  const c = Object.fromEntries(require('../data/bpp-ch12.js').map((q) => [q.bppRef, q]));
+  const chosen = (ref) => c[ref].options[c[ref].correctIndex];
+  const money = (n) => `$${n.toLocaleString('en-US')}`;
+  const r = (n) => Math.round(n * 100) / 100;
+  assert.equal(c['13.1'].correctValue, r((800000 / 0.25) * 0.03));
+  assert.ok(chosen('13.3').includes(`Dr Bank ${money(r(800000 * 0.65))}, Cr Share capital ${money(r(800000 * 0.25))}, Cr Share premium ${money(r(800000 * 0.40))}`));
+  const bonus4 = (200000 / 4) * 0.25;
+  assert.equal(chosen('13.4'), `Share capital ${money(r(50000 + bonus4 + 80000 * 0.25))}; share premium ${money(r(120000 - bonus4 + 80000 * 0.35))}`);
+  assert.equal(chosen('13.5'), `Charge ${money(240000 * 0.1 * 9 / 12)}; accrual ${money(240000 * 0.1 * 9 / 12 - 2 * 240000 * 0.1 / 4)}`);
+  const rights = 400000 / 4, bonus7 = (400000 + rights) / 10 * 0.5;
+  assert.equal(chosen('13.7'), `Share capital ${money(200000 + rights * 0.5 + bonus7)}; share premium ${money(r(60000 + rights * 0.7 - bonus7))}`);
+  assert.equal(c['13.8'].correctValue, r(800000 * 0.06 * 3 / 12 + 600000 * 0.06 * 9 / 12 + 400000 * 0.05 * 3 / 12));
+  assert.ok(chosen('13.9').includes(money(r(80000 * 0.3))));
+  const bonus12 = (2000000 + 400000) / 5 * 0.25;
+  assert.equal(chosen('13.12'), `Share capital ${money(500000 + 100000 + bonus12)}; share premium ${money(r(250000 + 400000 * 0.65 - bonus12))}`);
+});
