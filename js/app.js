@@ -14,6 +14,7 @@
   const { el } = ACCA.dom;
   const { loadProgress } = ACCA.progress;
   const { course, chapters, questions, sectionB } = ACCA;
+  const bpp = ACCA.bpp ?? {};
 
   const app = document.getElementById('app');
   const switcher = document.getElementById('lang-switcher');
@@ -57,6 +58,7 @@
       previous: openChapters[position - 1],
       next: openChapters[position + 1],
       questionCount: questions[entry.id].length,
+      bppCount: bpp[entry.id]?.length ?? 0,
       kitRange: kitRangeFor(entry.id),
       section,
     }, lang);
@@ -72,6 +74,16 @@
   function showQuiz(topicId, lang) {
     const item = sectionB.find((c) => c.id === topicId);
     if (item) return showCase(item, lang);
+    if (topicId.startsWith('bpp-')) {
+      const chapterId = topicId.slice(4);
+      const chapter = topics.find((t) => t.id === chapterId);
+      if (!chapter || !bpp[chapterId]) return renderNotFound(lang);
+      return renderQuiz(app, {
+        key: topicId, progressKey: topicId, questions: bpp[chapterId], storage,
+        title: `${ACCA.i18n.translate(chapter.title, lang)} · BPP Kit`, backHref: `#/chapter/${chapter.number}`, backLabel: 'backToLesson',
+        subtitle: label('bppNote', lang),
+      }, lang);
+    }
     if (topicId === 'review') {
       const progress = loadProgress(storage);
       const studied = topics.filter((topic) => progress[topic.id]);
@@ -118,7 +130,7 @@
     ACCA.helper.setLang(lang);
     if (view === 'chapter') showChapter(params.id, params.section, lang);
     else if (view === 'quiz') showQuiz(params.topicId, lang);
-    else if (view === 'practice') renderPractice(app, topics, storage, lang, sectionB);
+    else if (view === 'practice') renderPractice(app, topics, storage, lang, sectionB, bpp);
     else if (view === 'exam') (params.step === 'paper' ? renderExamPaper : renderExamStart)(app, { storage, topics }, lang);
     else if (view === 'terms') renderTerms(app, lang);
     else if (view === 'weak-areas') renderWeakAreas(app, topics, storage, lang);

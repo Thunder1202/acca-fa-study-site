@@ -38,7 +38,7 @@ The user approved the chapter 17 pilot and asked to roll it out. Rollout status 
 - 2026-11-05: chapters 14, 15, 16, 18, 19, 20 DONE, so ALL 20 chapters are reworked. Patches in `tools/rework/` (`p14-lesson-draft.js`+`p14q-*`, `p15-lesson.js`+`p15q-*`, `p16.js`, `p18-lesson.js`+`p18q-*`, `p19.js`+`p19q.js`, `p20.js`). Examples: ch15 one small bakery; ch18 one corner shop; ch19-20 "Shop Co buys 80% of Bake Co" with figures that tie across both chapters. New terms: Net current assets, Statement of changes in equity, Revenue, Transaction price (15); Net asset turnover, Inventory/Receivables/Payables days (18); Consideration, Post-acquisition profits (19). `REWORKED` lists '01'-'20'. 395 tests pass. Madina appears nowhere in `data/` or `js/`. Every trap line was checked against the actual wrong options.
 - Chapters 14-20 committed as 88d4638.
 - 2026-11-05: Section B DONE. All 145 task explanations in `data/section-b.js` are in step format (every figure re-checked; trap lines checked against the real options). Tool: `node tools/rework/sb.js "<project dir>" <patch> [--dry]` swaps only the three explanation arguments of each `task(...)` call and verifies nothing else changed; patch shape `{ b01: [[en, ru, uz], ...one per task] }`. Patches: `sb1.js` (cases 1-5), `sb2.js` (6-9), `sb3.js` (10-16), `sb-all.js` combines them. A new test in `tests/section-b.test.mjs` keeps every answer in step format with matching line shapes. 396 tests pass.
-- The rework is now complete. LEFT: commit the Section B work; republish the phone link (it still shows the chapter 17 pilot only; see SITE_GUIDE.md "Updating the phone link").
+- The rework is complete and committed (548da4a). 2026-11-05: the phone link was republished (version 4) with all 20 reworked chapters and Section B; every published file's size matches the site. Only changed files need sending on a republish; files left out stay as they are.
 
 How to continue (the tools are in `tools/rework/`):
 1. `node tools/rework/dump.js "<project dir>" <n>` prints a chapter's English lesson and questions, with [MADINA] flags.
@@ -46,6 +46,16 @@ How to continue (the tools are in `tools/rework/`):
 3. `node tools/rework/rw.js "<project dir>" <n> <patch.js> --dry` checks it: all three languages present, line shapes equal across languages, every question answered, no Madina left, key point limits. Without `--dry` it rewrites `data/chapter-NN.js` and `data/questions-chNN.js` and round-trips them. Then add the chapter to `REWORKED` and run the tests.
 
 Answer style the user approved: "# Step N: ..." titles, two-space working lines that say what each figure is, "= Answer: ..." and "! Common trap: ..." naming which wrong option comes from which mistake. Theory questions: one plain sentence of the idea, then a "- " line per option saying why it is right or wrong.
+
+## 2026-11-11: BPP Kit as optional extra practice (pilot, not yet approved)
+
+The user added `finance/F3 BPP KIT (24-25)-1.pdf` (BPP Practice & Revision Kit, exams Sept 2024 - Aug 2025, 407 scanned pages; also `finance/` has other files of theirs; never commit the PDFs). They asked for: BPP questions as an OPTION beside Kaplan (Kaplan stays main), the background info needed to answer them added to the lessons, and nothing invented: every answer and every piece of info must have proof.
+
+- Reading the scan: `pdftotext` gets nothing past the cover. The page images are JPEGs inside the PDF; a node script (kept in the session scratchpad as `extract.js`) pulls them out in page order, then the Read tool views them. Book page N = PDF page N + 15 (e.g. questions p.78 = image p093).
+- Rules used: rewrite with new figures (copyright, as for Kaplan); each question carries `bppRef` (e.g. '17.8') and `bppPage` (BPP's answer page) so the user can check the method in the book; every BPP key was re-derived before use; a test (`tests/bpp.test.mjs`) recomputes every figure independently.
+- Syllabus filter: BPP is one year older than Kaplan (Sept 2025 - Aug 2026). Kaplan's Study Text has NO control accounts or day books, and uses IFRS 18; so BPP questions on control accounts/day books are left out, and where BPP and Kaplan disagree, Kaplan wins (BPP 17.13 left out: BPP says a transposition shows in the trial balance, Kaplan calls it an error of original entry that does not).
+- Built: `data/bpp-ch14.js` (16 questions from BPP section 17 Correction of errors; 17.13 and 17.18 left out) under `ACCA.bpp['chapter-14']`; route `#/quiz/bpp-chapter-14`; a second button on the chapter page and a panel on Practice; scores saved under `bpp-chapter-14`, apart from Kaplan (weak points and the mock exam use Kaplan only). New chapter 14 section "Errors that DO stop the trial balance agreeing" (`tools/rework/p14-imbalance.js`, from Kaplan Study Text ch 14 p. 266) with a new optional `source` field shown under the section, plus the term "Transposition error". `rw.js` now supports `insert: [{ at, section }]` and `source`.
+- Next if approved: the other BPP topics, mapped to site chapters (index on BPP p. iv-v), same rules; then BPP mixed banks and mocks 2-3. ~500 questions in all.
 
 ## Still unverified or open
 

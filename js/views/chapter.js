@@ -59,13 +59,15 @@
         section.exam && el('div', { class: 'exam-notes' },
           el('h3', {}, label('examNotes', lang)),
           richTextT(section.exam, lang, seen)),
-        richTextT(section.body, lang, seen)));
+        richTextT(section.body, lang, seen)),
+      section.source && el('p', { class: 'source-note' }, `${label('sourceLabel', lang)}: ${t(section.source, lang)}`));
   }
 
   function renderChapter(container, chapter, meta, lang) {
-    const { number, previous, next, questionCount, kitRange, section } = meta;
+    const { number, previous, next, questionCount, bppCount, kitRange, section } = meta;
     ACCA.glossary?.setChapter(number);
-    const startTraining = () => el('a', { class: 'button primary', href: `#/quiz/${chapter.id}` }, `${label('practiseTopic', lang)} (${questionCount})`);
+    const bppButton = () => bppCount > 0 && el('a', { class: 'button bpp', href: `#/quiz/bpp-${chapter.id}` }, `${label('bppPractice', lang)} (${bppCount})`);
+    const startTraining = () => [el('a', { class: 'button primary', href: `#/quiz/${chapter.id}` }, `${label('practiseTopic', lang)} (${questionCount})`), bppButton()];
     const kitNote = () => el('p', { class: 'kit-range' }, `${label('kitQuestions', lang)}: ${kitRange}`);
     container.replaceChildren(
       el('article', { class: 'lesson' },

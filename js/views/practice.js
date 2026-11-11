@@ -32,7 +32,18 @@
         el('span', { class: 'hint' }, `${item.tasks.length} ${label('tasksCount', lang)} · 15 ${label('marks', lang)}`)));
   }
 
-  function renderPractice(container, topics, storage, lang, cases) {
+  function bppRow(topic, count, entry, lang) {
+    return el('li', {},
+      el('a', { class: 'topic-row', href: `#/quiz/bpp-${topic.id}` },
+        el('span', { class: 'topic-number' }, String(topic.number)),
+        el('span', { class: 'topic-main' },
+          el('span', { class: 'topic-title' }, t(topic.title, lang)),
+          el('span', { class: 'hint' }, `${count} ${label('questionsCount', lang)} · BPP Kit`)),
+        scoreMeter(entry, lang)));
+  }
+
+  function renderPractice(container, topics, storage, lang, cases, bpp = {}) {
+    const bppTopics = topics.filter((topic) => bpp[topic.id]?.length);
     const progress = loadProgress(storage);
     const studied = topics.filter((topic) => progress[topic.id]);
     container.replaceChildren(el('div', { class: 'page practice' },
@@ -57,7 +68,11 @@
         el('ul', { class: 'case-list' }, cases.map((item) => caseRow(item, progress[item.id], lang)))),
       el('section', { class: 'panel' },
         el('h2', {}, label('chooseTitle', lang)),
-        el('ul', { class: 'topic-list' }, topics.map((topic) => topicRow(topic, progress[topic.id], lang))))));
+        el('ul', { class: 'topic-list' }, topics.map((topic) => topicRow(topic, progress[topic.id], lang)))),
+      bppTopics.length > 0 && el('section', { class: 'panel' },
+        el('h2', {}, label('bppSetsTitle', lang)),
+        el('p', { class: 'hint' }, label('bppNote', lang)),
+        el('ul', { class: 'topic-list' }, bppTopics.map((topic) => bppRow(topic, bpp[topic.id].length, progress[`bpp-${topic.id}`], lang))))));
   }
 
   function renderWeakAreas(container, topics, storage, lang) {

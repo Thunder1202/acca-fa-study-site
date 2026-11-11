@@ -26,12 +26,18 @@ const sameShape = (f, where) => {
 };
 
 // ---- lesson ----
+// New sections: { at, section } with every field given as [en, ru, uz].
+for (const ins of patch.insert ?? []) {
+  const s = {};
+  for (const [field, v] of Object.entries(ins.section)) s[field] = tri(v, `new section ${field}`);
+  chapter.sections.splice(ins.at, 0, s);
+}
 if (patch.sections) {
   if (patch.sections.length !== chapter.sections.length) problems.push(`sections: patch has ${patch.sections.length}, chapter has ${chapter.sections.length}`);
   chapter.sections = chapter.sections.map((s, i) => {
     const p = patch.sections[i] ?? {};
     const out = { ...s };
-    for (const field of ['heading', 'simple', 'key', 'exam', 'example', 'body']) {
+    for (const field of ['heading', 'simple', 'key', 'exam', 'example', 'body', 'source']) {
       if (p[field]) out[field] = tri(p[field], `section ${i} ${field}`);
     }
     return out;
@@ -130,7 +136,7 @@ const questionsSrc = `'use strict';\n\n// Explanations use step lines: "# " a st
 if (flag === '--dry') {
   console.log('OK (dry run)');
 } else {
-  if (patch.sections || patch.terms || patch.add || patch.order || patch.glossaryOrder || patch.objectives) fs.writeFileSync(chapterPath, chapterSrc);
+  if (patch.sections || patch.insert || patch.terms || patch.add || patch.order || patch.glossaryOrder || patch.objectives) fs.writeFileSync(chapterPath, chapterSrc);
   if (patch.answers || patch.texts || patch.options) fs.writeFileSync(questionsPath, questionsSrc);
   // Re-load what was written to be sure it parses and matches.
   delete require.cache[require.resolve(chapterPath)];

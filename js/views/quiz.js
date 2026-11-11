@@ -75,7 +75,7 @@
 
   function record(config) {
     for (const [topicId, totals] of Object.entries(scoreByTopic(state.session))) {
-      recordSession(config.storage, topicId, totals.correct, totals.attempted);
+      recordSession(config.storage, config.progressKey ?? topicId, totals.correct, totals.attempted);
     }
   }
 
@@ -182,6 +182,7 @@
 
   function source(q, lang) {
     if (q.case) return `${label('basedOnKitB', lang)}${q.case.kitRef}`;
+    if (q.bppRef) return `${label('basedOnBpp', lang)}${q.bppRef} · ${label('bppAnswerPage', lang)} ${q.bppPage}`;
     return `${label('basedOnKit', lang)}${q.kitRef}`;
   }
 

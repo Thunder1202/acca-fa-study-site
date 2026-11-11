@@ -112,13 +112,13 @@ Boshidagi bor narsani (boshlang'ich zaxira) oling, sotib olinganni (xaridlar) qo
     {
       exam: {
         en: `- Goods taken by the owner for personal use: Dr Drawings, Cr Purchases.
-- A count on a different date must be adjusted back to the year end. Add goods sold since, at cost, and deduct goods bought since.
+- A count on a different date must be adjusted back to the year end. Add goods sold since, at cost, and deduct goods bought since. Add back goods returned to suppliers since, and deduct goods customers have returned since.
 - Goods received and in closing inventory but with no invoice recorded overstate profit. The inventory figure itself is right.`,
         ru: `- Товары, взятые владельцем для личных нужд: Дт Изъятия, Кт Закупки.
-- Инвентаризацию в другой день нужно привести к концу года: прибавить проданное после неё по себестоимости и вычесть закупленное.
+- Инвентаризацию в другой день нужно привести к концу года: прибавить проданное после неё по себестоимости и вычесть закупленное. Возвращённое поставщикам после неё прибавить, а возвращённое покупателями — вычесть.
 - Если товар получен и входит в запасы, а счёт не отражён, прибыль завышена. Сама сумма запасов верна.`,
         uz: `- Egasi shaxsiy ehtiyoj uchun olgan tovar: Dt Olib qo'yishlar, Kt Xaridlar.
-- Boshqa kunda o'tkazilgan sanash yil oxiriga keltiriladi: keyin sotilgani tannarxda qo'shiladi, keyin xarid qilingani ayiriladi.
+- Boshqa kunda o'tkazilgan sanash yil oxiriga keltiriladi: keyin sotilgani tannarxda qo'shiladi, keyin xarid qilingani ayiriladi. Keyin yetkazib beruvchiga qaytarilgani qo'shiladi, xaridorlar qaytargani ayiriladi.
 - Tovar olingan va zaxiraga kirgan, ammo hisob-faktura yozilmagan bo'lsa, foyda oshib ketadi. Zaxira summasi esa to'g'ri.`,
       },
       key: {

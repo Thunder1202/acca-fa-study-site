@@ -771,19 +771,19 @@ Xatoni tuzatish uchun uch qadam: nima yozilganini yozing, nima yozilishi kerak e
 - Carry it diagonally to the opposite side below the totals as balance b/f (or b/d).
 - Income and expense accounts close to profit or loss and restart at nil.
 - Asset, liability and equity balances carry forward to the next period.
-- Closing capital = opening capital + profit (or - loss) - drawings.`,
+- Closing capital = opening capital + capital introduced + profit (or - loss) - drawings.`,
         ru: `- Сложите обе стороны и запишите больший итог на обеих.
 - Недостающая сумма на меньшей стороне — остаток на конец (c/f или c/d).
 - Перенесите её по диагонали под итоги как остаток на начало (b/f или b/d).
 - Счета доходов и расходов закрываются на прибыль или убыток и начинаются с нуля.
 - Остатки активов, обязательств и капитала переносятся на следующий период.
-- Капитал на конец = капитал на начало + прибыль (или - убыток) - изъятия.`,
+- Капитал на конец = капитал на начало + вложенный капитал + прибыль (или - убыток) - изъятия.`,
         uz: `- Ikkala tomonni qo'shing va katta jamni ikkala tomonga yozing.
 - Kichik tomondagi yetishmagan summa yakuniy qoldiq (c/f yoki c/d).
 - Uni diagonal bo'yicha jamlar ostiga boshlang'ich qoldiq (b/f yoki b/d) qilib o'tkazing.
 - Daromad va xarajat hisoblari foyda yoki zararga yopiladi va noldan boshlanadi.
 - Aktiv, majburiyat va kapital qoldiqlari keyingi davrga o'tadi.
-- Yakuniy kapital = boshlang'ich kapital + foyda (yoki - zarar) - olib qo'yishlar.`,
+- Yakuniy kapital = boshlang'ich kapital + kiritilgan kapital + foyda (yoki - zarar) - olib qo'yishlar.`,
       },
       exam: {
         en: `- A balance b/f on the debit side is a debit balance, and on the credit side a credit balance.

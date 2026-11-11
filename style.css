@@ -422,6 +422,8 @@ a.chapter-row:hover, .topic-row:hover, .case-row:hover { border-color: var(--acc
 
 .lesson-practice { margin: 32px 0; }
 .lesson-practice .button { width: 100%; }
+.lesson-practice .button.bpp { margin-top: 10px; }
+.source-note { margin: 12px 0 0; font-size: 0.85rem; color: var(--muted); }
 .chapter-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .chapter-link { display: block; padding: 12px 14px; color: var(--muted); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); font-size: 0.875rem; text-decoration: none; overflow-wrap: anywhere; transition: border-color 200ms var(--ease); }
 .chapter-link:hover { border-color: var(--accent); }
