@@ -60,8 +60,9 @@ The user added `finance/F3 BPP KIT (24-25)-1.pdf` (BPP Practice & Revision Kit, 
 - Book conflicts found: BPP 3.2's printed key gives profit with the wrong sign (the site uses the right formula and says so); BPP 8.22 sets a revalued-asset loss against the surplus while Kaplan (IAS 16 paras 41, 71) charges it to profit, so 8.22 is not used. Also left out where Kaplan does not cover the point: zero-rated/exempt sales tax (5.1), continuous-count and policy-change inventory items (6.16, 6.17), expected-value provisions (12.11-12.13), dilution (13.11).
 - Lesson edits: ch 3 capital formula now includes capital introduced; ch 5 count roll-back now covers returns.
 - Page images: node script in the session scratchpad wrote `bpp/pNNN.jpg`; book page N = image N+15. Re-extract from the PDF if the scratchpad is gone.
-- Still to do: BPP 11.20 (supplier statement) and section 16 into a `bpp-ch13.js`; section 18 (suspense) into ch 14; sections 26-30 into ch 15-17; 35 and 37 into ch 18-20; then the 15-mark cases (14, 19-25, 31-34, 36), mixed banks 38-44 and mocks 2-3.
-- GitHub: private repo https://github.com/Thunder1202/acca-fa-study-site (branch master). `finance/` and `*.zip` are gitignored. Push only when asked.
+- 2026-11-12: also done `bpp-ch13.js` (16 + 11.20), section 18 appended to `bpp-ch14.js`, `bpp-ch15.js` (27-29), `bpp-ch16.js` (26), `bpp-ch17.js` (30). More conflicts found: BPP 18.8's printed key ticks the wrong pair (its own working says items 1 and 3); BPP 30.17 puts interest paid in operating, but Kaplan's IAS 7 (with IFRS 18) puts interest paid and dividends paid in FINANCING and interest/dividends received in INVESTING, so the site follows Kaplan. 444 tests pass.
+- Still to do: sections 35 and 37 into ch 18-20; then the 15-mark cases (14, 19-25, 31-34, 36), mixed banks 38-44 and mocks 2-3.
+- GitHub: PUBLIC repo https://github.com/Thunder1202/acca-fa-study-site (branch master), hosted free on GitHub Pages at https://thunder1202.github.io/acca-fa-study-site/ (no login; rebuilds on every push). History rewritten 2026-11-12 so commits use the noreply email `243614363+Thunder1202@users.noreply.github.com`; never commit with the Gmail. `finance/` and `*.zip` are gitignored. The claude.ai artifact link still exists but needs a Claude sign-in.
 
 ## Still unverified or open
 

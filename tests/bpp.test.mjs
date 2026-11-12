@@ -280,6 +280,19 @@ test('BPP chapter 15: every calculated answer matches a fresh calculation', () =
   assert.equal(c['27.10'].correctValue, (16200 - 14000) + 23500);
 });
 
+test('BPP chapter 17: every calculated answer matches a fresh calculation', () => {
+  const c = Object.fromEntries(require('../data/bpp-ch17.js').map((q) => [q.bppRef, q]));
+  const chosen = (ref) => c[ref].options[c[ref].correctIndex];
+  const money = (n) => `$${Math.round(n).toLocaleString('en-US')}`;
+  assert.equal(chosen('30.3'), `Add ${money(760000 - 30000 - 95000 + 70000 + 55000)} to profit`);
+  assert.equal(chosen('30.10'), `${money(((210 + 80) - (150 + 50) - (180 - 120)) * 1000)} inflow`);
+  assert.equal(512 + 296 - 28 - 63 + 37 + 31, 785);
+  assert.equal(c['30.15'].correctValue, (701 - (518 + 60 - (130 - 72) - 47)) * 1000);
+  // 30.17: operating cash only; interest paid is financing under Kaplan's IAS 7.
+  assert.equal(c['30.17'].correctValue, (600 + 38500 - 1100) - (1200 + 21600 - 2900) - (1400 + 11000 - 800));
+  assert.equal(chosen('30.21'), money(174000 + 820000 - 196000));
+});
+
 test('BPP chapter 16: every calculated answer matches a fresh calculation', () => {
   const c = Object.fromEntries(require('../data/bpp-ch16.js').map((q) => [q.bppRef, q]));
   const chosen = (ref) => c[ref].options[c[ref].correctIndex];
