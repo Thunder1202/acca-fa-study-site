@@ -9,6 +9,7 @@
   const grid = (columns, rows) => ({ columns, rows: rows.map(([text, correctIndex]) => ({ text, correctIndex })) });
   const amount = (correctValue, answerText) => ({ correctValue, answerText });
   const DC = ['Debit', 'Credit'];
+  const TF = ['True', 'False'];
   const DCN = ['Debit', 'Credit', 'No entry'];
 
   const cases = [
@@ -1127,6 +1128,592 @@
   Operatsion 20 400 + investitsiya (-21 000 + 2 400) + moliyaviy -1 300 = +500
   600 + 500 = 1 100, oxirida esa 2 200 - 1 100 = 1 100. Mos keldi.
 = Javob: $600 000`),
+      ],
+    },
+
+    {
+      id: 'bppc31', bppRef: '31', bppPage: 264, area: 'groups', title: 'Robin and Lark',
+      intro: `Robin bought 75% of Lark's equity on 1 January last year for $160,000, when Lark's retained earnings were $60,000. The fair value of the non-controlling interest (NCI) at that date was $50,000. Lark's share capital is $120,000. This year Robin sold goods that cost $90,000 to Lark for $120,000; 40% of them are still in Lark's inventory. At 31 December this year: Robin's cost of sales $3,200,000 and Lark's $700,000; retained earnings: Robin $520,000, Lark $180,000.`,
+      tasks: [
+        task(19, 3, 'number', `Task 1: What is goodwill on acquisition? (in $)`,
+          amount(30000, '$30,000'),
+`# Step 1: Consideration plus NCI
+  160,000 + 50,000 = 210,000
+# Step 2: Lark's net assets at acquisition
+  Share capital 120,000 + retained earnings 60,000 = 180,000
+# Step 3: Goodwill
+  210,000 - 180,000 = 30,000
+= Answer: $30,000`,
+`# Шаг 1: Возмещение плюс NCI
+  160 000 + 50 000 = 210 000
+# Шаг 2: Чистые активы Lark на дату покупки
+  Капитал 120 000 + нераспределённая прибыль 60 000 = 180 000
+# Шаг 3: Гудвил
+  210 000 - 180 000 = 30 000
+= Ответ: $30 000`,
+`# 1-qadam: To'lov plyus NCI
+  160 000 + 50 000 = 210 000
+# 2-qadam: Lark ning xarid sanasidagi sof aktivlari
+  Kapital 120 000 + taqsimlanmagan foyda 60 000 = 180 000
+# 3-qadam: Gudvill
+  210 000 - 180 000 = 30 000
+= Javob: $30 000`),
+        task(20, 2, 'number', `Task 2: What is the unrealised profit in inventory? (in $)`,
+          amount(12000, '$12,000'),
+`# Step 1: Profit on the intra-group sale
+  120,000 - 90,000 = 30,000
+# Step 2: Part still unsold
+  30,000 x 40% = 12,000
+= Answer: $12,000`,
+`# Шаг 1: Прибыль от внутригрупповой продажи
+  120 000 - 90 000 = 30 000
+# Шаг 2: Часть, ещё не проданная
+  30 000 x 40% = 12 000
+= Ответ: $12 000`,
+`# 1-qadam: Guruh ichidagi sotuvdan foyda
+  120 000 - 90 000 = 30 000
+# 2-qadam: Hali sotilmagan qism
+  30 000 x 40% = 12 000
+= Javob: $12 000`),
+        task(20, 2, 'number', `Task 3: What is consolidated cost of sales? (in $)`,
+          amount(3792000, '$3,792,000'),
+`# Step 1: Add both companies
+  3,200,000 + 700,000 = 3,900,000
+# Step 2: Take out the intra-group purchase
+  3,900,000 - 120,000 = 3,780,000
+# Step 3: Add the unrealised profit
+  3,780,000 + 12,000 = 3,792,000
+= Answer: $3,792,000
+! Unrealised profit INCREASES cost of sales, because it reduces closing inventory.`,
+`# Шаг 1: Сложим обе компании
+  3 200 000 + 700 000 = 3 900 000
+# Шаг 2: Уберём внутригрупповую закупку
+  3 900 000 - 120 000 = 3 780 000
+# Шаг 3: Прибавим нереализованную прибыль
+  3 780 000 + 12 000 = 3 792 000
+= Ответ: $3 792 000
+! Нереализованная прибыль УВЕЛИЧИВАЕТ себестоимость, ведь она уменьшает запасы на конец.`,
+`# 1-qadam: Ikkala kompaniyani qo'shamiz
+  3 200 000 + 700 000 = 3 900 000
+# 2-qadam: Guruh ichidagi xaridni chiqaramiz
+  3 900 000 - 120 000 = 3 780 000
+# 3-qadam: Amalga oshmagan foydani qo'shamiz
+  3 780 000 + 12 000 = 3 792 000
+= Javob: $3 792 000
+! Amalga oshmagan foyda tannarxni OSHIRADI, chunki yakuniy zaxirani kamaytiradi.`),
+        task(19, 2, 'multi', `Task 4: Which TWO statements about the non-controlling interest are correct?`,
+          { options: [
+            'The NCI is the shares in the whole group not held by the parent.',
+            'The NCI is the shares in the subsidiary not held by the parent.',
+            '25% of Robin\'s consolidated retained earnings goes to the NCI.',
+            '25% of Lark\'s profit for the year goes to the NCI.',
+          ], correctIndices: [1, 3] },
+`- The NCI owns part of the SUBSIDIARY only, not of the parent or the whole group. The second statement is CORRECT.
+- So the NCI shares in Lark's profit, 25% of it. The fourth statement is CORRECT.
+- It has no share of Robin's own retained earnings.
+= Answer: shares in the subsidiary not held by the parent; 25% of Lark's profit`,
+`- NCI владеет частью только ДОЧЕРНЕЙ, а не материнской или всей группы. Второе утверждение ВЕРНО.
+- Значит, NCI получает 25% прибыли Lark. Четвёртое утверждение ВЕРНО.
+- В собственной нераспределённой прибыли Robin у NCI доли нет.
+= Ответ: акции дочерней, не принадлежащие материнской; 25% прибыли Lark`,
+`- NCI faqat SHO'BAning bir qismiga egalik qiladi, ona yoki butun guruhga emas. Ikkinchi fikr TO'G'RI.
+- Demak, NCI Lark foydasining 25% ini oladi. To'rtinchi fikr TO'G'RI.
+- Robin ning o'z taqsimlanmagan foydasida NCI ulushi yo'q.
+= Javob: sho'badagi ona kompaniyaga tegishli bo'lmagan aksiyalar; Lark foydasining 25%`),
+        task(19, 6, 'number', `Task 5: What are consolidated retained earnings? (in $)`,
+          amount(598000, '$598,000'),
+`# Step 1: Robin's retained earnings, less the unrealised profit (Robin made the sale)
+  520,000 - 12,000 = 508,000
+# Step 2: Lark's profit since acquisition
+  180,000 - 60,000 = 120,000
+# Step 3: Group share of it
+  120,000 x 75% = 90,000
+# Step 4: Total
+  508,000 + 90,000 = 598,000
+= Answer: $598,000
+! The PARENT sold the goods, so the whole unrealised profit comes off the parent's retained earnings.`,
+`# Шаг 1: Нераспределённая прибыль Robin минус нереализованная прибыль (продавал Robin)
+  520 000 - 12 000 = 508 000
+# Шаг 2: Прибыль Lark после покупки
+  180 000 - 60 000 = 120 000
+# Шаг 3: Доля группы
+  120 000 x 75% = 90 000
+# Шаг 4: Итог
+  508 000 + 90 000 = 598 000
+= Ответ: $598 000
+! Продавала МАТЕРИНСКАЯ, поэтому вся нереализованная прибыль вычитается из её прибыли.`,
+`# 1-qadam: Robin taqsimlanmagan foydasi minus amalga oshmagan foyda (Robin sotgan)
+  520 000 - 12 000 = 508 000
+# 2-qadam: Lark ning xariddan keyingi foydasi
+  180 000 - 60 000 = 120 000
+# 3-qadam: Guruh ulushi
+  120 000 x 75% = 90 000
+# 4-qadam: Jami
+  508 000 + 90 000 = 598 000
+= Javob: $598 000
+! ONA kompaniya sotgan, shuning uchun butun amalga oshmagan foyda uning foydasidan ayiriladi.`),
+      ],
+    },
+
+    {
+      id: 'bppc32', bppRef: '32', bppPage: 265, area: 'groups', title: 'Heath and Moss',
+      intro: `Heath bought 75% of Moss's $1 ordinary shares when Moss's retained earnings were $4,000,000. Moss's share capital is $40,000,000. The fair value of the NCI at acquisition was $12,500,000 and goodwill was $1,500,000. This year Heath sold goods that cost $10,000,000 to Moss at cost plus 25%; Moss still holds 40% of them. At the year end Moss owes Heath $2,000,000 for these goods. Moss has declared a dividend, part of it due to Heath, and Heath has declared a dividend to its own shareholders. Moss's retained earnings are now $12,000,000.`,
+      tasks: [
+        task(19, 3, 'number', `Task 1: What did Heath pay for its shares in Moss? (in $)`,
+          amount(33000000, '$33,000,000'),
+`# Step 1: The goodwill formula
+  Goodwill = consideration + NCI - net assets at acquisition
+# Step 2: Net assets at acquisition
+  40,000,000 + 4,000,000 = 44,000,000
+# Step 3: Solve
+  Consideration = 1,500,000 + 44,000,000 - 12,500,000 = 33,000,000
+= Answer: $33,000,000`,
+`# Шаг 1: Формула гудвила
+  Гудвил = возмещение + NCI - чистые активы на дату покупки
+# Шаг 2: Чистые активы на дату покупки
+  40 000 000 + 4 000 000 = 44 000 000
+# Шаг 3: Решим
+  Возмещение = 1 500 000 + 44 000 000 - 12 500 000 = 33 000 000
+= Ответ: $33 000 000`,
+`# 1-qadam: Gudvill formulasi
+  Gudvill = to'lov + NCI - xarid sanasidagi sof aktivlar
+# 2-qadam: Xarid sanasidagi sof aktivlar
+  40 000 000 + 4 000 000 = 44 000 000
+# 3-qadam: Yechamiz
+  To'lov = 1 500 000 + 44 000 000 - 12 500 000 = 33 000 000
+= Javob: $33 000 000`),
+        task(19, 2, 'single', `Task 2: How is the dividend due to Heath from Moss treated in the consolidated statements?`,
+          pick(['Included in consolidated profit for the year', 'Added to the NCI', 'Included in consolidated current liabilities', 'Cancelled on consolidation'], 3),
+`One group company owes it and another is owed it, so to the group as a whole the net effect is nil.
+- Moss's payable and Heath's receivable cancel, and so do Moss's payout and Heath's income.
+= Answer: cancelled on consolidation`,
+`Одна компания группы должна, другая получает, поэтому для группы в целом эффект нулевой.
+- Кредиторка Moss и дебиторка Heath взаимно исключаются, как и выплата Moss и доход Heath.
+= Ответ: исключается при консолидации`,
+`Guruhning bir kompaniyasi qarzdor, boshqasi oladi, shuning uchun butun guruh uchun ta'sir nol.
+- Moss kreditorligi va Heath debitorligi, Moss to'lovi va Heath daromadi bir-birini yo'qqa chiqaradi.
+= Javob: konsolidatsiyada chiqariladi`),
+        task(19, 2, 'single', `Task 3: How is the dividend Heath has declared to its own shareholders treated?`,
+          pick(['Deducted from consolidated profit for the year', 'Deducted from consolidated current assets', 'Included in consolidated current liabilities', 'Cancelled on consolidation'], 2),
+`This dividend is owed to people OUTSIDE the group, so it is a real liability of the group.
+- It is not an expense, so it never goes through profit.
+- Declared before the year end and unpaid, it is a current liability.
+= Answer: included in consolidated current liabilities`,
+`Этот дивиденд причитается тем, кто ВНЕ группы, поэтому это реальное обязательство группы.
+- Это не расход, через прибыль он не проходит.
+- Объявлен до конца года и не выплачен — краткосрочное обязательство.
+= Ответ: включается в консолидированные краткосрочные обязательства`,
+`Bu dividend guruhdan TASHQARIDAGILARGA tegishli, demak bu guruhning haqiqiy majburiyati.
+- Bu xarajat emas, foyda orqali o'tmaydi.
+- Yil oxirigacha e'lon qilingan va to'lanmagan — joriy majburiyat.
+= Javob: konsolidatsiyalangan joriy majburiyatlarga kiritiladi`),
+        task(20, 2, 'number', `Task 4: What is the unrealised profit on the intra-group sale? (in $)`,
+          amount(1000000, '$1,000,000'),
+`# Step 1: Profit on the sale
+  10,000,000 x 25% = 2,500,000
+# Step 2: Part still unsold
+  2,500,000 x 40% = 1,000,000
+= Answer: $1,000,000`,
+`# Шаг 1: Прибыль от продажи
+  10 000 000 x 25% = 2 500 000
+# Шаг 2: Часть, ещё не проданная
+  2 500 000 x 40% = 1 000 000
+= Ответ: $1 000 000`,
+`# 1-qadam: Sotuvdan foyda
+  10 000 000 x 25% = 2 500 000
+# 2-qadam: Hali sotilmagan qism
+  2 500 000 x 40% = 1 000 000
+= Javob: $1 000 000`),
+        task(20, 1, 'matrix', `Task 5: How is the unrealised profit adjustment posted?`,
+          grid(DC, [['Inventory', 1], ['Retained earnings', 0]]),
+`The profit is not yet earned by the group, so take it out of both inventory and profit.
+- Inventory is reduced. CREDIT.
+- Heath's retained earnings are reduced (Heath was the seller). DEBIT.`,
+`Группа ещё не заработала эту прибыль, её убирают из запасов и из прибыли.
+- Запасы уменьшаются. КРЕДИТ.
+- Нераспределённая прибыль Heath уменьшается (продавал Heath). ДЕБЕТ.`,
+`Guruh bu foydani hali topmagan, u zaxiradan ham, foydadan ham chiqariladi.
+- Zaxira kamayadi. KREDIT.
+- Heath taqsimlanmagan foydasi kamayadi (Heath sotgan). DEBET.`),
+        task(19, 1, 'matrix', `Task 6: How is the $2,000,000 Moss owes Heath dealt with on consolidation?`,
+          grid(DC, [['Payables', 0], ['Receivables', 1]]),
+`The group cannot owe money to itself, so both balances are removed.
+- Moss's payable to Heath is cancelled. DEBIT payables.
+- Heath's receivable from Moss is cancelled. CREDIT receivables.`,
+`Группа не может быть должна сама себе, оба остатка убирают.
+- Долг Moss перед Heath исключается. ДЕБЕТ кредиторов.
+- Дебиторка Heath к Moss исключается. КРЕДИТ дебиторов.`,
+`Guruh o'ziga qarzdor bo'lolmaydi, ikkala qoldiq chiqariladi.
+- Moss ning Heath oldidagi qarzi chiqariladi. Kreditorlar DEBETi.
+- Heath ning Moss dan debitorligi chiqariladi. Debitorlar KREDITi.`),
+        task(19, 4, 'number', `Task 7: What is the NCI in the consolidated statement of financial position? (in $)`,
+          amount(14500000, '$14,500,000'),
+`# Step 1: Fair value of the NCI at acquisition
+  12,500,000
+# Step 2: NCI share of Moss's post-acquisition profit
+  (12,000,000 - 4,000,000) x 25% = 2,000,000
+# Step 3: Total
+  12,500,000 + 2,000,000 = 14,500,000
+= Answer: $14,500,000
+! The unrealised profit does not touch the NCI here, because the PARENT made the sale.`,
+`# Шаг 1: Справедливая стоимость NCI на дату покупки
+  12 500 000
+# Шаг 2: Доля NCI в прибыли Moss после покупки
+  (12 000 000 - 4 000 000) x 25% = 2 000 000
+# Шаг 3: Итог
+  12 500 000 + 2 000 000 = 14 500 000
+= Ответ: $14 500 000
+! Нереализованная прибыль здесь не касается NCI, ведь продавала МАТЕРИНСКАЯ.`,
+`# 1-qadam: Xarid sanasidagi NCI adolatli qiymati
+  12 500 000
+# 2-qadam: Moss ning xariddan keyingi foydasidagi NCI ulushi
+  (12 000 000 - 4 000 000) x 25% = 2 000 000
+# 3-qadam: Jami
+  12 500 000 + 2 000 000 = 14 500 000
+= Javob: $14 500 000
+! Amalga oshmagan foyda bu yerda NCI ga tegmaydi, chunki ONA kompaniya sotgan.`),
+      ],
+    },
+
+    {
+      id: 'bppc33', bppRef: '33', bppPage: 266, area: 'groups', title: 'Fern and Holly',
+      intro: `A year ago Fern bought 3,000,000 of Holly's 5,000,000 $1 shares for $3,600,000, when Holly's retained earnings were $100,000. The fair value of the NCI at acquisition was $2,200,000. This year Fern sold goods to Holly invoiced at $300,000, at cost plus 25%; half of them are still in Holly's inventory. Holly owes Fern $40,000 at the year end. Retained earnings at the year end: Fern $900,000, Holly $400,000.`,
+      tasks: [
+        task(19, 3, 'number', `Task 1: What is goodwill on acquisition? (in $)`,
+          amount(700000, '$700,000'),
+`# Step 1: Total A, consideration plus NCI
+  3,600,000 + 2,200,000 = 5,800,000
+# Step 2: Total B, net assets at acquisition
+  5,000,000 + 100,000 = 5,100,000
+# Step 3: Goodwill
+  5,800,000 - 5,100,000 = 700,000
+= Answer: $700,000`,
+`# Шаг 1: Итог A, возмещение плюс NCI
+  3 600 000 + 2 200 000 = 5 800 000
+# Шаг 2: Итог B, чистые активы на дату покупки
+  5 000 000 + 100 000 = 5 100 000
+# Шаг 3: Гудвил
+  5 800 000 - 5 100 000 = 700 000
+= Ответ: $700 000`,
+`# 1-qadam: A jami, to'lov plyus NCI
+  3 600 000 + 2 200 000 = 5 800 000
+# 2-qadam: B jami, xarid sanasidagi sof aktivlar
+  5 000 000 + 100 000 = 5 100 000
+# 3-qadam: Gudvill
+  5 800 000 - 5 100 000 = 700 000
+= Javob: $700 000`),
+        task(19, 2, 'single', `Task 2: If A is consideration plus the NCI's fair value, and B is the net assets acquired, what is the goodwill formula?`,
+          pick(['A minus 100% of B', 'A minus 60% of B', 'A plus 100% of B', 'A plus 60% of B'], 0),
+`A already includes the NCI at fair value, so it covers 100% of the subsidiary.
+- So it is compared with 100% of the net assets.
+= Answer: A minus 100% of B
+! Taking only 60% of B would count the NCI's share of net assets twice.`,
+`A уже включает NCI по справедливой стоимости, то есть охватывает 100% дочерней.
+- Поэтому его сравнивают со 100% чистых активов.
+= Ответ: A минус 100% B
+! Если взять только 60% B, доля NCI в чистых активах будет учтена дважды.`,
+`A NCI ni adolatli qiymatda o'z ichiga oladi, ya'ni sho'baning 100% ini qamraydi.
+- Shuning uchun u sof aktivlarning 100% i bilan solishtiriladi.
+= Javob: A minus B ning 100%
+! B ning faqat 60% olinsa, NCI ning sof aktivlardagi ulushi ikki marta hisoblanadi.`),
+        task(20, 2, 'single', `Task 3: What is the unrealised profit on the intra-group sale?`,
+          pick(['$30,000', '$60,000', '$37,500', '$75,000'], 0),
+`# Step 1: Profit in the $300,000 price (cost plus 25%)
+  300,000 x 25/125 = 60,000
+# Step 2: Half is still unsold
+  60,000 x 50% = 30,000
+= Answer: $30,000
+! 300,000 x 25% = 75,000 treats the mark-up as a margin. Use 25/125.`,
+`# Шаг 1: Прибыль в цене $300 000 (себестоимость плюс 25%)
+  300 000 x 25/125 = 60 000
+# Шаг 2: Половина ещё не продана
+  60 000 x 50% = 30 000
+= Ответ: $30 000
+! 300 000 x 25% = 75 000 — это маржа, а не наценка. Берите 25/125.`,
+`# 1-qadam: $300 000 narxdagi foyda (tannarx plyus 25%)
+  300 000 x 25/125 = 60 000
+# 2-qadam: Yarmi hali sotilmagan
+  60 000 x 50% = 30 000
+= Javob: $30 000
+! 300 000 x 25% = 75 000 — bu marja, ustama emas. 25/125 oling.`),
+        task(19, 2, 'multi', `Task 4: Control makes a parent-subsidiary relationship. Which TWO of these show that one company controls another?`,
+          { options: [
+            'Owning more than 50% of the voting shares',
+            'Owning 40% of the ordinary shares and 80% of the non-voting preference shares',
+            'Having significant influence over its policies',
+            'Having the power to appoint or remove most of the board',
+          ], correctIndices: [0, 3] },
+`- More than 50% of the votes: control. YES.
+- 40% of the votes: not control; non-voting shares add no votes.
+- Significant influence: that makes an ASSOCIATE, not a subsidiary.
+- Power over most of the board: control. YES.
+= Answer: over 50% of the voting shares; power to appoint most of the board`,
+`- Более 50% голосов: контроль. ДА.
+- 40% голосов: не контроль; акции без голоса голосов не добавляют.
+- Значительное влияние: это АССОЦИИРОВАННАЯ, а не дочерняя.
+- Власть над большинством совета: контроль. ДА.
+= Ответ: более 50% голосующих акций; право назначать большинство совета`,
+`- Ovozlarning 50% dan ko'pi: nazorat. HA.
+- 40% ovoz: nazorat emas; ovozsiz aksiyalar ovoz qo'shmaydi.
+- Sezilarli ta'sir: bu ASSOTSIATSIYALANGAN, sho'ba emas.
+- Kengash ko'pchiligi ustidan hokimiyat: nazorat. HA.
+= Javob: ovozli aksiyalarning 50% dan ko'pi; kengash ko'pchiligini tayinlash huquqi`),
+        task(19, 6, 'number', `Task 5: What are consolidated retained earnings? (in $)`,
+          amount(1050000, '$1,050,000'),
+`# Step 1: Fern's retained earnings, less the unrealised profit (Fern made the sale)
+  900,000 - 30,000 = 870,000
+# Step 2: Holly's profit since acquisition
+  400,000 - 100,000 = 300,000
+# Step 3: Group share (60%)
+  300,000 x 60% = 180,000
+# Step 4: Total
+  870,000 + 180,000 = 1,050,000
+= Answer: $1,050,000`,
+`# Шаг 1: Нераспределённая прибыль Fern минус нереализованная прибыль (продавал Fern)
+  900 000 - 30 000 = 870 000
+# Шаг 2: Прибыль Holly после покупки
+  400 000 - 100 000 = 300 000
+# Шаг 3: Доля группы (60%)
+  300 000 x 60% = 180 000
+# Шаг 4: Итог
+  870 000 + 180 000 = 1 050 000
+= Ответ: $1 050 000`,
+`# 1-qadam: Fern taqsimlanmagan foydasi minus amalga oshmagan foyda (Fern sotgan)
+  900 000 - 30 000 = 870 000
+# 2-qadam: Holly ning xariddan keyingi foydasi
+  400 000 - 100 000 = 300 000
+# 3-qadam: Guruh ulushi (60%)
+  300 000 x 60% = 180 000
+# 4-qadam: Jami
+  870 000 + 180 000 = 1 050 000
+= Javob: $1 050 000`),
+      ],
+    },
+
+    {
+      id: 'bppc34', bppRef: '34', bppPage: 268, area: 'groups', title: 'Ash and Rowan',
+      intro: `Ash bought 2,400,000 of Rowan's 3,000,000 $1 shares two years ago. For the year ($000): Ash: revenue 7,200; cost of sales 4,100; distribution 1,200; administration 800; dividend received from Rowan 160; tax 450. Rowan: revenue 3,000; cost of sales 1,700; distribution 550; administration 350; tax 90. During the year Ash sold goods that cost $150,000 to Rowan for $250,000; 40% of them are still in Rowan's inventory.`,
+      tasks: [
+        task(20, 2, 'number', `Task 1: What is consolidated revenue? (in $)`,
+          amount(9950000, '$9,950,000'),
+`# Step 1: Add both companies in full
+  7,200 + 3,000 = 10,200
+# Step 2: Take out the intra-group sale
+  10,200 - 250 = 9,950 ($000)
+= Answer: $9,950,000`,
+`# Шаг 1: Сложим обе компании полностью
+  7 200 + 3 000 = 10 200
+# Шаг 2: Уберём внутригрупповую продажу
+  10 200 - 250 = 9 950 ($000)
+= Ответ: $9 950 000`,
+`# 1-qadam: Ikkala kompaniyani to'liq qo'shamiz
+  7 200 + 3 000 = 10 200
+# 2-qadam: Guruh ichidagi sotuvni chiqaramiz
+  10 200 - 250 = 9 950 ($000)
+= Javob: $9 950 000`),
+        task(20, 2, 'number', `Task 2: What is the unrealised profit in inventory? (in $)`,
+          amount(40000, '$40,000'),
+`# Step 1: Profit on the sale
+  250,000 - 150,000 = 100,000
+# Step 2: Part still unsold
+  100,000 x 40% = 40,000
+= Answer: $40,000`,
+`# Шаг 1: Прибыль от продажи
+  250 000 - 150 000 = 100 000
+# Шаг 2: Часть, ещё не проданная
+  100 000 x 40% = 40 000
+= Ответ: $40 000`,
+`# 1-qadam: Sotuvdan foyda
+  250 000 - 150 000 = 100 000
+# 2-qadam: Hali sotilmagan qism
+  100 000 x 40% = 40 000
+= Javob: $40 000`),
+        task(20, 3, 'number', `Task 3: What is consolidated cost of sales? (in $)`,
+          amount(5590000, '$5,590,000'),
+`# Step 1: Add both companies
+  4,100 + 1,700 = 5,800
+# Step 2: Take out the intra-group purchase
+  5,800 - 250 = 5,550
+# Step 3: Add the unrealised profit
+  5,550 + 40 = 5,590 ($000)
+= Answer: $5,590,000`,
+`# Шаг 1: Сложим обе компании
+  4 100 + 1 700 = 5 800
+# Шаг 2: Уберём внутригрупповую закупку
+  5 800 - 250 = 5 550
+# Шаг 3: Прибавим нереализованную прибыль
+  5 550 + 40 = 5 590 ($000)
+= Ответ: $5 590 000`,
+`# 1-qadam: Ikkala kompaniyani qo'shamiz
+  4 100 + 1 700 = 5 800
+# 2-qadam: Guruh ichidagi xaridni chiqaramiz
+  5 800 - 250 = 5 550
+# 3-qadam: Amalga oshmagan foydani qo'shamiz
+  5 550 + 40 = 5 590 ($000)
+= Javob: $5 590 000`),
+        task(20, 2, 'single', `Task 4: How is the $160,000 dividend Ash received from Rowan treated in the consolidated statement of profit or loss?`,
+          pick(['Added to group profit as investment income', 'Cancelled on consolidation', 'Shown as part of revenue', 'Deducted from the NCI'], 1),
+`It is money moving inside the group: Rowan pays it and Ash receives it.
+- Rowan's profits are already added in line by line, so counting the dividend too would double count.
+= Answer: cancelled on consolidation`,
+`Это движение денег внутри группы: Rowan платит, Ash получает.
+- Прибыль Rowan уже сложена построчно, учесть ещё и дивиденд — двойной счёт.
+= Ответ: исключается при консолидации`,
+`Bu guruh ichidagi pul harakati: Rowan to'laydi, Ash oladi.
+- Rowan foydasi allaqachon satrma-satr qo'shilgan, dividendni ham qo'shish — ikki marta hisoblash.
+= Javob: konsolidatsiyada chiqariladi`),
+        task(20, 3, 'number', `Task 5: What is the profit attributable to the NCI? (in $)`,
+          amount(62000, '$62,000'),
+`# Step 1: Rowan's profit for the year
+  3,000 - 1,700 - 550 - 350 - 90 = 310
+# Step 2: NCI share (20%)
+  310 x 20% = 62 ($000)
+= Answer: $62,000
+! Ash, the parent, made the sale, so the unrealised profit does not reduce the NCI's share.`,
+`# Шаг 1: Прибыль Rowan за год
+  3 000 - 1 700 - 550 - 350 - 90 = 310
+# Шаг 2: Доля NCI (20%)
+  310 x 20% = 62 ($000)
+= Ответ: $62 000
+! Продавала материнская Ash, поэтому нереализованная прибыль долю NCI не уменьшает.`,
+`# 1-qadam: Rowan ning yillik foydasi
+  3 000 - 1 700 - 550 - 350 - 90 = 310
+# 2-qadam: NCI ulushi (20%)
+  310 x 20% = 62 ($000)
+= Javob: $62 000
+! Ona kompaniya Ash sotgan, shuning uchun amalga oshmagan foyda NCI ulushini kamaytirmaydi.`),
+        task(20, 3, 'number', `Task 6: What is the profit attributable to the owners of Ash? (in $)`,
+          amount(858000, '$858,000'),
+`# Step 1: Group profit for the year
+  Gross profit 9,950 - 5,590 = 4,360
+  Less expenses (1,200 + 550) + (800 + 350) = 2,900
+  Less tax 450 + 90 = 540
+  4,360 - 2,900 - 540 = 920
+# Step 2: Less the NCI
+  920 - 62 = 858 ($000)
+= Answer: $858,000
+! Check: Ash 810 + Rowan 310 - dividend 160 - unrealised profit 40 = 920.`,
+`# Шаг 1: Прибыль группы за год
+  Валовая прибыль 9 950 - 5 590 = 4 360
+  Минус расходы (1 200 + 550) + (800 + 350) = 2 900
+  Минус налог 450 + 90 = 540
+  4 360 - 2 900 - 540 = 920
+# Шаг 2: Минус NCI
+  920 - 62 = 858 ($000)
+= Ответ: $858 000
+! Проверка: Ash 810 + Rowan 310 - дивиденд 160 - нереализованная прибыль 40 = 920.`,
+`# 1-qadam: Guruhning yillik foydasi
+  Yalpi foyda 9 950 - 5 590 = 4 360
+  Minus xarajatlar (1 200 + 550) + (800 + 350) = 2 900
+  Minus soliq 450 + 90 = 540
+  4 360 - 2 900 - 540 = 920
+# 2-qadam: Minus NCI
+  920 - 62 = 858 ($000)
+= Javob: $858 000
+! Tekshiruv: Ash 810 + Rowan 310 - dividend 160 - amalga oshmagan foyda 40 = 920.`),
+      ],
+    },
+
+    {
+      id: 'bppc36', bppRef: '36', bppPage: 274, area: 'statements', title: 'Poppy and Thistle (ratios)',
+      intro: `Two companies in the same trade are compared ($000). Poppy: revenue 300; gross profit 135; operating profit 60; capital employed 250; current assets 210, of which inventory 95 and receivables 50; current liabilities 175. Thistle: revenue 400; gross profit 196; operating profit 52; capital employed 500; current assets 360, of which inventory 290 and receivables 96; current liabilities 300. All sales are on credit. Use Kaplan's formulas.`,
+      tasks: [
+        task(18, 2, 'number', `Task 1: What is Poppy's gross profit margin? (in %)`,
+          amount(45, '45%'),
+`# Step 1: Gross profit / revenue x 100
+  135 / 300 x 100 = 45
+= Answer: 45%`,
+`# Шаг 1: Валовая прибыль / выручка x 100
+  135 / 300 x 100 = 45
+= Ответ: 45%`,
+`# 1-qadam: Yalpi foyda / tushum x 100
+  135 / 300 x 100 = 45
+= Javob: 45%`),
+        task(18, 2, 'number', `Task 2: What is Thistle's operating profit margin? (in %)`,
+          amount(13, '13%'),
+`# Step 1: Operating profit / revenue x 100
+  52 / 400 x 100 = 13
+= Answer: 13% (Poppy's is 60 / 300 = 20%)`,
+`# Шаг 1: Операционная прибыль / выручка x 100
+  52 / 400 x 100 = 13
+= Ответ: 13% (у Poppy 60 / 300 = 20%)`,
+`# 1-qadam: Operatsion foyda / tushum x 100
+  52 / 400 x 100 = 13
+= Javob: 13% (Poppy da 60 / 300 = 20%)`),
+        task(18, 2, 'single', `Task 3: What is each company's net asset turnover (revenue / capital employed)?`,
+          pick(['Poppy 1.2 times; Thistle 0.8 times', 'Poppy 0.8 times; Thistle 1.2 times', 'Poppy 1.2 times; Thistle 1.25 times', 'Poppy 0.83 times; Thistle 1.25 times'], 0),
+`# Step 1: Poppy
+  300 / 250 = 1.2 times
+# Step 2: Thistle
+  400 / 500 = 0.8 times
+= Answer: Poppy 1.2 times; Thistle 0.8 times
+! The last option turns the ratio upside down (capital employed / revenue).`,
+`# Шаг 1: Poppy
+  300 / 250 = 1,2 раза
+# Шаг 2: Thistle
+  400 / 500 = 0,8 раза
+= Ответ: Poppy 1,2 раза; Thistle 0,8 раза
+! Последний вариант переворачивает дробь (задействованный капитал / выручка).`,
+`# 1-qadam: Poppy
+  300 / 250 = 1,2 marta
+# 2-qadam: Thistle
+  400 / 500 = 0,8 marta
+= Javob: Poppy 1,2 marta; Thistle 0,8 marta
+! Oxirgi variant kasrni teskari qiladi (ishlatilgan kapital / tushum).`),
+        task(18, 3, 'single', `Task 4: What is each company's quick ratio?`,
+          pick(['Poppy 0.7:1; Thistle 0.2:1', 'Poppy 1.2:1; Thistle 1.2:1', 'Poppy 0.3:1; Thistle 0.3:1', 'Poppy 0.7:1; Thistle 1.2:1'], 0),
+`# Step 1: Poppy
+  (210 - 95) / 175 = 115 / 175 = 0.66, about 0.7:1
+# Step 2: Thistle
+  (360 - 290) / 300 = 70 / 300 = 0.23, about 0.2:1
+= Answer: Poppy 0.7:1; Thistle 0.2:1
+! Both have a current ratio of 1.2:1. Only the quick ratio shows how much Thistle relies on inventory.`,
+`# Шаг 1: Poppy
+  (210 - 95) / 175 = 115 / 175 = 0,66, около 0,7:1
+# Шаг 2: Thistle
+  (360 - 290) / 300 = 70 / 300 = 0,23, около 0,2:1
+= Ответ: Poppy 0,7:1; Thistle 0,2:1
+! Текущая ликвидность у обеих 1,2:1. Только быстрая показывает, насколько Thistle зависит от запасов.`,
+`# 1-qadam: Poppy
+  (210 - 95) / 175 = 115 / 175 = 0,66, taxminan 0,7:1
+# 2-qadam: Thistle
+  (360 - 290) / 300 = 70 / 300 = 0,23, taxminan 0,2:1
+= Javob: Poppy 0,7:1; Thistle 0,2:1
+! Ikkalasining joriy likvidligi 1,2:1. Faqat tezkor likvidlik Thistle zaxiraga qanchalik bog'liqligini ko'rsatadi.`),
+        task(18, 2, 'number', `Task 5: What is Thistle's receivables collection period, to the nearest day?`,
+          amount(88, '88 days'),
+`# Step 1: Receivables / credit sales x 365
+  96 / 400 x 365 = 87.6
+# Step 2: Round
+  88 days (Poppy: 50 / 300 x 365 = 61 days)
+= Answer: 88 days`,
+`# Шаг 1: Дебиторы / продажи в кредит x 365
+  96 / 400 x 365 = 87,6
+# Шаг 2: Округлим
+  88 дней (Poppy: 50 / 300 x 365 = 61 день)
+= Ответ: 88 дней`,
+`# 1-qadam: Debitorlar / kreditga sotuv x 365
+  96 / 400 x 365 = 87,6
+# 2-qadam: Yaxlitlaymiz
+  88 kun (Poppy: 50 / 300 x 365 = 61 kun)
+= Javob: 88 kun`),
+        task(18, 4, 'matrix', `Task 6: Is each conclusion true or false?`,
+          grid(TF, [['Thistle has the higher gross profit margin.', 0], ['Poppy uses its capital more efficiently to generate sales.', 0], ['Thistle\'s low quick ratio is mainly due to its large inventory.', 0], ['Thistle collects cash from customers faster than Poppy.', 1]]),
+`Use the ratios worked out above.
+- Thistle 49% (196 / 400) against Poppy 45%. TRUE.
+- Asset turnover: Poppy 1.2 times against Thistle 0.8. TRUE.
+- Inventory is 290 of Thistle's 360 current assets. TRUE.
+- Thistle takes 88 days to collect, Poppy 61 days: Thistle is SLOWER. FALSE.`,
+`Используем рассчитанные выше коэффициенты.
+- Thistle 49% (196 / 400) против 45% у Poppy. ВЕРНО.
+- Оборачиваемость: Poppy 1,2 раза против 0,8 у Thistle. ВЕРНО.
+- Запасы — 290 из 360 оборотных активов Thistle. ВЕРНО.
+- Thistle собирает долги за 88 дней, Poppy за 61: Thistle МЕДЛЕННЕЕ. НЕВЕРНО.`,
+`Yuqorida hisoblangan ko'rsatkichlardan foydalanamiz.
+- Thistle 49% (196 / 400), Poppy 45%. TO'G'RI.
+- Aylanma: Poppy 1,2 marta, Thistle 0,8. TO'G'RI.
+- Zaxira Thistle ning 360 joriy aktividan 290. TO'G'RI.
+- Thistle qarzni 88 kunda, Poppy 61 kunda yig'adi: Thistle SEKINROQ. NOTO'G'RI.`),
       ],
     },
   ];

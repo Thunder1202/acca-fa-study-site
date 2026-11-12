@@ -34,6 +34,7 @@ for (const c of cases) {
       for (const l of ['ru', 'uz']) assert.equal(shape(t.explanation[l]), shape(t.explanation.en), `${where} ${l} lines differ`);
       if (t.type === 'single') assert.ok(t.correctIndex >= 0 && t.correctIndex < t.options.length, `${where} key`);
       else if (t.type === 'number') assert.ok(Number.isFinite(t.correctValue) && t.answerText.trim(), `${where} key`);
+      else if (t.type === 'multi') assert.ok(t.correctIndices.length === 2 && t.correctIndices.every((k) => k >= 0 && k < t.options.length), `${where} key`);
       else if (t.type === 'matrix') {
         for (const r of t.rows) assert.ok(r.correctIndex >= 0 && r.correctIndex < t.columns.length, `${where} row key`);
         assert.equal(t.explanation.en.split('\n').filter((l) => l.startsWith('- ')).length, t.rows.length, `${where} explains every row`);
@@ -137,4 +138,43 @@ test('BPP cases: every calculated answer matches a fresh calculation', () => {
   assert.equal(chosen('bppc25', 6), `$${(-fin25 * 1000).toLocaleString('en-US')} outflow`);
   assert.equal(value('bppc25', 7), (1100 - 500) * 1000);
   assert.equal((1100 - 500) + op25 - buy25 + 2400 + fin25, 2200 - 1100);
+
+  // Robin and Lark.
+  const urp31 = (120000 - 90000) * 0.4;
+  assert.equal(value('bppc31', 1), 160000 + 50000 - (120000 + 60000));
+  assert.equal(value('bppc31', 2), urp31);
+  assert.equal(value('bppc31', 3), 3200000 + 700000 - 120000 + urp31);
+  assert.equal(value('bppc31', 5), 520000 - urp31 + 0.75 * (180000 - 60000));
+
+  // Heath and Moss.
+  assert.equal(value('bppc32', 1), 1500000 + (40000000 + 4000000) - 12500000);
+  assert.equal(value('bppc32', 4), 10000000 * 0.25 * 0.4);
+  assert.equal(value('bppc32', 7), 12500000 + 0.25 * (12000000 - 4000000));
+
+  // Fern and Holly: 3,000,000 of 5,000,000 shares is 60%.
+  const urp33 = 300000 * 25 / 125 * 0.5;
+  assert.equal(3000000 / 5000000, 0.6);
+  assert.equal(value('bppc33', 1), (3600000 + 2200000) - (5000000 + 100000));
+  assert.equal(chosen('bppc33', 3), `$${urp33.toLocaleString('en-US')}`);
+  assert.equal(value('bppc33', 5), 900000 - urp33 + 0.6 * (400000 - 100000));
+
+  // Ash and Rowan ($000): the group profit agrees both ways.
+  const rev34 = 7200 + 3000 - 250, urp34 = (250 - 150) * 0.4, cos34 = 4100 + 1700 - 250 + urp34;
+  const rowan = 3000 - 1700 - 550 - 350 - 90, ash = 7200 - 4100 - 1200 - 800 + 160 - 450;
+  const group34 = rev34 - cos34 - (1200 + 550) - (800 + 350) - (450 + 90);
+  assert.equal(group34, ash + rowan - 160 - urp34);
+  assert.equal(value('bppc34', 1), rev34 * 1000);
+  assert.equal(value('bppc34', 2), urp34 * 1000);
+  assert.equal(value('bppc34', 3), cos34 * 1000);
+  assert.equal(value('bppc34', 5), rowan * 0.2 * 1000);
+  assert.equal(value('bppc34', 6), (group34 - rowan * 0.2) * 1000);
+
+  // Poppy and Thistle: Kaplan's ratio formulas.
+  assert.equal(value('bppc36', 1), 135 / 300 * 100);
+  assert.equal(value('bppc36', 2), 52 / 400 * 100);
+  assert.equal(chosen('bppc36', 3), `Poppy ${300 / 250} times; Thistle ${400 / 500} times`);
+  assert.equal(chosen('bppc36', 4), `Poppy ${((210 - 95) / 175).toFixed(1)}:1; Thistle ${((360 - 290) / 300).toFixed(1)}:1`);
+  assert.equal(value('bppc36', 5), Math.round(96 / 400 * 365));
+  assert.ok(196 / 400 > 135 / 300 && 96 / 400 * 365 > 50 / 300 * 365);
+  assert.equal(210 / 175, 360 / 300);
 });
