@@ -418,6 +418,717 @@
 = Javob: $12 000`),
       ],
     },
+
+    {
+      id: 'bppc21', bppRef: '21', bppPage: 247, area: 'statements', title: 'Teal Co',
+      intro: `Teal Co's trial balance at 31 October is shown ($000). Buildings are depreciated at 5% of cost; at 31 October, after this year's charge, they were valued at $1,900,000 and the directors want the valuation in the accounts. Motor vehicles are depreciated at 20% of carrying amount and furniture at 20% of cost. Closing inventory at cost is $310,000, but $50,000 of it is old stock that will be sold in November for $30,000. Administrative expenses include $6,000 for November. The allowance for receivables is to be 5% of receivables. Wages of $40,000 are owed for October. In October a 1 for 10 bonus issue was made from the share premium account, but it has not been recorded.`,
+      table: { head: ['Trial balance', 'Dr $000', 'Cr $000'], rows: [
+        ['Inventory at 1 November', '380', ''], ['Administrative expenses', '1,150', ''], ['Share premium', '', '250'],
+        ['Retained earnings at 1 November', '', '90'], ['Allowance for receivables at 1 November', '', '45'], ['Revenue', '', '6,100'],
+        ['Bank overdraft', '', '90'], ['Returns inward', '110', ''], ['Trade payables', '', '360'], ['Loan note interest', '35', ''],
+        ['Trade receivables', '950', ''], ['Purchases', '3,800', ''], ['7% loan notes', '', '500'], ['Irrecoverable debts', '160', ''],
+        ['$1 ordinary shares', '', '2,000'], ['Land at cost', '800', ''], ['Buildings at cost', '1,600', ''], ['Motor vehicles at cost', '300', ''],
+        ['Furniture at cost', '1,000', ''], ['Accumulated depreciation: buildings', '', '400'], ['Accumulated depreciation: vehicles', '', '100'],
+        ['Accumulated depreciation: furniture', '', '350'], ['Totals', '10,285', '10,285'],
+      ] },
+      tasks: [
+        task(15, 4, 'matrix', `Task 1: Does each item go into the statement of profit or loss?`,
+          grid(['In profit or loss', 'Not in profit or loss'], [['Administrative expenses', 0], ['Share premium', 1], ['Returns inward', 0], ['Loan note interest', 0], ['Trade receivables', 1], ['Irrecoverable debts', 0]]),
+`Profit or loss holds income and expenses. Assets, liabilities and equity go to the statement of financial position.
+- Administrative expenses: an expense. IN.
+- Share premium: equity. NOT IN.
+- Returns inward: reduce revenue. IN.
+- Loan note interest: a finance cost. IN.
+- Trade receivables: an asset. NOT IN.
+- Irrecoverable debts: an expense. IN.`,
+`В отчёт о прибылях входят доходы и расходы. Активы, обязательства и капитал — в отчёт о финансовом положении.
+- Административные расходы: расход. ДА.
+- Эмиссионный доход: капитал. НЕТ.
+- Возвраты от покупателей: уменьшают выручку. ДА.
+- Проценты по облигациям: финансовый расход. ДА.
+- Дебиторы: актив. НЕТ.
+- Безнадёжные долги: расход. ДА.`,
+`Foyda hisobotiga daromad va xarajatlar kiradi. Aktiv, majburiyat va kapital moliyaviy holat hisobotiga boradi.
+- Ma'muriy xarajatlar: xarajat. HA.
+- Emissiya daromadi: kapital. YO'Q.
+- Xaridorlar qaytargan tovar: tushumni kamaytiradi. HA.
+- Obligatsiya foizi: moliyaviy xarajat. HA.
+- Debitorlar: aktiv. YO'Q.
+- Umidsiz qarzlar: xarajat. HA.`),
+        task(7, 2, 'number', `Task 2: What is the carrying amount of buildings at 31 October? (in $)`,
+          amount(1900000, '$1,900,000'),
+`# Step 1: Charge this year's depreciation first
+  1,600,000 x 5% = 80,000
+  Carrying amount before revaluation: 1,600,000 - 400,000 - 80,000 = 1,120,000
+# Step 2: Revalue
+  The directors put the valuation in the accounts, so buildings are shown at 1,900,000.
+= Answer: $1,900,000
+! BPP's printed answer gives the carrying amount before revaluation, although its own question says the valuation is put in the accounts.`,
+`# Шаг 1: Сначала амортизация года
+  1 600 000 x 5% = 80 000
+  Балансовая стоимость до переоценки: 1 600 000 - 400 000 - 80 000 = 1 120 000
+# Шаг 2: Переоценка
+  Директора отражают оценку в отчётности, здания показывают по 1 900 000.
+= Ответ: $1 900 000
+! В напечатанном ответе BPP дана стоимость до переоценки, хотя в его же вопросе оценку отражают в отчётности.`,
+`# 1-qadam: Avval yil amortizatsiyasi
+  1 600 000 x 5% = 80 000
+  Qayta baholashdan oldingi balans qiymati: 1 600 000 - 400 000 - 80 000 = 1 120 000
+# 2-qadam: Qayta baholash
+  Direktorlar bahoni hisobotga kiritadi, binolar 1 900 000 da ko'rsatiladi.
+= Javob: $1 900 000
+! BPP chop etgan javobda qayta baholashdan oldingi qiymat berilgan, garchi uning o'z savolida baho hisobotga kiritiladi.`),
+        task(7, 1, 'number', `Task 3: What is the revaluation surplus on the buildings? (in $)`,
+          amount(780000, '$780,000'),
+`# Step 1: Valuation less carrying amount before revaluation
+  1,900,000 - 1,120,000 = 780,000
+= Answer: $780,000`,
+`# Шаг 1: Оценка минус балансовая стоимость до переоценки
+  1 900 000 - 1 120 000 = 780 000
+= Ответ: $780 000`,
+`# 1-qadam: Baho minus qayta baholashdan oldingi balans qiymati
+  1 900 000 - 1 120 000 = 780 000
+= Javob: $780 000`),
+        task(6, 1, 'number', `Task 4: What is the carrying amount of motor vehicles at 31 October? (in $)`,
+          amount(160000, '$160,000'),
+`# Step 1: Carrying amount at the start
+  300,000 - 100,000 = 200,000
+# Step 2: Depreciation at 20% of carrying amount
+  200,000 x 20% = 40,000
+# Step 3: Carrying amount at the end
+  200,000 - 40,000 = 160,000
+= Answer: $160,000`,
+`# Шаг 1: Балансовая стоимость на начало
+  300 000 - 100 000 = 200 000
+# Шаг 2: Амортизация 20% от балансовой стоимости
+  200 000 x 20% = 40 000
+# Шаг 3: Балансовая стоимость на конец
+  200 000 - 40 000 = 160 000
+= Ответ: $160 000`,
+`# 1-qadam: Boshlang'ich balans qiymati
+  300 000 - 100 000 = 200 000
+# 2-qadam: Balans qiymatining 20% amortizatsiya
+  200 000 x 20% = 40 000
+# 3-qadam: Yakuniy balans qiymati
+  200 000 - 40 000 = 160 000
+= Javob: $160 000`),
+        task(6, 1, 'number', `Task 5: What is the carrying amount of furniture at 31 October? (in $)`,
+          amount(450000, '$450,000'),
+`# Step 1: Depreciation at 20% of cost
+  1,000,000 x 20% = 200,000
+# Step 2: Carrying amount
+  1,000,000 - 350,000 - 200,000 = 450,000
+= Answer: $450,000`,
+`# Шаг 1: Амортизация 20% от себестоимости
+  1 000 000 x 20% = 200 000
+# Шаг 2: Балансовая стоимость
+  1 000 000 - 350 000 - 200 000 = 450 000
+= Ответ: $450 000`,
+`# 1-qadam: Tannarxning 20% amortizatsiya
+  1 000 000 x 20% = 200 000
+# 2-qadam: Balans qiymati
+  1 000 000 - 350 000 - 200 000 = 450 000
+= Javob: $450 000`),
+        task(9, 3, 'matrix', `Task 6: Is each year-end adjustment a debit or a credit to profit for the year?`,
+          grid(DC, [['Inventory write-down', 0], ['Administrative expenses for November', 1], ['Increase in the allowance for receivables', 0], ['Wages owed for October', 0]]),
+`A debit to profit is an extra expense; a credit reduces an expense.
+- Inventory: NRV 30,000 is below cost 50,000, so cost of sales rises by 20,000. DEBIT.
+- November's expense is a prepayment, taken out of this year. CREDIT.
+- Allowance up from 45,000 to 47,500: an extra expense. DEBIT.
+- Wages owed: an accrual, an extra expense. DEBIT.`,
+`Дебет прибыли — дополнительный расход, кредит — уменьшение расхода.
+- Запасы: NRV 30 000 ниже себестоимости 50 000, себестоимость продаж растёт на 20 000. ДЕБЕТ.
+- Расход за ноябрь — предоплата, его убирают из этого года. КРЕДИТ.
+- Резерв растёт с 45 000 до 47 500: дополнительный расход. ДЕБЕТ.
+- Невыплаченная зарплата: начисление, дополнительный расход. ДЕБЕТ.`,
+`Foydaning debeti — qo'shimcha xarajat, krediti — xarajatning kamayishi.
+- Zaxira: NRV 30 000 tannarx 50 000 dan past, sotuv tannarxi 20 000 ga oshadi. DEBET.
+- Noyabr xarajati — oldindan to'lov, shu yildan chiqariladi. KREDIT.
+- Zaxira 45 000 dan 47 500 gacha oshadi: qo'shimcha xarajat. DEBET.
+- To'lanmagan ish haqi: hisoblangan qarz, qo'shimcha xarajat. DEBET.`),
+        task(12, 1, 'single', `Task 7: How does the bonus issue affect Teal Co's cash?`,
+          pick(['It increases cash', 'It decreases cash', 'It does not affect cash'], 2),
+`# Step 1: What a bonus issue is
+  New shares are given to existing shareholders free, paid for out of a reserve.
+# Step 2: Cash
+  No money comes in or goes out.
+= Answer: it does not affect cash`,
+`# Шаг 1: Что такое бонусный выпуск
+  Новые акции бесплатно дают нынешним акционерам за счёт резерва.
+# Шаг 2: Деньги
+  Деньги не поступают и не уходят.
+= Ответ: на деньги не влияет`,
+`# 1-qadam: Bonus emissiya nima
+  Yangi aksiyalar mavjud aksiyadorlarga zaxira hisobidan bepul beriladi.
+# 2-qadam: Pul
+  Pul kelmaydi ham, ketmaydi ham.
+= Javob: pulga ta'sir qilmaydi`),
+        task(12, 2, 'number', `Task 8: What is the balance on share premium after the bonus issue? (in $)`,
+          amount(50000, '$50,000'),
+`# Step 1: New shares
+  2,000,000 shares / 10 = 200,000 shares of $1 = 200,000
+# Step 2: Paid for from share premium
+  250,000 - 200,000 = 50,000
+  (Share capital becomes 2,000,000 + 200,000 = 2,200,000.)
+= Answer: $50,000`,
+`# Шаг 1: Новые акции
+  2 000 000 акций / 10 = 200 000 акций по $1 = 200 000
+# Шаг 2: За счёт эмиссионного дохода
+  250 000 - 200 000 = 50 000
+  (Акционерный капитал становится 2 000 000 + 200 000 = 2 200 000.)
+= Ответ: $50 000`,
+`# 1-qadam: Yangi aksiyalar
+  2 000 000 aksiya / 10 = $1 dan 200 000 aksiya = 200 000
+# 2-qadam: Emissiya daromadi hisobidan
+  250 000 - 200 000 = 50 000
+  (Ustav kapitali 2 000 000 + 200 000 = 2 200 000 bo'ladi.)
+= Javob: $50 000`),
+      ],
+    },
+
+    {
+      id: 'bppc22', bppRef: '22', bppPage: 248, area: 'cashflows', title: 'Linnet Co',
+      intro: `Linnet Co is preparing its statement of cash flows for the year to 31 December ($000), using Kaplan's layout: the indirect method starts from operating profit, and interest paid is a financing cash flow. Profit or loss: operating profit 450; finance costs 50; profit before tax 400; income tax 260; profit for the year 140. Investments (carrying amount 30) were sold for 36. Fixtures that cost 90, carrying amount 50, were sold for 38. Property, plant and equipment at cost or valuation was 780 this year and 650 last year, with accumulated depreciation of 360 and 310; part of it was revalued during the year. 60,000 $1 shares were issued at $1.20 each.`,
+      table: { head: ['Statement of financial position ($000)', 'This year', 'Last year'], rows: [
+        ['Property, plant and equipment', '420', '340'], ['Intangible assets', '270', '220'], ['Investments', '0', '30'],
+        ['Inventories', '170', '120'], ['Receivables', '410', '330'], ['Cash', '60', '5'],
+        ['Share capital ($1 shares)', '240', '180'], ['Share premium', '192', '180'], ['Revaluation surplus', '110', '100'], ['Retained earnings', '205', '120'],
+        ['Long-term loan', '120', '0'], ['Trade payables', '163', '130'], ['Bank overdraft', '0', '85'], ['Income tax payable', '300', '250'],
+      ] },
+      tasks: [
+        task(17, 2, 'single', `Task 1: Using Kaplan's indirect method, what figure starts the cash flows from operating activities?`,
+          pick(['$450,000 operating profit', '$400,000 profit before tax', '$140,000 profit for the year', '$510,000 operating profit plus finance costs'], 0),
+`Kaplan's layout starts from operating profit, which is before finance costs and tax.
+- Interest paid is then shown under financing, and tax paid under operating.
+= Answer: $450,000 operating profit
+! BPP's printed answer starts from profit before tax. That was the older presentation.`,
+`В схеме Kaplan начинают с операционной прибыли, то есть до финансовых расходов и налога.
+- Уплаченные проценты затем показывают в финансовой, а налог — в операционной.
+= Ответ: операционная прибыль $450 000
+! В напечатанном ответе BPP начинают с прибыли до налога. Это прежнее представление.`,
+`Kaplan tuzilishida operatsion foydadan, ya'ni moliyaviy xarajat va soliqdan oldin boshlanadi.
+- To'langan foiz keyin moliyaviyda, soliq esa operatsionda ko'rsatiladi.
+= Javob: $450 000 operatsion foyda
+! BPP chop etgan javobda soliqdan oldingi foydadan boshlanadi. Bu eski ko'rinish.`),
+        task(17, 2, 'number', `Task 2: What is the depreciation charge to add back? (in $)`,
+          amount(90000, '$90,000'),
+`# Step 1: Depreciation on the fixtures sold
+  Cost 90 - carrying amount 50 = 40
+# Step 2: Rebuild accumulated depreciation
+  Opening 310 - removed on disposal 40 + charge = closing 360
+# Step 3: Charge
+  360 - 310 + 40 = 90 ($000)
+= Answer: $90,000`,
+`# Шаг 1: Амортизация проданной мебели
+  Себестоимость 90 - балансовая стоимость 50 = 40
+# Шаг 2: Восстановим накопленную амортизацию
+  Начало 310 - списано при выбытии 40 + начисление = конец 360
+# Шаг 3: Начисление
+  360 - 310 + 40 = 90 ($000)
+= Ответ: $90 000`,
+`# 1-qadam: Sotilgan jihozlar amortizatsiyasi
+  Tannarx 90 - balans qiymati 50 = 40
+# 2-qadam: Jamg'arilgan amortizatsiyani tiklaymiz
+  Boshi 310 - chiqib ketishda olib tashlangan 40 + hisob = oxiri 360
+# 3-qadam: Hisob
+  360 - 310 + 40 = 90 ($000)
+= Javob: $90 000`),
+        task(17, 3, 'matrix', `Task 3: In the operating section, is each item added to or subtracted from operating profit?`,
+          grid(['Add', 'Subtract'], [['Loss on sale of fixtures', 0], ['Profit on sale of investments', 1], ['Increase in inventories', 1], ['Increase in receivables', 1], ['Increase in trade payables', 0]]),
+`- Loss on sale (50 - 38 = 12): reduced profit but cost no cash. ADD.
+- Profit on investments (36 - 30 = 6): the cash is in investing, so take it out here. SUBTRACT.
+- Inventories up 50: cash tied up. SUBTRACT.
+- Receivables up 80: cash not yet collected. SUBTRACT.
+- Payables up 33: cash not yet paid out. ADD.`,
+`- Убыток от продажи (50 - 38 = 12): уменьшил прибыль без затрат денег. ПРИБАВИТЬ.
+- Прибыль от инвестиций (36 - 30 = 6): деньги в инвестиционной, здесь её убирают. ВЫЧЕСТЬ.
+- Запасы выросли на 50: деньги связаны. ВЫЧЕСТЬ.
+- Дебиторы выросли на 80: деньги ещё не получены. ВЫЧЕСТЬ.
+- Кредиторы выросли на 33: деньги ещё не уплачены. ПРИБАВИТЬ.`,
+`- Sotuvdan zarar (50 - 38 = 12): foydani pulsiz kamaytirgan. QO'SHILADI.
+- Investitsiyadan foyda (36 - 30 = 6): pul investitsiyada, bu yerdan olinadi. AYIRILADI.
+- Zaxira 50 ga oshgan: pul bog'langan. AYIRILADI.
+- Debitorlar 80 ga oshgan: pul hali olinmagan. AYIRILADI.
+- Kreditorlar 33 ga oshgan: pul hali to'lanmagan. QO'SHILADI.`),
+        task(17, 2, 'number', `Task 4: How much income tax was paid? (in $)`,
+          amount(210000, '$210,000'),
+`# Step 1: Tax account
+  Opening liability 250 + charge 260 - closing liability 300 = paid
+# Step 2: Calculate
+  250 + 260 - 300 = 210 ($000)
+= Answer: $210,000`,
+`# Шаг 1: Счёт налога
+  Обязательство на начало 250 + начислено 260 - обязательство на конец 300 = уплачено
+# Шаг 2: Расчёт
+  250 + 260 - 300 = 210 ($000)
+= Ответ: $210 000`,
+`# 1-qadam: Soliq hisobi
+  Boshidagi majburiyat 250 + hisoblangan 260 - oxiridagi majburiyat 300 = to'langan
+# 2-qadam: Hisob
+  250 + 260 - 300 = 210 ($000)
+= Javob: $210 000`),
+        task(17, 2, 'number', `Task 5: How much was paid for property, plant and equipment? (in $)`,
+          amount(210000, '$210,000'),
+`# Step 1: Rebuild cost or valuation
+  Opening 650 + revaluation (110 - 100 = 10) + purchases - disposals at cost 90 = closing 780
+# Step 2: Solve
+  Purchases = 780 - 650 - 10 + 90 = 210 ($000)
+= Answer: $210,000
+! The revaluation raised the asset without any cash, so take it out.`,
+`# Шаг 1: Восстановим себестоимость или оценку
+  Начало 650 + переоценка (110 - 100 = 10) + покупки - выбытия по себестоимости 90 = конец 780
+# Шаг 2: Решим
+  Покупки = 780 - 650 - 10 + 90 = 210 ($000)
+= Ответ: $210 000
+! Переоценка увеличила актив без денег, её исключают.`,
+`# 1-qadam: Tannarx yoki bahoni tiklaymiz
+  Boshi 650 + qayta baholash (110 - 100 = 10) + xaridlar - tannarxdagi chiqib ketish 90 = oxiri 780
+# 2-qadam: Yechamiz
+  Xaridlar = 780 - 650 - 10 + 90 = 210 ($000)
+= Javob: $210 000
+! Qayta baholash aktivni pulsiz oshirgan, u chiqariladi.`),
+        task(17, 1, 'number', `Task 6: What are the total receipts from selling non-current assets? (in $)`,
+          amount(74000, '$74,000'),
+`# Step 1: Add both sales
+  Fixtures 38 + investments 36 = 74 ($000)
+= Answer: $74,000`,
+`# Шаг 1: Сложим обе продажи
+  Мебель 38 + инвестиции 36 = 74 ($000)
+= Ответ: $74 000`,
+`# 1-qadam: Ikkala sotuvni qo'shamiz
+  Jihozlar 38 + investitsiyalar 36 = 74 ($000)
+= Javob: $74 000`),
+        task(17, 2, 'number', `Task 7: How much was paid in dividends? (in $)`,
+          amount(55000, '$55,000'),
+`# Step 1: Retained earnings account
+  Opening 120 + profit 140 - dividends = closing 205
+# Step 2: Solve
+  Dividends = 120 + 140 - 205 = 55 ($000)
+= Answer: $55,000`,
+`# Шаг 1: Счёт нераспределённой прибыли
+  Начало 120 + прибыль 140 - дивиденды = конец 205
+# Шаг 2: Решим
+  Дивиденды = 120 + 140 - 205 = 55 ($000)
+= Ответ: $55 000`,
+`# 1-qadam: Taqsimlanmagan foyda hisobi
+  Boshi 120 + foyda 140 - dividendlar = oxiri 205
+# 2-qadam: Yechamiz
+  Dividendlar = 120 + 140 - 205 = 55 ($000)
+= Javob: $55 000`),
+        task(17, 1, 'number', `Task 8: What are the proceeds from the share issue? (in $)`,
+          amount(72000, '$72,000'),
+`# Step 1: Share capital and premium together
+  (240 + 192) - (180 + 180) = 72 ($000)
+# Step 2: Check
+  60,000 shares x $1.20 = 72,000
+= Answer: $72,000`,
+`# Шаг 1: Капитал и эмиссионный доход вместе
+  (240 + 192) - (180 + 180) = 72 ($000)
+# Шаг 2: Проверка
+  60 000 акций x $1,20 = 72 000
+= Ответ: $72 000`,
+`# 1-qadam: Kapital va emissiya daromadi birga
+  (240 + 192) - (180 + 180) = 72 ($000)
+# 2-qadam: Tekshiruv
+  60 000 aksiya x $1,20 = 72 000
+= Javob: $72 000`),
+      ],
+    },
+
+    {
+      id: 'bppc23', bppRef: '23', bppPage: 250, area: 'cashflows', title: 'Avocet Co',
+      intro: `Avocet Co's figures for the year to 31 December are shown ($000). Profit or loss: operating profit 3,000; finance costs 350; profit before tax 2,650; income tax 800; profit for the year 1,850. During the year non-current assets that cost 1,000, with a carrying amount of 400, were sold for 650. The revaluation surplus came from revaluing land, which is not depreciated. Last year's tax was paid at the amount provided. The extra 10% loan notes were issued on 1 January and all their interest was paid in the year. Dividends paid were 900. Use Kaplan's layout: start from operating profit; interest paid goes under financing.`,
+      table: { head: ['Statement of financial position ($000)', 'This year', 'Last year'], rows: [
+        ['Non-current assets at cost or valuation', '12,500', '9,000'], ['Accumulated depreciation', '(6,200)', '(5,300)'],
+        ['Inventories', '3,100', '3,500'], ['Receivables', '4,100', '3,300'], ['Cash at bank', '400', '200'],
+        ['Share capital', '1,200', '1,200'], ['Revaluation surplus', '1,900', '1,300'], ['Retained earnings', '2,600', '1,650'],
+        ['10% loan notes', '3,500', '2,500'], ['Trade payables', '3,900', '3,400'], ['Income tax payable', '800', '650'],
+      ] },
+      tasks: [
+        task(17, 2, 'number', `Task 1: What is the depreciation charge for the year? (in $)`,
+          amount(1500000, '$1,500,000'),
+`# Step 1: Depreciation removed on the disposal
+  1,000 - 400 = 600
+# Step 2: Rebuild accumulated depreciation
+  5,300 - 600 + charge = 6,200
+# Step 3: Charge
+  6,200 - 5,300 + 600 = 1,500 ($000)
+= Answer: $1,500,000`,
+`# Шаг 1: Амортизация, списанная при выбытии
+  1 000 - 400 = 600
+# Шаг 2: Восстановим накопленную амортизацию
+  5 300 - 600 + начисление = 6 200
+# Шаг 3: Начисление
+  6 200 - 5 300 + 600 = 1 500 ($000)
+= Ответ: $1 500 000`,
+`# 1-qadam: Chiqib ketishda olib tashlangan amortizatsiya
+  1 000 - 400 = 600
+# 2-qadam: Jamg'arilgan amortizatsiyani tiklaymiz
+  5 300 - 600 + hisob = 6 200
+# 3-qadam: Hisob
+  6 200 - 5 300 + 600 = 1 500 ($000)
+= Javob: $1 500 000`),
+        task(17, 1, 'number', `Task 2: What profit on disposal is subtracted in the operating section? (in $)`,
+          amount(250000, '$250,000'),
+`# Step 1: Proceeds less carrying amount
+  650 - 400 = 250 ($000)
+= Answer: $250,000 (the 650 cash goes under investing)`,
+`# Шаг 1: Выручка минус балансовая стоимость
+  650 - 400 = 250 ($000)
+= Ответ: $250 000 (деньги 650 идут в инвестиционную)`,
+`# 1-qadam: Tushum minus balans qiymati
+  650 - 400 = 250 ($000)
+= Javob: $250 000 (650 pul investitsiyaga boradi)`),
+        task(17, 3, 'number', `Task 3: How much was paid for new non-current assets? (in $)`,
+          amount(3900000, '$3,900,000'),
+`# Step 1: Rebuild cost or valuation
+  Opening 9,000 + revaluation (1,900 - 1,300 = 600) + additions - disposals 1,000 = closing 12,500
+# Step 2: Solve
+  Additions = 12,500 - 9,000 - 600 + 1,000 = 3,900 ($000)
+= Answer: $3,900,000`,
+`# Шаг 1: Восстановим себестоимость или оценку
+  Начало 9 000 + переоценка (1 900 - 1 300 = 600) + покупки - выбытия 1 000 = конец 12 500
+# Шаг 2: Решим
+  Покупки = 12 500 - 9 000 - 600 + 1 000 = 3 900 ($000)
+= Ответ: $3 900 000`,
+`# 1-qadam: Tannarx yoki bahoni tiklaymiz
+  Boshi 9 000 + qayta baholash (1 900 - 1 300 = 600) + xaridlar - chiqib ketish 1 000 = oxiri 12 500
+# 2-qadam: Yechamiz
+  Xaridlar = 12 500 - 9 000 - 600 + 1 000 = 3 900 ($000)
+= Javob: $3 900 000`),
+        task(17, 2, 'number', `Task 4: How much income tax was paid? (in $)`,
+          amount(650000, '$650,000'),
+`# Step 1: Tax account
+  650 + 800 - 800 = 650 ($000)
+= Answer: $650,000 (last year's liability, paid in full)`,
+`# Шаг 1: Счёт налога
+  650 + 800 - 800 = 650 ($000)
+= Ответ: $650 000 (обязательство прошлого года, уплачено полностью)`,
+`# 1-qadam: Soliq hisobi
+  650 + 800 - 800 = 650 ($000)
+= Javob: $650 000 (o'tgan yil majburiyati, to'liq to'langan)`),
+        task(17, 2, 'matrix', `Task 5: Is each working capital change added or subtracted?`,
+          grid(['Add', 'Subtract'], [['Inventories (down 400)', 0], ['Receivables (up 800)', 1], ['Trade payables (up 500)', 0]]),
+`- Inventories fell: cash released. ADD.
+- Receivables rose: cash not yet collected. SUBTRACT.
+- Payables rose: cash not yet paid out. ADD.`,
+`- Запасы снизились: деньги высвободились. ПРИБАВИТЬ.
+- Дебиторы выросли: деньги ещё не получены. ВЫЧЕСТЬ.
+- Кредиторы выросли: деньги ещё не уплачены. ПРИБАВИТЬ.`,
+`- Zaxira kamaygan: pul bo'shagan. QO'SHILADI.
+- Debitorlar oshgan: pul hali olinmagan. AYIRILADI.
+- Kreditorlar oshgan: pul hali to'lanmagan. QO'SHILADI.`),
+        task(17, 2, 'number', `Task 6: What is net cash from operating activities? (in $)`,
+          amount(3700000, '$3,700,000'),
+`# Step 1: Cash generated from operations
+  3,000 + 1,500 - 250 + 400 - 800 + 500 = 4,350
+# Step 2: Less tax paid
+  4,350 - 650 = 3,700 ($000)
+= Answer: $3,700,000`,
+`# Шаг 1: Денежные средства от операций
+  3 000 + 1 500 - 250 + 400 - 800 + 500 = 4 350
+# Шаг 2: Минус уплаченный налог
+  4 350 - 650 = 3 700 ($000)
+= Ответ: $3 700 000`,
+`# 1-qadam: Operatsiyalardan pul
+  3 000 + 1 500 - 250 + 400 - 800 + 500 = 4 350
+# 2-qadam: Minus to'langan soliq
+  4 350 - 650 = 3 700 ($000)
+= Javob: $3 700 000`),
+        task(17, 2, 'single', `Task 7: What is the net cash flow from financing activities?`,
+          pick(['$250,000 outflow', '$100,000 inflow', '$1,000,000 inflow', '$1,250,000 outflow'], 0),
+`# Step 1: Each financing item
+  New loan notes: 3,500 - 2,500 = +1,000
+  Interest paid: 350 (all paid), so -350
+  Dividends paid: -900
+# Step 2: Net
+  1,000 - 350 - 900 = -250 ($000)
+= Answer: $250,000 outflow`,
+`# Шаг 1: Каждая финансовая статья
+  Новые облигации: 3 500 - 2 500 = +1 000
+  Уплаченные проценты: 350 (уплачены полностью), значит -350
+  Уплаченные дивиденды: -900
+# Шаг 2: Итог
+  1 000 - 350 - 900 = -250 ($000)
+= Ответ: отток $250 000`,
+`# 1-qadam: Har bir moliyaviy modda
+  Yangi obligatsiyalar: 3 500 - 2 500 = +1 000
+  To'langan foiz: 350 (to'liq to'langan), demak -350
+  To'langan dividendlar: -900
+# 2-qadam: Natija
+  1 000 - 350 - 900 = -250 ($000)
+= Javob: $250 000 chiqim`),
+        task(17, 1, 'number', `Task 8: What is the net increase in cash for the year? (in $)`,
+          amount(200000, '$200,000'),
+`# Step 1: Add the three sections
+  Operating 3,700 + investing (-3,900 + 650 = -3,250) + financing -250 = 200
+# Step 2: Check
+  Cash 200 at the start + 200 = 400 at the end. It agrees.
+= Answer: $200,000`,
+`# Шаг 1: Сложим три раздела
+  Операционная 3 700 + инвестиционная (-3 900 + 650 = -3 250) + финансовая -250 = 200
+# Шаг 2: Проверка
+  Деньги 200 на начало + 200 = 400 на конец. Сходится.
+= Ответ: $200 000`,
+`# 1-qadam: Uch bo'limni qo'shamiz
+  Operatsion 3 700 + investitsiya (-3 900 + 650 = -3 250) + moliyaviy -250 = 200
+# 2-qadam: Tekshiruv
+  Boshida 200 pul + 200 = oxirida 400. Mos keldi.
+= Javob: $200 000`),
+      ],
+    },
+
+    {
+      id: 'bppc24', bppRef: '24', bppPage: 251, area: 'cashflows', title: 'Swift Co',
+      intro: `Swift Co's figures for the year to 31 May are shown ($000). Profit or loss: operating profit 1,150 (after depreciation of 760); interest payable 12 (all paid); profit before tax 1,138; tax 210; profit for the year 928. Dividends paid were 300. Non-current assets with a carrying amount of 240 were sold for 210. The 10% loan was repaid on 31 May. Use Kaplan's layout: start from operating profit; interest and dividends paid go under financing.`,
+      table: { head: ['Statement of financial position ($000)', 'This year', 'Last year'], rows: [
+        ['Non-current assets (carrying amount)', '5,100', '3,000'], ['Inventory', '640', '560'], ['Trade receivables', '410', '260'], ['Bank', '0', '150'],
+        ['Share capital', '3,800', '2,600'], ['Share premium', '340', '180'], ['Retained earnings', '1,138', '510'],
+        ['10% loan', '0', '120'], ['Trade payables', '500', '400'], ['Taxation', '210', '160'], ['Bank overdraft', '162', '0'],
+      ] },
+      tasks: [
+        task(17, 1, 'number', `Task 1: What loss on disposal is added back in the operating section? (in $)`,
+          amount(30000, '$30,000'),
+`# Step 1: Carrying amount less proceeds
+  240 - 210 = 30 ($000)
+= Answer: $30,000 (add it back: it reduced profit but cost no cash)`,
+`# Шаг 1: Балансовая стоимость минус выручка
+  240 - 210 = 30 ($000)
+= Ответ: $30 000 (прибавляют: уменьшил прибыль без затрат денег)`,
+`# 1-qadam: Balans qiymati minus tushum
+  240 - 210 = 30 ($000)
+= Javob: $30 000 (qo'shiladi: foydani pulsiz kamaytirgan)`),
+        task(17, 3, 'number', `Task 2: How much was paid for non-current assets? (in $)`,
+          amount(3100000, '$3,100,000'),
+`# Step 1: Rebuild the carrying amount
+  Opening 3,000 - depreciation 760 - disposals 240 + purchases = closing 5,100
+# Step 2: Solve
+  Purchases = 5,100 - 3,000 + 760 + 240 = 3,100 ($000)
+= Answer: $3,100,000`,
+`# Шаг 1: Восстановим балансовую стоимость
+  Начало 3 000 - амортизация 760 - выбытия 240 + покупки = конец 5 100
+# Шаг 2: Решим
+  Покупки = 5 100 - 3 000 + 760 + 240 = 3 100 ($000)
+= Ответ: $3 100 000`,
+`# 1-qadam: Balans qiymatini tiklaymiz
+  Boshi 3 000 - amortizatsiya 760 - chiqib ketish 240 + xaridlar = oxiri 5 100
+# 2-qadam: Yechamiz
+  Xaridlar = 5 100 - 3 000 + 760 + 240 = 3 100 ($000)
+= Javob: $3 100 000`),
+        task(17, 2, 'number', `Task 3: How much tax was paid? (in $)`,
+          amount(160000, '$160,000'),
+`# Step 1: Tax account
+  160 + 210 - 210 = 160 ($000)
+= Answer: $160,000`,
+`# Шаг 1: Счёт налога
+  160 + 210 - 210 = 160 ($000)
+= Ответ: $160 000`,
+`# 1-qadam: Soliq hisobi
+  160 + 210 - 210 = 160 ($000)
+= Javob: $160 000`),
+        task(17, 2, 'matrix', `Task 4: Is each working capital change added or subtracted?`,
+          grid(['Add', 'Subtract'], [['Inventory (up 80)', 1], ['Receivables (up 150)', 1], ['Trade payables (up 100)', 0]]),
+`- Inventory rose: cash tied up. SUBTRACT.
+- Receivables rose: cash not yet collected. SUBTRACT.
+- Payables rose: cash not yet paid out. ADD.`,
+`- Запасы выросли: деньги связаны. ВЫЧЕСТЬ.
+- Дебиторы выросли: деньги ещё не получены. ВЫЧЕСТЬ.
+- Кредиторы выросли: деньги ещё не уплачены. ПРИБАВИТЬ.`,
+`- Zaxira oshgan: pul bog'langan. AYIRILADI.
+- Debitorlar oshgan: pul hali olinmagan. AYIRILADI.
+- Kreditorlar oshgan: pul hali to'lanmagan. QO'SHILADI.`),
+        task(17, 2, 'number', `Task 5: What is net cash from operating activities? (in $)`,
+          amount(1650000, '$1,650,000'),
+`# Step 1: Cash generated from operations
+  1,150 + 760 + 30 - 80 - 150 + 100 = 1,810
+# Step 2: Less tax paid
+  1,810 - 160 = 1,650 ($000)
+= Answer: $1,650,000`,
+`# Шаг 1: Денежные средства от операций
+  1 150 + 760 + 30 - 80 - 150 + 100 = 1 810
+# Шаг 2: Минус уплаченный налог
+  1 810 - 160 = 1 650 ($000)
+= Ответ: $1 650 000`,
+`# 1-qadam: Operatsiyalardan pul
+  1 150 + 760 + 30 - 80 - 150 + 100 = 1 810
+# 2-qadam: Minus to'langan soliq
+  1 810 - 160 = 1 650 ($000)
+= Javob: $1 650 000`),
+        task(17, 2, 'number', `Task 6: What were the proceeds from issuing shares? (in $)`,
+          amount(1360000, '$1,360,000'),
+`# Step 1: Share capital and premium together
+  (3,800 + 340) - (2,600 + 180) = 1,360 ($000)
+= Answer: $1,360,000`,
+`# Шаг 1: Капитал и эмиссионный доход вместе
+  (3 800 + 340) - (2 600 + 180) = 1 360 ($000)
+= Ответ: $1 360 000`,
+`# 1-qadam: Kapital va emissiya daromadi birga
+  (3 800 + 340) - (2 600 + 180) = 1 360 ($000)
+= Javob: $1 360 000`),
+        task(17, 2, 'number', `Task 7: By how much did cash and cash equivalents DECREASE in the year? (in $)`,
+          amount(312000, '$312,000'),
+`# Step 1: Each section
+  Operating 1,650
+  Investing -3,100 + 210 = -2,890
+  Financing 1,360 - 120 loan - 12 interest - 300 dividends = 928
+# Step 2: Net
+  1,650 - 2,890 + 928 = -312 ($000)
+= Answer: a decrease of $312,000`,
+`# Шаг 1: Каждый раздел
+  Операционная 1 650
+  Инвестиционная -3 100 + 210 = -2 890
+  Финансовая 1 360 - 120 заём - 12 проценты - 300 дивиденды = 928
+# Шаг 2: Итог
+  1 650 - 2 890 + 928 = -312 ($000)
+= Ответ: уменьшение на $312 000`,
+`# 1-qadam: Har bir bo'lim
+  Operatsion 1 650
+  Investitsiya -3 100 + 210 = -2 890
+  Moliyaviy 1 360 - 120 qarz - 12 foiz - 300 dividend = 928
+# 2-qadam: Natija
+  1 650 - 2 890 + 928 = -312 ($000)
+= Javob: $312 000 kamayish`),
+        task(17, 1, 'single', `Task 8: What are cash and cash equivalents at the end of the year?`,
+          pick(['An overdraft of $162,000', 'Cash of $162,000', 'Nil', 'Cash of $150,000'], 0),
+`# Step 1: Start of the year
+  Bank 150 (no overdraft)
+# Step 2: End of the year
+  150 - 312 = -162: an overdraft, which is shown in the statement of financial position.
+= Answer: an overdraft of $162,000`,
+`# Шаг 1: Начало года
+  Банк 150 (без овердрафта)
+# Шаг 2: Конец года
+  150 - 312 = -162: овердрафт, он и показан в отчёте о финансовом положении.
+= Ответ: овердрафт $162 000`,
+`# 1-qadam: Yil boshi
+  Bank 150 (overdraftsiz)
+# 2-qadam: Yil oxiri
+  150 - 312 = -162: overdraft, u moliyaviy holat hisobotida ko'rsatilgan.
+= Javob: $162 000 overdraft`),
+      ],
+    },
+
+    {
+      id: 'bppc25', bppRef: '25', bppPage: 252, area: 'cashflows', title: 'Osprey Co',
+      intro: `Osprey Co's figures for the year to 31 October are shown ($000). Profit or loss: operating profit 14,200; interest paid 800; profit before tax 13,400; tax 4,000; profit for the year 9,400. No dividends were paid. Depreciation was 4,200. Assets with a carrying amount of 1,800 were sold at a profit of 600. Use Kaplan's layout: start from operating profit; interest paid goes under financing; overdrafts count as negative cash and cash equivalents.`,
+      table: { head: ['Statement of financial position ($000)', 'This year', 'Last year'], rows: [
+        ['Non-current assets (carrying amount)', '40,000', '25,000'], ['Inventory', '4,000', '8,500'], ['Trade receivables', '6,000', '4,400'], ['Cash', '2,200', '1,100'],
+        ['Share capital', '18,000', '16,500'], ['Retained earnings', '15,700', '6,300'], ['9% loan notes', '7,000', '9,000'],
+        ['Bank overdraft', '1,100', '500'], ['Trade payables', '7,500', '4,200'], ['Taxation', '2,900', '2,500'],
+      ] },
+      tasks: [
+        task(17, 2, 'number', `Task 1: What are the proceeds from selling non-current assets? (in $)`,
+          amount(2400000, '$2,400,000'),
+`# Step 1: Proceeds = carrying amount + profit
+  1,800 + 600 = 2,400 ($000)
+= Answer: $2,400,000 (and the 600 profit is subtracted in the operating section)`,
+`# Шаг 1: Выручка = балансовая стоимость + прибыль
+  1 800 + 600 = 2 400 ($000)
+= Ответ: $2 400 000 (а прибыль 600 вычитают в операционной)`,
+`# 1-qadam: Tushum = balans qiymati + foyda
+  1 800 + 600 = 2 400 ($000)
+= Javob: $2 400 000 (600 foyda esa operatsionda ayiriladi)`),
+        task(17, 3, 'number', `Task 2: How much was paid for non-current assets? (in $)`,
+          amount(21000000, '$21,000,000'),
+`# Step 1: Rebuild the carrying amount
+  Opening 25,000 - depreciation 4,200 - disposals 1,800 + purchases = closing 40,000
+# Step 2: Solve
+  Purchases = 40,000 - 25,000 + 4,200 + 1,800 = 21,000 ($000)
+= Answer: $21,000,000`,
+`# Шаг 1: Восстановим балансовую стоимость
+  Начало 25 000 - амортизация 4 200 - выбытия 1 800 + покупки = конец 40 000
+# Шаг 2: Решим
+  Покупки = 40 000 - 25 000 + 4 200 + 1 800 = 21 000 ($000)
+= Ответ: $21 000 000`,
+`# 1-qadam: Balans qiymatini tiklaymiz
+  Boshi 25 000 - amortizatsiya 4 200 - chiqib ketish 1 800 + xaridlar = oxiri 40 000
+# 2-qadam: Yechamiz
+  Xaridlar = 40 000 - 25 000 + 4 200 + 1 800 = 21 000 ($000)
+= Javob: $21 000 000`),
+        task(17, 2, 'matrix', `Task 3: Is each working capital change added or subtracted?`,
+          grid(['Add', 'Subtract'], [['Inventory (down 4,500)', 0], ['Receivables (up 1,600)', 1], ['Trade payables (up 3,300)', 0]]),
+`- Inventory fell: cash released. ADD.
+- Receivables rose: cash not yet collected. SUBTRACT.
+- Payables rose: cash not yet paid out. ADD.`,
+`- Запасы снизились: деньги высвободились. ПРИБАВИТЬ.
+- Дебиторы выросли: деньги ещё не получены. ВЫЧЕСТЬ.
+- Кредиторы выросли: деньги ещё не уплачены. ПРИБАВИТЬ.`,
+`- Zaxira kamaygan: pul bo'shagan. QO'SHILADI.
+- Debitorlar oshgan: pul hali olinmagan. AYIRILADI.
+- Kreditorlar oshgan: pul hali to'lanmagan. QO'SHILADI.`),
+        task(17, 2, 'number', `Task 4: How much tax was paid? (in $)`,
+          amount(3600000, '$3,600,000'),
+`# Step 1: Tax account
+  2,500 + 4,000 - 2,900 = 3,600 ($000)
+= Answer: $3,600,000`,
+`# Шаг 1: Счёт налога
+  2 500 + 4 000 - 2 900 = 3 600 ($000)
+= Ответ: $3 600 000`,
+`# 1-qadam: Soliq hisobi
+  2 500 + 4 000 - 2 900 = 3 600 ($000)
+= Javob: $3 600 000`),
+        task(17, 2, 'number', `Task 5: What is net cash from operating activities? (in $)`,
+          amount(20400000, '$20,400,000'),
+`# Step 1: Cash generated from operations
+  14,200 + 4,200 - 600 + 4,500 - 1,600 + 3,300 = 24,000
+# Step 2: Less tax paid
+  24,000 - 3,600 = 20,400 ($000)
+= Answer: $20,400,000`,
+`# Шаг 1: Денежные средства от операций
+  14 200 + 4 200 - 600 + 4 500 - 1 600 + 3 300 = 24 000
+# Шаг 2: Минус уплаченный налог
+  24 000 - 3 600 = 20 400 ($000)
+= Ответ: $20 400 000`,
+`# 1-qadam: Operatsiyalardan pul
+  14 200 + 4 200 - 600 + 4 500 - 1 600 + 3 300 = 24 000
+# 2-qadam: Minus to'langan soliq
+  24 000 - 3 600 = 20 400 ($000)
+= Javob: $20 400 000`),
+        task(17, 2, 'single', `Task 6: What is the net cash flow from financing activities?`,
+          pick(['$1,300,000 outflow', '$500,000 outflow', '$3,500,000 inflow', '$2,100,000 outflow'], 0),
+`# Step 1: Each financing item
+  Shares issued: 18,000 - 16,500 = +1,500
+  Loan notes repaid: 9,000 - 7,000 = -2,000
+  Interest paid: -800
+# Step 2: Net
+  1,500 - 2,000 - 800 = -1,300 ($000)
+= Answer: $1,300,000 outflow`,
+`# Шаг 1: Каждая финансовая статья
+  Выпуск акций: 18 000 - 16 500 = +1 500
+  Погашение облигаций: 9 000 - 7 000 = -2 000
+  Уплаченные проценты: -800
+# Шаг 2: Итог
+  1 500 - 2 000 - 800 = -1 300 ($000)
+= Ответ: отток $1 300 000`,
+`# 1-qadam: Har bir moliyaviy modda
+  Aksiya chiqarish: 18 000 - 16 500 = +1 500
+  Obligatsiyalarni qaytarish: 9 000 - 7 000 = -2 000
+  To'langan foiz: -800
+# 2-qadam: Natija
+  1 500 - 2 000 - 800 = -1 300 ($000)
+= Javob: $1 300 000 chiqim`),
+        task(17, 2, 'number', `Task 7: What were cash and cash equivalents at the START of the year? (in $)`,
+          amount(600000, '$600,000'),
+`# Step 1: Cash less overdraft
+  1,100 - 500 = 600 ($000)
+# Step 2: Check the year's movement
+  Operating 20,400 + investing (-21,000 + 2,400) + financing -1,300 = +500
+  600 + 500 = 1,100, and at the end 2,200 - 1,100 = 1,100. It agrees.
+= Answer: $600,000`,
+`# Шаг 1: Деньги минус овердрафт
+  1 100 - 500 = 600 ($000)
+# Шаг 2: Проверим движение за год
+  Операционная 20 400 + инвестиционная (-21 000 + 2 400) + финансовая -1 300 = +500
+  600 + 500 = 1 100, а на конец 2 200 - 1 100 = 1 100. Сходится.
+= Ответ: $600 000`,
+`# 1-qadam: Pul minus overdraft
+  1 100 - 500 = 600 ($000)
+# 2-qadam: Yil harakatini tekshiramiz
+  Operatsion 20 400 + investitsiya (-21 000 + 2 400) + moliyaviy -1 300 = +500
+  600 + 500 = 1 100, oxirida esa 2 200 - 1 100 = 1 100. Mos keldi.
+= Javob: $600 000`),
+      ],
+    },
   ];
 
   if (typeof module !== 'undefined') module.exports = cases;

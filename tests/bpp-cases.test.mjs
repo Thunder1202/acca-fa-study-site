@@ -71,4 +71,70 @@ test('BPP cases: every calculated answer matches a fresh calculation', () => {
   assert.equal(value('bppc20', 5), (260000 - 120000) * 0.25);
   assert.equal(value('bppc20', 6), 180000 + 1230000 - 95000);
   assert.equal(value('bppc20', 7), 18000 * 2 / 3);
+
+  // Teal Co: the trial balance balances; buildings shown at valuation.
+  const tealDr = [380, 1150, 110, 35, 950, 3800, 160, 800, 1600, 300, 1000].reduce((a, b) => a + b);
+  const tealCr = [250, 90, 45, 6100, 90, 360, 500, 2000, 400, 100, 350].reduce((a, b) => a + b);
+  assert.equal(tealDr, tealCr);
+  assert.equal(tealDr, 10285);
+  const beforeReval = 1600000 - 400000 - 1600000 * 0.05;
+  assert.equal(value('bppc21', 2), 1900000);
+  assert.equal(value('bppc21', 3), 1900000 - beforeReval);
+  assert.equal(value('bppc21', 4), (300000 - 100000) * 0.8);
+  assert.equal(value('bppc21', 5), 1000000 - 350000 - 1000000 * 0.2);
+  assert.ok(950000 * 0.05 > 45000);
+  assert.equal(value('bppc21', 8), 250000 - 2000000 / 10);
+
+  // Linnet Co ($000): both statements of financial position balance.
+  assert.equal(420 + 270 + 0 + 170 + 410 + 60, 240 + 192 + 110 + 205 + 120 + 163 + 0 + 300);
+  assert.equal(340 + 220 + 30 + 120 + 330 + 5, 180 + 180 + 100 + 120 + 0 + 130 + 85 + 250);
+  assert.equal(780 - 360, 420);
+  assert.equal(650 - 310, 340);
+  assert.equal(value('bppc22', 2), (360 - 310 + (90 - 50)) * 1000);
+  assert.equal(value('bppc22', 4), (250 + 260 - 300) * 1000);
+  assert.equal(value('bppc22', 5), (780 - 650 - (110 - 100) + 90) * 1000);
+  assert.equal(value('bppc22', 6), (38 + 36) * 1000);
+  assert.equal(value('bppc22', 7), (120 + 140 - 205) * 1000);
+  assert.equal(value('bppc22', 8), ((240 + 192) - (180 + 180)) * 1000);
+  assert.equal(60000 * 1.2, 72000);
+
+  // Avocet Co ($000): balances, and the cash flow reconciles to the cash change.
+  assert.equal(12500 - 6200 + 3100 + 4100 + 400, 1200 + 1900 + 2600 + 3500 + 3900 + 800);
+  assert.equal(9000 - 5300 + 3500 + 3300 + 200, 1200 + 1300 + 1650 + 2500 + 3400 + 650);
+  assert.equal(1650 + 1850 - 900, 2600);
+  const dep23 = 6200 - 5300 + (1000 - 400);
+  const add23 = 12500 - 9000 - (1900 - 1300) + 1000;
+  const op23 = 3000 + dep23 - (650 - 400) + (3500 - 3100) - (4100 - 3300) + (3900 - 3400) - (650 + 800 - 800);
+  const fin23 = (3500 - 2500) - 350 - 900;
+  assert.equal(value('bppc23', 1), dep23 * 1000);
+  assert.equal(value('bppc23', 3), add23 * 1000);
+  assert.equal(value('bppc23', 6), op23 * 1000);
+  assert.equal(chosen('bppc23', 7), `$${(-fin23 * 1000).toLocaleString('en-US')} outflow`);
+  assert.equal(value('bppc23', 8), (op23 - add23 + 650 + fin23) * 1000);
+  assert.equal(op23 - add23 + 650 + fin23, 400 - 200);
+
+  // Swift Co ($000): balances, and the cash flow reconciles to the cash change.
+  assert.equal(5100 + 640 + 410 + 0, 3800 + 340 + 1138 + 0 + 500 + 210 + 162);
+  assert.equal(3000 + 560 + 260 + 150, 2600 + 180 + 510 + 120 + 400 + 160 + 0);
+  assert.equal(510 + 928 - 300, 1138);
+  const buy24 = 5100 - 3000 + 760 + 240;
+  const op24 = 1150 + 760 + (240 - 210) - (640 - 560) - (410 - 260) + (500 - 400) - (160 + 210 - 210);
+  const net24 = op24 - buy24 + 210 + ((3800 + 340) - (2600 + 180)) - 120 - 12 - 300;
+  assert.equal(value('bppc24', 2), buy24 * 1000);
+  assert.equal(value('bppc24', 5), op24 * 1000);
+  assert.equal(value('bppc24', 7), -net24 * 1000);
+  assert.equal(150 + net24, 0 - 162);
+
+  // Osprey Co ($000): balances, and the cash flow reconciles to cash and cash equivalents.
+  assert.equal(40000 + 4000 + 6000 + 2200, 18000 + 15700 + 7000 + 1100 + 7500 + 2900);
+  assert.equal(25000 + 8500 + 4400 + 1100, 16500 + 6300 + 9000 + 500 + 4200 + 2500);
+  assert.equal(6300 + 9400, 15700);
+  const buy25 = 40000 - 25000 + 4200 + 1800;
+  const op25 = 14200 + 4200 - 600 + (8500 - 4000) - (6000 - 4400) + (7500 - 4200) - (2500 + 4000 - 2900);
+  const fin25 = (18000 - 16500) - (9000 - 7000) - 800;
+  assert.equal(value('bppc25', 2), buy25 * 1000);
+  assert.equal(value('bppc25', 5), op25 * 1000);
+  assert.equal(chosen('bppc25', 6), `$${(-fin25 * 1000).toLocaleString('en-US')} outflow`);
+  assert.equal(value('bppc25', 7), (1100 - 500) * 1000);
+  assert.equal((1100 - 500) + op25 - buy25 + 2400 + fin25, 2200 - 1100);
 });
