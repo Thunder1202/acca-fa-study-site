@@ -1,7 +1,7 @@
 'use strict';
 
 // Extra practice from the BPP Practice & Revision Kit (exams Sept 2024 - Aug 2025), section 17
-// "Correction of errors", rewritten with new figures. bppRef/bppPage point to BPP's own answer.
+// "Correction of errors" and section 18 "Suspense accounts", rewritten with new figures. bppRef/bppPage point to BPP's own answer.
 // Left out: 17.13 (BPP says a transposition shows in the trial balance; the current Kaplan text
 // treats it as an error of original entry that does not) and 17.18 (control accounts, no longer
 // in the Kaplan 2025-26 syllabus).
@@ -10,6 +10,7 @@
   const q = (bppRef, bppPage, type, text, spec, en, ru, uz) => ({ id: `bpp14-${bppRef}`, bppRef, bppPage, topicId: TOPIC, type, text, ...spec, explanation: { en, ru, uz } });
   const pick = (options, correctIndex) => ({ options, correctIndex });
   const amount = (correctValue, answerText) => ({ correctValue, answerText });
+  const two = (options, correctIndices) => ({ options, correctIndices });
 
   const questions = [
     q('17.1', 239, 'single', `The debit side of a trial balance totals $600 more than the credit side. Which ONE error would fully explain the difference?`,
@@ -534,6 +535,371 @@
   $2,880 + $600 - boshlang'ich hisoblangan $250 = $3,230
 = Javob: moliyaviy holat hisoboti $600; foyda yoki zarar hisoboti $3,230
 ! Ko'p uchraydigan xatolar: $2,880 faqat to'lov; $900 ikki oy o'rniga butun chorakni hisoblaydi.`),
+
+    // Section 18: suspense accounts. Personal customer and supplier accounts are memorandum only (Kaplan).
+    q('18.1', 242, 'single', `A company's trial balance shows debits of $652,480 and credits of $648,170, and the difference goes to a suspense account. Errors found: (1) cash of $248,000 from a share issue at par was credited to share capital as $240,000; (2) $3,600 paid for vehicle repairs was correct in the cash book but credited to the vehicles asset account; (3) the petty cash balance of $650 was left out of the trial balance; (4) a cheque for $56,300 for a machine was debited to machinery as $65,300; (5) a payment of $1,400 from one customer was credited to the account of another customer. Which errors need a suspense account entry to correct?`,
+      pick(['All five', '3 and 5 only', '2, 4 and 5 only', '1, 2, 3 and 4 only'], 3),
+`Ask of each: did it make debits and credits unequal?
+- (1) Cash debited 248,000, share capital credited 240,000: unequal. YES.
+- (2) Cash credited and the vehicles account credited too: two credits. YES.
+- (3) A balance left out of the trial balance: one side short. YES.
+- (4) Debit 65,300 against a credit of 56,300: unequal. YES.
+- (5) The right amount on the right side, just the wrong customer: still balanced. NO.
+= Answer: 1, 2, 3 and 4 only`,
+`Спросим о каждой: нарушила ли она равенство дебета и кредита?
+- (1) Деньги в дебет 248 000, капитал в кредит 240 000: не равны. ДА.
+- (2) Деньги в кредит и счёт транспорта тоже в кредит: два кредита. ДА.
+- (3) Остаток пропущен в оборотно-сальдовой ведомости: одной стороне не хватает. ДА.
+- (4) Дебет 65 300 против кредита 56 300: не равны. ДА.
+- (5) Верная сумма на верной стороне, просто не тот покупатель: баланс сохраняется. НЕТ.
+= Ответ: только 1, 2, 3 и 4`,
+`Har biri haqida so'raymiz: debet va kredit tengligini buzganmi?
+- (1) Pul debetga 248 000, kapital kreditga 240 000: teng emas. HA.
+- (2) Pul kreditga va transport hisobi ham kreditga: ikki kredit. HA.
+- (3) Qoldiq aylanma qaydnomadan tushib qolgan: bir tomon kam. HA.
+- (4) 65 300 debet 56 300 kreditga qarshi: teng emas. HA.
+- (5) To'g'ri summa to'g'ri tomonda, faqat boshqa xaridor: muvozanat saqlanadi. YO'Q.
+= Javob: faqat 1, 2, 3 va 4`),
+
+    q('18.2', 242, 'single', `Same company as the last question. After correcting the errors that affect the suspense account, what balance is left on it?`,
+      pick(['$4,840 debit', '$8,440 debit', '$4,840 credit', '$12,160 credit'], 0),
+`# Step 1: Opening suspense balance
+  Debits are bigger by 652,480 - 648,170 = 4,310, so suspense starts with a CREDIT of 4,310.
+# Step 2: Each correction
+  (1) Cr Share capital 8,000, Dr Suspense 8,000
+  (2) Dr Repairs 3,600, Dr Vehicles 3,600, Cr Suspense 7,200
+  (3) Dr Petty cash 650, Cr Suspense 650
+  (4) Cr Machinery 9,000, Dr Suspense 9,000
+# Step 3: Balance it
+  Debits: 8,000 + 9,000 = 17,000
+  Credits: 4,310 + 7,200 + 650 = 12,160
+  17,000 - 12,160 = 4,840 debit
+= Answer: $4,840 debit
+! Error (2) needs TWICE 3,600: once to cancel the wrong credit and once for the missing debit.`,
+`# Шаг 1: Начальный остаток счёта ошибок
+  Дебет больше на 652 480 - 648 170 = 4 310, значит счёт ошибок начинается с КРЕДИТА 4 310.
+# Шаг 2: Каждое исправление
+  (1) Кт Капитал 8 000, Дт Счёт ошибок 8 000
+  (2) Дт Ремонт 3 600, Дт Транспорт 3 600, Кт Счёт ошибок 7 200
+  (3) Дт Мелкая касса 650, Кт Счёт ошибок 650
+  (4) Кт Оборудование 9 000, Дт Счёт ошибок 9 000
+# Шаг 3: Выведем остаток
+  Дебет: 8 000 + 9 000 = 17 000
+  Кредит: 4 310 + 7 200 + 650 = 12 160
+  17 000 - 12 160 = 4 840 дебет
+= Ответ: $4 840 дебет
+! Ошибка (2) требует ДВОЙНЫХ 3 600: раз — убрать неверный кредит, раз — добавить недостающий дебет.`,
+`# 1-qadam: Vaqtinchalik hisobning boshlang'ich qoldig'i
+  Debet 652 480 - 648 170 = 4 310 ga katta, demak hisob 4 310 KREDIT bilan boshlanadi.
+# 2-qadam: Har bir tuzatish
+  (1) Kt Kapital 8 000, Dt Vaqtinchalik hisob 8 000
+  (2) Dt Ta'mir 3 600, Dt Transport 3 600, Kt Vaqtinchalik hisob 7 200
+  (3) Dt Kichik kassa 650, Kt Vaqtinchalik hisob 650
+  (4) Kt Uskuna 9 000, Dt Vaqtinchalik hisob 9 000
+# 3-qadam: Qoldiqni chiqaramiz
+  Debet: 8 000 + 9 000 = 17 000
+  Kredit: 4 310 + 7 200 + 650 = 12 160
+  17 000 - 12 160 = 4 840 debet
+= Javob: $4 840 debet
+! (2)-xato IKKI baravar 3 600 talab qiladi: noto'g'ri kreditni bekor qilish va yetishmagan debet uchun.`),
+
+    q('18.3', 242, 'single', `A trial balance shows debits of $412,560 and credits of $405,060, and the difference goes to suspense. Which error, when corrected, would REDUCE the difference?`,
+      pick([
+        'The petty cash balance of $400 was left out of the trial balance.',
+        '$3,500 received for subletting part of the office was correct in the cash book but debited to the rent account.',
+        '$2,800 paid for plant repairs was debited to the plant asset account.',
+        'An invoice for one customer was posted to the account of another customer.',
+      ], 1),
+`Debits are 7,500 too big, so suspense has a CREDIT of 7,500. A correction that DEBITS suspense makes it smaller.
+- Petty cash left out: Dr Petty cash, Cr Suspense. The difference grows.
+- Rent received debited to rent: two debits of 3,500. Fix: Cr Rent 7,000, Dr Suspense 7,000. The difference falls to 500. YES.
+- Repairs debited to plant: debits and credits still equal. No suspense entry.
+- Wrong customer: still balanced. No suspense entry.
+= Answer: the $3,500 rent received that was debited to rent`,
+`Дебет больше на 7 500, счёт ошибок с КРЕДИТОМ 7 500. Исправление с ДЕБЕТОМ счёта ошибок его уменьшает.
+- Пропущена мелкая касса: Дт Мелкая касса, Кт Счёт ошибок. Разница растёт.
+- Полученная аренда в дебет аренды: два дебета по 3 500. Исправление: Кт Аренда 7 000, Дт Счёт ошибок 7 000. Разница падает до 500. ДА.
+- Ремонт в дебет оборудования: дебет и кредит всё ещё равны. Без счёта ошибок.
+- Не тот покупатель: баланс сохраняется. Без счёта ошибок.
+= Ответ: полученная аренда $3 500, записанная в дебет аренды`,
+`Debet 7 500 ga katta, vaqtinchalik hisobda 7 500 KREDIT. Vaqtinchalik hisobni DEBETlaydigan tuzatish uni kamaytiradi.
+- Kichik kassa tushib qolgan: Dt Kichik kassa, Kt Vaqtinchalik hisob. Farq oshadi.
+- Olingan ijara ijara debetiga: 3 500 dan ikki debet. Tuzatish: Kt Ijara 7 000, Dt Vaqtinchalik hisob 7 000. Farq 500 gacha tushadi. HA.
+- Ta'mir uskuna debetiga: debet va kredit hali teng. Vaqtinchalik hisob yozuvi yo'q.
+- Boshqa xaridor: muvozanat saqlanadi. Vaqtinchalik hisob yozuvi yo'q.
+= Javob: ijara debetiga yozilgan $3 500 olingan ijara`),
+
+    q('18.4', 242, 'single', `A sole trader's trial balance did not agree. Which errors need a suspense account entry to correct? (1) Sales returns were debited to purchases returns by mistake. (2) Cash from selling a non-current asset was correct in the cash book but DEBITED to the disposal account. (3) The rent account balance was left out of the trial balance. (4) Goods taken by the owner were recorded by crediting drawings and debiting purchases.`,
+      pick(['All four', '2 and 3 only', '2 and 4 only', '1 and 3 only'], 1),
+`- (1) A debit to the wrong account: debits and credits still equal. NO.
+- (2) Cash debited AND disposal debited: two debits. YES.
+- (3) A balance left out: one side short. YES.
+- (4) Both entries reversed: still one debit and one credit of the same amount. NO.
+= Answer: 2 and 3 only`,
+`- (1) Дебет не того счёта: дебет и кредит всё ещё равны. НЕТ.
+- (2) Деньги в дебет И выбытие в дебет: два дебета. ДА.
+- (3) Пропущен остаток: одной стороне не хватает. ДА.
+- (4) Обе записи наоборот: всё равно один дебет и один кредит одной суммы. НЕТ.
+= Ответ: только 2 и 3`,
+`- (1) Noto'g'ri hisob debeti: debet va kredit hali teng. YO'Q.
+- (2) Pul debetga VA chiqib ketish debetga: ikki debet. HA.
+- (3) Qoldiq tushib qolgan: bir tomon kam. HA.
+- (4) Ikkala yozuv teskari: baribir bir xil summada bitta debet va bitta kredit. YO'Q.
+= Javob: faqat 2 va 3`),
+
+    q('18.5', 242, 'single', `A suspense account was opened when a trial balance did not agree. These errors were later found: a gas bill of $630 was recorded in the gas account as $360; a sales invoice of $80 was CREDITED to receivables; interest received of $90 was entered in the bank account only. What was the original suspense balance?`,
+      pick(['Debit $340', 'Credit $340', 'Debit $180', 'Credit $180'], 0),
+`# Step 1: The correction for each error
+  Gas: Dr Gas 270, Cr Suspense 270
+  Invoice credited instead of debited: Dr Receivables 160, Cr Suspense 160
+  Interest missing its credit: Cr Interest received 90, Dr Suspense 90
+# Step 2: The corrections must clear the suspense account
+  Credits to suspense 270 + 160 = 430; debits 90
+  Net credit of 340, so suspense must have started with a DEBIT of 340
+= Answer: debit $340`,
+`# Шаг 1: Исправление каждой ошибки
+  Газ: Дт Газ 270, Кт Счёт ошибок 270
+  Счёт в кредит вместо дебета: Дт Дебиторы 160, Кт Счёт ошибок 160
+  У процентов нет кредита: Кт Полученные проценты 90, Дт Счёт ошибок 90
+# Шаг 2: Исправления должны закрыть счёт ошибок
+  Кредит счёта ошибок 270 + 160 = 430; дебет 90
+  Чистый кредит 340, значит счёт ошибок начинался с ДЕБЕТА 340
+= Ответ: дебет $340`,
+`# 1-qadam: Har bir xato uchun tuzatish
+  Gaz: Dt Gaz 270, Kt Vaqtinchalik hisob 270
+  Hisob debet o'rniga kreditga: Dt Debitorlar 160, Kt Vaqtinchalik hisob 160
+  Foizning krediti yo'q: Kt Olingan foiz 90, Dt Vaqtinchalik hisob 90
+# 2-qadam: Tuzatishlar vaqtinchalik hisobni yopishi kerak
+  Vaqtinchalik hisob krediti 270 + 160 = 430; debet 90
+  Sof kredit 340, demak hisob 340 DEBET bilan boshlangan
+= Javob: debet $340`),
+
+    q('18.6', 242, 'single', `A trial balance difference of $31,000 went to suspense. It turns out that, for machinery bought for $31,000 by cheque, the debit to the machinery account was never posted. Which journal corrects this?`,
+      pick([
+        'Dr Machinery $31,000, Cr Bank $31,000',
+        'Dr Suspense $31,000, Cr Machinery $31,000',
+        'Dr Machinery $31,000, Cr Suspense $31,000',
+        'Dr Bank $31,000, Cr Suspense $31,000',
+      ], 2),
+`# Step 1: What is missing?
+  The bank credit was posted. Only the debit to machinery is missing.
+# Step 2: Where is the other side now?
+  The 31,000 is sitting in suspense as a debit.
+# Step 3: The journal
+  Dr Machinery 31,000, Cr Suspense 31,000
+= Answer: Dr Machinery $31,000, Cr Suspense $31,000
+! Do not credit the bank again: it was already done.`,
+`# Шаг 1: Чего не хватает?
+  Кредит банка проведён. Не хватает только дебета оборудования.
+# Шаг 2: Где сейчас другая сторона?
+  31 000 стоит на счёте ошибок как дебет.
+# Шаг 3: Проводка
+  Дт Оборудование 31 000, Кт Счёт ошибок 31 000
+= Ответ: Дт Оборудование $31 000, Кт Счёт ошибок $31 000
+! Банк повторно не кредитуйте: это уже сделано.`,
+`# 1-qadam: Nima yetishmaydi?
+  Bank krediti yozilgan. Faqat uskuna debeti yetishmaydi.
+# 2-qadam: Boshqa tomon hozir qayerda?
+  31 000 vaqtinchalik hisobda debet sifatida turibdi.
+# 3-qadam: Yozuv
+  Dt Uskuna 31 000, Kt Vaqtinchalik hisob 31 000
+= Javob: Dt Uskuna $31 000, Kt Vaqtinchalik hisob $31 000
+! Bankni qayta kreditlamang: bu allaqachon qilingan.`),
+
+    q('18.7', 243, 'number', `A trial balance shows debits of $745,900 and credits of $728,300, and the difference goes to suspense. These errors are then corrected: (1) discounts received of $6,200 were never posted to the discounts received account; (2) a cheque for $21,000 from a customer was correct in the cash book but posted to the receivables account as $12,000. What credit balance is left on the suspense account? (in $)`,
+      amount(2400, '$2,400 credit'),
+`# Step 1: Opening suspense balance
+  745,900 - 728,300 = 17,600 more debits, so suspense starts with a CREDIT of 17,600.
+# Step 2: Corrections
+  (1) Cr Discounts received 6,200, Dr Suspense 6,200
+  (2) Receivables were credited 9,000 too little: Cr Receivables 9,000, Dr Suspense 9,000
+# Step 3: What is left
+  17,600 - 6,200 - 9,000 = 2,400 credit
+= Answer: $2,400 credit (a difference still to be found)`,
+`# Шаг 1: Начальный остаток счёта ошибок
+  745 900 - 728 300 = на 17 600 больше дебета, счёт ошибок начинается с КРЕДИТА 17 600.
+# Шаг 2: Исправления
+  (1) Кт Полученные скидки 6 200, Дт Счёт ошибок 6 200
+  (2) Дебиторы недокредитованы на 9 000: Кт Дебиторы 9 000, Дт Счёт ошибок 9 000
+# Шаг 3: Что осталось
+  17 600 - 6 200 - 9 000 = 2 400 кредит
+= Ответ: $2 400 кредит (разница, которую ещё нужно найти)`,
+`# 1-qadam: Vaqtinchalik hisobning boshlang'ich qoldig'i
+  745 900 - 728 300 = debet 17 600 ga ko'p, hisob 17 600 KREDIT bilan boshlanadi.
+# 2-qadam: Tuzatishlar
+  (1) Kt Olingan chegirmalar 6 200, Dt Vaqtinchalik hisob 6 200
+  (2) Debitorlar 9 000 ga kam kreditlangan: Kt Debitorlar 9 000, Dt Vaqtinchalik hisob 9 000
+# 3-qadam: Nima qoldi
+  17 600 - 6 200 - 9 000 = 2 400 kredit
+= Javob: $2 400 kredit (hali topilishi kerak bo'lgan farq)`),
+
+    q('18.8', 243, 'multi', `A company's trial balance did not agree. Which TWO of these errors need a suspense account entry to correct?`,
+      two([
+        '$5,200 paid for van repairs was correct in the cash book but credited to the vans asset account.',
+        '$420 received from customer C was credited to the account of customer CC.',
+        '$8,700 paid for rent was debited to the rent account as $7,800.',
+        'Sales returns were debited to the purchases returns account by mistake.',
+        'A cash sale of $150 was not recorded at all.',
+      ], [0, 2]),
+`Ask of each: are debits and credits now unequal?
+- Van repairs credited to the vans account: cash credited too, so two credits. YES.
+- Wrong customer: right amount, right side. NO.
+- Rent debited as 7,800 while cash was credited 8,700: unequal by 900. YES.
+- Sales returns debited to the wrong account: still a debit. NO.
+- A sale left out entirely: nothing recorded on either side. NO.
+= Answer: the van repairs and the rent
+! BPP's printed answer ticks the van repairs and the sales returns, but its own working says the first and third errors. The first and third are right.`,
+`Спросим о каждой: стали ли дебет и кредит неравны?
+- Ремонт фургона в кредит счёта фургонов: деньги тоже в кредит, два кредита. ДА.
+- Не тот покупатель: верная сумма, верная сторона. НЕТ.
+- Аренда в дебет как 7 800, а деньги в кредит 8 700: разница 900. ДА.
+- Возврат продаж в дебет не того счёта: всё равно дебет. НЕТ.
+- Продажа не записана вовсе: ни одной стороны. НЕТ.
+= Ответ: ремонт фургона и аренда
+! В напечатанном ответе BPP отмечены ремонт фургона и возврат продаж, но в его же пояснении — первая и третья ошибки. Верны первая и третья.`,
+`Har biri haqida so'raymiz: debet va kredit endi teng emasmi?
+- Furgon ta'miri furgonlar hisobi kreditiga: pul ham kreditga, ikki kredit. HA.
+- Boshqa xaridor: to'g'ri summa, to'g'ri tomon. YO'Q.
+- Ijara debetga 7 800, pul esa kreditga 8 700: 900 farq. HA.
+- Sotuv qaytarishlari noto'g'ri hisob debetiga: baribir debet. YO'Q.
+- Sotuv umuman yozilmagan: hech bir tomon yo'q. YO'Q.
+= Javob: furgon ta'miri va ijara
+! BPP chop etilgan javobida furgon ta'miri va sotuv qaytarishlari belgilangan, lekin o'z tushuntirishida birinchi va uchinchi xato deyilgan. Birinchi va uchinchisi to'g'ri.`),
+
+    q('18.9', 243, 'single', `A suspense account has a DEBIT balance of $200. What could cause it?`,
+      pick([
+        'Entering $100 received from customer J on the debit side of J\'s personal account',
+        'Entering $100 received from customer J on the credit side of J\'s personal account',
+        'Undercasting (adding up too low) the sales account by $200',
+        'Undercasting the purchases account by $200',
+      ], 3),
+`A DEBIT in suspense means the debits in the trial balance were $200 too SMALL.
+- Personal customer accounts are memorandum records. They are not part of the double entry, so they cannot affect the trial balance.
+- Sales undercast: CREDITS too small, which gives a CREDIT in suspense.
+- Purchases undercast: DEBITS too small by 200, which gives a DEBIT in suspense. YES.
+= Answer: undercasting the purchases account by $200`,
+`ДЕБЕТ счёта ошибок значит, что дебет ведомости МЕНЬШЕ на $200.
+- Личные счета покупателей — справочные записи. Они не входят в двойную запись и не влияют на ведомость.
+- Продажи занижены: МЕНЬШЕ кредит, это даёт КРЕДИТ счёта ошибок.
+- Закупки занижены: МЕНЬШЕ дебет на 200, это даёт ДЕБЕТ счёта ошибок. ДА.
+= Ответ: занижение итога счёта закупок на $200`,
+`Vaqtinchalik hisobdagi DEBET qaydnoma debeti $200 ga KAM ekanini bildiradi.
+- Xaridorlarning shaxsiy hisoblari — ma'lumot yozuvlari. Ular ikki yoqlama yozuvga kirmaydi va qaydnomaga ta'sir qilmaydi.
+- Sotuv kam jamlangan: KREDIT kam, bu vaqtinchalik hisobda KREDIT beradi.
+- Xaridlar kam jamlangan: DEBET 200 ga kam, bu vaqtinchalik hisobda DEBET beradi. HA.
+= Javob: xaridlar hisobini $200 ga kam jamlash`),
+
+    q('18.10', 243, 'single', `A suspense account has a CREDIT balance of $150. What could cause it?`,
+      pick([
+        'Recording a purchase of $150 twice in the purchases account',
+        'Leaving a credit sale of $150 out of the records completely',
+        'Failing to write off an irrecoverable debt of $150',
+        'Recording a $75 electricity bill paid by debiting bank and crediting electricity',
+      ], 0),
+`A CREDIT in suspense means debits were $150 too BIG.
+- A purchase posted twice to purchases: one extra debit of 150. YES.
+- A sale left out completely: nothing on either side, still balanced.
+- A write-off not made: nothing recorded, still balanced.
+- Bank and electricity the wrong way round: one debit and one credit of 75, still balanced.
+= Answer: recording a $150 purchase twice in purchases`,
+`КРЕДИТ счёта ошибок значит, что дебет БОЛЬШЕ на $150.
+- Закупка дважды на счёте закупок: лишний дебет 150. ДА.
+- Продажа не записана совсем: ни одной стороны, баланс сохраняется.
+- Не списан долг: ничего не записано, баланс сохраняется.
+- Банк и электричество наоборот: один дебет и один кредит по 75, баланс сохраняется.
+= Ответ: закупка $150 записана дважды на счёте закупок`,
+`Vaqtinchalik hisobdagi KREDIT debet $150 ga KO'P ekanini bildiradi.
+- Xarid xaridlar hisobiga ikki marta: 150 ortiqcha debet. HA.
+- Sotuv umuman yozilmagan: hech bir tomon yo'q, muvozanat saqlanadi.
+- Qarz hisobdan chiqarilmagan: hech narsa yozilmagan, muvozanat saqlanadi.
+- Bank va elektr teskari: 75 dan bitta debet va bitta kredit, muvozanat saqlanadi.
+= Javob: $150 xarid xaridlar hisobiga ikki marta yozilgan`),
+
+    q('18.11', 243, 'single', `A company's trial balance includes a suspense account with a CREDIT balance of $640. It is found that discounts allowed of $850 were DEBITED to the receivables account instead of credited. What is left on the suspense account after this is corrected?`,
+      pick(['$1,060 debit', '$210 debit', '$2,340 credit', '$1,490 credit'], 0),
+`# Step 1: Size of the error
+  850 debited instead of credited: receivables are 1,700 too high.
+# Step 2: The correction
+  Cr Receivables 1,700, Dr Suspense 1,700
+# Step 3: New suspense balance
+  Credit 640, then debit 1,700: 1,700 - 640 = 1,060 debit
+= Answer: $1,060 debit
+! An amount on the wrong side is out by TWICE the amount: 2 x 850.`,
+`# Шаг 1: Размер ошибки
+  850 в дебет вместо кредита: дебиторы завышены на 1 700.
+# Шаг 2: Исправление
+  Кт Дебиторы 1 700, Дт Счёт ошибок 1 700
+# Шаг 3: Новый остаток счёта ошибок
+  Кредит 640, затем дебет 1 700: 1 700 - 640 = 1 060 дебет
+= Ответ: $1 060 дебет
+! Сумма не на той стороне ошибается на ДВОЙНУЮ величину: 2 x 850.`,
+`# 1-qadam: Xato hajmi
+  850 kredit o'rniga debetga: debitorlar 1 700 ga oshgan.
+# 2-qadam: Tuzatish
+  Kt Debitorlar 1 700, Dt Vaqtinchalik hisob 1 700
+# 3-qadam: Yangi qoldiq
+  Kredit 640, so'ng debet 1 700: 1 700 - 640 = 1 060 debet
+= Javob: $1 060 debet
+! Noto'g'ri tomondagi summa IKKI baravar xato qiladi: 2 x 850.`),
+
+    q('18.12', 244, 'single', `A company's suspense account has a DEBIT balance of $4,000. Which error could explain it?`,
+      pick([
+        'A receipt of $4,000 from a credit customer was credited to payables instead of receivables.',
+        'The interest received account of $2,000 was left out of the trial balance.',
+        'Equipment repairs of $4,000 were capitalised as part of plant and equipment.',
+        'A bank balance of $2,000 was shown in the trial balance as an overdraft of $2,000.',
+      ], 3),
+`A DEBIT in suspense means debits were $4,000 too SMALL (or credits too big).
+- Receipt credited to the wrong account: still a credit. Balanced.
+- Interest received left out: a CREDIT balance is missing, which gives a CREDIT in suspense, not a debit.
+- Repairs capitalised: a debit to the wrong account. Balanced.
+- A debit of 2,000 shown as a credit of 2,000: debits 2,000 short AND credits 2,000 too big. Suspense debit 4,000. YES.
+= Answer: the bank balance shown as an overdraft`,
+`ДЕБЕТ счёта ошибок значит, что дебет МЕНЬШЕ на $4 000 (или кредит больше).
+- Поступление в кредит не того счёта: всё равно кредит. Баланс сохраняется.
+- Пропущены полученные проценты: не хватает КРЕДИТОВОГО остатка, это даёт КРЕДИТ счёта ошибок, а не дебет.
+- Ремонт капитализирован: дебет не того счёта. Баланс сохраняется.
+- Дебет 2 000 показан как кредит 2 000: дебет меньше на 2 000 И кредит больше на 2 000. Дебет счёта ошибок 4 000. ДА.
+= Ответ: остаток в банке показан как овердрафт`,
+`Vaqtinchalik hisobdagi DEBET debet $4 000 ga KAM (yoki kredit ko'p) ekanini bildiradi.
+- Kirim noto'g'ri hisob kreditiga: baribir kredit. Muvozanat saqlanadi.
+- Olingan foiz tushib qolgan: KREDIT qoldiq yetishmaydi, bu vaqtinchalik hisobda debet emas, KREDIT beradi.
+- Ta'mir kapitallashtirilgan: noto'g'ri hisob debeti. Muvozanat saqlanadi.
+- 2 000 debet 2 000 kredit sifatida ko'rsatilgan: debet 2 000 ga kam VA kredit 2 000 ga ko'p. Vaqtinchalik hisob debeti 4 000. HA.
+= Javob: bankdagi qoldiq overdraft sifatida ko'rsatilgan`),
+
+    q('18.13', 244, 'single', `A company had 600,000 ordinary shares of 20c each. It then made a 1 for 4 rights issue at $1.10 a share, fully taken up. The share premium entry was left out by mistake, so the trial balance did not agree. What balance went into the suspense account?`,
+      pick(['$165,000 debit', '$165,000 credit', '$135,000 debit', '$135,000 credit'], 3),
+`# Step 1: The full entry that should have been made
+  New shares: 600,000 / 4 = 150,000
+  Dr Bank 150,000 x 1.10 = 165,000
+  Cr Share capital 150,000 x 0.20 = 30,000
+  Cr Share premium 150,000 x 0.90 = 135,000
+# Step 2: What went missing
+  The 135,000 credit to share premium. Credits are 135,000 short.
+# Step 3: Suspense makes up the short side
+  A CREDIT of 135,000
+= Answer: $135,000 credit`,
+`# Шаг 1: Полная проводка, которая должна была быть
+  Новые акции: 600 000 / 4 = 150 000
+  Дт Банк 150 000 x 1,10 = 165 000
+  Кт Капитал 150 000 x 0,20 = 30 000
+  Кт Эмиссионный доход 150 000 x 0,90 = 135 000
+# Шаг 2: Что пропало
+  Кредит эмиссионного дохода 135 000. Кредита не хватает на 135 000.
+# Шаг 3: Счёт ошибок восполняет недостающую сторону
+  КРЕДИТ 135 000
+= Ответ: $135 000 кредит`,
+`# 1-qadam: Bo'lishi kerak bo'lgan to'liq yozuv
+  Yangi aksiyalar: 600 000 / 4 = 150 000
+  Dt Bank 150 000 x 1,10 = 165 000
+  Kt Kapital 150 000 x 0,20 = 30 000
+  Kt Emissiya daromadi 150 000 x 0,90 = 135 000
+# 2-qadam: Nima tushib qolgan
+  Emissiya daromadining 135 000 krediti. Kredit 135 000 ga kam.
+# 3-qadam: Vaqtinchalik hisob kam tomonni to'ldiradi
+  135 000 KREDIT
+= Javob: $135 000 kredit`),
   ];
 
   if (typeof module !== 'undefined') module.exports = questions;

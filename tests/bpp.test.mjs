@@ -256,6 +256,67 @@ test('BPP chapter 11: every calculated answer matches a fresh calculation', () =
   assert.equal(chosen('12.7'), `A credit of ${money(3200 - 2600)}`);
 });
 
+test('BPP chapter 14, suspense: every calculated answer matches a fresh calculation', () => {
+  const c = Object.fromEntries(require('../data/bpp-ch14.js').map((q) => [q.bppRef, q]));
+  const chosen = (ref) => c[ref].options[c[ref].correctIndex];
+  const money = (n) => `$${Math.abs(n).toLocaleString('en-US')}`;
+  // Suspense as a signed number: debit positive, credit negative.
+  const open2 = -(652480 - 648170);
+  const after2 = open2 + (248000 - 240000) - 2 * 3600 - 650 + (65300 - 56300);
+  assert.equal(chosen('18.2'), `${money(after2)} ${after2 > 0 ? 'debit' : 'credit'}`);
+  assert.equal(412560 - 405060 - 2 * 3500, 500);
+  const open5 = (630 - 360) + 2 * 80 - 90;
+  assert.equal(chosen('18.5'), `Debit ${money(open5)}`);
+  assert.equal(c['18.7'].correctValue, (745900 - 728300) - 6200 - (21000 - 12000));
+  assert.equal(chosen('18.11'), `${money(-640 + 2 * 850)} debit`);
+  assert.equal(chosen('18.13'), `${money((600000 / 4) * (1.10 - 0.20))} credit`);
+});
+
+test('BPP chapter 15: every calculated answer matches a fresh calculation', () => {
+  const c = Object.fromEntries(require('../data/bpp-ch15.js').map((q) => [q.bppRef, q]));
+  const chosen = (ref) => c[ref].options[c[ref].correctIndex];
+  const money = (n) => `$${Math.round(n).toLocaleString('en-US')}`;
+  assert.ok(chosen('27.3').startsWith(`Receivables and prepayments ${money(15000 + 15000 * 0.03 + 7200 * 9 / 12 + 3000)}`));
+  assert.equal(c['27.10'].correctValue, (16200 - 14000) + 23500);
+});
+
+test('BPP chapter 16: every calculated answer matches a fresh calculation', () => {
+  const c = Object.fromEntries(require('../data/bpp-ch16.js').map((q) => [q.bppRef, q]));
+  const chosen = (ref) => c[ref].options[c[ref].correctIndex];
+  const money = (n) => `$${Math.round(n).toLocaleString('en-US')}`;
+  assert.equal(chosen('26.1'), money((294600 + 812000 - 318400) / 0.7));
+  assert.equal(chosen('26.3'), money(96200 / 0.65 - 142800));
+  assert.equal(c['26.4'].correctValue, 512400 + 3700 + 1800 + 128000 - 95000);
+  assert.equal(chosen('26.5'), money(236500 + 2300 + 1800 + 61500 - 48000));
+  assert.equal(chosen('26.6'), money(150000 + 210000 - 240000 / 1.25 - 120000));
+  assert.equal(chosen('26.7'), money(264000 + 348000 - 520000 * 0.8 - 175000));
+  assert.equal(chosen('26.8'), money(420000 - 90000 - 800000 + 500000 + 260000 + 310000));
+  assert.equal(chosen('26.9'), money(9200 + (41800 + 150 * 52 + 500) - (150 * 52 + 500 * 1.2)));
+  assert.equal(c['26.10'].correctValue, 913700 + 12400 + 158300 - 142600 - 3100 - 1500);
+  assert.equal(chosen('26.11'), money((186000 + 642300 - 38800 - 201500) / 0.75));
+  assert.equal(chosen('26.12'), money(296400 + 5200 + 4900 + 84700));
+  assert.equal(chosen('26.14'), money(31500 + 52800 - 70500 * 0.6));
+  assert.equal(chosen('26.16'), money(352000 - 185000 + 41000 - 90000));
+});
+
+test('BPP chapter 13: every calculated answer matches a fresh calculation', () => {
+  const c = Object.fromEntries(require('../data/bpp-ch13.js').map((q) => [q.bppRef, q]));
+  const chosen = (ref) => c[ref].options[c[ref].correctIndex];
+  const money = (n) => `$${Math.abs(n).toLocaleString('en-US')}`;
+  // Balances: positive = money in the bank, negative = overdraft.
+  assert.equal(80 + 520 - 450, 660 - 450 - 60);
+  assert.equal(chosen('16.1'), `${money(-740 - 118)} overdrawn`);
+  assert.equal(c['16.2'].correctValue, -(-4820 + 160 - 2 * 375));
+  assert.equal(chosen('16.3'), money(3200 - 2000 * 0.8 * 0.95 + 400 * 0.975));
+  assert.equal(chosen('16.4'), `${money(-1250 - 140)} overdrawn`);
+  const book5 = -7640 - 480, statement5 = book5 + 360 + 2950 - 4710;
+  assert.equal(statement5 - 360 - 2950 + 4710, book5);
+  assert.equal(chosen('16.5'), `${money(statement5)} overdrawn`);
+  assert.equal(chosen('16.6'), `${money(-28450 + 39600 - 31280)} credit`);
+  assert.equal(chosen('16.9'), `${money(-4520 - 7340 + 15180)} at bank`);
+  assert.equal(chosen('16.12'), `${money(-26900 + 29300 - 4100)} overdrawn`);
+});
+
 test('BPP chapter 12: every calculated answer matches a fresh calculation', () => {
   const c = Object.fromEntries(require('../data/bpp-ch12.js').map((q) => [q.bppRef, q]));
   const chosen = (ref) => c[ref].options[c[ref].correctIndex];
