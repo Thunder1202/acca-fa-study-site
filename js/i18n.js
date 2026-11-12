@@ -95,6 +95,7 @@ const LABELS = {
   bppAnswerPage: { en: 'BPP answer on p.', ru: 'ответ BPP на с.', uz: 'BPP javobi s.' },
   bppPractice: { en: 'Extra practice: BPP Kit', ru: 'Доп. практика: BPP Kit', uz: 'Qo\'shimcha mashq: BPP Kit' },
   bppNote: { en: 'Optional extra questions from the BPP Kit, rewritten. The Kaplan Exam Kit stays your main practice. These scores are kept apart from your Kaplan scores.', ru: 'Необязательные дополнительные вопросы из BPP Kit, переписанные. Основной практикой остаётся Kaplan Exam Kit. Эти результаты хранятся отдельно от Kaplan.', uz: 'BPP Kit dan qayta yozilgan ixtiyoriy qo\'shimcha savollar. Asosiy mashq Kaplan Exam Kit bo\'lib qoladi. Bu natijalar Kaplan natijalaridan alohida saqlanadi.' },
+  bppCasesTitle: { en: 'Extra practice: BPP Kit 15-mark cases', ru: 'Доп. практика: кейсы BPP Kit на 15 баллов', uz: 'Qo\'shimcha mashq: BPP Kit 15 ballik keyslari' },
   bppSetsTitle: { en: 'Extra practice: BPP Kit', ru: 'Доп. практика: BPP Kit', uz: 'Qo\'shimcha mashq: BPP Kit' },
   sourceLabel: { en: 'Source', ru: 'Источник', uz: 'Manba' },
   modeOne: { en: 'One at a time', ru: 'По одному', uz: 'Bittadan' },

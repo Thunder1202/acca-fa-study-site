@@ -42,7 +42,7 @@
         scoreMeter(entry, lang)));
   }
 
-  function renderPractice(container, topics, storage, lang, cases, bpp = {}) {
+  function renderPractice(container, topics, storage, lang, cases, bpp = {}, bppCases = []) {
     const bppTopics = topics.filter((topic) => bpp[topic.id]?.length);
     const progress = loadProgress(storage);
     const studied = topics.filter((topic) => progress[topic.id]);
@@ -72,7 +72,11 @@
       bppTopics.length > 0 && el('section', { class: 'panel' },
         el('h2', {}, label('bppSetsTitle', lang)),
         el('p', { class: 'hint' }, label('bppNote', lang)),
-        el('ul', { class: 'topic-list' }, bppTopics.map((topic) => bppRow(topic, bpp[topic.id].length, progress[`bpp-${topic.id}`], lang))))));
+        el('ul', { class: 'topic-list' }, bppTopics.map((topic) => bppRow(topic, bpp[topic.id].length, progress[`bpp-${topic.id}`], lang)))),
+      bppCases.length > 0 && el('section', { class: 'panel' },
+        el('h2', {}, label('bppCasesTitle', lang)),
+        el('p', { class: 'hint' }, label('bppNote', lang)),
+        el('ul', { class: 'case-list' }, bppCases.map((item) => caseRow(item, progress[item.id], lang))))));
   }
 
   function renderWeakAreas(container, topics, storage, lang) {

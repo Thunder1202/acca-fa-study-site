@@ -5,7 +5,7 @@
   const EXAM = { sectionA: 35, sectionAMarks: 2, minutes: 120, passPercent: 50 };
 
   function caseQuestions(item) {
-    const info = { id: item.id, title: item.title, intro: item.intro, table: item.table, area: item.area, kitRef: item.kitRef };
+    const info = { id: item.id, title: item.title, intro: item.intro, table: item.table, area: item.area, kitRef: item.kitRef, bppRef: item.bppRef, bppPage: item.bppPage };
     return item.tasks.map(({ topic, ...task }, i) => ({ ...task, id: `${item.id}-t${i + 1}`, topicId: topic, case: info, taskNumber: i + 1, taskCount: item.tasks.length }));
   }
 

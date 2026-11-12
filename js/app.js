@@ -15,6 +15,7 @@
   const { loadProgress } = ACCA.progress;
   const { course, chapters, questions, sectionB } = ACCA;
   const bpp = ACCA.bpp ?? {};
+  const bppCases = ACCA.bppCases ?? [];
 
   const app = document.getElementById('app');
   const switcher = document.getElementById('lang-switcher');
@@ -67,12 +68,12 @@
   function showCase(item, lang) {
     return renderQuiz(app, {
       key: item.id, questions: caseQuestions(item), storage,
-      title: `${label('casesTitle', lang)}: ${item.title}`, backHref: '#/practice', backLabel: 'backToPractice',
+      title: `${label(item.bppRef ? 'bppCasesTitle' : 'casesTitle', lang)}: ${item.title}`, backHref: '#/practice', backLabel: 'backToPractice',
     }, lang);
   }
 
   function showQuiz(topicId, lang) {
-    const item = sectionB.find((c) => c.id === topicId);
+    const item = sectionB.find((c) => c.id === topicId) ?? bppCases.find((c) => c.id === topicId);
     if (item) return showCase(item, lang);
     if (topicId.startsWith('bpp-')) {
       const chapterId = topicId.slice(4);
@@ -130,7 +131,7 @@
     ACCA.helper.setLang(lang);
     if (view === 'chapter') showChapter(params.id, params.section, lang);
     else if (view === 'quiz') showQuiz(params.topicId, lang);
-    else if (view === 'practice') renderPractice(app, topics, storage, lang, sectionB, bpp);
+    else if (view === 'practice') renderPractice(app, topics, storage, lang, sectionB, bpp, bppCases);
     else if (view === 'exam') (params.step === 'paper' ? renderExamPaper : renderExamStart)(app, { storage, topics }, lang);
     else if (view === 'terms') renderTerms(app, lang);
     else if (view === 'weak-areas') renderWeakAreas(app, topics, storage, lang);

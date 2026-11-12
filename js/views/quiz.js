@@ -181,6 +181,7 @@
   }
 
   function source(q, lang) {
+    if (q.case?.bppRef) return `${label('basedOnBpp', lang)}${q.case.bppRef} · ${label('bppAnswerPage', lang)} ${q.case.bppPage}`;
     if (q.case) return `${label('basedOnKitB', lang)}${q.case.kitRef}`;
     if (q.bppRef) return `${label('basedOnBpp', lang)}${q.bppRef} · ${label('bppAnswerPage', lang)} ${q.bppPage}`;
     return `${label('basedOnKit', lang)}${q.kitRef}`;
