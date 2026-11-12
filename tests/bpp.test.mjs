@@ -280,6 +280,49 @@ test('BPP chapter 15: every calculated answer matches a fresh calculation', () =
   assert.equal(c['27.10'].correctValue, (16200 - 14000) + 23500);
 });
 
+test('BPP chapters 19 and 20: every calculated answer matches a fresh calculation', () => {
+  const load = (f) => Object.fromEntries(require(f).map((q) => [q.bppRef, q]));
+  const a = load('../data/bpp-ch19.js'), b = load('../data/bpp-ch20.js');
+  const chosen = (qs, ref) => qs[ref].options[qs[ref].correctIndex];
+  const money = (n) => `$${Math.round(n).toLocaleString('en-US')}`;
+  assert.equal(chosen(a, '35.1'), money(250000 + 55000 - (100000 + 70000)));
+  assert.equal(chosen(a, '35.2'), money(55000 + 0.2 * (130000 - 70000)));
+  assert.equal(a['35.3'].correctValue, 190000 + 0.8 * (130000 - 70000));
+  assert.equal(chosen(a, '35.5'), money(360000 + 110000 - (200000 + 40000 + 90000)));
+  assert.equal(chosen(a, '35.6'), money(110000 + 0.25 * 48000));
+  assert.equal(chosen(a, '35.7'), money(300000 + 120000 + 60000 * 6 / 12 + 45000));
+  assert.equal(chosen(a, '35.9'), money(380000 + 95000 - 36000 * 20 / 120));
+  assert.equal(chosen(a, '35.10'), money(420000 + 95000 - (150000 + 180000 + 40000)));
+  assert.equal(chosen(a, '35.17'), money(85000 + (400000 + 220000 + 30000) - 160000));
+  assert.equal(chosen(a, '35.18'), money(1480000 + 600000 + 380000 + 70000));
+  assert.equal(chosen(a, '35.19'), `Receivables ${money(72000 + 45000 - 25000)}; payables ${money(41000 + 52000 - 25000)}`);
+  const adj = 82000 - 50000 - 8000 * 0.25;
+  assert.equal(a['35.20'].correctValue, 30000 + 0.25 * adj);
+  assert.equal(chosen(a, '35.21'), money(720000 + 0.8 * (60000 * 3 / 12)));
+  assert.equal(chosen(a, '35.24'), `$${(15 * 3 / 5 * 4.2).toFixed(1)} million`);
+  assert.equal(chosen(b, '35.11'), money((900 - 490 + 500 - 240) * 1000 - 40000 * 0.3 * 0.25));
+  assert.equal(chosen(b, '35.22'), money(95000 + 0.8 * 72000 * 8 / 12));
+  const urp23 = 60000 * 0.25 * 0.2;
+  assert.equal(chosen(b, '35.23'), money(150000 + 48000 - urp23 - 0.25 * (48000 - urp23)));
+  const gp25 = (4200 - 2100 + (3000 - 2000) * 3 / 12) * 1000 - 6000 * 3 * 20 / 120 / 2;
+  assert.equal(chosen(b, '35.25'), money(gp25));
+  const urp26 = 48000 * 25 / 125;
+  assert.equal(chosen(b, '35.26'), `NCI: down ${money(urp26 * 0.4)}. P Co owners: down ${money(urp26 * 0.6)}`);
+  assert.equal(chosen(b, '35.27'), `$${40 * 0.3} million`);
+});
+
+test('BPP chapter 18: every calculated answer matches a fresh calculation', () => {
+  const c = Object.fromEntries(require('../data/bpp-ch18.js').map((q) => [q.bppRef, q]));
+  const chosen = (ref) => c[ref].options[c[ref].correctIndex];
+  assert.equal(chosen('37.4'), `${Math.round(5960 / (41800 - 7200 + 5100) * 365)} days`);
+  assert.equal(420 + 230, 470 + 95 + 85);
+  const g = Math.round(95 / (95 + 470) * 100), quick = ((230 - 80) / 85).toFixed(2), current = (230 / 85).toFixed(2);
+  assert.equal(chosen('37.5'), `Gearing ${g}%; quick ratio ${quick}; current ratio ${current}`);
+  assert.equal(chosen('37.7'), `${(900 - 720) / (900 / 0.25) * 100}%`);
+  assert.equal((1500 + 900) / (150 + 850), 2.4);
+  assert.equal(c['37.10'].correctValue, 63000 / 28000);
+});
+
 test('BPP chapter 17: every calculated answer matches a fresh calculation', () => {
   const c = Object.fromEntries(require('../data/bpp-ch17.js').map((q) => [q.bppRef, q]));
   const chosen = (ref) => c[ref].options[c[ref].correctIndex];
