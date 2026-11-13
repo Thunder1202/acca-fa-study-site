@@ -128,13 +128,25 @@ Shuning uchun dekabrdagi sotuv, mijoz fevralda to'lasa ham, dekabrga tegishli. D
       exam: {
         en: `- A bill paid in arrears is accrued for the part of the period not yet billed, using months as fractions (for example 2/3 of a quarterly bill).
 - Interest on a loan is accrued for the days or months it has built up but not been paid.
-- An accrued expense at the start of the year must be taken out of this year's expense, as it belongs to the last year.`,
+- An accrued expense at the start of the year must be taken out of this year's expense, as it belongs to the last year.
+- Full expense formula: cash paid + opening prepayment - closing prepayment + closing accrual - opening accrual.
+- Items held in stock (heating oil, fuel): expense = cash paid + opening stock - closing stock + closing amount owed - opening amount owed.
+- If the bills for each part of the year are given, the expense is simply the total of those bills. The payments only decide the accrual or prepayment.
+- A missed accrual: profit falls by the accrual and net assets fall by the same amount (a new liability).`,
         ru: `- Счёт, оплачиваемый по факту, начисляется за часть периода, ещё не выставленную, с долями по месяцам (например, 2/3 квартального счёта).
 - Проценты по займу начисляются за дни или месяцы, которые накопились, но не оплачены.
-- Начисленный расход на начало года нужно убрать из расхода этого года, так как он относится к прошлому году.`,
+- Начисленный расход на начало года нужно убрать из расхода этого года, так как он относится к прошлому году.
+- Полная формула расхода: оплачено + предоплата на начало - предоплата на конец + начисление на конец - начисление на начало.
+- Если есть запас (топливо для отопления, бензин): расход = оплачено + запас на начало - запас на конец + долг на конец - долг на начало.
+- Если даны счета за каждую часть года, расход — просто сумма этих счетов. Платежи решают только, будет начисление или предоплата.
+- Пропущенное начисление: прибыль падает на его сумму, и чистые активы падают на столько же (новое обязательство).`,
         uz: `- Keyin to'lanadigan hisob hali hisob-faktura qilinmagan davr qismi uchun oylarni kasr sifatida ishlatib hisoblanadi (masalan choraklik hisobning 2/3 qismi).
 - Qarz bo'yicha foiz yig'ilgan, lekin to'lanmagan kunlar yoki oylar uchun hisoblanadi.
-- Yil boshidagi hisoblangan xarajat shu yil xarajatidan chiqarilishi kerak, chunki u o'tgan yilga tegishli.`,
+- Yil boshidagi hisoblangan xarajat shu yil xarajatidan chiqarilishi kerak, chunki u o'tgan yilga tegishli.
+- Xarajatning to'liq formulasi: to'langan + boshidagi oldindan to'lov - oxiridagi oldindan to'lov + oxiridagi hisoblangan - boshidagi hisoblangan.
+- Zaxirada saqlanadigan narsalar (isitish yoqilg'isi, benzin): xarajat = to'langan + boshidagi zaxira - oxiridagi zaxira + oxiridagi qarz - boshidagi qarz.
+- Agar yilning har bir qismi uchun hisoblar berilgan bo'lsa, xarajat shunchaki shu hisoblar yig'indisi. To'lovlar faqat hisoblangan yoki oldindan to'lovni belgilaydi.
+- Tushib qolgan hisoblangan xarajat: foyda shu summaga kamayadi va sof aktivlar ham shuncha kamayadi (yangi majburiyat).`,
       },
       heading: { en: 'Accrued expenditure', ru: 'Начисленные расходы', uz: 'Hisoblangan xarajatlar' },
       body: {
@@ -213,13 +225,19 @@ U shu yil xarajatiga qo'shiladi (foyda kamayadi) va qarz sifatida ko'rsatiladi (
       exam: {
         en: `- When a payment covers a period that spans the year end, split it by months: the part used is an expense and the rest is a prepayment.
 - If a premium rises part way through, apply each premium to the months it covers.
-- A prepayment is an asset. An accrual is a liability.`,
+- A prepayment is an asset. An accrual is a liability.
+- A missed prepayment: profit rises by the prepayment and net assets rise by the same amount (a new asset). Draft profit - missed accrual + missed prepayment = corrected profit.
+- One bill can hold both: a standing charge paid in ADVANCE (part may be a prepayment) and usage paid in ARREARS (the unbilled part is an accrual). Work each part separately.`,
         ru: `- Если платёж охватывает период, пересекающий конец года, разделите его по месяцам: использованная часть — расход, остальное — предоплата.
 - Если взнос вырос в середине, применяйте каждый взнос к месяцам, которые он покрывает.
-- Предоплата — актив. Начисление — обязательство.`,
+- Предоплата — актив. Начисление — обязательство.
+- Пропущенная предоплата: прибыль растёт на её сумму, и чистые активы растут на столько же (новый актив). Черновая прибыль - пропущенное начисление + пропущенная предоплата = исправленная прибыль.
+- В одном счёте может быть и то, и другое: абонентская плата ВПЕРЁД (часть может быть предоплатой) и потребление ЗАДНИМ числом (невыставленная часть — начисление). Считайте каждую часть отдельно.`,
         uz: `- To'lov yil oxirini kesib o'tadigan davrni qamrasa, uni oylar bo'yicha bo'ling: ishlatilgan qism xarajat, qolgani oldindan to'lov.
 - Mukofot yil o'rtasida oshsa, har bir mukofotni u qamragan oylarga qo'llang.
-- Oldindan to'lov — aktiv. Hisoblangan xarajat — majburiyat.`,
+- Oldindan to'lov — aktiv. Hisoblangan xarajat — majburiyat.
+- Tushib qolgan oldindan to'lov: foyda shu summaga oshadi va sof aktivlar ham shuncha oshadi (yangi aktiv). Dastlabki foyda - tushib qolgan hisoblangan + tushib qolgan oldindan to'lov = to'g'rilangan foyda.
+- Bitta hisobda ikkalasi bo'lishi mumkin: OLDINDAN to'lanadigan abonent to'lovi (bir qismi oldindan to'lov bo'lishi mumkin) va KEYIN to'lanadigan iste'mol (hisob chiqarilmagan qismi hisoblangan xarajat). Har qismni alohida hisoblang.`,
       },
       heading: { en: 'Prepaid expenditure', ru: 'Расходы будущих периодов', uz: 'Oldindan to\'langan xarajatlar' },
       body: {
@@ -298,13 +316,19 @@ O'sha qism bu yil xarajatidan chiqariladi (foyda oshadi) va aktiv sifatida ko'rs
       exam: {
         en: `- Accrued income is income earned but not yet received, so it increases profit. The statement that accrued income decreases profit is false.
 - Income received in advance is a liability, because it has been received but not yet earned.
-- In an income account, the cash received is credited, and opening and closing accrued or prepaid balances adjust the figure sent to profit or loss.`,
+- In an income account, the cash received is credited, and opening and closing accrued or prepaid balances adjust the figure sent to profit or loss.
+- Full income formula: cash received + closing accrued income - opening accrued income + opening prepaid income - closing prepaid income.
+- In an income account a DEBIT balance is accrued income (owed to you) and a CREDIT balance is prepaid income (received in advance).`,
         ru: `- Начисленный доход — заработанный, но ещё не полученный, поэтому он увеличивает прибыль. Утверждение, что он уменьшает прибыль, ложно.
 - Доход, полученный авансом, — обязательство, так как он получен, но ещё не заработан.
-- На счёте дохода полученные деньги кредитуются, а остатки начисленного или полученного авансом дохода на начало и конец корректируют сумму, идущую в прибыль или убыток.`,
+- На счёте дохода полученные деньги кредитуются, а остатки начисленного или полученного авансом дохода на начало и конец корректируют сумму, идущую в прибыль или убыток.
+- Полная формула дохода: получено + начисленный доход на конец - на начало + доход, полученный авансом, на начало - на конец.
+- На счёте дохода ДЕБЕТОВОЕ сальдо — начисленный доход (вам должны), а КРЕДИТОВОЕ — доход, полученный авансом.`,
         uz: `- Hisoblangan daromad topilgan, lekin hali olinmagan daromad, shuning uchun foydani oshiradi. Uni kamaytiradi degan gap noto'g'ri.
 - Oldindan olingan daromad majburiyat, chunki u olingan, lekin hali topilmagan.
-- Daromad hisobida olingan pul kreditlanadi, boshlang'ich va yakuniy hisoblangan yoki oldindan olingan qoldiqlar foyda yoki zararga o'tadigan summani to'g'rilaydi.`,
+- Daromad hisobida olingan pul kreditlanadi, boshlang'ich va yakuniy hisoblangan yoki oldindan olingan qoldiqlar foyda yoki zararga o'tadigan summani to'g'rilaydi.
+- Daromadning to'liq formulasi: olingan + oxiridagi hisoblangan daromad - boshidagi + boshidagi oldindan olingan daromad - oxiridagi.
+- Daromad hisobida DEBET qoldig'i hisoblangan daromad (sizga qarzdor), KREDIT qoldig'i esa oldindan olingan daromad.`,
       },
       heading: {
         en: 'Accrued income and prepaid income',

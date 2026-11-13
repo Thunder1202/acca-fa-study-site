@@ -55,13 +55,16 @@ const chapter13 = {
       exam: {
         en: `- A debit balance on a bank statement means overdrawn. A credit balance means money in the bank.
 - A ledger balance described as credit means overdrawn.
-- Read each question carefully for "overdrawn", "Dr" and "Cr" before you start.`,
+- Read each question carefully for "overdrawn", "Dr" and "Cr" before you start.
+- "Cash book" is another name for your own bank ledger account. Many questions (and the BPP Kit) use it.`,
         ru: `- Дебетовый остаток в выписке значит овердрафт. Кредитовый — деньги в банке.
 - Кредитовый остаток в книге значит овердрафт.
-- Перед началом внимательно ищите в задаче слова «овердрафт», Dr и Cr.`,
+- Перед началом внимательно ищите в задаче слова «овердрафт», Dr и Cr.
+- «Кассовая книга» (cash book) — другое название вашего собственного счёта банка в учёте. Его используют многие вопросы (и BPP Kit).`,
         uz: `- Ko'chirmadagi debet qoldiq overdraft degani. Kredit qoldiq bankda pul bor degani.
 - Kitobdagi kredit qoldiq overdraft degani.
-- Boshlashdan oldin masalada "overdraft", Dr va Cr so'zlariga e'tibor bering.`,
+- Boshlashdan oldin masalada "overdraft", Dr va Cr so'zlariga e'tibor bering.
+- "Kassa kitobi" (cash book) — o'zingizning bank hisobingizning boshqa nomi. Ko'p savollar (va BPP Kit) shu nomni ishlatadi.`,
       },
       heading: { en: 'Why reconcile the bank', ru: 'Зачем сверять банк', uz: 'Bankni nega solishtirish kerak' },
       body: {
@@ -159,21 +162,24 @@ Chalkashtiradigan narsa: bank hisobingizni teskari ko'radi. Bankdagi pulingiz �
 - A bank error is never entered in the ledger. It is corrected on the statement side, and the bank is told.
 - If an entry was posted to the wrong side of the ledger, the correction is twice the amount.
 - A cheque recorded at the wrong amount is corrected by the difference.
-- A dishonoured cheque that the bank has not yet told you about still goes through the ledger, not the reconciliation.`,
+- A dishonoured cheque that the bank has not yet told you about still goes through the ledger, not the reconciliation.
+- A credit transfer or BACS receipt on the statement is an unrecorded item: it goes in the cash book (Dr Bank). So do standing orders, direct debits, charges and dishonoured cheques.`,
         ru: `- Незачисленное поступление — временная разница, а не незаписанная статья. Как и непредъявленный чек.
 - Возвращённый чек — кредит в книге, отменяющий первоначальный дебет.
 - Прямые поступления и полученные проценты — дебет в книге. Комиссии, прямые дебеты и постоянные поручения — кредит.
 - Ошибка банка никогда не вносится в книгу. Она исправляется со стороны выписки, и банку сообщают.
 - Если запись сделана не на той стороне книги, исправление равно двойной сумме.
 - Чек с неверной суммой исправляется на разницу.
-- Возвращённый чек, о котором банк ещё не сообщил, всё равно идёт через книгу, а не через сверку.`,
+- Возвращённый чек, о котором банк ещё не сообщил, всё равно идёт через книгу, а не через сверку.
+- Кредитовый перевод или поступление BACS в выписке — неотражённая статья: её проводят в кассовой книге (Дт Банк). Так же постоянные поручения, прямые дебеты, комиссии и возвращённые чеки.`,
         uz: `- O'tmagan tushum vaqt farqi, yozilmagan modda emas. Taqdim etilmagan chek ham.
 - Qaytgan chek kitobda kredit, dastlabki debetni bekor qiladi.
 - To'g'ridan-to'g'ri tushumlar va olingan foiz kitobda debet. Komissiya, to'g'ridan-to'g'ri debet va doimiy topshiriq kredit.
 - Bank xatosi kitobga hech qachon yozilmaydi. U ko'chirma tomonida tuzatiladi va bankka xabar beriladi.
 - Yozuv kitobning noto'g'ri tomoniga yozilgan bo'lsa, tuzatish ikki baravar summa.
 - Noto'g'ri summa yozilgan chek farqqa tuzatiladi.
-- Bank hali aytmagan qaytgan chek ham solishtirishdan emas, kitobdan o'tadi.`,
+- Bank hali aytmagan qaytgan chek ham solishtirishdan emas, kitobdan o'tadi.
+- Ko'chirmadagi kredit o'tkazma yoki BACS tushumi qayd etilmagan modda: u kassa kitobiga yoziladi (Dt Bank). Doimiy topshiriqlar, to'g'ridan-to'g'ri debetlar, komissiyalar va qaytarilgan cheklar ham shunday.`,
       },
       heading: { en: 'What causes the differences', ru: 'Что вызывает различия', uz: 'Farqlarga nima sabab bo\'ladi' },
       body: {

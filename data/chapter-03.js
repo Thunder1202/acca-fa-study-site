@@ -64,21 +64,24 @@ const chapter03 = {
 - The delivery note is not an internal document, because it comes from the supplier. The supplier list, purchase order and goods received note are kept inside the business.
 - A purchase invoice identifies the goods, shows what is owed to the supplier and supports the sales tax claim. It does not show what customers owe.
 - An invoice shows more than the amount due: goods, date, net amount, sales tax and gross amount.
-- The main petty cash record is the petty cash voucher. A till receipt is attached to it as evidence.`,
+- The main petty cash record is the petty cash voucher. A till receipt is attached to it as evidence.
+- Sending faulty goods back to a supplier: the buyer sends a DEBIT NOTE with them. The supplier then answers with a credit note.`,
         ru: `- Обычный порядок при покупке: заявка, коммерческое предложение, заказ, накладная, акт приёмки, счёт-фактура, выписка, извещение об оплате.
 - Счёт-фактура идёт после акта приёмки. Выписка поставщика приходит позже и подводит итог месяца.
 - Уведомление об отгрузке сообщает, что товар в пути, поэтому приходит раньше накладной.
 - Накладная — не внутренний документ, так как она приходит от поставщика. Список поставщиков, заказ и акт приёмки хранятся внутри бизнеса.
 - Счёт на покупку называет товар, показывает долг поставщику и подтверждает возмещение налога с продаж. Он не показывает долги покупателей.
 - Счёт-фактура содержит не только сумму к оплате: товар, дату, сумму без налога, налог и сумму с налогом.
-- Главный документ по мелкой кассе — кассовый ваучер. Чек прикладывается к нему как подтверждение.`,
+- Главный документ по мелкой кассе — кассовый ваучер. Чек прикладывается к нему как подтверждение.
+- При возврате бракованного товара поставщику покупатель отправляет вместе с ним ДЕБЕТОВОЕ АВИЗО (debit note). Поставщик в ответ выписывает кредит-ноту.`,
         uz: `- Xarid qilishdagi odatiy tartib: so'rovnoma, narx taklifi, xarid buyurtmasi, yetkazib berish xati, qabul qilish xati, hisob-faktura, ko'chirma, to'lov xabarnomasi.
 - Hisob-faktura qabul qilish xatidan keyin keladi. Yetkazib beruvchi ko'chirmasi keyinroq keladi va oyni jamlaydi.
 - Xabar xati tovar yo'lda ekanini aytadi, shuning uchun yetkazib berish xatidan oldin keladi.
 - Yetkazib berish xati ichki hujjat emas, chunki u yetkazib beruvchidan keladi. Yetkazib beruvchilar ro'yxati, xarid buyurtmasi va qabul qilish xati biznes ichida saqlanadi.
 - Xarid hisob-fakturasi tovarni ko'rsatadi, yetkazib beruvchiga qarzni bildiradi va sotuv solig'ini qaytarishga asos bo'ladi. U mijozlar qarzini ko'rsatmaydi.
 - Hisob-fakturada faqat summa emas: tovar, sana, soliqsiz summa, soliq va soliqli summa bor.
-- Kichik kassaning asosiy hujjati kassa vaucheri. Chek unga dalil sifatida qo'shiladi.`,
+- Kichik kassaning asosiy hujjati kassa vaucheri. Chek unga dalil sifatida qo'shiladi.
+- Nuqsonli tovarni yetkazib beruvchiga qaytarishda xaridor u bilan birga DEBET XABARNOMASINI (debit note) yuboradi. Yetkazib beruvchi javoban kredit-nota beradi.`,
       },
       heading: { en: 'Business documents', ru: 'Деловые документы', uz: 'Biznes hujjatlari' },
       body: {
@@ -185,21 +188,36 @@ Sotib olishda odatiy tartib: siz xarid buyurtmasini yuborasiz, tovar yetkazib be
 - Paying a supplier lowers both assets and liabilities. Buying a machine on credit raises both.
 - The equation shows the effect of a transaction on assets, liabilities and capital. It is not a statement of profit.
 - An owner who puts a car into the business adds capital without any cash: Dr Motor vehicle, Cr Capital.
-- If a sole trader takes goods from inventory for use in the business, Dr Non-current assets, Cr Cost of sales. For private use it is Dr Drawings, Cr Cost of sales.`,
+- If a sole trader takes goods from inventory for use in the business, Dr Non-current assets, Cr Cost of sales. For private use it is Dr Drawings, Cr Cost of sales.
+- Net assets = capital. So: closing net assets = opening net assets + capital introduced + profit - drawings.
+- Turned round to find profit: profit = closing net assets - opening net assets + drawings - capital introduced. A negative answer is a loss.
+- Drawings include a "salary" the owner pays themself ($650 a month = $7,800 a year) and goods taken for private use. A sole trader has no salary expense for themself.
+- Goods taken by the owner are recorded at COST, not selling price: Dr Drawings, Cr Purchases (cost of sales).
+- Profit but less cash? Giving customers longer to pay does it (receivables rise). Depreciation and a loss on sale use no cash at all.`,
         ru: `- Активы не просто равны обязательствам и не всегда больше их. Капитал — третья часть уравнения.
 - Капитал — не актив и не обязательство бизнеса. Считайте его отдельной статьёй.
 - Получение долга от покупателя не меняет итог активов: банк растёт, дебиторы падают.
 - Оплата поставщику уменьшает и активы, и обязательства. Покупка станка в кредит увеличивает и то, и другое.
 - Уравнение показывает влияние операции на активы, обязательства и капитал. Это не отчёт о прибыли.
 - Владелец, вносящий автомобиль в бизнес, увеличивает капитал без денег: Дт Транспорт, Кт Капитал.
-- Если предприниматель берёт товар из запасов для бизнеса: Дт Внеоборотные активы, Кт Себестоимость продаж. Для личных нужд: Дт Изъятия, Кт Себестоимость продаж.`,
+- Если предприниматель берёт товар из запасов для бизнеса: Дт Внеоборотные активы, Кт Себестоимость продаж. Для личных нужд: Дт Изъятия, Кт Себестоимость продаж.
+- Чистые активы = капитал. Поэтому: чистые активы на конец = чистые активы на начало + внесённый капитал + прибыль - изъятия.
+- Чтобы найти прибыль, переставим: прибыль = чистые активы на конец - на начало + изъятия - внесённый капитал. Отрицательный ответ — убыток.
+- Изъятия включают «зарплату», которую владелец платит себе ($650 в месяц = $7 800 в год), и товар, взятый для себя. У предпринимателя нет расхода на зарплату самому себе.
+- Товар, взятый владельцем, отражают по СЕБЕСТОИМОСТИ, а не по цене продажи: Дт Изъятия, Кт Закупки (себестоимость продаж).
+- Прибыль есть, а денег меньше? Так бывает, если дать покупателям больше времени на оплату (растёт дебиторка). Амортизация и убыток от продажи вообще не тратят денег.`,
         uz: `- Aktivlar shunchaki majburiyatlarga teng emas va doim ulardan katta ham emas. Kapital tenglamaning uchinchi qismi.
 - Kapital biznesning aktivi ham, majburiyati ham emas. Uni alohida modda deb hisoblang.
 - Mijozdan qarz olish jami aktivlarni o'zgartirmaydi: bank oshadi, debitorlar kamayadi.
 - Yetkazib beruvchiga to'lov aktivlar va majburiyatlarni kamaytiradi. Stanokni nasiyaga olish ikkalasini oshiradi.
 - Tenglama operatsiyaning aktivlar, majburiyatlar va kapitalga ta'sirini ko'rsatadi. Bu foyda hisoboti emas.
 - Egasi biznesga mashina kiritsa, pulsiz kapital oshadi: Dt Transport, Kt Kapital.
-- Yakka tadbirkor zaxiradan tovarni biznes uchun olsa: Dt Uzoq muddatli aktivlar, Kt Sotilgan tovar tannarxi. Shaxsiy maqsadda: Dt Olib qo'yishlar, Kt Sotilgan tovar tannarxi.`,
+- Yakka tadbirkor zaxiradan tovarni biznes uchun olsa: Dt Uzoq muddatli aktivlar, Kt Sotilgan tovar tannarxi. Shaxsiy maqsadda: Dt Olib qo'yishlar, Kt Sotilgan tovar tannarxi.
+- Sof aktivlar = kapital. Demak: yakuniy sof aktivlar = boshlang'ich sof aktivlar + kiritilgan kapital + foyda - olib qo'yishlar.
+- Foydani topish uchun almashtiramiz: foyda = yakuniy sof aktivlar - boshlang'ich + olib qo'yishlar - kiritilgan kapital. Manfiy javob zarar demakdir.
+- Olib qo'yishlarga egasining o'ziga to'laydigan "maoshi" (oyiga $650 = yiliga $7 800) va shaxsiy foydalanish uchun olingan tovar kiradi. Yakka tadbirkorda o'ziga maosh xarajati bo'lmaydi.
+- Egasi olgan tovar SOTUV narxida emas, TANNARXDA yoziladi: Dt Olib qo'yishlar, Kt Xaridlar (sotilgan tovar tannarxi).
+- Foyda bor, pul esa kamaygan? Xaridorlarga to'lash uchun ko'proq vaqt berilsa shunday bo'ladi (debitorlik oshadi). Amortizatsiya va sotuvdan zarar umuman pul sarflamaydi.`,
       },
       heading: {
         en: 'Duality and the accounting equation',
@@ -536,7 +554,13 @@ Bulutli hisob — dastur va ma'lumotlar kompyuteringizda emas, internetda saqlan
 - A trade discount comes off before anything is recorded. Goods listed at $800 less 5% are recorded at $760.
 - Topping up petty cash: Dr Petty cash, Cr Bank.
 - In the bank account, money in is a debit and money out is a credit. An opening overdraft is a credit balance.
-- Money received for goods returned to a supplier is a receipt. Rental income is a receipt too.`,
+- Money received for goods returned to a supplier is a receipt. Rental income is a receipt too.
+- Common entries: cash purchase Dr Purchases, Cr Cash. Credit purchase Dr Purchases, Cr Payables. Paying a supplier Dr Payables, Cr Cash.
+- Cash sale Dr Cash, Cr Sales. Credit sale Dr Receivables, Cr Sales. A credit customer pays Dr Cash, Cr Receivables.
+- Returns: a customer returns goods Dr Sales returns, Cr Cash (or Receivables). We return goods to a supplier Dr Payables (or Cash), Cr Purchase returns.
+- One sale, two books: the SELLER records Dr Receivables, Cr Sales. The BUYER records Dr Purchases, Cr Payables. Read whose books the question asks about.
+- In the cash book a debit raises a positive bank balance and REDUCES an overdraft. A credit does the opposite.
+- Gross profit with returns: (sales - sales returns) - (opening inventory + purchases - purchase returns - closing inventory).`,
         ru: `- Обычные дебетовые остатки: активы и расходы, включая изъятия, предоплаты, транспортные расходы на закупку и продажу и запасы на начало.
 - Обычные кредитовые остатки: обязательства, капитал и доходы, включая начисления, доход от аренды, возвраты поставщикам и полученные скидки.
 - Доставка закупок (carriage in) входит в себестоимость и снижает валовую прибыль. Доставка продаж (carriage out) — расход ниже валовой прибыли.
@@ -544,7 +568,13 @@ Bulutli hisob — dastur va ma'lumotlar kompyuteringizda emas, internetda saqlan
 - Торговая скидка вычитается до записи. Товар по прайсу $800 минус 5% записывается как $760.
 - Пополнение мелкой кассы: Дт Мелкая касса, Кт Банк.
 - На счёте банка поступление — дебет, выплата — кредит. Овердрафт на начало — кредитовый остаток.
-- Деньги за товар, возвращённый поставщику, — поступление. Доход от аренды — тоже поступление.`,
+- Деньги за товар, возвращённый поставщику, — поступление. Доход от аренды — тоже поступление.
+- Частые проводки: покупка за наличные Дт Закупки, Кт Касса. Покупка в кредит Дт Закупки, Кт Кредиторы. Оплата поставщику Дт Кредиторы, Кт Касса.
+- Продажа за наличные Дт Касса, Кт Выручка. Продажа в кредит Дт Дебиторы, Кт Выручка. Покупатель в кредит платит: Дт Касса, Кт Дебиторы.
+- Возвраты: покупатель вернул товар Дт Возвраты продаж, Кт Касса (или Дебиторы). Мы вернули товар поставщику Дт Кредиторы (или Касса), Кт Возвраты закупок.
+- Одна продажа, два учёта: ПРОДАВЕЦ пишет Дт Дебиторы, Кт Выручка. ПОКУПАТЕЛЬ пишет Дт Закупки, Кт Кредиторы. Смотрите, чей учёт спрашивают.
+- В кассовой книге дебет увеличивает положительный остаток в банке и УМЕНЬШАЕТ овердрафт. Кредит — наоборот.
+- Валовая прибыль с возвратами: (выручка - возвраты продаж) - (запасы на начало + закупки - возвраты закупок - запасы на конец).`,
         uz: `- Odatiy debet qoldiqlar: aktivlar va xarajatlar, jumladan olib qo'yishlar, oldindan to'lovlar, kelish va ketish tashuvi hamda boshlang'ich zaxira.
 - Odatiy kredit qoldiqlar: majburiyatlar, kapital va daromad, jumladan hisoblangan xarajatlar, ijara daromadi, xarid qaytarishlari va olingan chegirmalar.
 - Kelish tashuvi (carriage in) sotilgan tovar tannarxiga kiradi va yalpi foydani kamaytiradi. Ketish tashuvi (carriage out) yalpi foydadan pastdagi xarajat.
@@ -552,7 +582,13 @@ Bulutli hisob — dastur va ma'lumotlar kompyuteringizda emas, internetda saqlan
 - Savdo chegirmasi yozuvdan oldin ayiriladi. Ro'yxat narxi $800 minus 5% bo'lgan tovar $760 yoziladi.
 - Kichik kassani to'ldirish: Dt Kichik kassa, Kt Bank.
 - Bank hisobida kelgan pul debet, chiqqan pul kredit. Boshlang'ich overdraft kredit qoldiq.
-- Yetkazib beruvchiga qaytarilgan tovar uchun olingan pul tushum. Ijara daromadi ham tushum.`,
+- Yetkazib beruvchiga qaytarilgan tovar uchun olingan pul tushum. Ijara daromadi ham tushum.
+- Ko'p uchraydigan yozuvlar: naqd xarid Dt Xaridlar, Kt Kassa. Nasiya xarid Dt Xaridlar, Kt Kreditorlar. Yetkazib beruvchiga to'lov Dt Kreditorlar, Kt Kassa.
+- Naqd sotuv Dt Kassa, Kt Sotuv. Nasiya sotuv Dt Debitorlar, Kt Sotuv. Nasiya xaridor to'laydi: Dt Kassa, Kt Debitorlar.
+- Qaytarishlar: xaridor tovarni qaytardi Dt Sotuv qaytarishlari, Kt Kassa (yoki Debitorlar). Biz yetkazib beruvchiga qaytardik Dt Kreditorlar (yoki Kassa), Kt Xarid qaytarishlari.
+- Bitta sotuv, ikki hisob: SOTUVCHI Dt Debitorlar, Kt Sotuv yozadi. XARIDOR Dt Xaridlar, Kt Kreditorlar yozadi. Savol kimning hisobi haqida ekanini o'qing.
+- Kassa kitobida debet ijobiy bank qoldig'ini oshiradi va overdraftni KAMAYTIRADI. Kredit buning aksini qiladi.
+- Qaytarishlar bilan yalpi foyda: (sotuv - sotuv qaytarishlari) - (boshlang'ich zaxira + xaridlar - xarid qaytarishlari - yakuniy zaxira).`,
       },
       heading: { en: 'Ledger accounts, debits and credits', ru: 'Счета, дебет и кредит', uz: 'Hisoblar, debet va kredit' },
       body: {
@@ -789,15 +825,27 @@ Xatoni tuzatish uchun uch qadam: nima yozilganini yozing, nima yozilishi kerak e
         en: `- A balance b/f on the debit side is a debit balance, and on the credit side a credit balance.
 - If a T-account has items on the wrong side, move each one to the right side first, then balance it.
 - To find closing capital from a list of balances: work out the profit or loss from income and expenses, then add it to or take it from opening capital, then take off drawings.
-- With no inventory, cost of sales is simply purchases.`,
+- With no inventory, cost of sales is simply purchases.
+- Finding a missing figure from an account: credit sales = closing receivables + cash from credit customers - opening receivables. Take cash sales out of total cash first.
+- Trial balance: debit side = assets, expenses, drawings. Credit side = liabilities, capital, income, and accumulated depreciation and the allowance for receivables.
+- A loan and money in the bank are shown separately (credit loan, debit bank), never netted. The allowance for receivables IS taken off receivables: one asset, receivables less allowance.
+- Current assets = inventory + receivables + cash at bank. Machinery is non-current, and an overdraft is a liability.`,
         ru: `- Остаток b/f на дебетовой стороне — дебетовый, на кредитовой — кредитовый.
 - Если в Т-счёте статьи не на той стороне, сначала перенесите каждую на верную, затем выводите остаток.
 - Чтобы найти капитал на конец по списку остатков: посчитайте прибыль или убыток из доходов и расходов, прибавьте к капиталу на начало или вычтите, затем вычтите изъятия.
-- Если запасов нет, себестоимость — это просто закупки.`,
+- Если запасов нет, себестоимость — это просто закупки.
+- Найти недостающую сумму по счёту: продажи в кредит = дебиторка на конец + деньги от покупателей в кредит - дебиторка на начало. Сначала уберите из общей суммы денег продажи за наличные.
+- Пробный баланс: дебет = активы, расходы, изъятия. Кредит = обязательства, капитал, доходы, а также накопленная амортизация и резерв по дебиторке.
+- Кредит и деньги в банке показывают отдельно (кредит — заём, дебет — банк), без взаимозачёта. А резерв ВЫЧИТАЮТ из дебиторки: один актив, дебиторка минус резерв.
+- Оборотные активы = запасы + дебиторка + деньги в банке. Оборудование — внеоборотный актив, а овердрафт — обязательство.`,
         uz: `- Debet tomondagi b/f qoldiq debet qoldiq, kredit tomondagisi kredit qoldiq.
 - T-hisobda summalar noto'g'ri tomonda bo'lsa, avval har birini to'g'ri tomonga o'tkazing, so'ng qoldiqni chiqaring.
 - Qoldiqlar ro'yxatidan yakuniy kapitalni topish: daromad va xarajatlardan foyda yoki zararni hisoblang, boshlang'ich kapitalga qo'shing yoki ayiring, so'ng olib qo'yishlarni ayiring.
-- Zaxira bo'lmasa, tannarx shunchaki xaridlar.`,
+- Zaxira bo'lmasa, tannarx shunchaki xaridlar.
+- Hisobdan yetishmayotgan summani topish: nasiya sotuv = yakuniy debitorlik + nasiya xaridorlardan pul - boshlang'ich debitorlik. Avval umumiy puldan naqd sotuvni chiqarib tashlang.
+- Sinov balansi: debet = aktivlar, xarajatlar, olib qo'yishlar. Kredit = majburiyatlar, kapital, daromadlar, hamda jamg'arilgan amortizatsiya va debitorlik zaxirasi.
+- Kredit va bankdagi pul alohida ko'rsatiladi (kredit — qarz, debet — bank), o'zaro hisoblanmaydi. Debitorlik zaxirasi esa debitorlikdan AYIRILADI: bitta aktiv, debitorlik minus zaxira.
+- Joriy aktivlar = zaxira + debitorlik + bankdagi pul. Uskunalar uzoq muddatli aktiv, overdraft esa majburiyat.`,
       },
       heading: {
         en: 'Balancing and closing ledger accounts',

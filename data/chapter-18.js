@@ -170,21 +170,30 @@ Koeffitsientlar ikki bog'liq sonni, masalan foyda va sotuvni yonma-yon qo'yib, s
 - New loans or a share issue raise capital employed, so ROCE falls unless profit rises with it.
 - Repaying loans lowers capital employed, which raises ROCE. A better profit margin raises it too.
 - A revaluation raises capital employed and the depreciation charge, so ROCE falls.
-- Margin is profit / selling price. Mark-up is profit / cost. With a 25% mark-up, cost = price × 100/125.`,
+- Margin is profit / selling price. Mark-up is profit / cost. With a 25% mark-up, cost = price × 100/125.
+- If last year's closing inventory was UNDERSTATED, this year's opening inventory is too low, so this year's cost of sales is too low and the gross margin looks higher. More sales volume alone does not change the margin.
+- Capital employed changes only when equity or long-term debt changes. A profit (selling inventory above cost) raises it. Writing off a debt is an expense, so it LOWERS it. Paying a supplier changes nothing, and an overdraft does not count.
+- Net profit margin = (gross profit - expenses) / sales. If only gross profit and the margin are given, sales = gross profit / margin ($900 / 25% = $3,600).`,
         ru: `- PBFIT — прибыль до финансирования и налога на прибыль. В FA она обычно равна операционной прибыли.
 - Если PBFIT не дана, рассчитайте: валовая прибыль - операционные расходы. Не берите прибыль до налога.
 - Снижение закупочной цены при той же цене продажи повышает валовую маржу.
 - Новые займы или выпуск акций увеличивают задействованный капитал, и ROCE падает, если прибыль не растёт.
 - Возврат займов уменьшает задействованный капитал и повышает ROCE. Рост маржи тоже повышает его.
 - Переоценка увеличивает задействованный капитал и амортизацию, поэтому ROCE падает.
-- Маржа — прибыль / цена продажи. Наценка — прибыль / себестоимость. При наценке 25% себестоимость = цена × 100/125.`,
+- Маржа — прибыль / цена продажи. Наценка — прибыль / себестоимость. При наценке 25% себестоимость = цена × 100/125.
+- Если запасы на конец прошлого года были ЗАНИЖЕНЫ, запасы на начало этого года тоже малы, себестоимость этого года мала, и валовая маржа кажется выше. Один лишь рост объёма продаж маржу не меняет.
+- Используемый капитал меняется, только когда меняется капитал или долгосрочный долг. Прибыль (продажа запасов дороже себестоимости) увеличивает его. Списание долга — расход, поэтому УМЕНЬШАЕТ его. Оплата поставщику ничего не меняет, а овердрафт не учитывается.
+- Чистая маржа = (валовая прибыль - расходы) / выручка. Если даны только валовая прибыль и маржа, выручка = валовая прибыль / маржа ($900 / 25% = $3,600).`,
         uz: `- PBFIT — moliyalashtirish va foyda solig'idan oldingi foyda. FA da odatda operatsion foydaga teng.
 - PBFIT berilmasa, hisoblang: yalpi foyda - operatsion xarajatlar. Soliqdan oldingi foydani olmang.
 - Sotish narxi o'zgarmay xarid narxi tushsa, yalpi foyda marjasi oshadi.
 - Yangi qarz yoki aksiya chiqarish jalb qilingan kapitalni oshiradi, foyda oshmasa ROCE tushadi.
 - Qarzni qaytarish jalb qilingan kapitalni kamaytirib, ROCE ni oshiradi. Marja yaxshilanishi ham oshiradi.
 - Qayta baholash jalb qilingan kapital va amortizatsiyani oshiradi, shuning uchun ROCE tushadi.
-- Marja — foyda / sotish narxi. Ustama — foyda / tannarx. 25% ustamada tannarx = narx × 100/125.`,
+- Marja — foyda / sotish narxi. Ustama — foyda / tannarx. 25% ustamada tannarx = narx × 100/125.
+- Agar o'tgan yilgi yakuniy zaxira KAM ko'rsatilgan bo'lsa, bu yilgi boshlang'ich zaxira ham kam, bu yilgi tannarx kam va yalpi marja yuqoriroq ko'rinadi. Faqat sotuv hajmi o'sishi marjani o'zgartirmaydi.
+- Ishlatilgan kapital faqat kapital yoki uzoq muddatli qarz o'zgarganda o'zgaradi. Foyda (zaxirani tannarxdan qimmat sotish) uni oshiradi. Qarzni hisobdan chiqarish xarajat, shuning uchun uni KAMAYTIRADI. Yetkazib beruvchiga to'lov hech narsani o'zgartirmaydi, overdraft esa hisobga olinmaydi.
+- Sof marja = (yalpi foyda - xarajatlar) / sotuv. Faqat yalpi foyda va marja berilsa, sotuv = yalpi foyda / marja ($900 / 25% = $3,600).`,
       },
       heading: { en: 'Profitability', ru: 'Рентабельность', uz: 'Rentabellik' },
       body: {
@@ -409,21 +418,24 @@ Esda tuting: overdraft qisqa muddatli majburiyat. Juda yuqori ham har doim yaxsh
 - A rise in the volume of credit sales does not, on its own, change receivables days.
 - Paying suppliers early to get a discount reduces payables days.
 - Building up inventory ahead of a sales campaign raises inventory days. Scrapping old items lowers them.
-- Longer payables days are free finance, but suppliers may stop supplying and discounts are lost.`,
+- Longer payables days are free finance, but suppliers may stop supplying and discounts are lost.
+- Payables days "using purchases": first find purchases = cost of sales + closing inventory - opening inventory, then trade payables / purchases x 365.`,
         ru: `- Средние запасы = (на начало + на конец) / 2. Сначала найдите себестоимость: на начало + закупки - на конец.
 - Если дана только общая выручка, считайте все продажи кредитными.
 - Слабый кредитный контроль или длинные сроки увеличивают дни дебиторов. Скидка за раннюю оплату сокращает их.
 - Рост объёма кредитных продаж сам по себе не меняет дни дебиторов.
 - Ранняя оплата поставщикам ради скидки сокращает дни кредиторов.
 - Накопление запасов перед рекламной кампанией увеличивает дни запасов. Списание старого товара уменьшает их.
-- Долгая оплата кредиторам — бесплатное финансирование, но поставщики могут прекратить поставки, а скидки теряются.`,
+- Долгая оплата кредиторам — бесплатное финансирование, но поставщики могут прекратить поставки, а скидки теряются.
+- Дни кредиторки «по закупкам»: сначала найдите закупки = себестоимость + запасы на конец - запасы на начало, затем кредиторка / закупки x 365.`,
         uz: `- O'rtacha zaxira = (boshlang'ich + yakuniy) / 2. Avval tannarxni toping: boshlang'ich + xarid - yakuniy.
 - Faqat umumiy tushum berilsa, barcha sotuvni nasiya deb oling.
 - Zaif kredit nazorati yoki uzoq muddat debitorlik kunlarini oshiradi. Erta to'lov chegirmasi ularni qisqartiradi.
 - Nasiya sotuv hajmi oshishi o'zi debitorlik kunlarini o'zgartirmaydi.
 - Chegirma uchun yetkazib beruvchiga erta to'lash kreditorlik kunlarini qisqartiradi.
 - Reklama kampaniyasi oldidan zaxira to'plash zaxira kunlarini oshiradi. Eski tovarni chiqarish kamaytiradi.
-- Uzoq kreditorlik muddati bepul moliya, lekin yetkazib beruvchilar to'xtatishi va chegirmalar yo'qolishi mumkin.`,
+- Uzoq kreditorlik muddati bepul moliya, lekin yetkazib beruvchilar to'xtatishi va chegirmalar yo'qolishi mumkin.
+- "Xaridlar bo'yicha" kreditorlik kunlari: avval xaridlarni toping = tannarx + yakuniy zaxira - boshlang'ich zaxira, so'ng kreditorlik / xaridlar x 365.`,
       },
       heading: {
         en: 'Efficiency and working capital',

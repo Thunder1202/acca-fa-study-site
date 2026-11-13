@@ -54,11 +54,12 @@
       el('aside', { class: 'example' },
         el('p', { class: 'example-label' }, label('example', lang)),
         richTextT(section.example, lang, seen)),
+      // Always open: every fact a practice question needs is either above or in these notes.
+      section.exam && el('div', { class: 'exam-notes' },
+        el('p', { class: 'exam-notes-label' }, label('examNotes', lang)),
+        richTextT(section.exam, lang, seen)),
       el('details', { class: 'more' },
         el('summary', {}, label('explainMore', lang)),
-        section.exam && el('div', { class: 'exam-notes' },
-          el('h3', {}, label('examNotes', lang)),
-          richTextT(section.exam, lang, seen)),
         richTextT(section.body, lang, seen)),
       section.source && el('p', { class: 'source-note' }, `${label('sourceLabel', lang)}: ${t(section.source, lang)}`));
   }

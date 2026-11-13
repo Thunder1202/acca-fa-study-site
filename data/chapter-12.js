@@ -146,15 +146,21 @@ Sinov: kompaniya pulni qaytarishi SHARTmi? Ha bo'lsa — majburiyat, foizi yoki 
         en: `- A company always has equity share capital. It may or may not have a share premium account or a revaluation surplus.
 - Share premium arises only if shares are issued above nominal value.
 - Work out share capital as number of shares x nominal value. Never use the issue price.
-- Called-up capital is the nominal value paid plus amounts shareholders have agreed to pay. Paid-up capital is what has been paid so far.`,
+- Called-up capital is the nominal value paid plus amounts shareholders have agreed to pay. Paid-up capital is what has been paid so far.
+- "At a premium of 40c" means 40c ABOVE nominal value. Issue price = nominal value + premium (a 25c share at a 40c premium is issued at 65c).
+- If the whole issue price was credited to share capital, move the premium out: Dr Share capital, Cr Share premium.`,
         ru: `- Акционерный капитал у компании есть всегда. Эмиссионного дохода или резерва переоценки может и не быть.
 - Эмиссионный доход возникает, только если акции выпущены выше номинала.
 - Акционерный капитал = число акций x номинал. Никогда не берите цену выпуска.
-- Истребованный капитал — оплаченный номинал плюс суммы, которые акционеры согласились внести. Оплаченный — то, что уже внесено.`,
+- Истребованный капитал — оплаченный номинал плюс суммы, которые акционеры согласились внести. Оплаченный — то, что уже внесено.
+- «С премией 40c» значит на 40c ВЫШЕ номинала. Цена выпуска = номинал + премия (акция 25c с премией 40c выпускается по 65c).
+- Если вся цена выпуска ушла в уставный капитал, перенесите премию: Дт Уставный капитал, Кт Эмиссионный доход.`,
         uz: `- Kompaniyada doim aksiya kapitali bor. Emissiya daromadi yoki qayta baholash rezervi bo'lmasligi mumkin.
 - Emissiya daromadi faqat aksiyalar nominaldan yuqori chiqarilganda paydo bo'ladi.
 - Aksiya kapitali = aksiyalar soni x nominal. Hech qachon chiqarish narxini olmang.
-- Chaqirilgan kapital — to'langan nominal plus aksiyadorlar to'lashga kelishgan summalar. To'langan kapital — hozirgacha to'langani.`,
+- Chaqirilgan kapital — to'langan nominal plus aksiyadorlar to'lashga kelishgan summalar. To'langan kapital — hozirgacha to'langani.
+- "40c mukofot bilan" nominaldan 40c YUQORI degani. Chiqarish narxi = nominal + mukofot (25c lik aksiya 40c mukofot bilan 65c ga chiqariladi).
+- Agar butun chiqarish narxi ustav kapitaliga yozilgan bo'lsa, mukofotni ko'chiring: Dt Ustav kapitali, Kt Emissiya daromadi.`,
       },
       heading: { en: 'Issuing shares', ru: 'Выпуск акций', uz: 'Aksiya chiqarish' },
       body: {
@@ -239,19 +245,22 @@ Aksiya kapitaliga doim faqat nominal yoziladi. Undan ortiq to'langani emissiya d
 - A rights issue brings in cash, so it appears in the statement of cash flows. A bonus issue does not.
 - A 1-for-4 bonus issue on 250,000 50c shares creates 62,500 shares, worth $31,250 at nominal value.
 - When an issue follows another, work them in date order. The bonus shares are based on the shares in issue at that time.
-- A bonus issue can be made from retained earnings, which then reduces retained earnings.`,
+- A bonus issue can be made from retained earnings, which then reduces retained earnings.
+- A rights issue raises assets (cash), share capital and usually share premium. It never lowers retained earnings or share premium, and it is not an investment.`,
         ru: `- Капитализация резервов — это бонусный выпуск, а не выпуск прав.
 - Выпуск прав обычно идёт со скидкой к рыночной цене, а не к номиналу.
 - Выпуск прав приносит деньги и попадает в отчёт о движении денег. Бонусный — нет.
 - Бонусный выпуск 1 за 4 на 250,000 акций по 50c создаёт 62,500 акций на $31,250 по номиналу.
 - Если выпуски идут один за другим, считайте по датам. Бонус рассчитывается от акций на тот момент.
-- Бонусный выпуск можно сделать из нераспределённой прибыли, и она тогда уменьшается.`,
+- Бонусный выпуск можно сделать из нераспределённой прибыли, и она тогда уменьшается.
+- Выпуск прав увеличивает активы (деньги), уставный капитал и обычно эмиссионный доход. Он никогда не уменьшает нераспределённую прибыль или эмиссионный доход и не является инвестицией.`,
         uz: `- Rezervlarni kapitallashtirish bonusli chiqarish, huquqli emas.
 - Huquqli chiqarish odatda bozor narxidan chegirma bilan, nominaldan emas.
 - Huquqli chiqarish pul olib keladi va pul oqimlari hisobotida ko'rinadi. Bonusli yo'q.
 - 250,000 ta 50c aksiyaga 1 ga 4 bonus 62,500 aksiya, nominalda $31,250.
 - Chiqarishlar ketma-ket bo'lsa, sana tartibida ishlang. Bonus o'sha paytdagi aksiyalardan hisoblanadi.
-- Bonusli chiqarish taqsimlanmagan foydadan ham bo'lishi mumkin, u holda foyda kamayadi.`,
+- Bonusli chiqarish taqsimlanmagan foydadan ham bo'lishi mumkin, u holda foyda kamayadi.
+- Huquqlar emissiyasi aktivlarni (pul), ustav kapitalini va odatda emissiya daromadini oshiradi. U hech qachon taqsimlanmagan foyda yoki emissiya daromadini kamaytirmaydi va investitsiya emas.`,
       },
       heading: {
         en: 'Rights issues and bonus issues',
@@ -347,21 +356,27 @@ Bonusli chiqarish: aksiyadorlar mutanosib ravishda BEPUL yangi aksiyalar oladi. 
 - Total comprehensive income = profit or loss + other comprehensive income. Dividends are not deducted.
 - A rights issue has no effect on retained earnings.
 - Last year's final dividend, approved and paid this year, is deducted this year. This year's unapproved proposal is not.
-- Number of shares = share capital / nominal value. A $200,000 capital of 50c shares is 400,000 shares.`,
+- Number of shares = share capital / nominal value. A $200,000 capital of 50c shares is 400,000 shares.
+- Dividends in the statement of changes in equity = ordinary (and irredeemable preference) dividends PAID in the year. Redeemable preference dividends are finance costs, and proposed dividends are left out.
+- Finding profit from retained earnings: profit = closing - opening + ordinary dividends + bonus issue from retained earnings. Redeemable preference dividends are already inside profit, so do not add them.`,
         ru: `- Выплаченные дивиденды — в отчёте об изменениях капитала. Полученные — доход в прибыли или убытке, поэтому не там.
 - Нераспределённая прибыль: на начало + прибыль за год - выплаченные дивиденды - бонусный выпуск из неё = на конец.
 - Прирост от переоценки её не затрагивает. Он идёт в прочий совокупный доход и резерв переоценки.
 - Общий совокупный доход = прибыль или убыток + прочий совокупный доход. Дивиденды не вычитаются.
 - Выпуск прав не влияет на нераспределённую прибыль.
 - Итоговый дивиденд прошлого года, утверждённый и выплаченный в этом, вычитается в этом году. Неутверждённое предложение этого года — нет.
-- Число акций = акционерный капитал / номинал. Капитал $200,000 из акций по 50c — 400,000 акций.`,
+- Число акций = акционерный капитал / номинал. Капитал $200,000 из акций по 50c — 400,000 акций.
+- Дивиденды в отчёте об изменениях капитала = ВЫПЛАЧЕННЫЕ за год обыкновенные (и бессрочные привилегированные) дивиденды. Дивиденды по погашаемым привилегированным — финансовые расходы, а предложенные дивиденды не включают.
+- Найти прибыль по нераспределённой прибыли: прибыль = на конец - на начало + обыкновенные дивиденды + бонусный выпуск из нераспределённой прибыли. Дивиденды по погашаемым привилегированным уже внутри прибыли, их не прибавляют.`,
         uz: `- To'langan dividendlar kapitaldagi o'zgarishlar hisobotida. Olingan dividendlar foyda yoki zarardagi daromad, u yerda emas.
 - Taqsimlanmagan foyda: boshlang'ich + yil foydasi - to'langan dividendlar - undan bonusli chiqarish = yakuniy.
 - Qayta baholash foydasi unga tegmaydi. U boshqa umumlashgan daromad va qayta baholash rezerviga o'tadi.
 - Jami umumlashgan daromad = foyda yoki zarar + boshqa umumlashgan daromad. Dividendlar ayirilmaydi.
 - Huquqli chiqarish taqsimlanmagan foydaga ta'sir qilmaydi.
 - O'tgan yilning shu yil tasdiqlanib to'langan yakuniy dividendi shu yil ayiriladi. Shu yilning tasdiqlanmagan taklifi yo'q.
-- Aksiyalar soni = aksiya kapitali / nominal. 50c lik $200,000 kapital 400,000 aksiya.`,
+- Aksiyalar soni = aksiya kapitali / nominal. 50c lik $200,000 kapital 400,000 aksiya.
+- Kapitaldagi o'zgarishlar hisobotidagi dividendlar = yil davomida TO'LANGAN oddiy (va muddatsiz imtiyozli) dividendlar. Qaytariladigan imtiyozli aksiya dividendlari moliyaviy xarajat, taklif qilingan dividendlar kiritilmaydi.
+- Taqsimlanmagan foydadan foydani topish: foyda = oxirgi - boshlang'ich + oddiy dividendlar + taqsimlanmagan foydadan bonus emissiya. Qaytariladigan imtiyozli dividendlar foydaning ichida, ularni qo'shmang.`,
       },
       heading: { en: 'Dividends and reserves', ru: 'Дивиденды и резервы', uz: 'Dividendlar va rezervlar' },
       body: {

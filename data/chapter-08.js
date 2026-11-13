@@ -44,13 +44,16 @@ const chapter08 = {
       exam: {
         en: `- An intangible asset can be bought (a licence, a brand) or generated internally (development costs). It can normally be sold.
 - Advertising costs and training costs can never be capitalised as an intangible asset.
-- Internally generated goodwill cannot be capitalised. Costs of testing a separately bought intangible so it works are part of its cost.`,
+- Internally generated goodwill cannot be capitalised. Costs of testing a separately bought intangible so it works are part of its cost.
+- Goodwill BOUGHT when buying another business can be shown as an intangible asset. Goodwill a business builds up itself cannot.`,
         ru: `- Нематериальный актив можно купить (лицензия, бренд) или создать внутри (затраты на разработку). Обычно его можно продать.
 - Расходы на рекламу и обучение никогда нельзя капитализировать как нематериальный актив.
-- Внутренне созданный гудвил капитализировать нельзя. Затраты на проверку работы отдельно купленного нематериального актива входят в его стоимость.`,
+- Внутренне созданный гудвил капитализировать нельзя. Затраты на проверку работы отдельно купленного нематериального актива входят в его стоимость.
+- Гудвил, КУПЛЕННЫЙ при покупке другого бизнеса, можно показать как нематериальный актив. Гудвил, созданный самим бизнесом, — нельзя.`,
         uz: `- Nomoddiy aktivni sotib olish mumkin (litsenziya, brend) yoki ichkarida yaratish mumkin (ishlanma xarajatlari). Odatda uni sotish mumkin.
 - Reklama va o'qitish xarajatlarini hech qachon nomoddiy aktiv sifatida kapitallashtirib bo'lmaydi.
-- Ichki yaratilgan gudvilni kapitallashtirib bo'lmaydi. Alohida sotib olingan nomoddiy aktivning ishlashini tekshirish xarajati uning qiymatiga kiradi.`,
+- Ichki yaratilgan gudvilni kapitallashtirib bo'lmaydi. Alohida sotib olingan nomoddiy aktivning ishlashini tekshirish xarajati uning qiymatiga kiradi.
+- Boshqa biznesni sotib olishda SOTIB OLINGAN gudvil nomoddiy aktiv sifatida ko'rsatilishi mumkin. Biznesning o'zi yaratgan gudvil esa mumkin emas.`,
       },
       heading: { en: 'What an intangible asset is', ru: 'Что такое нематериальный актив', uz: 'Nomoddiy aktiv nima' },
       body: {
@@ -121,15 +124,27 @@ U faqat identifikatsiya qilinadigan (biznesdan alohida), qiymatini o'lchash mumk
         en: `- PIRATE: Probable benefits, Intention to complete, Reliable cost measurement, Adequate resources, Technical feasibility, Expected to be profitable.
 - Costs before the criteria are first met stay as expenses and are never reinstated.
 - Equipment bought for research is property, plant and equipment, so it is capitalised and depreciated under IAS 16.
-- Projects are reviewed each year end. A project that no longer meets the criteria is written off to profit or loss.`,
+- Projects are reviewed each year end. A project that no longer meets the criteria is written off to profit or loss.
+- Research (always an expense): experiments, staff costs of research, testing whether a substance or idea could work, looking for uses of a material, market research.
+- Development (an asset once PIRATE is met): building a prototype or working model, staff costs on a product expected to bring benefits, new techniques soon to be used in production.
+- Capitalising is NOT a choice: if all the conditions are met, development costs MUST be capitalised. They are shown as intangible non-current assets.
+- What stops capitalising: benefits expected to be less than the cost, or funds unlikely to be there to finish. What does NOT stop it: the work is not finished yet, or it may lead to more than one product.`,
         ru: `- PIRATE: Probable (вероятные выгоды), Intention (намерение завершить), Reliable (надёжная оценка затрат), Adequate (достаточные ресурсы), Technical (техническая осуществимость), Expected (ожидаемая прибыльность).
 - Затраты до первого выполнения критериев остаются расходами и не восстанавливаются.
 - Оборудование для исследований — основные средства, поэтому капитализируется и амортизируется по IAS 16.
-- Проекты пересматриваются в конце каждого года. Проект, переставший соответствовать критериям, списывается в прибыль или убыток.`,
+- Проекты пересматриваются в конце каждого года. Проект, переставший соответствовать критериям, списывается в прибыль или убыток.
+- Исследования (всегда расход): эксперименты, зарплата исследователей, проверка, может ли вещество или идея работать, поиск применения материалу, маркетинговые исследования.
+- Разработка (актив, когда выполнен PIRATE): создание прототипа или рабочей модели, зарплата на продукт, который принесёт выгоду, новые методы, которые скоро пойдут в производство.
+- Капитализация — НЕ выбор: если все условия выполнены, затраты на разработку ОБЯЗАТЕЛЬНО капитализируют. Их показывают как нематериальные внеоборотные активы.
+- Что мешает капитализации: ожидаемая выгода меньше затрат или вряд ли хватит денег закончить. Что НЕ мешает: работа ещё не закончена или она может дать больше одного продукта.`,
         uz: `- PIRATE: Probable (ehtimoliy foyda), Intention (tugatish niyati), Reliable (ishonchli xarajat o'lchovi), Adequate (yetarli resurs), Technical (texnik imkoniyat), Expected (foydali bo'lishi kutiladi).
 - Mezonlar birinchi marta bajarilguncha bo'lgan xarajatlar xarajat bo'lib qoladi va qaytarilmaydi.
 - Tadqiqot uchun uskuna asosiy vosita, shuning uchun kapitallashtiriladi va IAS 16 bo'yicha amortizatsiyalanadi.
-- Loyihalar har yil oxirida qayta ko'riladi. Mezonlarga endi mos kelmaydigan loyiha foyda yoki zararga yozib yuboriladi.`,
+- Loyihalar har yil oxirida qayta ko'riladi. Mezonlarga endi mos kelmaydigan loyiha foyda yoki zararga yozib yuboriladi.
+- Tadqiqot (har doim xarajat): tajribalar, tadqiqotchilar maoshi, modda yoki g'oya ishlashini tekshirish, materialga qo'llanish topish, bozor tadqiqoti.
+- Ishlanma (PIRATE bajarilgach aktiv): prototip yoki ishlaydigan model yaratish, foyda keltiradigan mahsulot uchun xodimlar maoshi, tez orada ishlab chiqarishda qo'llanadigan yangi usullar.
+- Kapitallashtirish TANLOV EMAS: barcha shartlar bajarilsa, ishlanma xarajatlari MAJBURIY kapitallashtiriladi. Ular nomoddiy uzoq muddatli aktiv sifatida ko'rsatiladi.
+- Kapitallashtirishga nima to'sqinlik qiladi: kutilgan foyda xarajatdan kam yoki tugatishga mablag' yetmasligi mumkin. Nima to'sqinlik QILMAYDI: ish hali tugamagan yoki bir nechta mahsulotga olib kelishi mumkin.`,
       },
       heading: { en: 'Research and development', ru: 'Исследования и разработки', uz: 'Tadqiqot va ishlanma' },
       body: {
@@ -214,13 +229,19 @@ Ishlanma — bu bilimni haqiqiy mahsulotga aylantirish. Oltita shart bajarilgand
       exam: {
         en: `- To find the original cost, add the accumulated amortisation to the carrying amount, then divide by the useful life for the annual charge.
 - A licence is amortised from the date it is available for use, and development costs from the start of production or sales. Apply pro rata for part of a year.
-- Amortisation spreads cost over the useful life. It is not a way to spread the payment, estimate replacement money, or show market value.`,
+- Amortisation spreads cost over the useful life. It is not a way to spread the payment, estimate replacement money, or show market value.
+- There is NO five-year limit on amortising development costs. Use the period the benefits are expected. Amortisation is an expense in profit or loss, not in the statement of changes in equity.
+- Amortisation entry: Dr Amortisation expense, Cr Accumulated amortisation. The same amount every year under straight line ($24,000 / 4 years = $6,000 in year 3 too).`,
         ru: `- Чтобы найти первоначальную стоимость, прибавьте накопленную амортизацию к балансовой стоимости, затем разделите на срок использования.
 - Лицензия амортизируется с даты, когда доступна для использования, а затраты на разработку — с начала производства или продаж. За часть года начисляйте пропорционально.
-- Амортизация распределяет стоимость на срок использования. Это не способ растянуть оплату, оценить деньги на замену или показать рыночную стоимость.`,
+- Амортизация распределяет стоимость на срок использования. Это не способ растянуть оплату, оценить деньги на замену или показать рыночную стоимость.
+- Пятилетнего предела для амортизации разработки НЕТ. Используйте период, когда ожидается выгода. Амортизация — расход в отчёте о прибылях и убытках, а не в отчёте об изменениях капитала.
+- Проводка амортизации: Дт Расход на амортизацию, Кт Накопленная амортизация. При линейном методе каждый год одна сумма ($24,000 / 4 года = $6,000 и в 3-м году).`,
         uz: `- Dastlabki qiymatni topish uchun balans qiymatiga to'plangan amortizatsiyani qo'shing, so'ng foydali muddatga bo'ling.
 - Litsenziya foydalanishga tayyor bo'lgan sanadan, ishlanma xarajatlari esa ishlab chiqarish yoki sotuv boshlanishidan amortizatsiyalanadi. Yilning bir qismi uchun nisbatan hisoblang.
-- Amortizatsiya qiymatni foydali muddatga taqsimlaydi. U to'lovni taqsimlash, almashtirish pulini baholash yoki bozor qiymatini ko'rsatish usuli emas.`,
+- Amortizatsiya qiymatni foydali muddatga taqsimlaydi. U to'lovni taqsimlash, almashtirish pulini baholash yoki bozor qiymatini ko'rsatish usuli emas.
+- Ishlanma amortizatsiyasi uchun besh yillik chegara YO'Q. Foyda kutilayotgan davrdan foydalaning. Amortizatsiya foyda yoki zarar hisobotidagi xarajat, kapitaldagi o'zgarishlar hisobotida emas.
+- Amortizatsiya yozuvi: Dt Amortizatsiya xarajati, Kt Jamg'arilgan amortizatsiya. To'g'ri chiziqli usulda har yili bir xil summa ($24,000 / 4 yil = 3-yilda ham $6,000).`,
       },
       heading: {
         en: 'Amortisation of intangible assets',

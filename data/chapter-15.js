@@ -172,21 +172,30 @@ To'liq to'plam besh qismdan iborat: moliyaviy holat hisoboti, foyda yoki zarar v
 - Shares held to trade are a current asset.
 - A loan payable after 14 months is non-current. Moving it out of trade payables increases net current assets.
 - The allowance for receivables is deducted from receivables. Rent due is a current liability.
-- Net current assets = current assets - current liabilities.`,
+- Net current assets = current assets - current liabilities.
+- Loan notes can be current or non-current: current once they are repayable within 12 months.
+- Loan notes or redeemable preference shares issued below nominal value: the liability is the cash RECEIVED ($500,000 notes issued for $475,000 = $475,000). Interest is still worked out on the nominal value.
+- Interest owed TO you on a loan you made (to an employee, say) is accrued income: add it to receivables with the loan itself.`,
         ru: `- Дебет в выписке банка — овердрафт, это краткосрочное обязательство.
 - Продажа в кредит — оборотный актив, даже если сбор занимает до 12 месяцев, так как это часть операционного цикла.
 - Овердрафт погашается по требованию, поэтому он краткосрочный, даже если лимит на три года.
 - Акции для торговли — оборотный актив.
 - Кредит со сроком 14 месяцев долгосрочный. Перенос его из кредиторов увеличивает чистые оборотные активы.
 - Резерв по дебиторам вычитается из дебиторов. Аренда к оплате — краткосрочное обязательство.
-- Чистые оборотные активы = оборотные активы - краткосрочные обязательства.`,
+- Чистые оборотные активы = оборотные активы - краткосрочные обязательства.
+- Облигации (loan notes) могут быть краткосрочными или долгосрочными: краткосрочными, когда их нужно погасить в течение 12 месяцев.
+- Облигации или погашаемые привилегированные акции, выпущенные ниже номинала: обязательство = ПОЛУЧЕННЫЕ деньги (облигации $500,000 выпущены за $475,000 = $475,000). Проценты всё равно считают от номинала.
+- Проценты, которые должны ВАМ по выданному займу (например, сотруднику), — начисленный доход: добавьте их к дебиторке вместе с самим займом.`,
         uz: `- Bank ko'chirmasidagi debet overdraft, bu qisqa muddatli majburiyat.
 - Nasiya sotuv yig'ish 12 oygacha cho'zilsa ham aylanma aktiv, chunki operatsion sikl qismi.
 - Overdraft talab bo'yicha to'lanadi, shuning uchun limit uch yillik bo'lsa ham qisqa muddatli.
 - Savdo uchun aksiyalar aylanma aktiv.
 - 14 oydan keyin to'lanadigan kredit uzoq muddatli. Uni kreditorlardan ko'chirish sof aylanma aktivlarni oshiradi.
 - Debitorlar rezervi debitorlardan ayiriladi. To'lanadigan ijara qisqa muddatli majburiyat.
-- Sof aylanma aktivlar = aylanma aktivlar - qisqa muddatli majburiyatlar.`,
+- Sof aylanma aktivlar = aylanma aktivlar - qisqa muddatli majburiyatlar.
+- Obligatsiyalar (loan notes) qisqa yoki uzoq muddatli bo'lishi mumkin: 12 oy ichida qaytarilishi kerak bo'lganda qisqa muddatli.
+- Nominaldan past chiqarilgan obligatsiyalar yoki qaytariladigan imtiyozli aksiyalar: majburiyat = OLINGAN pul ($500,000 obligatsiya $475,000 ga chiqarilgan = $475,000). Foiz baribir nominaldan hisoblanadi.
+- Siz bergan qarz (masalan, xodimga) bo'yicha SIZGA to'lanadigan foiz hisoblangan daromad: uni qarzning o'zi bilan birga debitorlikka qo'shing.`,
       },
       heading: {
         en: 'The statement of financial position',
@@ -535,7 +544,10 @@ Filialni yopish xarajati yoki uskunani sotishdan foyda kabi katta bir martalik m
 - A dividend declared after the year end is not in that year's accounts, and it is never deducted in profit or loss.
 - Preference dividends due but unpaid at the year end are accrued. An equity dividend is accrued only if declared before the year end.
 - Preference shares generally carry no vote. Their dividend is paid before equity dividends and is a fixed amount.
-- Paying a dividend reduces reserves. Transfers within equity leave the total unchanged, and a share issue at a premium increases it.`,
+- Paying a dividend reduces reserves. Transfers within equity leave the total unchanged, and a share issue at a premium increases it.
+- Advantages of a bonus issue: shares become more marketable (lower price per share) and share capital comes more into line with the assets employed. It does NOT raise cash or increase the value of each share.
+- A rights issue goes to EXISTING shareholders, so it does not always increase the number of shareholders.
+- Authorised share capital is the most a company may issue in SHARES only (not loan notes). A revaluation surplus comes from revaluing, never from selling an asset at a profit.`,
         ru: `- Капитал равен чистым активам. Оплата поставщику и покупка в кредит не меняют чистые активы. Выплата зарплаты уменьшает их.
 - Товар, взятый владельцем, считается изъятием по концепции отдельного предприятия.
 - Товар, взятый как изъятие, уменьшает себестоимость.
@@ -544,7 +556,10 @@ Filialni yopish xarajati yoki uskunani sotishdan foyda kabi katta bir martalik m
 - Дивиденд, объявленный после конца года, не входит в отчётность этого года и никогда не вычитается в прибыли или убытке.
 - Неуплаченные привилегированные дивиденды начисляются на конец года. Дивиденд по обыкновенным акциям — только если объявлен до конца года.
 - Привилегированные акции обычно без голоса. Их дивиденд платится раньше и фиксирован.
-- Выплата дивиденда уменьшает резервы. Переносы внутри капитала итог не меняют, а выпуск с премией увеличивает его.`,
+- Выплата дивиденда уменьшает резервы. Переносы внутри капитала итог не меняют, а выпуск с премией увеличивает его.
+- Плюсы бонусного выпуска: акции легче продавать (ниже цена за акцию), а уставный капитал ближе к используемым активам. Он НЕ приносит денег и не повышает стоимость каждой акции.
+- Выпуск прав предлагается СУЩЕСТВУЮЩИМ акционерам, поэтому число акционеров растёт не всегда.
+- Объявленный уставный капитал — максимум, который компания может выпустить только в АКЦИЯХ (не облигациях). Резерв переоценки возникает при переоценке, а не при продаже актива с прибылью.`,
         uz: `- Kapital sof aktivlarga teng. Yetkazib beruvchiga to'lash yoki nasiyaga olish sof aktivlarni o'zgartirmaydi. Ish haqi to'lash kamaytiradi.
 - Egasi olgan tovarni olib qo'yish deb hisoblash alohidalik tamoyiliga mos.
 - Olib qo'yilgan tovar tannarxni kamaytiradi.
@@ -553,7 +568,10 @@ Filialni yopish xarajati yoki uskunani sotishdan foyda kabi katta bir martalik m
 - Yil oxiridan keyin e'lon qilingan dividend shu yil hisobotiga kirmaydi va foyda yoki zararda hech qachon ayirilmaydi.
 - To'lanmagan imtiyozli dividendlar yil oxirida hisoblanadi. Oddiy aksiya dividendi faqat yil oxiridan oldin e'lon qilingan bo'lsa.
 - Imtiyozli aksiyalar odatda ovozsiz. Dividendi oldin to'lanadi va qat'iy.
-- Dividend to'lash rezervlarni kamaytiradi. Kapital ichidagi o'tkazmalar jamni o'zgartirmaydi, mukofotli chiqarish oshiradi.`,
+- Dividend to'lash rezervlarni kamaytiradi. Kapital ichidagi o'tkazmalar jamni o'zgartirmaydi, mukofotli chiqarish oshiradi.
+- Bonus emissiyaning afzalliklari: aksiyalar oson sotiladi (aksiya narxi pastroq) va ustav kapitali ishlatilayotgan aktivlarga yaqinlashadi. U pul OLIB KELMAYDI va har bir aksiya qiymatini oshirmaydi.
+- Huquqlar emissiyasi MAVJUD aksiyadorlarga taklif qilinadi, shuning uchun aksiyadorlar soni har doim ham oshmaydi.
+- E'lon qilingan ustav kapitali kompaniya faqat AKSIYALARDA (obligatsiyalarda emas) chiqarishi mumkin bo'lgan eng ko'p miqdor. Qayta baholash rezervi qayta baholashdan paydo bo'ladi, aktivni foyda bilan sotishdan emas.`,
       },
       heading: {
         en: 'Changes in equity and how the statements link',
@@ -673,7 +691,10 @@ Yakuniy qoldiqlar moliyaviy holat hisobotining kapital bo'limiga aylanadi. Yakka
 - Non-adjusting event note: nature and estimated financial effect. Names and locations are not needed.
 - Provision note: nature, timing, uncertainties. The name of the other party is not needed.
 - The warranty expense is the increase in the provision. Payments use the provision up, so they are not an expense.
-- Intangibles are presented at cost or valuation, less amortisation and impairment.`,
+- Intangibles are presented at cost or valuation, less amortisation and impairment.
+- A reconciliation of opening to closing carrying amount is needed for tangible AND intangible non-current assets, but not for cash or receivables.
+- Not required: the market value of every asset, the NRV of development costs, or how long inventory has been held. Required for inventory: the policy and the amount carried at NRV.
+- Dividends proposed after the year end are not recorded, but they must be disclosed in the notes. Share capital and total depreciation must also be disclosed.`,
         ru: `- Примечание о нематериальных активах: накопленная амортизация на начало и конец и сверка балансовой стоимости. Заявление директоров о возмещаемости не нужно.
 - Хорошая политика для нематериальных активов: модель по стоимости, амортизация в указанные сроки на указанной основе.
 - Хорошая политика для земли и зданий говорит, что земля не амортизируется, а здания списываются за указанный срок.
@@ -683,7 +704,10 @@ Yakuniy qoldiqlar moliyaviy holat hisobotining kapital bo'limiga aylanadi. Yakka
 - Примечание о некорректирующем событии: характер и оценка эффекта. Имена и места не нужны.
 - Примечание о резерве: характер, срок, неопределённости. Имя другой стороны не нужно.
 - Расход на гарантию — рост резерва. Выплаты используют резерв и расходом не являются.
-- Нематериальные активы показываются по стоимости или оценке за вычетом амортизации и обесценения.`,
+- Нематериальные активы показываются по стоимости или оценке за вычетом амортизации и обесценения.
+- Сверка балансовой стоимости на начало и конец нужна для материальных И нематериальных внеоборотных активов, но не для денег и дебиторки.
+- Не требуется: рыночная стоимость каждого актива, NRV разработок или сколько времени хранятся запасы. Для запасов требуется: учётная политика и сумма, учтённая по NRV.
+- Дивиденды, предложенные после конца года, не отражают, но их обязательно раскрывают в примечаниях. Уставный капитал и общая амортизация тоже раскрываются.`,
         uz: `- Nomoddiy aktivlar izohi: boshi va oxiridagi to'plangan amortizatsiya va balans qiymati solishtirishi. Direktorlarning qoplanish bayonoti kerak emas.
 - Nomoddiy aktivlar uchun yaxshi siyosat: qiymat modeli, ko'rsatilgan muddat va asosda amortizatsiya.
 - Yer va binolar uchun yaxshi siyosat: yer amortizatsiyalanmaydi, binolar ko'rsatilgan muddatda hisobdan chiqariladi.
@@ -693,7 +717,10 @@ Yakuniy qoldiqlar moliyaviy holat hisobotining kapital bo'limiga aylanadi. Yakka
 - Tuzatmaydigan voqea izohi: mohiyat va moliyaviy ta'sir bahosi. Ismlar va joylar kerak emas.
 - Rezerv izohi: mohiyat, muddat, noaniqliklar. Boshqa tomon nomi kerak emas.
 - Kafolat xarajati rezerv o'sishi. To'lovlar rezervni ishlatadi, xarajat emas.
-- Nomoddiy aktivlar qiymat yoki baho minus amortizatsiya va qadrsizlanishda ko'rsatiladi.`,
+- Nomoddiy aktivlar qiymat yoki baho minus amortizatsiya va qadrsizlanishda ko'rsatiladi.
+- Boshlang'ich va yakuniy balans qiymatini solishtirish moddiy VA nomoddiy uzoq muddatli aktivlar uchun kerak, pul yoki debitorlik uchun emas.
+- Talab qilinmaydi: har bir aktivning bozor qiymati, ishlanmalar NRV si yoki zaxira qancha vaqt saqlangani. Zaxira uchun talab qilinadi: hisob siyosati va NRV bo'yicha ko'rsatilgan summa.
+- Yil oxiridan keyin taklif qilingan dividendlar yozilmaydi, lekin izohlarda albatta ochib beriladi. Ustav kapitali va umumiy amortizatsiya ham ochib beriladi.`,
       },
       heading: { en: 'Disclosure notes', ru: 'Примечания', uz: 'Izohlar' },
       body: {
@@ -793,7 +820,9 @@ FA uchun zaxira, asosiy vositalar, nomoddiy aktivlar, rezervlar va hisobot sanas
 - A claim about a faulty product sold before the year end is adjusting. A claim about one sold after the year end is non-adjusting.
 - An unfair dismissal in the year, with a claim arriving after the year end, is adjusting.
 - A dividend proposed before the year end but paid after is not an adjusting event.
-- Receipt of insurance money for a claim made before the year end is adjusting.`,
+- Receipt of insurance money for a claim made before the year end is adjusting.
+- Also non-adjusting: changes in exchange rates, buying another company, a decision to sell a major investment, issuing shares or loan notes, and fire damage after the year end (even if it lowers an asset's value).
+- Also adjusting: discovering a fraud or error, and a valuation showing an asset was already impaired at the year end. Inventory sold after the year end for MORE than cost needs no adjustment.`,
         ru: `- Граница — дата утверждения директорами, а не дата отправки акционерам.
 - Корректирующие события меняют суммы. В примечаниях они не описываются.
 - Падение рыночной стоимости основных средств после конца года — некорректирующее.
@@ -802,7 +831,9 @@ FA uchun zaxira, asosiy vositalar, nomoddiy aktivlar, rezervlar va hisobot sanas
 - Иск о браке, проданном до конца года, — корректирующий. О проданном после — некорректирующий.
 - Незаконное увольнение в течение года с иском после конца года — корректирующее.
 - Дивиденд, предложенный до конца года и выплаченный после, — не корректирующее событие.
-- Получение страховых денег по требованию, поданному до конца года, — корректирующее.`,
+- Получение страховых денег по требованию, поданному до конца года, — корректирующее.
+- Тоже некорректирующие: изменение валютных курсов, покупка другой компании, решение продать крупную инвестицию, выпуск акций или облигаций и ущерб от пожара после конца года (даже если он снижает стоимость актива).
+- Тоже корректирующие: обнаружение мошенничества или ошибки и оценка, показывающая, что актив уже был обесценен на конец года. Запасы, проданные после конца года ДОРОЖЕ себестоимости, корректировки не требуют.`,
         uz: `- Chegara direktorlar tasdiqlagan sana, aksiyadorlarga yuborilgan sana emas.
 - Tuzatuvchi voqealar summalarni o'zgartiradi. Ular izohlarda yozilmaydi.
 - Yil oxiridan keyin asosiy vositalar bozor qiymatining pasayishi tuzatmaydigan.
@@ -811,7 +842,9 @@ FA uchun zaxira, asosiy vositalar, nomoddiy aktivlar, rezervlar va hisobot sanas
 - Yil oxirigacha sotilgan nosoz mahsulot da'vosi tuzatuvchi. Keyin sotilgani tuzatmaydigan.
 - Yil davomida noqonuniy bo'shatish, da'vo yil oxiridan keyin, tuzatuvchi.
 - Yil oxirigacha taklif qilinib, keyin to'langan dividend tuzatuvchi emas.
-- Yil oxirigacha qilingan da'vo bo'yicha sug'urta pulini olish tuzatuvchi.`,
+- Yil oxirigacha qilingan da'vo bo'yicha sug'urta pulini olish tuzatuvchi.
+- Shuningdek tuzatilmaydigan: valyuta kurslari o'zgarishi, boshqa kompaniyani sotib olish, yirik investitsiyani sotish qarori, aksiya yoki obligatsiya chiqarish va yil oxiridan keyingi yong'in zarari (aktiv qiymatini pasaytirsa ham).
+- Shuningdek tuzatiladigan: firibgarlik yoki xato aniqlanishi va aktiv yil oxirida allaqachon qadrsizlanganini ko'rsatgan baholash. Yil oxiridan keyin tannarxdan QIMMAT sotilgan zaxira tuzatishni talab qilmaydi.`,
       },
       heading: {
         en: 'Events after the reporting period (IAS 10)',

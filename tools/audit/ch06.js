@@ -1,0 +1,41 @@
+// Chapter 6: facts the Kaplan and BPP questions test that the visible lesson did not state.
+module.exports = require('./facts.js')(6, {
+  0: [
+    ['Non-current asset: meant for continuing use, tangible or intangible, and not a current asset. Current assets are those expected to turn into cash in the short term.',
+      'Внеоборотный актив: предназначен для постоянного использования, материальный или нематериальный, и не является оборотным. Оборотные активы — те, что скоро превратятся в деньги.',
+      'Uzoq muddatli aktiv: doimiy foydalanish uchun, moddiy yoki nomoddiy, va joriy aktiv emas. Joriy aktivlar qisqa muddatda pulga aylanishi kutiladiganlardir.'],
+    ['A new sign over a shop door showing its name is capital expenditure. Replacing a broken mirror, repainting and cleaning are expenses.',
+      'Новая вывеска над входом с названием магазина — капитальные затраты. Замена разбитого зеркала, покраска и уборка — расходы.',
+      'Do\'kon eshigi ustidagi nomi yozilgan yangi peshlavha kapital xarajat. Singan oynani almashtirish, bo\'yash va tozalash xarajat.'],
+  ],
+  1: [
+    ['On a car invoice: number plates, delivery and fitted extras (such as a sound system) are cost. Road tax and insurance are expenses.',
+      'В счёте за машину: номера, доставка и установленное оборудование (например, аудиосистема) — это себестоимость. Дорожный налог и страховка — расходы.',
+      'Mashina hisob-fakturasida: raqamlar, yetkazib berish va o\'rnatilgan jihozlar (masalan, audio tizim) tannarxga kiradi. Yo\'l solig\'i va sug\'urta xarajat.'],
+    ['A maintenance contract is never part of cost. A business registered for sales tax leaves the sales tax out of cost too.',
+      'Договор на обслуживание никогда не входит в стоимость. Бизнес, зарегистрированный по налогу с продаж, тоже не включает налог в стоимость.',
+      'Texnik xizmat shartnomasi hech qachon tannarxga kirmaydi. Savdo solig\'i bo\'yicha ro\'yxatdan o\'tgan biznes soliqni ham tannarxga qo\'shmaydi.'],
+    ['Removing a sold asset from the register takes off its CARRYING AMOUNT. Carrying amount = proceeds + loss on disposal, or proceeds - profit on disposal.',
+      'Удаление проданного актива из реестра уменьшает его на БАЛАНСОВУЮ СТОИМОСТЬ. Балансовая стоимость = выручка + убыток от выбытия, или выручка - прибыль от выбытия.',
+      'Sotilgan aktivni reestrdan chiqarish uni BALANS QIYMATIGA kamaytiradi. Balans qiymati = tushum + chiqishdan zarar, yoki tushum - chiqishdan foyda.'],
+    ['Buying an asset on credit: Dr Non-current asset (cost), Cr Payables.',
+      'Покупка актива в кредит: Дт Внеоборотный актив (стоимость), Кт Кредиторы.',
+      'Aktivni nasiyaga sotib olish: Dt Uzoq muddatli aktiv (qiymat), Kt Kreditorlar.'],
+  ],
+  3: [
+    ['Read whether the question gives the TOTAL life or the REMAINING life. Remaining life = total life - years already used.',
+      'Смотрите, дан ли ОБЩИЙ срок или ОСТАВШИЙСЯ срок. Оставшийся срок = общий срок - уже прошедшие годы.',
+      'Savolda UMUMIY muddat berilganmi yoki QOLGAN muddatmi, o\'qing. Qolgan muddat = umumiy muddat - o\'tgan yillar.'],
+    ['Part-year with additions and disposals: charge the opening assets for the full year, LESS the months after a disposal, PLUS the months each addition was owned.',
+      'Неполный год с покупками и продажами: амортизация по активам на начало за весь год, МИНУС месяцы после продажи, ПЛЮС месяцы владения каждой покупкой.',
+      'Qo\'shimcha va chiqishlar bilan to\'liq bo\'lmagan yil: boshlang\'ich aktivlarga butun yil, chiqishdan keyingi oylarni AYIRIB, har bir yangi aktiv egalik qilingan oylarni QO\'SHIB hisoblanadi.'],
+  ],
+  4: [
+    ['Asset wrongly charged to repairs: profit is understated by the cost less the depreciation that should have been charged ($24,000 van, 3 months\' depreciation $1,000: understated by $23,000).',
+      'Актив ошибочно списан на ремонт: прибыль занижена на стоимость минус амортизация, которую следовало начислить (фургон $24,000, амортизация за 3 месяца $1,000: занижена на $23,000).',
+      'Aktiv xato bilan ta\'mirga yozilgan: foyda qiymat minus hisoblanishi kerak bo\'lgan amortizatsiyaga kamaytirilgan (furgon $24,000, 3 oylik amortizatsiya $1,000: $23,000 ga kam).'],
+    ['An expense wrongly debited to an asset account: profit is overstated and non-current assets are overstated.',
+      'Расход ошибочно отнесён на счёт актива: прибыль завышена, и внеоборотные активы завышены.',
+      'Xarajat xato bilan aktiv hisobiga yozilgan: foyda oshirilgan va uzoq muddatli aktivlar oshirilgan.'],
+  ],
+});

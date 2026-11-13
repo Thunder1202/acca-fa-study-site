@@ -56,15 +56,21 @@ const chapter16 = {
         en: `- For a company: closing retained earnings = opening retained earnings + profit - dividends.
 - Total assets = share capital + retained earnings + other reserves + total liabilities.
 - Lottery winnings or other money the owner puts in are capital introduced, not profit.
-- Work out opening and closing net assets first, then rearrange.`,
+- Work out opening and closing net assets first, then rearrange.
+- Owner's "wages" and private bills paid by the business are drawings. Add them back to profit, then take them off capital as drawings. A private bill counts at the GROSS amount, because tax cannot be claimed back on private spending.
+- Profit from the change in the bank balance: profit = increase in bank - share issue + loan repaid + assets bought - depreciation + increase in other working capital.`,
         ru: `- Для компании: нераспределённая прибыль на конец = на начало + прибыль - дивиденды.
 - Итог активов = акционерный капитал + нераспределённая прибыль + прочие резервы + итог обязательств.
 - Выигрыш в лотерею и другие деньги владельца — внесённый капитал, а не прибыль.
-- Сначала найдите чистые активы на начало и конец, затем преобразуйте формулу.`,
+- Сначала найдите чистые активы на начало и конец, затем преобразуйте формулу.
+- «Зарплата» владельца и его личные счета, оплаченные бизнесом, — это изъятия. Прибавьте их обратно к прибыли, затем вычтите из капитала как изъятия. Личный счёт считается по ВАЛОВОЙ сумме, потому что налог по личным тратам не возмещается.
+- Прибыль по изменению остатка в банке: прибыль = рост остатка - выпуск акций + погашенный кредит + купленные активы - амортизация + рост прочего оборотного капитала.`,
         uz: `- Kompaniya uchun: yakuniy taqsimlanmagan foyda = boshlang'ich + foyda - dividendlar.
 - Jami aktivlar = aksiya kapitali + taqsimlanmagan foyda + boshqa rezervlar + jami majburiyatlar.
 - Lotereya yutug'i va egasi kiritgan boshqa pul foyda emas, kiritilgan kapital.
-- Avval boshlang'ich va yakuniy sof aktivlarni toping, keyin formulani o'zgartiring.`,
+- Avval boshlang'ich va yakuniy sof aktivlarni toping, keyin formulani o'zgartiring.
+- Egasining "maoshi" va biznes to'lagan shaxsiy hisoblari olib qo'yishdir. Ularni foydaga qaytarib qo'shing, so'ng kapitaldan olib qo'yish sifatida ayiring. Shaxsiy hisob YALPI summada hisoblanadi, chunki shaxsiy xarajat bo'yicha soliq qaytarilmaydi.
+- Bank qoldig'i o'zgarishidan foyda: foyda = bank o'sishi - aksiya chiqarish + qaytarilgan kredit + sotib olingan aktivlar - amortizatsiya + boshqa aylanma kapital o'sishi.`,
       },
       heading: {
         en: 'Using the accounting equation',
@@ -155,17 +161,20 @@ Agar deyarli hech narsa saqlanmagan bo'lsa, buxgalteriya tenglamasidan foydalani
 - Remember the items beyond sales and receipts: contras, discounts allowed, interest charged and irrecoverable debts.
 - Interest charged on overdue accounts is a debit in receivables. Do not count it as a sale.
 - Discounts allowed that were not expected to be taken mean sales were recorded gross, so they are a credit in receivables.
-- Closing inventory is not in the cash paid to suppliers calculation. Find purchases first, then use payables.`,
+- Closing inventory is not in the cash paid to suppliers calculation. Find purchases first, then use payables.
+- Purchases from the payables account: closing payables + cash paid + discounts received + contras - refunds received from suppliers - opening payables. Then take off goods the owner took for own use.`,
         ru: `- Если данные нельзя разделить на наличные и кредит, используйте общий счёт дебиторов или кредиторов.
 - Помните о статьях кроме продаж и поступлений: взаимозачёты, предоставленные скидки, проценты, безнадёжные долги.
 - Проценты за просрочку — дебет дебиторов. Не считайте их продажей.
 - Скидки, которых не ожидали, значат, что продажи записаны полной суммой, поэтому это кредит дебиторов.
-- Запасы на конец не входят в расчёт выплат поставщикам. Сначала найдите закупки, затем используйте кредиторов.`,
+- Запасы на конец не входят в расчёт выплат поставщикам. Сначала найдите закупки, затем используйте кредиторов.
+- Закупки по счёту кредиторов: кредиторка на конец + оплачено + полученные скидки + взаимозачёты - возвраты денег от поставщиков - кредиторка на начало. Затем вычтите товар, взятый владельцем для себя.`,
         uz: `- Ma'lumotni naqd va nasiyaga ajratib bo'lmasa, umumiy debitorlar yoki kreditorlar hisobini ishlating.
 - Sotuv va tushumdan tashqari moddalarni eslang: o'zaro hisob-kitob, berilgan chegirmalar, foiz, undirib bo'lmaydigan qarzlar.
 - Kechikkan hisoblarga foiz debitorlarda debet. Uni sotuv deb hisoblamang.
 - Kutilmagan chegirmalar sotuv yalpi yozilganini bildiradi, shuning uchun debitorlarda kredit.
-- Yakuniy zaxira yetkazib beruvchilarga to'lov hisobiga kirmaydi. Avval xaridni toping, so'ng kreditorlarni ishlating.`,
+- Yakuniy zaxira yetkazib beruvchilarga to'lov hisobiga kirmaydi. Avval xaridni toping, so'ng kreditorlarni ishlating.
+- Kreditorlar hisobidan xaridlar: oxirgi kreditorlik + to'langan + olingan chegirmalar + o'zaro hisoblar - yetkazib beruvchilardan qaytgan pul - boshlang'ich kreditorlik. So'ng egasi o'zi uchun olgan tovarni ayiring.`,
       },
       heading: { en: 'The ledger account approach', ru: 'Подход через счета', uz: 'Hisoblar orqali yondashuv' },
       body: {
@@ -395,17 +404,20 @@ Agar naqd sotuv yetishmasa, qolgan hamma narsa u qancha bo'lishi kerakligini ayt
 - To test a mark-up, divide gross profit by cost of sales, not by sales.
 - A 40% mark-up means sales are 140% of cost.
 - Sales less sales returns is net sales, and purchases less purchase returns is net purchases.
-- Gross margin can be found from a count after the year end: sales at cost = opening inventory + purchases - later inventory.`,
+- Gross margin can be found from a count after the year end: sales at cost = opening inventory + purchases - later inventory.
+- Cash stolen with all-cash sales: expected sales = cost of sales / (1 - margin). Missing cash = expected sales - recorded sales. (Cost $96,200, margin 35%: $148,000 - $142,800 = $5,200.)`,
         ru: `- Проверьте слово в задаче. Маржа — от продаж, наценка — от себестоимости.
 - Чтобы проверить наценку, делите валовую прибыль на себестоимость, а не на продажи.
 - Наценка 40% значит, что продажи — 140% от себестоимости.
 - Продажи минус возвраты — чистые продажи, закупки минус возвраты — чистые закупки.
-- Маржу можно найти из пересчёта после конца года: продажи по себестоимости = запасы на начало + закупки - запасы позже.`,
+- Маржу можно найти из пересчёта после конца года: продажи по себестоимости = запасы на начало + закупки - запасы позже.
+- Украденные деньги при продажах только за наличные: ожидаемая выручка = себестоимость / (1 - маржа). Недостача = ожидаемая выручка - записанная. (Себестоимость $96,200, маржа 35%: $148,000 - $142,800 = $5,200.)`,
         uz: `- Masaladagi so'zni tekshiring. Marja sotuvdan, ustama tannarxdan.
 - Ustamani tekshirish uchun yalpi foydani sotuvga emas, tannarxga bo'ling.
 - 40% ustama sotuv tannarxning 140% ekanini bildiradi.
 - Sotuv minus qaytarishlar sof sotuv, xaridlar minus qaytarishlar sof xaridlar.
-- Marjani yil oxiridan keyingi sanashdan topish mumkin: tannarxdagi sotuv = boshlang'ich zaxira + xaridlar - keyingi zaxira.`,
+- Marjani yil oxiridan keyingi sanashdan topish mumkin: tannarxdagi sotuv = boshlang'ich zaxira + xaridlar - keyingi zaxira.
+- Faqat naqd sotuvda o'g'irlangan pul: kutilgan sotuv = tannarx / (1 - marja). Kamomad = kutilgan sotuv - yozilgan sotuv. (Tannarx $96,200, marja 35%: $148,000 - $142,800 = $5,200.)`,
       },
       heading: { en: 'Margin and mark-up', ru: 'Маржа и наценка', uz: 'Marja va ustama' },
       body: {

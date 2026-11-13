@@ -56,13 +56,19 @@ const chapter07 = {
       exam: {
         en: `- The profit or loss on disposal goes to profit or loss for the year. It is not income from sales.
 - When an asset is sold, remove its cost from the asset account and its accumulated depreciation from the accumulated depreciation account.
-- To find a revised total carrying amount after a disposal, deduct the carrying amount of the asset sold, which is proceeds less profit (or plus loss).`,
+- To find a revised total carrying amount after a disposal, deduct the carrying amount of the asset sold, which is proceeds less profit (or plus loss).
+- The same disposal as one journal: Dr Accumulated depreciation, Dr Bank (proceeds), Dr Loss on disposal (or Cr Profit on disposal), Cr Asset cost.
+- Carrying amount at the year end = opening carrying amount + additions + revaluation surplus - carrying amount of assets sold - depreciation for the year.`,
         ru: `- Прибыль или убыток от выбытия идёт в прибыль или убыток за год. Это не выручка от продаж.
 - При продаже актива уберите его стоимость со счёта актива и его накопленную амортизацию со счёта накопленной амортизации.
-- Чтобы найти новую общую балансовую стоимость после выбытия, вычтите балансовую стоимость проданного актива: выручка минус прибыль (или плюс убыток).`,
+- Чтобы найти новую общую балансовую стоимость после выбытия, вычтите балансовую стоимость проданного актива: выручка минус прибыль (или плюс убыток).
+- То же выбытие одной проводкой: Дт Накопленная амортизация, Дт Банк (выручка), Дт Убыток от выбытия (или Кт Прибыль от выбытия), Кт Стоимость актива.
+- Балансовая стоимость на конец года = на начало + покупки + прирост от переоценки - балансовая стоимость проданного - амортизация за год.`,
         uz: `- Chiqib ketishdan foyda yoki zarar yilning foyda yoki zarariga o'tadi. Bu savdodan tushum emas.
 - Aktiv sotilganda uning qiymatini aktiv hisobidan, to'plangan amortizatsiyasini to'plangan amortizatsiya hisobidan olib tashlang.
-- Chiqib ketgandan keyingi yangi umumiy balans qiymatini topish uchun sotilgan aktivning balans qiymatini ayiring: tushum minus foyda (yoki plus zarar).`,
+- Chiqib ketgandan keyingi yangi umumiy balans qiymatini topish uchun sotilgan aktivning balans qiymatini ayiring: tushum minus foyda (yoki plus zarar).
+- Xuddi shu chiqish bitta yozuvda: Dt Jamg'arilgan amortizatsiya, Dt Bank (tushum), Dt Chiqishdan zarar (yoki Kt Chiqishdan foyda), Kt Aktiv qiymati.
+- Yil oxiridagi balans qiymati = boshidagi + yangi aktivlar + qayta baholash o'sishi - sotilganlarning balans qiymati - yillik amortizatsiya.`,
       },
       heading: {
         en: 'Disposal of a non-current asset',
@@ -151,13 +157,16 @@ Balans qiymatidan ko'p — chiqishdan foyda. Kam — zarar. Chiqish hisobi qiyma
       exam: {
         en: `- A trade-in is a part exchange, so the allowance is the sale proceeds of the old asset.
 - Keep depreciation policy rules in mind: if there is no depreciation in the year of sale, do not charge any on the old asset in that year.
-- The new asset's cost is the allowance plus the cash paid, not the old asset's carrying amount.`,
+- The new asset's cost is the allowance plus the cash paid, not the old asset's carrying amount.
+- Before working out the old asset's carrying amount, take insurance, road tax or a maintenance contract out of its cost. They were never part of the asset.`,
         ru: `- Trade-in — это обмен с доплатой, поэтому зачёт — выручка от продажи старого актива.
 - Помните правила политики амортизации: если в год продажи амортизация не начисляется, не начисляйте её на старый актив в этом году.
-- Стоимость нового актива — это зачёт плюс уплаченные деньги, а не балансовая стоимость старого.`,
+- Стоимость нового актива — это зачёт плюс уплаченные деньги, а не балансовая стоимость старого.
+- Прежде чем считать балансовую стоимость старого актива, уберите из его стоимости страховку, дорожный налог или договор на обслуживание. Они никогда не были частью актива.`,
         uz: `- Trade-in ayirboshlash, shuning uchun hisobga olingan summa eski aktivning sotuv tushumi.
 - Amortizatsiya siyosatini eslang: sotuv yilida amortizatsiya hisoblanmasa, eski aktivga shu yili hisoblamang.
-- Yangi aktiv qiymati — hisobga olingan summa plus to'langan pul, eski aktivning balans qiymati emas.`,
+- Yangi aktiv qiymati — hisobga olingan summa plus to'langan pul, eski aktivning balans qiymati emas.
+- Eski aktivning balans qiymatini hisoblashdan oldin uning qiymatidan sug'urta, yo'l solig'i yoki xizmat shartnomasini chiqarib tashlang. Ular hech qachon aktivning qismi bo'lmagan.`,
       },
       heading: {
         en: 'Disposal by part exchange',

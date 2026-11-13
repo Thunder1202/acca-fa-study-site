@@ -60,15 +60,21 @@ const chapter20 = {
         en: `- If the parent sold the goods, the PURP does not affect the NCI. The parent bears it all.
 - Cancel the full intra-group sale, whether or not the goods are still held. The PURP is only on goods still held.
 - Unrealised profit increases cost of sales, which reduces gross profit.
-- Group revenue = P revenue + S revenue - intra-group sales. Group cost of sales = P + S - intra-group purchases + PURP.`,
+- Group revenue = P revenue + S revenue - intra-group sales. Group cost of sales = P + S - intra-group purchases + PURP.
+- Profit attributable to the owners of the parent = group profit for the year - NCI share. Group profit = parent's profit + subsidiary's post-acquisition profit - PURP.
+- "Inventory costing the parent $48,000, bought from the subsidiary at a 25% mark-up": the buyer's cost IS the seller's selling price, so the profit inside it is $48,000 x 25/125 = $9,600.`,
         ru: `- Если продавала материнская, PURP не влияет на NCI. Её полностью несёт материнская.
 - Внутригрупповая продажа исключается полностью, независимо от того, остался ли товар. PURP — только на оставшийся товар.
 - Нереализованная прибыль увеличивает себестоимость и уменьшает валовую прибыль.
-- Выручка группы = выручка P + выручка S - внутригрупповые продажи. Себестоимость = P + S - внутригрупповые закупки + PURP.`,
+- Выручка группы = выручка P + выручка S - внутригрупповые продажи. Себестоимость = P + S - внутригрупповые закупки + PURP.
+- Прибыль, приходящаяся на владельцев материнской компании = прибыль группы за год - доля NCI. Прибыль группы = прибыль материнской + прибыль дочерней после покупки - PURP.
+- «Запасы стоимостью $48,000 для материнской, купленные у дочерней с наценкой 25%»: себестоимость покупателя И ЕСТЬ цена продажи продавца, поэтому прибыль в ней $48,000 x 25/125 = $9,600.`,
         uz: `- Bosh sotgan bo'lsa, PURP NCI ga ta'sir qilmaydi. Uni to'liq bosh ko'taradi.
 - Guruh ichidagi sotuv tovar qolgan-qolmaganidan qat'i nazar to'liq chiqariladi. PURP faqat qolgan tovarga.
 - Amalga oshmagan foyda tannarxni oshiradi va yalpi foydani kamaytiradi.
-- Guruh tushumi = P tushumi + S tushumi - guruh ichidagi sotuv. Tannarx = P + S - guruh ichidagi xarid + PURP.`,
+- Guruh tushumi = P tushumi + S tushumi - guruh ichidagi sotuv. Tannarx = P + S - guruh ichidagi xarid + PURP.
+- Ona kompaniya egalariga tegishli foyda = guruhning yillik foydasi - NCI ulushi. Guruh foydasi = ona kompaniya foydasi + sho'ba korxonaning sotib olingandan keyingi foydasi - PURP.
+- "Ona kompaniyaga $48,000 ga tushgan, sho'ba korxonadan 25% ustama bilan olingan zaxira": xaridor tannarxi sotuvchining sotuv narxining O'ZI, shuning uchun undagi foyda $48,000 x 25/125 = $9,600.`,
       },
       heading: {
         en: 'The consolidated statement of profit or loss',

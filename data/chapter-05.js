@@ -113,13 +113,22 @@ Boshidagi bor narsani (boshlang'ich zaxira) oling, sotib olinganni (xaridlar) qo
       exam: {
         en: `- Goods taken by the owner for personal use: Dr Drawings, Cr Purchases.
 - A count on a different date must be adjusted back to the year end. Add goods sold since, at cost, and deduct goods bought since. Add back goods returned to suppliers since, and deduct goods customers have returned since.
-- Goods received and in closing inventory but with no invoice recorded overstate profit. The inventory figure itself is right.`,
+- Goods received and in closing inventory but with no invoice recorded overstate profit. The inventory figure itself is right.
+- Goods sold after the year end are added back at COST. Mark-up is a % of cost: with a 25% mark-up, cost = selling price x 100/125.
+- Margin is a % of the SELLING price: with a 35% margin, cost = selling price x 65%. Do not mix up margin and mark-up.
+- A customer returns goods after the year end that were sold BEFORE it: they were not in stock at the year end, so take their cost off the count.`,
         ru: `- Товары, взятые владельцем для личных нужд: Дт Изъятия, Кт Закупки.
 - Инвентаризацию в другой день нужно привести к концу года: прибавить проданное после неё по себестоимости и вычесть закупленное. Возвращённое поставщикам после неё прибавить, а возвращённое покупателями — вычесть.
-- Если товар получен и входит в запасы, а счёт не отражён, прибыль завышена. Сама сумма запасов верна.`,
+- Если товар получен и входит в запасы, а счёт не отражён, прибыль завышена. Сама сумма запасов верна.
+- Проданное после конца года прибавляют по СЕБЕСТОИМОСТИ. Наценка — % от себестоимости: при наценке 25% себестоимость = цена продажи x 100/125.
+- Маржа — % от ЦЕНЫ ПРОДАЖИ: при марже 35% себестоимость = цена продажи x 65%. Не путайте маржу и наценку.
+- Покупатель вернул после конца года товар, проданный ДО него: на конец года этого товара не было, поэтому его себестоимость вычитают из подсчёта.`,
         uz: `- Egasi shaxsiy ehtiyoj uchun olgan tovar: Dt Olib qo'yishlar, Kt Xaridlar.
 - Boshqa kunda o'tkazilgan sanash yil oxiriga keltiriladi: keyin sotilgani tannarxda qo'shiladi, keyin xarid qilingani ayiriladi. Keyin yetkazib beruvchiga qaytarilgani qo'shiladi, xaridorlar qaytargani ayiriladi.
-- Tovar olingan va zaxiraga kirgan, ammo hisob-faktura yozilmagan bo'lsa, foyda oshib ketadi. Zaxira summasi esa to'g'ri.`,
+- Tovar olingan va zaxiraga kirgan, ammo hisob-faktura yozilmagan bo'lsa, foyda oshib ketadi. Zaxira summasi esa to'g'ri.
+- Yil oxiridan keyin sotilgan tovar TANNARXDA qo'shiladi. Ustama tannarxning foizi: 25% ustamada tannarx = sotuv narxi x 100/125.
+- Marja SOTUV narxining foizi: 35% marjada tannarx = sotuv narxi x 65%. Marja va ustamani adashtirmang.
+- Xaridor yil oxiridan keyin, undan OLDIN sotilgan tovarni qaytardi: yil oxirida bu tovar omborda yo'q edi, shuning uchun uning tannarxi sanoqdan ayiriladi.`,
       },
       key: {
         en: `- Remove opening inventory: Dr Cost of sales, Cr Inventory.
@@ -200,15 +209,30 @@ Avval o'tgan yilgi tovar sotilgan deb hisoblanadi va tannarxga o'tadi. Keyin hal
         en: `- Replacement cost is irrelevant. The test is only cost against NRV.
 - Sales just after the count can prove NRV: a sale below cost means units are valued at that price.
 - Disclose the accounting policy, inventory by category, and the amount carried at NRV.
-- Selling commission or expenses reduce NRV.`,
+- Selling commission or expenses reduce NRV.
+- Cost of goods a business makes = materials + labour + production overheads (factory depreciation, factory supervisors' wages). Leaving overheads out is not allowed.
+- Production overheads are spread using the NORMAL level of activity.
+- Never in cost: carriage outwards, storage of finished goods, selling costs. Trade discounts received are taken OFF cost.
+- Allowed methods: FIFO and weighted average (and unit cost for special items). LIFO (last in, first out) is NOT allowed.
+- Repair costs and selling costs both come off the selling price to give NRV. For a batch, take the batch's selling costs off the batch total.`,
         ru: `- Стоимость замещения не имеет значения. Сравниваются только себестоимость и ЧСР.
 - Продажа сразу после инвентаризации может доказать ЧСР: продажа ниже себестоимости означает оценку по этой цене.
 - Раскрываются учётная политика, запасы по категориям и сумма, учтённая по ЧСР.
-- Комиссия и расходы на продажу уменьшают ЧСР.`,
+- Комиссия и расходы на продажу уменьшают ЧСР.
+- Себестоимость произведённого = материалы + труд + производственные накладные (амортизация цеха, зарплата мастеров цеха). Не включать накладные нельзя.
+- Производственные накладные распределяют исходя из НОРМАЛЬНОГО уровня производства.
+- Никогда не входят в себестоимость: доставка покупателям, хранение готовой продукции, затраты на продажу. Полученные торговые скидки ВЫЧИТАЮТ из себестоимости.
+- Разрешённые методы: FIFO и средневзвешенная (и индивидуальная себестоимость для особых товаров). LIFO (последним пришёл — первым ушёл) НЕ разрешён.
+- И ремонт, и затраты на продажу вычитают из цены продажи, чтобы получить NRV. Для партии вычитайте затраты на продажу партии из суммы по партии.`,
         uz: `- Almashtirish qiymati ahamiyatsiz. Faqat tannarx va SSQ solishtiriladi.
 - Sanashdan keyingi sotuv SSQ ni isbotlashi mumkin: tannarxdan past sotuv shu narxda baholashni bildiradi.
 - Hisob siyosati, toifalar bo'yicha zaxira va SSQ da hisobga olingan summa ochib beriladi.
-- Komissiya va sotish xarajatlari SSQ ni kamaytiradi.`,
+- Komissiya va sotish xarajatlari SSQ ni kamaytiradi.
+- Ishlab chiqarilgan tovar tannarxi = materiallar + mehnat + ishlab chiqarish ustama xarajatlari (sex amortizatsiyasi, sex nazoratchilari maoshi). Ustama xarajatlarni chiqarib tashlash mumkin emas.
+- Ishlab chiqarish ustama xarajatlari ODATIY ishlab chiqarish darajasi asosida taqsimlanadi.
+- Hech qachon tannarxga kirmaydi: xaridorga yetkazish, tayyor mahsulotni saqlash, sotish xarajatlari. Olingan savdo chegirmalari tannarxdan AYIRILADI.
+- Ruxsat etilgan usullar: FIFO va o'rtacha tortilgan (maxsus tovarlar uchun dona tannarxi). LIFO (oxirgi kelgan birinchi ketadi) TAQIQLANGAN.
+- Ta'mirlash va sotish xarajatlari ikkalasi ham NRVni topish uchun sotuv narxidan ayiriladi. Partiya uchun partiyaning sotish xarajatlarini partiya jamidan ayiring.`,
       },
       key: {
         en: `- IAS 2: inventory is valued at the lower of cost and net realisable value (NRV).

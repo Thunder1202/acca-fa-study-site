@@ -53,13 +53,19 @@ const chapter06 = {
       exam: {
         en: `- Painting a building and replacing broken windows are repairs, so they are expenses.
 - A car bought by a car dealer for resale is inventory, not a non-current asset.
-- Legal fees on buying a building are part of its cost, so they are asset expenditure.`,
+- Legal fees on buying a building are part of its cost, so they are asset expenditure.
+- Non-current asset: meant for continuing use, tangible or intangible, and not a current asset. Current assets are those expected to turn into cash in the short term.
+- A new sign over a shop door showing its name is capital expenditure. Replacing a broken mirror, repainting and cleaning are expenses.`,
         ru: `- Покраска здания и замена разбитых окон — ремонт, значит, расход.
 - Автомобиль, купленный автодилером для перепродажи, — это запасы, а не внеоборотный актив.
-- Юридические расходы при покупке здания входят в его стоимость, то есть это капитальные затраты.`,
+- Юридические расходы при покупке здания входят в его стоимость, то есть это капитальные затраты.
+- Внеоборотный актив: предназначен для постоянного использования, материальный или нематериальный, и не является оборотным. Оборотные активы — те, что скоро превратятся в деньги.
+- Новая вывеска над входом с названием магазина — капитальные затраты. Замена разбитого зеркала, покраска и уборка — расходы.`,
         uz: `- Binoni bo'yash va singan oynalarni almashtirish ta'mir, demak xarajat.
 - Avtosalon qayta sotish uchun olgan mashina zaxira, uzoq muddatli aktiv emas.
-- Bino sotib olishdagi yuridik xizmat uning qiymatiga kiradi, ya'ni kapital xarajat.`,
+- Bino sotib olishdagi yuridik xizmat uning qiymatiga kiradi, ya'ni kapital xarajat.
+- Uzoq muddatli aktiv: doimiy foydalanish uchun, moddiy yoki nomoddiy, va joriy aktiv emas. Joriy aktivlar qisqa muddatda pulga aylanishi kutiladiganlardir.
+- Do'kon eshigi ustidagi nomi yozilgan yangi peshlavha kapital xarajat. Singan oynani almashtirish, bo'yash va tozalash xarajat.`,
       },
       heading: { en: 'What a non-current asset is', ru: 'Что такое внеоборотный актив', uz: 'Uzoq muddatli aktiv nima' },
       body: {
@@ -121,15 +127,27 @@ Shuning uchun har bir to'lov ikki turdan biri. Kapital xarajat bunday aktivni so
         en: `- If the register and the ledger show different carrying amounts, look for a missed disposal, a missed addition or a missed depreciation charge in either one.
 - Staff training is never capitalised. A breakdown warranty of any length, insurance and vehicle tax are expenses.
 - Testing to check the asset works is part of cost. A maintenance contract is not.
-- Subsequent spending is capitalised only if it increases the benefits the asset can bring.`,
+- Subsequent spending is capitalised only if it increases the benefits the asset can bring.
+- On a car invoice: number plates, delivery and fitted extras (such as a sound system) are cost. Road tax and insurance are expenses.
+- A maintenance contract is never part of cost. A business registered for sales tax leaves the sales tax out of cost too.
+- Removing a sold asset from the register takes off its CARRYING AMOUNT. Carrying amount = proceeds + loss on disposal, or proceeds - profit on disposal.
+- Buying an asset on credit: Dr Non-current asset (cost), Cr Payables.`,
         ru: `- Если в реестре и в книге разная балансовая стоимость, ищите пропущенное выбытие, поступление или амортизацию в одном из них.
 - Обучение персонала никогда не капитализируется. Гарантия на поломки любой длительности, страховка и транспортный налог — расходы.
 - Испытание для проверки работы актива входит в стоимость. Договор обслуживания — нет.
-- Последующие затраты капитализируются, только если увеличивают выгоды от актива.`,
+- Последующие затраты капитализируются, только если увеличивают выгоды от актива.
+- В счёте за машину: номера, доставка и установленное оборудование (например, аудиосистема) — это себестоимость. Дорожный налог и страховка — расходы.
+- Договор на обслуживание никогда не входит в стоимость. Бизнес, зарегистрированный по налогу с продаж, тоже не включает налог в стоимость.
+- Удаление проданного актива из реестра уменьшает его на БАЛАНСОВУЮ СТОИМОСТЬ. Балансовая стоимость = выручка + убыток от выбытия, или выручка - прибыль от выбытия.
+- Покупка актива в кредит: Дт Внеоборотный актив (стоимость), Кт Кредиторы.`,
         uz: `- Reyestr va kitobda balans qiymati har xil bo'lsa, birortasida tushib qolgan chiqish, kirim yoki amortizatsiyani qidiring.
 - Xodimlarni o'qitish hech qachon kapitallashtirilmaydi. Har qanday muddatli buzilish kafolati, sug'urta va transport solig'i xarajat.
 - Aktivning ishlashini tekshirish sinovi qiymatga kiradi. Xizmat shartnomasi kirmaydi.
-- Keyingi xarajat faqat aktiv beradigan foydani oshirsa kapitallashtiriladi.`,
+- Keyingi xarajat faqat aktiv beradigan foydani oshirsa kapitallashtiriladi.
+- Mashina hisob-fakturasida: raqamlar, yetkazib berish va o'rnatilgan jihozlar (masalan, audio tizim) tannarxga kiradi. Yo'l solig'i va sug'urta xarajat.
+- Texnik xizmat shartnomasi hech qachon tannarxga kirmaydi. Savdo solig'i bo'yicha ro'yxatdan o'tgan biznes soliqni ham tannarxga qo'shmaydi.
+- Sotilgan aktivni reestrdan chiqarish uni BALANS QIYMATIGA kamaytiradi. Balans qiymati = tushum + chiqishdan zarar, yoki tushum - chiqishdan foyda.
+- Aktivni nasiyaga sotib olish: Dt Uzoq muddatli aktiv (qiymat), Kt Kreditorlar.`,
       },
       heading: {
         en: 'The asset register and recording an acquisition',
@@ -301,15 +319,21 @@ Bu furgonning bozor narxi ham, yangi furgonga yig'ilgan pul ham emas. Yer amorti
         en: `- Reducing balance suits assets that give more benefit early on, such as vehicles.
 - Residual value is the estimated disposal value at the end of the life. Reducing balance ignores it in the calculation.
 - Monthly or pro-rata depreciation counts the exact number of months owned in the year.
-- If a policy says full year in the year of purchase and none in the year of sale, apply it exactly.`,
+- If a policy says full year in the year of purchase and none in the year of sale, apply it exactly.
+- Read whether the question gives the TOTAL life or the REMAINING life. Remaining life = total life - years already used.
+- Part-year with additions and disposals: charge the opening assets for the full year, LESS the months after a disposal, PLUS the months each addition was owned.`,
         ru: `- Метод уменьшаемого остатка подходит активам, дающим больше пользы в начале, например транспорту.
 - Ликвидационная стоимость — оценка выручки от выбытия в конце срока. При методе уменьшаемого остатка в расчёте она не участвует.
 - Помесячная амортизация считает точное число месяцев владения в году.
-- Если политика предусматривает полный год при покупке и ноль при продаже, применяйте её точно.`,
+- Если политика предусматривает полный год при покупке и ноль при продаже, применяйте её точно.
+- Смотрите, дан ли ОБЩИЙ срок или ОСТАВШИЙСЯ срок. Оставшийся срок = общий срок - уже прошедшие годы.
+- Неполный год с покупками и продажами: амортизация по активам на начало за весь год, МИНУС месяцы после продажи, ПЛЮС месяцы владения каждой покупкой.`,
         uz: `- Kamayuvchi qoldiq dastlab ko'proq naf beradigan aktivlarga, masalan transportga mos.
 - Tugatish qiymati — muddat oxiridagi taxminiy sotuv qiymati. Kamayuvchi qoldiqda hisobda ishlatilmaydi.
 - Oylik yoki nisbiy amortizatsiya yilda egalik qilingan aniq oylar sonini hisoblaydi.
-- Siyosatda xarid yilida to'liq, sotuv yilida nol deyilsa, uni aniq qo'llang.`,
+- Siyosatda xarid yilida to'liq, sotuv yilida nol deyilsa, uni aniq qo'llang.
+- Savolda UMUMIY muddat berilganmi yoki QOLGAN muddatmi, o'qing. Qolgan muddat = umumiy muddat - o'tgan yillar.
+- Qo'shimcha va chiqishlar bilan to'liq bo'lmagan yil: boshlang'ich aktivlarga butun yil, chiqishdan keyingi oylarni AYIRIB, har bir yangi aktiv egalik qilingan oylarni QO'SHIB hisoblanadi.`,
       },
       heading: {
         en: 'Methods of calculating depreciation',
@@ -412,11 +436,17 @@ Aktiv yil o'rtasida olinsa, masalada to'liq yilmi yoki faqat egalik oylarimi, ay
       },
       exam: {
         en: `- If an expense such as repairs was wrongly debited to the asset account, reverse it (Dr Expense, Cr Asset) and also reverse the extra depreciation charged on it (Dr Accumulated depreciation, Cr Depreciation charge).
-- The depreciation charge account is cleared to profit or loss each year, so it starts the next year at nil.`,
+- The depreciation charge account is cleared to profit or loss each year, so it starts the next year at nil.
+- Asset wrongly charged to repairs: profit is understated by the cost less the depreciation that should have been charged ($24,000 van, 3 months' depreciation $1,000: understated by $23,000).
+- An expense wrongly debited to an asset account: profit is overstated and non-current assets are overstated.`,
         ru: `- Если расход, например ремонт, по ошибке отнесён в дебет счёта актива, сторнируйте его (Дт Расход, Кт Актив) и сторнируйте лишнюю амортизацию на него (Дт Накопленная амортизация, Кт Расход по амортизации).
-- Счёт расхода по амортизации каждый год закрывается на прибыль или убыток, поэтому на следующий год начинается с нуля.`,
+- Счёт расхода по амортизации каждый год закрывается на прибыль или убыток, поэтому на следующий год начинается с нуля.
+- Актив ошибочно списан на ремонт: прибыль занижена на стоимость минус амортизация, которую следовало начислить (фургон $24,000, амортизация за 3 месяца $1,000: занижена на $23,000).
+- Расход ошибочно отнесён на счёт актива: прибыль завышена, и внеоборотные активы завышены.`,
         uz: `- Agar ta'mir kabi xarajat xato aktiv hisobiga debetlangan bo'lsa, uni qaytaring (Dt Xarajat, Kt Aktiv) va unga ortiqcha hisoblangan amortizatsiyani ham qaytaring (Dt To'plangan amortizatsiya, Kt Amortizatsiya xarajati).
-- Amortizatsiya xarajati hisobi har yili foyda yoki zararga yopiladi, shuning uchun keyingi yilni noldan boshlaydi.`,
+- Amortizatsiya xarajati hisobi har yili foyda yoki zararga yopiladi, shuning uchun keyingi yilni noldan boshlaydi.
+- Aktiv xato bilan ta'mirga yozilgan: foyda qiymat minus hisoblanishi kerak bo'lgan amortizatsiyaga kamaytirilgan (furgon $24,000, 3 oylik amortizatsiya $1,000: $23,000 ga kam).
+- Xarajat xato bilan aktiv hisobiga yozilgan: foyda oshirilgan va uzoq muddatli aktivlar oshirilgan.`,
       },
       heading: { en: 'Accounting for depreciation', ru: 'Учёт амортизации', uz: 'Amortizatsiyani hisobda yuritish' },
       body: {

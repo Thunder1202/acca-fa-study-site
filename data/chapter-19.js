@@ -60,15 +60,21 @@ const chapter19 = {
         en: `- Significant influence is not one of the three elements of control. It is the test for an associate.
 - Control can exist with less than 50%, for example by agreement with other shareholders.
 - Being able to appoint a majority of the board normally indicates control.
-- A trade investment is a financial asset, normally measured at fair value. Dividends received are income.`,
+- A trade investment is a financial asset, normally measured at fair value. Dividends received are income.
+- Control comes from VOTES, not ownership. Non-voting preference shares give no control, however many are held. Holding a majority of board votes (40 of 60) or the right to appoint or remove the directors gives control, even with few shares.
+- A subsidiary abroad, paying tax in another country, is still consolidated. Power over the financial and operating policies means a SUBSIDIARY (not an associate), whatever the %.`,
         ru: `- Значительное влияние не входит в три элемента контроля. Это критерий ассоциированной компании.
 - Контроль возможен и при доле менее 50%, например по соглашению с другими акционерами.
 - Право назначать большинство совета директоров обычно означает контроль.
-- Простое вложение — финансовый актив, обычно по справедливой стоимости. Полученные дивиденды — доход.`,
+- Простое вложение — финансовый актив, обычно по справедливой стоимости. Полученные дивиденды — доход.
+- Контроль даёт число ГОЛОСОВ, а не доля владения. Неголосующие привилегированные акции не дают контроля, сколько бы их ни было. Большинство голосов в совете (40 из 60) или право назначать и снимать директоров дают контроль даже при малой доле акций.
+- Дочерняя компания за границей, платящая налоги в другой стране, всё равно консолидируется. Власть над финансовой и операционной политикой — это ДОЧЕРНЯЯ компания (а не ассоциированная), каков бы ни был %.`,
         uz: `- Sezilarli ta'sir nazoratning uch elementidan biri emas. Bu assotsiatsiyalangan kompaniya mezoni.
 - Nazorat 50% dan kam ulushda ham bo'lishi mumkin, masalan boshqa aksiyadorlar bilan kelishuv orqali.
 - Direktorlar kengashining ko'pchiligini tayinlash huquqi odatda nazoratni bildiradi.
-- Oddiy sarmoya moliyaviy aktiv, odatda adolatli qiymatda. Olingan dividendlar daromad.`,
+- Oddiy sarmoya moliyaviy aktiv, odatda adolatli qiymatda. Olingan dividendlar daromad.
+- Nazoratni egalik ulushi emas, OVOZLAR beradi. Ovozsiz imtiyozli aksiyalar qancha bo'lmasin nazorat bermaydi. Kengashda ko'pchilik ovoz (60 tadan 40) yoki direktorlarni tayinlash va bo'shatish huquqi oz aksiya bilan ham nazorat beradi.
+- Chet eldagi, boshqa davlatda soliq to'laydigan sho'ba korxona baribir konsolidatsiya qilinadi. Moliyaviy va operatsion siyosat ustidan hokimiyat foiz qanday bo'lmasin SHO'BA korxona demak (assotsiatsiyalangan emas).`,
       },
       heading: { en: 'Groups and control', ru: 'Группы и контроль', uz: 'Guruhlar va nazorat' },
       body: {
@@ -283,17 +289,23 @@ Besh hisob-kitobdan har doim bir xil tartibda foydalanamiz: W1 guruh tuzilmasi, 
 - Shares with a nominal value of 50c: work out how many there are before using them.
 - Profit is assumed to accrue evenly. Count whole months from the acquisition date.
 - If reserves at the year end are given, take off the profit earned after acquisition to find reserves at acquisition.
-- Goodwill stays at its acquisition figure unless it is impaired. Deferred and contingent consideration are not examinable.`,
+- Goodwill stays at its acquisition figure unless it is impaired. Deferred and contingent consideration are not examinable.
+- Goodwill appears only in the GROUP statements, never in the parent's own statement of financial position (which shows the investment instead).
+- Working backwards: consideration = goodwill + net assets at acquisition - fair value of NCI.`,
         ru: `- При оценке возмещения берите количество купленных акций, а не все акции дочерней.
 - Акции номиналом 50c: сначала определите их количество.
 - Прибыль считается равномерной. Считайте целые месяцы от даты покупки.
 - Если даны резервы на конец года, вычтите прибыль после покупки, чтобы найти резервы на дату покупки.
-- Гудвил остаётся по сумме на дату покупки, если нет обесценения. Отсроченное и условное возмещение не входят в экзамен.`,
+- Гудвил остаётся по сумме на дату покупки, если нет обесценения. Отсроченное и условное возмещение не входят в экзамен.
+- Гудвил есть только в ГРУППОВОЙ отчётности, никогда в собственном отчёте о финансовом положении материнской компании (там показана инвестиция).
+- Обратный расчёт: вознаграждение = гудвил + чистые активы на дату покупки - справедливая стоимость NCI.`,
         uz: `- To'lovni baholashda sho'baning barcha aksiyalarini emas, olingan aksiyalar sonini oling.
 - Nominali 50c aksiyalar: avval ularning sonini toping.
 - Foyda bir tekis deb hisoblanadi. Xarid sanasidan butun oylarni sanang.
 - Yil oxiridagi rezervlar berilsa, xariddan keyingi foydani ayirib, xarid paytidagi rezervlarni toping.
-- Gudvil qadrsizlanmasa, xarid paytidagi summasida qoladi. Kechiktirilgan va shartli to'lov imtihonda yo'q.`,
+- Gudvil qadrsizlanmasa, xarid paytidagi summasida qoladi. Kechiktirilgan va shartli to'lov imtihonda yo'q.
+- Gudvil faqat GURUH hisobotida bo'ladi, hech qachon ona kompaniyaning o'z moliyaviy holat hisobotida emas (u yerda investitsiya ko'rsatiladi).
+- Teskari hisob: to'lov = gudvil + sotib olish sanasidagi sof aktivlar - NCI ning adolatli qiymati.`,
       },
       heading: { en: 'Goodwill and fair values', ru: 'Гудвил и справедливая стоимость', uz: 'Gudvil va adolatli qiymat' },
       body: {

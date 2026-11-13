@@ -160,6 +160,11 @@ IFRS Accounting Standards are those shared rules. But they only apply in a count
 
 MSFO (IFRS Accounting Standards) — ana shu umumiy qoidalar. Lekin ular mamlakatda faqat u qabul qilishga qaror qilgandan keyin amal qiladi. O'z qoidalarini asta-sekin MSFOga moslayotgan mamlakatlar yaqinlashish (convergence) jarayonida.`,
       },
+      exam: {
+        en: '- IFRS cannot be forced on any country. Some countries adopt them; others use them as a benchmark of best practice when writing their own national rules.',
+        ru: '- МСФО нельзя навязать ни одной стране. Одни страны их принимают, другие используют как образец лучшей практики, когда пишут свои национальные правила.',
+        uz: '- IFRSni hech bir davlatga majburlab bo\'lmaydi. Ba\'zi davlatlar ularni qabul qiladi, boshqalari o\'z milliy qoidalarini yozishda ulardan eng yaxshi amaliyot namunasi sifatida foydalanadi.',
+      },
     },
     {
       key: {
@@ -240,6 +245,17 @@ Imtihon maslahati: Fond nazorat qiladi, Kengash standart chiqaradi, IFRIC talqin
 - Talqin qo'mitasi (IFRIC): fikrlar turlicha bo'lganda standartni qanday qo'llashni tushuntiradi.
 - Maslahat kengashi (Advisory Council): maslahat beradi.
 - ISSB: barqaror rivojlanish hisoboti standartlarini yozadi.`,
+      },
+      exam: {
+        en: `- The Foundation does NOT write standards and is NOT overseen by the Board. It is the other way round: the Foundation oversees, the Board writes.
+- The forum the Board uses to consult the outside world is the Advisory Council (people affected by the Board's work), not the Interpretations Committee.
+- Foundation objectives: one set of global standards (through the Board), their careful use, attention to small entities and emerging economies, and bringing national standards and IFRS closer together. Focusing on large multinationals is NOT one of them.`,
+        ru: `- Фонд НЕ пишет стандарты и НЕ подчиняется Совету. Наоборот: Фонд надзирает, Совет пишет стандарты.
+- Площадка, через которую Совет советуется с внешним миром, — Консультативный совет (люди, которых касается работа Совета), а не Комитет по интерпретациям.
+- Цели Фонда: единый набор мировых стандартов (через Совет), их тщательное применение, внимание к малым предприятиям и развивающимся экономикам и сближение национальных стандартов с МСФО. Ориентация на крупные транснациональные группы — НЕ цель.`,
+        uz: `- Fond standart YOZMAYDI va Kengash nazoratida EMAS. Aksincha: Fond nazorat qiladi, Kengash standart yozadi.
+- Kengash tashqi dunyo bilan maslahatlashadigan maydon: Maslahat kengashi (Kengash ishi ta'sir qiladigan odamlar), Talqinlar qo'mitasi emas.
+- Fond maqsadlari: yagona jahon standartlari (Kengash orqali), ularni puxta qo'llash, kichik korxonalar va rivojlanayotgan iqtisodiyotlarga e'tibor, milliy standartlarni IFRSga yaqinlashtirish. Yirik transmilliy guruhlarga e'tibor qaratish maqsad EMAS.`,
       },
     },
     {
@@ -391,6 +407,11 @@ The risk is that directors look after themselves, for example by making profit l
 
 Xavf shundaki, direktorlar o'zini o'ylashi mumkin, masalan katta bonus uchun foydani oshirib ko'rsatish. Aksiyadorlarni ikki narsa himoya qiladi: yaxshi korporativ boshqaruv va hisobot haqqoniymi (true and fair), shu haqda fikr beradigan mustaqil tashqi auditor.`,
       },
+      exam: {
+        en: '- Directors run the company on behalf of its members (the shareholders). They are not personally liable for the company\'s losses.',
+        ru: '- Директора управляют компанией от имени её участников (акционеров). Они не отвечают лично за убытки компании.',
+        uz: '- Direktorlar kompaniyani uning a\'zolari (aksiyadorlar) nomidan boshqaradi. Ular kompaniya zararlari uchun shaxsan javob bermaydi.',
+      },
     },
     {
       key: {
@@ -499,18 +520,32 @@ Typical parts: independent non-executive directors watching the managers, good i
 
 Odatiy qismlari: menejerlarni kuzatadigan mustaqil noijrochi direktorlar, yaxshi ichki nazorat, direktorlarga adolatli haq, halol hisobot va aksiyadorlar bilan yaxshi munosabat.`,
       },
+      exam: {
+        en: '- Bonuses linked to the director\'s and the company\'s performance encourage directors to act in the company\'s interest. A high fixed salary or a big payment for leaving does not.',
+        ru: '- Премии, привязанные к результатам директора и компании, побуждают директоров действовать в интересах компании. Высокий фиксированный оклад или крупная выплата при уходе — нет.',
+        uz: '- Direktor va kompaniya natijalariga bog\'langan mukofotlar direktorlarni kompaniya manfaatida ishlashga undaydi. Yuqori qat\'iy maosh yoki ketishda katta to\'lov bunday qilmaydi.',
+      },
     },
     {
       exam: {
         en: `- Responsibility sits with the board together, not one director, and stays there if tasks are delegated.
 - No law requires directors to hold an accounting or business qualification.
-- Directors are personally liable for losses from fraud or error only if they failed in their duties.`,
+- Directors are personally liable for losses from fraud or error only if they failed in their duties.
+- An audit does NOT pass responsibility for the statements to the auditor, and the finance department doing the work does not either. The directors stay responsible.
+- The board together also makes sure the statements reach the shareholders and others entitled to them.
+- Duties of directors (there ARE laws on this): manage with reasonable competence (duty of care), act honestly in the company's best interest, and aim to create wealth for shareholders.`,
         ru: `- Ответственность лежит на всём совете, а не на одном директоре, и остаётся на нём при передаче задач.
 - Закон не требует от директоров бухгалтерской или бизнес-квалификации.
-- Директора лично отвечают за убытки от мошенничества или ошибок, только если не исполнили обязанности.`,
+- Директора лично отвечают за убытки от мошенничества или ошибок, только если не исполнили обязанности.
+- Аудит НЕ перекладывает ответственность за отчётность на аудитора, и то, что работу делает финансовый отдел, тоже. Ответственность остаётся на директорах.
+- Совет директоров вместе также обеспечивает, чтобы отчётность получили акционеры и другие, кто имеет на это право.
+- Обязанности директоров (законы об этом ЕСТЬ): управлять с разумной компетентностью (обязанность заботы), честно действовать в интересах компании и стремиться создавать богатство для акционеров.`,
         uz: `- Javobgarlik bitta direktorda emas, butun kengashda va vazifa topshirilsa ham unda qoladi.
 - Qonun direktorlardan buxgalteriya yoki biznes malakasini talab qilmaydi.
-- Direktorlar firibgarlik yoki xato zarari uchun faqat burchini bajarmagan bo'lsa shaxsan javob beradi.`,
+- Direktorlar firibgarlik yoki xato zarari uchun faqat burchini bajarmagan bo'lsa shaxsan javob beradi.
+- Audit hisobot uchun javobgarlikni auditorga O'TKAZMAYDI, ishni moliya bo'limi bajargani ham o'tkazmaydi. Javobgarlik direktorlarda qoladi.
+- Direktorlar kengashi birgalikda hisobot aksiyadorlar va uni olish huquqi bor boshqalarga yetib borishini ham ta'minlaydi.
+- Direktorlar majburiyatlari (bu haqda qonunlar BOR): oqilona malaka bilan boshqarish (g'amxo'rlik majburiyati), kompaniya manfaati uchun halol harakat qilish va aksiyadorlar uchun boylik yaratishga intilish.`,
       },
       key: {
         en: `- Act in good faith, and disclose any conflict of interest.

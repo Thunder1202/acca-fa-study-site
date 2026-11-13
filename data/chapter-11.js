@@ -57,19 +57,22 @@ const chapter11 = {
 - Discount received and returns outwards go through the payables account. Discount allowed, returns inwards and irrecoverable debts do not.
 - A supplier statement is the seller's record of transactions, sent to the customer as a request to settle.
 - Purchases can be found from the payables account: closing balance + payments + discounts + contras + returns - opening balance. Receivables figures in the question are not needed.
-- Interest charged by a supplier increases the amount owed and increases interest payable.`,
+- Interest charged by a supplier increases the amount owed and increases interest payable.
+- Payables are what the BUSINESS owes (tax owed to the tax office, suppliers). Interest the bank owes you, loans you made to staff and money customers owe you are receivables.`,
         ru: `- Взаимозачёт не может превышать меньший остаток, иначе счёт перейдёт на неверную сторону.
 - Чтобы оставить заданный остаток, взаимозачёт = дебитор минус оставляемая сумма.
 - Полученная скидка и возвраты поставщикам идут через кредиторов. Предоставленная скидка, возвраты покупателей и безнадёжные долги — нет.
 - Выписка поставщика — запись продавца об операциях, отправленная покупателю как запрос на оплату.
 - Закупки находят по счёту кредиторов: остаток на конец + выплаты + скидки + взаимозачёты + возвраты - остаток на начало. Данные о дебиторах здесь не нужны.
-- Проценты поставщика увеличивают долг и расходы по процентам.`,
+- Проценты поставщика увеличивают долг и расходы по процентам.
+- Кредиторка — то, что должен БИЗНЕС (налог налоговой, поставщикам). Проценты, которые должен вам банк, займы сотрудникам и долги покупателей — это дебиторка.`,
         uz: `- O'zaro hisob-kitob kichik qoldiqdan oshmaydi, aks holda hisob noto'g'ri tomonga o'tadi.
 - Belgilangan qoldiqni qoldirish uchun: o'zaro hisob-kitob = debitor minus qoladigan summa.
 - Olingan chegirma va xarid qaytarishlari kreditorlardan o'tadi. Berilgan chegirma, sotuv qaytarishlari va undirib bo'lmaydigan qarzlar o'tmaydi.
 - Yetkazib beruvchi ko'chirmasi sotuvchining operatsiyalar yozuvi, mijozga to'lov so'rovi sifatida yuboriladi.
 - Xaridni kreditorlar hisobidan toping: yakuniy qoldiq + to'lovlar + chegirmalar + o'zaro hisob-kitob + qaytarishlar - boshlang'ich qoldiq. Debitorlar ma'lumoti kerak emas.
-- Yetkazib beruvchi foizi qarzni va foiz xarajatini oshiradi.`,
+- Yetkazib beruvchi foizi qarzni va foiz xarajatini oshiradi.
+- Kreditorlik BIZNES qarzi (soliq idorasiga soliq, yetkazib beruvchilarga). Bank sizga qarzdor foizlar, xodimlarga bergan qarzlaringiz va xaridorlar qarzi debitorlikdir.`,
       },
       heading: {
         en: 'Trade payables and classifying liabilities',
@@ -170,19 +173,22 @@ Bitta biznesdan ham sotib olib, unga ham sotsangiz, ikki qarzning bir qismini o'
 - The event must have happened by the year end. Damage already caused is provided for. Damage expected in future is not.
 - An injury after the year end gives no obligation at the year end, even if the claim arrives before the accounts are finished.
 - A provision is non-current if it will be settled more than 12 months after the reporting date. It is not always current.
-- A liability can usually be measured exactly. A provision needs judgement and estimation, but it still meets the definition of a liability.`,
+- A liability can usually be measured exactly. A provision needs judgement and estimation, but it still meets the definition of a liability.
+- For a single claim, provide the MOST LIKELY amount the lawyers expect to pay, not the full amount the other side is asking for.`,
         ru: `- Правовая обязанность вытекает из договора, закона или иной нормы права. Пример — гарантия.
 - Обязанность из практики вытекает из прошлой практики или объявленной политики, создающей обоснованное ожидание. Пример — известная политика возвратов и публичное обещание устранять экологический ущерб.
 - Событие должно произойти до конца года. На уже нанесённый ущерб резерв создаётся, на ожидаемый в будущем — нет.
 - Травма после конца года не даёт обязанности на конец года, даже если иск пришёл до завершения отчётности.
 - Резерв долгосрочный, если будет погашен позже 12 месяцев после отчётной даты. Он не всегда краткосрочный.
-- Обязательство обычно можно измерить точно. Резерв требует суждений и оценки, но всё же отвечает определению обязательства.`,
+- Обязательство обычно можно измерить точно. Резерв требует суждений и оценки, но всё же отвечает определению обязательства.
+- По одному иску создают резерв на НАИБОЛЕЕ ВЕРОЯТНУЮ сумму, которую ожидают заплатить юристы, а не на полную сумму, которую требует другая сторона.`,
         uz: `- Huquqiy burch shartnoma, qonun yoki boshqa huquq normasidan kelib chiqadi. Masalan kafolat.
 - Amaliyotdan kelib chiqqan burch o'tgan amaliyot yoki e'lon qilingan siyosatdan keladi va asosli kutish yaratadi. Masalan mashhur qaytarish siyosati yoki atrof-muhit zararini tuzatish va'dasi.
 - Voqea yil oxirigacha yuz bergan bo'lishi kerak. Allaqachon yetkazilgan zarar uchun rezerv tuziladi, kelajakdagi kutilgan zarar uchun emas.
 - Yil oxiridan keyingi jarohat yil oxirida burch bermaydi, da'vo hisobot tugashidan oldin kelsa ham.
 - 12 oydan keyin to'lansa, rezerv uzoq muddatli. U doim qisqa muddatli emas.
-- Majburiyatni odatda aniq o'lchash mumkin. Rezerv mulohaza va baho talab qiladi, lekin baribir majburiyat ta'rifiga mos keladi.`,
+- Majburiyatni odatda aniq o'lchash mumkin. Rezerv mulohaza va baho talab qiladi, lekin baribir majburiyat ta'rifiga mos keladi.
+- Bitta da'vo bo'yicha zaxira advokatlar to'lanishini kutgan ENG EHTIMOLLI summaga yaratiladi, boshqa tomon talab qilgan to'liq summaga emas.`,
       },
       heading: { en: 'Provisions', ru: 'Резервы', uz: 'Rezervlar' },
       body: {

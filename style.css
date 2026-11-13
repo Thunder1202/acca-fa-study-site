@@ -332,9 +332,9 @@ a.chapter-row:hover, .topic-row:hover, .case-row:hover { border-color: var(--acc
 .more[open] > :not(summary) { animation: rise 320ms var(--ease) both; }
 .lesson-body > .more:first-child { margin: 0 0 32px; }
 
-.exam-notes { margin-bottom: 18px; padding: 14px 16px; background: var(--surface-2); border-radius: var(--radius-sm); }
-.exam-notes h3 { color: var(--accent); }
-.exam-notes ul { margin-bottom: 0; }
+.exam-notes { margin: 0 0 16px; padding: 16px 18px; background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius); }
+.exam-notes-label { margin-bottom: 6px; color: var(--accent); font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.exam-notes ul, .exam-notes p:last-child { margin-bottom: 0; }
 
 .glossary { margin: 0 0 16px; }
 .glossary > .hint { margin-top: 0; }

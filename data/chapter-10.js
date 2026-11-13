@@ -323,15 +323,30 @@ Pul keyinroq kutilmaganda kelsa, debitorlarni kreditlab bo'lmaydi (qarz u yerda 
         en: `- Steps: write off irrecoverable debts; take the receivables balance after the write-offs; set the allowance required; compare with the opening allowance; charge or credit the difference; deduct the closing allowance in the statement of financial position.
 - Only one irrecoverable debts expense account is needed for write-offs, recoveries and allowance movements.
 - A fall in the allowance is a credit to the expense account, so it increases profit. A rise in the allowance reduces profit and net current assets.
-- The allowance does not change the receivables ledger balance.`,
+- The allowance does not change the receivables ledger balance.
+- Total expense for the year = debts written off + increase in allowance (or - decrease) - debts recovered. If the answer is negative, it is a credit (income).
+- Some questions set the allowance as a % of receivables. Take the % of receivables AFTER the write-offs, never before.
+- "The new allowance is 25% higher than last year's": last year = new / 1.25. "$6,000 is one quarter higher than now": now = $6,000 / 1.25 = $4,800, so the increase is $1,200.
+- An increase in the allowance posted as a decrease (or the other way round) puts profit and net receivables wrong by TWICE the amount.
+- Setting up an allowance for the first time: Dr Irrecoverable debts expense, Cr Allowance for receivables, for the whole amount.`,
         ru: `- Шаги: списать безнадёжные долги; взять сальдо дебиторов после списаний; определить нужный резерв; сравнить с резервом на начало; отнести разницу в расход или доход; вычесть резерв на конец в отчёте о финансовом положении.
 - Для списаний, возвратов и изменения резерва нужен только один счёт расхода по безнадёжным долгам.
 - Уменьшение резерва — кредит на счёт расхода, поэтому прибыль растёт. Увеличение резерва уменьшает прибыль и чистые оборотные активы.
-- Резерв не меняет остаток счёта дебиторов в книге.`,
+- Резерв не меняет остаток счёта дебиторов в книге.
+- Общий расход за год = списанные долги + рост резерва (или - снижение) - возвращённые долги. Если ответ отрицательный, это кредит (доход).
+- Иногда резерв задают как % от дебиторки. Берите % от дебиторки ПОСЛЕ списаний, никогда не до.
+- «Новый резерв на 25% больше прошлогоднего»: прошлый = новый / 1,25. «$6,000 на четверть больше текущего»: текущий = $6,000 / 1,25 = $4,800, значит рост $1,200.
+- Рост резерва, проведённый как снижение (или наоборот), искажает прибыль и чистую дебиторку на ДВОЙНУЮ сумму.
+- Первое создание резерва: Дт Расход по безнадёжным долгам, Кт Резерв по дебиторке, на всю сумму.`,
         uz: `- Qadamlar: undirib bo'lmaydigan qarzlarni yozib yuboring; yozib yuborishdan keyingi debitorlar qoldig'ini oling; kerakli rezervni belgilang; boshlang'ich rezerv bilan solishtiring; farqni xarajat yoki daromadga yozing; moliyaviy holat hisobotida yakuniy rezervni ayiring.
 - Yozib yuborish, qaytarish va rezerv o'zgarishi uchun faqat bitta undirib bo'lmaydigan qarzlar xarajati hisobi kerak.
 - Rezervning kamayishi xarajat hisobiga kredit, shuning uchun foyda oshadi. Rezervning oshishi foyda va sof joriy aktivlarni kamaytiradi.
-- Rezerv debitorlar kitob qoldig'ini o'zgartirmaydi.`,
+- Rezerv debitorlar kitob qoldig'ini o'zgartirmaydi.
+- Yillik umumiy xarajat = hisobdan chiqarilgan qarzlar + zaxira o'sishi (yoki - kamayishi) - qaytarilgan qarzlar. Javob manfiy bo'lsa, bu kredit (daromad).
+- Ba'zan zaxira debitorlikning foizi sifatida beriladi. Foizni hisobdan chiqarishdan KEYINGI debitorlikdan oling, hech qachon oldingisidan emas.
+- "Yangi zaxira o'tgan yilgidan 25% ko'p": o'tgan yilgi = yangi / 1,25. "$6,000 hozirgidan chorak ko'p": hozirgi = $6,000 / 1,25 = $4,800, demak o'sish $1,200.
+- Zaxira o'sishi kamayish sifatida yozilsa (yoki aksincha), foyda va sof debitorlik IKKI BARAVAR summaga noto'g'ri bo'ladi.
+- Zaxirani birinchi marta yaratish: Dt Umidsiz qarzlar xarajati, Kt Debitorlik zaxirasi, butun summaga.`,
       },
       heading: {
         en: 'The allowance for receivables',

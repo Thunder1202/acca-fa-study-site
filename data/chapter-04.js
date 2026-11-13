@@ -174,17 +174,23 @@ Bank hisobi uchun eslang: pul KIRDI — «Bankdagi pul» debeti, pul CHIQDI — 
 - Finding the float: cash in hand + vouchers for money paid out - vouchers for money received. A loan to staff counts as paid out.
 - Finding the spending: opening float + money received - money banked or cashed for staff - closing float. Cheques drawn for petty cash count as money received.
 - If the float is raised, the closing float is the new, higher figure.
-- The top-up equals the money paid out less any money received into petty cash.`,
+- The top-up equals the money paid out less any money received into petty cash.
+- Why imprest: it keeps small cash spending under control and lowers the risk of fraud. Cash + vouchers (not cash alone) must equal the float, and every payment needs a voucher.
+- The signed petty cash voucher is the evidence that a payment was approved. The till receipt only shows what was bought.`,
         ru: `- Имприст — это не лимит трат, не равные пополнения и не утверждение расходов. Это пополнение на точную потраченную сумму.
 - Найти лимит: наличные + ваучеры на выплаты - ваучеры на поступления. Заём сотруднику считается выплатой.
 - Найти расходы: лимит на начало + поступления - деньги, обналиченные для сотрудников - лимит на конец. Чеки на мелкую кассу считаются поступлениями.
 - Если лимит повышен, лимит на конец — новая, большая сумма.
-- Пополнение равно выплатам минус поступления в мелкую кассу.`,
+- Пополнение равно выплатам минус поступления в мелкую кассу.
+- Зачем имприст: он держит мелкие траты под контролем и снижает риск мошенничества. Наличные + ваучеры (а не одни наличные) должны равняться фонду, и на каждый платёж нужен ваучер.
+- Подписанный ваучер мелкой кассы — доказательство, что платёж одобрен. Чек из магазина только показывает, что купили.`,
         uz: `- Imprest sarf chegarasi, teng to'ldirish yoki tasdiqlangan sarf emas. Bu aniq sarflangan summani to'ldirish.
 - Doimiy summani topish: naqd pul + chiqim vaucherlari - kirim vaucherlari. Xodimga qarz chiqim hisoblanadi.
 - Sarfni topish: boshlang'ich summa + kirimlar - xodim uchun naqdlashtirilgan pul - yakuniy summa. Kichik kassa uchun yozilgan cheklar kirim hisoblanadi.
 - Doimiy summa oshirilsa, yakuniy summa yangi, kattaroq raqam.
-- To'ldirish chiqimlar minus kichik kassaga kirimlarga teng.`,
+- To'ldirish chiqimlar minus kichik kassaga kirimlarga teng.
+- Imprest nima uchun: u mayda naqd xarajatlarni nazoratda ushlaydi va firibgarlik xavfini kamaytiradi. Naqd pul + vaucherlar (faqat naqd emas) fondga teng bo'lishi kerak, har bir to'lovga vaucher kerak.
+- Imzolangan mayda kassa vaucheri to'lov tasdiqlanganining dalili. Do'kon cheki faqat nima sotib olinganini ko'rsatadi.`,
       },
       heading: { en: 'Petty cash', ru: 'Мелкая касса', uz: 'Kichik kassa' },
       body: {
@@ -410,17 +416,23 @@ Qaytarishlar uchun alohida hisoblar bor. Mijoz qaytargan tovar — sotuv qaytari
 - If input tax exceeds output tax, the difference is recoverable, not payable.
 - Sales tax cannot be recovered on some items, such as client entertaining and cars.
 - Common rates are 20%, 17.5%, 15% and 10%. The same method works for any rate.
-- Check whether each figure in a question is inclusive or exclusive of tax before calculating.`,
+- Check whether each figure in a question is inclusive or exclusive of tax before calculating.
+- A business NOT registered for sales tax cannot claim input tax back. It records purchases at the GROSS amount (tax included) and has no sales tax account.
+- Exempt sales carry no sales tax. Take them out of total sales before working out output tax.`,
         ru: `- Налог с продаж начисляется на цену после торговой скидки. Прайс $800 минус 5% при 20%: налог 20% x $760.
 - Если входной налог больше выходного, разница возмещается, а не платится.
 - Налог нельзя вернуть по некоторым статьям, например представительским расходам и автомобилям.
 - Обычные ставки: 20%, 17.5%, 15% и 10%. Метод один для любой ставки.
-- Перед расчётом проверьте, включён ли налог в каждую цифру задачи.`,
+- Перед расчётом проверьте, включён ли налог в каждую цифру задачи.
+- Бизнес, НЕ зарегистрированный по налогу с продаж, не может вернуть входной налог. Он отражает закупки по ВАЛОВОЙ сумме (с налогом) и не ведёт счёт налога с продаж.
+- Освобождённые продажи не облагаются налогом. Уберите их из общей суммы продаж, прежде чем считать выходной налог.`,
         uz: `- Sotuv solig'i savdo chegirmasidan keyingi narxga hisoblanadi. Ro'yxat $800 minus 5%, 20% da: soliq 20% x $760.
 - Kirish solig'i chiqishdan ko'p bo'lsa, farq to'lanmaydi, qaytariladi.
 - Ba'zi moddalarda, masalan mijozlarni mehmon qilish va mashinalarda soliq qaytarilmaydi.
 - Odatiy stavkalar 20%, 17.5%, 15% va 10%. Har qanday stavka uchun usul bir xil.
-- Hisoblashdan oldin har bir raqam soliqni o'z ichiga oladimi, tekshiring.`,
+- Hisoblashdan oldin har bir raqam soliqni o'z ichiga oladimi, tekshiring.
+- Savdo solig'i bo'yicha ro'yxatdan O'TMAGAN biznes kirish solig'ini qaytarib ololmaydi. U xaridlarni YALPI summada (soliq bilan) yozadi va savdo solig'i hisobini yuritmaydi.
+- Soliqdan ozod sotuvlarga savdo solig'i qo'shilmaydi. Chiqish solig'ini hisoblashdan oldin ularni umumiy sotuvdan chiqarib tashlang.`,
       },
       heading: {
         en: 'Sales tax: how it works',
@@ -526,17 +538,23 @@ Sotuvingizga soliq qo'shasiz (chiqish solig'i) va xaridlaringizda soliq to'laysi
 - A non-current asset is recorded net as well: Dr Asset (net), Dr Sales tax, Cr Payables (gross).
 - Sales tax account: credit with opening amount owed and tax on sales; debit with tax on purchases and money paid to the authority.
 - Tax is recorded when the invoice is recorded. Paying a supplier later has no effect on the sales tax account.
-- The revenue account is credited with sales excluding tax.`,
+- The revenue account is credited with sales excluding tax.
+- Tax paid to the authority in a period = amount owed at the start + output tax - input tax - amount owed at the end. A closing DEBIT balance means the authority owes you, so it counts as a negative amount owed.
+- In the accounting equation, sales tax owed is a liability and is never profit. Cash and receivables include the tax; profit uses net figures only.`,
         ru: `- Возврат продажи с налогом: Дт Возвраты (без налога), Дт Налог, Кт Дебиторы (с налогом).
 - Внеоборотный актив тоже записывается без налога: Дт Актив (без налога), Дт Налог, Кт Кредиторы (с налогом).
 - Счёт налога: кредит — долг на начало и налог с продаж; дебет — налог на закупки и уплата органу.
 - Налог записывается вместе со счётом-фактурой. Последующая оплата поставщику на счёт налога не влияет.
-- Счёт выручки кредитуется продажами без налога.`,
+- Счёт выручки кредитуется продажами без налога.
+- Налог, уплаченный за период = долг на начало + выходной налог - входной налог - долг на конец. ДЕБЕТОВОЕ сальдо на конец значит, что должны вам, поэтому это отрицательный долг.
+- В уравнении баланса налог к уплате — обязательство и никогда не прибыль. Деньги и дебиторка включают налог; прибыль считают только по чистым суммам.`,
         uz: `- Soliqli sotuv qaytarishi: Dt Qaytarishlar (soliqsiz), Dt Soliq, Kt Debitorlar (soliqli).
 - Uzoq muddatli aktiv ham soliqsiz yoziladi: Dt Aktiv (soliqsiz), Dt Soliq, Kt Kreditorlar (soliqli).
 - Soliq hisobi: kredit — boshlang'ich qarz va sotuv solig'i; debet — xarid solig'i va organga to'lov.
 - Soliq hisob-faktura bilan yoziladi. Yetkazib beruvchiga keyingi to'lov soliq hisobiga ta'sir qilmaydi.
-- Tushum hisobi soliqsiz sotuv bilan kreditlanadi.`,
+- Tushum hisobi soliqsiz sotuv bilan kreditlanadi.
+- Davr ichida to'langan soliq = boshidagi qarz + chiqish solig'i - kirish solig'i - oxiridagi qarz. Oxirida DEBET qoldig'i bo'lsa, idora sizga qarzdor, demak bu manfiy qarz.
+- Buxgalteriya tenglamasida to'lanadigan soliq majburiyat, hech qachon foyda emas. Pul va debitorlik soliqni o'z ichiga oladi; foyda faqat sof summalardan hisoblanadi.`,
       },
       heading: { en: 'Sales tax: the entries', ru: 'Налог с продаж: проводки', uz: 'Sotuv solig\'i: yozuvlar' },
       body: {

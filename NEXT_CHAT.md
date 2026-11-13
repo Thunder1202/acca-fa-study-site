@@ -78,3 +78,11 @@ The user added `finance/F3 BPP KIT (24-25)-1.pdf` (BPP Practice & Revision Kit, 
 ## Rules that still apply
 
 See PROJECT_NOTES.md: plain HTML/CSS/JS, no build, plain script tags, content through `el()` never innerHTML, every label in three languages, questions in English with trilingual explanations, everyday examples with small round numbers (Madina's Mart is being removed), copyright (original wording, new numbers, `kitRef`), PDFs never committed. Commits end with `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`.
+
+## 2026-11-13: every question's facts now on the chapter page
+
+The user complained that after reading a whole topic they still met practice questions they could not answer, because the needed fact was not in the topic (or was hidden). Done:
+- The section `exam` notes ("Must know for the exam") are now always visible, under the example, instead of inside the collapsed "Explain more" (`js/views/chapter.js`, `.exam-notes` in `style.css`, label in `js/i18n.js`).
+- Every Kaplan and BPP question in all 20 chapters was checked against the visible lesson (simple words, key points, example, exam notes). 133 missing facts were added as exam-note lines, in all three languages. Patches: `tools/audit/chNN.js`, built by `tools/audit/facts.js` (APPENDS lines to a section's exam notes, so re-running a patch twice duplicates them: reset the chapter file with git first). Apply with `node tools/rework/rw.js "<project dir>" <n> tools/audit/chNN.js`. `tools/audit/dump.js <n>` prints a chapter's lesson plus all its Kaplan and BPP questions with keys.
+- Rule from now on: when a question is added, the fact it needs must be visible on the chapter page, not only in "Explain more" or in the answer explanation.
+- Section B cases and BPP 15-mark cases were not part of this audit.

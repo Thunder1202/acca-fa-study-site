@@ -321,13 +321,19 @@ Ikki savol bering: qaysi tomon ortiqcha oldi va qanchaga? Agar yozuvning bir tom
       exam: {
         en: `- To test an option, write the entry that should have been made and the entry that was made, then compare the two sides.
 - Kaplan notes that in a computerised system these errors mostly appear as an entry to suspense, because the software will not accept unequal debits and credits.
-- A transposition ($985 entered as $859) on BOTH sides is an error of original entry and does not affect the trial balance.`,
+- A transposition ($985 entered as $859) on BOTH sides is an error of original entry and does not affect the trial balance.
+- A transposition on ONE side only ($630 in the bank but $360 in the gas account) DOES stop the trial balance agreeing, by the difference ($270).
+- Undercasting means adding an account up too LOW. Undercasting a debit account (purchases) leaves debits short, so suspense has a DEBIT balance. Undercasting a credit account (sales) gives a CREDIT suspense balance.`,
         ru: `- Чтобы проверить вариант, запишите правильную проводку и сделанную, затем сравните стороны.
 - Kaplan отмечает: в компьютерной системе такие ошибки обычно видны как запись на неясные суммы, потому что программа не примет неравные дебет и кредит.
-- Перестановка цифр ($985 записано как $859) с ОБЕИХ сторон — ошибка исходной записи, на ведомость не влияет.`,
+- Перестановка цифр ($985 записано как $859) с ОБЕИХ сторон — ошибка исходной записи, на ведомость не влияет.
+- Перестановка цифр только на ОДНОЙ стороне ($630 в банке, но $360 на счёте газа) НАРУШАЕТ равенство пробного баланса на разницу ($270).
+- Недосчёт (undercasting) — сумма счёта посчитана слишком НИЗКОЙ. Недосчёт дебетового счёта (закупки) — дебета не хватает, поэтому на счёте suspense ДЕБЕТОВОЕ сальдо. Недосчёт кредитового счёта (выручка) даёт КРЕДИТОВОЕ сальдо.`,
         uz: `- Variantni tekshirish uchun to'g'ri yozuvni va qilingan yozuvni yozib, tomonlarni solishtiring.
 - Kaplan qayd etadi: kompyuter tizimida bu xatolar odatda vaqtinchalik hisobga yozuv sifatida ko'rinadi, chunki dastur teng bo'lmagan debet va kreditni qabul qilmaydi.
-- Raqamlar almashuvi ($985 o'rniga $859) IKKALA tomonda — dastlabki yozuv xatosi, sinov balansiga ta'sir qilmaydi.`,
+- Raqamlar almashuvi ($985 o'rniga $859) IKKALA tomonda — dastlabki yozuv xatosi, sinov balansiga ta'sir qilmaydi.
+- Raqamlar faqat BITTA tomonda almashsa ($630 bankda, gaz hisobida esa $360), sinov balansi farq ($270) qadar MUVOZANATDAN chiqadi.
+- Kam hisoblash (undercasting) — hisob jami juda PAST qo'shilgan. Debet hisobini (xaridlar) kam hisoblash debetni kamaytiradi, shuning uchun suspense DEBET qoldig'iga ega. Kredit hisobini (sotuv) kam hisoblash KREDIT qoldig'ini beradi.`,
       },
       body: {
         en: `Kaplan describes the errors that stop a trial balance agreeing as those where an entry is single-sided, where the debits and credits are of different values, where an account balance is miscast, where a balance is omitted when the trial balance is extracted, or where the wrong balance is recorded in the trial balance.
@@ -532,7 +538,10 @@ Uni yopish uchun har bir modda haqida so'rang: qaysi tomon to'g'ri yozilgan? Vaq
 - Rental income shown as interest income leaves profit unchanged, because both are income.
 - A sales invoice raised $1,000 too high reduces revenue and profit by $1,000 when corrected.
 - A customer deposit for goods not yet sent is deferred income, a current liability, not revenue.
-- The non-current part of a loan stays outside current liabilities, but interest accrued on it is current.`,
+- The non-current part of a loan stays outside current liabilities, but interest accrued on it is current.
+- An error in cost of sales (purchases, closing inventory) changes gross profit AND profit for the year. An error in an expense below gross profit (stationery, depreciation) changes only profit for the year.
+- Goods that arrived AFTER the year end but were counted in closing inventory: take their cost out. Assets and profit both fall by the cost (never by the selling price).
+- Rent income credited to an asset account: profit rises by the rent when corrected (Dr Asset, Cr Rent income).`,
         ru: `- Актив, записанный как расход: прибавьте стоимость и вычтите годовую амортизацию.
 - Списание запасов до ЧСР снижает прибыль на падение стоимости.
 - Пропущенное поступление от покупателя на прибыль не влияет.
@@ -541,7 +550,10 @@ Uni yopish uchun har bir modda haqida so'rang: qaysi tomon to'g'ri yozilgan? Vaq
 - Доход от аренды, показанный как проценты, не меняет прибыль: оба — доход.
 - Счёт покупателю, выписанный на $1,000 больше, при исправлении снижает выручку и прибыль на $1,000.
 - Депозит покупателя за неотгруженный товар — доходы будущих периодов, краткосрочное обязательство, а не выручка.
-- Долгосрочная часть кредита не входит в краткосрочные обязательства, а начисленные проценты входят.`,
+- Долгосрочная часть кредита не входит в краткосрочные обязательства, а начисленные проценты входят.
+- Ошибка в себестоимости (закупки, запасы на конец) меняет валовую прибыль И прибыль за год. Ошибка в расходе ниже валовой прибыли (канцтовары, амортизация) меняет только прибыль за год.
+- Товар, пришедший ПОСЛЕ конца года, но включённый в запасы на конец: уберите его себестоимость. Активы и прибыль падают на себестоимость (никогда не на цену продажи).
+- Доход от аренды ошибочно отнесён на счёт актива: при исправлении прибыль растёт на сумму аренды (Дт Актив, Кт Доход от аренды).`,
         uz: `- Xarajat sifatida yozilgan aktiv: qiymatni qo'shing, yillik amortizatsiyani ayiring.
 - Yakuniy zaxirani SSQ ga tushirish foydani qiymat pasayishiga kamaytiradi.
 - Tushib qolgan mijoz to'lovi foydaga ta'sir qilmaydi.
@@ -550,7 +562,10 @@ Uni yopish uchun har bir modda haqida so'rang: qaysi tomon to'g'ri yozilgan? Vaq
 - Foiz sifatida ko'rsatilgan ijara daromadi foydani o'zgartirmaydi, ikkalasi daromad.
 - $1,000 ortiq yozilgan sotuv hisob-fakturasi tuzatilganda tushum va foydani $1,000 ga kamaytiradi.
 - Hali yuborilmagan tovar uchun mijoz depoziti kelgusi davr daromadi, qisqa muddatli majburiyat, tushum emas.
-- Kreditning uzoq muddatli qismi qisqa muddatli majburiyatga kirmaydi, hisoblangan foiz esa kiradi.`,
+- Kreditning uzoq muddatli qismi qisqa muddatli majburiyatga kirmaydi, hisoblangan foiz esa kiradi.
+- Tannarxdagi xato (xaridlar, yakuniy zaxira) yalpi foydani VA yillik foydani o'zgartiradi. Yalpi foydadan pastdagi xarajatdagi xato (kanselyariya, amortizatsiya) faqat yillik foydani o'zgartiradi.
+- Yil oxiridan KEYIN kelgan, lekin yakuniy zaxiraga kiritilgan tovar: uning tannarxini chiqaring. Aktivlar ham, foyda ham tannarx qadar kamayadi (hech qachon sotuv narxi qadar emas).
+- Ijara daromadi xato bilan aktiv hisobiga yozilgan: tuzatilganda foyda ijara summasiga oshadi (Dt Aktiv, Kt Ijara daromadi).`,
       },
       heading: {
         en: 'How corrections change profit',

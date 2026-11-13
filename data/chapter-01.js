@@ -218,6 +218,17 @@ Investors want to know if it makes money. Lenders want to know if they will be p
 
 Investorlar biznes pul topadimi, shuni bilmoqchi. Qarz beruvchilar qarz qaytarilishini. Xodimlar ishi saqlanib qolishini. Yetkazib beruvchilar hisoblari to'lanishini, soliq idorasi esa qancha soliq to'lanishini bilmoqchi.`,
       },
+      exam: {
+        en: `- A sole trader has no shareholders, and investment analysts do not follow small private businesses. Its accounts are read mainly by the owner, the bank and the tax office.
+- A supplier giving credit does not look only at the statement of financial position. Users want to judge future cash flows and how well management used the resources.
+- A bank giving a long-term loan looks first at solvency. A possible investor looks first at current and future profit.`,
+        ru: `- У индивидуального предпринимателя нет акционеров, а инвестиционные аналитики не следят за маленьким частным бизнесом. Его отчётность читают в основном владелец, банк и налоговая.
+- Поставщик, дающий отсрочку, смотрит не только на отчёт о финансовом положении. Пользователи хотят оценить будущие денежные потоки и то, как руководство распорядилось ресурсами.
+- Банк, дающий долгосрочный кредит, прежде всего смотрит на платёжеспособность. Потенциальный инвестор прежде всего смотрит на текущую и будущую прибыль.`,
+        uz: `- Yakka tadbirkorning aksiyadorlari yo'q, investitsiya tahlilchilari esa kichik xususiy biznesni kuzatmaydi. Uning hisobotini asosan egasi, bank va soliq idorasi o'qiydi.
+- Nasiyaga mol beradigan yetkazib beruvchi faqat moliyaviy holat hisobotiga qaramaydi. Foydalanuvchilar kelajakdagi pul oqimlarini va rahbariyat resurslarni qanday boshqarganini baholamoqchi.
+- Uzoq muddatli kredit beradigan bank avvalo to'lov qobiliyatiga qaraydi. Bo'lajak investor avvalo hozirgi va kelajakdagi foydaga qaraydi.`,
+      },
     },
     {
       exam: {
@@ -228,7 +239,12 @@ Investorlar biznes pul topadimi, shuni bilmoqchi. Qarz beruvchilar qarz qaytaril
 - Sole traders and partnerships normally have no filing, audit or public inspection rules.
 - Floating charges are generally not available to partnerships or individuals.
 - A profit appropriation account shows how a partnership's profit is shared.
-- A sole trader's revaluation surplus goes into the capital account.`,
+- A sole trader's revaluation surplus goes into the capital account.
+- Unincorporated (sole trader, partnership): in law the owner and the business are the SAME. Only the accounts treat them as separate.
+- Benefits of a company: shareholders have limited liability, and it is easier to raise money (it can issue more shares, and banks accept a floating charge).
+- Filing accounts by a deadline and following company law are BURDENS of a company, not benefits.
+- A sole trader keeps ALL the profit (a benefit) but pays business debts from personal assets (the drawback). A shareholder never owes the company's debts.
+- A company exists only once it is registered (incorporated). It cannot be set up by an informal agreement.`,
         ru: `- Партнёрство не является отдельным юрлицом: его имущество принадлежит партнёрам.
 - Все партнёры могут участвовать в управлении, если их договор не говорит иное.
 - Партнёр — владелец, а не работник. Письменный договор полезен, но не обязателен.
@@ -236,7 +252,12 @@ Investorlar biznes pul topadimi, shuni bilmoqchi. Qarz beruvchilar qarz qaytaril
 - У предпринимателей и партнёрств обычно нет требований о подаче отчётности, аудите и открытости.
 - Плавающий залог обычно недоступен партнёрствам и физическим лицам.
 - Счёт распределения прибыли показывает, как делится прибыль партнёрства.
-- Резерв переоценки предпринимателя входит в счёт капитала.`,
+- Резерв переоценки предпринимателя входит в счёт капитала.
+- Без регистрации компании (предприниматель, товарищество): по закону владелец и бизнес — ОДНО и то же. Только в учёте их разделяют.
+- Плюсы компании: у акционеров ограниченная ответственность, и легче привлечь деньги (можно выпустить новые акции, банки принимают плавающий залог).
+- Сдача отчётности к сроку и соблюдение закона о компаниях — это НАГРУЗКА для компании, а не преимущество.
+- Предприниматель получает ВСЮ прибыль (плюс), но платит долги бизнеса личным имуществом (минус). Акционер никогда не отвечает по долгам компании.
+- Компания существует только после регистрации. Её нельзя создать неформальной договорённостью.`,
         uz: `- Sheriklik alohida yuridik shaxs emas: uning mol-mulki sheriklarga tegishli.
 - Barcha sheriklar boshqaruvda qatnasha oladi, agar shartnomada boshqacha yozilmagan bo'lsa.
 - Sherik xodim emas, egadir. Yozma shartnoma foydali, ammo majburiy emas.
@@ -244,7 +265,12 @@ Investorlar biznes pul topadimi, shuni bilmoqchi. Qarz beruvchilar qarz qaytaril
 - Yakka tadbirkor va sherikliklarda odatda hisobot topshirish, audit va ochiqlik talablari yo'q.
 - Suzuvchi garov odatda sheriklik va jismoniy shaxslarga berilmaydi.
 - Foydani taqsimlash hisobi sheriklik foydasi qanday bo'linishini ko'rsatadi.
-- Yakka tadbirkorning qayta baholash rezervi kapital hisobiga kiradi.`,
+- Yakka tadbirkorning qayta baholash rezervi kapital hisobiga kiradi.
+- Kompaniya sifatida ro'yxatdan o'tmagan (yakka tadbirkor, sheriklik): qonunda egasi va biznes BIR XIL. Faqat hisobda ular alohida ko'riladi.
+- Kompaniyaning afzalliklari: aksiyadorlar javobgarligi cheklangan va pul jalb qilish osonroq (yangi aksiya chiqarish mumkin, banklar suzuvchi garovni qabul qiladi).
+- Hisobotni muddatida topshirish va kompaniyalar qonuniga rioya qilish kompaniya uchun YUK, afzallik emas.
+- Yakka tadbirkor BUTUN foydani oladi (afzallik), lekin biznes qarzlarini shaxsiy mulki bilan to'laydi (kamchilik). Aksiyador hech qachon kompaniya qarzlari uchun javob bermaydi.
+- Kompaniya faqat ro'yxatdan o'tgandan keyin mavjud bo'ladi. Uni norasmiy kelishuv bilan tuzib bo'lmaydi.`,
       },
       key: {
         en: `- Sole trader: one owner, unlimited liability, capital account and drawings.
@@ -398,12 +424,32 @@ It explains what financial statements are for and gives the basic ideas the IASB
 
 U hisobot nima uchun kerakligini tushuntiradi va IASB standart yozishda foydalanadigan asosiy g'oyalarni beradi. Hech bir standart to'g'ri kelmasa, buxgalterlar shunga qarab hal qiladi. G'oyalaridan biri ehtiyotkorlik: ishonchingiz komil bo'lmasa ehtiyot bo'ling, lekin raqamlarni ataylab yomonlashtirmang.`,
       },
+      exam: {
+        en: `- The objective is information about financial position, performance and how well management used the resources. Giving investment advice is NOT an objective.
+- Prudence does NOT mean the lowest possible value, spending less, or waiting for the cash before recording income. It forbids overstating liabilities just as it forbids understating them.
+- Making provisions in good years to release in bad years (smoothing profit) is bias. It is not allowed.`,
+        ru: `- Цель — информация о финансовом положении, результатах и о том, как руководство использовало ресурсы. Давать инвестиционные советы — НЕ цель.
+- Осмотрительность НЕ значит самую низкую оценку, меньше трат или ожидание денег до признания дохода. Она запрещает завышать обязательства так же, как и занижать их.
+- Создавать резервы в хорошие годы, чтобы распустить их в плохие (сглаживание прибыли), — это предвзятость. Так нельзя.`,
+        uz: `- Maqsad: moliyaviy holat, natijalar va rahbariyat resurslardan qanday foydalangani haqida ma'lumot. Investitsiya bo'yicha maslahat berish maqsad EMAS.
+- Ehtiyotkorlik eng past qiymat, kamroq xarajat yoki daromadni pul kelguncha yozmaslik degani EMAS. U majburiyatlarni oshirib ko'rsatishni ham, kamaytirishni ham taqiqlaydi.
+- Yaxshi yillarda zaxira yaratib, yomon yillarda uni qaytarish (foydani tekislash) xolislikni buzadi. Bunga yo'l qo'yilmaydi.`,
+      },
     },
     {
       exam: {
-        en: '- Materiality is an entity-specific aspect of relevance, based on the nature or size of an item.',
-        ru: '- Существенность — аспект уместности, зависящий от предприятия: от характера или размера статьи.',
-        uz: '- Muhimlik tegishlilikning korxonaga xos jihati bo\'lib, moddaning tabiati yoki hajmiga bog\'liq.',
+        en: `- Materiality is an entity-specific aspect of relevance, based on the nature or size of an item.
+- Faithful representation = complete + neutral + free from error. "Fair presentation", "accuracy" and "legal form" are not its parts.
+- Never leave out material information because the exact figure is hard to find. Use an estimate and say it is an estimate.
+- Materiality is about size or nature. It does not decide what counts as an asset.`,
+        ru: `- Существенность — аспект уместности, зависящий от предприятия: от характера или размера статьи.
+- Правдивое представление = полнота + нейтральность + отсутствие ошибок. «Достоверное представление», «точность» и «юридическая форма» в него не входят.
+- Нельзя пропускать существенную информацию из-за того, что точную сумму трудно найти. Используйте оценку и укажите, что это оценка.
+- Существенность — это про размер или характер статьи. Она не решает, что считается активом.`,
+        uz: `- Muhimlik tegishlilikning korxonaga xos jihati bo'lib, moddaning tabiati yoki hajmiga bog'liq.
+- Haqqoniy aks ettirish = to'liqlik + betaraflik + xatosizlik. "Adolatli taqdimot", "aniqlik" va "huquqiy shakl" uning qismi emas.
+- Aniq summani topish qiyin bo'lgani uchun muhim ma'lumotni tushirib qoldirib bo'lmaydi. Taxminni ishlating va bu taxmin ekanini ayting.
+- Muhimlik summaning hajmi yoki tabiati haqida. U nima aktiv hisoblanishini hal qilmaydi.`,
       },
       key: {
         en: `- There are two: relevance and faithful representation.
@@ -591,6 +637,14 @@ Reliability is NOT on the list. That is a common exam trap.`,
 - Tushunarlilik: biznesdan biroz xabardor o'quvchi uni tushuna oladi.
 
 Ishonchlilik (reliability) ro'yxatda YO'Q. Bu imtihondagi keng tarqalgan tuzoq.`,
+      },
+      exam: {
+        en: `- All six qualitative characteristics: relevance and faithful representation (fundamental); comparability, verifiability, timeliness and understandability (enhancing).
+- NOT on either list: reliability, accuracy, consistency, prudence, accruals, materiality, going concern. Consistency supports comparability but is not itself a characteristic.`,
+        ru: `- Все шесть качественных характеристик: уместность и правдивое представление (фундаментальные); сопоставимость, проверяемость, своевременность и понятность (усиливающие).
+- НЕТ ни в одном списке: надёжность, точность, последовательность, осмотрительность, начисление, существенность, непрерывность. Последовательность помогает сопоставимости, но сама характеристикой не является.`,
+        uz: `- Barcha oltita sifat xususiyati: tegishlilik va haqqoniy aks ettirish (asosiy); taqqoslanuvchanlik, tekshiriluvchanlik, o'z vaqtidalik va tushunarlilik (kuchaytiruvchi).
+- Hech bir ro'yxatda YO'Q: ishonchlilik, aniqlik, izchillik, ehtiyotkorlik, hisoblash usuli, muhimlik, uzluksizlik. Izchillik taqqoslanuvchanlikka yordam beradi, lekin o'zi xususiyat emas.`,
       },
     },
     {
@@ -827,11 +881,20 @@ Moliyaviy holat hisoboti — bir kunning surati: nima borligi va nima qarzliging
     {
       exam: {
         en: `- Consistency covers how items are presented and classified, including in the notes.
-- Going concern is why non-current assets stay at cost less depreciation, not forced sale value.`,
+- Going concern is why non-current assets stay at cost less depreciation, not forced sale value.
+- Consistency does not mean "never change": presentation may change if the business's operations change significantly or a new standard requires it.
+- The owner takes cash or goods for personal use: business entity concept. It is recorded as drawings.
+- Accruals: income is recorded when goods or services are supplied, costs when goods or services are received. Not when cash moves.`,
         ru: `- Последовательность касается представления и классификации статей, включая примечания.
-- Благодаря непрерывности внеоборотные активы учитываются по первоначальной стоимости за вычетом амортизации, а не по цене вынужденной продажи.`,
+- Благодаря непрерывности внеоборотные активы учитываются по первоначальной стоимости за вычетом амортизации, а не по цене вынужденной продажи.
+- Последовательность не значит «никогда не менять»: представление можно изменить, если деятельность существенно изменилась или этого требует новый стандарт.
+- Владелец берёт деньги или товар для себя: принцип обособленности бизнеса. Это отражается как изъятия.
+- Начисление: доход отражают, когда товар или услуга поставлены, расходы — когда товар или услуга получены. Не когда двигаются деньги.`,
         uz: `- Izchillik moddalarning taqdim etilishi va tasniflanishiga, jumladan izohlarga ham tegishli.
-- Uzluksizlik sababli uzoq muddatli aktivlar majburiy sotuv narxida emas, tarixiy qiymat minus amortizatsiyada ko'rsatiladi.`,
+- Uzluksizlik sababli uzoq muddatli aktivlar majburiy sotuv narxida emas, tarixiy qiymat minus amortizatsiyada ko'rsatiladi.
+- Izchillik "hech qachon o'zgartirma" degani emas: faoliyat jiddiy o'zgarsa yoki yangi standart talab qilsa, taqdimotni o'zgartirish mumkin.
+- Egasi o'zi uchun pul yoki tovar oladi: biznesning alohidaligi tamoyili. Bu olib qo'yish sifatida yoziladi.
+- Hisoblash usuli: daromad tovar yoki xizmat yetkazilganda, xarajat tovar yoki xizmat olinganda yoziladi. Pul harakati paytida emas.`,
       },
       key: {
         en: `- Going concern: expected to keep operating. Expected, never guaranteed.

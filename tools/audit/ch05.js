@@ -1,0 +1,31 @@
+// Chapter 5: facts the Kaplan and BPP questions test that the visible lesson did not state.
+module.exports = require('./facts.js')(5, {
+  1: [
+    ['Goods sold after the year end are added back at COST. Mark-up is a % of cost: with a 25% mark-up, cost = selling price x 100/125.',
+      'Проданное после конца года прибавляют по СЕБЕСТОИМОСТИ. Наценка — % от себестоимости: при наценке 25% себестоимость = цена продажи x 100/125.',
+      'Yil oxiridan keyin sotilgan tovar TANNARXDA qo\'shiladi. Ustama tannarxning foizi: 25% ustamada tannarx = sotuv narxi x 100/125.'],
+    ['Margin is a % of the SELLING price: with a 35% margin, cost = selling price x 65%. Do not mix up margin and mark-up.',
+      'Маржа — % от ЦЕНЫ ПРОДАЖИ: при марже 35% себестоимость = цена продажи x 65%. Не путайте маржу и наценку.',
+      'Marja SOTUV narxining foizi: 35% marjada tannarx = sotuv narxi x 65%. Marja va ustamani adashtirmang.'],
+    ['A customer returns goods after the year end that were sold BEFORE it: they were not in stock at the year end, so take their cost off the count.',
+      'Покупатель вернул после конца года товар, проданный ДО него: на конец года этого товара не было, поэтому его себестоимость вычитают из подсчёта.',
+      'Xaridor yil oxiridan keyin, undan OLDIN sotilgan tovarni qaytardi: yil oxirida bu tovar omborda yo\'q edi, shuning uchun uning tannarxi sanoqdan ayiriladi.'],
+  ],
+  2: [
+    ['Cost of goods a business makes = materials + labour + production overheads (factory depreciation, factory supervisors\' wages). Leaving overheads out is not allowed.',
+      'Себестоимость произведённого = материалы + труд + производственные накладные (амортизация цеха, зарплата мастеров цеха). Не включать накладные нельзя.',
+      'Ishlab chiqarilgan tovar tannarxi = materiallar + mehnat + ishlab chiqarish ustama xarajatlari (sex amortizatsiyasi, sex nazoratchilari maoshi). Ustama xarajatlarni chiqarib tashlash mumkin emas.'],
+    ['Production overheads are spread using the NORMAL level of activity.',
+      'Производственные накладные распределяют исходя из НОРМАЛЬНОГО уровня производства.',
+      'Ishlab chiqarish ustama xarajatlari ODATIY ishlab chiqarish darajasi asosida taqsimlanadi.'],
+    ['Never in cost: carriage outwards, storage of finished goods, selling costs. Trade discounts received are taken OFF cost.',
+      'Никогда не входят в себестоимость: доставка покупателям, хранение готовой продукции, затраты на продажу. Полученные торговые скидки ВЫЧИТАЮТ из себестоимости.',
+      'Hech qachon tannarxga kirmaydi: xaridorga yetkazish, tayyor mahsulotni saqlash, sotish xarajatlari. Olingan savdo chegirmalari tannarxdan AYIRILADI.'],
+    ['Allowed methods: FIFO and weighted average (and unit cost for special items). LIFO (last in, first out) is NOT allowed.',
+      'Разрешённые методы: FIFO и средневзвешенная (и индивидуальная себестоимость для особых товаров). LIFO (последним пришёл — первым ушёл) НЕ разрешён.',
+      'Ruxsat etilgan usullar: FIFO va o\'rtacha tortilgan (maxsus tovarlar uchun dona tannarxi). LIFO (oxirgi kelgan birinchi ketadi) TAQIQLANGAN.'],
+    ['Repair costs and selling costs both come off the selling price to give NRV. For a batch, take the batch\'s selling costs off the batch total.',
+      'И ремонт, и затраты на продажу вычитают из цены продажи, чтобы получить NRV. Для партии вычитайте затраты на продажу партии из суммы по партии.',
+      'Ta\'mirlash va sotish xarajatlari ikkalasi ham NRVni topish uchun sotuv narxidan ayiriladi. Partiya uchun partiyaning sotish xarajatlarini partiya jamidan ayiring.'],
+  ],
+});

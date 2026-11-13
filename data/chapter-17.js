@@ -8,11 +8,31 @@ const chapter17 = {
     uz: 'Pul oqimlari to\'g\'risidagi hisobot',
   },
   objectives: [
-    { en: 'Explain why profit and cash differ', ru: 'Объяснять, почему прибыль и деньги различаются', uz: 'Foyda va pul nega farq qilishini tushuntirish' },
-    { en: 'Describe the benefits and drawbacks of a statement of cash flows', ru: 'Описывать преимущества и недостатки отчёта о движении денег', uz: 'Pul oqimlari hisobotining afzallik va kamchiliklarini tavsiflash' },
-    { en: 'Calculate cash from operations by the indirect and direct methods', ru: 'Рассчитывать деньги от операций косвенным и прямым методом', uz: 'Operatsiyalardan pulni bilvosita va to\'g\'ridan-to\'g\'ri usulda hisoblash' },
-    { en: 'Calculate investing and financing cash flows', ru: 'Рассчитывать инвестиционные и финансовые потоки', uz: 'Investitsiya va moliyalashtirish oqimlarini hisoblash' },
-    { en: 'Prepare a statement of cash flows or extracts from it', ru: 'Составлять отчёт о движении денег или его части', uz: 'Pul oqimlari hisoboti yoki uning qismlarini tuzish' },
+    {
+      en: 'Explain why profit and cash differ',
+      ru: 'Объяснять, почему прибыль и деньги различаются',
+      uz: 'Foyda va pul nega farq qilishini tushuntirish',
+    },
+    {
+      en: 'Describe the benefits and drawbacks of a statement of cash flows',
+      ru: 'Описывать преимущества и недостатки отчёта о движении денег',
+      uz: 'Pul oqimlari hisobotining afzallik va kamchiliklarini tavsiflash',
+    },
+    {
+      en: 'Calculate cash from operations by the indirect and direct methods',
+      ru: 'Рассчитывать деньги от операций косвенным и прямым методом',
+      uz: 'Operatsiyalardan pulni bilvosita va to\'g\'ridan-to\'g\'ri usulda hisoblash',
+    },
+    {
+      en: 'Calculate investing and financing cash flows',
+      ru: 'Рассчитывать инвестиционные и финансовые потоки',
+      uz: 'Investitsiya va moliyalashtirish oqimlarini hisoblash',
+    },
+    {
+      en: 'Prepare a statement of cash flows or extracts from it',
+      ru: 'Составлять отчёт о движении денег или его части',
+      uz: 'Pul oqimlari hisoboti yoki uning qismlarini tuzish',
+    },
   ],
   sections: [
     {
@@ -47,11 +67,7 @@ const chapter17 = {
 - Pulsiz operatsiyalarni ko'rsatish bu hisobotning afzalligi emas. U ularni ko'rsatmaydi.
 - Raqamlarni qulay hisob siyosati bilan o'zgartirib bo'lmaydi, bu afzallik.`,
       },
-      heading: {
-        en: 'Why cash matters',
-        ru: 'Почему важны деньги',
-        uz: 'Pul nega muhim',
-      },
+      heading: { en: 'Why cash matters', ru: 'Почему важны деньги', uz: 'Pul nega muhim' },
       body: {
         en: `An entity may be profitable and still not survive, because it needs cash to pay its debts. Profit is worked out on the accrual basis. Most goods are sold on credit, so revenue is recognised before cash arrives, and purchases work in the same way. Expenses such as depreciation involve no cash at all. So a business can report a profit and have too little cash for its short-term liabilities.
 
@@ -152,25 +168,27 @@ Qog'ozda siz $400 ishladingiz. Haqiqatda fevralgacha pulingiz $600 kam, yanvar i
 - A proposed dividend is not a cash flow either. A rights issue and dividends paid are.
 - Disposal proceeds are only in the statement of cash flows. The carrying amount and any gain or loss are elsewhere.
 - Depreciation, amortisation and a loss on sale are not cash flows, so they never appear under investing.
-- Work out the movement in total cash: closing cash and cash equivalents - opening.`,
+- Work out the movement in total cash: closing cash and cash equivalents - opening.
+- Never in the statement of cash flows: a revaluation surplus, a bonus issue, a dividend proposed after the year end, irrecoverable debts written off, depreciation and amortisation. None of them moves cash.
+- Tax paid is operating. Proceeds from selling property are investing. Neither is ever financing.`,
         ru: `- Уплаченные проценты и дивиденды — финансовые. Полученные проценты и дивиденды — инвестиционные.
 - Бонусный выпуск и переоценка не связаны с деньгами, в этом отчёте их нет.
 - Предложенный дивиденд тоже не денежный поток. Выпуск прав и выплаченные дивиденды — да.
 - Выручка от выбытия есть только в этом отчёте. Балансовая стоимость и прибыль или убыток — в других.
 - Амортизация и убыток от продажи — не денежные потоки, в инвестиционном разделе их нет.
-- Изменение денег: деньги и эквиваленты на конец - на начало.`,
+- Изменение денег: деньги и эквиваленты на конец - на начало.
+- Никогда не попадают в отчёт о движении денежных средств: прирост от переоценки, бонусный выпуск, дивиденд, предложенный после конца года, списанные безнадёжные долги, амортизация. Ни одно из них не двигает деньги.
+- Уплаченный налог — операционная деятельность. Выручка от продажи недвижимости — инвестиционная. Ни то, ни другое не бывает финансовой.`,
         uz: `- To'langan foiz va dividendlar moliyaviy. Olingan foiz va dividendlar investitsion.
 - Bonusli chiqarish va qayta baholash pulsiz, bu hisobotda yo'q.
 - Taklif qilingan dividend ham pul oqimi emas. Huquqli chiqarish va to'langan dividendlar ha.
 - Chiqish tushumi faqat bu hisobotda. Balans qiymati va foyda yoki zarar boshqa joyda.
 - Amortizatsiya va sotuv zarari pul oqimi emas, investitsionda yo'q.
-- Pul o'zgarishi: yakuniy pul va ekvivalentlar - boshlang'ich.`,
+- Pul o'zgarishi: yakuniy pul va ekvivalentlar - boshlang'ich.
+- Pul oqimlari hisobotida hech qachon bo'lmaydi: qayta baholash o'sishi, bonus emissiya, yil oxiridan keyin taklif qilingan dividend, hisobdan chiqarilgan umidsiz qarzlar, amortizatsiya. Ularning hech biri pul harakatlantirmaydi.
+- To'langan soliq operatsion faoliyat. Mulk sotishdan tushum investitsion faoliyat. Ikkalasi ham hech qachon moliyaviy emas.`,
       },
-      heading: {
-        en: 'The format of the statement',
-        ru: 'Формат отчёта',
-        uz: 'Hisobot shakli',
-      },
+      heading: { en: 'The format of the statement', ru: 'Формат отчёта', uz: 'Hisobot shakli' },
       body: {
         en: `IAS 7 requires cash flows to be shown under standard headings.
 
@@ -283,7 +301,8 @@ Yil boshida $3,000 bor edi, demak oxirida $3,000 + $5,000 = $8,000. Bu $8,000 mo
 - The only difference between the two methods is the presentation within operating activities. Investing and financing are the same.
 - Cash from customers = opening receivables + sales - closing receivables.
 - Cash paid to suppliers = opening payables + purchases - closing payables. Inventory movements are ignored if purchases are given.
-- Wages paid = opening accrual + expense - closing accrual.`,
+- Wages paid = opening accrual + expense - closing accrual.
+- Starting from profit before tax: add back finance costs (interest paid goes to financing) and take off interest and dividend income (it goes to investing) to get back to operating profit.`,
         ru: `- Если задача начинается с прибыли до налога, сначала прибавьте финансовые расходы, чтобы получить операционную прибыль.
 - К операционной прибыли прибавляются: амортизация, убыток от продажи, падение запасов или дебиторов, рост кредиторов.
 - Прибыль от продажи вычитается, а не прибавляется.
@@ -292,7 +311,8 @@ Yil boshida $3,000 bor edi, demak oxirida $3,000 + $5,000 = $8,000. Bu $8,000 mo
 - Методы различаются только показом операционной деятельности. Инвестиционная и финансовая одинаковы.
 - Деньги от покупателей = дебиторы на начало + продажи - дебиторы на конец.
 - Выплаты поставщикам = кредиторы на начало + закупки - кредиторы на конец. Если закупки даны, изменение запасов игнорируется.
-- Выплаченная зарплата = начисление на начало + расход - начисление на конец.`,
+- Выплаченная зарплата = начисление на начало + расход - начисление на конец.
+- Если начинать с прибыли до налогов: прибавьте финансовые расходы (уплаченные проценты идут в финансовую) и вычтите процентный и дивидендный доход (он идёт в инвестиционную), чтобы вернуться к операционной прибыли.`,
         uz: `- Masala soliqdan oldingi foydadan boshlansa, avval moliyaviy xarajatlarni qo'shib operatsion foydani toping.
 - Operatsion foydaga qo'shiladi: amortizatsiya, sotuv zarari, zaxira yoki debitorlar kamayishi, kreditorlar oshishi.
 - Sotuv foydasi qo'shilmaydi, ayiriladi.
@@ -301,7 +321,8 @@ Yil boshida $3,000 bor edi, demak oxirida $3,000 + $5,000 = $8,000. Bu $8,000 mo
 - Usullar faqat operatsion faoliyat ko'rinishida farq qiladi. Investitsion va moliyaviy bir xil.
 - Mijozlardan pul = boshlang'ich debitorlar + sotuv - yakuniy debitorlar.
 - Yetkazib beruvchilarga to'lov = boshlang'ich kreditorlar + xaridlar - yakuniy kreditorlar. Xaridlar berilgan bo'lsa, zaxira o'zgarishi e'tiborsiz.
-- To'langan ish haqi = boshlang'ich hisoblangan + xarajat - yakuniy hisoblangan.`,
+- To'langan ish haqi = boshlang'ich hisoblangan + xarajat - yakuniy hisoblangan.
+- Soliqdan oldingi foydadan boshlansa: moliyaviy xarajatlarni qaytarib qo'shing (to'langan foiz moliyaviyga o'tadi) va foiz hamda dividend daromadini ayiring (u investitsionga o'tadi), shunda operatsion foydaga qaytasiz.`,
       },
       heading: {
         en: 'Cash from operating activities',
@@ -446,11 +467,7 @@ So'ng haqiqatan to'langan soliqni ayiring. To'g'ridan-to'g'ri usul esa mijozlard
 - Xarid va tushumni ikki alohida qatorda ko'rsating, sof harakat emas.
 - Chiqish foydasi yoki zarari investitsion oqim emas. Faqat tushum.`,
       },
-      heading: {
-        en: 'Investing cash flows',
-        ru: 'Инвестиционные потоки',
-        uz: 'Investitsion oqimlar',
-      },
+      heading: { en: 'Investing cash flows', ru: 'Инвестиционные потоки', uz: 'Investitsion oqimlar' },
       body: {
         en: `Investing inflows include interest income, dividends received and proceeds of disposing of non-current assets. Outflows include buying property, plant and equipment. IAS 7 requires interest and dividends received to be classified here.
 
@@ -556,11 +573,7 @@ Masalalarda qancha sarflangani kamdan-kam yoziladi, shuning uchun u yetishmayotg
 - Foydani orqaga topish uchun taqsimlanmagan foyda harakatidan boshlab dividend, soliq va foizni qo'shing.
 - Bank o'zgarishi ma'lum bo'lsa, yetishmagan operatsion raqam boshqa bo'limlar orqali topiladi.`,
       },
-      heading: {
-        en: 'Financing cash flows',
-        ru: 'Финансовые потоки',
-        uz: 'Moliyaviy oqimlar',
-      },
+      heading: { en: 'Financing cash flows', ru: 'Финансовые потоки', uz: 'Moliyaviy oqimlar' },
       body: {
         en: `Financing inflows are the proceeds of issuing shares and of receiving loans. Outflows are repaying loans, dividends paid and interest paid. IAS 7 requires interest and dividends paid to be classified here.
 
@@ -656,63 +669,159 @@ Bonusli chiqarish aksiyadorlarga bepul aksiya beradi, pul o'tmaydi, shuning uchu
   glossary: [
     {
       term: { en: 'Liquidity', ru: 'Ликвидность', uz: 'Likvidlik' },
-      definition: { en: 'Having enough cash, or things that quickly become cash, to pay the bills due soon.', ru: 'Наличие достаточных денег или того, что быстро станет деньгами, чтобы оплатить ближайшие счета.', uz: 'Yaqinda to\'lanadigan hisoblar uchun yetarli pul yoki tez pulga aylanadigan narsalar borligi.' },
-      example: { en: 'Rent of $1,000 is due next week and you have $1,500 in the bank: you are liquid.', ru: 'Аренда $1,000 к оплате через неделю, а в банке $1,500: вы ликвидны.', uz: 'Keyingi hafta $1,000 ijara to\'lanadi, bankda $1,500 bor: siz likvidsiz.' },
+      definition: {
+        en: 'Having enough cash, or things that quickly become cash, to pay the bills due soon.',
+        ru: 'Наличие достаточных денег или того, что быстро станет деньгами, чтобы оплатить ближайшие счета.',
+        uz: 'Yaqinda to\'lanadigan hisoblar uchun yetarli pul yoki tez pulga aylanadigan narsalar borligi.',
+      },
+      example: {
+        en: 'Rent of $1,000 is due next week and you have $1,500 in the bank: you are liquid.',
+        ru: 'Аренда $1,000 к оплате через неделю, а в банке $1,500: вы ликвидны.',
+        uz: 'Keyingi hafta $1,000 ijara to\'lanadi, bankda $1,500 bor: siz likvidsiz.',
+      },
     },
     {
       term: { en: 'Solvency', ru: 'Платёжеспособность', uz: 'To\'lov qobiliyati' },
-      definition: { en: 'Being able to pay all debts in the longer term, because what you own is worth more than what you owe.', ru: 'Способность в долгосрочной перспективе оплатить все долги, потому что имущество стоит больше, чем долги.', uz: 'Uzoq muddatda barcha qarzlarni to\'lay olish, chunki mol-mulk qarzlardan qimmatroq.' },
-      example: { en: 'A shop owes $50,000 and owns assets worth $80,000: it is solvent.', ru: 'Магазин должен $50,000, а его активы стоят $80,000: он платёжеспособен.', uz: 'Do\'kon $50,000 qarz, aktivlari $80,000 turadi: u to\'lovga qodir.' },
+      definition: {
+        en: 'Being able to pay all debts in the longer term, because what you own is worth more than what you owe.',
+        ru: 'Способность в долгосрочной перспективе оплатить все долги, потому что имущество стоит больше, чем долги.',
+        uz: 'Uzoq muddatda barcha qarzlarni to\'lay olish, chunki mol-mulk qarzlardan qimmatroq.',
+      },
+      example: {
+        en: 'A shop owes $50,000 and owns assets worth $80,000: it is solvent.',
+        ru: 'Магазин должен $50,000, а его активы стоят $80,000: он платёжеспособен.',
+        uz: 'Do\'kon $50,000 qarz, aktivlari $80,000 turadi: u to\'lovga qodir.',
+      },
     },
     {
       term: { en: 'Cash', ru: 'Денежные средства', uz: 'Pul' },
-      definition: { en: 'Cash on hand and demand deposits, less overdrafts.', ru: 'Наличные и депозиты до востребования минус овердрафты.', uz: 'Naqd va talab bo\'yicha depozitlar minus overdraftlar.' },
-      example: { en: '$200 in the till + $5,000 in the current account - a $1,000 overdraft = $4,200 of cash.', ru: '$200 в кассе + $5,000 на текущем счёте - овердрафт $1,000 = $4,200 денег.', uz: 'Kassada $200 + joriy hisobda $5,000 - $1,000 overdraft = $4,200 pul.' },
+      definition: {
+        en: 'Cash on hand and demand deposits, less overdrafts.',
+        ru: 'Наличные и депозиты до востребования минус овердрафты.',
+        uz: 'Naqd va talab bo\'yicha depozitlar minus overdraftlar.',
+      },
+      example: {
+        en: '$200 in the till + $5,000 in the current account - a $1,000 overdraft = $4,200 of cash.',
+        ru: '$200 в кассе + $5,000 на текущем счёте - овердрафт $1,000 = $4,200 денег.',
+        uz: 'Kassada $200 + joriy hisobda $5,000 - $1,000 overdraft = $4,200 pul.',
+      },
     },
     {
       term: { en: 'Cash equivalents', ru: 'Денежные эквиваленты', uz: 'Pul ekvivalentlari' },
-      definition: { en: 'Short-term, highly liquid investments readily convertible to known amounts of cash.', ru: 'Краткосрочные высоколиквидные вложения, легко обратимые в известную сумму денег.', uz: 'Ma\'lum summaga oson aylanadigan qisqa muddatli likvid sarmoyalar.' },
-      example: { en: 'A 30-day bank deposit of $2,000 that will turn into exactly $2,000 of cash next month.', ru: '30-дневный депозит $2,000, который через месяц станет ровно $2,000 денег.', uz: 'Keyingi oy aynan $2,000 pulga aylanadigan 30 kunlik $2,000 bank depoziti.' },
+      definition: {
+        en: 'Short-term, highly liquid investments readily convertible to known amounts of cash.',
+        ru: 'Краткосрочные высоколиквидные вложения, легко обратимые в известную сумму денег.',
+        uz: 'Ma\'lum summaga oson aylanadigan qisqa muddatli likvid sarmoyalar.',
+      },
+      example: {
+        en: 'A 30-day bank deposit of $2,000 that will turn into exactly $2,000 of cash next month.',
+        ru: '30-дневный депозит $2,000, который через месяц станет ровно $2,000 денег.',
+        uz: 'Keyingi oy aynan $2,000 pulga aylanadigan 30 kunlik $2,000 bank depoziti.',
+      },
     },
     {
       term: { en: 'Operating activities', ru: 'Операционная деятельность', uz: 'Operatsion faoliyat' },
-      definition: { en: 'The main revenue-producing activities of the entity.', ru: 'Основная деятельность компании, приносящая выручку.', uz: 'Korxonaning asosiy daromad keltiruvchi faoliyati.' },
-      example: { en: 'A café selling coffee, paying for milk and beans, paying its staff and paying its tax.', ru: 'Кафе продаёт кофе, платит за молоко и зёрна, персоналу и налог.', uz: 'Kafe qahva sotadi, sut va don, xodimlar va soliq uchun to\'laydi.' },
+      definition: {
+        en: 'The main revenue-producing activities of the entity.',
+        ru: 'Основная деятельность компании, приносящая выручку.',
+        uz: 'Korxonaning asosiy daromad keltiruvchi faoliyati.',
+      },
+      example: {
+        en: 'A café selling coffee, paying for milk and beans, paying its staff and paying its tax.',
+        ru: 'Кафе продаёт кофе, платит за молоко и зёрна, персоналу и налог.',
+        uz: 'Kafe qahva sotadi, sut va don, xodimlar va soliq uchun to\'laydi.',
+      },
     },
     {
       term: { en: 'Investing activities', ru: 'Инвестиционная деятельность', uz: 'Investitsion faoliyat' },
-      definition: { en: 'Buying and selling long-term assets and investments, and receiving interest and dividends.', ru: 'Покупка и продажа долгосрочных активов и вложений, получение процентов и дивидендов.', uz: 'Uzoq muddatli aktiv va sarmoyalar oldi-sotdisi, foiz va dividend olish.' },
-      example: { en: 'Buying a new $5,000 coffee machine (out) and selling the old one for $500 (in).', ru: 'Покупка новой кофемашины за $5,000 (отток) и продажа старой за $500 (приток).', uz: 'Yangi $5,000 lik qahva mashinasini olish (chiqim) va eskisini $500 ga sotish (kirim).' },
+      definition: {
+        en: 'Buying and selling long-term assets and investments, and receiving interest and dividends.',
+        ru: 'Покупка и продажа долгосрочных активов и вложений, получение процентов и дивидендов.',
+        uz: 'Uzoq muddatli aktiv va sarmoyalar oldi-sotdisi, foiz va dividend olish.',
+      },
+      example: {
+        en: 'Buying a new $5,000 coffee machine (out) and selling the old one for $500 (in).',
+        ru: 'Покупка новой кофемашины за $5,000 (отток) и продажа старой за $500 (приток).',
+        uz: 'Yangi $5,000 lik qahva mashinasini olish (chiqim) va eskisini $500 ga sotish (kirim).',
+      },
     },
     {
       term: { en: 'Financing activities', ru: 'Финансовая деятельность', uz: 'Moliyaviy faoliyat' },
-      definition: { en: 'Share issues, borrowing and repaying loans, and paying interest and dividends.', ru: 'Выпуск акций, получение и возврат займов, выплата процентов и дивидендов.', uz: 'Aksiya chiqarish, qarz olish va qaytarish, foiz va dividend to\'lash.' },
-      example: { en: 'Taking a $10,000 bank loan (in), then paying $800 of interest and $1,000 of dividends (out).', ru: 'Банковский заём $10,000 (приток), затем проценты $800 и дивиденды $1,000 (отток).', uz: '$10,000 bank qarzi (kirim), so\'ng $800 foiz va $1,000 dividend to\'lash (chiqim).' },
+      definition: {
+        en: 'Share issues, borrowing and repaying loans, and paying interest and dividends.',
+        ru: 'Выпуск акций, получение и возврат займов, выплата процентов и дивидендов.',
+        uz: 'Aksiya chiqarish, qarz olish va qaytarish, foiz va dividend to\'lash.',
+      },
+      example: {
+        en: 'Taking a $10,000 bank loan (in), then paying $800 of interest and $1,000 of dividends (out).',
+        ru: 'Банковский заём $10,000 (приток), затем проценты $800 и дивиденды $1,000 (отток).',
+        uz: '$10,000 bank qarzi (kirim), so\'ng $800 foiz va $1,000 dividend to\'lash (chiqim).',
+      },
     },
     {
       term: { en: 'Working capital', ru: 'Оборотный капитал', uz: 'Aylanma kapital' },
-      definition: { en: 'Current assets less current liabilities: the money tied up in day-to-day trading, such as inventory, receivables and payables.', ru: 'Оборотные активы минус краткосрочные обязательства: деньги в ежедневной торговле — запасы, дебиторы, кредиторы.', uz: 'Aylanma aktivlar minus qisqa muddatli majburiyatlar: kundalik savdoga bog\'langan pul — zaxira, debitorlar, kreditorlar.' },
-      example: { en: 'Stock $3,000 + customers owe you $2,000 - you owe suppliers $1,500 = $3,500 of working capital.', ru: 'Товар $3,000 + покупатели должны $2,000 - вы должны поставщикам $1,500 = оборотный капитал $3,500.', uz: 'Tovar $3,000 + mijozlar qarzi $2,000 - yetkazib beruvchilarga qarzingiz $1,500 = $3,500 aylanma kapital.' },
+      definition: {
+        en: 'Current assets less current liabilities: the money tied up in day-to-day trading, such as inventory, receivables and payables.',
+        ru: 'Оборотные активы минус краткосрочные обязательства: деньги в ежедневной торговле — запасы, дебиторы, кредиторы.',
+        uz: 'Aylanma aktivlar minus qisqa muddatli majburiyatlar: kundalik savdoga bog\'langan pul — zaxira, debitorlar, kreditorlar.',
+      },
+      example: {
+        en: 'Stock $3,000 + customers owe you $2,000 - you owe suppliers $1,500 = $3,500 of working capital.',
+        ru: 'Товар $3,000 + покупатели должны $2,000 - вы должны поставщикам $1,500 = оборотный капитал $3,500.',
+        uz: 'Tovar $3,000 + mijozlar qarzi $2,000 - yetkazib beruvchilarga qarzingiz $1,500 = $3,500 aylanma kapital.',
+      },
     },
     {
       term: { en: 'Non-cash item', ru: 'Неденежная статья', uz: 'Pulsiz modda' },
-      definition: { en: 'An income or expense in profit that moved no money, such as depreciation, or a gain or loss on disposal.', ru: 'Доход или расход в прибыли без движения денег, например амортизация или прибыль либо убыток от выбытия.', uz: 'Foydadagi pul harakatlanmagan daromad yoki xarajat, masalan amortizatsiya yoki chiqish foydasi yoki zarari.' },
-      example: { en: 'Depreciation of $2,000 lowers profit, but nobody is paid $2,000.', ru: 'Амортизация $2,000 уменьшает прибыль, но никому не платят $2,000.', uz: '$2,000 amortizatsiya foydani kamaytiradi, lekin hech kimga $2,000 to\'lanmaydi.' },
+      definition: {
+        en: 'An income or expense in profit that moved no money, such as depreciation, or a gain or loss on disposal.',
+        ru: 'Доход или расход в прибыли без движения денег, например амортизация или прибыль либо убыток от выбытия.',
+        uz: 'Foydadagi pul harakatlanmagan daromad yoki xarajat, masalan amortizatsiya yoki chiqish foydasi yoki zarari.',
+      },
+      example: {
+        en: 'Depreciation of $2,000 lowers profit, but nobody is paid $2,000.',
+        ru: 'Амортизация $2,000 уменьшает прибыль, но никому не платят $2,000.',
+        uz: '$2,000 amortizatsiya foydani kamaytiradi, lekin hech kimga $2,000 to\'lanmaydi.',
+      },
     },
     {
       term: { en: 'Cash generated from operations', ru: 'Деньги от операций', uz: 'Operatsiyalardan pul' },
-      definition: { en: 'Operating profit adjusted for non-cash items and working capital, before tax paid is taken off.', ru: 'Операционная прибыль, скорректированная на неденежные статьи и оборотный капитал, до вычета уплаченного налога.', uz: 'Pulsiz moddalar va aylanma kapitalga tuzatilgan operatsion foyda, to\'langan soliq ayirilishidan oldin.' },
-      example: { en: 'Profit $10,000 + depreciation $2,000 - extra stock $1,000 = $11,000.', ru: 'Прибыль $10,000 + амортизация $2,000 - прирост запасов $1,000 = $11,000.', uz: 'Foyda $10,000 + amortizatsiya $2,000 - qo\'shimcha zaxira $1,000 = $11,000.' },
+      definition: {
+        en: 'Operating profit adjusted for non-cash items and working capital, before tax paid is taken off.',
+        ru: 'Операционная прибыль, скорректированная на неденежные статьи и оборотный капитал, до вычета уплаченного налога.',
+        uz: 'Pulsiz moddalar va aylanma kapitalga tuzatilgan operatsion foyda, to\'langan soliq ayirilishidan oldin.',
+      },
+      example: {
+        en: 'Profit $10,000 + depreciation $2,000 - extra stock $1,000 = $11,000.',
+        ru: 'Прибыль $10,000 + амортизация $2,000 - прирост запасов $1,000 = $11,000.',
+        uz: 'Foyda $10,000 + amortizatsiya $2,000 - qo\'shimcha zaxira $1,000 = $11,000.',
+      },
     },
     {
       term: { en: 'Indirect method', ru: 'Косвенный метод', uz: 'Bilvosita usul' },
-      definition: { en: 'Finding operating cash flow by adjusting operating profit for non-cash items.', ru: 'Нахождение операционного потока корректировкой прибыли на неденежные статьи.', uz: 'Operatsion oqimni foydani pulsiz moddalarga tuzatib topish.' },
-      example: { en: 'Start from profit $10,000, add back depreciation $2,000, deduct the $1,000 rise in stock: $11,000.', ru: 'Начинаем с прибыли $10,000, прибавляем амортизацию $2,000, вычитаем рост запасов $1,000: $11,000.', uz: '$10,000 foydadan boshlab, $2,000 amortizatsiyani qo\'shamiz, $1,000 zaxira o\'sishini ayiramiz: $11,000.' },
+      definition: {
+        en: 'Finding operating cash flow by adjusting operating profit for non-cash items.',
+        ru: 'Нахождение операционного потока корректировкой прибыли на неденежные статьи.',
+        uz: 'Operatsion oqimni foydani pulsiz moddalarga tuzatib topish.',
+      },
+      example: {
+        en: 'Start from profit $10,000, add back depreciation $2,000, deduct the $1,000 rise in stock: $11,000.',
+        ru: 'Начинаем с прибыли $10,000, прибавляем амортизацию $2,000, вычитаем рост запасов $1,000: $11,000.',
+        uz: '$10,000 foydadan boshlab, $2,000 amortizatsiyani qo\'shamiz, $1,000 zaxira o\'sishini ayiramiz: $11,000.',
+      },
     },
     {
       term: { en: 'Direct method', ru: 'Прямой метод', uz: 'To\'g\'ridan-to\'g\'ri usul' },
-      definition: { en: 'Listing actual cash received from customers and paid to suppliers and employees.', ru: 'Перечисление фактических денег от покупателей и выплат поставщикам и сотрудникам.', uz: 'Mijozlardan olingan va yetkazib beruvchi hamda xodimlarga to\'langan haqiqiy pulni sanash.' },
-      example: { en: 'Cash from customers $30,000 - paid to suppliers $15,000 - wages paid $5,000 = $10,000.', ru: 'От покупателей $30,000 - поставщикам $15,000 - зарплата $5,000 = $10,000.', uz: 'Mijozlardan $30,000 - yetkazib beruvchilarga $15,000 - ish haqi $5,000 = $10,000.' },
+      definition: {
+        en: 'Listing actual cash received from customers and paid to suppliers and employees.',
+        ru: 'Перечисление фактических денег от покупателей и выплат поставщикам и сотрудникам.',
+        uz: 'Mijozlardan olingan va yetkazib beruvchi hamda xodimlarga to\'langan haqiqiy pulni sanash.',
+      },
+      example: {
+        en: 'Cash from customers $30,000 - paid to suppliers $15,000 - wages paid $5,000 = $10,000.',
+        ru: 'От покупателей $30,000 - поставщикам $15,000 - зарплата $5,000 = $10,000.',
+        uz: 'Mijozlardan $30,000 - yetkazib beruvchilarga $15,000 - ish haqi $5,000 = $10,000.',
+      },
     },
   ],
 };
